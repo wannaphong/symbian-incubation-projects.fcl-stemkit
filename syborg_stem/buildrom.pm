@@ -254,6 +254,7 @@ my $sourcefile;
 my $sourceline;
 my ($line);
 my %romfiles;
+my %ibyfiles; # record the iby file for each ROM file
 
 # To handle BINARY_SELECTION_ORDER macro.
 my $firstDIR;
@@ -3640,6 +3641,7 @@ sub reformat_line($)
 		}
 	}
 	$romfiles{$romfile} = $variant.$pcfile;
+	$ibyfiles{$romfile} = $sourcefile;
 	return "$type$variant=$pcfile \t\"$romfile\"$tail\n";
 }
 
@@ -4016,10 +4018,11 @@ sub create_dirlisting
 			}
 	
 			my @sources = split /\n/,$romfiles{$file};
-			printf DIRFILE "%-40s\t%s\n", $file, shift @sources;
+			my @ibyfiles = split /\n/,$ibyfiles{$file};
+			printf DIRFILE "%-40s\t%s\t%s\n", $file, shift @sources, shift @ibyfiles;
 			while (@sources)
 			{
-				printf DIRFILE "%39s+\t%s\n", "", shift @sources;
+				printf DIRFILE "%39s+\t%s\t%s\n", "", shift @sources, shift @ibyfiles;
 			}
 		}
 		close DIRFILE;
