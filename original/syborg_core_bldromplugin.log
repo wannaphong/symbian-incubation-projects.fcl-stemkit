@@ -1,0 +1,21 @@
+override.pm: Initializing; logfile = `/epoc32/rombuild/syborg/core/syborg_core_bldromplugin.log', debug = 0
+obyparse.pm: Initializing; logfile = `/epoc32/rombuild/syborg/core/syborg_core_bldromplugin.log', debug = 0
+override.pm: ------------------------------------------------------------------
+Finding overrides...
+#30: `OVERRIDE_REPLACE/WARN'
+#27780: `REM ROM_IMAGE[1]'
+No override entries found
+override.pm: Duration: 1 seconds ----------------------------------------------
+obyparse.pm: ------------------------------------------------------------------
+#31: `OBYPARSE_UDEB /epoc32/rombuild/mytraces.txt'
+Reading UDEB files
+`/epoc32/rombuild/mytraces.txt'
+Found 0 entries
+Found 6 ROM-patched components:
+`\epoc32\release\ARMV5\urel\flogger.dll'
+`\epoc32\release\ARMV5\urel\halsettings.exe'
+`\epoc32\release\ARMV5\urel\etel.dll'
+`\epoc32\release\ARMV5\urel\cone.dll'
+`\epoc32\release\ARMV5\UDEB\rawip.dll'
+`\epoc32\release\ARMV5\urel\eiksrv.dll'
+obyparse.pm: Duration: 1 seconds ----------------------------------------------

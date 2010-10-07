@@ -1,0 +1,39 @@
+// Generated master oby for Core (ROM) image creation
+//
+// Filename: /epoc32/rombuild/syborg/core/syborg_core_master.oby
+// Work dir: /epoc32/rombuild/syborg/core
+// Command : buildrom -loglevel1 -v -nosymbols -D_IMAGE_TYPE_CORE -D_IMAGE_TYPE_RND -D_EABI=ARMV5 -IM:/epoc32/tools/rom/../../rom/include/core/mw -IM:/epoc32/tools/rom/../../rom/include/core/app -DSYBORG -es60ibymacros -elocalise -DSECTION -fm=\epoc32\rom\include\featuredatabase.xml -osyborg.img -IM:/epoc32/rom/config -IM:/epoc32/rom /epoc32/rombuild/syborg/core/syborg_core_master.oby
+
+// Buildrom plugins
+//
+externaltool=override:/epoc32/rombuild/syborg/core/syborg_core_bldromplugin.log;0
+OVERRIDE_REPLACE/WARN
+externaltool=obyparse:/epoc32/rombuild/syborg/core/syborg_core_bldromplugin.log;0
+OBYPARSE_UDEB /epoc32/rombuild/mytraces.txt
+
+// Core header
+//
+define _IMAGE_WORKDIR /epoc32/rombuild/syborg/core
+#undef  _IMAGE_TYPE_CORE
+#define _IMAGE_TYPE_CORE
+#undef  _IMAGE_TYPE_RND
+#define _IMAGE_TYPE_RND
+#undef  _EABI
+#define _EABI ARMV5
+#undef  SYBORG
+#define SYBORG
+#undef  SECTION
+#define SECTION
+define  ROMMEGS F8
+define  ROMDATE 07/10/2010
+#include <data_caging_paths_for_iby.hrh>
+
+// Core ROM
+//
+ROM_IMAGE[0] {
+#include "../../../rom/config/sf_refhw/bigrom.oby"
+#include "syborg_core_collected.oby"
+romname syborg.rom.img
+time=07/10/2010
+romchecksum=0x12345678
+}
