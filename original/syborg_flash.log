@@ -1,17 +1,17 @@
 ===============================================================================
-TIME: Thu Oct  7 18:52:44 2010, USER: williamr, HOST: UK-1086
+TIME: Fri Oct  8 17:10:28 2010, USER: williamr, HOST: UK-1086
 C:\Perl\bin\perl.exe (v5.12.1-MSWin32)
 WriteFile: `>/epoc32/rombuild/syborg/log/syborg_flash.log'
 ChangeDir: `/epoc32/rombuild/syborg'
 ReadFile: `/epoc32/rombuild/syborg/syborg_flash.icmd'
 # IMAKER_VERSION   = `iMaker 09.06.01, 05-Feb-2009.'
 # IMAKER_CMDARG    = `--file=/epoc32/rom/config/sf_refhw/syborg/image_conf_syborg.mk flash'
-# IMAKER_MAKECMD   = `\epoc32\tools\rom\imaker\mingw_make.exe -R --no-print-directory SHELL="C:\Windows\system32\cmd.exe" -I M:/epoc32/rom/config -f M:/epoc32/tools/rom/imaker/imaker.mk TIMESTAMP=2010100718524341  --file=/epoc32/rom/config/sf_refhw/syborg/image_conf_syborg.mk  -f M:/epoc32/tools/rom/imaker/imaker.mk flash'
+# IMAKER_MAKECMD   = `\epoc32\tools\rom\imaker\mingw_make.exe -R --no-print-directory SHELL="C:\Windows\system32\cmd.exe" -I M:/epoc32/rom/config -f M:/epoc32/tools/rom/imaker/imaker.mk TIMESTAMP=2010100817102841  --file=/epoc32/rom/config/sf_refhw/syborg/image_conf_syborg.mk  -f M:/epoc32/tools/rom/imaker/imaker.mk flash'
 # IMAKER_PERLCMD   = `perl -x M:/epoc32/tools/rom/imaker/imaker.pl --cmdfile "/epoc32/rombuild/syborg/syborg_flash.icmd" --logfile "/epoc32/rombuild/syborg/log/syborg_flash.log"  --step "IMAKERPRE:cbk-COREPRE:cb-CORE:cb-COREPOST:cb" --verbose "1" --workdir "/epoc32/rombuild/syborg"'
 # IMAKER_EXITSHELL = `'
 # SHELL            = `C:/Windows/system32/cmd.exe'
 # MAKE             = `M:/epoc32/tools/rom/imaker/mingw_make'
-# MAKEFLAGS        = ` --no-print-directory -RrI M:/epoc32/rom/config -- TIMESTAMP=2010100718524341 SHELL=C:/Windows/system32/cmd.exe'
+# MAKEFLAGS        = ` --no-print-directory -RrI M:/epoc32/rom/config -- TIMESTAMP=2010100817102841 SHELL=C:/Windows/system32/cmd.exe'
 # MAKECMDGOALS     = `flash'
 # $@               = `flash'
 # MAKELEVEL        = `0'
@@ -32,7 +32,8 @@ DeleteFile: `/epoc32/rombuild/syborg/syborg_flash.icmd'
 EXIT: `S:IMAKERPRE,C:1,B:1,K:1,V:1', duration: 00:00
 ===============================================================================
 ENTER: `S:COREPRE,C:1,B:1,K:0,V:1'
-MakeDir: `/epoc32/rombuild/syborg/core'
+DeleteFile: `/epoc32/rombuild/syborg/core/syborg_core_master.oby'
+DeleteFile: `/epoc32/rombuild/syborg/core/syborg_core_collected.oby'
 ChangeDir: `/epoc32/rombuild/syborg/core'
 Generating file(s) for Core image creation
 WriteFile: `>/epoc32/rombuild/syborg/core/syborg_core_master.oby'
@@ -45,10 +46,18 @@ FindFile: Directory `/epoc32/rom/include/language/*', pattern `*.iby' (?i-xsm:^(
 FindFile: Directory `/epoc32/rom/include/customer/*', pattern `*.iby' (?i-xsm:^(.*\.iby)$), found 166/166 files
 FindFile: Directory `/epoc32/rom/include/customervariant/*', pattern `*.iby' (?i-xsm:^(.*\.iby)$), found 8/8 files
 WriteFile: `>/epoc32/rombuild/syborg/core/syborg_core_collected.oby'
-EXIT: `S:COREPRE,C:1,B:1,K:0,V:1', duration: 00:03
+EXIT: `S:COREPRE,C:1,B:1,K:0,V:1', duration: 00:02
 ChangeDir: `/epoc32/rombuild/syborg'
 ===============================================================================
 ENTER: `S:CORE,C:1,B:1,K:0,V:1'
+DeleteFile: `/epoc32/rombuild/syborg/core/syborg.dir'
+DeleteFile: `/epoc32/rombuild/syborg/core/syborg.rom.img'
+DeleteFile: `/epoc32/rombuild/syborg/core/syborg.rom.log'
+DeleteFile: `/epoc32/rombuild/syborg/core/syborg.rom.oby'
+DeleteFile: `/epoc32/rombuild/syborg/core/syborg.tmp1.oby'
+DeleteFile: `/epoc32/rombuild/syborg/core/ecom-0-0.spi'
+DeleteFile: `/epoc32/rombuild/syborg/core/ecom-0-1.s01'
+DeleteFile: `/epoc32/rombuild/syborg/core/syborg_core_bldromplugin.log'
 Creating Core (ROM) SOS image
 ChangeDir: `/epoc32/rombuild/syborg/core'
 RunSystemCmd(/epoc32/rombuild/syborg/core): `buildrom -loglevel1 -v -nosymbols -D_IMAGE_TYPE_CORE -D_IMAGE_TYPE_RND -D_EABI=ARMV5 -IM:/epoc32/tools/rom/../../rom/include/core/mw -IM:/epoc32/tools/rom/../../rom/include/core/app -DSYBORG -es60ibymacros -elocalise -DSECTION -fm=\epoc32\rom\include\featuredatabase.xml -osyborg.img -IM:/epoc32/rom/config -IM:/epoc32/rom /epoc32/rombuild/syborg/core/syborg_core_master.oby'
@@ -63,11 +72,11 @@ defined(%hash) is deprecated at M:\epoc32\tools\/E32Plat.pm line 451.
 	(Maybe you should just omit the defined()?)
 defined(%hash) is deprecated at M:\epoc32\tools\/E32Plat.pm line 591.
 	(Maybe you should just omit the defined()?)
-defined(@array) is deprecated at M:\epoc32\tools\/buildrom.pm line 3139.
+defined(@array) is deprecated at M:\epoc32\tools\/buildrom.pm line 3144.
 	(Maybe you should just omit the defined()?)
-defined(@array) is deprecated at M:\epoc32\tools\/buildrom.pm line 3165.
+defined(@array) is deprecated at M:\epoc32\tools\/buildrom.pm line 3170.
 	(Maybe you should just omit the defined()?)
-defined(@array) is deprecated at M:\epoc32\tools\/buildrom.pm line 3218.
+defined(@array) is deprecated at M:\epoc32\tools\/buildrom.pm line 3223.
 	(Maybe you should just omit the defined()?)
 * cpp -o tmp1.oby -nostdinc -undef -D_IMAGE_TYPE_CORE -D_IMAGE_TYPE_RND -D_EABI=ARMV5 -IM:/epoc32/tools/rom/../../rom/include/core/mw -IM:/epoc32/tools/rom/../../rom/include/core/app -DSYBORG -DSECTION -IM:/epoc32/rom/config -IM:/epoc32/rom -I "..\..\..\include\" -include "..\..\..\include\bldvariant.hrh" -DROM_FEATURE_MANAGEMENT  -I. -I../../../../epoc32/rom/include
 In file included from syborg_core_collected.oby:898,
@@ -156,7 +165,7 @@ Created ecom-0-1.s01
 * Writing tmp6.oby - result of SPI stage
 override.pm: ------------------------------------------------------------------
 No override entries found
-override.pm: Duration: 1 seconds ----------------------------------------------
+override.pm: Duration: 0 seconds ----------------------------------------------
 obyparse.pm: ------------------------------------------------------------------
 Reading UDEB files
 `/epoc32/rombuild/mytraces.txt'
@@ -164,177 +173,177 @@ Found 0 entries
 obyparse.pm: Duration: 1 seconds ----------------------------------------------
 configpaging.pm: Modifying demand paging configuration using \epoc32\rom\configpaging\configpaging_stressed.cfg
 configpaging.pm: Modifying demand paging configuration using \epoc32\rom\configpaging\configpaging_stressed.cfg
-..\..\..\..\epoc32\rom\include\csc_plugin.iby(4): Missing file: '\epoc32\release\ARMV5\urel\10286506.dll' in statement 'file='
+..\..\..\..\epoc32\rom\include\csc_plugin.iby(3): Missing file: '\epoc32\release\ARMV5\urel\10286506.dll' in statement 'file='
 	tried \epoc32\release\ARMV5\urel\10286506.dll \epoc32\release\ARMV6\urel\10286506.dll \epoc32\release\ARMV5\urel\10286506.dll \epoc32\release\armv5\urel\10286506.dll
-..\..\..\..\epoc32\rom\include\httpservicetest.iby(2): Missing file: '\epoc32\release\ARMV5\urel\httpserviceapitest.exe' in statement 'file='
+..\..\..\..\epoc32\rom\include\httpservicetest.iby(1): Missing file: '\epoc32\release\ARMV5\urel\httpserviceapitest.exe' in statement 'file='
 	tried \epoc32\release\ARMV5\urel\httpserviceapitest.exe \epoc32\release\ARMV6\urel\httpserviceapitest.exe \epoc32\release\ARMV5\urel\httpserviceapitest.exe \epoc32\release\armv5\urel\httpserviceapitest.exe
-..\..\..\..\epoc32\rom\include\httpservicetest.iby(4): Missing file: '\epoc32\data\c\testdata\scripts\httpserviceapitest.script' in statement 'data='
+..\..\..\..\epoc32\rom\include\httpservicetest.iby(2): Missing file: '\epoc32\data\c\testdata\scripts\httpserviceapitest.script' in statement 'data='
 	tried \epoc32\data\c\testdata\scripts\httpserviceapitest.script \ARMV6\ \ARMV5\
-..\..\..\..\epoc32\rom\include\httpservicetest.iby(6): Missing file: '\epoc32\data\z\testdata\configs\ethernetced_httpserviceapi.xml' in statement 'data='
+..\..\..\..\epoc32\rom\include\httpservicetest.iby(3): Missing file: '\epoc32\data\z\testdata\configs\ethernetced_httpserviceapi.xml' in statement 'data='
 	tried \epoc32\data\z\testdata\configs\ethernetced_httpserviceapi.xml \ARMV6\ \ARMV5\
-..\..\..\..\epoc32\rom\include\httpservicetest.iby(8): Missing file: '\epoc32\data\z\httptest\httpservicetest\httpclient.ini' in statement 'data='
+..\..\..\..\epoc32\rom\include\httpservicetest.iby(4): Missing file: '\epoc32\data\z\httptest\httpservicetest\httpclient.ini' in statement 'data='
 	tried \epoc32\data\z\httptest\httpservicetest\httpclient.ini \ARMV6\ \ARMV5\
-..\..\..\..\epoc32\rom\include\httpservicetest.iby(10): Missing file: '\epoc32\data\z\httptest\httpservicetest\testdl.txt' in statement 'data='
+..\..\..\..\epoc32\rom\include\httpservicetest.iby(5): Missing file: '\epoc32\data\z\httptest\httpservicetest\testdl.txt' in statement 'data='
 	tried \epoc32\data\z\httptest\httpservicetest\testdl.txt \ARMV6\ \ARMV5\
-..\..\..\..\epoc32\rom\include\httpservicetest.iby(12): Missing file: '\epoc32\data\z\httptest\httpservicetest\testdl2.txt' in statement 'data='
+..\..\..\..\epoc32\rom\include\httpservicetest.iby(6): Missing file: '\epoc32\data\z\httptest\httpservicetest\testdl2.txt' in statement 'data='
 	tried \epoc32\data\z\httptest\httpservicetest\testdl2.txt \ARMV6\ \ARMV5\
-..\..\..\..\epoc32\rom\include\NetCfgExtnBase.iby(22): Missing file: '\epoc32\release\ARMV5\urel\NetCfgExtnBase.dll' in statement 'file='
+..\..\..\..\epoc32\rom\include\NetCfgExtnBase.iby(21): Missing file: '\epoc32\release\ARMV5\urel\NetCfgExtnBase.dll' in statement 'file='
 	tried \epoc32\release\ARMV5\urel\NetCfgExtnBase.dll \epoc32\release\ARMV6\urel\NetCfgExtnBase.dll \epoc32\release\ARMV5\urel\NetCfgExtnBase.dll \epoc32\release\armv5\urel\NetCfgExtnBase.dll
-..\..\..\..\epoc32\rom\include\S60CenRep_variant.iby(62): Missing file: '\epoc32\data\Z\private\10202BE9\10281FAB.txt' in statement 'data='
+..\..\..\..\epoc32\rom\include\S60CenRep_variant.iby(31): Missing file: '\epoc32\data\Z\private\10202BE9\10281FAB.txt' in statement 'data='
 	tried \epoc32\data\Z\private\10202BE9\10281FAB.txt \ARMV6\ \ARMV5\
-..\..\..\..\epoc32\rom\include\S60CenRep_variant.iby(130): Missing file: '\epoc32\data\Z\private\10202BE9\10285abc.txt' in statement 'data='
+..\..\..\..\epoc32\rom\include\S60CenRep_variant.iby(65): Missing file: '\epoc32\data\Z\private\10202BE9\10285abc.txt' in statement 'data='
 	tried \epoc32\data\Z\private\10202BE9\10285abc.txt \ARMV6\ \ARMV5\
-..\..\..\..\epoc32\rom\include\S60CenRep_variant.iby(148): Missing file: '\epoc32\data\Z\private\10202BE9\101F87A1.txt' in statement 'data='
+..\..\..\..\epoc32\rom\include\S60CenRep_variant.iby(74): Missing file: '\epoc32\data\Z\private\10202BE9\101F87A1.txt' in statement 'data='
 	tried \epoc32\data\Z\private\10202BE9\101F87A1.txt \ARMV6\ \ARMV5\
-..\..\..\..\epoc32\rom\include\S60CenRep_variant.iby(166): Missing file: '\epoc32\data\Z\private\10202BE9\2001ea7f.txt' in statement 'data='
+..\..\..\..\epoc32\rom\include\S60CenRep_variant.iby(83): Missing file: '\epoc32\data\Z\private\10202BE9\2001ea7f.txt' in statement 'data='
 	tried \epoc32\data\Z\private\10202BE9\2001ea7f.txt \ARMV6\ \ARMV5\
-..\..\..\..\epoc32\rom\include\S60CenRep_variant.iby(208): Missing file: '\epoc32\data\Z\private\10202BE9\10285abe.txt' in statement 'data='
+..\..\..\..\epoc32\rom\include\S60CenRep_variant.iby(104): Missing file: '\epoc32\data\Z\private\10202BE9\10285abe.txt' in statement 'data='
 	tried \epoc32\data\Z\private\10202BE9\10285abe.txt \ARMV6\ \ARMV5\
-..\..\..\..\epoc32\rom\include\S60CenRep_variant.iby(368): Missing file: '\epoc32\data\Z\private\10202BE9\102869c7.txt' in statement 'data='
+..\..\..\..\epoc32\rom\include\S60CenRep_variant.iby(184): Missing file: '\epoc32\data\Z\private\10202BE9\102869c7.txt' in statement 'data='
 	tried \epoc32\data\Z\private\10202BE9\102869c7.txt \ARMV6\ \ARMV5\
-..\..\..\..\epoc32\rom\include\S60CenRep_variant.iby(370): Missing file: '\epoc32\data\Z\private\10202BE9\10283137.txt' in statement 'data='
+..\..\..\..\epoc32\rom\include\S60CenRep_variant.iby(185): Missing file: '\epoc32\data\Z\private\10202BE9\10283137.txt' in statement 'data='
 	tried \epoc32\data\Z\private\10202BE9\10283137.txt \ARMV6\ \ARMV5\
-..\..\..\..\epoc32\rom\include\S60CenRep_variant.iby(432): Missing file: '\epoc32\data\Z\private\10202BE9\10275104.txt' in statement 'data='
+..\..\..\..\epoc32\rom\include\S60CenRep_variant.iby(216): Missing file: '\epoc32\data\Z\private\10202BE9\10275104.txt' in statement 'data='
 	tried \epoc32\data\Z\private\10202BE9\10275104.txt \ARMV6\ \ARMV5\
-..\..\..\..\epoc32\rom\include\S60CenRep_variant.iby(632): Missing file: '\epoc32\data\Z\private\10202BE9\10281F9F.txt' in statement 'data='
+..\..\..\..\epoc32\rom\include\S60CenRep_variant.iby(316): Missing file: '\epoc32\data\Z\private\10202BE9\10281F9F.txt' in statement 'data='
 	tried \epoc32\data\Z\private\10202BE9\10281F9F.txt \ARMV6\ \ARMV5\
-..\..\..\..\epoc32\rom\include\sysstartconfig.iby(49): Missing file: '\epoc32\data\Z\private\10205C44\SSCForStartupMode0_target.RSC' in statement 'data='
+..\..\..\..\epoc32\rom\include\sysstartconfig.iby(46): Missing file: '\epoc32\data\Z\private\10205C44\SSCForStartupMode0_target.RSC' in statement 'data='
 	tried \epoc32\data\Z\private\10205C44\SSCForStartupMode0_target.RSC \ARMV6\ \ARMV5\
-..\..\..\..\epoc32\rom\include\wrapperutilsplugin.iby(2): Missing file: '\epoc32\release\ARMV5\urel\wrapperutilsplugin5.dll' in statement 'file='
+..\..\..\..\epoc32\rom\include\wrapperutilsplugin.iby(1): Missing file: '\epoc32\release\ARMV5\urel\wrapperutilsplugin5.dll' in statement 'file='
 	tried \epoc32\release\ARMV5\urel\wrapperutilsplugin5.dll \epoc32\release\ARMV6\urel\wrapperutilsplugin5.dll \epoc32\release\ARMV5\urel\wrapperutilsplugin5.dll \epoc32\release\armv5\urel\wrapperutilsplugin5.dll
-..\..\..\..\epoc32\rom\include\tiger.iby(4): Missing file: '\epoc32\data\Z\resource/apps\tiger_AIF.MIF' in statement 'data='
+..\..\..\..\epoc32\rom\include\tiger.iby(2): Missing file: '\epoc32\data\Z\resource/apps\tiger_AIF.MIF' in statement 'data='
 	tried \epoc32\data\Z\resource/apps\tiger_AIF.MIF \ARMV6\ \ARMV5\
-..\..\..\..\epoc32\rom\include\wfcinterop_tests.iby(4): Missing file: '\epoc32\release\ARMV5\urel\openwfcstreamoptestserver.exe' in statement 'file='
+..\..\..\..\epoc32\rom\include\wfcinterop_tests.iby(2): Missing file: '\epoc32\release\ARMV5\urel\openwfcstreamoptestserver.exe' in statement 'file='
 	tried \epoc32\release\ARMV5\urel\openwfcstreamoptestserver.exe \epoc32\release\ARMV6\urel\openwfcstreamoptestserver.exe \epoc32\release\ARMV5\urel\openwfcstreamoptestserver.exe \epoc32\release\armv5\urel\openwfcstreamoptestserver.exe
-..\..\..\..\epoc32\rom\include\wfcinterop_tests.iby(6): Missing file: '\epoc32\data\Z\wfctest\tstreamoperation.script' in statement 'data='
+..\..\..\..\epoc32\rom\include\wfcinterop_tests.iby(3): Missing file: '\epoc32\data\Z\wfctest\tstreamoperation.script' in statement 'data='
 	tried \epoc32\data\Z\wfctest\tstreamoperation.script \ARMV6\ \ARMV5\
-..\..\..\rom\config\sf_refhw\bigrom.oby(1239): Missing file: '\epoc32\data\Z\private\10202BE9\200159c9.cre' in statement 'data='
+..\..\..\rom\config\sf_refhw\bigrom.oby(1223): Missing file: '\epoc32\data\Z\private\10202BE9\200159c9.cre' in statement 'data='
 	tried \epoc32\data\Z\private\10202BE9\200159c9.cre \ARMV6\ \ARMV5\
-..\..\..\rom\include\core\app\fmradioengine.iby(28): Missing file: '\epoc32\data\Z\Private\10202BE9\2001B25E.txt' in statement 'data='
+..\..\..\rom\include\core\app\fmradioengine.iby(25): Missing file: '\epoc32\data\Z\Private\10202BE9\2001B25E.txt' in statement 'data='
 	tried \epoc32\data\Z\Private\10202BE9\2001B25E.txt \ARMV6\ \ARMV5\
-M:\epoc32\tools\rom\..\..\rom\include\core\mw\alfred.iby(181): Missing file: '\epoc32\release\ARMV5\urel\bga_reference_plugin.dll' in statement 'file='
+M:\epoc32\tools\rom\..\..\rom\include\core\mw\alfred.iby(179): Missing file: '\epoc32\release\ARMV5\urel\bga_reference_plugin.dll' in statement 'file='
 	tried \epoc32\release\ARMV5\urel\bga_reference_plugin.dll \epoc32\release\ARMV6\urel\bga_reference_plugin.dll \epoc32\release\ARMV5\urel\bga_reference_plugin.dll \epoc32\release\armv5\urel\bga_reference_plugin.dll
-..\..\..\rom\include\core\app\ImageEditor.iby(2): Missing file: '\epoc32\release\ARMV5\urel\ImageEditor.exe' in statement 'file='
+..\..\..\rom\include\core\app\ImageEditor.iby(1): Missing file: '\epoc32\release\ARMV5\urel\ImageEditor.exe' in statement 'file='
 	tried \epoc32\release\ARMV5\urel\ImageEditor.exe \epoc32\release\ARMV6\urel\ImageEditor.exe \epoc32\release\ARMV5\urel\ImageEditor.exe \epoc32\release\armv5\urel\ImageEditor.exe
-..\..\..\rom\include\core\app\java.iby(220): Missing file: '\epoc32\release\ARMV5\urel\z\resource\java\jvm\bin\java.properties' in statement 'data='
+..\..\..\rom\include\core\app\java.iby(110): Missing file: '\epoc32\release\ARMV5\urel\z\resource\java\jvm\bin\java.properties' in statement 'data='
 	tried \epoc32\release\ARMV5\urel\z\resource\java\jvm\bin\java.properties \epoc32\release\ARMV6\urel\z\resource\java\jvm\bin\java.properties \epoc32\release\ARMV5\urel\z\resource\java\jvm\bin\java.properties \epoc32\release\armv5\urel\z\resource\java\jvm\bin\java.properties
-..\..\..\rom\include\core\app\java.iby(222): Missing file: '\epoc32\release\ARMV5\urel\z\resource\java\jvm\lib\security\java.policy' in statement 'data='
+..\..\..\rom\include\core\app\java.iby(111): Missing file: '\epoc32\release\ARMV5\urel\z\resource\java\jvm\lib\security\java.policy' in statement 'data='
 	tried \epoc32\release\ARMV5\urel\z\resource\java\jvm\lib\security\java.policy \epoc32\release\ARMV6\urel\z\resource\java\jvm\lib\security\java.policy \epoc32\release\ARMV5\urel\z\resource\java\jvm\lib\security\java.policy \epoc32\release\armv5\urel\z\resource\java\jvm\lib\security\java.policy
-..\..\..\rom\include\core\app\java.iby(224): Missing file: '\epoc32\release\ARMV5\urel\z\resource\java\jvm\lib\security\java.security' in statement 'data='
+..\..\..\rom\include\core\app\java.iby(112): Missing file: '\epoc32\release\ARMV5\urel\z\resource\java\jvm\lib\security\java.security' in statement 'data='
 	tried \epoc32\release\ARMV5\urel\z\resource\java\jvm\lib\security\java.security \epoc32\release\ARMV6\urel\z\resource\java\jvm\lib\security\java.security \epoc32\release\ARMV5\urel\z\resource\java\jvm\lib\security\java.security \epoc32\release\armv5\urel\z\resource\java\jvm\lib\security\java.security
-..\..\..\rom\include\core\app\podcatcher.iby(6): Missing file: '\epoc32\data\Z\Resource\apps\podcast.rsc' in statement 'data='
+..\..\..\rom\include\core\app\podcatcher.iby(3): Missing file: '\epoc32\data\Z\Resource\apps\podcast.rsc' in statement 'data='
 	tried \epoc32\data\Z\Resource\apps\podcast.rsc \ARMV6\ \ARMV5\
-..\..\..\rom\include\core\app\podcatcher.iby(14): Missing file: '\epoc32\data\Z\Private\A0009D00\backup_registration.xml' in statement 'data='
+..\..\..\rom\include\core\app\podcatcher.iby(7): Missing file: '\epoc32\data\Z\Private\A0009D00\backup_registration.xml' in statement 'data='
 	tried \epoc32\data\Z\Private\A0009D00\backup_registration.xml \ARMV6\ \ARMV5\
-..\..\..\rom\include\core\app\srsf.iby(34): Missing file: '\epoc32\data\Z\Private\102818E7\locationvoicecommands.xml' in statement 'data='
+..\..\..\rom\include\core\app\srsf.iby(17): Missing file: '\epoc32\data\Z\Private\102818E7\locationvoicecommands.xml' in statement 'data='
 	tried \epoc32\data\Z\Private\102818E7\locationvoicecommands.xml \ARMV6\ \ARMV5\
-..\..\..\rom\include\core\mw\AknLayout2_nhd.iby(4): Missing file: '\epoc32\release\ARMV5\urel\10281f13.dll' in statement 'file='
+..\..\..\rom\include\core\mw\AknLayout2_nhd.iby(3): Missing file: '\epoc32\release\ARMV5\urel\10281f13.dll' in statement 'file='
 	tried \epoc32\release\ARMV5\urel\10281f13.dll \epoc32\release\ARMV6\urel\10281f13.dll \epoc32\release\ARMV5\urel\10281f13.dll \epoc32\release\armv5\urel\10281f13.dll
-..\..\..\rom\include\core\mw\AknLayout2_nhd.iby(6): Missing file: '\epoc32\data\Z\resource\cdl\10281f13_cdl_detail.rsc' in statement 'data='
+..\..\..\rom\include\core\mw\AknLayout2_nhd.iby(3): Missing file: '\epoc32\data\Z\resource\cdl\10281f13_cdl_detail.rsc' in statement 'data='
 	tried \epoc32\data\Z\resource\cdl\10281f13_cdl_detail.rsc \ARMV6\ \ARMV5\
-..\..\..\rom\include\core\mw\AknLayout2_UiAccel_nhd.iby(4): Missing file: '\epoc32\release\ARMV5\urel\2001CB5B.dll' in statement 'file='
+..\..\..\rom\include\core\mw\AknLayout2_UiAccel_nhd.iby(3): Missing file: '\epoc32\release\ARMV5\urel\2001CB5B.dll' in statement 'file='
 	tried \epoc32\release\ARMV5\urel\2001CB5B.dll \epoc32\release\ARMV6\urel\2001CB5B.dll \epoc32\release\ARMV5\urel\2001CB5B.dll \epoc32\release\armv5\urel\2001CB5B.dll
-..\..\..\rom\include\core\mw\AknLayout2_UiAccel_nhd.iby(6): Missing file: '\epoc32\data\Z\resource\cdl\2001CB5B_cdl_detail.rsc' in statement 'data='
+..\..\..\rom\include\core\mw\AknLayout2_UiAccel_nhd.iby(3): Missing file: '\epoc32\data\Z\resource\cdl\2001CB5B_cdl_detail.rsc' in statement 'data='
 	tried \epoc32\data\Z\resource\cdl\2001CB5B_cdl_detail.rsc \ARMV6\ \ARMV5\
-..\..\..\rom\include\core\mw\aknskins.iby(44): Missing file: '\epoc32\data\Z\resource\skins\101f84b9\101f84b9.sel' in statement 'DATA='
+..\..\..\rom\include\core\mw\aknskins.iby(22): Missing file: '\epoc32\data\Z\resource\skins\101f84b9\101f84b9.sel' in statement 'DATA='
 	tried \epoc32\data\Z\resource\skins\101f84b9\101f84b9.sel \ARMV6\ \ARMV5\
-..\..\..\rom\include\core\mw\mds.iby(152): Missing file: '\epoc32\data\Z\System\install\locationmanagerclient_stub.sis' in statement 'data='
+..\..\..\rom\include\core\mw\mds.iby(76): Missing file: '\epoc32\data\Z\System\install\locationmanagerclient_stub.sis' in statement 'data='
 	tried \epoc32\data\Z\System\install\locationmanagerclient_stub.sis \ARMV6\ \ARMV5\
-..\..\..\rom\include\core\mw\mds.iby(154): Missing file: '\epoc32\data\Z\System\install\locationtrail_stub.sis' in statement 'data='
+..\..\..\rom\include\core\mw\mds.iby(77): Missing file: '\epoc32\data\Z\System\install\locationtrail_stub.sis' in statement 'data='
 	tried \epoc32\data\Z\System\install\locationtrail_stub.sis \ARMV6\ \ARMV5\
-..\..\..\rom\include\core\mw\mds.iby(156): Missing file: '\epoc32\data\Z\System\install\locationmanagerserver_stub.sis' in statement 'data='
+..\..\..\rom\include\core\mw\mds.iby(78): Missing file: '\epoc32\data\Z\System\install\locationmanagerserver_stub.sis' in statement 'data='
 	tried \epoc32\data\Z\System\install\locationmanagerserver_stub.sis \ARMV6\ \ARMV5\
-..\..\..\rom\include\core\mw\mds.iby(158): Missing file: '\epoc32\data\Z\System\install\ReverseGeocode_stub.sis' in statement 'data='
+..\..\..\rom\include\core\mw\mds.iby(79): Missing file: '\epoc32\data\Z\System\install\ReverseGeocode_stub.sis' in statement 'data='
 	tried \epoc32\data\Z\System\install\ReverseGeocode_stub.sis \ARMV6\ \ARMV5\
-..\..\..\rom\include\core\mw\mds.iby(160): Missing file: '\epoc32\data\Z\System\install\ReverseGeoCoderPlugin_stub.sis' in statement 'data='
+..\..\..\rom\include\core\mw\mds.iby(80): Missing file: '\epoc32\data\Z\System\install\ReverseGeoCoderPlugin_stub.sis' in statement 'data='
 	tried \epoc32\data\Z\System\install\ReverseGeoCoderPlugin_stub.sis \ARMV6\ \ARMV5\
-..\..\..\rom\include\core\mw\mds.iby(162): Missing file: '\epoc32\data\Z\System\install\tagcreator_stub.sis' in statement 'data='
+..\..\..\rom\include\core\mw\mds.iby(81): Missing file: '\epoc32\data\Z\System\install\tagcreator_stub.sis' in statement 'data='
 	tried \epoc32\data\Z\System\install\tagcreator_stub.sis \ARMV6\ \ARMV5\
-..\..\..\rom\include\core\mw\mds.iby(164): Missing file: '\epoc32\data\Z\System\install\geotagger_stub.sis' in statement 'data='
+..\..\..\rom\include\core\mw\mds.iby(82): Missing file: '\epoc32\data\Z\System\install\geotagger_stub.sis' in statement 'data='
 	tried \epoc32\data\Z\System\install\geotagger_stub.sis \ARMV6\ \ARMV5\
-..\..\..\rom\include\core\mw\mds.iby(166): Missing file: '\epoc32\data\Z\System\install\geoconverter_stub.sis' in statement 'data='
+..\..\..\rom\include\core\mw\mds.iby(83): Missing file: '\epoc32\data\Z\System\install\geoconverter_stub.sis' in statement 'data='
 	tried \epoc32\data\Z\System\install\geoconverter_stub.sis \ARMV6\ \ARMV5\
-..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(92): Missing file: '\epoc32\release\ARMV5\urel\mtpstatusservice.dll' in statement 'file='
+..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(87): Missing file: '\epoc32\release\ARMV5\urel\mtpstatusservice.dll' in statement 'file='
 	tried \epoc32\release\ARMV5\urel\mtpstatusservice.dll \epoc32\release\ARMV6\urel\mtpstatusservice.dll \epoc32\release\ARMV5\urel\mtpstatusservice.dll \epoc32\release\armv5\urel\mtpstatusservice.dll
-..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(94): Missing file: '\epoc32\data\Z\resource\mtp\2001a97f.rsc' in statement 'data='
+..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(87): Missing file: '\epoc32\data\Z\resource\mtp\2001a97f.rsc' in statement 'data='
 	tried \epoc32\data\Z\resource\mtp\2001a97f.rsc \ARMV6\ \ARMV5\
-..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(96): Missing file: '\epoc32\release\ARMV5\urel\mtpmetadataservice.dll' in statement 'file='
+..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(89): Missing file: '\epoc32\release\ARMV5\urel\mtpmetadataservice.dll' in statement 'file='
 	tried \epoc32\release\ARMV5\urel\mtpmetadataservice.dll \epoc32\release\ARMV6\urel\mtpmetadataservice.dll \epoc32\release\ARMV5\urel\mtpmetadataservice.dll \epoc32\release\armv5\urel\mtpmetadataservice.dll
-..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(98): Missing file: '\epoc32\data\Z\resource\mtp\2001A9A3.rsc' in statement 'data='
+..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(89): Missing file: '\epoc32\data\Z\resource\mtp\2001A9A3.rsc' in statement 'data='
 	tried \epoc32\data\Z\resource\mtp\2001A9A3.rsc \ARMV6\ \ARMV5\
-..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(100): Missing file: '\epoc32\release\ARMV5\urel\mtpwmpextndp.dll' in statement 'file='
+..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(91): Missing file: '\epoc32\release\ARMV5\urel\mtpwmpextndp.dll' in statement 'file='
 	tried \epoc32\release\ARMV5\urel\mtpwmpextndp.dll \epoc32\release\ARMV6\urel\mtpwmpextndp.dll \epoc32\release\ARMV5\urel\mtpwmpextndp.dll \epoc32\release\armv5\urel\mtpwmpextndp.dll
-..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(102): Missing file: '\epoc32\data\Z\resource\mtp\1028716c.rsc' in statement 'data='
+..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(91): Missing file: '\epoc32\data\Z\resource\mtp\1028716c.rsc' in statement 'data='
 	tried \epoc32\data\Z\resource\mtp\1028716c.rsc \ARMV6\ \ARMV5\
-..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(149): Missing file: '\epoc32\release\ARMV5\urel\mtppimproxy.dll' in statement 'file='
+..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(148): Missing file: '\epoc32\release\ARMV5\urel\mtppimproxy.dll' in statement 'file='
 	tried \epoc32\release\ARMV5\urel\mtppimproxy.dll \epoc32\release\ARMV6\urel\mtppimproxy.dll \epoc32\release\ARMV5\urel\mtppimproxy.dll \epoc32\release\armv5\urel\mtppimproxy.dll
-..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(151): Missing file: '\epoc32\release\ARMV5\urel\mtpcalendardp.dll' in statement 'file='
+..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(150): Missing file: '\epoc32\release\ARMV5\urel\mtpcalendardp.dll' in statement 'file='
 	tried \epoc32\release\ARMV5\urel\mtpcalendardp.dll \epoc32\release\ARMV6\urel\mtpcalendardp.dll \epoc32\release\ARMV5\urel\mtpcalendardp.dll \epoc32\release\armv5\urel\mtpcalendardp.dll
-..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(153): Missing file: '\epoc32\data\Z\resource\mtp\102871B8.rsc' in statement 'data='
+..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(150): Missing file: '\epoc32\data\Z\resource\mtp\102871B8.rsc' in statement 'data='
 	tried \epoc32\data\Z\resource\mtp\102871B8.rsc \ARMV6\ \ARMV5\
-..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(155): Missing file: '\epoc32\release\ARMV5\urel\mtptaskdp.dll' in statement 'file='
+..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(152): Missing file: '\epoc32\release\ARMV5\urel\mtptaskdp.dll' in statement 'file='
 	tried \epoc32\release\ARMV5\urel\mtptaskdp.dll \epoc32\release\ARMV6\urel\mtptaskdp.dll \epoc32\release\ARMV5\urel\mtptaskdp.dll \epoc32\release\armv5\urel\mtptaskdp.dll
-..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(157): Missing file: '\epoc32\data\Z\resource\mtp\10287013.rsc' in statement 'data='
+..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(152): Missing file: '\epoc32\data\Z\resource\mtp\10287013.rsc' in statement 'data='
 	tried \epoc32\data\Z\resource\mtp\10287013.rsc \ARMV6\ \ARMV5\
-..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(159): Missing file: '\epoc32\release\ARMV5\urel\mtpcontactdp.dll' in statement 'file='
+..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(154): Missing file: '\epoc32\release\ARMV5\urel\mtpcontactdp.dll' in statement 'file='
 	tried \epoc32\release\ARMV5\urel\mtpcontactdp.dll \epoc32\release\ARMV6\urel\mtpcontactdp.dll \epoc32\release\ARMV5\urel\mtpcontactdp.dll \epoc32\release\armv5\urel\mtpcontactdp.dll
-..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(161): Missing file: '\epoc32\data\Z\resource\mtp\102872bd.rsc' in statement 'data='
+..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(154): Missing file: '\epoc32\data\Z\resource\mtp\102872bd.rsc' in statement 'data='
 	tried \epoc32\data\Z\resource\mtp\102872bd.rsc \ARMV6\ \ARMV5\
-..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(163): Missing file: '\epoc32\data\Z\resource\apps\mtpcontactviewdefinition.rsc' in statement 'data='
+..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(155): Missing file: '\epoc32\data\Z\resource\apps\mtpcontactviewdefinition.rsc' in statement 'data='
 	tried \epoc32\data\Z\resource\apps\mtpcontactviewdefinition.rsc \ARMV6\ \ARMV5\
-..\..\..\rom\include\core\mw\qt.iby(55): Missing file: '\epoc32\release\ARMV5\urel\qaudio.dll' in statement 'file='
+..\..\..\rom\include\core\mw\qt.iby(29): Missing file: '\epoc32\release\ARMV5\urel\qaudio.dll' in statement 'file='
 	tried \epoc32\release\ARMV5\urel\qaudio.dll \epoc32\release\ARMV6\urel\qaudio.dll \epoc32\release\ARMV5\urel\qaudio.dll \epoc32\release\armv5\urel\qaudio.dll
-..\..\..\rom\include\core\mw\qt.iby(57): Missing file: '\epoc32\release\ARMV5\urel\qvggraphicssystem.dll' in statement 'file='
+..\..\..\rom\include\core\mw\qt.iby(30): Missing file: '\epoc32\release\ARMV5\urel\qvggraphicssystem.dll' in statement 'file='
 	tried \epoc32\release\ARMV5\urel\qvggraphicssystem.dll \epoc32\release\ARMV6\urel\qvggraphicssystem.dll \epoc32\release\ARMV5\urel\qvggraphicssystem.dll \epoc32\release\armv5\urel\qvggraphicssystem.dll
-..\..\..\rom\include\core\mw\qt.iby(85): Missing file: '\epoc32\data\qt\qtlibspluginstubs\qaudio.qtplugin' in statement 'data='
+..\..\..\rom\include\core\mw\qt.iby(44): Missing file: '\epoc32\data\qt\qtlibspluginstubs\qaudio.qtplugin' in statement 'data='
 	tried \epoc32\data\qt\qtlibspluginstubs\qaudio.qtplugin \ARMV6\ \ARMV5\
-..\..\..\rom\include\core\mw\usbotgwatcher.iby(4): Missing file: '\epoc32\release\ARMV5\urel\errrd' in statement 'file='
+..\..\..\rom\include\core\mw\usbotgwatcher.iby(2): Missing file: '\epoc32\release\ARMV5\urel\errrd' in statement 'file='
 	tried \epoc32\release\ARMV5\urel\errrd \epoc32\release\ARMV6\urel\errrd \epoc32\release\ARMV5\urel\errrd \epoc32\release\armv5\urel\errrd
-..\..\..\rom\include\customer\mw\fonts_variant.iby(101): Missing file: '\epoc32\release\ARMV5\urel\s60snr.ttf' in statement 'data='
+..\..\..\rom\include\customer\mw\fonts_variant.iby(100): Missing file: '\epoc32\release\ARMV5\urel\s60snr.ttf' in statement 'data='
 	tried \epoc32\release\ARMV5\urel\s60snr.ttf \epoc32\release\ARMV6\urel\s60snr.ttf \epoc32\release\ARMV5\urel\s60snr.ttf \epoc32\release\armv5\urel\s60snr.ttf
-..\..\..\rom\include\customer\mw\fonts_variant.iby(103): Missing file: '\epoc32\release\ARMV5\urel\s60ssb.ttf' in statement 'data='
+..\..\..\rom\include\customer\mw\fonts_variant.iby(101): Missing file: '\epoc32\release\ARMV5\urel\s60ssb.ttf' in statement 'data='
 	tried \epoc32\release\ARMV5\urel\s60ssb.ttf \epoc32\release\ARMV6\urel\s60ssb.ttf \epoc32\release\ARMV5\urel\s60ssb.ttf \epoc32\release\armv5\urel\s60ssb.ttf
-..\..\..\rom\include\customer\mw\fonts_variant.iby(105): Missing file: '\epoc32\release\ARMV5\urel\s60tsb.ttf' in statement 'data='
+..\..\..\rom\include\customer\mw\fonts_variant.iby(102): Missing file: '\epoc32\release\ARMV5\urel\s60tsb.ttf' in statement 'data='
 	tried \epoc32\release\ARMV5\urel\s60tsb.ttf \epoc32\release\ARMV6\urel\s60tsb.ttf \epoc32\release\ARMV5\urel\s60tsb.ttf \epoc32\release\armv5\urel\s60tsb.ttf
-..\..\..\rom\include\customer\mw\fonts_variant.iby(107): Missing file: '\epoc32\release\ARMV5\urel\S60ZDIGI.ttf' in statement 'data='
+..\..\..\rom\include\customer\mw\fonts_variant.iby(103): Missing file: '\epoc32\release\ARMV5\urel\S60ZDIGI.ttf' in statement 'data='
 	tried \epoc32\release\ARMV5\urel\S60ZDIGI.ttf \epoc32\release\ARMV6\urel\S60ZDIGI.ttf \epoc32\release\ARMV5\urel\S60ZDIGI.ttf \epoc32\release\armv5\urel\S60ZDIGI.ttf
-..\..\..\rom\include\customer\mw\rfs_variant.iby(2): Missing file: '\epoc32\data\Z\Private\100059C9\cenrep_rfs.txt' in statement 'data='
+..\..\..\rom\include\customer\mw\rfs_variant.iby(1): Missing file: '\epoc32\data\Z\Private\100059C9\cenrep_rfs.txt' in statement 'data='
 	tried \epoc32\data\Z\Private\100059C9\cenrep_rfs.txt \ARMV6\ \ARMV5\
-..\..\..\rom\include\customervariant\app\qtdemoapps.iby(80): Missing file: '\epoc32\release\ARMV5\urel\standarddialogs.exe' in statement 'file='
+..\..\..\rom\include\customervariant\app\qtdemoapps.iby(40): Missing file: '\epoc32\release\ARMV5\urel\standarddialogs.exe' in statement 'file='
 	tried \epoc32\release\ARMV5\urel\standarddialogs.exe \epoc32\release\ARMV6\urel\standarddialogs.exe \epoc32\release\ARMV5\urel\standarddialogs.exe \epoc32\release\armv5\urel\standarddialogs.exe
-..\..\..\rom\include\customervariant\app\qtdemoapps.iby(82): Missing file: '\epoc32\data\Z\resource/apps\standarddialogs.RSC' in statement 'data='
+..\..\..\rom\include\customervariant\app\qtdemoapps.iby(41): Missing file: '\epoc32\data\Z\resource/apps\standarddialogs.RSC' in statement 'data='
 	tried \epoc32\data\Z\resource/apps\standarddialogs.RSC \ARMV6\ \ARMV5\
-..\..\..\rom\include\customervariant\app\qtdemoapps.iby(84): Missing file: '\epoc32\data\Z\private\10003a3f\import\Apps\standarddialogs_reg.rsc' in statement 'data='
+..\..\..\rom\include\customervariant\app\qtdemoapps.iby(42): Missing file: '\epoc32\data\Z\private\10003a3f\import\Apps\standarddialogs_reg.rsc' in statement 'data='
 	tried \epoc32\data\Z\private\10003a3f\import\Apps\standarddialogs_reg.rsc \ARMV6\ \ARMV5\
-..\..\..\rom\include\customervariant\app\qtdemoapps.iby(92): Missing file: '\epoc32\release\ARMV5\urel\gradients.exe' in statement 'file='
+..\..\..\rom\include\customervariant\app\qtdemoapps.iby(46): Missing file: '\epoc32\release\ARMV5\urel\gradients.exe' in statement 'file='
 	tried \epoc32\release\ARMV5\urel\gradients.exe \epoc32\release\ARMV6\urel\gradients.exe \epoc32\release\ARMV5\urel\gradients.exe \epoc32\release\armv5\urel\gradients.exe
-..\..\..\rom\include\customervariant\app\qtdemoapps.iby(94): Missing file: '\epoc32\data\Z\resource/apps\gradients.RSC' in statement 'data='
+..\..\..\rom\include\customervariant\app\qtdemoapps.iby(47): Missing file: '\epoc32\data\Z\resource/apps\gradients.RSC' in statement 'data='
 	tried \epoc32\data\Z\resource/apps\gradients.RSC \ARMV6\ \ARMV5\
-..\..\..\rom\include\customervariant\app\qtdemoapps.iby(96): Missing file: '\epoc32\data\Z\private\10003a3f\import\Apps\gradients_reg.rsc' in statement 'data='
+..\..\..\rom\include\customervariant\app\qtdemoapps.iby(48): Missing file: '\epoc32\data\Z\private\10003a3f\import\Apps\gradients_reg.rsc' in statement 'data='
 	tried \epoc32\data\Z\private\10003a3f\import\Apps\gradients_reg.rsc \ARMV6\ \ARMV5\
-..\..\..\rom\include\customervariant\app\qtdemoapps.iby(116): Missing file: '\epoc32\release\ARMV5\urel\blurpicker.exe' in statement 'file='
+..\..\..\rom\include\customervariant\app\qtdemoapps.iby(58): Missing file: '\epoc32\release\ARMV5\urel\blurpicker.exe' in statement 'file='
 	tried \epoc32\release\ARMV5\urel\blurpicker.exe \epoc32\release\ARMV6\urel\blurpicker.exe \epoc32\release\ARMV5\urel\blurpicker.exe \epoc32\release\armv5\urel\blurpicker.exe
-..\..\..\rom\include\customervariant\app\qtdemoapps.iby(118): Missing file: '\epoc32\data\Z\resource/apps\blurpicker.RSC' in statement 'data='
+..\..\..\rom\include\customervariant\app\qtdemoapps.iby(59): Missing file: '\epoc32\data\Z\resource/apps\blurpicker.RSC' in statement 'data='
 	tried \epoc32\data\Z\resource/apps\blurpicker.RSC \ARMV6\ \ARMV5\
-..\..\..\rom\include\customervariant\app\qtdemoapps.iby(120): Missing file: '\epoc32\data\Z\private\10003a3f\import\Apps\blurpicker_reg.rsc' in statement 'data='
+..\..\..\rom\include\customervariant\app\qtdemoapps.iby(60): Missing file: '\epoc32\data\Z\private\10003a3f\import\Apps\blurpicker_reg.rsc' in statement 'data='
 	tried \epoc32\data\Z\private\10003a3f\import\Apps\blurpicker_reg.rsc \ARMV6\ \ARMV5\
-..\..\..\rom\include\customervariant\app\qtdemoapps.iby(122): Missing file: '\epoc32\release\ARMV5\urel\knobs.exe' in statement 'file='
+..\..\..\rom\include\customervariant\app\qtdemoapps.iby(61): Missing file: '\epoc32\release\ARMV5\urel\knobs.exe' in statement 'file='
 	tried \epoc32\release\ARMV5\urel\knobs.exe \epoc32\release\ARMV6\urel\knobs.exe \epoc32\release\ARMV5\urel\knobs.exe \epoc32\release\armv5\urel\knobs.exe
-..\..\..\rom\include\customervariant\app\qtdemoapps.iby(124): Missing file: '\epoc32\data\Z\resource/apps\knobs.RSC' in statement 'data='
+..\..\..\rom\include\customervariant\app\qtdemoapps.iby(62): Missing file: '\epoc32\data\Z\resource/apps\knobs.RSC' in statement 'data='
 	tried \epoc32\data\Z\resource/apps\knobs.RSC \ARMV6\ \ARMV5\
-..\..\..\rom\include\customervariant\app\qtdemoapps.iby(126): Missing file: '\epoc32\data\Z\private\10003a3f\import\Apps\knobs_reg.rsc' in statement 'data='
+..\..\..\rom\include\customervariant\app\qtdemoapps.iby(63): Missing file: '\epoc32\data\Z\private\10003a3f\import\Apps\knobs_reg.rsc' in statement 'data='
 	tried \epoc32\data\Z\private\10003a3f\import\Apps\knobs_reg.rsc \ARMV6\ \ARMV5\
-..\..\..\rom\include\customervariant\app\qtdemoapps.iby(140): Missing file: '\epoc32\release\ARMV5\urel\defaultprototypes.exe' in statement 'file='
+..\..\..\rom\include\customervariant\app\qtdemoapps.iby(70): Missing file: '\epoc32\release\ARMV5\urel\defaultprototypes.exe' in statement 'file='
 	tried \epoc32\release\ARMV5\urel\defaultprototypes.exe \epoc32\release\ARMV6\urel\defaultprototypes.exe \epoc32\release\ARMV5\urel\defaultprototypes.exe \epoc32\release\armv5\urel\defaultprototypes.exe
-..\..\..\rom\include\customervariant\app\qtdemoapps.iby(142): Missing file: '\epoc32\data\Z\resource/apps\defaultprototypes.RSC' in statement 'data='
+..\..\..\rom\include\customervariant\app\qtdemoapps.iby(71): Missing file: '\epoc32\data\Z\resource/apps\defaultprototypes.RSC' in statement 'data='
 	tried \epoc32\data\Z\resource/apps\defaultprototypes.RSC \ARMV6\ \ARMV5\
-..\..\..\rom\include\customervariant\app\qtdemoapps.iby(144): Missing file: '\epoc32\data\Z\private\10003a3f\import\Apps\defaultprototypes_reg.rsc' in statement 'data='
+..\..\..\rom\include\customervariant\app\qtdemoapps.iby(72): Missing file: '\epoc32\data\Z\private\10003a3f\import\Apps\defaultprototypes_reg.rsc' in statement 'data='
 	tried \epoc32\data\Z\private\10003a3f\import\Apps\defaultprototypes_reg.rsc \ARMV6\ \ARMV5\
-..\..\..\rom\include\customervariant\app\qtdemoapps.iby(146): Missing file: '\epoc32\release\ARMV5\urel\queuedcustomtype.exe' in statement 'file='
+..\..\..\rom\include\customervariant\app\qtdemoapps.iby(73): Missing file: '\epoc32\release\ARMV5\urel\queuedcustomtype.exe' in statement 'file='
 	tried \epoc32\release\ARMV5\urel\queuedcustomtype.exe \epoc32\release\ARMV6\urel\queuedcustomtype.exe \epoc32\release\ARMV5\urel\queuedcustomtype.exe \epoc32\release\armv5\urel\queuedcustomtype.exe
-..\..\..\rom\include\customervariant\app\qtdemoapps.iby(148): Missing file: '\epoc32\data\Z\resource/apps\queuedcustomtype.RSC' in statement 'data='
+..\..\..\rom\include\customervariant\app\qtdemoapps.iby(74): Missing file: '\epoc32\data\Z\resource/apps\queuedcustomtype.RSC' in statement 'data='
 	tried \epoc32\data\Z\resource/apps\queuedcustomtype.RSC \ARMV6\ \ARMV5\
-..\..\..\rom\include\customervariant\app\qtdemoapps.iby(150): Missing file: '\epoc32\data\Z\private\10003a3f\import\Apps\queuedcustomtype_reg.rsc' in statement 'data='
+..\..\..\rom\include\customervariant\app\qtdemoapps.iby(75): Missing file: '\epoc32\data\Z\private\10003a3f\import\Apps\queuedcustomtype_reg.rsc' in statement 'data='
 	tried \epoc32\data\Z\private\10003a3f\import\Apps\queuedcustomtype_reg.rsc \ARMV6\ \ARMV5\
 ..\..\..\..\epoc32\rom\include\OBEYFILE.iby(3): Missing file: '\epoc32\rom\include\OBEYFILE.oby' in statement 'data='
 	tried \epoc32\rom\include\OBEYFILE.oby \ARMV6\ \ARMV5\
@@ -367,101 +376,101 @@ Writing uncompressed Rom image without header to file syborg.rom.img
 
  Directory of M:\epoc32\rombuild\syborg\core
 
-07/10/2010  18:54           561,952 syborg.dir
-07/10/2010  18:55         5,708,120 syborg.log
-07/10/2010  18:54           576,028 syborg.oby
-07/10/2010  18:55       124,739,584 syborg.rom.img
-               4 File(s)    131,585,684 bytes
-               0 Dir(s)   5,795,192,832 bytes free
-==========>8==========>8==========>8==========>8==========>8===02:47===[END]<<<
+08/10/2010  17:10           860,139 syborg.dir
+08/10/2010  17:11         5,708,139 syborg.log
+08/10/2010  17:10           722,932 syborg.oby
+08/10/2010  17:11       124,739,584 syborg.rom.img
+               4 File(s)    132,030,794 bytes
+               0 Dir(s)   9,579,982,848 bytes free
+==========>8==========>8==========>8==========>8==========>8===00:38===[END]<<<
 
 Missing file(s):
- 1) ..\..\..\..\epoc32\rom\include\csc_plugin.iby(4): Missing file: '\epoc32\release\ARMV5\urel\10286506.dll' in statement 'file='
- 2) ..\..\..\..\epoc32\rom\include\httpservicetest.iby(2): Missing file: '\epoc32\release\ARMV5\urel\httpserviceapitest.exe' in statement 'file='
- 3) ..\..\..\..\epoc32\rom\include\httpservicetest.iby(4): Missing file: '\epoc32\data\c\testdata\scripts\httpserviceapitest.script' in statement 'data='
- 4) ..\..\..\..\epoc32\rom\include\httpservicetest.iby(6): Missing file: '\epoc32\data\z\testdata\configs\ethernetced_httpserviceapi.xml' in statement 'data='
- 5) ..\..\..\..\epoc32\rom\include\httpservicetest.iby(8): Missing file: '\epoc32\data\z\httptest\httpservicetest\httpclient.ini' in statement 'data='
- 6) ..\..\..\..\epoc32\rom\include\httpservicetest.iby(10): Missing file: '\epoc32\data\z\httptest\httpservicetest\testdl.txt' in statement 'data='
- 7) ..\..\..\..\epoc32\rom\include\httpservicetest.iby(12): Missing file: '\epoc32\data\z\httptest\httpservicetest\testdl2.txt' in statement 'data='
- 8) ..\..\..\..\epoc32\rom\include\NetCfgExtnBase.iby(22): Missing file: '\epoc32\release\ARMV5\urel\NetCfgExtnBase.dll' in statement 'file='
- 9) ..\..\..\..\epoc32\rom\include\S60CenRep_variant.iby(62): Missing file: '\epoc32\data\Z\private\10202BE9\10281FAB.txt' in statement 'data='
-10) ..\..\..\..\epoc32\rom\include\S60CenRep_variant.iby(130): Missing file: '\epoc32\data\Z\private\10202BE9\10285abc.txt' in statement 'data='
-11) ..\..\..\..\epoc32\rom\include\S60CenRep_variant.iby(148): Missing file: '\epoc32\data\Z\private\10202BE9\101F87A1.txt' in statement 'data='
-12) ..\..\..\..\epoc32\rom\include\S60CenRep_variant.iby(166): Missing file: '\epoc32\data\Z\private\10202BE9\2001ea7f.txt' in statement 'data='
-13) ..\..\..\..\epoc32\rom\include\S60CenRep_variant.iby(208): Missing file: '\epoc32\data\Z\private\10202BE9\10285abe.txt' in statement 'data='
-14) ..\..\..\..\epoc32\rom\include\S60CenRep_variant.iby(368): Missing file: '\epoc32\data\Z\private\10202BE9\102869c7.txt' in statement 'data='
-15) ..\..\..\..\epoc32\rom\include\S60CenRep_variant.iby(370): Missing file: '\epoc32\data\Z\private\10202BE9\10283137.txt' in statement 'data='
-16) ..\..\..\..\epoc32\rom\include\S60CenRep_variant.iby(432): Missing file: '\epoc32\data\Z\private\10202BE9\10275104.txt' in statement 'data='
-17) ..\..\..\..\epoc32\rom\include\S60CenRep_variant.iby(632): Missing file: '\epoc32\data\Z\private\10202BE9\10281F9F.txt' in statement 'data='
-18) ..\..\..\..\epoc32\rom\include\sysstartconfig.iby(49): Missing file: '\epoc32\data\Z\private\10205C44\SSCForStartupMode0_target.RSC' in statement 'data='
-19) ..\..\..\..\epoc32\rom\include\wrapperutilsplugin.iby(2): Missing file: '\epoc32\release\ARMV5\urel\wrapperutilsplugin5.dll' in statement 'file='
-20) ..\..\..\..\epoc32\rom\include\tiger.iby(4): Missing file: '\epoc32\data\Z\resource/apps\tiger_AIF.MIF' in statement 'data='
-21) ..\..\..\..\epoc32\rom\include\wfcinterop_tests.iby(4): Missing file: '\epoc32\release\ARMV5\urel\openwfcstreamoptestserver.exe' in statement 'file='
-22) ..\..\..\..\epoc32\rom\include\wfcinterop_tests.iby(6): Missing file: '\epoc32\data\Z\wfctest\tstreamoperation.script' in statement 'data='
-23) ..\..\..\rom\config\sf_refhw\bigrom.oby(1239): Missing file: '\epoc32\data\Z\private\10202BE9\200159c9.cre' in statement 'data='
-24) ..\..\..\rom\include\core\app\fmradioengine.iby(28): Missing file: '\epoc32\data\Z\Private\10202BE9\2001B25E.txt' in statement 'data='
-25) M:\epoc32\tools\rom\..\..\rom\include\core\mw\alfred.iby(181): Missing file: '\epoc32\release\ARMV5\urel\bga_reference_plugin.dll' in statement 'file='
-26) ..\..\..\rom\include\core\app\ImageEditor.iby(2): Missing file: '\epoc32\release\ARMV5\urel\ImageEditor.exe' in statement 'file='
-27) ..\..\..\rom\include\core\app\java.iby(220): Missing file: '\epoc32\release\ARMV5\urel\z\resource\java\jvm\bin\java.properties' in statement 'data='
-28) ..\..\..\rom\include\core\app\java.iby(222): Missing file: '\epoc32\release\ARMV5\urel\z\resource\java\jvm\lib\security\java.policy' in statement 'data='
-29) ..\..\..\rom\include\core\app\java.iby(224): Missing file: '\epoc32\release\ARMV5\urel\z\resource\java\jvm\lib\security\java.security' in statement 'data='
-30) ..\..\..\rom\include\core\app\podcatcher.iby(6): Missing file: '\epoc32\data\Z\Resource\apps\podcast.rsc' in statement 'data='
-31) ..\..\..\rom\include\core\app\podcatcher.iby(14): Missing file: '\epoc32\data\Z\Private\A0009D00\backup_registration.xml' in statement 'data='
-32) ..\..\..\rom\include\core\app\srsf.iby(34): Missing file: '\epoc32\data\Z\Private\102818E7\locationvoicecommands.xml' in statement 'data='
-33) ..\..\..\rom\include\core\mw\AknLayout2_nhd.iby(4): Missing file: '\epoc32\release\ARMV5\urel\10281f13.dll' in statement 'file='
-34) ..\..\..\rom\include\core\mw\AknLayout2_nhd.iby(6): Missing file: '\epoc32\data\Z\resource\cdl\10281f13_cdl_detail.rsc' in statement 'data='
-35) ..\..\..\rom\include\core\mw\AknLayout2_UiAccel_nhd.iby(4): Missing file: '\epoc32\release\ARMV5\urel\2001CB5B.dll' in statement 'file='
-36) ..\..\..\rom\include\core\mw\AknLayout2_UiAccel_nhd.iby(6): Missing file: '\epoc32\data\Z\resource\cdl\2001CB5B_cdl_detail.rsc' in statement 'data='
-37) ..\..\..\rom\include\core\mw\aknskins.iby(44): Missing file: '\epoc32\data\Z\resource\skins\101f84b9\101f84b9.sel' in statement 'DATA='
-38) ..\..\..\rom\include\core\mw\mds.iby(152): Missing file: '\epoc32\data\Z\System\install\locationmanagerclient_stub.sis' in statement 'data='
-39) ..\..\..\rom\include\core\mw\mds.iby(154): Missing file: '\epoc32\data\Z\System\install\locationtrail_stub.sis' in statement 'data='
-40) ..\..\..\rom\include\core\mw\mds.iby(156): Missing file: '\epoc32\data\Z\System\install\locationmanagerserver_stub.sis' in statement 'data='
-41) ..\..\..\rom\include\core\mw\mds.iby(158): Missing file: '\epoc32\data\Z\System\install\ReverseGeocode_stub.sis' in statement 'data='
-42) ..\..\..\rom\include\core\mw\mds.iby(160): Missing file: '\epoc32\data\Z\System\install\ReverseGeoCoderPlugin_stub.sis' in statement 'data='
-43) ..\..\..\rom\include\core\mw\mds.iby(162): Missing file: '\epoc32\data\Z\System\install\tagcreator_stub.sis' in statement 'data='
-44) ..\..\..\rom\include\core\mw\mds.iby(164): Missing file: '\epoc32\data\Z\System\install\geotagger_stub.sis' in statement 'data='
-45) ..\..\..\rom\include\core\mw\mds.iby(166): Missing file: '\epoc32\data\Z\System\install\geoconverter_stub.sis' in statement 'data='
-46) ..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(92): Missing file: '\epoc32\release\ARMV5\urel\mtpstatusservice.dll' in statement 'file='
-47) ..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(94): Missing file: '\epoc32\data\Z\resource\mtp\2001a97f.rsc' in statement 'data='
-48) ..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(96): Missing file: '\epoc32\release\ARMV5\urel\mtpmetadataservice.dll' in statement 'file='
-49) ..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(98): Missing file: '\epoc32\data\Z\resource\mtp\2001A9A3.rsc' in statement 'data='
-50) ..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(100): Missing file: '\epoc32\release\ARMV5\urel\mtpwmpextndp.dll' in statement 'file='
-51) ..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(102): Missing file: '\epoc32\data\Z\resource\mtp\1028716c.rsc' in statement 'data='
-52) ..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(149): Missing file: '\epoc32\release\ARMV5\urel\mtppimproxy.dll' in statement 'file='
-53) ..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(151): Missing file: '\epoc32\release\ARMV5\urel\mtpcalendardp.dll' in statement 'file='
-54) ..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(153): Missing file: '\epoc32\data\Z\resource\mtp\102871B8.rsc' in statement 'data='
-55) ..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(155): Missing file: '\epoc32\release\ARMV5\urel\mtptaskdp.dll' in statement 'file='
-56) ..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(157): Missing file: '\epoc32\data\Z\resource\mtp\10287013.rsc' in statement 'data='
-57) ..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(159): Missing file: '\epoc32\release\ARMV5\urel\mtpcontactdp.dll' in statement 'file='
-58) ..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(161): Missing file: '\epoc32\data\Z\resource\mtp\102872bd.rsc' in statement 'data='
-59) ..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(163): Missing file: '\epoc32\data\Z\resource\apps\mtpcontactviewdefinition.rsc' in statement 'data='
-60) ..\..\..\rom\include\core\mw\qt.iby(55): Missing file: '\epoc32\release\ARMV5\urel\qaudio.dll' in statement 'file='
-61) ..\..\..\rom\include\core\mw\qt.iby(57): Missing file: '\epoc32\release\ARMV5\urel\qvggraphicssystem.dll' in statement 'file='
-62) ..\..\..\rom\include\core\mw\qt.iby(85): Missing file: '\epoc32\data\qt\qtlibspluginstubs\qaudio.qtplugin' in statement 'data='
-63) ..\..\..\rom\include\core\mw\usbotgwatcher.iby(4): Missing file: '\epoc32\release\ARMV5\urel\errrd' in statement 'file='
-64) ..\..\..\rom\include\customer\mw\fonts_variant.iby(101): Missing file: '\epoc32\release\ARMV5\urel\s60snr.ttf' in statement 'data='
-65) ..\..\..\rom\include\customer\mw\fonts_variant.iby(103): Missing file: '\epoc32\release\ARMV5\urel\s60ssb.ttf' in statement 'data='
-66) ..\..\..\rom\include\customer\mw\fonts_variant.iby(105): Missing file: '\epoc32\release\ARMV5\urel\s60tsb.ttf' in statement 'data='
-67) ..\..\..\rom\include\customer\mw\fonts_variant.iby(107): Missing file: '\epoc32\release\ARMV5\urel\S60ZDIGI.ttf' in statement 'data='
-68) ..\..\..\rom\include\customer\mw\rfs_variant.iby(2): Missing file: '\epoc32\data\Z\Private\100059C9\cenrep_rfs.txt' in statement 'data='
-69) ..\..\..\rom\include\customervariant\app\qtdemoapps.iby(80): Missing file: '\epoc32\release\ARMV5\urel\standarddialogs.exe' in statement 'file='
-70) ..\..\..\rom\include\customervariant\app\qtdemoapps.iby(82): Missing file: '\epoc32\data\Z\resource/apps\standarddialogs.RSC' in statement 'data='
-71) ..\..\..\rom\include\customervariant\app\qtdemoapps.iby(84): Missing file: '\epoc32\data\Z\private\10003a3f\import\Apps\standarddialogs_reg.rsc' in statement 'data='
-72) ..\..\..\rom\include\customervariant\app\qtdemoapps.iby(92): Missing file: '\epoc32\release\ARMV5\urel\gradients.exe' in statement 'file='
-73) ..\..\..\rom\include\customervariant\app\qtdemoapps.iby(94): Missing file: '\epoc32\data\Z\resource/apps\gradients.RSC' in statement 'data='
-74) ..\..\..\rom\include\customervariant\app\qtdemoapps.iby(96): Missing file: '\epoc32\data\Z\private\10003a3f\import\Apps\gradients_reg.rsc' in statement 'data='
-75) ..\..\..\rom\include\customervariant\app\qtdemoapps.iby(116): Missing file: '\epoc32\release\ARMV5\urel\blurpicker.exe' in statement 'file='
-76) ..\..\..\rom\include\customervariant\app\qtdemoapps.iby(118): Missing file: '\epoc32\data\Z\resource/apps\blurpicker.RSC' in statement 'data='
-77) ..\..\..\rom\include\customervariant\app\qtdemoapps.iby(120): Missing file: '\epoc32\data\Z\private\10003a3f\import\Apps\blurpicker_reg.rsc' in statement 'data='
-78) ..\..\..\rom\include\customervariant\app\qtdemoapps.iby(122): Missing file: '\epoc32\release\ARMV5\urel\knobs.exe' in statement 'file='
-79) ..\..\..\rom\include\customervariant\app\qtdemoapps.iby(124): Missing file: '\epoc32\data\Z\resource/apps\knobs.RSC' in statement 'data='
-80) ..\..\..\rom\include\customervariant\app\qtdemoapps.iby(126): Missing file: '\epoc32\data\Z\private\10003a3f\import\Apps\knobs_reg.rsc' in statement 'data='
-81) ..\..\..\rom\include\customervariant\app\qtdemoapps.iby(140): Missing file: '\epoc32\release\ARMV5\urel\defaultprototypes.exe' in statement 'file='
-82) ..\..\..\rom\include\customervariant\app\qtdemoapps.iby(142): Missing file: '\epoc32\data\Z\resource/apps\defaultprototypes.RSC' in statement 'data='
-83) ..\..\..\rom\include\customervariant\app\qtdemoapps.iby(144): Missing file: '\epoc32\data\Z\private\10003a3f\import\Apps\defaultprototypes_reg.rsc' in statement 'data='
-84) ..\..\..\rom\include\customervariant\app\qtdemoapps.iby(146): Missing file: '\epoc32\release\ARMV5\urel\queuedcustomtype.exe' in statement 'file='
-85) ..\..\..\rom\include\customervariant\app\qtdemoapps.iby(148): Missing file: '\epoc32\data\Z\resource/apps\queuedcustomtype.RSC' in statement 'data='
-86) ..\..\..\rom\include\customervariant\app\qtdemoapps.iby(150): Missing file: '\epoc32\data\Z\private\10003a3f\import\Apps\queuedcustomtype_reg.rsc' in statement 'data='
+ 1) ..\..\..\..\epoc32\rom\include\csc_plugin.iby(3): Missing file: '\epoc32\release\ARMV5\urel\10286506.dll' in statement 'file='
+ 2) ..\..\..\..\epoc32\rom\include\httpservicetest.iby(1): Missing file: '\epoc32\release\ARMV5\urel\httpserviceapitest.exe' in statement 'file='
+ 3) ..\..\..\..\epoc32\rom\include\httpservicetest.iby(2): Missing file: '\epoc32\data\c\testdata\scripts\httpserviceapitest.script' in statement 'data='
+ 4) ..\..\..\..\epoc32\rom\include\httpservicetest.iby(3): Missing file: '\epoc32\data\z\testdata\configs\ethernetced_httpserviceapi.xml' in statement 'data='
+ 5) ..\..\..\..\epoc32\rom\include\httpservicetest.iby(4): Missing file: '\epoc32\data\z\httptest\httpservicetest\httpclient.ini' in statement 'data='
+ 6) ..\..\..\..\epoc32\rom\include\httpservicetest.iby(5): Missing file: '\epoc32\data\z\httptest\httpservicetest\testdl.txt' in statement 'data='
+ 7) ..\..\..\..\epoc32\rom\include\httpservicetest.iby(6): Missing file: '\epoc32\data\z\httptest\httpservicetest\testdl2.txt' in statement 'data='
+ 8) ..\..\..\..\epoc32\rom\include\NetCfgExtnBase.iby(21): Missing file: '\epoc32\release\ARMV5\urel\NetCfgExtnBase.dll' in statement 'file='
+ 9) ..\..\..\..\epoc32\rom\include\S60CenRep_variant.iby(31): Missing file: '\epoc32\data\Z\private\10202BE9\10281FAB.txt' in statement 'data='
+10) ..\..\..\..\epoc32\rom\include\S60CenRep_variant.iby(65): Missing file: '\epoc32\data\Z\private\10202BE9\10285abc.txt' in statement 'data='
+11) ..\..\..\..\epoc32\rom\include\S60CenRep_variant.iby(74): Missing file: '\epoc32\data\Z\private\10202BE9\101F87A1.txt' in statement 'data='
+12) ..\..\..\..\epoc32\rom\include\S60CenRep_variant.iby(83): Missing file: '\epoc32\data\Z\private\10202BE9\2001ea7f.txt' in statement 'data='
+13) ..\..\..\..\epoc32\rom\include\S60CenRep_variant.iby(104): Missing file: '\epoc32\data\Z\private\10202BE9\10285abe.txt' in statement 'data='
+14) ..\..\..\..\epoc32\rom\include\S60CenRep_variant.iby(184): Missing file: '\epoc32\data\Z\private\10202BE9\102869c7.txt' in statement 'data='
+15) ..\..\..\..\epoc32\rom\include\S60CenRep_variant.iby(185): Missing file: '\epoc32\data\Z\private\10202BE9\10283137.txt' in statement 'data='
+16) ..\..\..\..\epoc32\rom\include\S60CenRep_variant.iby(216): Missing file: '\epoc32\data\Z\private\10202BE9\10275104.txt' in statement 'data='
+17) ..\..\..\..\epoc32\rom\include\S60CenRep_variant.iby(316): Missing file: '\epoc32\data\Z\private\10202BE9\10281F9F.txt' in statement 'data='
+18) ..\..\..\..\epoc32\rom\include\sysstartconfig.iby(46): Missing file: '\epoc32\data\Z\private\10205C44\SSCForStartupMode0_target.RSC' in statement 'data='
+19) ..\..\..\..\epoc32\rom\include\wrapperutilsplugin.iby(1): Missing file: '\epoc32\release\ARMV5\urel\wrapperutilsplugin5.dll' in statement 'file='
+20) ..\..\..\..\epoc32\rom\include\tiger.iby(2): Missing file: '\epoc32\data\Z\resource/apps\tiger_AIF.MIF' in statement 'data='
+21) ..\..\..\..\epoc32\rom\include\wfcinterop_tests.iby(2): Missing file: '\epoc32\release\ARMV5\urel\openwfcstreamoptestserver.exe' in statement 'file='
+22) ..\..\..\..\epoc32\rom\include\wfcinterop_tests.iby(3): Missing file: '\epoc32\data\Z\wfctest\tstreamoperation.script' in statement 'data='
+23) ..\..\..\rom\config\sf_refhw\bigrom.oby(1223): Missing file: '\epoc32\data\Z\private\10202BE9\200159c9.cre' in statement 'data='
+24) ..\..\..\rom\include\core\app\fmradioengine.iby(25): Missing file: '\epoc32\data\Z\Private\10202BE9\2001B25E.txt' in statement 'data='
+25) M:\epoc32\tools\rom\..\..\rom\include\core\mw\alfred.iby(179): Missing file: '\epoc32\release\ARMV5\urel\bga_reference_plugin.dll' in statement 'file='
+26) ..\..\..\rom\include\core\app\ImageEditor.iby(1): Missing file: '\epoc32\release\ARMV5\urel\ImageEditor.exe' in statement 'file='
+27) ..\..\..\rom\include\core\app\java.iby(110): Missing file: '\epoc32\release\ARMV5\urel\z\resource\java\jvm\bin\java.properties' in statement 'data='
+28) ..\..\..\rom\include\core\app\java.iby(111): Missing file: '\epoc32\release\ARMV5\urel\z\resource\java\jvm\lib\security\java.policy' in statement 'data='
+29) ..\..\..\rom\include\core\app\java.iby(112): Missing file: '\epoc32\release\ARMV5\urel\z\resource\java\jvm\lib\security\java.security' in statement 'data='
+30) ..\..\..\rom\include\core\app\podcatcher.iby(3): Missing file: '\epoc32\data\Z\Resource\apps\podcast.rsc' in statement 'data='
+31) ..\..\..\rom\include\core\app\podcatcher.iby(7): Missing file: '\epoc32\data\Z\Private\A0009D00\backup_registration.xml' in statement 'data='
+32) ..\..\..\rom\include\core\app\srsf.iby(17): Missing file: '\epoc32\data\Z\Private\102818E7\locationvoicecommands.xml' in statement 'data='
+33) ..\..\..\rom\include\core\mw\AknLayout2_nhd.iby(3): Missing file: '\epoc32\release\ARMV5\urel\10281f13.dll' in statement 'file='
+34) ..\..\..\rom\include\core\mw\AknLayout2_nhd.iby(3): Missing file: '\epoc32\data\Z\resource\cdl\10281f13_cdl_detail.rsc' in statement 'data='
+35) ..\..\..\rom\include\core\mw\AknLayout2_UiAccel_nhd.iby(3): Missing file: '\epoc32\release\ARMV5\urel\2001CB5B.dll' in statement 'file='
+36) ..\..\..\rom\include\core\mw\AknLayout2_UiAccel_nhd.iby(3): Missing file: '\epoc32\data\Z\resource\cdl\2001CB5B_cdl_detail.rsc' in statement 'data='
+37) ..\..\..\rom\include\core\mw\aknskins.iby(22): Missing file: '\epoc32\data\Z\resource\skins\101f84b9\101f84b9.sel' in statement 'DATA='
+38) ..\..\..\rom\include\core\mw\mds.iby(76): Missing file: '\epoc32\data\Z\System\install\locationmanagerclient_stub.sis' in statement 'data='
+39) ..\..\..\rom\include\core\mw\mds.iby(77): Missing file: '\epoc32\data\Z\System\install\locationtrail_stub.sis' in statement 'data='
+40) ..\..\..\rom\include\core\mw\mds.iby(78): Missing file: '\epoc32\data\Z\System\install\locationmanagerserver_stub.sis' in statement 'data='
+41) ..\..\..\rom\include\core\mw\mds.iby(79): Missing file: '\epoc32\data\Z\System\install\ReverseGeocode_stub.sis' in statement 'data='
+42) ..\..\..\rom\include\core\mw\mds.iby(80): Missing file: '\epoc32\data\Z\System\install\ReverseGeoCoderPlugin_stub.sis' in statement 'data='
+43) ..\..\..\rom\include\core\mw\mds.iby(81): Missing file: '\epoc32\data\Z\System\install\tagcreator_stub.sis' in statement 'data='
+44) ..\..\..\rom\include\core\mw\mds.iby(82): Missing file: '\epoc32\data\Z\System\install\geotagger_stub.sis' in statement 'data='
+45) ..\..\..\rom\include\core\mw\mds.iby(83): Missing file: '\epoc32\data\Z\System\install\geoconverter_stub.sis' in statement 'data='
+46) ..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(87): Missing file: '\epoc32\release\ARMV5\urel\mtpstatusservice.dll' in statement 'file='
+47) ..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(87): Missing file: '\epoc32\data\Z\resource\mtp\2001a97f.rsc' in statement 'data='
+48) ..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(89): Missing file: '\epoc32\release\ARMV5\urel\mtpmetadataservice.dll' in statement 'file='
+49) ..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(89): Missing file: '\epoc32\data\Z\resource\mtp\2001A9A3.rsc' in statement 'data='
+50) ..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(91): Missing file: '\epoc32\release\ARMV5\urel\mtpwmpextndp.dll' in statement 'file='
+51) ..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(91): Missing file: '\epoc32\data\Z\resource\mtp\1028716c.rsc' in statement 'data='
+52) ..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(148): Missing file: '\epoc32\release\ARMV5\urel\mtppimproxy.dll' in statement 'file='
+53) ..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(150): Missing file: '\epoc32\release\ARMV5\urel\mtpcalendardp.dll' in statement 'file='
+54) ..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(150): Missing file: '\epoc32\data\Z\resource\mtp\102871B8.rsc' in statement 'data='
+55) ..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(152): Missing file: '\epoc32\release\ARMV5\urel\mtptaskdp.dll' in statement 'file='
+56) ..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(152): Missing file: '\epoc32\data\Z\resource\mtp\10287013.rsc' in statement 'data='
+57) ..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(154): Missing file: '\epoc32\release\ARMV5\urel\mtpcontactdp.dll' in statement 'file='
+58) ..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(154): Missing file: '\epoc32\data\Z\resource\mtp\102872bd.rsc' in statement 'data='
+59) ..\..\..\rom\include\core\mw\mtp_symbian_temp.iby(155): Missing file: '\epoc32\data\Z\resource\apps\mtpcontactviewdefinition.rsc' in statement 'data='
+60) ..\..\..\rom\include\core\mw\qt.iby(29): Missing file: '\epoc32\release\ARMV5\urel\qaudio.dll' in statement 'file='
+61) ..\..\..\rom\include\core\mw\qt.iby(30): Missing file: '\epoc32\release\ARMV5\urel\qvggraphicssystem.dll' in statement 'file='
+62) ..\..\..\rom\include\core\mw\qt.iby(44): Missing file: '\epoc32\data\qt\qtlibspluginstubs\qaudio.qtplugin' in statement 'data='
+63) ..\..\..\rom\include\core\mw\usbotgwatcher.iby(2): Missing file: '\epoc32\release\ARMV5\urel\errrd' in statement 'file='
+64) ..\..\..\rom\include\customer\mw\fonts_variant.iby(100): Missing file: '\epoc32\release\ARMV5\urel\s60snr.ttf' in statement 'data='
+65) ..\..\..\rom\include\customer\mw\fonts_variant.iby(101): Missing file: '\epoc32\release\ARMV5\urel\s60ssb.ttf' in statement 'data='
+66) ..\..\..\rom\include\customer\mw\fonts_variant.iby(102): Missing file: '\epoc32\release\ARMV5\urel\s60tsb.ttf' in statement 'data='
+67) ..\..\..\rom\include\customer\mw\fonts_variant.iby(103): Missing file: '\epoc32\release\ARMV5\urel\S60ZDIGI.ttf' in statement 'data='
+68) ..\..\..\rom\include\customer\mw\rfs_variant.iby(1): Missing file: '\epoc32\data\Z\Private\100059C9\cenrep_rfs.txt' in statement 'data='
+69) ..\..\..\rom\include\customervariant\app\qtdemoapps.iby(40): Missing file: '\epoc32\release\ARMV5\urel\standarddialogs.exe' in statement 'file='
+70) ..\..\..\rom\include\customervariant\app\qtdemoapps.iby(41): Missing file: '\epoc32\data\Z\resource/apps\standarddialogs.RSC' in statement 'data='
+71) ..\..\..\rom\include\customervariant\app\qtdemoapps.iby(42): Missing file: '\epoc32\data\Z\private\10003a3f\import\Apps\standarddialogs_reg.rsc' in statement 'data='
+72) ..\..\..\rom\include\customervariant\app\qtdemoapps.iby(46): Missing file: '\epoc32\release\ARMV5\urel\gradients.exe' in statement 'file='
+73) ..\..\..\rom\include\customervariant\app\qtdemoapps.iby(47): Missing file: '\epoc32\data\Z\resource/apps\gradients.RSC' in statement 'data='
+74) ..\..\..\rom\include\customervariant\app\qtdemoapps.iby(48): Missing file: '\epoc32\data\Z\private\10003a3f\import\Apps\gradients_reg.rsc' in statement 'data='
+75) ..\..\..\rom\include\customervariant\app\qtdemoapps.iby(58): Missing file: '\epoc32\release\ARMV5\urel\blurpicker.exe' in statement 'file='
+76) ..\..\..\rom\include\customervariant\app\qtdemoapps.iby(59): Missing file: '\epoc32\data\Z\resource/apps\blurpicker.RSC' in statement 'data='
+77) ..\..\..\rom\include\customervariant\app\qtdemoapps.iby(60): Missing file: '\epoc32\data\Z\private\10003a3f\import\Apps\blurpicker_reg.rsc' in statement 'data='
+78) ..\..\..\rom\include\customervariant\app\qtdemoapps.iby(61): Missing file: '\epoc32\release\ARMV5\urel\knobs.exe' in statement 'file='
+79) ..\..\..\rom\include\customervariant\app\qtdemoapps.iby(62): Missing file: '\epoc32\data\Z\resource/apps\knobs.RSC' in statement 'data='
+80) ..\..\..\rom\include\customervariant\app\qtdemoapps.iby(63): Missing file: '\epoc32\data\Z\private\10003a3f\import\Apps\knobs_reg.rsc' in statement 'data='
+81) ..\..\..\rom\include\customervariant\app\qtdemoapps.iby(70): Missing file: '\epoc32\release\ARMV5\urel\defaultprototypes.exe' in statement 'file='
+82) ..\..\..\rom\include\customervariant\app\qtdemoapps.iby(71): Missing file: '\epoc32\data\Z\resource/apps\defaultprototypes.RSC' in statement 'data='
+83) ..\..\..\rom\include\customervariant\app\qtdemoapps.iby(72): Missing file: '\epoc32\data\Z\private\10003a3f\import\Apps\defaultprototypes_reg.rsc' in statement 'data='
+84) ..\..\..\rom\include\customervariant\app\qtdemoapps.iby(73): Missing file: '\epoc32\release\ARMV5\urel\queuedcustomtype.exe' in statement 'file='
+85) ..\..\..\rom\include\customervariant\app\qtdemoapps.iby(74): Missing file: '\epoc32\data\Z\resource/apps\queuedcustomtype.RSC' in statement 'data='
+86) ..\..\..\rom\include\customervariant\app\qtdemoapps.iby(75): Missing file: '\epoc32\data\Z\private\10003a3f\import\Apps\queuedcustomtype_reg.rsc' in statement 'data='
 87) ..\..\..\..\epoc32\rom\include\OBEYFILE.iby(3): Missing file: '\epoc32\rom\include\OBEYFILE.oby' in statement 'data='
 
 Warning(s):
@@ -493,7 +502,7 @@ DeleteFile: `/epoc32/rombuild/syborg/core/tmp9.oby'
 MoveFile: `/epoc32/rombuild/syborg/core/syborg.log' => `/epoc32/rombuild/syborg/core/syborg.rom.log'
 MoveFile: `/epoc32/rombuild/syborg/core/syborg.oby' => `/epoc32/rombuild/syborg/core/syborg.rom.oby'
 TestFile: `/epoc32/rombuild/syborg/core/syborg.rom.img'
-EXIT: `S:CORE,C:1,B:1,K:0,V:1', duration: 02:47
+EXIT: `S:CORE,C:1,B:1,K:0,V:1', duration: 00:40
 ChangeDir: `/epoc32/rombuild/syborg'
 ===============================================================================
 ENTER: `S:COREPOST,C:1,B:1,K:0,V:1'
@@ -502,8 +511,8 @@ EXIT: `S:COREPOST,C:1,B:1,K:0,V:1', duration: 00:00
 Step         Duration              
 ============ ===================== 
 1. IMAKERPRE 00:00                 
-2. COREPRE   00:03                 
-3. CORE      02:47 (02:47 + 00:00) 
+2. COREPRE   00:02                 
+3. CORE      00:40 (00:38 + 00:02) 
 4. COREPOST  00:00                 
 ------------ --------------------- 
-Total        02:50                 
+Total        00:42                 
