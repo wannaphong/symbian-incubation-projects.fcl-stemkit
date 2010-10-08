@@ -1735,6 +1735,9 @@ sub dump_obydata
 		print DUMPFILE $line;
 	}
 	close DUMPFILE;
+	open SLY_COPY, ">xxx_$dumpfile";
+	print SLY_COPY @obydata;
+	close SLY_COPY;
 }
 
 sub track_source
@@ -2070,7 +2073,7 @@ sub reorganize_phase
 			# push this line into the currently selected partition
 			my $partition=@currentpartition[-1];
 			push @$partition, $modifiedLine;
-			$line="REM handled $line";
+			next; 
 		}
 		elsif ($line =~ /^\s*SPI_POSITION/i)
 		{
@@ -2217,6 +2220,7 @@ sub plugin_match ()
 		      $errors++ if ($strict);
 		    }
 
+		    push @newobydata, "REM expanded $line";
 		    if ($spidatahide)
 		    {
 			push @newobydata, "hide=$fileRomDir\\$pluginFileName\n";
