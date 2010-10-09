@@ -9,13 +9,15 @@ REM #define _ENABLE_IRDA_POD_
 REM define which port IrDA uses
 REM define which serial port Bluetooth protocol uses
 REM Define whether or not to include USB client support:
-REM redefined ROMDATE as 08\10\2010
+REM processed ROMBUILD_OPTION -no-header 
+REM redefined ROMDATE as 09\10\2010
 unicode
 romsize=0x5000000
-time=08/10/2010 12:00:00
+time=09/10/2010 12:00:00
 REM defaultfeaturedb = epoc32\rom\include\featuredatabase.xml 
 REM ROM version number
 version=0.01(0)
+REM processed 	enable_spi
 PlatSecDiagnostics OFF
 PlatSecEnforcement ON
 PlatSecEnforceSysBin ON
@@ -7906,7 +7908,7 @@ file=\epoc32\release\ARMV5\urel\anomaly.exe 	"sys\bin\anomaly.exe"
 data=\epoc32\data\Z\resource\apps\anomaly.RSC 	"resource\apps\anomaly.rsc" 
 data=\epoc32\data\Z\private\10003a3f\import\Apps\anomaly_reg.rsc 	"private\10003a3f\import\apps\anomaly_reg.rsc"
 romname syborg.rom.img
-time=08/10/2010
+time=09/10/2010
 romchecksum=0x12345678
 data=\epoc32\rombuild\syborg\core\features.dat 	"private\10205054\features.dat"
 data=\epoc32\rombuild\syborg\core\ecom-0-0.spi 	"private\10009d8f\ecom-0-0.spi"

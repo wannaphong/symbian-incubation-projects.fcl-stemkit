@@ -11219,7 +11219,7 @@ define _IMAGE_WORKDIR /epoc32/rombuild/syborg/core
 
 
 define  ROMMEGS F8
-define  ROMDATE 08/10/2010
+define  ROMDATE 09/10/2010
 # 1 "..\\..\\..\\include\\data_caging_paths_for_iby.hrh" 1
  
 
@@ -99178,6 +99178,6 @@ data=\epoc32\data\Z\private\10003a3f\import\Apps\anomaly_reg.rsc   \private\1000
 # 35 "/epoc32/rombuild/syborg/core/syborg_core_master.oby" 2
 
 romname syborg.rom.img
-time=08/10/2010
+time=09/10/2010
 romchecksum=0x12345678
 }

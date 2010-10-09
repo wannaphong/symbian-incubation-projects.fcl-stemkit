@@ -1571,7 +1571,7 @@ sub substitution_phase
 		if ($line=~/^\s*ROMBUILD_OPTION\s+(\S+)\s*/i)
 		{
 			$rombuildOptions{$1} = 1;
-			push @obydata, "REM handled $line";
+			push @obydata, "REM processed $line";
 			next;
 		}
 		
@@ -1580,7 +1580,7 @@ sub substitution_phase
 			if(!($spiset)) {
 				$createspi=1;
 			}
-			push @obydata, "REM handled $line";
+			push @obydata, "REM processed $line";
 			next;
 		}
 		

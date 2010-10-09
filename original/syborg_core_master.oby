@@ -25,7 +25,7 @@ define _IMAGE_WORKDIR /epoc32/rombuild/syborg/core
 #undef  SECTION
 #define SECTION
 define  ROMMEGS F8
-define  ROMDATE 08/10/2010
+define  ROMDATE 09/10/2010
 #include <data_caging_paths_for_iby.hrh>
 
 // Core ROM
@@ -34,6 +34,6 @@ ROM_IMAGE[0] {
 #include "../../../rom/config/sf_refhw/bigrom.oby"
 #include "syborg_core_collected.oby"
 romname syborg.rom.img
-time=08/10/2010
+time=09/10/2010
 romchecksum=0x12345678
 }
