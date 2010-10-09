@@ -1,3 +1,5 @@
+ROM_IMAGE[0] {
+#include "syborg_stem_features.iby"
 
 romname=syborg.img
 REM #undef  _ARM4
@@ -6891,12 +6893,10 @@ data=\epoc32\data\Z\private\10003a3f\import\Apps\anomaly_reg.rsc 	"private\10003
 romname syborg.rom.img
 time=##TODAY## 12:00:00
 romchecksum=0x12345678
-data=\epoc32\rombuild\syborg\core\features.dat 	"private\10205054\features.dat"
-data=\epoc32\rombuild\syborg\core\ecom-0-0.spi 	"private\10009d8f\ecom-0-0.spi"
-data=\epoc32\rombuild\syborg\core\ecom-0-1.s01 	"private\10009d8f\ecom-0-1.s01"
 
 
-REM ROM_IMAGE[1]
+}
+ROM_IMAGE[1] {
 
 
 
@@ -6904,3 +6904,4 @@ REM MISSING  data=\epoc32\rom\include\OBEYFILE.oby		System\Samples\DESIRED_ABI_O
 pagingoverride defaultpaged
 pagingoverride defaultpaged
 pagingoverride defaultpaged
+}

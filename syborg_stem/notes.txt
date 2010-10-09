@@ -1,15 +1,11 @@
+Fix buildrom.pm to leave aliases to .RSC files alone (and not move them into sys\bin), and other things
+
+copy tools\buildrom.pm \epoc32\tools\buildrom.pm
 iMaker  --file=/epoc32/rom/config/sf_refhw/syborg/image_conf_syborg.mk  flash
 files generated into epoc32\rombuild\syborg\core
 
 copy \epoc32\rom\include\featuredatabase.xml
-copy the syborg.rom.oby to syborg.stem_rom.oby
-Put back 
-  ROMBUILD_OPTION -no-header 
-  define ROMDATE ##TODAY##  
-convert mbm_rom statements back into source form  
-  ->  s/data="(.*mbm)_rom"(\s+)"(.*)"/auto-bitmap=$1$2$3/ 
-?? Reinstate "REM expanded __ECOM_PLUGIN()" lines, killing the following line in each case
-
-Fix buildrom.pm to leave aliases to .RSC files alone (and not move them into sys\bin)
+findstr FEATURES original\syborg.tmp1.oby >syborg_stem_features.iby
+perl tools\repair_obyfile.pl original\syborg.rom.oby >syborg_stem\syborg_stem_rom.oby
 
 buildrom syborg_stem_rom.oby -fm=featuredatabase.xml -k -nosymbols -loglevel1 -v

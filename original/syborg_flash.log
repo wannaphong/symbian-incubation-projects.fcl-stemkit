@@ -1,17 +1,17 @@
 ===============================================================================
-TIME: Sat Oct  9 15:46:55 2010, USER: williamr, HOST: UK-1086
+TIME: Sat Oct  9 18:11:16 2010, USER: williamr, HOST: UK-1086
 C:\Perl\bin\perl.exe (v5.12.1-MSWin32)
 WriteFile: `>/epoc32/rombuild/syborg/log/syborg_flash.log'
 ChangeDir: `/epoc32/rombuild/syborg'
 ReadFile: `/epoc32/rombuild/syborg/syborg_flash.icmd'
 # IMAKER_VERSION   = `iMaker 09.06.01, 05-Feb-2009.'
 # IMAKER_CMDARG    = `--file=/epoc32/rom/config/sf_refhw/syborg/image_conf_syborg.mk  flash'
-# IMAKER_MAKECMD   = `\epoc32\tools\rom\imaker\mingw_make.exe -R --no-print-directory SHELL="C:\Windows\system32\cmd.exe" -I M:/epoc32/rom/config -f M:/epoc32/tools/rom/imaker/imaker.mk TIMESTAMP=2010100915465441  --file=/epoc32/rom/config/sf_refhw/syborg/image_conf_syborg.mk  -f M:/epoc32/tools/rom/imaker/imaker.mk flash'
+# IMAKER_MAKECMD   = `\epoc32\tools\rom\imaker\mingw_make.exe -R --no-print-directory SHELL="C:\Windows\system32\cmd.exe" -I M:/epoc32/rom/config -f M:/epoc32/tools/rom/imaker/imaker.mk TIMESTAMP=2010100918111641  --file=/epoc32/rom/config/sf_refhw/syborg/image_conf_syborg.mk  -f M:/epoc32/tools/rom/imaker/imaker.mk flash'
 # IMAKER_PERLCMD   = `perl -x M:/epoc32/tools/rom/imaker/imaker.pl --cmdfile "/epoc32/rombuild/syborg/syborg_flash.icmd" --logfile "/epoc32/rombuild/syborg/log/syborg_flash.log"  --step "IMAKERPRE:cbk-COREPRE:cb-CORE:cb-COREPOST:cb" --verbose "1" --workdir "/epoc32/rombuild/syborg"'
 # IMAKER_EXITSHELL = `'
 # SHELL            = `C:/Windows/system32/cmd.exe'
 # MAKE             = `M:/epoc32/tools/rom/imaker/mingw_make'
-# MAKEFLAGS        = ` --no-print-directory -RrI M:/epoc32/rom/config -- TIMESTAMP=2010100915465441 SHELL=C:/Windows/system32/cmd.exe'
+# MAKEFLAGS        = ` --no-print-directory -RrI M:/epoc32/rom/config -- TIMESTAMP=2010100918111641 SHELL=C:/Windows/system32/cmd.exe'
 # MAKECMDGOALS     = `flash'
 # $@               = `flash'
 # MAKELEVEL        = `0'
@@ -72,11 +72,11 @@ defined(%hash) is deprecated at M:\epoc32\tools\/E32Plat.pm line 451.
 	(Maybe you should just omit the defined()?)
 defined(%hash) is deprecated at M:\epoc32\tools\/E32Plat.pm line 591.
 	(Maybe you should just omit the defined()?)
-defined(@array) is deprecated at M:\epoc32\tools\/buildrom.pm line 3144.
+defined(@array) is deprecated at M:\epoc32\tools\/buildrom.pm line 3146.
 	(Maybe you should just omit the defined()?)
-defined(@array) is deprecated at M:\epoc32\tools\/buildrom.pm line 3170.
+defined(@array) is deprecated at M:\epoc32\tools\/buildrom.pm line 3172.
 	(Maybe you should just omit the defined()?)
-defined(@array) is deprecated at M:\epoc32\tools\/buildrom.pm line 3223.
+defined(@array) is deprecated at M:\epoc32\tools\/buildrom.pm line 3225.
 	(Maybe you should just omit the defined()?)
 * cpp -o tmp1.oby -nostdinc -undef -D_IMAGE_TYPE_CORE -D_IMAGE_TYPE_RND -D_EABI=ARMV5 -IM:/epoc32/tools/rom/../../rom/include/core/mw -IM:/epoc32/tools/rom/../../rom/include/core/app -DSYBORG -DSECTION -IM:/epoc32/rom/config -IM:/epoc32/rom -I "..\..\..\include\" -include "..\..\..\include\bldvariant.hrh" -DROM_FEATURE_MANAGEMENT  -I. -I../../../../epoc32/rom/include
 In file included from syborg_core_collected.oby:898,
@@ -376,13 +376,13 @@ Writing uncompressed Rom image without header to file syborg.rom.img
 
  Directory of M:\epoc32\rombuild\syborg\core
 
-09/10/2010  15:47           860,139 syborg.dir
-09/10/2010  15:47         5,708,171 syborg.log
-09/10/2010  15:47           723,002 syborg.oby
-09/10/2010  15:47       124,739,584 syborg.rom.img
-               4 File(s)    132,030,896 bytes
-               0 Dir(s)   9,649,045,504 bytes free
-==========>8==========>8==========>8==========>8==========>8===01:00===[END]<<<
+09/10/2010  18:11           860,139 syborg.dir
+09/10/2010  18:11         5,708,165 syborg.log
+09/10/2010  18:11           723,002 syborg.oby
+09/10/2010  18:11       124,739,584 syborg.rom.img
+               4 File(s)    132,030,890 bytes
+               0 Dir(s)   9,378,553,856 bytes free
+==========>8==========>8==========>8==========>8==========>8===00:32===[END]<<<
 
 Missing file(s):
  1) ..\..\..\..\epoc32\rom\include\csc_plugin.iby(3): Missing file: '\epoc32\release\ARMV5\urel\10286506.dll' in statement 'file='
@@ -502,7 +502,7 @@ DeleteFile: `/epoc32/rombuild/syborg/core/tmp9.oby'
 MoveFile: `/epoc32/rombuild/syborg/core/syborg.log' => `/epoc32/rombuild/syborg/core/syborg.rom.log'
 MoveFile: `/epoc32/rombuild/syborg/core/syborg.oby' => `/epoc32/rombuild/syborg/core/syborg.rom.oby'
 TestFile: `/epoc32/rombuild/syborg/core/syborg.rom.img'
-EXIT: `S:CORE,C:1,B:1,K:0,V:1', duration: 01:00
+EXIT: `S:CORE,C:1,B:1,K:0,V:1', duration: 00:33
 ChangeDir: `/epoc32/rombuild/syborg'
 ===============================================================================
 ENTER: `S:COREPOST,C:1,B:1,K:0,V:1'
@@ -512,7 +512,7 @@ Step         Duration
 ============ ===================== 
 1. IMAKERPRE 00:00                 
 2. COREPRE   00:02                 
-3. CORE      01:00 (01:00 + 00:00) 
+3. CORE      00:33 (00:32 + 00:01) 
 4. COREPOST  00:00                 
 ------------ --------------------- 
-Total        01:02                 
+Total        00:35                 
