@@ -8,6 +8,8 @@ Put back
   define ROMDATE ##TODAY##  
 convert mbm_rom statements back into source form  
   ->  s/data="(.*mbm)_rom"(\s+)"(.*)"/auto-bitmap=$1$2$3/ 
-Fix buildrom.pl to leave aliases to .RSC files alone (and not move them into sys\bin)
+?? Reinstate "REM expanded __ECOM_PLUGIN()" lines, killing the following line in each case
+
+Fix buildrom.pm to leave aliases to .RSC files alone (and not move them into sys\bin)
 
 buildrom syborg_stem_rom.oby -fm=featuredatabase.xml -k -nosymbols -loglevel1 -v

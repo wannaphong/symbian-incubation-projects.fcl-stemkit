@@ -17,6 +17,7 @@
 use strict;
 
 my %romfiles;
+my %ibyfiles;
 
 sub scan_rom_dir_file($)
 	{
@@ -29,14 +30,22 @@ sub scan_rom_dir_file($)
   	next if ($line !~ /\t/);
   	
   	chomp $line;
-  	my ($romdest,$srcfile) = split /\t/,$line;
+  	my ($romdest,$srcfile,$ibyfile) = split /\t/,$line;
   	$romdest =~ s/\s*$//;		# strip off trailing spaces
+  	$romdest =~ s/\//\\/g; 	# convert to EPOC directory separators
+  	
     $srcfile =~ s/\\/\//g;	# Unix directory separators please
-    
+    $srcfile =~ s/^"(.*)"$/$1/; 	# Remove quotes
+    $srcfile =~ s/\/\//\//g; 	# Convert // to /
     $srcfile =~ s/^\[0x[0-9a-fA-F]+\]//;	# remove HVID, if present
+    $srcfile =~ s/mbm_rom$/mbm/i; 	# use original name of derived file
     $srcfile = lc $srcfile; 	# sigh...
     
+    $ibyfile =~ s/\\/\//g;	# Unix directory separators please
+    $ibyfile =~ s/^.*\/rom\/include\///; 	# normalise path to rom\include
+    
   	$romfiles{$srcfile} = $romdest;
+  	$ibyfiles{$romdest} = $ibyfile;
 		}
 	close FILE;
 	}
@@ -82,17 +91,20 @@ while ($tsvfile = <>)
     }
   }
 
-print "File\tPackage\n";
+print "ROM file,Host file,Iby file,Package,In/Out,Who,Why\n";
 my $unknowns = 0;
 foreach my $file (sort keys %romfiles)
 	{
+	my $romfile = $romfiles{$file};
+	my $ibyfile = $ibyfiles{$romfile};
 	my $package = $package_by_romfile{$file};
+
 	if (!defined $package)
 		{
 		$package = "(unknown)";
 		$package_by_romfile{$file} = $package;
 		$unknowns += 1;
 		}
-	printf "%s\t%s\n", $file, $package;
+	print join(",", $romfile, $file, $ibyfile, $package, "","",""), "\n";
 	}
-printf "\n%d files in %s, %d unknowns\n", scalar keys %romfiles, $romlisting, $unknowns;
+printf STDERR "\n%d files in %s, %d unknowns\n", scalar keys %romfiles, $romlisting, $unknowns;
