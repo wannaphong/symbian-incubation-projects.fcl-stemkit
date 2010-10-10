@@ -39,6 +39,7 @@ sub scan_rom_dir_file($)
     $srcfile =~ s/\/\//\//g; 	# Convert // to /
     $srcfile =~ s/^\[0x[0-9a-fA-F]+\]//;	# remove HVID, if present
     $srcfile =~ s/mbm_rom$/mbm/i; 	# use original name of derived file
+    $srcfile =~ s/(z\/)system\/..\//$1/i; 	# z/system/../private
     $srcfile = lc $srcfile; 	# sigh...
     
     $ibyfile =~ s/\\/\//g;	# Unix directory separators please
