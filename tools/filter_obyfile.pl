@@ -49,7 +49,8 @@ foreach my $line (@rom_content)
 	
 	if ($cmd eq "out")
 		{
-		$deletions{$romfile} = "";
+		# print STDERR "Deletion request for >$romfile<\n";
+		$deletions{$romfile} = "out";
 		next;
 		}
 	
@@ -66,10 +67,74 @@ printf STDERR "%d stem, %d out, %d in\n",
 	scalar keys %must_have;
 
 # read static dependencies file
+my %exe_to_romfile;
+my $line;
+open STATIC_DEPENDENCIES, "<$static_dependencies_txt" or die ("Cannot read $static_dependencies_txt: $!\n");
+while ($line = <STATIC_DEPENDENCIES>)
+	{
+	chomp $line;
+	last if ($line eq "");	# blank line between the two sections
+	my ($romfile, $hostfile, $stuff) = split /\t/, $line;
+	if ($romfile =~ /^sys.bin.(.*)$/i)
+		{
+		my $exe = lc $1;
+		$exe_to_romfile{$exe} = $romfile;
+		}
+	}
+my %exe_dependencies;
+while ($line = <STATIC_DEPENDENCIES>)
+	{
+	chomp $line;
+	my ($x, $exename, @dependencies) = split /\t/,$line;
+	$exe_dependencies{$exename} = \@dependencies;
+	}
+close STATIC_DEPENDENCIES;
+
 # process the "out" commands to recursively expand the deletions
+
+sub delete_dependents($$$)
+	{
+	my ($romfile,$original_reason,$listref) = @_;
+	printf STDERR "  %d - deleting %s\n", scalar @{$listref}, $romfile;
+	if (defined $deletions{$romfile})
+		{
+		# already marked for deletion
+		if ($original_reason eq $romfile && $deletions{$romfile} ne $original_reason)
+			{
+			print STDERR "$romfile already deleted by removing $deletions{$romfile}\n";
+			}
+		return;
+		}
+	$deletions{$romfile} = $original_reason;	# this ensures that it gets deleted
+	if ($romfile =~ /^sys.bin.(.*)$/i)
+		{
+		my $exe = lc $1;
+		if (!defined $exe_dependencies{$exe})
+			{
+			# print STDERR "No dependencies for $exe ($romfile)\n";
+			return;
+			}
+		push @{$listref}, @{$exe_dependencies{$exe}};
+		}
+	}
+
+my @delete_cmds = sort keys %deletions;
+foreach my $romfile (@delete_cmds)
+	{
+	delete $deletions{$romfile}; 	# so that delete_dependents with iterate properly
+	my @delete_list = ($romfile);
+	while (scalar @delete_list > 0)
+		{
+		my $next_victim = shift @delete_list;
+		delete_dependents($next_victim, $romfile, \@delete_list);
+		}
+	}
 
 # read the oby file and apply the commands
 
+my $stem_count = 0;
+my $deletion_count = 0;
+my %lc_romfiles;
 my $line;
 while ($line = <>)
 	{
@@ -89,16 +154,51 @@ while ($line = <>)
 			$rest = '"'. $rest;
 			}
 		
-		next if ($deletions{$romfile});
+		$lc_romfiles{lc $romfile} = $romfile;	# for alias processing
+		
+		if ($deletions{$romfile})
+			{
+			$deletion_count++;
+			next;
+			}
 		
 		if (defined $stem_substitutions{$romfile})
 			{
 			# print STDERR "Applying stem_ prefix to $hostfile in $line\n";
 			$hostfile =~ s/(\/|\\)([^\\\/]+)$/$1stem_$2/;
+			$stem_count++;
 			}
 		print $romcmd, $hostfile, $romfile, $rest, "\n";
 		next;
 		}
 	
+	# __ECOM_PLUGIN(emulator directory, file rom dir, dataz_, resource rom dir, filename, resource filename)
+	if ($line =~ /__ECOM_PLUGIN\(([^)]+)\)/)
+		{
+		my ($emudir, $romdir, $dataz, $resourcedir, $exename, $rscname) = split /\s*,\s*/, $1;
+		my $romfile = $romdir. "\\". $exename;
+		if ($deletions{$romfile})
+			{
+			print STDERR "Deleted __ECOM_PLUGIN for $romfile\n";
+			$deletion_count++;
+			next;
+			}		
+		}
+	if ($line =~ /alias\s+(\S+)\s+(\S+)\s*$/)
+		{
+		my $romfile = $1;
+		my $newname = $2;
+		
+		$romfile = $lc_romfiles{lc $romfile};
+		if ($deletions{$romfile})
+			{
+			$deletion_count++;
+			# Not sure what to do about aliases - what if the alias has dependents?
+			next;
+			}
+		}
+	
 	print $line,"\n";
 	}
+
+print STDERR "Applied $stem_count stem substitutions and deleted $deletion_count rom files\n";

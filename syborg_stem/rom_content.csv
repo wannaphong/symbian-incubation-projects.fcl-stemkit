@@ -2903,7 +2903,7 @@ sys\bin\blacklistclient.dll,/epoc32/release/armv5/urel/blacklistclient.dll,core/
 sys\bin\BlackWhite.pgn,/epoc32/release/armv5/urel/blackwhite.pgn,core/app/ImageEditorBlackWhitePlugin.iby,app/imgeditor,,,
 sys\bin\Blid.exe,/epoc32/release/armv5/urel/blid.exe,core/app/blid.iby,app/location,,,
 sys\bin\BlidEng.dll,/epoc32/release/armv5/urel/blideng.dll,core/app/blid.iby,app/location,,,
-sys\bin\bluetooth.dll,/epoc32/release/armv5/urel/bluetooth.dll,bluetooth.iby,os/bt,,,
+sys\bin\bluetooth.dll,/epoc32/release/armv5/urel/bluetooth.dll,bluetooth.iby,os/bt,Out,WR,Stem should not contain bluetooth
 sys\bin\bluetoothAV.dll,/epoc32/release/armv5/urel/bluetoothav.dll,bluetooth.iby,os/bt,,,
 sys\bin\bmcustomization.dll,/epoc32/release/armv5/urel/bmcustomization.dll,core/app/bmcustomization.iby,app/phone,,,
 sys\bin\BmpAnim.dll,/epoc32/release/armv5/urel/bmpanim.dll,bmpanim.iby,mw/classicui,,,
