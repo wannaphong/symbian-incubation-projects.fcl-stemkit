@@ -177,18 +177,22 @@ while ($line = <>)
 		{
 		my ($emudir, $romdir, $dataz, $resourcedir, $exename, $rscname) = split /\s*,\s*/, $1;
 		my $romfile = $romdir. "\\". $exename;
+
+		$lc_romfiles{lc $romfile} = $romfile;	# for alias processing
+
 		if ($deletions{$romfile})
 			{
-			print STDERR "Deleted __ECOM_PLUGIN for $romfile\n";
+			# print STDERR "Deleted __ECOM_PLUGIN for $romfile\n";
 			$deletion_count++;
 			next;
 			}		
 		}
-	if ($line =~ /alias\s+(\S+)\s+(\S+)\s*$/)
+	if ($line =~ /^\s*alias\s+(\S+)\s+(\S+)\s*$/)
 		{
 		my $romfile = $1;
 		my $newname = $2;
 		
+		$romfile =~ s/^\\sys/sys/;	# remove leading \, to match $romfile convention
 		$romfile = $lc_romfiles{lc $romfile};
 		if ($deletions{$romfile})
 			{
@@ -198,6 +202,20 @@ while ($line = <>)
 			}
 		}
 	
+	# patchdata  sys\bin\eiksrv.dll addr 0x0000c944 4 5
+	if ($line =~ /^\s*patchdata\s*(\S+)/)
+		{
+		my $romfile = $1;
+		$romfile =~ s/^\\//;	# remove leading \, to match $romfile convention
+		$romfile = $lc_romfiles{lc $romfile};
+		
+		print STDERR "deleting patchdata line for $romfile\n";
+		if ($deletions{$romfile})
+			{
+			# don't count these lines as deletions - they are just extra lines relating to deleted files.
+			next;
+			}
+		}
 	print $line,"\n";
 	}
 

@@ -8,6 +8,6 @@ copy \epoc32\rom\include\featuredatabase.xml syborg_stem\featuredatabase.xml
 findstr FEATURES original\syborg.tmp1.oby >syborg_stem_features.iby
 perl tools\repair_obyfile.pl original\syborg.rom.oby >syborg_stem\syborg_stem_rom.oby
 dir /s/b \build_info\logs\releaseables | perl tools\packages_in_rom.pl original\syborg.dir >syborg_stem\rom_content.csv
-perl tools\static_dependencies.pl syborg_stem\rom_contents.csv >syborg_stem\static_dependencies.txt
+perl tools\static_dependencies.pl syborg_stem\rom_content.csv >syborg_stem\static_dependencies.txt
 
 buildrom syborg_stem_rom.oby -fm=featuredatabase.xml -k -nosymbols -loglevel1 -v
