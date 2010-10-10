@@ -69,7 +69,9 @@ sub generate_elftran_dependencies($$)
 	my @imports;
 	foreach my $line (@elftran)
 		{
-		if ($line =~ /imports from (\S+)\{000a0000\}(\S+)$/)
+		# 2 imports from backend{00010001}[102828d5].dll
+		# 17 imports from dfpaeabi{000a0000}.dll
+		if ($line =~ /imports from (\S+)\{.{8}\}(\S+)$/)
 			{
 			push @imports, $1.$2;
 			next;
