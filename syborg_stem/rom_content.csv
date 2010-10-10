@@ -2903,7 +2903,7 @@ sys\bin\blacklistclient.dll,/epoc32/release/armv5/urel/blacklistclient.dll,core/
 sys\bin\BlackWhite.pgn,/epoc32/release/armv5/urel/blackwhite.pgn,core/app/ImageEditorBlackWhitePlugin.iby,app/imgeditor,,,
 sys\bin\Blid.exe,/epoc32/release/armv5/urel/blid.exe,core/app/blid.iby,app/location,,,
 sys\bin\BlidEng.dll,/epoc32/release/armv5/urel/blideng.dll,core/app/blid.iby,app/location,,,
-sys\bin\bluetooth.dll,/epoc32/release/armv5/urel/bluetooth.dll,bluetooth.iby,os/bt,Out,WR,Stem should not contain bluetooth
+sys\bin\bluetooth.dll,/epoc32/release/armv5/urel/bluetooth.dll,bluetooth.iby,os/bt,,WR,Stem should not contain bluetooth - kills 2108 files!
 sys\bin\bluetoothAV.dll,/epoc32/release/armv5/urel/bluetoothav.dll,bluetooth.iby,os/bt,,,
 sys\bin\bmcustomization.dll,/epoc32/release/armv5/urel/bmcustomization.dll,core/app/bmcustomization.iby,app/phone,,,
 sys\bin\BmpAnim.dll,/epoc32/release/armv5/urel/bmpanim.dll,bmpanim.iby,mw/classicui,,,
@@ -3608,7 +3608,7 @@ sys\bin\FileBrowserFileOpServer.exe,/epoc32/release/armv5/urel/filebrowserfileop
 Sys\Bin\filecertstore.dll,/epoc32/release/armv5/urel/filecertstore.dll,filetokens.iby,os/security,,,
 Sys\Bin\filedetailsplugin.dll,/epoc32/release/armv5/urel/filedetailsplugin.dll,core/app/filedetailsplugin.iby,app/videoplayer,,,
 Sys\Bin\filekeystore.dll,/epoc32/release/armv5/urel/filekeystore.dll,filetokens.iby,os/security,,,
-sys\bin\FileList.dll,/epoc32/release/armv5/urel/filelist.dll,core/app/filelist.iby,mw/gsprofilesrv,,,
+sys\bin\FileList.dll,/epoc32/release/armv5/urel/filelist.dll,core/app/filelist.iby,mw/gsprofilesrv,Out,WR,Causes 158 files to be removed
 sys\bin\FileManager.exe,/epoc32/release/armv5/urel/filemanager.exe,core/app/FileManager.iby,app/files,,,
 Sys\Bin\filemanageraiwprovider.dll,/epoc32/release/armv5/urel/filemanageraiwprovider.dll,core/app/FileManager.iby,app/files,,,
 sys\bin\filemanagerbkupengine.dll,/epoc32/release/armv5/urel/filemanagerbkupengine.dll,core/app/FileManager.iby,app/files,,,

@@ -68,6 +68,8 @@ printf STDERR "%d stem, %d out, %d in\n",
 
 # read static dependencies file
 my %exe_to_romfile;
+my %lc_romfiles;
+
 my $line;
 open STATIC_DEPENDENCIES, "<$static_dependencies_txt" or die ("Cannot read $static_dependencies_txt: $!\n");
 while ($line = <STATIC_DEPENDENCIES>)
@@ -75,6 +77,9 @@ while ($line = <STATIC_DEPENDENCIES>)
 	chomp $line;
 	last if ($line eq "");	# blank line between the two sections
 	my ($romfile, $hostfile, $stuff) = split /\t/, $line;
+
+	$lc_romfiles{lc $romfile} = $romfile;
+	
 	if ($romfile =~ /^sys.bin.(.*)$/i)
 		{
 		my $exe = lc $1;
@@ -90,12 +95,45 @@ while ($line = <STATIC_DEPENDENCIES>)
 	}
 close STATIC_DEPENDENCIES;
 
+# Create static dependencies for aliases
+
+my @obylines = <>;	# read the oby file
+
+foreach my $line (@obylines)
+	{
+	if ($line =~ /^\s*alias\s+(\S+)\s+(\S+)\s*$/)
+		{
+		my $romfile = $1;
+		my $newname = $2;
+
+		$romfile =~ s/^\\sys/sys/;	# remove leading \, to match $romfile convention
+		next if (!defined $lc_romfiles{lc $romfile});		# aliases to non-executables
+		$romfile = $lc_romfiles{lc $romfile};
+
+		$newname =~ s/^\\sys/sys/;	# remove leading \, to match $romfile convention
+		$lc_romfiles{lc $newname} = $newname;
+		
+		if ($romfile =~ /^sys.bin.(\S+)$/i)
+			{
+			my $realexe = lc $1;
+			push @{$exe_dependencies{$realexe}}, $newname;		# the alias is a dependent of the real file
+			# print STDERR "added $newname as a dependent of $realexe\n"
+			}
+		}
+	}
+
+# foreach my $exe ("libopenvg.dll", "libopenvg_sw.dll")
+# 	{
+# 	printf STDERR "Dependents of %s = %s\n", $exe, join(", ", @{$exe_dependencies{$exe}});
+# 	}
+
 # process the "out" commands to recursively expand the deletions
 
 sub delete_dependents($$$)
 	{
-	my ($romfile,$original_reason,$listref) = @_;
-	printf STDERR "  %d - deleting %s\n", scalar @{$listref}, $romfile;
+	my ($romtrail,$original_reason,$listref) = @_;
+	my ($romfile,$trail) = split /\t/, $romtrail;
+	
 	if (defined $deletions{$romfile})
 		{
 		# already marked for deletion
@@ -105,6 +143,10 @@ sub delete_dependents($$$)
 			}
 		return;
 		}
+	
+	# We should keep the following information, but it's rather verbose
+	# printf STDERR "  %d - deleting %s (%s)\n", scalar @{$listref}, $romfile, $trail;
+	
 	$deletions{$romfile} = $original_reason;	# this ensures that it gets deleted
 	if ($romfile =~ /^sys.bin.(.*)$/i)
 		{
@@ -114,15 +156,21 @@ sub delete_dependents($$$)
 			# print STDERR "No dependencies for $exe ($romfile)\n";
 			return;
 			}
-		push @{$listref}, @{$exe_dependencies{$exe}};
+		foreach my $dependent (@{$exe_dependencies{$exe}})
+			{
+			if (!defined $deletions{$dependent})
+				{
+		  	push @{$listref}, "$dependent\t$romfile $trail";
+		  	}
+			}
 		}
 	}
 
 my @delete_cmds = sort keys %deletions;
 foreach my $romfile (@delete_cmds)
 	{
-	delete $deletions{$romfile}; 	# so that delete_dependents with iterate properly
-	my @delete_list = ($romfile);
+	delete $deletions{$romfile}; 	# so that delete_dependents will iterate properly
+	my @delete_list = ("$romfile\tout");
 	while (scalar @delete_list > 0)
 		{
 		my $next_victim = shift @delete_list;
@@ -134,9 +182,7 @@ foreach my $romfile (@delete_cmds)
 
 my $stem_count = 0;
 my $deletion_count = 0;
-my %lc_romfiles;
-my $line;
-while ($line = <>)
+foreach my $line (@obylines)
 	{
 	chomp $line;
 	if ($line =~ /^(.*=)(\S+\s+)(\S+)(\s.*)?$/)
@@ -153,8 +199,8 @@ while ($line = <>)
 			$hostfile .= '"';
 			$rest = '"'. $rest;
 			}
-		
-		$lc_romfiles{lc $romfile} = $romfile;	# for alias processing
+
+		$lc_romfiles{lc $romfile} = $romfile;
 		
 		if ($deletions{$romfile})
 			{
@@ -178,8 +224,6 @@ while ($line = <>)
 		my ($emudir, $romdir, $dataz, $resourcedir, $exename, $rscname) = split /\s*,\s*/, $1;
 		my $romfile = $romdir. "\\". $exename;
 
-		$lc_romfiles{lc $romfile} = $romfile;	# for alias processing
-
 		if ($deletions{$romfile})
 			{
 			# print STDERR "Deleted __ECOM_PLUGIN for $romfile\n";
@@ -196,9 +240,13 @@ while ($line = <>)
 		$romfile = $lc_romfiles{lc $romfile};
 		if ($deletions{$romfile})
 			{
+			# delete the alias if the real file is marked for deletion
 			$deletion_count++;
-			# Not sure what to do about aliases - what if the alias has dependents?
 			next;
+			}
+		else
+			{
+			# print STDERR "$romfile is not deleted - saving $line\n";
 			}
 		}
 	
@@ -209,7 +257,7 @@ while ($line = <>)
 		$romfile =~ s/^\\//;	# remove leading \, to match $romfile convention
 		$romfile = $lc_romfiles{lc $romfile};
 		
-		print STDERR "deleting patchdata line for $romfile\n";
+		# print STDERR "deleting patchdata line for $romfile\n";
 		if ($deletions{$romfile})
 			{
 			# don't count these lines as deletions - they are just extra lines relating to deleted files.
