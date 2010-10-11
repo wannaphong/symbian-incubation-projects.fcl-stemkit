@@ -2871,7 +2871,7 @@ Sys\Bin\avkonstartupextensionplugin.dll,/epoc32/release/armv5/urel/avkonstartupe
 sys\bin\avmediaserver.exe,/epoc32/release/armv5/urel/avmediaserver.exe,core/mw/upnpmediaserver.iby,mw/dlnasrv,,,
 sys\bin\avmediaserverclient.dll,/epoc32/release/armv5/urel/avmediaserverclient.dll,core/mw/upnpmediaserver.iby,mw/dlnasrv,,,
 sys\bin\avrcpipc.dll,/epoc32/release/armv5/urel/avrcpipc.dll,bluetooth.iby,mw/btservices,,,
-sys\bin\backend.dll,/epoc32/release/armv5/urel/backend.dll,openenv.iby,os/ossrv,In,WR,Needed for libc etc which are used by OpenWF and Qt
+sys\bin\backend.dll,/epoc32/release/armv5/urel/backend.dll,openenv.iby,os/ossrv,Stem,WR,Needed for libc etc which are used by OpenWF and Qt
 sys\bin\backgroundanimhost.exe,/epoc32/release/armv5/urel/backgroundanimhost.exe,core/mw/alfred.iby,mw/uiaccelerator,,,
 sys\bin\BackgroundImage.dll,/epoc32/release/armv5/urel/backgroundimage.dll,core/mw/gsbackgroundimage.iby,mw/gsprofilesrv,,,
 sys\bin\backuprestore.dll,/epoc32/release/armv5/urel/backuprestore.dll,swi.iby,mw/appinstall,,,
@@ -2903,7 +2903,7 @@ sys\bin\blacklistclient.dll,/epoc32/release/armv5/urel/blacklistclient.dll,core/
 sys\bin\BlackWhite.pgn,/epoc32/release/armv5/urel/blackwhite.pgn,core/app/ImageEditorBlackWhitePlugin.iby,app/imgeditor,,,
 sys\bin\Blid.exe,/epoc32/release/armv5/urel/blid.exe,core/app/blid.iby,app/location,,,
 sys\bin\BlidEng.dll,/epoc32/release/armv5/urel/blideng.dll,core/app/blid.iby,app/location,,,
-sys\bin\bluetooth.dll,/epoc32/release/armv5/urel/bluetooth.dll,bluetooth.iby,os/bt,,WR,Stem should not contain bluetooth - kills 2108 files!
+sys\bin\bluetooth.dll,/epoc32/release/armv5/urel/bluetooth.dll,bluetooth.iby,os/bt,Out,WR,Stem should not contain bluetooth
 sys\bin\bluetoothAV.dll,/epoc32/release/armv5/urel/bluetoothav.dll,bluetooth.iby,os/bt,,,
 sys\bin\bmcustomization.dll,/epoc32/release/armv5/urel/bmcustomization.dll,core/app/bmcustomization.iby,app/phone,,,
 sys\bin\BmpAnim.dll,/epoc32/release/armv5/urel/bmpanim.dll,bmpanim.iby,mw/classicui,,,
