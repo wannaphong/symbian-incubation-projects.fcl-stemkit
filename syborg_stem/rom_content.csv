@@ -2871,7 +2871,7 @@ Sys\Bin\avkonstartupextensionplugin.dll,/epoc32/release/armv5/urel/avkonstartupe
 sys\bin\avmediaserver.exe,/epoc32/release/armv5/urel/avmediaserver.exe,core/mw/upnpmediaserver.iby,mw/dlnasrv,,,
 sys\bin\avmediaserverclient.dll,/epoc32/release/armv5/urel/avmediaserverclient.dll,core/mw/upnpmediaserver.iby,mw/dlnasrv,,,
 sys\bin\avrcpipc.dll,/epoc32/release/armv5/urel/avrcpipc.dll,bluetooth.iby,mw/btservices,,,
-sys\bin\backend.dll,/epoc32/release/armv5/urel/backend.dll,openenv.iby,os/ossrv,,,
+sys\bin\backend.dll,/epoc32/release/armv5/urel/backend.dll,openenv.iby,os/ossrv,In,WR,Needed for libc etc which are used by OpenWF and Qt
 sys\bin\backgroundanimhost.exe,/epoc32/release/armv5/urel/backgroundanimhost.exe,core/mw/alfred.iby,mw/uiaccelerator,,,
 sys\bin\BackgroundImage.dll,/epoc32/release/armv5/urel/backgroundimage.dll,core/mw/gsbackgroundimage.iby,mw/gsprofilesrv,,,
 sys\bin\backuprestore.dll,/epoc32/release/armv5/urel/backuprestore.dll,swi.iby,mw/appinstall,,,
@@ -4282,7 +4282,7 @@ sys\bin\libssl.dll,/epoc32/release/armv5/urel/libssl.dll,core/os/ssl.iby,os/ossr
 sys\bin\libstdcpp.dll,/epoc32/release/armv5/urel/libstdcpp.dll,core/os/stdcpp4.iby,os/ossrv,,,
 sys\bin\libstdcppv5.dll,/epoc32/release/armv5/urel/libstdcppv5.dll,stdcpp.iby,os/ossrv,,,
 sys\bin\libvgi.dll,/epoc32/release/armv5/urel/libvgi.dll,core/os/libvgi.iby,os/graphics,,,
-sys\bin\libwfchwsyborg.dll,/epoc32/release/armv5/urel/libwfchwsyborg.dll,openwfc_ref.iby,os/graphics,,,
+sys\bin\libwfchwsyborg.dll,/epoc32/release/armv5/urel/libwfchwsyborg.dll,openwfc_ref.iby,os/graphics,In,WR,Provides the key OpenWF functionality (aliased to libWFC.dll)
 sys\bin\libz.dll,/epoc32/release/armv5/urel/libz.dll,ezlib.iby,os/ossrv,,,
 sys\bin\libzcore.dll,/epoc32/release/armv5/urel/libzcore.dll,ezlib.iby,os/ossrv,,,
 Sys\Bin\licenseetsy.dll,/epoc32/release/armv5/urel/licenseetsy_stub.dll,../../../rom/config/sf_refhw/bigrom.oby,os/cellularsrv,,,
@@ -5089,7 +5089,7 @@ sys\bin\qkrcodecs.dll,/epoc32/release/armv5/urel/qkrcodecs.dll,core/mw/qt.iby,mw
 sys\bin\qmng.dll,/epoc32/release/armv5/urel/qmng.dll,core/mw/qt.iby,mw/qt,,,
 sys\bin\qsvg.dll,/epoc32/release/armv5/urel/qsvg.dll,core/mw/qt.iby,mw/qt,,,
 sys\bin\qsvgicon.dll,/epoc32/release/armv5/urel/qsvgicon.dll,core/mw/qt.iby,mw/qt,,,
-sys\bin\QtCore.dll,/epoc32/release/armv5/urel/qtcore.dll,core/mw/qt.iby,mw/qt,,,
+sys\bin\QtCore.dll,/epoc32/release/armv5/urel/qtcore.dll,core/mw/qt.iby,mw/qt,In,WR,Stem use case requires Qt
 sys\bin\QtGui.dll,/epoc32/release/armv5/urel/qtgui.dll,core/mw/qt.iby,mw/qt,,,
 sys\bin\qtiff.dll,/epoc32/release/armv5/urel/qtiff.dll,core/mw/qt.iby,mw/qt,,,
 sys\bin\QtMultimedia.dll,/epoc32/release/armv5/urel/qtmultimedia.dll,core/mw/qt.iby,mw/qt,,,

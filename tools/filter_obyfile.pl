@@ -144,6 +144,14 @@ sub delete_dependents($$$)
 		return;
 		}
 	
+	if (defined $must_have{$romfile})
+		{
+		# Problem! We won't be able to build this ROM
+		print STDERR "$romfile is being kept, but will fail to link because of deletion trail $trail\n";
+		# keep that file and see what happens anyway
+		return;
+		}
+
 	# We should keep the following information, but it's rather verbose
 	# printf STDERR "  %d - deleting %s (%s)\n", scalar @{$listref}, $romfile, $trail;
 	
