@@ -14,6 +14,12 @@
 # This script generates a list of static dependencies for files in a ROM
 
 use strict;
+use Getopt::Long;
+
+my $inverted_table = 0;
+GetOptions(
+  "i|invert" => \$inverted_table,   # add the inverted table
+  );
 
 my %romfiles;
 my @contents;
@@ -35,6 +41,8 @@ sub print_dependency($$@)
 	{
 	my ($romfile,$hostfile,@dependencies) = @_;
 	print "$romfile\t$hostfile\t", join(":",@dependencies), "\n";
+	
+	next unless $inverted_table;
 	
 	# Create inverted table 
 	foreach my $dependent (@dependencies)
@@ -133,8 +141,11 @@ foreach $line (@contents)
 	# Assume that the rest don't depend on anything, and leave them out.
 	}
 
-print "\n";
-foreach my $inverted (sort keys %dependents)
+if ($inverted_table)
 	{
-	print "x\t$inverted\t$dependents{$inverted}\n";
+	print "\n";
+	foreach my $inverted (sort keys %dependents)
+		{
+		print "x\t$inverted\t$dependents{$inverted}\n";
+		}
 	}

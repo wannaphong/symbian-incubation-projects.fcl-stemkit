@@ -44,6 +44,7 @@ foreach my $line (@rom_content)
 	if ($cmd eq "stem")
 		{
 		$stem_substitutions{$romfile} = $hostfile;
+		$must_have{$romfile} = 1;
 		next;
 		}
 	
@@ -68,6 +69,7 @@ printf STDERR "%d stem, %d out, %d in\n",
 
 # read static dependencies file
 my %exe_to_romfile;
+my %exe_dependencies;
 my %lc_romfiles;
 
 my $line;
@@ -75,8 +77,18 @@ open STATIC_DEPENDENCIES, "<$static_dependencies_txt" or die ("Cannot read $stat
 while ($line = <STATIC_DEPENDENCIES>)
 	{
 	chomp $line;
-	last if ($line eq "");	# blank line between the two sections
 	my ($romfile, $hostfile, $stuff) = split /\t/, $line;
+
+	next if ($romfile eq "x");	# pre-inverted dependency information
+	
+	if (defined $stem_substitutions{$romfile})
+		{
+		if ($hostfile !~ /\/stem_/)
+			{
+			print STDERR "Ignoring dependencies of $hostfile because of stem substitution of $romfile\n";
+			next;
+			}
+		}
 
 	$lc_romfiles{lc $romfile} = $romfile;
 	
@@ -85,17 +97,29 @@ while ($line = <STATIC_DEPENDENCIES>)
 		my $exe = lc $1;
 		$exe_to_romfile{$exe} = $romfile;
 		}
-	}
-my %exe_dependencies;
-while ($line = <STATIC_DEPENDENCIES>)
-	{
-	chomp $line;
-	my ($x, $exename, @dependencies) = split /\t/,$line;
-	$exe_dependencies{$exename} = \@dependencies;
+
+	foreach my $dependent (split /:/,$stuff)
+		{
+		next if ($dependent =~ /^sid=/);
+		$dependent = lc $dependent;
+		
+		$dependent =~ s/^sys\\bin\\//;	# no directory => sys\bin anyway
+		$dependent =~ s/\[\S+\]//;	# ignore the UIDs for now
+		
+		if (!defined $exe_dependencies{$dependent})
+			{
+			my @dependents = ($romfile);
+			$exe_dependencies{$dependent} = \@dependents;
+			}
+		else
+			{
+			push @{$exe_dependencies{$dependent}}, $romfile;
+			}
+		}
 	}
 close STATIC_DEPENDENCIES;
 
-# Create static dependencies for aliases
+# Add static dependencies for aliases
 
 my @obylines = <>;	# read the oby file
 
@@ -107,7 +131,7 @@ foreach my $line (@obylines)
 		my $newname = $2;
 
 		$romfile =~ s/^\\sys/sys/;	# remove leading \, to match $romfile convention
-		next if (!defined $lc_romfiles{lc $romfile});		# aliases to non-executables
+		next if (!defined $lc_romfiles{lc $romfile});		# ignore aliases to non-executables
 		$romfile = $lc_romfiles{lc $romfile};
 
 		$newname =~ s/^\\sys/sys/;	# remove leading \, to match $romfile convention
