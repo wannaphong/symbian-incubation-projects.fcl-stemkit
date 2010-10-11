@@ -124,6 +124,7 @@ void TUSockAddr::Set (const TAny* aBuf, TUint aLen)
 		SetUserLen(aLen);    	
 		return;
 		}	
+#if 0 // break dependency on bluetooth.dll
 	else if (sp->sa_family == KBTAddrFamily)
 		{
 		// Make a TBTSockAddr from a sockaddr_bt...
@@ -174,6 +175,7 @@ void TUSockAddr::Set (const TAny* aBuf, TUint aLen)
 
 		return;
 		}
+#endif
 	else
 		{
 		// Not AF_INET or KBTAddrFamily:

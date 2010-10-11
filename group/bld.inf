@@ -21,3 +21,4 @@ DEFAULT
 
 PRJ_MMPFILES
 ..\startup\ssmcmdlists
+..\breakdeps\backend.mmp

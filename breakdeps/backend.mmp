@@ -16,10 +16,13 @@
 // This is a project specific include file for building the 
 // backend library.
 //
+// Modified to build stem_backend.dll to break dependency on bluetooth.dll
+// Assumes that the sf/os/ossrv package is accessible, and adjusts the paths
+// to refer back to /sf/os/ossrv/genericopenlibs/openenvcore/backend where needed
 
    
 
-TARGET            backend.dll
+TARGET            stem_backend.dll
 TARGETTYPE        dll
 UID               0x1000008d  0x102828D5
 
@@ -28,16 +31,16 @@ CAPABILITY      ALL -TCB
 VENDORID        0x70000001
 VERSION 				1.1
 // Macro defs
-#include "../../libc/group/libcflags.mmpi"
+#include "/sf/os/ossrv/genericopenlibs/openenvcore/libc/group/libcflags.mmpi"
 #ifdef GCCXML
 MACRO __wchar_t_defined
 #endif //GCCXML
 
-USERINCLUDE			../inc
-USERINCLUDE			../../libc/inc 
-USERINCLUDE     		../../ewsd/inc
-USERINCLUDE			../ipcserver/ipccli/inc
-USERINCLUDE			../ipcserver/ipcsrv/inc
+USERINCLUDE			/sf/os/ossrv/genericopenlibs/openenvcore/backend/inc
+USERINCLUDE			/sf/os/ossrv/genericopenlibs/openenvcore/libc/inc 
+USERINCLUDE			/sf/os/ossrv/genericopenlibs/openenvcore/ewsd/inc
+USERINCLUDE			/sf/os/ossrv/genericopenlibs/openenvcore/backend/ipcserver/ipccli/inc
+USERINCLUDE			/sf/os/ossrv/genericopenlibs/openenvcore/backend/ipcserver/ipcsrv/inc
 
 // Illegal dependancy on tz.h in MW layer. Needs fixing
 MW_LAYER_SYSTEMINCLUDE_SYMBIAN
@@ -47,22 +50,22 @@ OS_LAYER_LIBC_SYSTEMINCLUDE
 //backend without signals and librt support
 #ifndef SYMBIAN_OE_POSIX_SIGNALS
 #ifdef WINSCW
-DEFFILE			../bwins/old_backend.def
+DEFFILE			/sf/os/ossrv/genericopenlibs/openenvcore/backend/bwins/old_backend.def
 #else
-DEFFILE			../eabi/old_backend.def
+DEFFILE			/sf/os/ossrv/genericopenlibs/openenvcore/backend/eabi/old_backend.def
 #endif
 #endif
 
 //backend without librt support
 #if (defined SYMBIAN_OE_POSIX_SIGNALS && !defined SYMBIAN_OE_LIBRT)
 #ifdef WINSCW
-DEFFILE			../bwins/backendwolibrt.def 
+DEFFILE			/sf/os/ossrv/genericopenlibs/openenvcore/backend/bwins/backendwolibrt.def 
 #else
-DEFFILE			../eabi/backendwolibrt.def
+DEFFILE			/sf/os/ossrv/genericopenlibs/openenvcore/backend/eabi/backendwolibrt.def
 #endif
 #endif
 
-SOURCEPATH   	../inc
+SOURCEPATH   	/sf/os/ossrv/genericopenlibs/openenvcore/backend/inc
 DOCUMENT     	base.dosc
 DOCUMENT     	consolestream.dosc
 DOCUMENT     	fdesc.dosc
@@ -93,7 +96,7 @@ DOCUMENT    	stdlib_r.dosc
 DOCUMENT		sysusrinclude.dosc
 
 
-SOURCEPATH   	../ipcserver/ipccli/inc
+SOURCEPATH   	/sf/os/ossrv/genericopenlibs/openenvcore/backend/ipcserver/ipccli/inc
 DOCUMENT    	ipcclient.dosc
 
 #ifndef WINSCW
@@ -101,10 +104,16 @@ EPOCALLOWDLLDATA
 #endif //WINSCW
 
 //Main Backend codes
-SOURCEPATH	../src/corebackend
+SOURCEPATH	/sf/os/ossrv/genericopenlibs/openenvcore/backend/src/corebackend
 
 SOURCE		localif.cpp posixfs.cpp
-SOURCE		ftable.cpp fdesc.cpp uconsole.cpp usocket.cpp
+SOURCE		ftable.cpp fdesc.cpp uconsole.cpp 
+
+SOURCEPATH	.
+SOURCE usocket.cpp
+
+SOURCEPATH	/sf/os/ossrv/genericopenlibs/openenvcore/backend/src/corebackend
+
 SOURCE		userial.cpp upipedesc.cpp uredirdesc.cpp udirectorydesc.cpp 
 SOURCE		utilityfuns.cpp systemspecialfilercg.cpp conv.cpp
 SOURCE		fdtransfer_srv.cpp fdtransfer_cli.cpp
@@ -112,7 +121,7 @@ SOURCE		ufilesocket.cpp
 SOURCE      usocketbase.cpp
 
 //Syscall code
-SOURCEPATH ../src/syscall
+SOURCEPATH /sf/os/ossrv/genericopenlibs/openenvcore/backend/src/syscall
 
 SOURCE handlefms.cpp handlenms.cpp handlepms.cpp
 #ifdef SYMBIAN_OE_POSIX_SIGNALS
@@ -123,16 +132,16 @@ SOURCE mmapcontroller.cpp mmapmemorynode.cpp
 SOURCE handlestringfuncs.cpp
 
 //ipcserver-client code
-SOURCEPATH ../ipcserver/ipccli/src
+SOURCEPATH /sf/os/ossrv/genericopenlibs/openenvcore/backend/ipcserver/ipccli/src
 SOURCE ipcclient.cpp
 
 //StdioServer-Client Code
-SOURCEPATH 	../src/StdioRedir/Client
+SOURCEPATH 	/sf/os/ossrv/genericopenlibs/openenvcore/backend/src/StdioRedir/Client
 SOURCE		StdioClient.cpp
 
 #ifdef SYMBIAN_OE_POSIX_SIGNALS
 //signal server client code
-SOURCEPATH 	../src/signalserver/client
+SOURCEPATH 	/sf/os/ossrv/genericopenlibs/openenvcore/backend/src/signalserver/client
 SOURCE		signalclient.cpp
 #endif
 
@@ -143,7 +152,6 @@ LIBRARY		commdb.lib
 LIBRARY 	efsrv.lib
 LIBRARY		esock.lib
 LIBRARY		c32.lib
-LIBRARY		bluetooth.lib
 LIBRARY 	insock.lib 
 LIBRARY		rpipe.lib
 LIBRARY		charconv.lib
