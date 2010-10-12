@@ -14,6 +14,14 @@
 # This script filters an OBY file given a rom_content.csv and a static_dependencies.txt
 
 use strict;
+use Getopt::Long;
+
+my $deleted_lines_oby = "filtered.oby";
+my $deletion_details_file = "filter.log";
+GetOptions(
+  "d|deleted=s" => \$deleted_lines_oby,   # file to hold the deleted lines
+  "l|log=s" => \$deletion_details_file,   # log of whats deleted and why
+  );
 
 if (scalar @ARGV < 2)
 	{
@@ -62,10 +70,10 @@ foreach my $line (@rom_content)
 		}
 	}
 
-printf STDERR "%d stem, %d out, %d in\n", 
+printf STDERR "%d in (including % stem), %d out\n", 
+	scalar keys %must_have,
 	scalar keys %stem_substitutions, 
-	scalar keys %deletions, 
-	scalar keys %must_have;
+	scalar keys %deletions; 
 
 # read static dependencies file
 my %exe_to_romfile;
@@ -153,6 +161,15 @@ foreach my $line (@obylines)
 
 # process the "out" commands to recursively expand the deletions
 
+my @details;
+sub print_detail($)
+	{
+	my ($message) = @_;
+	push @details, $message;
+	print STDERR $message, "\n";
+	}
+
+my @problems;	# list of romtrails which will be a problem
 sub delete_dependents($$$)
 	{
 	my ($romtrail,$original_reason,$listref) = @_;
@@ -161,23 +178,19 @@ sub delete_dependents($$$)
 	if (defined $deletions{$romfile})
 		{
 		# already marked for deletion
-		if ($original_reason eq $romfile && $deletions{$romfile} ne $original_reason)
-			{
-			print STDERR "$romfile already deleted by removing $deletions{$romfile}\n";
-			}
 		return;
 		}
 	
 	if (defined $must_have{$romfile})
 		{
 		# Problem! We won't be able to build this ROM
-		print STDERR "$romfile is being kept, but will fail to link because of deletion trail $trail\n";
+		print_detail("WARNING: $romfile is being kept, but will fail to link because of deletion trail $trail");
+		push @problems, $romtrail;
 		# keep that file and see what happens anyway
 		return;
 		}
 
-	# We should keep the following information, but it's rather verbose
-	# printf STDERR "  %d - deleting %s (%s)\n", scalar @{$listref}, $romfile, $trail;
+	push @details, sprintf "deleting %s (%s)", scalar $romfile, $trail;
 	
 	$deletions{$romfile} = $original_reason;	# this ensures that it gets deleted
 	if ($romfile =~ /^sys.bin.(.*)$/i)
@@ -194,6 +207,10 @@ sub delete_dependents($$$)
 				{
 		  	push @{$listref}, "$dependent\t$romfile $trail";
 		  	}
+		  elsif ($deletions{$romfile} eq "out")
+				{
+				print_detail("NOTE: direct deletion of $romfile is not needed - it would be removed by $original_reason");
+				}
 			}
 		}
 	}
@@ -201,6 +218,8 @@ sub delete_dependents($$$)
 my @delete_cmds = sort keys %deletions;
 foreach my $romfile (@delete_cmds)
 	{
+	push @details, "", "===Deleting $romfile", "";
+
 	delete $deletions{$romfile}; 	# so that delete_dependents will iterate properly
 	my @delete_list = ("$romfile\tout");
 	while (scalar @delete_list > 0)
@@ -214,6 +233,8 @@ foreach my $romfile (@delete_cmds)
 
 my $stem_count = 0;
 my $deletion_count = 0;
+my @deleted_lines;
+
 foreach my $line (@obylines)
 	{
 	chomp $line;
@@ -237,6 +258,7 @@ foreach my $line (@obylines)
 		if ($deletions{$romfile})
 			{
 			$deletion_count++;
+			push @deleted_lines, $line;
 			next;
 			}
 		
@@ -260,6 +282,7 @@ foreach my $line (@obylines)
 			{
 			# print STDERR "Deleted __ECOM_PLUGIN for $romfile\n";
 			$deletion_count++;
+			push @deleted_lines, $line;
 			next;
 			}		
 		}
@@ -274,6 +297,7 @@ foreach my $line (@obylines)
 			{
 			# delete the alias if the real file is marked for deletion
 			$deletion_count++;
+			push @deleted_lines, $line;
 			next;
 			}
 		else
@@ -293,10 +317,42 @@ foreach my $line (@obylines)
 		if ($deletions{$romfile})
 			{
 			# don't count these lines as deletions - they are just extra lines relating to deleted files.
+			push @deleted_lines, $line;
 			next;
 			}
 		}
 	print $line,"\n";
 	}
 
-print STDERR "Applied $stem_count stem substitutions and deleted $deletion_count rom files\n";
+print_detail("Applied $stem_count stem substitutions and deleted $deletion_count rom files");
+
+my $deleted_lines_oby = "filtered.oby";
+my $deletion_details_file = "filter.log";
+
+if ($deleted_lines_oby && scalar @deleted_lines)
+	{
+	print STDERR "Writing deleted lines to $deleted_lines_oby\n";
+	open FILE, ">$deleted_lines_oby" or die("Unable to write to file $deleted_lines_oby: $!\n");
+	foreach my $line (@deleted_lines)
+		{
+		print FILE $line, "\n";
+		}
+	close FILE;
+	}
+
+if ($deletion_details_file && scalar @details)
+	{
+	print STDERR "Writing deletion details to $deletion_details_file\n";
+	open FILE, ">$deletion_details_file" or die("Unable to write to file $deletion_details_file: $!\n");
+	foreach my $line (@details)
+		{
+		print FILE $line, "\n";
+		}
+	print FILE "\n====\n";
+	foreach my $problem (sort @problems)
+		{
+		my ($romfile, $trail) = split /\t/, $problem;
+		print FILE "$romfile depends on removed files $trail\n"
+		}
+	close FILE;
+	}
