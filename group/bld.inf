@@ -20,5 +20,6 @@ PRJ_PLATFORMS
 DEFAULT
 
 PRJ_MMPFILES
-..\startup\ssmcmdlists
+..\startup\ssmcmdlists.mmp
+..\startup\ssmstartuppolicy.mmp
 ..\breakdeps\backend.mmp

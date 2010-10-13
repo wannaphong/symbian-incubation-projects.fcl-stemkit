@@ -814,23 +814,23 @@ private\2000B187\cenrep\102818E8.xml,/epoc32/data/z/private/2000b187/cenrep/1028
 private\2000B4D8\backup_registration.xml,/epoc32/data/z/private/2000b4d8/backup_registration.xml,core/mw/WidgetBackupRestore.iby,mw/web,,,
 private\2000D75B\fail\failcmdlist.rsc,/epoc32/data/z/private/2000d75b/fail/failcmdlist.rsc,core/os/ssmcmdlists.iby,os/devicesrv,stem,WR,Startup script
 private\2000D75B\startup\0\noncriticalcmdlist_hw.rsc,/epoc32/data/z/private/2000d75b/hw/noncriticalcmdlist_hw.rsc,core/os/ssmcmdlists.iby,os/devicesrv,stem,WR,Startup script
-private\2000D75B\startup\0\usbwatcher.rsc,/epoc32/data/z/private/2000d75b/hw/usbwatcher_hw.rsc,core/os/ssmcmdlists.iby,os/devicesrv,stem,WR,Startup script
+private\2000D75B\startup\0\usbwatcher.rsc,/epoc32/data/z/private/2000d75b/hw/usbwatcher_hw.rsc,core/os/ssmcmdlists.iby,os/devicesrv,out,TomP,Stripped down startup
 private\2000D75B\startup\0\wserv.rsc,/epoc32/data/z/private/2000d75b/hw/wserv_hw.rsc,core/os/ssmcmdlists.iby,os/devicesrv,stem,WR,Startup script
 private\2000d75b\normal\gsanormalcmdlist.rsc,/epoc32/data/z/private/2000d75b/normal/gsanormalcmdlist.rsc,core/os/ssmcompatibility.iby,os/devicesrv,,,
-private\2000D75B\rfstatusswpcmdlist\rfswpcmdlists.rsc,/epoc32/data/z/private/2000d75b/rfstatusswpcmdlist/rfswpcmdlists.rsc,core/os/ssmcmdlists.iby,os/devicesrv,stem,WR,Startup script
+private\2000D75B\rfstatusswpcmdlist\rfswpcmdlists.rsc,/epoc32/data/z/private/2000d75b/rfstatusswpcmdlist/rfswpcmdlists.rsc,core/os/ssmcmdlists.iby,os/devicesrv,out,WR,Stripped down startup
 private\2000D75B\shutdown\shutdowncmdlists.rsc,/epoc32/data/z/private/2000d75b/shutdown/shutdowncmdlists.rsc,core/os/ssmcmdlists.iby,os/devicesrv,stem,WR,Startup script
-private\2000D75B\startup\0\alarm_charging.rsc,/epoc32/data/z/private/2000d75b/startup/0/alarm_charging.rsc,core/os/ssmcmdlists.iby,os/devicesrv,stem,WR,Startup script
+private\2000D75B\startup\0\alarm_charging.rsc,/epoc32/data/z/private/2000d75b/startup/0/alarm_charging.rsc,core/os/ssmcmdlists.iby,os/devicesrv,out,WR,Stripped down startup
 private\2000D75B\startup\0\criticalappscmdlist.rsc,/epoc32/data/z/private/2000d75b/startup/0/criticalappscmdlist.rsc,core/os/ssmcmdlists.iby,os/devicesrv,stem,WR,Startup script
-private\2000D75B\startup\0\emergencycallsonlycmdlist.rsc,/epoc32/data/z/private/2000d75b/startup/0/emergencycallsonlycmdlist.rsc,core/os/ssmcmdlists.iby,os/devicesrv,stem,WR,Startup script
+private\2000D75B\startup\0\emergencycallsonlycmdlist.rsc,/epoc32/data/z/private/2000d75b/startup/0/emergencycallsonlycmdlist.rsc,core/os/ssmcmdlists.iby,os/devicesrv,out,WR,Stripped down startup
 private\2000D75B\startup\0\noncriticalcmdlist.rsc,/epoc32/data/z/private/2000d75b/startup/0/noncriticalcmdlist.rsc,core/os/ssmcmdlists.iby,os/devicesrv,stem,WR,Startup script
 private\2000D75B\startup\0\preuiservicescmdlist.rsc,/epoc32/data/z/private/2000d75b/startup/0/preuiservicescmdlist.rsc,core/os/ssmcmdlists.iby,os/devicesrv,stem,WR,Startup script
-private\2000D75B\startup\0\securitycheckcmdlist.rsc,/epoc32/data/z/private/2000d75b/startup/0/securitycheckcmdlist.rsc,core/os/ssmcmdlists.iby,os/devicesrv,stem,WR,Startup script
-private\2000D75B\startup\0\selftestokcmdlist.rsc,/epoc32/data/z/private/2000d75b/startup/0/selftestokcmdlist.rsc,core/os/ssmcmdlists.iby,os/devicesrv,stem,WR,Startup script
+private\2000D75B\startup\0\securitycheckcmdlist.rsc,/epoc32/data/z/private/2000d75b/startup/0/securitycheckcmdlist.rsc,core/os/ssmcmdlists.iby,os/devicesrv,out,WR,Stripped down startup
+private\2000D75B\startup\0\selftestokcmdlist.rsc,/epoc32/data/z/private/2000d75b/startup/0/selftestokcmdlist.rsc,core/os/ssmcmdlists.iby,os/devicesrv,out,WR,Stripped down startup
 private\2000D75B\startup\0\uiservicescmdlist.rsc,/epoc32/data/z/private/2000d75b/startup/0/uiservicescmdlist.rsc,core/os/ssmcmdlists.iby,os/devicesrv,stem,WR,Startup script
-private\2000D75B\startup\0\noncriticalcmdlist_ext.rsc,/epoc32/data/z/private/2000d75b/startup/0_ext/noncriticalcmdlist_ext.rsc,core/os/ssmcmdlists.iby,os/devicesrv,stem,WR,Startup script
-private\2000D75B\startup\0\uiservicescmdlist_ext.rsc,/epoc32/data/z/private/2000d75b/startup/0_ext/uiservicescmdlist_ext.rsc,core/os/ssmcmdlists.iby,os/devicesrv,stem,WR,Startup script
-private\2000D75B\swpnoncritical\noncriticalswpcmdlists.rsc,/epoc32/data/z/private/2000d75b/swpnoncritical/noncriticalswpcmdlists.rsc,core/os/ssmcmdlists.iby,os/devicesrv,stem,WR,Startup script
-private\2000D75B\swpui\uiswpcmdlists.rsc,/epoc32/data/z/private/2000d75b/swpui/uiswpcmdlists.rsc,core/os/ssmcmdlists.iby,os/devicesrv,stem,WR,Startup script
+private\2000D75B\startup\0\noncriticalcmdlist_ext.rsc,/epoc32/data/z/private/2000d75b/startup/0_ext/noncriticalcmdlist_ext.rsc,core/os/ssmcmdlists.iby,os/devicesrv,out,WR,Stripped down startup
+private\2000D75B\startup\0\uiservicescmdlist_ext.rsc,/epoc32/data/z/private/2000d75b/startup/0_ext/uiservicescmdlist_ext.rsc,core/os/ssmcmdlists.iby,os/devicesrv,out,WR,Stripped down startup
+private\2000D75B\swpnoncritical\noncriticalswpcmdlists.rsc,/epoc32/data/z/private/2000d75b/swpnoncritical/noncriticalswpcmdlists.rsc,core/os/ssmcmdlists.iby,os/devicesrv,out,WR,Stripped down startup
+private\2000D75B\swpui\uiswpcmdlists.rsc,/epoc32/data/z/private/2000d75b/swpui/uiswpcmdlists.rsc,core/os/ssmcmdlists.iby,os/devicesrv,out,WR,Stripped down startup
 private\2000d766\backup_registration.xml,/epoc32/data/z/private/2000d766/backup_registration.xml,core/os/ssmutilityplugins.iby,os/devicesrv,,,
 private\2000E53C\backup_registration.xml,/epoc32/data/z/private/2000e53c/backup_registration.xml,core/app/FreestyleIpsServices.iby,app/commonemail,,,
 private\2000F83E\bs_config.xml,/epoc32/data/z/private/2000f83e/bs_config.xml,core/mw/backsteppingservice.iby,mw/homescreensrv,,,
@@ -5496,7 +5496,7 @@ sys\bin\srtdecoder.dll,/epoc32/release/armv5/urel/srtdecoder.dll,subtitledecoder
 sys\bin\Srtp.dll,/epoc32/release/armv5/urel/srtp.dll,core/mw/srtp.iby,mw/ipappprotocols,,,
 sys\bin\ssdpserver.dll,/epoc32/release/armv5/urel/ssdpserver.dll,core/mw/upnpstack.iby,mw/srvdiscovery,,,
 sys\bin\ssl.dll,/epoc32/release/armv5/urel/ssl.dll,tls.iby,os/networkingsrv,,,
-sys\bin\ssm.state.policy.0000.dll,/epoc32/release/armv5/urel/ssm.state.policy.0000.dll,core/os/ssmpolicyplugins.iby,os/devicesrv,,,
+sys\bin\ssm.state.policy.0000.dll,/epoc32/release/armv5/urel/ssm.state.policy.0000.dll,core/os/ssmpolicyplugins.iby,os/devicesrv,stem,TomP,Stripping down the system startup to minimal components only
 sys\bin\ssm.state.policy.0001.dll,/epoc32/release/armv5/urel/ssm.state.policy.0001.dll,core/os/ssmcompatibility.iby,os/devicesrv,,,
 sys\bin\ssm.state.policy.0002.dll,/epoc32/release/armv5/urel/ssm.state.policy.0002.dll,core/os/ssmpolicyplugins.iby,os/devicesrv,,,
 sys\bin\ssm.state.policy.0003.dll,/epoc32/release/armv5/urel/ssm.state.policy.0003.dll,core/os/ssmpolicyplugins.iby,os/devicesrv,,,

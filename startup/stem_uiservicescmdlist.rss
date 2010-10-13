@@ -72,31 +72,31 @@ RESOURCE SSM_COMMAND_LIST r_cmds
         r_cmd_startupmode,
         r_cmd_loadpowersup,
         // prio 0xFFD7
-        r_cmd_rfsfirstboot,
-        r_cmd_rfsdeep,
-        r_cmd_rfsnormal,
+    //TomP    r_cmd_rfsfirstboot,
+    //TomP    r_cmd_rfsdeep,
+    //TomP    r_cmd_rfsnormal,
         // prio 0xFFC7
-        r_cmd_initclkeys,
-        r_cmd_initramdrive,
+    //TomP    r_cmd_initclkeys,
+    //TomP    r_cmd_initramdrive,
         // prio 0xFFA7
         r_cmd_splash,
         // prio 0xFF97
-        r_cmd_rtc,
+    //TomP    r_cmd_rtc,
         // prio 0xFF96 - rtc (tzsrv, cntsrv, mediator & hwrmsrv have been moved to extended startup list but use the same multiplewait command)
         r_cmd_multiwaitforever1,
         // prio 0xFF87
-        r_cmd_accsrv,
-        r_cmd_selectlanguage,   // Select UI language to use
+    //TomP    r_cmd_accsrv,
+    //TomP    r_cmd_selectlanguage,   // Select UI language to use
         // prio 0xFF86 - accsrv, seleclanguage (dbrecovery has been moved to extended startup list but uses the same multiplewait command)
         r_cmd_multiwaitforever2,
         // prio 0xFF85
-        r_cmd_loadlocalesup,    // Observes changes in locale data
+    //TomP    r_cmd_loadlocalesup,    // Observes changes in locale data
         // prio 0xFF79
         r_cmd_aknstart,         // UI Framework
         // prio 0xFF77
-        r_cmd_apparc_init,      // Init application framework
+        r_cmd_apparc_init      // Init application framework
         // prio 0xFF75
-        r_cmd_rfspostui        // Restore factory settings - after UI framework is up
+    //TomP    r_cmd_rfspostui        // Restore factory settings - after UI framework is up
         };
     }
 
@@ -109,6 +109,7 @@ RESOURCE SSM_COMMAND_LIST r_cmds
 // r_cmd_accsrv
 // ---------------------------------------------------------------------------
 //
+/*
 RESOURCE SSM_START_PROCESS_INFO r_cmd_accsrv
     {
     priority = 0xFF87;
@@ -117,7 +118,7 @@ RESOURCE SSM_START_PROCESS_INFO r_cmd_accsrv
     execution_behaviour = ESsmWaitForSignal;
     monitor_info = r_mon_3_restarts_reset;
     }
-
+*/
 // ---------------------------------------------------------------------------
 // r_cmd_aknstart
 // ---------------------------------------------------------------------------
@@ -145,6 +146,7 @@ RESOURCE SSM_WAIT_FOR_APPARC_INIT r_cmd_apparc_init
 // r_cmd_initclkeys
 // ---------------------------------------------------------------------------
 //
+/*
 RESOURCE SSM_START_CUSTOM_COMMAND r_cmd_initclkeys
     {
     priority = 0xFFC7;
@@ -170,18 +172,19 @@ RESOURCE SSM_START_CUSTOM_COMMAND r_cmd_initramdrive
     unload_on_finish = ENeverUnload;
     retries = 2;
     }
-
+*/
 // ---------------------------------------------------------------------------
 // r_cmd_loadlocalesup
 // ---------------------------------------------------------------------------
 //
+/*
 RESOURCE SSM_START_SSM_UTILITY_PLUGIN r_cmd_loadlocalesup
     {
     priority = 0xFF85;
     filename = "ssmlocaleobserversup.dll";
     ordinal = 1;
     }
-
+*/
 // ---------------------------------------------------------------------------
 // r_cmd_loadpowersup
 // ---------------------------------------------------------------------------
@@ -253,6 +256,7 @@ RESOURCE SSM_START_CUSTOM_COMMAND r_cmd_rfsdeep
 // r_cmd_rfsfirstboot
 // ---------------------------------------------------------------------------
 //
+/*
 RESOURCE SSM_START_CUSTOM_COMMAND r_cmd_rfsfirstboot
     {
     priority = 0xFFD7;
@@ -301,7 +305,7 @@ RESOURCE SSM_START_CUSTOM_COMMAND r_cmd_rtc
     execution_behaviour = ESsmDeferredWaitForSignal;
     retries = 2;
     }
-
+*/
 // ---------------------------------------------------------------------------
 // r_cmd_sastate
 // ---------------------------------------------------------------------------
@@ -321,6 +325,7 @@ RESOURCE SSM_START_CUSTOM_COMMAND r_cmd_sastate
 // r_cmd_selectlanguage
 // ---------------------------------------------------------------------------
 //
+/*
 RESOURCE SSM_START_CUSTOM_COMMAND r_cmd_selectlanguage
     {
     priority = 0xFF87;
@@ -329,7 +334,7 @@ RESOURCE SSM_START_CUSTOM_COMMAND r_cmd_selectlanguage
     ordinal = 1; // SelectLanguage
     retries = 2;
     }
-
+*/
 // ---------------------------------------------------------------------------
 // r_cmd_splash
 // ---------------------------------------------------------------------------
