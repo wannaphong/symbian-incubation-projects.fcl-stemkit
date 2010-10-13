@@ -1,6 +1,7 @@
-REM KPROC = 0x40
+REM KPROC = 0x40, KTHREAD = 0x200
 kerneltrace 0x80000040
 
+REM UDEB version of ekern.exe, system startup, nvgrenderstage 
 ROM_IMAGE[0] {
 #include "syborg_stem_features.iby"
 
@@ -1441,7 +1442,7 @@ REM IP Subconnection Provider with QoS support
 REM Feature QoS is not included in this ROM
 REM --- DNS Proxy 
 file=\epoc32\release\ARMV5\urel\dnsproxyclient.dll 	"sys\bin\dnsproxyclient.dll"
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, nvgrenderstage.dll , nvgrenderstage.dll ) 
+__ECOM_PLUGIN(\epoc32\release\ARMV5\UDEB,Sys\Bin,\epoc32\data\Z,Resource\Plugins, nvgrenderstage.dll , nvgrenderstage.dll ) 
 file=\epoc32\release\ARMV5\urel\obexservermtm.dll 	"sys\bin\obexservermtm.dll" 
 file=\epoc32\release\ARMV5\urel\obexclientmtm.dll 	"sys\bin\obexclientmtm.dll" 
 file=\epoc32\release\ARMV5\urel\obexmtmutil.dll 	"sys\bin\obexmtmutil.dll" 
@@ -1925,11 +1926,11 @@ __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins
 data=\epoc32\data\Z\Private\101F413C\backup_registration.xml 	"private\101F413C\backup_registration.xml"
 REM SQLITE3
 file=\epoc32\release\ARMV5\urel\sqlite3.dll 	"sys\bin\sqlite3.dll" 
-file=\epoc32\release\ARMV5\urel\ssmcmn.dll 	"sys\bin\ssmcmn.dll"
-file=\epoc32\release\ARMV5\urel\ssmcmd.dll 	"sys\bin\ssmcmd.dll"
-file=\epoc32\release\ARMV5\urel\sysstatemgr.exe 	"sys\bin\sysstatemgr.exe"
-file=\epoc32\release\ARMV5\urel\ssmstartsafe.dll 	"sys\bin\ssmstartsafe.dll"
-file=\epoc32\release\ARMV5\urel\domainpolicy2.dll 	"sys\bin\domainpolicy2.dll"
+file=\epoc32\release\ARMV5\UDEB\ssmcmn.dll 	"sys\bin\ssmcmn.dll"
+file=\epoc32\release\ARMV5\UDEB\ssmcmd.dll 	"sys\bin\ssmcmd.dll"
+file=\epoc32\release\ARMV5\UDEB\sysstatemgr.exe 	"sys\bin\sysstatemgr.exe"
+file=\epoc32\release\ARMV5\UDEB\ssmstartsafe.dll 	"sys\bin\ssmstartsafe.dll"
+file=\epoc32\release\ARMV5\UDEB\domainpolicy2.dll 	"sys\bin\domainpolicy2.dll"
 file=\epoc32\release\ARMV5\urel\subtitlegraphic.dll 	"sys\bin\subtitlegraphic.dll"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, subtitlegraphicdrawer.dll , subtitlegraphicdrawer.dll ) 
 REM surface update client\server
