@@ -4364,7 +4364,7 @@ sys\bin\m3gcore.dll,/epoc32/release/armv5/urel/m3gcore.dll,core/os/m3gcore.iby,o
 sys\bin\Mailinit.exe,/epoc32/release/armv5/urel/mailinit.exe,core/app/Mailinit.iby,app/messaging,,,
 Sys\Bin\MailPlainView.dll,/epoc32/release/armv5/urel/mailplainview.dll,core/app/MailEditorViewer.iby,app/messaging,,,
 sys\bin\masterdetail.exe,/epoc32/release/armv5/urel/masterdetail.exe,customervariant/app/qtdemoapps.iby,mw/qt,,,
-sys\bin\matrixmenu.exe,/epoc32/release/armv5/urel/matrixmenu.exe,core/app/matrixmenu.iby,app/homescreen,,,
+sys\bin\matrixmenu.exe,/epoc32/release/armv5/urel/matrixmenu.exe,core/app/matrixmenu.iby,app/homescreen,In,WR,Stem kit use case
 Sys\Bin\mbmcodec.dll,/epoc32/release/armv5/urel/mbmcodec.dll,iclcodecs.iby,os/mm,,,
 sys\bin\mbufmgr.dll,/epoc32/release/armv5/urel/mbufmgr.dll,commsbufs.iby,os/commsfw,,,
 sys\bin\mbufmgrimpl.dll,/epoc32/release/armv5/urel/mbufmgrimpl.dll,commsbufs.iby,os/commsfw,,,
@@ -4479,18 +4479,18 @@ sys\bin\mmfaudioserverstart.exe,/epoc32/release/armv5/urel/mmfaudioserverstart.e
 Sys\Bin\mmfaudiotonecontroller.dll,/epoc32/release/armv5/urel/mmfaudiotonecontroller.dll,core/mw/mmfaudiotonecontroller.iby,os/mm,,,
 Sys\Bin\mmfauformat.dll,/epoc32/release/armv5/urel/mmfauformat.dll,mmf_plugin.iby,os/mm,,,
 sys\bin\MmfCodecCommon.dll,/epoc32/release/armv5/urel/mmfcodeccommon.dll,mmf.iby,os/mm,,,
-sys\bin\mmfcontrollerframework.dll,/epoc32/release/armv5/urel/mmfcontrollerframework.dll,mmf.iby,os/mm,,,
-sys\bin\mmfdevsound.dll,/epoc32/release/armv5/urel/mmfdevsound.dll,a3fdevsound.iby,os/mm,,,
+sys\bin\mmfcontrollerframework.dll,/epoc32/release/armv5/urel/mmfcontrollerframework.dll,mmf.iby,os/mm,,WR,Stem should not contain multimedia
+sys\bin\mmfdevsound.dll,/epoc32/release/armv5/urel/mmfdevsound.dll,a3fdevsound.iby,os/mm,,WR,Stem should not contain audio support
 sys\bin\mmfdevsoundadaptor.dll,/epoc32/release/armv5/urel/mmfdevsoundadaptor.dll,a3fdevsound.iby,os/mm,,,
 sys\bin\mmfdevsoundproxy.dll,/epoc32/release/armv5/urel/mmfdevsoundproxy.dll,a3fdevsound.iby,os/mm,,,
 sys\bin\mmfdevsoundserver.dll,/epoc32/release/armv5/urel/mmfdevsoundserver.dll,a3fdevsound.iby,os/mm,,,
 sys\bin\mmfdrmpluginserver.exe,/epoc32/release/armv5/urel/mmfdrmpluginserver.exe,MmfDrmPlugin.iby,os/mm,,,
 sys\bin\mmfdrmpluginserverproxy.dll,/epoc32/release/armv5/urel/mmfdrmpluginserverproxy.dll,MmfDrmPlugin.iby,os/mm,,,
-sys\bin\MmfFormatBaseclasses.dll,/epoc32/release/armv5/urel/mmfformatbaseclasses.dll,mmf.iby,os/mm,,,
+sys\bin\MmfFormatBaseclasses.dll,/epoc32/release/armv5/urel/mmfformatbaseclasses.dll,mmf.iby,os/mm,Out,WR,Stem should not contain MMF
 sys\bin\MmfGlblAudioEffect.dll,/epoc32/release/armv5/urel/mmfglblaudioeffect.dll,mmfEffect.iby,os/mm,,,
 Sys\Bin\mmfolderuiextensionplugin.dll,/epoc32/release/armv5/urel/mmfolderuiextensionplugin.dll,core/app/mmextensions.iby,app/homescreen,,,
 Sys\Bin\mmfrawformat.dll,/epoc32/release/armv5/urel/mmfrawformat.dll,mmf_plugin.iby,os/mm,,,
-sys\bin\MmfServerBaseclasses.dll,/epoc32/release/armv5/urel/mmfserverbaseclasses.dll,mmf.iby,os/mm,,,
+sys\bin\MmfServerBaseclasses.dll,/epoc32/release/armv5/urel/mmfserverbaseclasses.dll,mmf.iby,os/mm,,WR,Stem should not contain multimedia
 sys\bin\MMFStandardCustomCommands.dll,/epoc32/release/armv5/urel/mmfstandardcustomcommands.dll,mmf.iby,os/mm,,,
 sys\bin\MmfStdGlblAudioEffect.dll,/epoc32/release/armv5/urel/mmfstdglblaudioeffect.dll,mmfEffect.iby,os/mm,,,
 Sys\Bin\mmfstdsourceandsinkplugin.dll,/epoc32/release/armv5/urel/mmfstdsourceandsinkplugin.dll,mmf.iby,os/mm,,,

@@ -17,9 +17,20 @@ use strict;
 use Getopt::Long;
 
 my $inverted_table = 0;
+my $existing_file;
 GetOptions(
   "i|invert" => \$inverted_table,   # add the inverted table
+  "u|update=s" => \$existing_file,  # update existing file
   );
+
+my @existinglines;
+if ($existing_file)
+	{
+	open EXISTING, "<$existing_file" or die("Cannot open $existing_file: $!\n");
+	print STDERR "Reading existing dependencies from $existing_file\n";
+	@existinglines = <EXISTING>;
+	close EXISTING;
+	}
 
 my %romfiles;
 my @contents;
@@ -27,12 +38,39 @@ my @contents;
 my $line;
 while ($line = <>)
 	{
-  my ($romfile,$hostfile,@columns) = split /,/, $line;		# first two fields are guaranteed to be simple
+  my ($romfile,$hostfile,$ibyfile,$package,$cmd,@columns) = split /,/, $line;		# first 5 fields are guaranteed to be simple
 	next if (!defined $hostfile);
 	next if ($romfile eq "ROM file");		# skip header line
 	
-	push @contents, "$romfile\t$hostfile";		# for use with "grep" later
+	if (lc $cmd eq "stem")
+		{
+		$hostfile =~ s/(\/|\\)([^\\\/]+)$/$1stem_$2/;			# use stem version instead
+		}
+	push @contents, "$romfile\t$hostfile";
 	$romfiles{lc $romfile} = $romfile;
+	}
+
+sub canonical_romfile($)
+	{
+	my ($romfile) = @_;
+	my $canonical = $romfiles{lc $romfile};
+	return $canonical if (defined $canonical);
+
+	# New romfile not seen before - add to table
+	$romfiles{lc $romfile} = $romfile;	# set the standard for others!
+	return $romfile;	
+	}
+
+my %outputlines;
+foreach my $existingline (@existinglines)
+	{
+	chomp $existingline;
+	my ($romfile, $hostfile, $deps) = split /\t/, $existingline;
+	if (defined $deps)
+		{
+		$romfile = canonical_romfile($romfile);
+		$outputlines{$romfile} = "$romfile\t$hostfile\t$deps";
+		}
 	}
 
 my %dependents;
@@ -40,7 +78,7 @@ my %dependents;
 sub print_dependency($$@)
 	{
 	my ($romfile,$hostfile,@dependencies) = @_;
-	print "$romfile\t$hostfile\t", join(":",@dependencies), "\n";
+	$outputlines{$romfile} = "$romfile\t$hostfile\t". join(":",@dependencies);
 	
 	next unless $inverted_table;
 	
@@ -93,6 +131,34 @@ sub generate_elftran_dependencies($$)
 	print_dependency($romfile,$hostfile,"sid=$sid",@imports);
 	}
 
+sub find_exe_names_dependencies($$)
+	{
+	my ($romfile,$hostfile) = @_;
+	
+	my @strings = `$ENV{"SBS_HOME"}\\win32\\mingw\\bin\\strings $hostfile`;
+	
+	my %executables;
+	foreach my $string (@strings)
+		{
+		if ($string =~ /^(.*\\)?([^-\\]+\.(exe|dll))$/i)
+			{
+			my $exename = $2;
+			$exename =~ s/^\s+//;		# strip off leading whitespace (e.g.length byte before "clock.exe")
+			$exename = canonical_romfile("sys\\bin\\$exename");	# get the exact capitalisation
+			# print STDERR "Found $exename in $string";
+			$executables{$exename} = 1;
+			}
+		}
+	if (%executables)
+		{
+		print_dependency($romfile,$hostfile,sort keys %executables);
+		}
+	else
+		{
+		print STDERR "No executable names found in system statup resource $hostfile\n";
+		}
+	}
+
 sub find_dependency_in_sys_bin($$$)
 	{
 	my ($romfile,$hostfile,$basename) = @_;
@@ -138,7 +204,19 @@ foreach $line (@contents)
 		next;
 		}
 
+	# System state manager resource files
+	if ($romfile =~ /private.2000d75b\\.*\.rsc$/i)
+		{
+		find_exe_names_dependencies($romfile,$hostfile);
+		next;
+		}
+	
 	# Assume that the rest don't depend on anything, and leave them out.
+	}
+
+foreach my $romfile ( sort keys %outputlines)
+	{
+	print $outputlines{$romfile}, "\n";
 	}
 
 if ($inverted_table)
