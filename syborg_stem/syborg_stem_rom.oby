@@ -1175,7 +1175,6 @@ REM *** IRDA is supported by the device or not, so that client
 REM *** applications can link against them regardless.
 file=\epoc32\release\ARMV5\urel\irda.dll 	"sys\bin\IrDA.dll"
 file=\epoc32\release\ARMV5\urel\irtranp.dll 	"sys\bin\IrTranp.dll"
-kerneltrace=0x00080000
 file=\epoc32\release\ARMV5\urel\lafshutdowneventobserveradaptor.dll 	"sys\bin\lafshutdowneventobserveradaptor.dll"
 file=\epoc32\release\ARMV5\urel\lbs.dll 	"sys\bin\lbs.dll"
 file=\epoc32\release\ARMV5\urel\lbsadatacache.dll 	"sys\bin\lbsadatacache.dll"
