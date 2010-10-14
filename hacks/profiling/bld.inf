@@ -20,8 +20,4 @@ PRJ_PLATFORMS
 DEFAULT
 
 PRJ_MMPFILES
-..\startup\ssmcmdlists.mmp
-..\startup\ssmstartuppolicy.mmp
-..\breakdeps\backend.mmp
-..\breakdeps\cone.mmp
-
+startupprofiling.mmp
