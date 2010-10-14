@@ -22,3 +22,5 @@ DEFAULT
 PRJ_MMPFILES
 ..\startup\ssmcmdlists
 ..\breakdeps\backend.mmp
+..\breakdeps\cone.mmp
+
