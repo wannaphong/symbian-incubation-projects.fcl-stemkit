@@ -264,9 +264,17 @@ foreach my $line (@obylines)
 		
 		if (defined $stem_substitutions{$romfile})
 			{
-			# print STDERR "Applying stem_ prefix to $hostfile in $line\n";
-			$hostfile =~ s/(\/|\\)([^\\\/]+)$/$1stem_$2/;
-			$stem_count++;
+			if ($hostfile =~ /^(.*(\/|\\))([^\\\/]+)$/)
+				{
+				my $path=$1;
+				my $filename=$3;
+				if ($filename !~ /^stem_/)
+					{
+					# print STDERR "Applying stem_ prefix to $hostfile in $line\n";
+					$hostfile = "${path}stem_$filename";
+					$stem_count++;
+					}
+				}
 			}
 		print $romcmd, $hostfile, $romfile, $rest, "\n";
 		next;
