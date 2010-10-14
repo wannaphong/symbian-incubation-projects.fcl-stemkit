@@ -47,8 +47,10 @@ MW_LAYER_SYSTEMINCLUDE_SYMBIAN
 OS_LAYER_SYSTEMINCLUDE_SYMBIAN
 OS_LAYER_LIBC_SYSTEMINCLUDE
 
+
 //backend without signals and librt support
 #ifndef SYMBIAN_OE_POSIX_SIGNALS
+#error We are not going to bother with this scenario
 #ifdef WINSCW
 DEFFILE			/sf/os/ossrv/genericopenlibs/openenvcore/backend/bwins/old_backend.def
 #else
@@ -58,12 +60,15 @@ DEFFILE			/sf/os/ossrv/genericopenlibs/openenvcore/backend/eabi/old_backend.def
 
 //backend without librt support
 #if (defined SYMBIAN_OE_POSIX_SIGNALS && !defined SYMBIAN_OE_LIBRT)
+#error We are not going to bother with this scenario either
 #ifdef WINSCW
 DEFFILE			/sf/os/ossrv/genericopenlibs/openenvcore/backend/bwins/backendwolibrt.def 
 #else
 DEFFILE			/sf/os/ossrv/genericopenlibs/openenvcore/backend/eabi/backendwolibrt.def
 #endif
 #endif
+
+DEFFILE			/sf/os/ossrv/genericopenlibs/openenvcore/backend/~/backend.def
 
 SOURCEPATH   	/sf/os/ossrv/genericopenlibs/openenvcore/backend/inc
 DOCUMENT     	base.dosc
