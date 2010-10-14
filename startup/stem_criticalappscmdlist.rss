@@ -75,7 +75,6 @@ RESOURCE SSM_COMMAND_LIST r_cmds
     //TomP    r_cmd_calsrv,
     //TomP    r_cmd_profmon,
 		r_cmd_menu,	// TomP - moved from the Security command list
-		r_cmd_startup, // TomP - moved from the Security command list
         // prio 0xFFE6
         r_cmd_multiwaitforever
         };
@@ -98,20 +97,6 @@ RESOURCE SSM_START_APP_INFO r_cmd_menu
     //TomP background = 1; // To background
     }
 	
-
-// ---------------------------------------------------------------------------
-// r_cmd_startup
-// ---------------------------------------------------------------------------
-//
-RESOURCE SSM_START_PROCESS_INFO r_cmd_startup
-    {
-    priority = 0xFFE7;
-    name = "z:\\sys\\bin\\startup.exe";
-    execution_behaviour = ESsmDeferredWaitForSignal;
-    severity = ECmdCriticalSeverity;
-    retries = 2;
-    }
-
 // ---------------------------------------------------------------------------
 // r_cmd_calsrv
 // ---------------------------------------------------------------------------
