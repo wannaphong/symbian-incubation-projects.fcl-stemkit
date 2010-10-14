@@ -1,0 +1,107 @@
+/*
+* Copyright (c) 2009-2010 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+* Project definition file for project SsmCmdLists - based on sf/os/devicesrv/sysstatemgmt/ssmcmdlists
+*
+*/
+
+TARGETTYPE      NONE
+
+USERINCLUDE /sf/os/devicesrv/sysstatemgmt/ssmpolicyplugins/inc
+
+// Command lists for startup state(s)
+
+START RESOURCE  stem_preuiservicescmdlist.rss        // Pre-UI-Services startup state
+TARGETPATH      /private/2000d75b/startup/0          // Private directory of sysstatemgr.exe
+END
+
+START RESOURCE  stem_uiservicescmdlist.rss           // Starting UI-Services startup state for minimal bootup
+TARGETPATH      /private/2000d75b/startup/0          // Private directory of sysstatemgr.exe
+END
+
+START RESOURCE  stem_criticalappscmdlist.rss         // Starting Critical Apps startup state
+TARGETPATH      /private/2000d75b/startup/0          // Private directory of sysstatemgr.exe
+END
+
+START RESOURCE  stem_selftestokcmdlist.rss           // Selftest Ok startup state
+TARGETPATH      /private/2000d75b/startup/0          // Private directory of sysstatemgr.exe
+END
+
+START RESOURCE  stem_alarm_charging.rss              // Command lists for alarm, charging and related startup states
+TARGETPATH      /private/2000d75b/startup/0          // Private directory of sysstatemgr.exe
+END
+
+START RESOURCE  stem_securitycheckcmdlist.rss        // Security Check startup state
+TARGETPATH      /private/2000d75b/startup/0          // Private directory of sysstatemgr.exe
+END
+
+START RESOURCE  stem_noncriticalcmdlist.rss          // Non-critical startup state for minimal bootup
+TARGETPATH      /private/2000d75b/startup/0          // Private directory of sysstatemgr.exe
+END
+
+START RESOURCE  stem_emergencycallsonlycmdlist.rss   // Emergency Calls Only startup state
+TARGETPATH      /private/2000d75b/startup/0          // Private directory of sysstatemgr.exe
+END
+
+START RESOURCE  stem_noncriticalcmdlist_ext.rss      // Non-critical startup state for extended bootup
+TARGETPATH      /private/2000d75b/startup/0_ext      // Private directory of sysstatemgr.exe
+END
+
+START RESOURCE  stem_uiservicescmdlist_ext.rss       // Starting UI-Services startup state for extended bootup
+TARGETPATH      /private/2000d75b/startup/0_ext      // Private directory of sysstatemgr.exe
+END
+
+// Command lists specific to HW
+
+START RESOURCE  stem_wserv_hw.rss                    // Window server command list (HW version)
+TARGETPATH      /private/2000d75b/hw                 // Private directory of sysstatemgr.exe
+END
+
+START RESOURCE  stem_usbwatcher_hw.rss               // USB Watcher command list
+TARGETPATH      /private/2000d75b/hw                 // Private directory of sysstatemgr.exe
+END
+
+START RESOURCE  stem_noncriticalcmdlist_hw.rss       // Non-critical startup state (HW-specific additions)
+TARGETPATH      /private/2000d75b/hw                 // Private directory of sysstatemgr.exe
+END
+
+// Command lists for fail state
+
+START RESOURCE  stem_failcmdlist.rss                 // Command list for fail state
+TARGETPATH      /private/2000d75b/fail               // Private directory of sysstatemgr.exe
+END
+
+// Command lists for shutdown states
+
+START RESOURCE  stem_shutdowncmdlists.rss            // Command lists for shutdown states
+TARGETPATH      /private/2000d75b/shutdown           // Private directory of sysstatemgr.exe
+END
+
+// Command lists for SWPs
+
+START RESOURCE  stem_rfswpcmdlists.rss               // RF status SWP
+TARGETPATH      /private/2000d75b/rfstatusswpcmdlist // Private directory of sysstatemgr.exe
+END
+
+START RESOURCE  stem_uiswpcmdlists.rss               // UI phase SWP
+TARGETPATH      /private/2000d75b/swpui              // Private directory of sysstatemgr.exe
+END
+
+START RESOURCE  stem_noncriticalswpcmdlists.rss       // noncritical phase SWP
+TARGETPATH      /private/2000d75b/swpnoncritical      // Private directory of sysstatemgr.exe
+END
+
+OS_LAYER_SYSTEMINCLUDE
+
+SMPSAFE
