@@ -3167,7 +3167,7 @@ sys\bin\comsdbgsvr.exe,/epoc32/release/armv5/urel/comsdbgsvr.exe,commsdebugutili
 sys\bin\comsdbgutil.dll,/epoc32/release/armv5/urel/comsdbgutil.dll,commsdebugutility.iby,os/persistentdata,,,
 sys\bin\ConArc.dll,/epoc32/release/armv5/urel/conarc.dll,conarc.iby,mw/appsupport,,,
 sys\bin\conditionevaluator.dll,/epoc32/release/armv5/urel/conditionevaluator.dll,conditionevaluator.iby,os/devicesrv,,,
-sys\bin\Cone.dll,/epoc32/release/armv5/urel/cone.dll,cone.iby,mw/classicui,,,
+sys\bin\Cone.dll,/epoc32/release/armv5/urel/cone.dll,cone.iby,mw/classicui,Stem,MW,Break dependency on MediaClientAudio.dll
 sys\bin\ConfigurationComponentsFactory.dll,/epoc32/release/armv5/urel/configurationcomponentsfactory.dll,core/os/ConfigurationComponentsFactory.iby,mw/mmmw,,,
 Sys\Bin\connectiondialogswrapper.DLL,/epoc32/release/armv5/urel/connectiondialogswrapper.dll,core/mw/ConnectionDialogs.iby,mw/ipconnmgmt,,,
 sys\bin\ConnectionManager.dll,/epoc32/release/armv5/urel/connectionmanager.dll,core/mw/ConnectionManager.iby,mw/web,,,
@@ -3547,7 +3547,7 @@ sys\bin\eswt.dll,/epoc32/release/armv5/urel/eswt.dll,core/app/java.iby,app/jrt,,
 sys\bin\eswtapifacade.dll,/epoc32/release/armv5/urel/eswtapifacade.dll,core/app/java.iby,app/jrt,,,
 sys\bin\eswtdirectcontent.dll,/epoc32/release/armv5/urel/eswtdirectcontent.dll,core/app/java.iby,app/jrt,,,
 sys\bin\eswtphysics.dll,/epoc32/release/armv5/urel/eswtphysics.dll,core/app/java.iby,app/jrt,,,
-sys\bin\ETel.dll,/epoc32/release/armv5/urel/etel.dll,etel.iby,os/cellularsrv,,,
+sys\bin\ETel.dll,/epoc32/release/armv5/urel/etel.dll,etel.iby,os/cellularsrv,,WR,Stem does not support telephony
 sys\bin\Etel3rdParty.dll,/epoc32/release/armv5/urel/etel3rdparty.dll,etelisv.iby,os/cellularsrv,,,
 sys\bin\etelmm.dll,/epoc32/release/armv5/urel/etelmm.dll,etelmm.iby,os/cellularsrv,,,
 sys\bin\etelpckt.dll,/epoc32/release/armv5/urel/etelpckt.dll,etelpckt.iby,os/cellularsrv,,,
@@ -4197,7 +4197,7 @@ Sys\Bin\LanguageNotificationCmd.dll,/epoc32/release/armv5/urel/languagenotificat
 Sys\Bin\LaunchBrowserCmd.dll,/epoc32/release/armv5/urel/launchbrowsercmd.dll,core/mw/satserver.iby,mw/phonesrv,,,
 sys\bin\Launcher.exe,/epoc32/release/armv5/urel/launcher.exe,core/tools/Launcher.iby,app/rndtools,,WR,application
 sys\bin\layoutmgr.exe,/epoc32/release/armv5/urel/layoutmgr.exe,core/mw/btkeyboard.iby,mw/btservices,,,
-sys\bin\lbs.dll,/epoc32/release/armv5/urel/lbs.dll,lbs.iby,os/lbs,,,
+sys\bin\lbs.dll,/epoc32/release/armv5/urel/lbs.dll,lbs.iby,os/lbs,,WR,perhaps lbs should not be in the stem
 sys\bin\lbsadatacache.dll,/epoc32/release/armv5/urel/lbsadatacache.dll,lbsadatacache.iby,os/lbs,,,
 sys\bin\lbsadmin.dll,/epoc32/release/armv5/urel/lbsadmin.dll,lbsadmin.iby,os/lbs,,,
 sys\bin\lbsagpsngmsgs.dll,/epoc32/release/armv5/urel/lbsagpsngmsgs.dll,lbsagpsngmsgs.iby,os/lbs,,,
@@ -4479,8 +4479,8 @@ sys\bin\mmfaudioserverstart.exe,/epoc32/release/armv5/urel/mmfaudioserverstart.e
 Sys\Bin\mmfaudiotonecontroller.dll,/epoc32/release/armv5/urel/mmfaudiotonecontroller.dll,core/mw/mmfaudiotonecontroller.iby,os/mm,,,
 Sys\Bin\mmfauformat.dll,/epoc32/release/armv5/urel/mmfauformat.dll,mmf_plugin.iby,os/mm,,,
 sys\bin\MmfCodecCommon.dll,/epoc32/release/armv5/urel/mmfcodeccommon.dll,mmf.iby,os/mm,,,
-sys\bin\mmfcontrollerframework.dll,/epoc32/release/armv5/urel/mmfcontrollerframework.dll,mmf.iby,os/mm,,WR,Stem should not contain multimedia
-sys\bin\mmfdevsound.dll,/epoc32/release/armv5/urel/mmfdevsound.dll,a3fdevsound.iby,os/mm,,WR,Stem should not contain audio support
+sys\bin\mmfcontrollerframework.dll,/epoc32/release/armv5/urel/mmfcontrollerframework.dll,mmf.iby,os/mm,Out,WR,Stem should not contain multimedia
+sys\bin\mmfdevsound.dll,/epoc32/release/armv5/urel/mmfdevsound.dll,a3fdevsound.iby,os/mm,Out,WR,Stem should not contain audio support
 sys\bin\mmfdevsoundadaptor.dll,/epoc32/release/armv5/urel/mmfdevsoundadaptor.dll,a3fdevsound.iby,os/mm,,,
 sys\bin\mmfdevsoundproxy.dll,/epoc32/release/armv5/urel/mmfdevsoundproxy.dll,a3fdevsound.iby,os/mm,,,
 sys\bin\mmfdevsoundserver.dll,/epoc32/release/armv5/urel/mmfdevsoundserver.dll,a3fdevsound.iby,os/mm,,,
@@ -4490,7 +4490,7 @@ sys\bin\MmfFormatBaseclasses.dll,/epoc32/release/armv5/urel/mmfformatbaseclasses
 sys\bin\MmfGlblAudioEffect.dll,/epoc32/release/armv5/urel/mmfglblaudioeffect.dll,mmfEffect.iby,os/mm,,,
 Sys\Bin\mmfolderuiextensionplugin.dll,/epoc32/release/armv5/urel/mmfolderuiextensionplugin.dll,core/app/mmextensions.iby,app/homescreen,,,
 Sys\Bin\mmfrawformat.dll,/epoc32/release/armv5/urel/mmfrawformat.dll,mmf_plugin.iby,os/mm,,,
-sys\bin\MmfServerBaseclasses.dll,/epoc32/release/armv5/urel/mmfserverbaseclasses.dll,mmf.iby,os/mm,,WR,Stem should not contain multimedia
+sys\bin\MmfServerBaseclasses.dll,/epoc32/release/armv5/urel/mmfserverbaseclasses.dll,mmf.iby,os/mm,Out,WR,Stem should not contain multimedia
 sys\bin\MMFStandardCustomCommands.dll,/epoc32/release/armv5/urel/mmfstandardcustomcommands.dll,mmf.iby,os/mm,,,
 sys\bin\MmfStdGlblAudioEffect.dll,/epoc32/release/armv5/urel/mmfstdglblaudioeffect.dll,mmfEffect.iby,os/mm,,,
 Sys\Bin\mmfstdsourceandsinkplugin.dll,/epoc32/release/armv5/urel/mmfstdsourceandsinkplugin.dll,mmf.iby,os/mm,,,
@@ -5559,7 +5559,7 @@ Sys\Bin\surfacemanagerdriver.ldd,/epoc32/release/armv5/urel/surfacemanagerdriver
 sys\bin\surfaceupdateclient.dll,/epoc32/release/armv5/urel/surfaceupdateclient.dll,surfaceupdate_ref.iby,os/graphics,,,
 sys\bin\surfaceupdateserver.dll,/epoc32/release/armv5/urel/surfaceupdateserver.dll,surfaceupdate_ref.iby,os/graphics,,,
 Sys\Bin\SVGCodec.dll,/epoc32/release/armv5/urel/svgcodec.dll,core/app/svgcodec.iby,app/graphicsuis,,,
-sys\bin\SVGEngine.dll,/epoc32/release/armv5/urel/svgengine.dll,core/mw/SVGEngine.iby,mw/svgt,,,
+sys\bin\SVGEngine.dll,/epoc32/release/armv5/urel/svgengine.dll,core/mw/SVGEngine.iby,mw/svgt,stem,MW,Break dependence on MediaClientAudio.dll
 sys\bin\SVGEngineJI.dll,/epoc32/release/armv5/urel/svgengineji.dll,core/mw/SVGEngine.iby,mw/svgt,,,
 Sys\Bin\Svgrecog.dll,/epoc32/release/armv5/urel/svgrecog.dll,core/mw/SVGEngine.iby,mw/svgt,,,
 sys\bin\SVGTAppObserverUtil.dll,/epoc32/release/armv5/urel/svgtappobserverutil.dll,core/app/svgtappobserverutil.iby,app/graphicsuis,,,
@@ -5755,18 +5755,18 @@ sys\bin\usbavkonnotif.dll,/epoc32/release/armv5/urel/usbavkonnotif.dll,core/mw/u
 Sys\Bin\usbbasicpersonality.dll,/epoc32/release/armv5/urel/usbbasicpersonality.dll,core/mw/UsbBasicPersonality.iby,mw/usbservices,,,
 sys\bin\usbclasschangeui.exe,/epoc32/release/armv5/urel/usbclasschangeui.exe,core/mw/USBClassChangeUI.iby,mw/usbservices,,WR,application
 Sys\Bin\USBClassChangeUIPlugin.dll,/epoc32/release/armv5/urel/usbclasschangeuiplugin.dll,core/mw/USBClassChangeUI.iby,mw/usbservices,,,
-Sys\Bin\usbclasscontroller.dll,/epoc32/release/armv5/urel/usbclasscontroller.dll,../../../rom/config/sf_refhw/bigrom.oby,os/usb,,,
-sys\bin\usbcsc_bil.dll,/epoc32/release/armv5/urel/usbcsc_bil.dll,base.iby,os/kernelhwsrv,,,
-sys\bin\usbdescriptors.dll,/epoc32/release/armv5/urel/usbdescriptors.dll,base.iby,os/kernelhwsrv,,,
+Sys\Bin\usbclasscontroller.dll,/epoc32/release/armv5/urel/usbclasscontroller.dll,../../../rom/config/sf_refhw/bigrom.oby,os/usb,,WR,USB should not be in Stem
+sys\bin\usbcsc_bil.dll,/epoc32/release/armv5/urel/usbcsc_bil.dll,base.iby,os/kernelhwsrv,,WR,Stem should not contain USB
+sys\bin\usbdescriptors.dll,/epoc32/release/armv5/urel/usbdescriptors.dll,base.iby,os/kernelhwsrv,Out,WR,Stem should not depend on USB
 sys\bin\usbdevcon.exe,/epoc32/release/armv5/urel/usbdevcon.exe,core/mw/usbdevcon.iby,mw/usbservices,,,
 sys\bin\usbdi_utils.dll,/epoc32/release/armv5/urel/usbdi_utils.dll,base.iby,os/kernelhwsrv,,,
 sys\bin\usbhostms.pxy,/epoc32/release/armv5/urel/usbhostms.pxy,base.iby,os/kernelhwsrv,,,
 sys\bin\usbhostmsclient.dll,/epoc32/release/armv5/urel/usbhostmsclient.dll,base.iby,os/kernelhwsrv,,,
 sys\bin\usbhostmssrv.exe,/epoc32/release/armv5/urel/usbhostmssrv.exe,base.iby,os/kernelhwsrv,,,
-sys\bin\usbhoststack.dll,/epoc32/release/armv5/urel/usbhoststack.dll,fdf.iby,os/usb,,,
+sys\bin\usbhoststack.dll,/epoc32/release/armv5/urel/usbhoststack.dll,fdf.iby,os/usb,,WR,USB should not be in Stem
 Sys\Bin\usblocodplugin.dll,/epoc32/release/armv5/urel/usblocodplugin.dll,core/mw/UsbLocodPlugin.iby,mw/usbservices,,,
 sys\bin\usblogger.dll,/epoc32/release/armv5/urel/usblogger.dll,usbmanbin.iby,os/usb,,,
-sys\bin\usbman.dll,/epoc32/release/armv5/urel/usbman.dll,usbmanbin.iby,os/usb,,,
+sys\bin\usbman.dll,/epoc32/release/armv5/urel/usbman.dll,usbmanbin.iby,os/usb,Out,WR,USB should not be in the Stem
 Sys\Bin\usbmscpersonality.dll,/epoc32/release/armv5/urel/usbmscpersonality.dll,core/mw/UsbMscPersonality.iby,mw/usbservices,,,
 Sys\Bin\usbobexclasscontroller.dll,/epoc32/release/armv5/urel/usbobexclasscontroller.dll,core/mw/UsbObexClassController.iby,mw/usbservices,,,
 sys\bin\usbotgwatcher.dll,/epoc32/release/armv5/urel/usbotgwatcher.dll,core/mw/usbotgwatcher.iby,mw/usbservices,,,
