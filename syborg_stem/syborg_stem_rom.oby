@@ -19,7 +19,7 @@ REM define which port IrDA uses
 REM define which serial port Bluetooth protocol uses
 REM Define whether or not to include USB client support:
 ROMBUILD_OPTION -no-header 
-REM redefined ROMDATE as 09\10\2010
+REM redefined ROMDATE as 15\10\2010
 unicode
 romsize=0x5000000
 time=##TODAY## 12:00:00
@@ -260,7 +260,7 @@ file=\epoc32\release\ARMV5\urel\srtdecoder.dll 	"sys\bin\srtdecoder.dll"
 REM FLOGGER - logging support
 file=\epoc32\release\ARMV5\urel\flogger.dll 	"sys\bin\FLogger.dll"
 file=\epoc32\release\ARMV5\urel\flogsvr.exe 	"sys\bin\FLogSvr.exe"
-patchdata  sys\bin\Flogger.dll addr 0x00009f50 4 0
+patchdata Flogger.dll @ KFloggerSTI 0
 REM The Watcher Framework
 REM 'buildrom lubbock -D__NOWATCHER__' will place watcher.exe in z:REM so that it never runs
 file=\epoc32\release\ARMV5\urel\watcher.exe 	"sys\bin\watcher.exe"
@@ -355,8 +355,8 @@ data=\epoc32\data\Z\Private\10005399\backup_registration.xml 	"PRIVATE\10005399\
 file=\epoc32\release\ARMV5\urel\sysagt2cli.dll 	"sys\bin\sysagt2cli.dll"
 file=\epoc32\release\ARMV5\urel\sysagt2svr.exe 	"sys\bin\sysagt2svr.exe"
 file=\epoc32\release\ARMV5\urel\halsettings.exe 	"sys\bin\halsettings.exe" 
-patchdata  sys\bin\halsettings.exe addr 0x000086e4 4 1
-patchdata  sys\bin\halsettings.exe addr 0x000086e8 4 1
+patchdata halsettings.exe@KHalPenStatePersistenceDisabled 1 
+patchdata halsettings.exe@KHalNonSecureOffsetPersistenceDisabled 1 
 REM Scheduled Sending for GT Messaging
 REM Note: Following clashes with schsvr
 file=\epoc32\release\ARMV5\urel\schsendexe.exe 	"sys\bin\schsendexe.exe"
@@ -408,9 +408,9 @@ REM faxsvr.DLL
 REM faxcli.DLL
 file=\epoc32\release\ARMV5\urel\etel.dll 	"sys\bin\ETel.dll"
 data=\epoc32\data\z\private\101F7988\etel.cmi 	"private\101F7988\etel.cmi"
-patchdata  sys\bin\etel.dll addr 0x000116a8 4 271063046
-patchdata  sys\bin\etel.dll addr 0x000116ac 4 271063046
-patchdata  sys\bin\etel.dll addr 0x000116b0 4 271063046
+patchdata etel.dll@KPriorityClientSid 0x10281806
+patchdata etel.dll@KLocationServicesNetworkGatewaySid 0x10281806
+patchdata etel.dll@KSatEngineSid 0x10281806
 REM Multimode Etel
 file=\epoc32\release\ARMV5\urel\etelmm.dll 	"sys\bin\etelmm.dll"
 file=\epoc32\release\ARMV5\urel\GsmU.dll 	"sys\bin\GsmU.dll"
@@ -771,7 +771,7 @@ REM 1 = True, 0 = False. Default is True.
 REM Patch for emulator builds by adding "patchdata_cone_dll_KCoeSetControlParentByDefault X"
 REM to epoc.ini where X is either 0 (zero) for "off" or 1 (one) for "on". 
 REM Only valid in Symbian OS 9.3 and 9.4
-patchdata  sys\bin\cone.dll addr 0x00010f00 4 1
+patchdata cone.dll @ KCoeSetControlParentByDefault 1
 REM #endif
 file=\epoc32\release\ARMV5\urel\sbeclient.dll 	"sys\bin\sbeclient.dll"
 file=\epoc32\release\ARMV5\urel\abclient.dll 	"sys\bin\abclient.dll"
@@ -1384,13 +1384,13 @@ REM Predictor PPP compression
 file=\epoc32\release\ARMV5\urel\predcomp.dll 	"sys\bin\PredComp.dll"
 file=\epoc32\release\ARMV5\urel\packetlogger.dll 	"sys\bin\packetlogger.dll"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\UDEB,Sys\Bin,\epoc32\data\Z,Resource\Plugins, rawip.dll , rawip.dll ) 
-patchdata  Sys\Bin\rawip.dll addr 0x0000da14 4 5
-patchdata  Sys\Bin\rawip.dll addr 0x0000da18 4 1402
-patchdata  Sys\Bin\rawip.dll addr 0x0000da1c 4 1402
-patchdata  Sys\Bin\rawip.dll addr 0x0000d9d0 4 1400
-patchdata  Sys\Bin\rawip.dll addr 0x0000d9d4 4 1400
-patchdata  Sys\Bin\rawip.dll addr 0x0000d9ec 4 1400
-patchdata  Sys\Bin\rawip.dll addr 0x0000d9f0 4 1400
+patchdata rawip.dll@KMaxSendQueueLen 0x5
+patchdata rawip.dll@KMaxTxIPPacketSize 0x57a
+patchdata rawip.dll@KMaxRxIPPacketSize 0x57a
+patchdata rawip.dll@KMtuIPv4 0x578     	 
+patchdata rawip.dll@KRMtuIPv4 0x578		 
+patchdata rawip.dll@KMtuIPv6 0x578		 
+patchdata rawip.dll@KRMtuIPv6 0x578		 
 REM Feature DHCP is not included in this ROM
 file=\epoc32\release\ARMV5\urel\umtsif.dll 	"sys\bin\umtsif.dll"
 REM Feature QoS is not included in this ROM 
@@ -1982,7 +1982,7 @@ file=\epoc32\release\ARMV5\urel\viewsrv.dll 	"sys\bin\viewsrv.dll"
 file=\epoc32\release\ARMV5\urel\viewcli.dll 	"sys\bin\viewcli.dll"
 file=\epoc32\release\ARMV5\urel\updatesystemcolorlist.exe 	"Sys\Bin\updatesystemcolorlist.exe"
 REM Test code for Uikon Subsystem - kept in \uikon\groupREM #include "uikon_subsytem_unit_test.iby"
-patchdata  sys\bin\eiksrv.dll addr 0x0000c944 4 5
+patchdata eiksrv.dll @ KEikAlarmDefaultSnoozeInMinutes 5
 file=\epoc32\release\ARMV5\urel\uloggerserver.exe 	"Sys\Bin\uloggerserver.exe"
 file=\epoc32\release\ARMV5\urel\uloggersysstart.exe 	"Sys\Bin\uloggersysstart.exe"
 file=\epoc32\release\ARMV5\urel\uloggercommand.dll 	"Sys\Bin\uloggercommand.dll"
