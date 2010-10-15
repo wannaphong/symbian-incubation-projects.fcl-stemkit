@@ -13,15 +13,16 @@
 // Description:
 //
 
-#include <mda/client/utility.h>
-#include <mdaaudiosampleplayer.h>
-#include <mdaaudiotoneplayer.h>
+//#include <mda/client/utility.h>
+//#include <mdaaudiosampleplayer.h>
+//#include <mdaaudiotoneplayer.h>
 #include <bassnd.h>
 #include <coesndpy.h>
 #include <coemain.h>
 #include "coepanic.h"
 #include <coeutils.h>
 
+#if 0
 const TUid KLafSoundPlayerUid={0x10005F1A};
 
 class CCoeSoundPlayer;
@@ -424,7 +425,7 @@ void CCoeSoundPlayerManager::ConstructL()
 	{
 	iMdaServer=CMdaServer::NewL();
 	}
-
+#endif
 //
 // class CoeSoundPlayer
 //
@@ -432,7 +433,7 @@ void CCoeSoundPlayerManager::ConstructL()
 EXPORT_C void CoeSoundPlayer::PlaySound(const TBaSystemSoundType& aType,TInt aPlayCount,
 											TTimeIntervalMicroSeconds32 aGap,TBool aInterrupt)
 	{ // static
-	TRAP_IGNORE(ManagerL()->PlaySoundL(aType,aPlayCount,aGap,aInterrupt));
+	//TRAP_IGNORE(ManagerL()->PlaySoundL(aType,aPlayCount,aGap,aInterrupt));
 	}
 
 EXPORT_C void CoeSoundPlayer::CancelSound(const TBaSystemSoundType& aType)
@@ -440,11 +441,12 @@ EXPORT_C void CoeSoundPlayer::CancelSound(const TBaSystemSoundType& aType)
 
 @param aType The sound to stop playing. */
 	{ // static
-	TRAP_IGNORE(ManagerL()->CancelSound(aType));
+	//TRAP_IGNORE(ManagerL()->CancelSound(aType));
 	}
 
 CCoeSoundPlayerManager* CoeSoundPlayer::ManagerL()
 	{ // static
+#if 0	
 	CCoeEnv* env=CCoeEnv::Static();
 	__ASSERT_ALWAYS(env,Panic(ECoePanicNullEnvironment));
 	CCoeSoundPlayerManager* manager=
@@ -452,4 +454,6 @@ CCoeSoundPlayerManager* CoeSoundPlayer::ManagerL()
 	if (!manager)
 		manager=CCoeSoundPlayerManager::NewL();
 	return manager;
+#endif
+	return NULL;
 	}
