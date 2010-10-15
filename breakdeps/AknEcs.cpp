@@ -325,7 +325,7 @@ void CAknMatchingCharacterQueue::UpdateStatus( TBool aBufferMode )
     TPhCltTelephoneNumber buffer = iCharBuffer;
     if (iPhCltEmergencyCall)
         {
-        err = iPhCltEmergencyCall->FindEmergencyPhoneNumber(buffer, isEmergency);        
+        //err = iPhCltEmergencyCall->FindEmergencyPhoneNumber(buffer, isEmergency);        
         }
     if ( err != KErrNone )
         {
@@ -438,7 +438,7 @@ EXPORT_C void CAknEcsDetector::ConstructL()
     _AKNTRACE_FUNC_ENTER;
     iEmergencyCallObserver = new (ELeave) CPhCltEmergencyCallObserver( this );
     // Phone client interface
-    iPhCltEmergencyCall = CPhCltEmergencyCall::NewL( iEmergencyCallObserver );
+    //iPhCltEmergencyCall = CPhCltEmergencyCall::NewL( iEmergencyCallObserver );
 
     // Check if service call is allowed during device and key lock
     iServiceCallEnabled = 
@@ -864,12 +864,14 @@ void CAknEcsDetector::AttemptEmergencyCall()
     RDebug::Print(KDebugAttemptEmergencyCall);
 #endif
 
+#if 0
     TRAPD( err, iPhCltEmergencyCall->DialEmergencyCallL( CurrentMatch() ) );
     __ASSERT_DEBUG( err==KErrNone, Panic( EAknEcsPanicDialLLeft ) );
     if(err != KErrNone)
         {
         err = KErrNone;
         }
+#endif
     _AKNTRACE_FUNC_EXIT;
     }
 

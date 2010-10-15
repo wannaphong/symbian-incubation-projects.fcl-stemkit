@@ -20,10 +20,19 @@ PRJ_PLATFORMS
 DEFAULT
 
 PRJ_MMPFILES
-..\startup\ssmcmdlists.mmp
-..\startup\ssmstartuppolicy.mmp
-..\breakdeps\backend.mmp
-..\breakdeps\cone.mmp
-..\breakdeps\SVGEngine.mmp
-..\breakdeps\eiksrvui.mmp
+
+// based on sf/os/devicesrv
+../startup/ssmcmdlists.mmp
+../startup/ssmstartuppolicy.mmp
+
+// based on sf/os/ossrv
+../breakdeps/backend.mmp
+
+// based on sf/mw/classicui
+../breakdeps/cone.mmp
+../breakdeps/eiksrvui.mmp
+../breakdeps/avkon.mmp
+
+// based on sf/mw/svgt
+../breakdeps/SVGEngine.mmp
 
