@@ -1,17 +1,17 @@
 ===============================================================================
-TIME: Sat Oct  9 18:11:16 2010, USER: williamr, HOST: UK-1086
+TIME: Fri Oct 15 15:21:10 2010, USER: williamr, HOST: UK-1086
 C:\Perl\bin\perl.exe (v5.12.1-MSWin32)
 WriteFile: `>/epoc32/rombuild/syborg/log/syborg_flash.log'
 ChangeDir: `/epoc32/rombuild/syborg'
 ReadFile: `/epoc32/rombuild/syborg/syborg_flash.icmd'
 # IMAKER_VERSION   = `iMaker 09.06.01, 05-Feb-2009.'
-# IMAKER_CMDARG    = `--file=/epoc32/rom/config/sf_refhw/syborg/image_conf_syborg.mk  flash'
-# IMAKER_MAKECMD   = `\epoc32\tools\rom\imaker\mingw_make.exe -R --no-print-directory SHELL="C:\Windows\system32\cmd.exe" -I M:/epoc32/rom/config -f M:/epoc32/tools/rom/imaker/imaker.mk TIMESTAMP=2010100918111641  --file=/epoc32/rom/config/sf_refhw/syborg/image_conf_syborg.mk  -f M:/epoc32/tools/rom/imaker/imaker.mk flash'
+# IMAKER_CMDARG    = `--file=/epoc32/rom/config/sf_refhw/syborg/image_conf_syborg.mk flash'
+# IMAKER_MAKECMD   = `\epoc32\tools\rom\imaker\mingw_make.exe -R --no-print-directory SHELL="C:\Windows\system32\cmd.exe" -I M:/epoc32/rom/config -f M:/epoc32/tools/rom/imaker/imaker.mk TIMESTAMP=2010101515211042  --file=/epoc32/rom/config/sf_refhw/syborg/image_conf_syborg.mk  -f M:/epoc32/tools/rom/imaker/imaker.mk flash'
 # IMAKER_PERLCMD   = `perl -x M:/epoc32/tools/rom/imaker/imaker.pl --cmdfile "/epoc32/rombuild/syborg/syborg_flash.icmd" --logfile "/epoc32/rombuild/syborg/log/syborg_flash.log"  --step "IMAKERPRE:cbk-COREPRE:cb-CORE:cb-COREPOST:cb" --verbose "1" --workdir "/epoc32/rombuild/syborg"'
 # IMAKER_EXITSHELL = `'
 # SHELL            = `C:/Windows/system32/cmd.exe'
 # MAKE             = `M:/epoc32/tools/rom/imaker/mingw_make'
-# MAKEFLAGS        = ` --no-print-directory -RrI M:/epoc32/rom/config -- TIMESTAMP=2010100918111641 SHELL=C:/Windows/system32/cmd.exe'
+# MAKEFLAGS        = ` --no-print-directory -RrI M:/epoc32/rom/config -- TIMESTAMP=2010101515211042 SHELL=C:/Windows/system32/cmd.exe'
 # MAKECMDGOALS     = `flash'
 # $@               = `flash'
 # MAKELEVEL        = `0'
@@ -24,7 +24,7 @@ ReadFile: `/epoc32/rombuild/syborg/syborg_flash.icmd'
 # ITOOL_DIR        = `M:/epoc32/tools/rom'
 # IMAKER_DIR       = `M:/epoc32/tools/rom/imaker'
 # ITOOL_PATH       = `M:\epoc32\tools\rom;M:\epoc32\tools;M:\epoc32\gcc\bin'
-# PATH             = `M:\epoc32\tools\rom;M:\epoc32\tools;M:\epoc32\gcc\bin;C:\apps\CodeSourcery\bin;C:\Apps\arm\RVCT\Programs\2.2\686\win_32-pentium;C:\Apps\arm\RVCT\Programs\4.0\650\win_32-pentium;C:\Python26\Scripts;C:\Python26\;C:\Perl\site\bin;C:\Perl\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;c:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Symbian\Tools\PDT_1.7;C:\Symbian\Tools\PDT_1.7\raptor\bin;C:\Symbian\Tools\PDT_1.7\helium;C:\Symbian\Tools\PDT_1.7\ConE;C:\Symbian\Tools\PDT_1.7\utilities\bin;C:\Symbian\Tools\PDT_1.7\bootstrap;C:\Symbian\Tools\PDT_1.7\helium\runtime\7zip;C:\Symbian\Tools\PDT_1.7\Carbide.c++\x86Build\Symbian_Tools\Command_Line_Tools;C:\Program Files (x86)\TortoiseHg\;C:\Program Files (x86)\7-Zip\;\epoc32\tools;C:\Users\williamr\AppData\Roaming\Python\Scripts;C:\Program Files (x86)\7-Zip\'
+# PATH             = `M:\epoc32\tools\rom;M:\epoc32\tools;M:\epoc32\gcc\bin;C:\apps\CodeSourcery\bin;C:\Apps\arm\RVCT\Programs\2.2\686\win_32-pentium;C:\Apps\arm\RVCT\Programs\4.0\650\win_32-pentium;C:\Python26\Scripts;C:\Python26\;C:\Perl\site\bin;C:\Perl\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;c:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Symbian\Tools\PDT_1.7;C:\Symbian\Tools\PDT_1.7\raptor\bin;C:\Symbian\Tools\PDT_1.7\helium;C:\Symbian\Tools\PDT_1.7\ConE;C:\Symbian\Tools\PDT_1.7\utilities\bin;C:\Symbian\Tools\PDT_1.7\bootstrap;C:\Symbian\Tools\PDT_1.7\helium\runtime\7zip;C:\Symbian\Tools\PDT_1.7\Carbide.c++\x86Build\Symbian_Tools\Command_Line_Tools;C:\Program Files (x86)\TortoiseHg\;C:\Program Files (x86)\7-Zip\;\epoc32\tools;\epoc32\gcc\bin'
 Steps: CLEAN_IMAKERPRE, BUILD_IMAKERPRE, CLEAN_COREPRE, BUILD_COREPRE, CLEAN_CORE, BUILD_CORE, CLEAN_COREPOST, BUILD_COREPOST (empty)
 ===============================================================================
 ENTER: `S:IMAKERPRE,C:1,B:1,K:1,V:1'
@@ -72,12 +72,9 @@ defined(%hash) is deprecated at M:\epoc32\tools\/E32Plat.pm line 451.
 	(Maybe you should just omit the defined()?)
 defined(%hash) is deprecated at M:\epoc32\tools\/E32Plat.pm line 591.
 	(Maybe you should just omit the defined()?)
-defined(@array) is deprecated at M:\epoc32\tools\/buildrom.pm line 3146.
-	(Maybe you should just omit the defined()?)
-defined(@array) is deprecated at M:\epoc32\tools\/buildrom.pm line 3172.
-	(Maybe you should just omit the defined()?)
-defined(@array) is deprecated at M:\epoc32\tools\/buildrom.pm line 3225.
-	(Maybe you should just omit the defined()?)
+** process_cmdline_arguments
+** image_content_processing_phase
+** processobyfiles
 * cpp -o tmp1.oby -nostdinc -undef -D_IMAGE_TYPE_CORE -D_IMAGE_TYPE_RND -D_EABI=ARMV5 -IM:/epoc32/tools/rom/../../rom/include/core/mw -IM:/epoc32/tools/rom/../../rom/include/core/app -DSYBORG -DSECTION -IM:/epoc32/rom/config -IM:/epoc32/rom -I "..\..\..\include\" -include "..\..\..\include\bldvariant.hrh" -DROM_FEATURE_MANAGEMENT  -I. -I../../../../epoc32/rom/include
 In file included from syborg_core_collected.oby:898,
                  from /epoc32/rombuild/syborg/core/syborg_core_master.oby:35:
@@ -86,9 +83,9 @@ In file included from syborg_core_collected.oby:898,
 override.pm: Initializing; logfile = `/epoc32/rombuild/syborg/core/syborg_core_bldromplugin.log', debug = 0
 obyparse.pm: Initializing; logfile = `/epoc32/rombuild/syborg/core/syborg_core_bldromplugin.log', debug = 0
 configpaging.pm: Initializing with configpaging_stressed.cfg
-ERROR: Invalid patchable value at "PlatformEnv.dll@KDriveInfoDefaultRemovableMassStorage FF_DEFAULT_REMOVABLE_MASS_STORAGE"
-ERROR: Invalid patchable value at "PlatformEnv.dll@KDriveInfoLogicallyRemovableDrive1 FF_LOGICALLY_REMOVABLE_DRIVE1"
-ERROR: Invalid patchable value at "PlatformEnv.dll@KDriveInfoUsbDrivesStart FF_USB_DRIVE_START"
+..\..\..\rom\include\core\os\PlatformEnv.iby(25): ERROR: Invalid patchable value : PlatformEnv.dll@KDriveInfoDefaultRemovableMassStorage FF_DEFAULT_REMOVABLE_MASS_STORAGE
+..\..\..\rom\include\core\os\PlatformEnv.iby(26): ERROR: Invalid patchable value : PlatformEnv.dll@KDriveInfoLogicallyRemovableDrive1 FF_LOGICALLY_REMOVABLE_DRIVE1
+..\..\..\rom\include\core\os\PlatformEnv.iby(29): ERROR: Invalid patchable value : PlatformEnv.dll@KDriveInfoUsbDrivesStart FF_USB_DRIVE_START
 * Writing tmp2.oby - result of substitution phase
 * Writing tmp3.oby - result of reorganisation phase
 * Invalid image file name: \epoc32\data\Z\resource/apps\CSC.mbm or .mif
@@ -353,6 +350,7 @@ M:\epoc32\tools\rom\..\..\rom\include\core\mw\alfred.iby(179): Missing file: '\e
 * Writing tmp9.oby - result of cleaning phase
 * Writing syborg.oby - final OBY file
 * Writing syborg.dir - ROM directory listing
+** suppress_image_generation
 * Executing rombuild -slog  -loglevel1    -no-header -type-safe-link  syborg.oby
 The number of processors (2) is used as the number of concurrent jobs.
 
@@ -376,13 +374,13 @@ Writing uncompressed Rom image without header to file syborg.rom.img
 
  Directory of M:\epoc32\rombuild\syborg\core
 
-09/10/2010  18:11           860,139 syborg.dir
-09/10/2010  18:11         5,708,165 syborg.log
-09/10/2010  18:11           723,002 syborg.oby
-09/10/2010  18:11       124,739,584 syborg.rom.img
-               4 File(s)    132,030,890 bytes
-               0 Dir(s)   9,378,553,856 bytes free
-==========>8==========>8==========>8==========>8==========>8===00:32===[END]<<<
+15/10/2010  15:21           860,139 syborg.dir
+15/10/2010  15:21         5,708,119 syborg.log
+15/10/2010  15:21           723,951 syborg.oby
+15/10/2010  15:21       124,739,584 syborg.rom.img
+               4 File(s)    132,031,793 bytes
+               0 Dir(s)  13,359,902,720 bytes free
+==========>8==========>8==========>8==========>8==========>8===00:26===[END]<<<
 
 Missing file(s):
  1) ..\..\..\..\epoc32\rom\include\csc_plugin.iby(3): Missing file: '\epoc32\release\ARMV5\urel\10286506.dll' in statement 'file='
@@ -486,9 +484,9 @@ Warning(s):
 10) WARNING: File \epoc32\data\Z\Resource\java\security\trustroots\midprootslist does not exist or is 0 bytes in length.
 
 Error(s):
-1) ERROR: Invalid patchable value at "PlatformEnv.dll@KDriveInfoDefaultRemovableMassStorage FF_DEFAULT_REMOVABLE_MASS_STORAGE"
-2) ERROR: Invalid patchable value at "PlatformEnv.dll@KDriveInfoLogicallyRemovableDrive1 FF_LOGICALLY_REMOVABLE_DRIVE1"
-3) ERROR: Invalid patchable value at "PlatformEnv.dll@KDriveInfoUsbDrivesStart FF_USB_DRIVE_START"
+1) ..\..\..\rom\include\core\os\PlatformEnv.iby(25): ERROR: Invalid patchable value : PlatformEnv.dll@KDriveInfoDefaultRemovableMassStorage FF_DEFAULT_REMOVABLE_MASS_STORAGE
+2) ..\..\..\rom\include\core\os\PlatformEnv.iby(26): ERROR: Invalid patchable value : PlatformEnv.dll@KDriveInfoLogicallyRemovableDrive1 FF_LOGICALLY_REMOVABLE_DRIVE1
+3) ..\..\..\rom\include\core\os\PlatformEnv.iby(29): ERROR: Invalid patchable value : PlatformEnv.dll@KDriveInfoUsbDrivesStart FF_USB_DRIVE_START
 CopyFile: `/epoc32/rombuild/syborg/core/tmp1.oby' => `/epoc32/rombuild/syborg/core/syborg.tmp1.oby'
 DeleteFile: `/epoc32/rombuild/syborg/core/tmp1.oby'
 DeleteFile: `/epoc32/rombuild/syborg/core/tmp2.oby'
@@ -502,7 +500,7 @@ DeleteFile: `/epoc32/rombuild/syborg/core/tmp9.oby'
 MoveFile: `/epoc32/rombuild/syborg/core/syborg.log' => `/epoc32/rombuild/syborg/core/syborg.rom.log'
 MoveFile: `/epoc32/rombuild/syborg/core/syborg.oby' => `/epoc32/rombuild/syborg/core/syborg.rom.oby'
 TestFile: `/epoc32/rombuild/syborg/core/syborg.rom.img'
-EXIT: `S:CORE,C:1,B:1,K:0,V:1', duration: 00:33
+EXIT: `S:CORE,C:1,B:1,K:0,V:1', duration: 00:26
 ChangeDir: `/epoc32/rombuild/syborg'
 ===============================================================================
 ENTER: `S:COREPOST,C:1,B:1,K:0,V:1'
@@ -512,7 +510,7 @@ Step         Duration
 ============ ===================== 
 1. IMAKERPRE 00:00                 
 2. COREPRE   00:02                 
-3. CORE      00:33 (00:32 + 00:01) 
+3. CORE      00:26 (00:26 + 00:00) 
 4. COREPOST  00:00                 
 ------------ --------------------- 
-Total        00:35                 
+Total        00:28                 

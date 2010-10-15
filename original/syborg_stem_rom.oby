@@ -12,7 +12,7 @@ REM define which port IrDA uses
 REM define which serial port Bluetooth protocol uses
 REM Define whether or not to include USB client support:
 ROMBUILD_OPTION -no-header 
-REM redefined ROMDATE as 09\10\2010
+REM redefined ROMDATE as 15\10\2010
 unicode
 romsize=0x5000000
 time=##TODAY## 12:00:00
@@ -253,7 +253,7 @@ file=\epoc32\release\ARMV5\urel\srtdecoder.dll 	"sys\bin\srtdecoder.dll"
 REM FLOGGER - logging support
 file=\epoc32\release\ARMV5\urel\flogger.dll 	"sys\bin\FLogger.dll"
 file=\epoc32\release\ARMV5\urel\flogsvr.exe 	"sys\bin\FLogSvr.exe"
-patchdata  sys\bin\Flogger.dll addr 0x00009f50 4 0
+patchdata Flogger.dll @ KFloggerSTI 0
 REM The Watcher Framework
 REM 'buildrom lubbock -D__NOWATCHER__' will place watcher.exe in z:REM so that it never runs
 file=\epoc32\release\ARMV5\urel\watcher.exe 	"sys\bin\watcher.exe"
@@ -348,8 +348,8 @@ data=\epoc32\data\Z\Private\10005399\backup_registration.xml 	"PRIVATE\10005399\
 file=\epoc32\release\ARMV5\urel\sysagt2cli.dll 	"sys\bin\sysagt2cli.dll"
 file=\epoc32\release\ARMV5\urel\sysagt2svr.exe 	"sys\bin\sysagt2svr.exe"
 file=\epoc32\release\ARMV5\urel\halsettings.exe 	"sys\bin\halsettings.exe" 
-patchdata  sys\bin\halsettings.exe addr 0x000086e4 4 1
-patchdata  sys\bin\halsettings.exe addr 0x000086e8 4 1
+patchdata halsettings.exe@KHalPenStatePersistenceDisabled 1 
+patchdata halsettings.exe@KHalNonSecureOffsetPersistenceDisabled 1 
 REM Scheduled Sending for GT Messaging
 REM Note: Following clashes with schsvr
 file=\epoc32\release\ARMV5\urel\schsendexe.exe 	"sys\bin\schsendexe.exe"
@@ -401,9 +401,9 @@ REM faxsvr.DLL
 REM faxcli.DLL
 file=\epoc32\release\ARMV5\urel\etel.dll 	"sys\bin\ETel.dll"
 data=\epoc32\data\z\private\101F7988\etel.cmi 	"private\101F7988\etel.cmi"
-patchdata  sys\bin\etel.dll addr 0x000116a8 4 271063046
-patchdata  sys\bin\etel.dll addr 0x000116ac 4 271063046
-patchdata  sys\bin\etel.dll addr 0x000116b0 4 271063046
+patchdata etel.dll@KPriorityClientSid 0x10281806
+patchdata etel.dll@KLocationServicesNetworkGatewaySid 0x10281806
+patchdata etel.dll@KSatEngineSid 0x10281806
 REM Multimode Etel
 file=\epoc32\release\ARMV5\urel\etelmm.dll 	"sys\bin\etelmm.dll"
 file=\epoc32\release\ARMV5\urel\GsmU.dll 	"sys\bin\GsmU.dll"
@@ -790,7 +790,7 @@ REM 1 = True, 0 = False. Default is True.
 REM Patch for emulator builds by adding "patchdata_cone_dll_KCoeSetControlParentByDefault X"
 REM to epoc.ini where X is either 0 (zero) for "off" or 1 (one) for "on". 
 REM Only valid in Symbian OS 9.3 and 9.4
-patchdata  sys\bin\cone.dll addr 0x00010f00 4 1
+patchdata cone.dll @ KCoeSetControlParentByDefault 1
 REM #endif
 file=\epoc32\release\ARMV5\urel\sbeclient.dll 	"sys\bin\sbeclient.dll"
 file=\epoc32\release\ARMV5\urel\abclient.dll 	"sys\bin\abclient.dll"
@@ -1419,13 +1419,13 @@ REM Predictor PPP compression
 file=\epoc32\release\ARMV5\urel\predcomp.dll 	"sys\bin\PredComp.dll"
 file=\epoc32\release\ARMV5\urel\packetlogger.dll 	"sys\bin\packetlogger.dll"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\UDEB,Sys\Bin,\epoc32\data\Z,Resource\Plugins, rawip.dll , rawip.dll ) 
-patchdata  Sys\Bin\rawip.dll addr 0x0000da14 4 5
-patchdata  Sys\Bin\rawip.dll addr 0x0000da18 4 1402
-patchdata  Sys\Bin\rawip.dll addr 0x0000da1c 4 1402
-patchdata  Sys\Bin\rawip.dll addr 0x0000d9d0 4 1400
-patchdata  Sys\Bin\rawip.dll addr 0x0000d9d4 4 1400
-patchdata  Sys\Bin\rawip.dll addr 0x0000d9ec 4 1400
-patchdata  Sys\Bin\rawip.dll addr 0x0000d9f0 4 1400
+patchdata rawip.dll@KMaxSendQueueLen 0x5
+patchdata rawip.dll@KMaxTxIPPacketSize 0x57a
+patchdata rawip.dll@KMaxRxIPPacketSize 0x57a
+patchdata rawip.dll@KMtuIPv4 0x578     	 
+patchdata rawip.dll@KRMtuIPv4 0x578		 
+patchdata rawip.dll@KMtuIPv6 0x578		 
+patchdata rawip.dll@KRMtuIPv6 0x578		 
 REM Feature DHCP is not included in this ROM
 file=\epoc32\release\ARMV5\urel\umtsif.dll 	"sys\bin\umtsif.dll"
 REM Feature QoS is not included in this ROM 
@@ -1924,11 +1924,11 @@ __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins
 data=\epoc32\data\Z\Private\101F413C\backup_registration.xml 	"private\101F413C\backup_registration.xml"
 REM SQLITE3
 file=\epoc32\release\ARMV5\urel\sqlite3.dll 	"sys\bin\sqlite3.dll" 
-file=\epoc32\release\ARMV5\UDEB\ssmcmn.dll 	"sys\bin\ssmcmn.dll"
-file=\epoc32\release\ARMV5\UDEB\ssmcmd.dll 	"sys\bin\ssmcmd.dll"
-file=\epoc32\release\ARMV5\UDEB\sysstatemgr.exe 	"sys\bin\sysstatemgr.exe"
-file=\epoc32\release\ARMV5\UDEB\ssmstartsafe.dll 	"sys\bin\ssmstartsafe.dll"
-file=\epoc32\release\ARMV5\UDEB\domainpolicy2.dll 	"sys\bin\domainpolicy2.dll"
+file=\epoc32\release\ARMV5\urel\ssmcmn.dll 	"sys\bin\ssmcmn.dll"
+file=\epoc32\release\ARMV5\urel\ssmcmd.dll 	"sys\bin\ssmcmd.dll"
+file=\epoc32\release\ARMV5\urel\sysstatemgr.exe 	"sys\bin\sysstatemgr.exe"
+file=\epoc32\release\ARMV5\urel\ssmstartsafe.dll 	"sys\bin\ssmstartsafe.dll"
+file=\epoc32\release\ARMV5\urel\domainpolicy2.dll 	"sys\bin\domainpolicy2.dll"
 file=\epoc32\release\ARMV5\urel\subtitlegraphic.dll 	"sys\bin\subtitlegraphic.dll"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, subtitlegraphicdrawer.dll , subtitlegraphicdrawer.dll ) 
 REM surface update client\server
@@ -2023,7 +2023,7 @@ file=\epoc32\release\ARMV5\urel\viewsrv.dll 	"sys\bin\viewsrv.dll"
 file=\epoc32\release\ARMV5\urel\viewcli.dll 	"sys\bin\viewcli.dll"
 file=\epoc32\release\ARMV5\urel\updatesystemcolorlist.exe 	"Sys\Bin\updatesystemcolorlist.exe"
 REM Test code for Uikon Subsystem - kept in \uikon\groupREM #include "uikon_subsytem_unit_test.iby"
-patchdata  sys\bin\eiksrv.dll addr 0x0000c944 4 5
+patchdata eiksrv.dll @ KEikAlarmDefaultSnoozeInMinutes 5
 file=\epoc32\release\ARMV5\urel\uloggerserver.exe 	"Sys\Bin\uloggerserver.exe"
 file=\epoc32\release\ARMV5\urel\uloggersysstart.exe 	"Sys\Bin\uloggersysstart.exe"
 file=\epoc32\release\ARMV5\urel\uloggercommand.dll 	"Sys\Bin\uloggercommand.dll"
@@ -5842,52 +5842,52 @@ file=\epoc32\release\ARMV5\urel\libcrypto.dll 	"sys\bin\libcrypto.dll"
 file=\epoc32\release\ARMV5\urel\libssl.dll 	"sys\bin\libssl.dll"
 data=\epoc32\data\Z\System\INSTALL\openc_ssl_stub.sis 	"System\Install\openc_ssl_stub.sis"
 data=\epoc32\data\Z\System\INSTALL\openc_libzcore_stub.sis 	"System\Install\openc_libzcore_stub.sis"
-data=\epoc32\data\Z\private\2000D75B\startup\0\stem_preuiservicescmdlist.rsc 	"private\2000D75B\startup\0\preuiservicescmdlist.rsc"
-data=\epoc32\data\Z\private\2000D75B\startup\0\stem_uiservicescmdlist.rsc 	"private\2000D75B\startup\0\uiservicescmdlist.rsc"
-data=\epoc32\data\Z\private\2000D75B\startup\0\stem_criticalappscmdlist.rsc 	"private\2000D75B\startup\0\criticalappscmdlist.rsc"
-//data=\epoc32\data\Z\private\2000D75B\startup\0\stem_selftestokcmdlist.rsc 	"private\2000D75B\startup\0\selftestokcmdlist.rsc"
-//data=\epoc32\data\Z\private\2000D75B\startup\0\stem_alarm_charging.rsc 	"private\2000D75B\startup\0\alarm_charging.rsc"
-//data=\epoc32\data\Z\private\2000D75B\startup\0\stem_securitycheckcmdlist.rsc 	"private\2000D75B\startup\0\securitycheckcmdlist.rsc"
-data=\epoc32\data\Z\private\2000D75B\startup\0\stem_noncriticalcmdlist.rsc 	"private\2000D75B\startup\0\noncriticalcmdlist.rsc"
-//data=\epoc32\data\Z\private\2000D75B\startup\0\stem_emergencycallsonlycmdlist.rsc 	"private\2000D75B\startup\0\emergencycallsonlycmdlist.rsc"
-//data=\epoc32\data\Z\private\2000D75B\startup\0_ext\stem_uiservicescmdlist_ext.rsc 	"private\2000D75B\startup\0\uiservicescmdlist_ext.rsc"
-//data=\epoc32\data\Z\private\2000D75B\startup\0_ext\stem_noncriticalcmdlist_ext.rsc 	"private\2000D75B\startup\0\noncriticalcmdlist_ext.rsc"
-data=\epoc32\data\Z\private\2000D75B\hw\stem_wserv_hw.rsc 	"private\2000D75B\startup\0\wserv.rsc"
-//data=\epoc32\data\Z\private\2000D75B\hw\stem_noncriticalcmdlist_hw.rsc 	"private\2000D75B\startup\0\noncriticalcmdlist_hw.rsc"
-data=\epoc32\data\Z\private\2000D75B\hw\stem_usbwatcher_hw.rsc 	"private\2000D75B\startup\0\usbwatcher.rsc"
-data=\epoc32\data\Z\private\2000D75B\fail\stem_failcmdlist.rsc 	"private\2000D75B\fail\failcmdlist.rsc"
-data=\epoc32\data\Z\private\2000D75B\shutdown\stem_shutdowncmdlists.rsc 	"private\2000D75B\shutdown\shutdowncmdlists.rsc"
-//data=\epoc32\data\Z\private\2000D75B\rfstatusswpcmdlist\stem_rfswpcmdlists.rsc 	"private\2000D75B\rfstatusswpcmdlist\rfswpcmdlists.rsc"
-//data=\epoc32\data\Z\private\2000D75B\swpui\stem_uiswpcmdlists.rsc 	"private\2000D75B\swpui\uiswpcmdlists.rsc"
-//data=\epoc32\data\Z\private\2000D75B\swpnoncritical\stem_noncriticalswpcmdlists.rsc 	"private\2000D75B\swpnoncritical\noncriticalswpcmdlists.rsc"
+data=\epoc32\data\Z\private\2000D75B\startup\0\preuiservicescmdlist.rsc 	"private\2000D75B\startup\0\preuiservicescmdlist.rsc"
+data=\epoc32\data\Z\private\2000D75B\startup\0\uiservicescmdlist.rsc 	"private\2000D75B\startup\0\uiservicescmdlist.rsc"
+data=\epoc32\data\Z\private\2000D75B\startup\0\criticalappscmdlist.rsc 	"private\2000D75B\startup\0\criticalappscmdlist.rsc"
+data=\epoc32\data\Z\private\2000D75B\startup\0\selftestokcmdlist.rsc 	"private\2000D75B\startup\0\selftestokcmdlist.rsc"
+data=\epoc32\data\Z\private\2000D75B\startup\0\alarm_charging.rsc 	"private\2000D75B\startup\0\alarm_charging.rsc"
+data=\epoc32\data\Z\private\2000D75B\startup\0\securitycheckcmdlist.rsc 	"private\2000D75B\startup\0\securitycheckcmdlist.rsc"
+data=\epoc32\data\Z\private\2000D75B\startup\0\noncriticalcmdlist.rsc 	"private\2000D75B\startup\0\noncriticalcmdlist.rsc"
+data=\epoc32\data\Z\private\2000D75B\startup\0\emergencycallsonlycmdlist.rsc 	"private\2000D75B\startup\0\emergencycallsonlycmdlist.rsc"
+data=\epoc32\data\Z\private\2000D75B\startup\0_ext\uiservicescmdlist_ext.rsc 	"private\2000D75B\startup\0\uiservicescmdlist_ext.rsc"
+data=\epoc32\data\Z\private\2000D75B\startup\0_ext\noncriticalcmdlist_ext.rsc 	"private\2000D75B\startup\0\noncriticalcmdlist_ext.rsc"
+data=\epoc32\data\Z\private\2000D75B\hw\wserv_hw.rsc 	"private\2000D75B\startup\0\wserv.rsc"
+data=\epoc32\data\Z\private\2000D75B\hw\noncriticalcmdlist_hw.rsc 	"private\2000D75B\startup\0\noncriticalcmdlist_hw.rsc"
+data=\epoc32\data\Z\private\2000D75B\hw\usbwatcher_hw.rsc 	"private\2000D75B\startup\0\usbwatcher.rsc"
+data=\epoc32\data\Z\private\2000D75B\fail\failcmdlist.rsc 	"private\2000D75B\fail\failcmdlist.rsc"
+data=\epoc32\data\Z\private\2000D75B\shutdown\shutdowncmdlists.rsc 	"private\2000D75B\shutdown\shutdowncmdlists.rsc"
+data=\epoc32\data\Z\private\2000D75B\rfstatusswpcmdlist\rfswpcmdlists.rsc 	"private\2000D75B\rfstatusswpcmdlist\rfswpcmdlists.rsc"
+data=\epoc32\data\Z\private\2000D75B\swpui\uiswpcmdlists.rsc 	"private\2000D75B\swpui\uiswpcmdlists.rsc"
+data=\epoc32\data\Z\private\2000D75B\swpnoncritical\noncriticalswpcmdlists.rsc 	"private\2000D75B\swpnoncritical\noncriticalswpcmdlists.rsc"
 file=\epoc32\release\ARMV5\urel\saaemergencycallrfadaptation.dll 	"sys\bin\emergencycallrfadaptation.dll"
 file=\epoc32\release\ARMV5\urel\saastateadaptation.dll 	"sys\bin\stateadaptation.dll"
 file=\epoc32\release\ARMV5\urel\saasimadaptation.dll 	"sys\bin\simadaptation.dll"
 file=\epoc32\release\ARMV5\urel\saamiscadaptation.dll 	"sys\bin\miscadaptation.dll"
 file=\epoc32\release\ARMV5\urel\saartcadaptation.dll 	"sys\bin\rtcadaptation.dll"
-file=\epoc32\release\ARMV5\UDEB\starterclient.dll 	"sys\bin\starterclient.dll"
-file=\epoc32\release\ARMV5\UDEB\startupadaptationadapter.dll 	"sys\bin\startupadaptationadapter.dll"
-file=\epoc32\release\ARMV5\UDEB\ssmclayersup.dll 	"sys\bin\ssmclayersup.dll"
-file=\epoc32\release\ARMV5\UDEB\rfstatusswppolicy.dll 	"sys\bin\rfstatusswppolicy.dll"
-file=\epoc32\release\ARMV5\UDEB\ssm.state.policy.0001.dll 	"sys\bin\ssm.state.policy.0001.dll"
+file=\epoc32\release\ARMV5\urel\starterclient.dll 	"sys\bin\starterclient.dll"
+file=\epoc32\release\ARMV5\urel\startupadaptationadapter.dll 	"sys\bin\startupadaptationadapter.dll"
+file=\epoc32\release\ARMV5\urel\ssmclayersup.dll 	"sys\bin\ssmclayersup.dll"
+file=\epoc32\release\ARMV5\urel\rfstatusswppolicy.dll 	"sys\bin\rfstatusswppolicy.dll"
+file=\epoc32\release\ARMV5\urel\ssm.state.policy.0001.dll 	"sys\bin\ssm.state.policy.0001.dll"
 data=\epoc32\data\Z\private\2000d75b\normal\gsanormalcmdlist.rsc 	"private\2000d75b\normal\gsanormalcmdlist.rsc"
-file=\epoc32\release\ARMV5\UDEB\customcmds.dll 	"sys\bin\customcmds.dll"
-file=\epoc32\release\ARMV5\UDEB\ssm.swp.policy.simstatus.dll 	"sys\bin\ssm.swp.policy.simstatus.dll"
+file=\epoc32\release\ARMV5\urel\customcmds.dll 	"sys\bin\customcmds.dll"
+file=\epoc32\release\ARMV5\urel\ssm.swp.policy.simstatus.dll 	"sys\bin\ssm.swp.policy.simstatus.dll"
 data=\epoc32\data\Z\private\10202be9\2001d2aa.txt 	"private\10202be9\2001d2aa.txt"
-file=\epoc32\release\ARMV5\UDEB\ssmactivitycmd.dll 	"sys\bin\ssmactivitycmd.dll"
-file=\epoc32\release\ARMV5\UDEB\ssmsystemcmds.dll 	"sys\bin\ssmsystemcmds.dll"
+file=\epoc32\release\ARMV5\urel\ssmactivitycmd.dll 	"sys\bin\ssmactivitycmd.dll"
+file=\epoc32\release\ARMV5\urel\ssmsystemcmds.dll 	"sys\bin\ssmsystemcmds.dll"
 file=\epoc32\release\ARMV5\urel\ssmdiskreserver.exe 	"sys\bin\ssmdiskreserver.exe"
 file=\epoc32\release\ARMV5\urel\ssmmapperutility.dll 	"sys\bin\ssmmapperutility.dll"
-file=\epoc32\release\ARMV5\UDEB\ssmpolicybase.dll 	"sys\bin\ssmpolicybase.dll"
-file=\epoc32\release\ARMV5\UDEB\ssmstatepolicybase.dll 	"sys\bin\ssmstatepolicybase.dll"
-file=\epoc32\release\ARMV5\UDEB\ssmswppolicybase.dll 	"sys\bin\ssmswppolicybase.dll"
-file=\epoc32\release\ARMV5\UDEB\stem_ssm.state.policy.0000.dll 	"sys\bin\ssm.state.policy.0000.dll"
+file=\epoc32\release\ARMV5\urel\ssmpolicybase.dll 	"sys\bin\ssmpolicybase.dll"
+file=\epoc32\release\ARMV5\urel\ssmstatepolicybase.dll 	"sys\bin\ssmstatepolicybase.dll"
+file=\epoc32\release\ARMV5\urel\ssmswppolicybase.dll 	"sys\bin\ssmswppolicybase.dll"
+file=\epoc32\release\ARMV5\urel\ssm.state.policy.0000.dll 	"sys\bin\ssm.state.policy.0000.dll"
 file=\epoc32\release\ARMV5\urel\ssm.state.policy.0002.dll 	"sys\bin\ssm.state.policy.0002.dll"
 file=\epoc32\release\ARMV5\urel\ssm.state.policy.0003.dll 	"sys\bin\ssm.state.policy.0003.dll"
-file=\epoc32\release\ARMV5\UDEB\ssmuiswppolicy.dll 	"sys\bin\ssmuiswppolicy.dll"
-file=\epoc32\release\ARMV5\UDEB\ssmnoncriticalswppolicy.dll 	"sys\bin\ssmnoncriticalswppolicy.dll"
-file=\epoc32\release\ARMV5\UDEB\ssmpowersup.dll 	"sys\bin\ssmpowersup.dll"
-file=\epoc32\release\ARMV5\UDEB\ssmlocaleobserversup.dll 	"sys\bin\ssmlocaleobserversup.dll"
+file=\epoc32\release\ARMV5\urel\ssmuiswppolicy.dll 	"sys\bin\ssmuiswppolicy.dll"
+file=\epoc32\release\ARMV5\urel\ssmnoncriticalswppolicy.dll 	"sys\bin\ssmnoncriticalswppolicy.dll"
+file=\epoc32\release\ARMV5\urel\ssmpowersup.dll 	"sys\bin\ssmpowersup.dll"
+file=\epoc32\release\ARMV5\urel\ssmlocaleobserversup.dll 	"sys\bin\ssmlocaleobserversup.dll"
 data=\epoc32\data\Z\private\2000d766\backup_registration.xml 	"private\2000d766\backup_registration.xml"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, ssyreferenceplugin.dll , ssyreferenceplugin.dll ) 
 data=\epoc32\data\Z\Private\1020507E\reference\SsyReferenceConfig.xml 	"private\1020507E\reference\SsyReferenceConfig.xml"
