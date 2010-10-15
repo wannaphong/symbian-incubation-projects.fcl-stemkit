@@ -3467,7 +3467,7 @@ sys\bin\eikshtsrv.dll,/epoc32/release/armv5/urel/eikshtsrv.dll,uikon.iby,mw/clas
 sys\bin\EikSrv.dll,/epoc32/release/armv5/urel/eiksrv.dll,uikon.iby,mw/classicui,,,
 sys\bin\EikSrvc.dll,/epoc32/release/armv5/urel/eiksrvc.dll,uikon.iby,mw/classicui,,,
 sys\bin\EikSrvs.exe,/epoc32/release/armv5/urel/eiksrvs.exe,uikon.iby,mw/classicui,,,
-sys\bin\eiksrvui.dll,/epoc32/release/armv5/urel/eiksrvui.dll,core/mw/eikstd.iby,mw/classicui,,,
+sys\bin\eiksrvui.dll,/epoc32/release/armv5/urel/eiksrvui.dll,core/mw/eikstd.iby,mw/classicui,Stem,MW,Break dependency on mediaclientaudio.dll
 Sys\Bin\eintsock_transport.dll,/epoc32/release/armv5/urel/eintsock_transport.dll,esock_core.iby,os/commsfw,,,
 sys\bin\eirclient.dll,/epoc32/release/armv5/urel/eirclient.dll,bluetooth.iby,os/bt,,,
 sys\bin\EKTran.dll,/epoc32/release/armv5/urel/ektran.dll,base.iby,os/kernelhwsrv,,,
