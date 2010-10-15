@@ -1,7 +1,14 @@
+#ifdef _DEBUG
+define DEBUG_DIR udeb
+romname=syborg_debug.rom.img
+#else
+define DEBUG_DIR urel
+romname=syborg.rom.img
+#endif
+
 ROM_IMAGE[0] {
 #include "syborg_stem_features.iby"
 
-romname=syborg.img
 REM #undef  _ARM4
 REM #define _ARM4
 REM redefined ROMMEGS as 50
@@ -38,7 +45,7 @@ kernelheapmax=0x00FFC000
 dataaddress=0x400000
 defaultstackreserve=0x200000
 romchecksum=0x12345678
-primary[0x0b0a0001]=\epoc32\release\ARMV5\urel\_syborg_ekern.exe 	"sys\bin\ekern.exe"	code-align 0x4000
+primary[0x0b0a0001]=\epoc32\release\ARMV5\DEBUG_DIR\_syborg_ekern.exe 	"sys\bin\ekern.exe"	code-align 0x4000
 extension[0x0b0a0001]=\epoc32\release\ARMV5\urel\_syborg_btracex.ldd 	"sys\bin\btracex.ldd"
 file=\epoc32\release\ARMV5\urel\btracec.dll 	"sys\bin\btracec.dll"
 variant[0x0b0a0001]=\epoc32\release\ARMV5\urel\_syborg_kasyborg.dll 	"sys\bin\kasyborg.dll"
@@ -1182,7 +1189,7 @@ REM LBS reference data source DLL
 file=\epoc32\release\ARMV5\urel\lbsreflocdatasource.dll 	"sys\bin\lbsreflocdatasource.dll"
 data=\epoc32\data\Z\Resource\nlabtgpspsyconstants.rsc 	"resource\nlabtgpspsyconstants.rsc"
 data=\epoc32\data\Z\Resource\nlabtgpspsy_name.rsc 	"resource\nlabtgpspsy_name.rsc"
-__ECOM_PLUGIN(\epoc32\release\ARMV5\UDEB,Sys\Bin,\epoc32\data\Z,Resource\Plugins, eposdefault.dll , eposdefault.dll ) 
+__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, eposdefault.dll , eposdefault.dll ) 
 file=\epoc32\release\ARMV5\urel\locationmonitor.exe 	"sys\bin\locationmonitor.exe"
 file=\epoc32\release\ARMV5\urel\eposserver.exe 	"sys\bin\eposserver.exe"
 data=\epoc32\data\Z\private\101f97b2\eposserver.rsc 	"private\101f97b2\eposserver.rsc"
@@ -1205,15 +1212,15 @@ file=\epoc32\release\ARMV5\urel\LbsPrivacyExtNotifiers.dll 	"sys\bin\LbsPrivacyE
 REM LBS Privacy Data Types
 file=\epoc32\release\ARMV5\urel\eposprvtyp.dll 	"sys\bin\eposprvtyp.dll"
 REM LBS Network Test
-__ECOM_PLUGIN(\epoc32\release\ARMV5\UDEB,Sys\Bin,\epoc32\data\Z,Resource\Plugins, lbsprotocolmodule.dll , lbsprotocolmodule.dll ) 
+__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, lbsprotocolmodule.dll , lbsprotocolmodule.dll ) 
 data=\epoc32\data\z\private\10202BE9\10281D6F.cre 	"private\10202BE9\10281D6F.cre"
 REM SUPL ASN1 Encode
 file=\epoc32\release\ARMV5\urel\suplasn1.dll 	"sys\bin\suplasn1.dll"
 REM LBS SUPL Test Module
-__ECOM_PLUGIN(\epoc32\release\ARMV5\UDEB,Sys\Bin,\epoc32\data\Z,Resource\Plugins, lbssupltestmodule.dll , lbssupltestmodule.dll ) 
+__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, lbssupltestmodule.dll , lbssupltestmodule.dll ) 
 file=\epoc32\release\ARMV5\urel\epospluginfw.dll 	"sys\bin\epospluginfw.dll"
 REM LBS Privacy protocol module
-__ECOM_PLUGIN(\epoc32\release\ARMV5\UDEB,Sys\Bin,\epoc32\data\Z,Resource\Plugins, lbsprivacyprotocolmodule.dll , lbsprivacyprotocolmodule.dll ) 
+__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, lbsprivacyprotocolmodule.dll , lbsprivacyprotocolmodule.dll ) 
 REM LBS Privacy Request Api
 file=\epoc32\release\ARMV5\urel\lbsprivacyrequest.dll 	"sys\bin\lbsprivacyrequest.dll"
 file=\epoc32\release\ARMV5\urel\psytester.exe 	"sys\bin\psytester.exe"
@@ -1222,7 +1229,7 @@ data=\epoc32\data\Z\Resource\psytester.rsc 	"resource\psytester.rsc"
 REM LBS Privacy Protocol Module
 file=\epoc32\release\ARMV5\urel\loadlafshutdown.dll 	"sys\bin\loadlafshutdown.dll"
 file=\epoc32\release\ARMV5\urel\LOOPBACK.CSY 	"sys\bin\LOOPBACK.CSY"
-__ECOM_PLUGIN(\epoc32\release\ARMV5\UDEB,Sys\Bin,\epoc32\data\Z,Resource\Plugins, mbmsparams.dll , mbmsparams.dll ) 
+__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, mbmsparams.dll , mbmsparams.dll ) 
 file=\epoc32\release\ARMV5\urel\omxcomponent.dll 	"sys\bin\omxcomponent.dll" 
 file=\epoc32\release\ARMV5\urel\puresolverutils.dll 	"sys\bin\puresolverutils.dll" 
 file=\epoc32\release\ARMV5\urel\mdasoundadapter.dll 	"sys\bin\mdasoundadapter.dll"
@@ -1305,7 +1312,7 @@ REM MMS Settings
 file=\epoc32\release\ARMV5\urel\mmsgenericsettings.dll 	"sys\bin\mmsgenericsettings.dll"
 REM MMTSY
 file=\epoc32\release\ARMV5\urel\MM.TSY 	"sys\bin\MM.TSY"
-__ECOM_PLUGIN(\epoc32\release\ARMV5\UDEB,Sys\Bin,\epoc32\data\Z,Resource\Plugins, msfdc.dll , msfdc.dll ) 
+__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, msfdc.dll , msfdc.dll ) 
 data=\epoc32\data\Z\resource\mtp\102827AF.rsc 	"resource\mtp\102827AF.rsc" 
 file=\epoc32\release\ARMV5\urel\mtpdatatypes.dll 	"sys\bin\mtpdatatypes.dll"
 file=\epoc32\release\ARMV5\urel\mtpclient.dll 	"sys\bin\mtpclient.dll"
@@ -1370,7 +1377,7 @@ REM KIPPER - LAN AGT
 file=\epoc32\release\ARMV5\urel\NullAgt.agt 	"sys\bin\NullAgt.agt"
 REM dependencies
 data=\epoc32\data\z\private\101F7989\esock\ccp.ini 	"private\101f7989\esock\ccp.ini"
-__ECOM_PLUGIN(\epoc32\release\ARMV5\UDEB,Sys\Bin,\epoc32\data\Z,Resource\Plugins, ppp.dll , ppp.dll ) 
+__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, ppp.dll , ppp.dll ) 
 file=\epoc32\release\ARMV5\urel\pppmain.dll 	"sys\bin\pppmain.dll"
 file=\epoc32\release\ARMV5\urel\vjcomp.dll 	"sys\bin\vjcomp.dll"
 REM Predictor PPP compression
@@ -1391,9 +1398,9 @@ REM Feature QoS is not included in this ROM
 REM Feature QoS is not included in this ROM 
 REM Feature QoS is not included in this ROM 
 REM IP Subconnection Provider
-__ECOM_PLUGIN(\epoc32\release\ARMV5\UDEB,Sys\Bin,\epoc32\data\Z,Resource\Plugins, Qos3GPP.dll , Qos3GPP.dll ) 
+__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, Qos3GPP.dll , Qos3GPP.dll ) 
 REM PDP Meta and Sub-Connection Connection Providers
-__ECOM_PLUGIN(\epoc32\release\ARMV5\UDEB,Sys\Bin,\epoc32\data\Z,Resource\Plugins, pdp.dll , pdp.dll ) 
+__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, pdp.dll , pdp.dll ) 
 REM IP Subconnection Provider with QoS support
 REM Feature QoS is not included in this ROM
 REM --- DNS Proxy 
@@ -1876,11 +1883,11 @@ __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins
 data=\epoc32\data\Z\Private\101F413C\backup_registration.xml 	"private\101F413C\backup_registration.xml"
 REM SQLITE3
 file=\epoc32\release\ARMV5\urel\sqlite3.dll 	"sys\bin\sqlite3.dll" 
-file=\epoc32\release\ARMV5\UDEB\ssmcmn.dll 	"sys\bin\ssmcmn.dll"
-file=\epoc32\release\ARMV5\UDEB\ssmcmd.dll 	"sys\bin\ssmcmd.dll"
-file=\epoc32\release\ARMV5\UDEB\sysstatemgr.exe 	"sys\bin\sysstatemgr.exe"
-file=\epoc32\release\ARMV5\UDEB\ssmstartsafe.dll 	"sys\bin\ssmstartsafe.dll"
-file=\epoc32\release\ARMV5\UDEB\domainpolicy2.dll 	"sys\bin\domainpolicy2.dll"
+file=\epoc32\release\ARMV5\DEBUG_DIR\ssmcmn.dll 	"sys\bin\ssmcmn.dll"
+file=\epoc32\release\ARMV5\DEBUG_DIR\ssmcmd.dll 	"sys\bin\ssmcmd.dll"
+file=\epoc32\release\ARMV5\DEBUG_DIR\sysstatemgr.exe 	"sys\bin\sysstatemgr.exe"
+file=\epoc32\release\ARMV5\DEBUG_DIR\ssmstartsafe.dll 	"sys\bin\ssmstartsafe.dll"
+file=\epoc32\release\ARMV5\DEBUG_DIR\domainpolicy2.dll 	"sys\bin\domainpolicy2.dll"
 file=\epoc32\release\ARMV5\urel\subtitlegraphic.dll 	"sys\bin\subtitlegraphic.dll"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, subtitlegraphicdrawer.dll , subtitlegraphicdrawer.dll ) 
 REM surface update client\server
@@ -1985,7 +1992,7 @@ __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins
 file=\epoc32\release\ARMV5\urel\uloggersysconfig.dll 	"Sys\Bin\uloggersysconfig.dll"
 file=\epoc32\release\ARMV5\urel\uloggerclient.dll 	"Sys\Bin\uloggerclient.dll"
 data=\epoc32\data\Z\private\10273881\uloggerconfig.ini 	"private\10273881\uloggerconfig.ini"
-__ECOM_PLUGIN(\epoc32\release\ARMV5\UDEB,Sys\Bin,\epoc32\data\Z,Resource\Plugins, referencepolicyplugin.dll , referencepolicyplugin.dll ) 
+__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, referencepolicyplugin.dll , referencepolicyplugin.dll ) 
 file=\epoc32\release\ARMV5\urel\msmmsession.dll 	"Sys\bin\msmmsession.dll"
 file=\epoc32\release\ARMV5\urel\msmmserver.exe 	"Sys\bin\msmmserver.exe"
 data=\epoc32\data\Z\Resource\versions\langsw.txt 	"resource\versions\langsw.txt"
@@ -2011,10 +2018,10 @@ REM openwfc_interop
 file=\epoc32\release\ARMV5\urel\wfcinterop.dll 	"sys\bin\wfcinterop.dll"
 file=\epoc32\release\ARMV5\urel\libwfchwsyborg.dll 	"sys\bin\libwfchwsyborg.dll"
 alias \sys\bin\libwfchwsyborg.dll                      \sys\bin\libWFC.dll
-__ECOM_PLUGIN(\epoc32\release\ARMV5\UDEB,Sys\Bin,\epoc32\data\Z,Resource\Plugins, 10286378.dll , 10286378.dll ) 
+__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, 10286378.dll , 10286378.dll ) 
 file=\epoc32\release\ARMV5\urel\graphicsresourcewrapper.dll 	"sys\bin\graphicsresourcewrapper.dll" 
 file=\epoc32\release\ARMV5\urel\w32stdgraphic.dll 	"sys\bin\W32StdGraphic.dll"
-__ECOM_PLUGIN(\epoc32\release\ARMV5\UDEB,Sys\Bin,\epoc32\data\Z,Resource\Plugins, 10281922.dll , 10281922.dll ) 
+__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, 10281922.dll , 10281922.dll ) 
 REM Window Server Logging DLLs
 file=\epoc32\release\ARMV5\urel\dlog.dll 	"sys\bin\dlog.dll"
 file=\epoc32\release\ARMV5\urel\dlogfl.dll 	"sys\bin\dlogfl.dll"
@@ -3015,8 +3022,8 @@ data=\epoc32\data\Z\PRIVATE\10003A3F\APPS\NSmlDMSync_reg.rsc 	"Private\10003a3f\
 data=\epoc32\data\Z\private\101F6DE5\backup_registration.xml 	"private\101F6DE5\backup_registration.xml"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, OmaDmCPPlugin.dll , OmaDmCPPlugin.dll ) 
 REM OMA Data Synchronisation Application UI
-REM file=\epoc32\release\ARMV5\UDEB\NSmlDSSync.exe                   sys\bin\NSmlDSSync.exe 
-REM file=\epoc32\release\ARMV5\UDEB\NSmlDSSync.exe                   sys\bin\NSmlDSSync.exe
+REM file=\epoc32\release\ARMV5\urel\NSmlDSSync.exe                   sys\bin\NSmlDSSync.exe 
+REM file=\epoc32\release\ARMV5\urel\NSmlDSSync.exe                   sys\bin\NSmlDSSync.exe
 file=\epoc32\release\ARMV5\urel\NSmlDSSync.exe 	"sys\bin\NSmlDSSync.exe" 
 REM __SCALABLE_IMAGE(\epoc32\data\Z,resource\apps,resource\apps,NSmlDSSync) 
 data=\epoc32\data\Z\resource\apps\NSmlDSSync.mif 	"resource\apps\NSmlDSSync.mif"
@@ -3437,7 +3444,7 @@ data=\epoc32\data\Z\resource\akncomparesources.rsc 	"resource\akncomparesources.
 file=\epoc32\release\ARMV5\urel\akncompasrv.exe 	"sys\bin\akncompasrv.exe" 
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, akncompags.dll , akncompags.dll ) 
 data=\epoc32\data\Z\resource\akncompagsrsc.rsc 	"resource\akncompagsrsc.rsc"
-file=\epoc32\release\ARMV5\UDEB\akncustcmds.dll 	"sys\bin\akncustcmds.dll"
+file=\epoc32\release\ARMV5\urel\akncustcmds.dll 	"sys\bin\akncustcmds.dll"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, AknExtendedFader_arm11.dll , AknExtendedFader_arm11.dll ) 
 file=\epoc32\release\ARMV5\urel\aknfepuiinterface.dll 	"sys\bin\aknfepuiinterface.dll"
 file=\epoc32\release\ARMV5\urel\aknoldstylenotif.dll 	"sys\bin\aknoldstylenotif.dll"
@@ -3556,7 +3563,7 @@ file=\epoc32\release\ARMV5\urel\ALWAYSONLINESTARTER.exe 	"sys\bin\ALWAYSONLINEST
 data=\epoc32\data\Z\system\install\aomanager_stub.sis 	"system\install\aomanager_stub.sis"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, ALWAYSONLINEEMAILPLUGIN.DLL , ALWAYSONLINEEMAILPLUGIN.DLL ) 
 data=\epoc32\data\Z\system\install\aoemailplugin_stub.sis 	"system\install\aoemailplugin_stub.sis"
-__ECOM_PLUGIN(\epoc32\release\ARMV5\UDEB,Sys\Bin,\epoc32\data\Z,Resource\Plugins, APControlListPlugin.DLL , APControlListPlugin.DLL ) 
+__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, APControlListPlugin.DLL , APControlListPlugin.DLL ) 
 data=\epoc32\data\Z\resource\apps\APControlListplugin.mif 	"resource\apps\APControlListplugin.mif"
 file=\epoc32\release\ARMV5\urel\ApEngine.dll 	"sys\bin\ApEngine.dll"
 file=\epoc32\release\ARMV5\urel\SWInstCli.dll 	"sys\bin\SWInstCli.dll"
@@ -4195,7 +4202,7 @@ data=\epoc32\data\Z\private\10282BC4\Rules\locbtgpspsypscontextstate.rul 	"priva
 data=\epoc32\data\Z\private\10282BC4\Settings\10282C74\locbtgpspsypscontextstate.xml 	"private\10282BC4\Settings\10282C74\locbtgpspsypscontextstate.xml"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, locgpsindicatorplugin.dll , locgpsindicatorplugin.dll ) 
 data=\epoc32\data\Z\System\install\lockapp_stub.sis 	"system\install\lockapp_stub.sis"
-file=\epoc32\release\ARMV5\UDEB\lockclient.dll 	"sys\bin\lockclient.dll"
+file=\epoc32\release\ARMV5\urel\lockclient.dll 	"sys\bin\lockclient.dll"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, locnotprefplugin.dll , locnotprefplugin.dll ) 
 file=\epoc32\release\ARMV5\urel\locod.exe 	"sys\bin\locod.exe"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, locpsysettingsui.dll , locpsysettingsui.dll ) 
@@ -4773,7 +4780,7 @@ file=\epoc32\release\ARMV5\urel\rtpservice.dll 	"sys\bin\rtpservice.dll"
 file=\epoc32\release\ARMV5\urel\rtpstppacket.dll 	"sys\bin\rtpstppacket.dll"
 data=\epoc32\data\Z\System\install\rtpstack_stub.sis 	"system\install\rtpstack_stub.sis"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, S60StreamingSource.dll , S60StreamingSource.dll ) 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\UDEB,Sys\Bin,\epoc32\data\Z,Resource\Plugins, s60mcpr.dll , s60mcpr.dll ) 
+__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, s60mcpr.dll , s60mcpr.dll ) 
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, bsservice.dll , bsservice.dll ) 
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, cpclient.dll , cpclient.dll ) 
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, sapidataplugin.dll , sapidataplugin.dll ) 
@@ -5451,29 +5458,29 @@ file=\epoc32\release\ARMV5\urel\saastateadaptation.dll 	"sys\bin\stateadaptation
 file=\epoc32\release\ARMV5\urel\saasimadaptation.dll 	"sys\bin\simadaptation.dll"
 file=\epoc32\release\ARMV5\urel\saamiscadaptation.dll 	"sys\bin\miscadaptation.dll"
 file=\epoc32\release\ARMV5\urel\saartcadaptation.dll 	"sys\bin\rtcadaptation.dll"
-file=\epoc32\release\ARMV5\UDEB\starterclient.dll 	"sys\bin\starterclient.dll"
-file=\epoc32\release\ARMV5\UDEB\startupadaptationadapter.dll 	"sys\bin\startupadaptationadapter.dll"
-file=\epoc32\release\ARMV5\UDEB\ssmclayersup.dll 	"sys\bin\ssmclayersup.dll"
-file=\epoc32\release\ARMV5\UDEB\rfstatusswppolicy.dll 	"sys\bin\rfstatusswppolicy.dll"
-file=\epoc32\release\ARMV5\UDEB\ssm.state.policy.0001.dll 	"sys\bin\ssm.state.policy.0001.dll"
+file=\epoc32\release\ARMV5\DEBUG_DIR\starterclient.dll 	"sys\bin\starterclient.dll"
+file=\epoc32\release\ARMV5\DEBUG_DIR\startupadaptationadapter.dll 	"sys\bin\startupadaptationadapter.dll"
+file=\epoc32\release\ARMV5\DEBUG_DIR\ssmclayersup.dll 	"sys\bin\ssmclayersup.dll"
+file=\epoc32\release\ARMV5\DEBUG_DIR\rfstatusswppolicy.dll 	"sys\bin\rfstatusswppolicy.dll"
+file=\epoc32\release\ARMV5\DEBUG_DIR\ssm.state.policy.0001.dll 	"sys\bin\ssm.state.policy.0001.dll"
 data=\epoc32\data\Z\private\2000d75b\normal\gsanormalcmdlist.rsc 	"private\2000d75b\normal\gsanormalcmdlist.rsc"
-file=\epoc32\release\ARMV5\UDEB\customcmds.dll 	"sys\bin\customcmds.dll"
-file=\epoc32\release\ARMV5\UDEB\ssm.swp.policy.simstatus.dll 	"sys\bin\ssm.swp.policy.simstatus.dll"
+file=\epoc32\release\ARMV5\DEBUG_DIR\customcmds.dll 	"sys\bin\customcmds.dll"
+file=\epoc32\release\ARMV5\DEBUG_DIR\ssm.swp.policy.simstatus.dll 	"sys\bin\ssm.swp.policy.simstatus.dll"
 data=\epoc32\data\Z\private\10202be9\2001d2aa.txt 	"private\10202be9\2001d2aa.txt"
-file=\epoc32\release\ARMV5\UDEB\ssmactivitycmd.dll 	"sys\bin\ssmactivitycmd.dll"
-file=\epoc32\release\ARMV5\UDEB\ssmsystemcmds.dll 	"sys\bin\ssmsystemcmds.dll"
-file=\epoc32\release\ARMV5\urel\ssmdiskreserver.exe 	"sys\bin\ssmdiskreserver.exe"
-file=\epoc32\release\ARMV5\urel\ssmmapperutility.dll 	"sys\bin\ssmmapperutility.dll"
-file=\epoc32\release\ARMV5\UDEB\ssmpolicybase.dll 	"sys\bin\ssmpolicybase.dll"
-file=\epoc32\release\ARMV5\UDEB\ssmstatepolicybase.dll 	"sys\bin\ssmstatepolicybase.dll"
-file=\epoc32\release\ARMV5\UDEB\ssmswppolicybase.dll 	"sys\bin\ssmswppolicybase.dll"
-file=\epoc32\release\ARMV5\UDEB\stem_ssm.state.policy.0000.dll 	"sys\bin\ssm.state.policy.0000.dll"
-file=\epoc32\release\ARMV5\urel\ssm.state.policy.0002.dll 	"sys\bin\ssm.state.policy.0002.dll"
-file=\epoc32\release\ARMV5\urel\ssm.state.policy.0003.dll 	"sys\bin\ssm.state.policy.0003.dll"
-file=\epoc32\release\ARMV5\UDEB\ssmuiswppolicy.dll 	"sys\bin\ssmuiswppolicy.dll"
-file=\epoc32\release\ARMV5\UDEB\ssmnoncriticalswppolicy.dll 	"sys\bin\ssmnoncriticalswppolicy.dll"
-file=\epoc32\release\ARMV5\UDEB\ssmpowersup.dll 	"sys\bin\ssmpowersup.dll"
-file=\epoc32\release\ARMV5\UDEB\ssmlocaleobserversup.dll 	"sys\bin\ssmlocaleobserversup.dll"
+file=\epoc32\release\ARMV5\DEBUG_DIR\ssmactivitycmd.dll 	"sys\bin\ssmactivitycmd.dll"
+file=\epoc32\release\ARMV5\DEBUG_DIR\ssmsystemcmds.dll 	"sys\bin\ssmsystemcmds.dll"
+file=\epoc32\release\ARMV5\DEBUG_DIR\ssmdiskreserver.exe 	"sys\bin\ssmdiskreserver.exe"
+file=\epoc32\release\ARMV5\DEBUG_DIR\ssmmapperutility.dll 	"sys\bin\ssmmapperutility.dll"
+file=\epoc32\release\ARMV5\DEBUG_DIR\ssmpolicybase.dll 	"sys\bin\ssmpolicybase.dll"
+file=\epoc32\release\ARMV5\DEBUG_DIR\ssmstatepolicybase.dll 	"sys\bin\ssmstatepolicybase.dll"
+file=\epoc32\release\ARMV5\DEBUG_DIR\ssmswppolicybase.dll 	"sys\bin\ssmswppolicybase.dll"
+file=\epoc32\release\ARMV5\DEBUG_DIR\stem_ssm.state.policy.0000.dll 	"sys\bin\ssm.state.policy.0000.dll"
+file=\epoc32\release\ARMV5\DEBUG_DIR\ssm.state.policy.0002.dll 	"sys\bin\ssm.state.policy.0002.dll"
+file=\epoc32\release\ARMV5\DEBUG_DIR\ssm.state.policy.0003.dll 	"sys\bin\ssm.state.policy.0003.dll"
+file=\epoc32\release\ARMV5\DEBUG_DIR\ssmuiswppolicy.dll 	"sys\bin\ssmuiswppolicy.dll"
+file=\epoc32\release\ARMV5\DEBUG_DIR\ssmnoncriticalswppolicy.dll 	"sys\bin\ssmnoncriticalswppolicy.dll"
+file=\epoc32\release\ARMV5\DEBUG_DIR\ssmpowersup.dll 	"sys\bin\ssmpowersup.dll"
+file=\epoc32\release\ARMV5\DEBUG_DIR\ssmlocaleobserversup.dll 	"sys\bin\ssmlocaleobserversup.dll"
 data=\epoc32\data\Z\private\2000d766\backup_registration.xml 	"private\2000d766\backup_registration.xml"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, ssyreferenceplugin.dll , ssyreferenceplugin.dll ) 
 data=\epoc32\data\Z\Private\1020507E\reference\SsyReferenceConfig.xml 	"private\1020507E\reference\SsyReferenceConfig.xml"
@@ -6389,8 +6396,6 @@ REM MISSING data=\epoc32\data\Z\private\10003a3f\import\Apps\queuedcustomtype_re
 file=\epoc32\release\ARMV5\urel\anomaly.exe 	"sys\bin\anomaly.exe" 
 data=\epoc32\data\Z\resource\apps\anomaly.RSC 	"resource\apps\anomaly.rsc" 
 data=\epoc32\data\Z\private\10003a3f\import\Apps\anomaly_reg.rsc 	"private\10003a3f\import\apps\anomaly_reg.rsc"
-romname syborg.rom.img
-time=##TODAY## 12:00:00
 romchecksum=0x12345678
 
 
