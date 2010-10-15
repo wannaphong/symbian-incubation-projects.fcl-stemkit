@@ -37,7 +37,7 @@
 #include "SVGMediaElementBase.h"
 #include "SVGMediaAnimationElementImpl.h"
 #include "SVGTimedEntityInterface.h"
-//#include "SVGAudioElementImpl.h"
+#include "SVGAudioElementImpl.h"
 
 #include "SVGDocumentImpl.h"
 #include "SVGEngineImpl.h"
@@ -610,7 +610,6 @@ TBool CSvgDecoder::DecodeSVGTAttributeL(const TUint16 aName)
 
 		return DecodeAttributeDesL(aName);
 		}
-#if 0
  else if (aName== KAtrVolume)
 			{
 			if (iIsFixPt)
@@ -659,7 +658,7 @@ TBool CSvgDecoder::DecodeSVGTAttributeL(const TUint16 aName)
 			}
 			return ETrue;
 			}
-#endif
+
 	switch( aName )
 		{
 		case KAtrType:
@@ -681,7 +680,6 @@ TBool CSvgDecoder::DecodeSVGTAttributeL(const TUint16 aName)
 				((CSvgAnimateTransformElementImpl*)iCurrentElement)->SetMatrixDataSize(lSize);
 				return ETrue;
 				}
-#if 0
 			else if(iCurrentElement->ElemID()== KSvgAudioElement)
 				    {
 				    TPtrC lPtr(DecodeTDesCLC());
@@ -689,7 +687,6 @@ TBool CSvgDecoder::DecodeSVGTAttributeL(const TUint16 aName)
 		            CleanupStack::PopAndDestroy( 1 );				    
 				return ETrue;
 				}
-#endif
 			else
 				{
 				return DecodeAttributeDesL(aName);

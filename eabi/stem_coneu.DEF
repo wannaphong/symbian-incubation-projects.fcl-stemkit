@@ -403,28 +403,28 @@ EXPORTS
 	_ZTI12CCoeEnvExtra @ 402 NONAME ; #<TI>#
 	_ZTI12CCoeRedrawer @ 403 NONAME ; #<TI>#
 	_ZTI13CCoeFepLoader @ 404 NONAME ; #<TI>#
-	_ZTI14CCoeFilePlayer @ 405 NONAME ABSENT ; #<TI>#
-	_ZTI14CCoeTonePlayer @ 406 NONAME ABSENT ; #<TI>#
+	_ZTI14CCoeFilePlayer @ 405 NONAME ; #<TI>#
+	_ZTI14CCoeTonePlayer @ 406 NONAME ; #<TI>#
 	Absentee1 @ 407 NONAME ABSENT
-	_ZTI15CCoeSoundPlayer @ 408 NONAME ABSENT ; #<TI>#
+	_ZTI15CCoeSoundPlayer @ 408 NONAME ; #<TI>#
 	_ZTI15CCoeViewManager @ 409 NONAME ; #<TI>#
 	_ZTI16CCoeViewObserver @ 410 NONAME ; #<TI>#
 	Absentee1 @ 411 NONAME ABSENT
 	_ZTI22CCoeBrushAndPenContext @ 412 NONAME ; #<TI>#
-	_ZTI22CCoeSoundPlayerManager @ 413 NONAME ABSENT ; #<TI>#
+	_ZTI22CCoeSoundPlayerManager @ 413 NONAME ; #<TI>#
 	_ZTIN12CCoeEnvExtra19CHighPriorityActiveE @ 414 NONAME ; #<TI>#
 	_ZTV12CCoeEnvExtra @ 415 NONAME ; #<VT>#
 	_ZTV12CCoeRedrawer @ 416 NONAME ; #<VT>#
 	_ZTV13CCoeFepLoader @ 417 NONAME ; #<VT>#
-	_ZTV14CCoeFilePlayer @ 418 NONAME ABSENT ; #<VT>#
-	_ZTV14CCoeTonePlayer @ 419 NONAME ABSENT ; #<VT>#
+	_ZTV14CCoeFilePlayer @ 418 NONAME ; #<VT>#
+	_ZTV14CCoeTonePlayer @ 419 NONAME ; #<VT>#
 	Absentee2 @ 420 NONAME ABSENT
-	_ZTV15CCoeSoundPlayer @ 421 NONAME ABSENT ; #<VT>#
+	_ZTV15CCoeSoundPlayer @ 421 NONAME ; #<VT>#
 	_ZTV15CCoeViewManager @ 422 NONAME ; #<VT>#
 	_ZTV16CCoeViewObserver @ 423 NONAME ; #<VT>#
 	Absentee1 @ 424 NONAME ABSENT
 	_ZTV22CCoeBrushAndPenContext @ 425 NONAME ; #<VT>#
-	_ZTV22CCoeSoundPlayerManager @ 426 NONAME ABSENT ; #<VT>#
+	_ZTV22CCoeSoundPlayerManager @ 426 NONAME ; #<VT>#
 	_ZTVN12CCoeEnvExtra19CHighPriorityActiveE @ 427 NONAME ; #<VT>#
 	_ZN7CCoeEnv11InstallFepLE4TUid @ 428 NONAME
 	_ZN7CCoeEnv11InstallFepLE4TUidi @ 429 NONAME

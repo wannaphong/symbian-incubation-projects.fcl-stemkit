@@ -33,7 +33,7 @@
 #include "SVGAnimationElementImpl.h"
 #include "SVGTextElementImpl.h"
 
-//#include "SVGAudioElementImpl.h"
+#include "SVGAudioElementImpl.h"
 
 
 #include "Gfx2dGcOpenVG.h"
@@ -2684,7 +2684,7 @@ HBufC8* CSvgEngineImpl::FetchExternalDataL( const TDesC& aUri )
 // --------------------------------------------------------------------------
 void CSvgEngineImpl::SetAudioVolume( TInt aPercentage )
     {
-#if 0    
+    
     if ( !iSvgDocument )
         {
         return;
@@ -2703,7 +2703,6 @@ void CSvgEngineImpl::SetAudioVolume( TInt aPercentage )
         lAudioElement->SetVolume( aPercentage );
         }
     lAudioElementList.Close();
-#endif
     }
 
 // --------------------------------------------------------------------------
