@@ -25,4 +25,5 @@ PRJ_MMPFILES
 ..\breakdeps\backend.mmp
 ..\breakdeps\cone.mmp
 ..\breakdeps\SVGEngine.mmp
+..\breakdeps\eiksrvui.mmp
 

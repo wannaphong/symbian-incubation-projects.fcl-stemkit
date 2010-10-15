@@ -14,18 +14,21 @@
 * Description:  Project definition file for project EIKON Server UI.
 *
 */
+// Modified to build stem_eiksrvui.dll to break dependency on mediaclientaudio.dll
+// Assumes that the sf/mw/classicui package is accessible and adjusts the paths
+// to refer back to /sf/mw/classicui/uifw/eikstd where needed
 
 #include <data_caging_paths.hrh>
 #include <platform_paths.hrh>
 
-TARGET          eiksrvui.dll
+TARGET          stem_eiksrvui.dll
 TARGETTYPE      dll
 UID             0x1000008D 0x100053D0
 
 CAPABILITY      CAP_GENERAL_DLL
 VENDORID        VID_DEFAULT
 
-SOURCEPATH      ../srvuisrc
+SOURCEPATH      /sf/mw/classicui/uifw/eikstd/srvuisrc
 
 START RESOURCE  EIKSRVUI.RSS
 HEADER
@@ -33,15 +36,15 @@ TARGETPATH      RESOURCE_FILES_DIR
 LANGUAGE_IDS
 END
 
-USERINCLUDE     .
-USERINCLUDE     ../inc
-USERINCLUDE     ../../AvKon/inc
-USERINCLUDE     ../../AvKon/animdllinc
-USERINCLUDE     ../../inc
-USERINCLUDE     ../../../inc
-USERINCLUDE     ../srvuiinc
-USERINCLUDE     ../dlginc
-USERINCLUDE     ../cdlginc
+USERINCLUDE     /sf/mw/classicui/uifw/eikstd/srvuisrc
+USERINCLUDE     /sf/mw/classicui/uifw/eikstd/inc
+USERINCLUDE     /sf/mw/classicui/uifw/AvKon/inc
+USERINCLUDE     /sf/mw/classicui/uifw/AvKon/animdllinc
+USERINCLUDE     /sf/mw/classicui/uifw/inc
+USERINCLUDE     /sf/mw/classicui/uifw/eikstd/coctlinc
+USERINCLUDE     /sf/mw/classicui/uifw/eikstd/srvuiinc
+USERINCLUDE     /sf/mw/classicui/uifw/eikstd/dlginc
+USERINCLUDE     /sf/mw/classicui/uifw/eikstd/cdlginc
 
 // This is a SYSTEMINCLUDE macro containing the middleware
 // and applications layer specific include directories
@@ -55,6 +58,9 @@ SOURCE          eikkeysoundmap.cpp
 SOURCE          EikLafShutStarter.cpp
 SOURCE          EikLafShutScheduler.cpp
 SOURCE          AknEikAudioToneObserver.cpp
+
+SOURCEPATH .
+
 SOURCE          eikkeysoundserver.cpp
 
 LIBRARY         euser.lib
@@ -68,7 +74,6 @@ LIBRARY         apgrfx.lib
 LIBRARY         eikcore.lib
 LIBRARY         eikcoctl.lib
 LIBRARY         eikdlg.lib
-LIBRARY         mediaclientaudio.lib
 LIBRARY         eiksrv.lib
 LIBRARY         avkon.lib
 LIBRARY         Eikalert.lib
@@ -96,8 +101,11 @@ LIBRARY         aknnotifyplugin.lib // for dialog controller stub
 LIBRARY         aknlayout2.lib
 
 LIBRARY         gdi.lib
-DEFFILE         EIKSVUI.DEF
-
+#ifdef WINSCW
+DEFFILE         /sf/mw/classicui/uifw/Eikstd/bwins/EIKSVUI.DEF
+#else
+DEFFILE         /sf/mw/classicui/uifw/Eikstd/eabi/EIKSVUI.DEF
+#endif
 START WINS
 BASEADDRESS     0x74350000
 END
