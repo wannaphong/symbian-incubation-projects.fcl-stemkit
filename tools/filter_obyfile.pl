@@ -315,9 +315,11 @@ foreach my $line (@obylines)
 		}
 	
 	# patchdata  sys\bin\eiksrv.dll addr 0x0000c944 4 5
-	if ($line =~ /^\s*patchdata\s*(\S+)/)
+	# patchdata rawip.dll@KRMtuIPv6 0x578
+	if ($line =~ /^\s*patchdata\s*(\S+)(\s*@|\s+addr)/i)
 		{
 		my $romfile = $1;
+		$romfile = "sys\\bin\\$romfile" if ($romfile !~ /\\/);
 		$romfile =~ s/^\\//;	# remove leading \, to match $romfile convention
 		$romfile = $lc_romfiles{lc $romfile};
 		

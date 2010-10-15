@@ -1407,9 +1407,19 @@ sub substitution_phase
  			{
  				if(AddDllDataInfo($new_line))
  				{
- 					$line = "REM $line";
+ 					# wasn't a valid line, so comment it out
+					$line = "REM $line";
+ 				}
+ 				else
+ 				{
+ 					# valid patchdata command, retain it for final processing (during reformat_line!)
+ 					# In expectation that it will be OK later, emit the "REM processed" marker here
+ 					push @obydata, "REM processed $line";
+ 					push @obydata, reassert_sourceline();
  				}
  			}
+ 			push @obydata, "$line";
+ 			next;
 		}
 
 		if($line =~ /^\s*FEATURE\s*(.*)/i || $line =~ /^\s*EXCLUDE_FEATURE\s*(.*)/i)
@@ -3448,7 +3458,7 @@ sub reformat_line($)
 		my $scalarSize;
 		
 		if(!defined $DllDataMap{$patchdlldatamap_key}->{dstpath}){
-			print_source_error(" File $romfilename has not been included into ROM image");
+			print_source_error(" Bad patchdata statement: $romfilename has not been included into ROM image");
 			$errors++ if($strict);
 			$line = "REM $line\n";
 			return $line;
@@ -4422,7 +4432,7 @@ sub AddDllDataInfo
 			$newVal = $1;
 		}
 		else{
- 			print "ERROR: Invalid patchable value at \"$line\"\n";
+ 			print_source_error("ERROR: Invalid patchable value : $line");
  			$errors++ if($strict);
  			return 1;
 		}
