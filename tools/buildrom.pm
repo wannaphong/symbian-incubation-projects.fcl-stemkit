@@ -731,6 +731,7 @@ sub process_cmdline_arguments
 	{
 		# Enforce Feature Manager if macro SYMBIAN_FEATURE_MANAGER is defined in the HRH file.
 		my @hrhMacros = &Variant_GetMacroList;	
+		die("No system-wide #defines??!") if (scalar @hrhMacros == 0);	
 		if (grep /^SYMBIAN_FEATURE_MANAGER\s*$/, @hrhMacros)
 		{
 			$enforceFeatureManager = 1;
