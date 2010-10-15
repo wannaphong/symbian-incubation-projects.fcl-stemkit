@@ -2865,7 +2865,7 @@ sys\bin\avcontrolframework.dll,/epoc32/release/armv5/urel/avcontrolframework.dll
 sys\bin\avctpservices.dll,/epoc32/release/armv5/urel/avctpservices.dll,bluetooth.iby,os/bt,,,
 Sys\Bin\aviplaycontroller.dll,/epoc32/release/armv5/urel/aviplaycontroller.dll,avi.iby,os/mm,,,
 Sys\Bin\avirecordcontroller.dll,/epoc32/release/armv5/urel/avirecordcontroller.dll,avi.iby,os/mm,,,
-sys\bin\avkon.dll,/epoc32/release/armv5/urel/avkon.dll,core/mw/avkon.iby,mw/classicui,,,
+sys\bin\avkon.dll,/epoc32/release/armv5/urel/avkon.dll,core/mw/avkon.iby,mw/classicui,Stem,WR,Qt depends on this
 Sys\Bin\avkonfep.dll,/epoc32/release/armv5/urel/avkonfep.dll,customer/mw/aknfep_variant.iby,mw/inputmethods,,,
 Sys\Bin\avkonstartupextensionplugin.dll,/epoc32/release/armv5/urel/avkonstartupextensionplugin.dll,core/mw/aknglobalui.iby,mw/classicui,,,
 sys\bin\avmediaserver.exe,/epoc32/release/armv5/urel/avmediaserver.exe,core/mw/upnpmediaserver.iby,mw/dlnasrv,,,
@@ -3547,7 +3547,7 @@ sys\bin\eswt.dll,/epoc32/release/armv5/urel/eswt.dll,core/app/java.iby,app/jrt,,
 sys\bin\eswtapifacade.dll,/epoc32/release/armv5/urel/eswtapifacade.dll,core/app/java.iby,app/jrt,,,
 sys\bin\eswtdirectcontent.dll,/epoc32/release/armv5/urel/eswtdirectcontent.dll,core/app/java.iby,app/jrt,,,
 sys\bin\eswtphysics.dll,/epoc32/release/armv5/urel/eswtphysics.dll,core/app/java.iby,app/jrt,,,
-sys\bin\ETel.dll,/epoc32/release/armv5/urel/etel.dll,etel.iby,os/cellularsrv,,WR,Stem does not support telephony
+sys\bin\ETel.dll,/epoc32/release/armv5/urel/etel.dll,etel.iby,os/cellularsrv,Out,WR,Stem does not support telephony
 sys\bin\Etel3rdParty.dll,/epoc32/release/armv5/urel/etel3rdparty.dll,etelisv.iby,os/cellularsrv,,,
 sys\bin\etelmm.dll,/epoc32/release/armv5/urel/etelmm.dll,etelmm.iby,os/cellularsrv,,,
 sys\bin\etelpckt.dll,/epoc32/release/armv5/urel/etelpckt.dll,etelpckt.iby,os/cellularsrv,,,

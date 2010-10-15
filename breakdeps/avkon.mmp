@@ -20,15 +20,16 @@
 #include <data_caging_paths.hrh>
 #include <platform_paths.hrh>
 
-TARGET          avkon.dll
+TARGET          stem_avkon.dll
 TARGETTYPE      dll
 UID             0x1000008D 0x100056C6
 
 CAPABILITY      CAP_GENERAL_DLL
 VENDORID        VID_DEFAULT
 
-SOURCEPATH      ../srcdata
+SOURCEPATH      /sf/mw/classicui/uifw/AvKon/srcdata
 
+#if 0 // don't need stem versions of these resource files
 START RESOURCE  avkon.rss
 HEADER
 TARGETPATH      RESOURCE_FILES_DIR
@@ -46,6 +47,7 @@ HEADER
 TARGETPATH      RESOURCE_FILES_DIR
 LANGUAGE_IDS
 END
+#endif
 
 #ifndef WINSCW
 EPOCALLOWDLLDATA
@@ -54,12 +56,15 @@ EPOCALLOWDLLDATA
 MACRO TFX_USE_WCHANGE_EVENT    // Enable these if TfxServer CRP supports the EWindowGroupChanged event
                                              // Note: must be enabled also in akncapserver.mmp and wsdrawer.mmp
 
-USERINCLUDE   ../inc
-USERINCLUDE   ../../inc
-USERINCLUDE   ../../../inc
-USERINCLUDE   ../../eikctl/inc
-USERINCLUDE   ../../EikStd/coctlinc
-USERINCLUDE   . ../inc ../animdllinc ../akncompamode/inc
+USERINCLUDE   /sf/mw/classicui/uifw/AvKon/inc
+USERINCLUDE   /sf/mw/classicui/uifw/inc
+USERINCLUDE   /sf/mw/classicui/inc
+USERINCLUDE   /sf/mw/classicui/uifw/eikctl/inc
+USERINCLUDE   /sf/mw/classicui/uifw/EikStd/coctlinc
+USERINCLUDE   /sf/mw/classicui/uifw/AvKon/group
+USERINCLUDE   /sf/mw/classicui/uifw/AvKon/inc
+USERINCLUDE   /sf/mw/classicui/uifw/AvKon/animdllinc
+USERINCLUDE   /sf/mw/classicui/uifw/AvKon/akncompamode/inc
 
 // This is a SYSTEMINCLUDE macro containing the middleware
 // and applications layer specific include directories
@@ -67,7 +72,7 @@ APP_LAYER_SYSTEMINCLUDE
 OS_LAYER_LIBC_SYSTEMINCLUDE
 
 
-SOURCEPATH      ../src
+SOURCEPATH      /sf/mw/classicui/uifw/AvKon/src
 
 SOURCE          aknview.cpp
 SOURCE          aknApp.cpp
@@ -170,7 +175,11 @@ SOURCE          AknSettingItemList.cpp
 SOURCE          aknshut.cpp
 SOURCE          AknKeyLock.cpp
 SOURCE          AknIncallStatusBubble.cpp
+
+SOURCEPATH .
 SOURCE          AknEcs.cpp
+
+SOURCEPATH /sf/mw/classicui/uifw/AvKon/src
 SOURCE          AknNumEdwin.cpp
 SOURCE          AknDlgShut.cpp
 SOURCE          AknGMSStyleGrid.cpp
@@ -307,7 +316,6 @@ LIBRARY         fepbase.lib
 LIBRARY         form.lib
 LIBRARY         estor.lib
 LIBRARY         CommonEngine.lib
-LIBRARY         phoneclient.lib
 LIBRARY         apparc.lib
 LIBRARY         aknnotify.lib // Global Note
 LIBRARY         insock.lib // For IP address copying in CAknIpFieldSettingPage
@@ -347,7 +355,7 @@ LIBRARY         aknphysics.lib
 LIBRARY         hwrmlightclient.lib
 LIBRARY         aiwdialdata.lib
 
-DEFFILE AVKON.def
+DEFFILE /sf/mw/classicui/uifw/AvKon/~/AVKON.def
 
 START WINS
     baseaddress     0x7dc00000
