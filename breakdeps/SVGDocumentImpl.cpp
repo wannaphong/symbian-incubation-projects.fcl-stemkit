@@ -61,7 +61,7 @@
 #include "SVGDiscardElementImpl.h"
 #include "SVGScriptElementImpl.h"
 
-#include "SVGAudioElementImpl.h"
+//#include "SVGAudioElementImpl.h"
 
 //#ifdef RD_SVGT_MEDIAANIMATION_SUPPORT
 #include "SVGMediaAnimationElementImpl.h"
@@ -515,13 +515,14 @@ MXmlElement* CSvgDocumentImpl::CreateElementL(const TUint8 aTagName )
 #else
             return ( MXmlElement * ) CSvgGElementImpl::NewL( _L( "g" )(TUint8) position, this );
 #endif
-
+#if 0
         case KSvgAudioElement:
             {
             CSvgAudioElementImpl* lAudioElement = CSvgAudioElementImpl::NewL( (TUint8) position, this );
             iSvgAnimations.Append(lAudioElement);
             return ( MXmlElement * ) lAudioElement;
             }
+#endif
 //#ifdef RD_SVGT_MEDIAANIMATION_SUPPORT
         case KSvgMediaAnimationElement:
             {
@@ -1275,8 +1276,7 @@ void CSvgDocumentImpl::ParsePostOrderMediaElements( CSvgElementImpl* aRoot,
 	    }
 	
 	// Add only media elements, currently animation and audio
-	if ( aRoot->ElemID() == KSvgMediaAnimationElement || 
-	    aRoot->ElemID() == KSvgAudioElement )	
+	if ( aRoot->ElemID() == KSvgMediaAnimationElement )	
 	    {
 	    aPostOrderList.Append( aRoot );	    
 	    }
