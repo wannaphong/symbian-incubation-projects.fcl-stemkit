@@ -24,4 +24,5 @@ PRJ_MMPFILES
 ..\startup\ssmstartuppolicy.mmp
 ..\breakdeps\backend.mmp
 ..\breakdeps\cone.mmp
+..\breakdeps\SVGEngine.mmp
 
