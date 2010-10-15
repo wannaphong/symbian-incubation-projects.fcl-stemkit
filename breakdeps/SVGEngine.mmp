@@ -14,13 +14,15 @@
 * Description:  This mmp file generates makefile for SVG Engine
 *
 */
-
+// Modified to build stem_SVGEngine.dll to break dependency on mediaclientaudio.dll
+// Assumes that the sf/mw/svgt package is accessible and adjusts the paths
+// to refer back to /sf/mw/svgt/svgtopt/SVG/(SVGEngine or SVGImpl) where needed
 
 #include <platform_paths.hrh>
 
 ALWAYS_BUILD_AS_ARM
 OPTION_REPLACE ARMCC --cpu 5T -O3 -Otime
-TARGET SVGEngine.dll
+TARGET stem_SVGEngine.dll
 TARGETTYPE dll
 
 
@@ -30,9 +32,9 @@ UID 0x1000008D 0x101F856E
 
 
 	#if defined( ARMCC )
-	deffile ../eabi/SVGENGINE-OpenVG.def
+	deffile /sf/mw/svgt/svgtopt/SVG/SVGEngine/eabi/SVGENGINE-OpenVG.def
 	#elif defined( WINSCW )
-	deffile ../BWINSCW/SVGENGINE-OpenVG.def
+	deffile /sf/mw/svgt/svgtopt/SVG/SVGEngine/BWINSCW/SVGENGINE-OpenVG.def
 	#elif defined( WINS )
 	deffile ../bwins/SVGENGINE-OpenVG.def
 	#else
@@ -41,10 +43,14 @@ UID 0x1000008D 0x101F856E
 
 CAPABILITY  CAP_GENERAL_DLL DRM
 
-SOURCEPATH ../src
+SOURCEPATH .
 
-//SOURCE SVGEngineMain.cpp
 SOURCE SVGEngineImpl.cpp
+SOURCE Svgdecoder.cpp
+SOURCE SVGDocumentImpl.cpp
+
+SOURCEPATH /sf/mw/svgt/svgtopt/SVG/SVGEngine/src
+//SOURCE SVGEngineMain.cpp
 SOURCE SVGEngineInterfaceImpl.cpp
 SOURCE SVGTimer.cpp
 SOURCE SVGEventHandler.cpp
@@ -54,13 +60,11 @@ SOURCE SvgBitmapFontProvider.cpp
 //SOURCE SVGXmlParser.cpp
 SOURCE SVGAttributeVerifier.cpp
 SOURCE SVGErrorImpl.cpp
-SOURCE Svgdecoder.cpp
 SOURCE SVGFourPointRect.cpp
 
-SOURCEPATH ../../SVGImpl/src
+SOURCEPATH /sf/mw/svgt/svgtopt/SVG/SVGImpl/src
 
 SOURCE SVGElementImpl.cpp
-SOURCE SVGDocumentImpl.cpp
 SOURCE SVGDOMImplementationImpl.cpp
 
 // Structure Elements
@@ -156,22 +160,21 @@ SOURCE SVGColor.cpp
 SOURCE SVGTokenizer.cpp
 
 // Media Element Classes
-SOURCE SVGAudioElementImpl.cpp
 SOURCE SVGMediaAnimationElementImpl.cpp
 SOURCE SVGMediaElementBase.cpp
 SOURCE SVGTimeContainer.cpp
 SOURCE SVGLockedRealTimeEntity.cpp
 
-SOURCEPATH ../../Xmldomimpl/src
+SOURCEPATH /sf/mw/svgt/svgtopt/SVG/Xmldomimpl/src
 
 SOURCE SVGXmlElementImpl.cpp
 
 
-USERINCLUDE ../inc
-USERINCLUDE ../../Xmldomimpl/inc
-USERINCLUDE ../../SVGImpl/inc/SVGDOM
-USERINCLUDE ../../SVGImpl/inc
-USERINCLUDE ../../../VGRenderer/inc
+USERINCLUDE /sf/mw/svgt/svgtopt/SVG/SVGEngine/inc
+USERINCLUDE /sf/mw/svgt/svgtopt/SVG/Xmldomimpl/inc
+USERINCLUDE /sf/mw/svgt/svgtopt/SVG/SVGImpl/inc/SVGDOM
+USERINCLUDE /sf/mw/svgt/svgtopt/SVG/SVGImpl/inc
+USERINCLUDE /sf/mw/svgt/svgtopt/VGRenderer/inc
 
 // This is a SYSTEMINCLUDE macro containing the middleware
 // layer specific include directories
@@ -220,7 +223,6 @@ LIBRARY         EZLib.lib
 // CAF library: for DRM
 LIBRARY         caf.lib
 
-LIBRARY  mediaclientaudio.lib
 // Added for localized bidirectional textArea wrapping support
 LIBRARY         avkon.lib
 
@@ -228,7 +230,7 @@ LIBRARY         avkon.lib
 // Graphics library Information--------
 //LIBRARY Gfx2D.lib
 //--------------------------------------------
-SOURCEPATH ../../../gfx2d/src
+SOURCEPATH /sf/mw/svgt/svgtopt/gfx2d/src
 SOURCE GfxMath.c
 SOURCE GfxFloatFixPt.cpp
 SOURCE Gfxtrignometric.cpp
@@ -236,7 +238,7 @@ SOURCE Gfxtrignometric.cpp
 SOURCE RastSymbianWrapper.cpp
 
 // GFXGC source files
-SOURCEPATH ../../../gfx2d/src/GfxGc
+SOURCEPATH /sf/mw/svgt/svgtopt/gfx2d/src/GfxGc
 SOURCE          GfxStroke.cpp
 SOURCE          GfxColor.cpp
 SOURCE          GfxRenderingHints.cpp
@@ -246,7 +248,7 @@ SOURCE          Gfx2dGc.cpp
 
 
 // GFXGEOM source files
-SOURCEPATH      ../../../gfx2d/src/GfxGeom
+SOURCEPATH      /sf/mw/svgt/svgtopt/gfx2d/src/GfxGeom
 SOURCE          GfxEllipse2D.cpp
 SOURCE          GfxEllipseIteratorP.cpp
 SOURCE          GfxFlatteningPathIterator.cpp
@@ -263,15 +265,15 @@ SOURCE          GfxAffineTransform.cpp
 SOURCE          GfxPoint2D.cpp
 
 // GFXIMAGE source files
-SOURCEPATH      ../../../gfx2d/src/GfxImage
+SOURCEPATH      /sf/mw/svgt/svgtopt/gfx2d/src/GfxImage
 SOURCE          GfxImageTransformer.cpp
 
 // Internal Rendering Engine source files
-SOURCEPATH      ../../../gfx2d/src/GfxRenderer
+SOURCEPATH      /sf/mw/svgt/svgtopt/gfx2d/src/GfxRenderer
 SOURCE          GfxRendererInfoP.cpp
 
 
-USERINCLUDE     ../../../gfx2d/inc
+USERINCLUDE     /sf/mw/svgt/svgtopt/gfx2d/inc
 
 
 LIBRARY VGRenderer.lib
