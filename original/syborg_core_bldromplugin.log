@@ -3,7 +3,7 @@ obyparse.pm: Initializing; logfile = `/epoc32/rombuild/syborg/core/syborg_core_b
 override.pm: ------------------------------------------------------------------
 Finding overrides...
 #30: `OVERRIDE_REPLACE/WARN'
-#15697: `REM ROM_IMAGE[1]'
+#15727: `REM ROM_IMAGE[1]'
 No override entries found
 override.pm: Duration: 0 seconds ----------------------------------------------
 obyparse.pm: ------------------------------------------------------------------
