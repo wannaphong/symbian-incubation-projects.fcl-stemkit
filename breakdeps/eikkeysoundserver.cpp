@@ -907,7 +907,8 @@ void CAknSynthSoundInfo::Prepare()
 
 void CAknSynthSoundInfo::InitL()
     {
-    // Keyclicks are played with a statically reserved CMdaAudioToneUtility.
+#if 0
+	// Keyclicks are played with a statically reserved CMdaAudioToneUtility.
     // Same concerns also error tones (this is a hack to avoid an endless error dialog
     // loop because of audio server crash).
     if ((iPriority == EAvkonKeyClickPriority && iPreference == KKeyClickPreference) ||
@@ -919,13 +920,14 @@ void CAknSynthSoundInfo::InitL()
         iToneObserver = CAknEikAudioToneObserver::NewL(*this);
         iTonePlayer = CMdaAudioToneUtility::NewL(*iToneObserver, NULL); // Synchronous
         }
+#endif
     }
 
 void CAknSynthSoundInfo::PlayL()
     {
     LOGTEXT(_L("CAknSynthSoundInfo::PlayL()."));
     LOGTEXT3(_L(" This:%d, iPriority:%d, iPreference:%d"), (TInt)this, iPriority, iPreference);
-
+#if 0
     // Stops playing and deletes instances if they exist.
     Stop();
 
@@ -938,13 +940,14 @@ void CAknSynthSoundInfo::PlayL()
 
     // Prepare to play either a tone or a sequence depending on subclass.
     Prepare();
+#endif
     }
 
 void CAknSynthSoundInfo::DoPlay()
     {
     LOGTEXT(_L("CAknSynthSoundInfo::DoPlay()."));
     LOGTEXT3(_L(" This:%d, iPriority:%d, iPreference:%d"), (TInt)this, iPriority, iPreference);
-
+#if 0
     if (iTonePlayer->State() == EMdaAudioToneUtilityPrepared)
         {
         LOGTEXT(_L(" CAknSynthSoundInfo::DoPlay(). Prepare successful, play."));
@@ -971,13 +974,14 @@ void CAknSynthSoundInfo::DoPlay()
             iToneObserver = NULL;
             }
         }
+#endif
     }
 
 void CAknSynthSoundInfo::Stop()
     {
     LOGTEXT(_L("CAknSynthSoundInfo::Stop()."));
     LOGTEXT3(_L(" This:%d, iPriority:%d, iPreference:%d"), (TInt)this, iPriority, iPreference);
-
+#if 0
     // Stop playing and delete tone player if it exists.
     if (iTonePlayer)
         {
@@ -1012,6 +1016,7 @@ void CAknSynthSoundInfo::Stop()
             iToneObserver = NULL;
             }
         }
+#endif
     }
 
 void CAknSynthSoundInfo::SetVolume(TVolumeSetting aVolume)
@@ -1027,7 +1032,7 @@ void CAknSynthSoundInfo::DoSetVolume(CMdaAudioToneUtility* aTonePlayer)
         {
         max = (TInt)ESoundVolume9; // Set it to our max
         }
-
+#if 0
     TInt volume = 0;
 
     if ( Preference() != KKeyClickPreference ) // Other sounds than key click
@@ -1051,6 +1056,7 @@ void CAknSynthSoundInfo::DoSetVolume(CMdaAudioToneUtility* aTonePlayer)
             break;
         }
     aTonePlayer->SetVolume(volume);
+#endif
     }
 
 
@@ -1072,9 +1078,10 @@ CAknToneSoundInfo::~CAknToneSoundInfo()
 void CAknToneSoundInfo::Prepare()
     {
     LOGTEXT(_L("CAknToneSoundInfo::Prepare()."));
-
+#if 0
     // Prepare
     iTonePlayer->PrepareToPlayTone(iFrequency, iMs);
+#endif
     }
 
 
@@ -1097,9 +1104,10 @@ CAknSequenceSoundInfo::~CAknSequenceSoundInfo()
 void CAknSequenceSoundInfo::Prepare()
     {
     LOGTEXT(_L("CAknSequenceSoundInfo::Prepare()."));
-
+#if 0
     // Prepare
     iTonePlayer->PrepareToPlayDesSequence(*iSequence);
+#endif
     }
 
 void CAknSequenceSoundInfo::ReadSequenceL(RReadStream& aStream)
@@ -1142,12 +1150,13 @@ void CAknFileSoundInfo::PlayL()
     {
     LOGTEXT(_L("CAknFileSoundInfo::PlayL()."));
     LOGTEXT3(_L(" This:%d, iPriority:%d, iPreference:%d"), (TInt)this, iPriority, iPreference);
-
+#if 0
     // Stops playing and deletes audio player instance if it exist.
     Stop();
 
     // Create audio player. DoPlay() will be called in all circumstances.
     iAudioPlayer = CMdaAudioPlayerUtility::NewFilePlayerL(iFileName, *this, iPriority,(TMdaPriorityPreference)iPreference );
+#endif
     LOGTEXT(_L(" CAknFileSoundInfo::PlayL() - Exit"));
     }
 
@@ -1155,7 +1164,7 @@ void CAknFileSoundInfo::PlayL()
 void CAknFileSoundInfo::DoPlay()
     {
     LOGTEXT(_L("CAknFileSoundInfo::DoPlay()."));
-
+#if 0
     if (iPrepared)
         {
         LOGTEXT(_L(" CAknFileSoundInfo::DoPlay(). Prepared succesfull, play."));
@@ -1178,13 +1187,14 @@ void CAknFileSoundInfo::DoPlay()
         delete iAudioPlayer;
         iAudioPlayer = NULL;
         }
+#endif
     }
 
 
 void CAknFileSoundInfo::Stop()
     {
     LOGTEXT(_L("CAknFileSoundInfo::Stop()."));
-
+#if 0
     // Stop playing and delete audio player if it exists.
     if (iAudioPlayer)
         {
@@ -1204,6 +1214,7 @@ void CAknFileSoundInfo::Stop()
         iAudioPlayer = NULL;
         iPrepared = EFalse;
         }
+#endif
     }
 
 void CAknFileSoundInfo::MoscoStateChangeEvent(CBase* /*aObject*/, TInt /*aPreviousState*/,
@@ -1224,7 +1235,7 @@ void CAknFileSoundInfo::DoSetVolume(CMdaAudioPlayerUtility* aAudioPlayer)
         {
         max = (TInt)ESoundVolume9; // Set it to our max
         }
-
+#if 0
     TInt volume = 0;
 
     if ( Preference() != KKeyClickPreference ) // Other sounds than key click
@@ -1249,6 +1260,7 @@ void CAknFileSoundInfo::DoSetVolume(CMdaAudioPlayerUtility* aAudioPlayer)
             break;
         }
     aAudioPlayer->SetVolume(volume);
+#endif
     }
 
 void CAknFileSoundInfo::MapcInitComplete(TInt aError,
@@ -1256,7 +1268,6 @@ void CAknFileSoundInfo::MapcInitComplete(TInt aError,
     {
     LOGTEXT(_L("CAknFileSoundInfo::MapcInitComplete()."));
     LOGTEXT1(_L(" aError:%d"), aError);
-
     if (aError == KErrNone)
         {
         iPrepared = ETrue;
@@ -1269,12 +1280,13 @@ void CAknFileSoundInfo::MapcInitComplete(TInt aError,
 void CAknFileSoundInfo::MapcPlayComplete(TInt /*aError*/)
     {
     LOGTEXT(_L("CAknFileSoundInfo::MapcPlayComplete()"));
-
+#if 0
     iPlaying = EFalse;
 
     delete iAudioPlayer;
     iAudioPlayer = NULL;
     iPrepared = EFalse;
+#endif
     }
 
 // End of file
