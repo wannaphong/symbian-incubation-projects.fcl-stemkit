@@ -1383,7 +1383,7 @@ file=\epoc32\release\ARMV5\urel\vjcomp.dll 	"sys\bin\vjcomp.dll"
 REM Predictor PPP compression
 file=\epoc32\release\ARMV5\urel\predcomp.dll 	"sys\bin\PredComp.dll"
 file=\epoc32\release\ARMV5\urel\packetlogger.dll 	"sys\bin\packetlogger.dll"
-__ECOM_PLUGIN(\epoc32\release\ARMV5\UDEB,Sys\Bin,\epoc32\data\Z,Resource\Plugins, rawip.dll , rawip.dll ) 
+__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, rawip.dll , rawip.dll ) 
 patchdata rawip.dll@KMaxSendQueueLen 0x5
 patchdata rawip.dll@KMaxTxIPPacketSize 0x57a
 patchdata rawip.dll@KMaxRxIPPacketSize 0x57a
@@ -6396,6 +6396,11 @@ REM MISSING data=\epoc32\data\Z\private\10003a3f\import\Apps\queuedcustomtype_re
 file=\epoc32\release\ARMV5\urel\anomaly.exe 	"sys\bin\anomaly.exe" 
 data=\epoc32\data\Z\resource\apps\anomaly.RSC 	"resource\apps\anomaly.rsc" 
 data=\epoc32\data\Z\private\10003a3f\import\Apps\anomaly_reg.rsc 	"private\10003a3f\import\apps\anomaly_reg.rsc"
+
+file=\epoc32\release\ARMV5\urel\weatherinfo.exe 	"sys\bin\weatherinfo.exe" 
+data=\epoc32\data\Z\resource\apps\weatherinfo.RSC 	"resource\apps\weatherinfo.rsc" 
+data=\epoc32\data\Z\private\10003a3f\import\Apps\weatherinfo_reg.rsc 	"private\10003a3f\import\apps\weatherinfo_reg.rsc"
+
 romchecksum=0x12345678
 
 
