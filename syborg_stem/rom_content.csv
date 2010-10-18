@@ -3547,7 +3547,7 @@ sys\bin\eswt.dll,/epoc32/release/armv5/urel/eswt.dll,core/app/java.iby,app/jrt,,
 sys\bin\eswtapifacade.dll,/epoc32/release/armv5/urel/eswtapifacade.dll,core/app/java.iby,app/jrt,,,
 sys\bin\eswtdirectcontent.dll,/epoc32/release/armv5/urel/eswtdirectcontent.dll,core/app/java.iby,app/jrt,,,
 sys\bin\eswtphysics.dll,/epoc32/release/armv5/urel/eswtphysics.dll,core/app/java.iby,app/jrt,,,
-sys\bin\ETel.dll,/epoc32/release/armv5/urel/etel.dll,etel.iby,os/cellularsrv,Out,WR,Stem does not support telephony
+sys\bin\ETel.dll,/epoc32/release/armv5/urel/etel.dll,etel.iby,os/cellularsrv,,WR,Stem does not support telephony
 sys\bin\Etel3rdParty.dll,/epoc32/release/armv5/urel/etel3rdparty.dll,etelisv.iby,os/cellularsrv,,,
 sys\bin\etelmm.dll,/epoc32/release/armv5/urel/etelmm.dll,etelmm.iby,os/cellularsrv,,,
 sys\bin\etelpckt.dll,/epoc32/release/armv5/urel/etelpckt.dll,etelpckt.iby,os/cellularsrv,,,
@@ -4076,10 +4076,10 @@ Sys\Bin\iso88598.dll,/epoc32/release/armv5/urel/iso88598.dll,charconv_iso8859x.i
 Sys\Bin\iso88599.dll,/epoc32/release/armv5/urel/iso88599.dll,charconv_iso8859x.iby,os/textandloc,,,
 Sys\Bin\ityperast.dll,/epoc32/release/armv5/urel/ityperast.dll,customer/mw/fonts_variant.iby,(unknown),,,
 Sys\Bin\j5_docomo.dll,/epoc32/release/armv5/urel/j5_docomo.dll,charconv_japanese_docomo.iby,os/textandloc,,,
-sys\bin\j9.dll,/epoc32/release/armv5/urel/j9.dll,core/app/java.iby,(unknown),,,
-sys\bin\j9fdm23.dll,/epoc32/release/armv5/urel/j9fdm23.dll,core/app/java.iby,(unknown),,,
-sys\bin\j9mjit23.dll,/epoc32/release/armv5/urel/j9mjit23.dll,core/app/java.iby,(unknown),,,
-sys\bin\j9vmall23.dll,/epoc32/release/armv5/urel/j9vmall23.dll,core/app/java.iby,(unknown),,,
+sys\bin\j9.dll,/epoc32/release/armv5/urel/j9.dll,core/app/java.iby,(unknown),Out,WR,Stem kit does not include Java VM
+sys\bin\j9fdm23.dll,/epoc32/release/armv5/urel/j9fdm23.dll,core/app/java.iby,(unknown),Out,WR,Stem kit does not include Java VM
+sys\bin\j9mjit23.dll,/epoc32/release/armv5/urel/j9mjit23.dll,core/app/java.iby,(unknown),Out,WR,Stem kit does not include Java VM
+sys\bin\j9vmall23.dll,/epoc32/release/armv5/urel/j9vmall23.dll,core/app/java.iby,(unknown),Out,WR,Stem kit does not include Java VM
 sys\bin\javaamms.dll,/epoc32/release/armv5/urel/javaamms.dll,core/app/java.iby,app/jrt,,,
 Sys\Bin\javaappschemeplugin.dll,/epoc32/release/armv5/urel/javaappschemeplugin.dll,core/app/java.iby,app/jrt,,,
 sys\bin\javabackup.exe,/epoc32/release/armv5/urel/javabackup.exe,core/app/java.iby,app/jrt,,,
@@ -6165,3 +6165,6 @@ resource\pips\locales.txt,/epoc32/winscw/c/resource/pips/locales.txt,openenv.iby
 resource\pips\services,/epoc32/winscw/c/resource/pips/services,openenv.iby,os/ossrv,,,
 system\data\config.ini,/epoc32/winscw/c/system/data/config.ini,zsh.iby,os/ossrv,,,
 Private\2000cd0f\dummy.txt,/epoc32/winscw/c/zsh/dummy.txt,zsh.iby,mw/appsupport,,,
+private\10003a3f\import\apps\weatherinfo_reg.rsc,/epoc32/data/z/private/10003a3f/import/apps/weatherinfo_reg.rsc,weatherinfo.iby,mw/qt,,,
+resource\apps\weatherinfo.rsc,/epoc32/data/z/resource/apps/weatherinfo.rsc,weatherinfo.iby,mw/qt,,,
+sys\bin\weatherinfo.exe,/epoc32/release/armv5/urel/weatherinfo.exe,weatherinfo.iby,mw/qt,,WR,Stem kit use case
