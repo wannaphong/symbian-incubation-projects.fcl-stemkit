@@ -71,32 +71,17 @@ RESOURCE SSM_COMMAND_LIST r_cmds
         // prio 0xFFE7
         r_cmd_startupmode,
         r_cmd_loadpowersup,
-        // prio 0xFFD7
-    //TomP    r_cmd_rfsfirstboot,
-    //TomP    r_cmd_rfsdeep,
-    //TomP    r_cmd_rfsnormal,
-        // prio 0xFFC7
-    //TomP    r_cmd_initclkeys,
-    //TomP    r_cmd_initramdrive,
         // prio 0xFFA7
         r_cmd_splash,
-        // prio 0xFF97
-    //TomP    r_cmd_rtc,
-        // prio 0xFF96 - rtc (tzsrv, cntsrv, mediator & hwrmsrv have been moved to extended startup list but use the same multiplewait command)
+        // prio 0xFF96 - 
         r_cmd_multiwaitforever1,
-        // prio 0xFF87
-    //TomP    r_cmd_accsrv,
-    //TomP    r_cmd_selectlanguage,   // Select UI language to use
-        // prio 0xFF86 - accsrv, seleclanguage (dbrecovery has been moved to extended startup list but uses the same multiplewait command)
+        // prio 0xFF86
         r_cmd_multiwaitforever2,
         // prio 0xFF85
-    //TomP    r_cmd_loadlocalesup,    // Observes changes in locale data
         // prio 0xFF79
         r_cmd_aknstart,         // UI Framework
         // prio 0xFF77
         r_cmd_apparc_init      // Init application framework
-        // prio 0xFF75
-    //TomP    r_cmd_rfspostui        // Restore factory settings - after UI framework is up
         };
     }
 
@@ -105,20 +90,6 @@ RESOURCE SSM_COMMAND_LIST r_cmds
 // ===========================================================================
 //
 
-// ---------------------------------------------------------------------------
-// r_cmd_accsrv
-// ---------------------------------------------------------------------------
-//
-/*
-RESOURCE SSM_START_PROCESS_INFO r_cmd_accsrv
-    {
-    priority = 0xFF87;
-    name = "Z:\\sys\\bin\\accserver.exe";
-    severity = ECmdCriticalSeverity;
-    execution_behaviour = ESsmWaitForSignal;
-    monitor_info = r_mon_3_restarts_reset;
-    }
-*/
 // ---------------------------------------------------------------------------
 // r_cmd_aknstart
 // ---------------------------------------------------------------------------
@@ -142,49 +113,7 @@ RESOURCE SSM_WAIT_FOR_APPARC_INIT r_cmd_apparc_init
     severity = ECmdCriticalSeverity;
     }
 
-// ---------------------------------------------------------------------------
-// r_cmd_initclkeys
-// ---------------------------------------------------------------------------
-//
-/*
-RESOURCE SSM_START_CUSTOM_COMMAND r_cmd_initclkeys
-    {
-    priority = 0xFFC7;
-    severity = ECmdCriticalSeverity;
-    execution_behaviour = ESsmDeferredWaitForSignal;
-    dllname = "ssmsystemcmds.dll";
-    ordinal = 3; // InitCriticalLevels
-    unload_on_finish = ENeverUnload;
-    retries = 2;
-    }
 
-// ---------------------------------------------------------------------------
-// r_cmd_initramdrive
-// ---------------------------------------------------------------------------
-//
-RESOURCE SSM_START_CUSTOM_COMMAND r_cmd_initramdrive
-    {
-    priority = 0xFFC7;
-    severity = ECmdCriticalSeverity;
-    execution_behaviour = ESsmDeferredWaitForSignal;
-    dllname = "customcmds.dll";
-    ordinal = 14; // InitRamDrive
-    unload_on_finish = ENeverUnload;
-    retries = 2;
-    }
-*/
-// ---------------------------------------------------------------------------
-// r_cmd_loadlocalesup
-// ---------------------------------------------------------------------------
-//
-/*
-RESOURCE SSM_START_SSM_UTILITY_PLUGIN r_cmd_loadlocalesup
-    {
-    priority = 0xFF85;
-    filename = "ssmlocaleobserversup.dll";
-    ordinal = 1;
-    }
-*/
 // ---------------------------------------------------------------------------
 // r_cmd_loadpowersup
 // ---------------------------------------------------------------------------
@@ -252,11 +181,6 @@ RESOURCE SSM_START_CUSTOM_COMMAND r_cmd_rfsdeep
     conditional_information = r_cond_cenrep_rfs_deep;
     }
 
-// ---------------------------------------------------------------------------
-// r_cmd_rfsfirstboot
-// ---------------------------------------------------------------------------
-//
-/*
 RESOURCE SSM_START_CUSTOM_COMMAND r_cmd_rfsfirstboot
     {
     priority = 0xFFD7;
@@ -305,7 +229,7 @@ RESOURCE SSM_START_CUSTOM_COMMAND r_cmd_rtc
     execution_behaviour = ESsmDeferredWaitForSignal;
     retries = 2;
     }
-*/
+
 // ---------------------------------------------------------------------------
 // r_cmd_sastate
 // ---------------------------------------------------------------------------
@@ -321,11 +245,6 @@ RESOURCE SSM_START_CUSTOM_COMMAND r_cmd_sastate
     dll_data = r_dlldata_sastate;
     }
 
-// ---------------------------------------------------------------------------
-// r_cmd_selectlanguage
-// ---------------------------------------------------------------------------
-//
-/*
 RESOURCE SSM_START_CUSTOM_COMMAND r_cmd_selectlanguage
     {
     priority = 0xFF87;
@@ -334,7 +253,7 @@ RESOURCE SSM_START_CUSTOM_COMMAND r_cmd_selectlanguage
     ordinal = 1; // SelectLanguage
     retries = 2;
     }
-*/
+
 // ---------------------------------------------------------------------------
 // r_cmd_splash
 // ---------------------------------------------------------------------------
@@ -415,4 +334,4 @@ RESOURCE SSM_CND_CENT_REP_VALUE r_cond_cenrep_rfs_normal
 
 // monitoring.rss contains resource definitions, so it may not be included
 // before entry point.
-#include "stem_monitoring.rss"
+//#include "stem_monitoring.rss"

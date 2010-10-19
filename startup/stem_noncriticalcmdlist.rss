@@ -71,17 +71,6 @@ RESOURCE SSM_COMMAND_LIST r_cmds
         r_cmd_sastate,          // This needs to be the first command in state, prio 0xFFF2
         r_cmd_publishstate,     // prio 0xFFF1
         r_cmd_psstate,          // prio 0xFFF0
-        // prio 0xFFE7
-    //TomP    r_cmd_simcheck,
-    //TomP    r_cmd_clearstartupreason,
-    //TomP    r_cmd_createswp_uiphase,
-    //TomP    r_cmd_createswp_rfstatus,
-    //TomP    r_cmd_waitforofflinequery,
-    //TomP    r_cmd_setswp_uistart,   // After offline query has been made // prio 0xFFD7 
-    //TomP    r_cmd_bsengine,					// prio 0xFFD3      
-        // prio 0xFFC7
-    //TomP    r_cmd_setswp_rfon,
-    //TomP    r_cmd_setswp_rfoff,
         r_cmd_startupready      // Last command, prio 0x0000
         };
     }
@@ -90,11 +79,7 @@ RESOURCE SSM_COMMAND_LIST r_cmds
 // Command items in alphabetical order
 // ===========================================================================
 //
-// ---------------------------------------------------------------------------
-// r_cmd_bsengine
-// ---------------------------------------------------------------------------
-//
-/*
+
 RESOURCE SSM_START_PROCESS_INFO r_cmd_bsengine
     {
     priority = 0xFFD3;
@@ -126,7 +111,7 @@ RESOURCE SSM_CREATE_SYSTEM_WIDE_PROPERTY r_cmd_createswp_uiphase
     key = SWP_UID_SSM_UI_PHASE;
     filename = "ssmuiswppolicy.dll";
     }
-*/
+
 // ---------------------------------------------------------------------------
 // r_cmd_psstate
 // ---------------------------------------------------------------------------
@@ -166,11 +151,6 @@ RESOURCE SSM_START_CUSTOM_COMMAND r_cmd_sastate
     dll_data = r_dlldata_sastate;
     }
 
-// ---------------------------------------------------------------------------
-// r_cmd_setswp_rfoff
-// ---------------------------------------------------------------------------
-//
-/*
 RESOURCE SSM_REQUEST_SYSTEM_WIDE_PROPERTY r_cmd_setswp_rfoff
     {
     priority = 0xFFC7;
@@ -218,7 +198,7 @@ RESOURCE SSM_START_CUSTOM_COMMAND r_cmd_simcheck
     unload_on_finish = ENeverUnload;
     conditional_information = r_cond_ps_simusable;
     }
-*/
+
 // ---------------------------------------------------------------------------
 // r_cmd_startupready
 // ---------------------------------------------------------------------------
@@ -234,11 +214,6 @@ RESOURCE SSM_SET_PUBLISH_AND_SUBSCRIBE r_cmd_startupready
 
 // ---------------------------------------------------------------------------
  
-// ---------------------------------------------------------------------------
-// r_cmd_waitforofflinequery
-// ---------------------------------------------------------------------------
-//
-/*
 RESOURCE SSM_START_CUSTOM_COMMAND r_cmd_waitforofflinequery
     {
     priority = 0xFFE7;
@@ -264,7 +239,7 @@ RESOURCE SSM_START_CUSTOM_COMMAND r_cmd_clearstartupreason
     retries = 2;
     execution_behaviour = ESsmWaitForSignal;
     }
-*/
+
 // ===========================================================================
 // DLL data items in alphabetical order
 // ===========================================================================
@@ -488,4 +463,4 @@ RESOURCE SSM_CND_LOGICAL_OR r_cond_syncml_dm_or_pnp_mobile_services
 
 // monitoring.rss contains resource definitions, so it may not be included
 // before entry point.
-#include "stem_monitoring.rss"
+//#include "stem_monitoring.rss"

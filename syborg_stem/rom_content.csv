@@ -813,7 +813,7 @@ private\2000b187\cenrep\101f8e44.xml,/epoc32/data/z/private/2000b187/cenrep/101f
 private\2000B187\cenrep\102818E8.xml,/epoc32/data/z/private/2000b187/cenrep/102818e8.xml,core/mw/psln.iby,mw/classicui,,,
 private\2000B4D8\backup_registration.xml,/epoc32/data/z/private/2000b4d8/backup_registration.xml,core/mw/WidgetBackupRestore.iby,mw/web,,,
 private\2000D75B\fail\failcmdlist.rsc,/epoc32/data/z/private/2000d75b/fail/failcmdlist.rsc,core/os/ssmcmdlists.iby,os/devicesrv,out,TomP,Stripped down startup
-private\2000D75B\startup\0\noncriticalcmdlist_hw.rsc,/epoc32/data/z/private/2000d75b/hw/noncriticalcmdlist_hw.rsc,core/os/ssmcmdlists.iby,os/devicesrv,stem,WR,Startup script
+private\2000D75B\startup\0\noncriticalcmdlist_hw.rsc,/epoc32/data/z/private/2000d75b/hw/noncriticalcmdlist_hw.rsc,core/os/ssmcmdlists.iby,os/devicesrv,out,TomP,Stripped down startup
 private\2000D75B\startup\0\usbwatcher.rsc,/epoc32/data/z/private/2000d75b/hw/usbwatcher_hw.rsc,core/os/ssmcmdlists.iby,os/devicesrv,out,TomP,Stripped down startup
 private\2000D75B\startup\0\wserv.rsc,/epoc32/data/z/private/2000d75b/hw/wserv_hw.rsc,core/os/ssmcmdlists.iby,os/devicesrv,stem,WR,Startup script
 private\2000d75b\normal\gsanormalcmdlist.rsc,/epoc32/data/z/private/2000d75b/normal/gsanormalcmdlist.rsc,core/os/ssmcompatibility.iby,os/devicesrv,,,
