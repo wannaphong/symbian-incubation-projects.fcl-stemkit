@@ -70,7 +70,8 @@ RESOURCE SSM_COMMAND_LIST r_cmds
         {
         r_cmd_sastate,          // This needs to be the first command in state, prio 0xFFF2
         r_cmd_publishstate,     // prio 0xFFF1
-        r_cmd_psstate,          // prio 0xFFF0
+        r_cmd_psstate,          // prio 0xFFF0  
+        // prio 0xFFC7
         r_cmd_startupready      // Last command, prio 0x0000
         };
     }
@@ -79,38 +80,6 @@ RESOURCE SSM_COMMAND_LIST r_cmds
 // Command items in alphabetical order
 // ===========================================================================
 //
-
-RESOURCE SSM_START_PROCESS_INFO r_cmd_bsengine
-    {
-    priority = 0xFFD3;
-    name = "z:\\sys\\bin\\bsengine.exe";
-    execution_behaviour = ESsmWaitForSignal;
-    timeout = 10000;
-    }
-
-// ---------------------------------------------------------------------------
-// r_cmd_createswp_rfstatus
-// ---------------------------------------------------------------------------
-//
-RESOURCE SSM_CREATE_SYSTEM_WIDE_PROPERTY r_cmd_createswp_rfstatus
-    {
-    priority = 0xFFE7;
-    severity = ECmdCriticalSeverity;
-    key = SWP_UID_SSM_RF_STATUS;
-    filename = "rfstatusswppolicy.dll";
-    }
-
-// ---------------------------------------------------------------------------
-// r_cmd_createswp_uiphase
-// ---------------------------------------------------------------------------
-//
-RESOURCE SSM_CREATE_SYSTEM_WIDE_PROPERTY r_cmd_createswp_uiphase
-    {
-    priority = 0xFFE7;
-    severity = ECmdCriticalSeverity;
-    key = SWP_UID_SSM_UI_PHASE;
-    filename = "ssmuiswppolicy.dll";
-    }
 
 // ---------------------------------------------------------------------------
 // r_cmd_psstate
@@ -151,53 +120,6 @@ RESOURCE SSM_START_CUSTOM_COMMAND r_cmd_sastate
     dll_data = r_dlldata_sastate;
     }
 
-RESOURCE SSM_REQUEST_SYSTEM_WIDE_PROPERTY r_cmd_setswp_rfoff
-    {
-    priority = 0xFFC7;
-    severity = ECmdCriticalSeverity;
-    key = SWP_UID_SSM_RF_STATUS;
-    value = ESsmRfOff;
-    conditional_information = r_cond_simnotusable_or_bootoffline;
-    }
-
-// ---------------------------------------------------------------------------
-// r_cmd_setswp_rfon
-// ---------------------------------------------------------------------------
-//
-RESOURCE SSM_REQUEST_SYSTEM_WIDE_PROPERTY r_cmd_setswp_rfon
-    {
-    priority = 0xFFC7;
-    severity = ECmdCriticalSeverity;
-    key = SWP_UID_SSM_RF_STATUS;
-    value = ESsmRfOn;
-    conditional_information = r_cond_simusable_and_bootonline;
-    }
-
-// ---------------------------------------------------------------------------
-// r_cmd_setswp_uistart
-// ---------------------------------------------------------------------------
-//
-RESOURCE SSM_REQUEST_SYSTEM_WIDE_PROPERTY r_cmd_setswp_uistart
-    {
-    priority = 0xFFD7;
-    severity = ECmdCriticalSeverity;
-    key = SWP_UID_SSM_UI_PHASE;
-    value = ESsmUiPhaseStarted;
-    }
-
-// ---------------------------------------------------------------------------
-// r_cmd_simcheck
-// ---------------------------------------------------------------------------
-//
-RESOURCE SSM_START_CUSTOM_COMMAND r_cmd_simcheck
-    {
-    priority = 0xFFE7;
-    severity = ECmdCriticalSeverity;
-    dllname = "customcmds.dll";
-    ordinal = 10;
-    unload_on_finish = ENeverUnload;
-    conditional_information = r_cond_ps_simusable;
-    }
 
 // ---------------------------------------------------------------------------
 // r_cmd_startupready
@@ -213,48 +135,6 @@ RESOURCE SSM_SET_PUBLISH_AND_SUBSCRIBE r_cmd_startupready
     }
 
 // ---------------------------------------------------------------------------
- 
-RESOURCE SSM_START_CUSTOM_COMMAND r_cmd_waitforofflinequery
-    {
-    priority = 0xFFE7;
-    severity = ECmdCriticalSeverity;
-    dllname = "ssmsystemcmds.dll";
-    ordinal = 6; // WaitPsKeyRange
-    dll_data = r_dlldata_waitofflinequery;
-    unload_on_finish = ENeverUnload;
-    retries = 2;
-    execution_behaviour = ESsmWaitForSignal;
-    }
-
-// ---------------------------------------------------------------------------
-// r_cmd_clearstartupreason
-// ---------------------------------------------------------------------------
-//
-RESOURCE SSM_START_CUSTOM_COMMAND r_cmd_clearstartupreason
-    {
-    priority = 0xFFE7;
-    severity = ECmdCriticalSeverity;
-    dllname = "customcmds.dll";
-    ordinal = 16; // Clearstartupreason
-    retries = 2;
-    execution_behaviour = ESsmWaitForSignal;
-    }
-
-// ===========================================================================
-// DLL data items in alphabetical order
-// ===========================================================================
-//
-
-// ---------------------------------------------------------------------------
-// r_dlldata_activitymonitor_timeout
-// ---------------------------------------------------------------------------
-//
-RESOURCE CMD_PARAM_TIMEOUT r_dlldata_activitymonitor_timeout
-    {
-    timeout = 2;
-    }
-
-// ---------------------------------------------------------------------------
 // r_dlldata_sastate
 // ---------------------------------------------------------------------------
 //
@@ -262,30 +142,6 @@ RESOURCE CMD_PARAM_STATE_CHANGE r_dlldata_sastate
     {
     mainstate = 0; // ESsmStartup
     substate = ESsmStateNonCritical;
-    }
-
-// ---------------------------------------------------------------------------
-// r_dlldata_waitcleanbootinfo
-// ---------------------------------------------------------------------------
-//
-RESOURCE CMD_PARAM_WAIT_PS_2 r_dlldata_waitcleanbootinfo
-    {
-    category = 0x101F8766;  // KPSUidStartup
-    key = 0x00000012;       // KStartupCleanBoot
-    target1 = 101;          // EStartupNormalBoot
-    target2 = 102;          // EStartupCleanBoot
-    }
-
-// ---------------------------------------------------------------------------
-// r_dlldata_waitofflinequery
-// ---------------------------------------------------------------------------
-//
-RESOURCE CMD_PARAM_WAIT_PS_2 r_dlldata_waitofflinequery
-    {
-    category = 0x101F8766;  // KPSUidStartup
-    key = 0x00000011;       // KStartupBootIntoOffline
-    target1 = 101;          // EBootIntoOnlineMode
-    target2 = 102;          // EBootIntoOfflineMode
     }
 
 // ===========================================================================

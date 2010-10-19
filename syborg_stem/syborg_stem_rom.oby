@@ -108,11 +108,8 @@ file=\epoc32\release\ARMV5\urel\_syborg_e32strt.exe 	"sys\bin\EStart.exe"
 file=\epoc32\release\ARMV5\urel\domainSrv.exe 	"sys\bin\domainSrv.exe"
 file=\epoc32\release\ARMV5\urel\domainCli.dll 	"sys\bin\domainCli.dll"
 file=\epoc32\release\ARMV5\urel\domainPolicy.dll 	"sys\bin\domainPolicy.dll"
-file=\epoc32\release\ARMV5\urel\usbdescriptors.dll 	"sys\bin\usbdescriptors.dll"
-file=\epoc32\release\ARMV5\urel\usbdi_utils.dll 	"sys\bin\usbdi_utils.dll"
 file=\epoc32\release\ARMV5\urel\usbhostms.pxy 	"sys\bin\usbhostms.pxy"
 file=\epoc32\release\ARMV5\urel\usbhostmsclient.dll 	"sys\bin\usbhostmsclient.dll"
-file=\epoc32\release\ARMV5\urel\usbhostmssrv.exe 	"sys\bin\usbhostmssrv.exe"
 file=\epoc32\release\ARMV5\urel\_generic_scdv.dll 	"sys\bin\ScDv.dll"
 data=\epoc32\data\Z\Resource\avkon.rsc 	"resource\avkon.rsc"  
 data=\epoc32\data\Z\Private\200159c0\install\desktop_20026f4f\xuikon\00\desktop.o0000 	"private\200159c0\install\desktop_20026f4f\xuikon\00\desktop.o0000"  
@@ -133,16 +130,11 @@ REM "SRGREOURCE DRV"       : <sgresource_sw.iby>
 REM "OPENWFCLIB_DRV"       : <openwfc_ref.iby> 
 file=\epoc32\release\ARMV5\urel\3gplibrary.dll 	"sys\bin\3gplibrary.dll"
 file=\epoc32\release\ARMV5\urel\3GPMP4LIB.DLL 	"sys\bin\3GPMP4LIB.DLL"
-file=\epoc32\release\ARMV5\urel\mmfdevsound.dll 	"sys\bin\mmfdevsound.dll"
 file=\epoc32\release\ARMV5\urel\mmfaudioserverproxy.dll 	"sys\bin\mmfaudioserverproxy.dll"
-file=\epoc32\release\ARMV5\urel\mmfdevsoundproxy.dll 	"sys\bin\mmfdevsoundproxy.dll"
-file=\epoc32\release\ARMV5\urel\mmfdevsoundserver.dll 	"sys\bin\mmfdevsoundserver.dll"
 file=\epoc32\release\ARMV5\urel\a3ffourcclookup.dll 	"sys\bin\a3ffourcclookup.dll"
 file=\epoc32\release\ARMV5\urel\mmfaudioserverfactory.dll 	"sys\bin\mmfaudioserverfactory.dll"
-file=\epoc32\release\ARMV5\urel\mmfaudioserver.dll 	"sys\bin\mmfaudioserver.dll"
 file=\epoc32\release\ARMV5\urel\mmfdevsoundadaptor.dll 	"sys\bin\mmfdevsoundadaptor.dll"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, a3fFourCCConvertorPlugin.dll , a3fFourCCConvertorPlugin.dll ) 
-file=\epoc32\release\ARMV5\urel\mmfaudioserverstart.exe 	"sys\bin\mmfaudioserverstart.exe"
 file=\epoc32\release\ARMV5\urel\abtestclient.EXE 	"sys\bin\abtestclient.EXE"
 file=\epoc32\release\ARMV5\urel\abtestclient2.EXE 	"sys\bin\abtestclient2.EXE"
 file=\epoc32\release\ARMV5\urel\abtestclient3.EXE 	"sys\bin\abtestclient3.EXE"
@@ -248,13 +240,9 @@ file=\epoc32\release\ARMV5\urel\pbe.dll 	"sys\bin\pbe.dll"
 file=\epoc32\release\ARMV5\urel\asnpkcs.dll 	"sys\bin\asnpkcs.dll"
 REM File token libraries configurable files
 data=\epoc32\data\Z\Resource\fstokenserver.RSC 	"resource\fstokenserver.RSC"
-file=\epoc32\release\ARMV5\urel\SpeechRecognitionUtility.dll 	"sys\bin\SpeechRecognitionUtility.dll"
 file=\epoc32\release\ARMV5\urel\SpeechRecognitionData.dll 	"sys\bin\SpeechRecognitionData.dll"
-file=\epoc32\release\ARMV5\urel\SpeechRecognitionCustomCommands.dll 	"sys\bin\SpeechRecognitionCustomCommands.dll"
 REM For components that use the Autotest framework
 file=\epoc32\release\ARMV5\urel\autotest.dll 	"sys\bin\autotest.dll"
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, aviplaycontroller.dll , aviplaycontroller.dll ) 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, avirecordcontroller.dll , avirecordcontroller.dll ) 
 file=\epoc32\release\ARMV5\urel\devsubtitle.dll 	"sys\bin\devsubtitle.dll"
 file=\epoc32\release\ARMV5\urel\srtdecoder.dll 	"sys\bin\srtdecoder.dll"
 REM FLOGGER - logging support
@@ -293,7 +281,6 @@ alias Resource\Errors\ecomerr.R01 Resource\Errors\ecomerr.RSC
 file=\epoc32\release\ARMV5\urel\ecom.dll 	"sys\bin\ECom.dll"
 file=\epoc32\release\ARMV5\urel\ecomserver.exe 	"sys\bin\EComServer.exe"
 file=\epoc32\release\ARMV5\urel\ecompatchdata.dll 	"sys\bin\EComPatchData.dll"
-file=\epoc32\release\ARMV5\urel\usbman.dll 	"sys\bin\usbman.dll"
 data=\epoc32\data\Z\Private\101fe1db\backup_registration.xml 	"private\101fe1db\backup_registration.xml"
 file=\epoc32\release\ARMV5\urel\usblogger.dll 	"sys\bin\usblogger.dll"
 REM Feature USB is not included in this ROM (usbman.iby)
@@ -764,7 +751,7 @@ data=\epoc32\data\z\private\101F7988\backup_registration.xml 	"private\101F7988\
 data=\epoc32\data\z\system\install\c32exe.sis 	"system\install\c32exe.sis"
 file=\epoc32\release\ARMV5\urel\conditionevaluator.dll 	"sys\bin\conditionevaluator.dll"
 REM Cone
-file=\epoc32\release\ARMV5\urel\cone.dll 	"sys\bin\Cone.dll"
+file=\epoc32\release\ARMV5\urel\stem_cone.dll 	"sys\bin\Cone.dll"
 REM #if !defined( )
 REM Patchable constant for setting parent-pointers automatically or not. 
 REM 1 = True, 0 = False. Default is True.
@@ -903,7 +890,6 @@ file=\epoc32\release\ARMV5\urel\fbscli.dll 	"sys\bin\fbscli.dll"
 file=\epoc32\release\ARMV5\urel\fbsrasterizer_stub.dll 	"sys\bin\fbsrasterizer.dll"
 file=\epoc32\release\ARMV5\urel\fdcbase.dll 	"sys\bin\fdcbase.dll"
 file=\epoc32\release\ARMV5\urel\usbhoststack.dll 	"sys\bin\usbhoststack.dll"
-file=\epoc32\release\ARMV5\urel\fdf.exe 	"sys\bin\fdf.exe"
 file=\epoc32\release\ARMV5\urel\featdiscovery.dll 	"sys\bin\featdiscovery.dll"
 file=\epoc32\release\ARMV5\urel\featmgr.dll 	"sys\bin\featmgr.dll"
 file=\epoc32\release\ARMV5\urel\featmgrserver.exe 	"sys\bin\featmgrserver.exe"
@@ -1230,17 +1216,10 @@ REM LBS Privacy Protocol Module
 file=\epoc32\release\ARMV5\urel\loadlafshutdown.dll 	"sys\bin\loadlafshutdown.dll"
 file=\epoc32\release\ARMV5\urel\LOOPBACK.CSY 	"sys\bin\LOOPBACK.CSY"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, mbmsparams.dll , mbmsparams.dll ) 
-file=\epoc32\release\ARMV5\urel\omxcomponent.dll 	"sys\bin\omxcomponent.dll" 
 file=\epoc32\release\ARMV5\urel\puresolverutils.dll 	"sys\bin\puresolverutils.dll" 
 file=\epoc32\release\ARMV5\urel\mdasoundadapter.dll 	"sys\bin\mdasoundadapter.dll"
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, mdfvideoencodehwdeviceadapter.dll , mdfvideoencodehwdeviceadapter.dll ) 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, mdfvideodecodehwdeviceadapter.dll , mdfvideodecodehwdeviceadapter.dll ) 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, mdfaudiohwdeviceadapter.dll , mdfaudiohwdeviceadapter.dll ) 
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, puloader.dll , puloader.dll ) 
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, codecapiresolver.dll , codecapiresolver.dll ) 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, audiodevice.dll , audiodevice.dll ) 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, vorbisdecoderprocessingunit.dll , vorbisdecoderprocessingunit.dll ) 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, vorbisencoderprocessingunit.dll , vorbisencoderprocessingunit.dll ) 
 REM Store, Etext, Form, Grid, Clock, Print, AlarmServer, WorldServer, Bafl, Egul, Cone, Dial, BmpAnim 
 REM STORE
 file=\epoc32\release\ARMV5\urel\estor.dll 	"sys\bin\EStor.dll"
@@ -1276,43 +1255,26 @@ file=\epoc32\release\ARMV5\urel\sysutil.dll 	"sys\bin\sysutil.dll"
 file=\epoc32\release\ARMV5\urel\sysutilsetup.exe 	"sys\bin\sysutilsetup.exe"
 REM NumberConversion.dll
 file=\epoc32\release\ARMV5\urel\NumberConversion.dll 	"sys\bin\NumberConversion.dll"
-file=\epoc32\release\ARMV5\urel\MidiClient.dll 	"sys\bin\MidiClient.dll"
-file=\epoc32\release\ARMV5\urel\MidiStandardCustomCommands.dll 	"sys\bin\MidiStandardCustomCommands.dll"
-file=\epoc32\release\ARMV5\urel\omxilgenericilif.dll 	"sys\bin\omxilgenericilif.dll"
 REM WAP 1.2 Push 
 file=\epoc32\release\ARMV5\urel\miscpushmsgutils.dll 	"sys\bin\miscpushmsgutils.dll"
 data=\epoc32\data\Z\RESOURCE\messaging\wappushunknown.RSC 	"resource\messaging\wappushunknown.RSC"
 file=\epoc32\release\ARMV5\urel\mmcommon.dll 	"sys\bin\mmcommon.dll" 
 file=\epoc32\release\ARMV5\urel\MmCommonUtils.dll 	"sys\bin\MmCommonUtils.dll" 
-file=\epoc32\release\ARMV5\urel\MmfServerBaseclasses.dll 	"sys\bin\MmfServerBaseclasses.dll"
 file=\epoc32\release\ARMV5\urel\MediaClient.dll 	"sys\bin\MediaClient.dll"
-file=\epoc32\release\ARMV5\urel\MediaClientUtility.dll 	"sys\bin\MediaClientUtility.dll"
-file=\epoc32\release\ARMV5\urel\MediaClientAudio.dll 	"sys\bin\MediaClientAudio.dll"
-file=\epoc32\release\ARMV5\urel\MediaClientAudioStream.dll 	"sys\bin\MediaClientAudioStream.dll"
-file=\epoc32\release\ARMV5\urel\MediaClientAudioInputStream.dll 	"sys\bin\MediaClientAudioInputStream.dll"
-file=\epoc32\release\ARMV5\urel\MediaClientVideo.dll 	"sys\bin\MediaClientVideo.dll"
 file=\epoc32\release\ARMV5\urel\mediaclientvideodisplay.dll 	"sys\bin\mediaclientvideodisplay.dll"
-file=\epoc32\release\ARMV5\urel\mmfcontrollerframework.dll 	"sys\bin\mmfcontrollerframework.dll"
 file=\epoc32\release\ARMV5\urel\audioutils.dll 	"sys\bin\audioutils.dll"
-file=\epoc32\release\ARMV5\urel\MMFStandardCustomCommands.dll 	"sys\bin\MMFStandardCustomCommands.dll"
 file=\epoc32\release\ARMV5\urel\MmfCodecCommon.dll 	"sys\bin\MmfCodecCommon.dll"
 file=\epoc32\release\ARMV5\urel\GSM610CodecCommon.dll 	"sys\bin\GSM610CodecCommon.dll"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, mmruf.dll , mmruf.dll ) 
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, gsm610.dll , gsm610.dll ) 
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, audiocodecs.dll , audiocodecs.dll ) 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, mmfaudiocontroller.dll , mmfaudiocontroller.dll ) 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, mmfstdsourceandsinkplugin.dll , mmfstdsourceandsinkplugin.dll ) 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, mmfaudioinput.dll , mmfaudioinput.dll ) 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, mmfaudiooutput.dll , mmfaudiooutput.dll ) 
 file=\epoc32\release\ARMV5\urel\MmfGlblAudioEffect.dll 	"sys\bin\MmfGlblAudioEffect.dll"
 file=\epoc32\release\ARMV5\urel\MmfStdGlblAudioEffect.dll 	"sys\bin\MmfStdGlblAudioEffect.dll"
-file=\epoc32\release\ARMV5\urel\mmfdrmpluginserver.exe 	"sys\bin\mmfdrmpluginserver.exe"
 file=\epoc32\release\ARMV5\urel\mmfdrmpluginserverproxy.dll 	"sys\bin\mmfdrmpluginserverproxy.dll"
 REM MMS Settings
 file=\epoc32\release\ARMV5\urel\mmsgenericsettings.dll 	"sys\bin\mmsgenericsettings.dll"
 REM MMTSY
 file=\epoc32\release\ARMV5\urel\MM.TSY 	"sys\bin\MM.TSY"
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, msfdc.dll , msfdc.dll ) 
 data=\epoc32\data\Z\resource\mtp\102827AF.rsc 	"resource\mtp\102827AF.rsc" 
 file=\epoc32\release\ARMV5\urel\mtpdatatypes.dll 	"sys\bin\mtpdatatypes.dll"
 file=\epoc32\release\ARMV5\urel\mtpclient.dll 	"sys\bin\mtpclient.dll"
@@ -1411,8 +1373,6 @@ REM Include the top-level OBY file in the ROM, as an audit trail...
 REM You do not want this in production ROMs!
 REM Provides build number information to the emulator\ROM. 
 data=\epoc32\data\buildinfo.txt 	"System\Data\buildinfo.txt"
-file=\epoc32\release\ARMV5\urel\omxilcomponentcommon.dll 	"sys\bin\omxilcomponentcommon.dll"
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, omxilpcmrenderer.dll , omxilpcmrenderer.dll ) 
 file=\epoc32\release\ARMV5\urel\omxilcoreserver.dll 	"sys\bin\omxilcoreserver.dll"
 file=\epoc32\release\ARMV5\urel\omxilcoreclient.dll 	"sys\bin\omxilcoreclient.dll"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, omxilsymbianloader.dll , omxilsymbianloader.dll ) 
@@ -1451,7 +1411,6 @@ __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, RecWeb.dll , RecWeb.dll ) 
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, recwap.dll , recwap.dll ) 
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, audiostream.dll , audiostream.dll ) 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, tonehwdevice.dll , tonehwdevice.dll ) 
 file=\epoc32\release\ARMV5\urel\audiocodec.dll 	"sys\bin\audiocodec.dll"
 file=\epoc32\release\ARMV5\urel\audiogaincontrol.dll 	"sys\bin\audiogaincontrol.dll"
 file=\epoc32\release\ARMV5\urel\buffersink.dll 	"sys\bin\buffersink.dll"
@@ -2078,7 +2037,6 @@ file=\epoc32\release\armv5\urel\elocl.01 	"sys\bin\elocl.01"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  aboutgsplugin.dll ,  aboutgsplugin.dll ) 
 data=\epoc32\data\Z\resource\apps\aboutgsplugin.mif 	"resource\apps\aboutgsplugin.mif"
 file=\epoc32\release\ARMV5\urel\accountcreationengine.dll 	"sys\bin\accountcreationengine.dll"
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  accountcreationplugin.dll ,  accountcreationplugin.dll ) 
 data=\epoc32\data\Z\resource\apps\acpicons.mif 	"resource\apps\acpicons.mif"
 file=\epoc32\release\ARMV5\urel\ActivePalette.dll 	"sys\bin\ActivePalette.dll"
 data=\epoc32\data\Z\resource\apps\activepalette2graphics.mif 	"resource\apps\activepalette2graphics.mif"
@@ -2121,7 +2079,6 @@ REM AiwCallImagePlugin
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, AiwCallImagePlugin.dll , AiwCallImagePlugin.dll ) 
 data=\epoc32\data\Z\System\install\aiwcallimageplugin_stub.SIS 	"System\Install\aiwcallimageplugin_stub.SIS"
 file=\epoc32\release\ARMV5\urel\AlmAlert.dll 	"sys\bin\AlmAlert.dll"
-file=\epoc32\release\ARMV5\urel\AknAlarmService.dll 	"sys\bin\AknAlarmService.dll"
 data=\epoc32\data\Z\system\install\alarmui_stub.sis 	"System\Install\alarmui_stub.sis"
 data=\epoc32\data\Z\data\sounds\digital\clock.aac 	"data\sounds\digital\clock.aac"
 data=\epoc32\data\Z\data\sounds\digital\alarm.aac 	"data\sounds\digital\alarm.aac"
@@ -2145,10 +2102,6 @@ __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins
 data=\epoc32\data\Z\resource\apps\AspSyncUtil.MIF 	"resource\apps\AspSyncUtil.mif"
 auto-bitmap=\epoc32\data\Z\resource\apps\AspSyncUtil.mbm 	resource\apps\AspSyncUtil.mbm
 file=\epoc32\release\ARMV5\urel\audiomessageui.dll 	"sys\bin\audiomessageui.dll"
-file=\epoc32\release\ARMV5\urel\audiomessage.exe 	"sys\bin\audiomessage.exe" 
-data=\epoc32\data\Z\PRIVATE\10003A3F\APPS\audiomessage_reg.rsc 	"Private\10003a3f\import\apps\audiomessage_reg.rsc"        
-data=\epoc32\data\Z\resource\apps\audiomessage_AIF.MIF 	"resource\apps\audiomessage_aif.mif" 
-data=\epoc32\data\Z\resource\apps\audiomessage.mif 	"resource\apps\audiomessage.mif"
 data=\epoc32\data\z\system\install\stub_audiomessage.sis 	"system\install\stub_audiomessage.sis"
 file=\epoc32\release\ARMV5\urel\Bium.dll 	"sys\bin\Bium.dll"
 file=\epoc32\release\ARMV5\urel\SatInfo.dll 	"sys\bin\SatInfo.dll"
@@ -2163,20 +2116,15 @@ data=\epoc32\data\Z\resource\bookmarkdsa.rsc 	"resource\bookmarkdsa.rsc"
 data=\epoc32\data\Z\private\101F99F6\capability\102751BA.XML 	"private\101F99F6\capability\102751BA.XML"
 data=\epoc32\data\Z\System\install\bookmarkdsa_stub.sis 	"system\install\bookmarkdsa_stub.sis"
 file=\epoc32\release\ARMV5\urel\bpas.dll 	"sys\bin\bpas.dll"
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, npbrowseraudiovideoplugin.dll , npbrowseraudiovideoplugin.dll ) 
 data=\epoc32\data\Z\resource\apps\browseraudiovideoplugin_AIF.MIF 	"resource\apps\browseraudiovideoplugin_aif.mif" 
 file=\epoc32\release\ARMV5\urel\browserlauncher.dll 	"sys\bin\browserlauncher.dll"
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, npSystemInfoPlugin.dll , npSystemInfoPlugin.dll ) 
 auto-bitmap=\epoc32\data\Z\resource\apps\Browser.mbm 	resource\apps\Browser.mbm
 data=\epoc32\data\Z\resource\apps\Browser.mif 	"resource\apps\Browser.mif"
 auto-bitmap=\epoc32\data\Z\resource\apps\browserbitmaps.mbm 	resource\apps\browserbitmaps.mbm
 data=\epoc32\release\ARMV5\urel\Browser_Stub.sis 	"system\install\Browser_Stub.sis"
 data=\epoc32\data\c\feeds_view_template.html 	"feeds_view_template.html"
 data=\epoc32\data\z\private\10008d39\backup_registration.xml 	"private\10008d39\backup_registration.xml"
-file=\epoc32\release\ARMV5\urel\BUBBLEMANAGER.dll 	"sys\bin\BubbleManager.dll"
 data=\epoc32\data\Z\resource\BUBBLEMANAGER.rsc 	"resource\BUBBLEMANAGER.rsc"
-auto-bitmap=\epoc32\data\Z\resource\apps\BubbleManager.mbm 	resource\apps\BubbleManager.mbm
-data=\epoc32\data\Z\resource\apps\BubbleManager.mif 	"resource\apps\BubbleManager.mif"
 data=\epoc32\data\Z\System\install\bubblemanager_stub.sis 	"System\Install\bubblemanager_stub.sis"
 file=\epoc32\release\ARMV5\urel\bva.exe 	"sys\bin\bva.exe" 
 data=\epoc32\data\Z\resource\apps\bva_AIF.MIF 	"resource\apps\bva_aif.mif" 
@@ -2193,28 +2141,19 @@ file=\epoc32\release\ARMV5\urel\!CalDavServer.exe 	"sys\bin\!CalDavServer.exe"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  calencaldavplugin.dll  ,  calencaldavplugin.dll  ) 
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  calenaiwprovider.dll ,  calenaiwprovider.dll ) ;
 file=\epoc32\release\ARMV5\urel\calencommonutils.dll 	"sys\bin\calencommonutils.dll"
-file=\epoc32\release\ARMV5\urel\CalenController.dll 	"sys\bin\CalenController.dll"
-file=\epoc32\release\ARMV5\urel\calencustomisationmanager.dll 	"sys\bin\calencustomisationmanager.dll"
-file=\epoc32\release\ARMV5\urel\Calendar.exe 	"sys\bin\Calendar.exe" 
-data=\epoc32\data\Z\resource\apps\Calendar.mif 	"resource\apps\Calendar.mif"
 data=\epoc32\data\Z\Private\10005901\backup_registration.xml 	"PRIVATE\10005901\backup_registration.xml"
-data=\epoc32\data\Z\resource\apps\CALENDAR_AIF.MIF 	"resource\apps\Calendar_aif.mif"
-data=\epoc32\data\Z\private\10003a3f\apps\CALENDAR_REG.RSC 	"private\10003a3f\import\apps\CALENDAR_REG.RSC"
 data=\epoc32\data\Z\private\10202be9\10003a5b.cre 	"private\10202be9\10003a5b.cre"
 data=\epoc32\data\Z\system\install\calendar_stub.sis 	"System\Install\calendar_stub.sis"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  calendarsearchplugin.dll ,  calendarsearchplugin.dll ) 
 data=\epoc32\data\Z\resource\apps\calendarsearchplugin.mif 	"resource\apps\calendarsearchplugin.mif"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  CalenDefaultEditors.dll  ,  CalenDefaultEditors.dll  ) 
 file=\epoc32\release\ARMV5\urel\CalenGlobalData.dll 	"sys\bin\CalenGlobalData.dll"
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  CalenGsPlugin.dll  ,  CalenGsPlugin.dll  ) 
 data=\epoc32\data\Z\resource\apps\calendarsettings.mif 	"resource\apps\calendarsettings.mif"
 file=\epoc32\release\ARMV5\urel\CALENIMP.dll 	"sys\bin\CALENIMP.dll"
 file=\epoc32\release\ARMV5\urel\CalenInterimUtils2.dll 	"sys\bin\CalenInterimUtils2.dll"
 file=\epoc32\release\ARMV5\urel\calenlauncher.dll 	"sys\bin\calenlauncher.dll"
-file=\epoc32\release\ARMV5\urel\CalenSettingsUi.dll 	"sys\bin\CalenSettingsUi.dll"
 file=\epoc32\release\ARMV5\urel\CalenSvrClient.dll 	"sys\bin\CalenSvrClient.dll"
 file=\epoc32\release\ARMV5\urel\CalenSvr.exe 	"sys\bin\CalenSvr.exe"
-file=\epoc32\release\ARMV5\urel\calenviews.dll 	"sys\bin\calenviews.dll"
 auto-bitmap=\epoc32\data\Z\resource\apps\cameraapp2.mbm 	resource\apps\cameraapp2.mbm
 data=\epoc32\data\Z\resource\apps\cameraapp2.mif 	"resource\apps\cameraapp2.mif"
 data=\epoc32\release\ARMV5\urel\z\system\sounds\Digital\cameraappCapture1.wav 	"system\sounds\Digital\cameraappCapture1.wav"
@@ -2234,31 +2173,20 @@ __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins
 data=\epoc32\data\Z\resource\apps\camerasettingsplugin.mif 	"resource\apps\camerasettingsplugin.mif"
 file=\epoc32\release\ARMV5\urel\CameraUiConfigManager.dll 	"sys\bin\CameraUiConfigManager.dll"
 data=\epoc32\data\Z\System\install\cameraapp_stub.sis 	"System\Install\cameraapp_stub.sis"
-file=\epoc32\release\ARMV5\urel\ccaapp.exe 	"sys\bin\ccaapp.exe" 
-data=\epoc32\data\z\private\10003a3f\apps\ccaapp_reg.rsc 	"private\10003a3f\apps\ccaapp_reg.rsc"
 file=\epoc32\release\ARMV5\urel\ccaclient.dll 	"sys\bin\ccaclient.dll"
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  ccappcommlauncherplugin.dll ,  ccappcommlauncherplugin.dll ) 
 file=\epoc32\release\ARMV5\urel\ccacontactorservice.dll 	"sys\bin\ccacontactorservice.dll"
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  ccappmycardplugin.dll ,  ccappmycardplugin.dll ) 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  ccappdetailsviewplugin.dll ,  ccappdetailsviewplugin.dll ) 
-data=\epoc32\data\Z\resource\apps\ccappdetailsviewplugin.mif 	"resource\apps\ccappdetailsviewplugin.mif"
-file=\epoc32\release\ARMV5\urel\ccapputil.dll 	"sys\bin\ccapputil.dll"
 file=\epoc32\release\ARMV5\urel\CCHServer.exe 	"sys\bin\CCHServer.exe"
 file=\epoc32\release\ARMV5\urel\CCHClient.dll 	"sys\bin\CCHClient.dll"
 file=\epoc32\release\ARMV5\urel\cch.dll 	"sys\bin\cch.dll"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, cchuinotifwrapper.dll , cchuinotifwrapper.dll ) 
 file=\epoc32\release\ARMV5\urel\cchuinotif.dll 	"sys\bin\cchuinotif.dll"
-file=\epoc32\release\ARMV5\urel\clock.exe 	"sys\bin\clock.exe" 
 data=\epoc32\data\Z\resource\apps\clockapp_AIF.MIF 	"resource\apps\clockapp_aif.mif" 
 data=\epoc32\data\Z\resource\apps\clockapp.mif 	"resource\apps\clockapp.mif"
 data=\epoc32\data\Z\resource\apps\clockapp_tab.mif 	"resource\apps\clockapp_tab.mif"
-data=\epoc32\data\Z\private\10003a3f\import\apps\clock_reg.rsc 	"private\10003a3f\import\apps\clock_reg.rsc"
 data=\epoc32\data\Z\resource\mcc\mcc.rsc 	"resource\mcc\mcc.rsc"
 file=\epoc32\release\ARMV5\urel\clockalarmeditor.dll 	"sys\bin\clockalarmeditor.dll"
 file=\epoc32\release\ARMV5\urel\clkuimodel.dll 	"sys\bin\clkuimodel.dll"
-file=\epoc32\release\ARMV5\urel\clkdatetimeview.dll 	"sys\bin\clkdatetimeview.dll"
 file=\epoc32\release\ARMV5\urel\clockcityselectionlist.dll 	"sys\bin\clockcityselectionlist.dll"
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  clkdatetimeviewplugin.dll ,  clkdatetimeviewplugin.dll ) 
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  clockindicatorpaneplugin.dll ,  clockindicatorpaneplugin.dll ) 
 file=\epoc32\release\ARMV5\urel\clockserver.exe 	"sys\bin\clockserver.exe"
 file=\epoc32\release\ARMV5\urel\clockserverclient.dll 	"sys\bin\clockserverclient.dll"
@@ -2272,8 +2200,6 @@ __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins
 data=\epoc32\data\Z\private\10005906\backup_registration.xml 	"private\10005906\backup_registration.xml"
 data=\epoc32\data\Z\private\10005903\backup_registration.xml 	"private\10005903\backup_registration.xml"
 data=\epoc32\data\Z\private\200159A2\backup_registration.xml 	"private\200159A2\backup_registration.xml"
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  cmailhandlerplugin.dll ,  cmailhandlerplugin.dll ) 
-data=\epoc32\data\Z\resource\apps\cmailhandlerplugin.mif 	"resource\apps\cmailhandlerplugin.mif"
 data=\epoc32\data\Z\private\10202BE9\20029F4A.txt 	"private\10202BE9\20029F4A.txt"
 file=\epoc32\release\ARMV5\urel\cmscontactor.dll 	"sys\bin\cmscontactor.dll"
 data=\epoc32\data\Z\resource\cms\cmscontactor.rsc 	"resource\cms\cmscontactor.rsc"
@@ -2289,7 +2215,6 @@ file=\epoc32\release\ARMV5\urel\contactpresence.dll 	"sys\bin\contactpresence.dl
 data=\epoc32\data\Z\resource\apps\contactssearchplugin.mif 	"resource\apps\contactssearchplugin.mif"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  contactssearchplugin.dll ,  contactssearchplugin.dll ) 
 file=\epoc32\release\ARMV5\urel\cscengine.dll 	"sys\bin\cscengine.dll"
-file=\epoc32\release\ARMV5\urel\cscsettingsui.dll 	"sys\bin\cscsettingsui.dll"
 DATA=\epoc32\data\Z\resource\cscengine.rsc 	"resource\cscengine.rsc"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  cscgsplugin.dll ,  cscgsplugin.dll ) 
 data=\epoc32\data\Z\System\install\commsconfig_stub.sis 	"System\Install\commsconfig_stub.sis"
@@ -2304,8 +2229,6 @@ data=\epoc32\data\Z\resource\apps\GSDasPlugin.mif 	"resource\apps\GSDasPlugin.mi
 data=\epoc32\data\Z\Private\200159c0\install\desktop_20026f4f\hsps\00\manifest.dat 	"private\200159c0\install\desktop_20026f4f\hsps\00\manifest.dat"
 FILE=\epoc32\release\ARMV5\urel\imageprintengine.dll 	"sys\bin\imageprintengine.dll"
 data=\epoc32\data\Z\resource\apps\imgprintbitmaps.mif 	"resource\apps\imgprintbitmaps.mif"
-FILE=\epoc32\release\ARMV5\urel\imgpprintdll.dll 	"sys\bin\imgpprintdll.dll"
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, aiwprintingprovider.dll , aiwprintingprovider.dll ) 
 DATA=\epoc32\data\Z\private\10202be9\10208a35.txt 	"Private\10202be9\10208a35.txt"
 file=\epoc32\release\ARMV5\urel\devdiagapp.exe 	"sys\bin\devdiagapp.exe" 
 data=\epoc32\data\Z\PRIVATE\10003A3F\APPS\devdiagapp_reg.rsc 	"Private\10003a3f\import\apps\devdiagapp_reg.rsc" 
@@ -2321,7 +2244,6 @@ data=\epoc32\data\Z\resource\apps\devencgsplugin.mif 	"resource\apps\devencgsplu
 data=\epoc32\data\Z\resource\imageprintdata\protocols\btprotocol.rsc 	"resource\imageprintdata\protocols\btprotocol.rsc"
 DATA=\epoc32\data\Z\resource\imageprintdata\protocols\btxmltemplate.txt 	"resource\imageprintdata\protocols\btxmltemplate.txt"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, dpofprotdll.dll , dpofprotdll.dll ) 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, pdphotolib.dll , pdphotolib.dll ) 
 file=\epoc32\release\ARMV5\urel\xhtmlfilecomposer.dll 	"sys\bin\xhtmlfilecomposer.dll"
 DATA=\epoc32\data\Z\resource\imageprintdata\protocols\xhtmltempl\xhtmlfiletemplate.txt 	"resource\imageprintdata\protocols\xhtmltempl\xhtmlfiletemplate.txt"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, dhcppositionprovider.dll , dhcppositionprovider.dll ) 
@@ -2358,18 +2280,8 @@ data=\epoc32\data\Z\private\2001E272\backup_registration.xml 	"private\2001E272\
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, EmbeddedLinkAdapter.dll , EmbeddedLinkAdapter.dll ) 
 data=\epoc32\data\Z\Private\200159c0\install\empty_2001f47f\xuikon\00\empty.o0000 	"private\200159c0\install\empty_2001f47f\xuikon\00\empty.o0000"
 data=\epoc32\data\Z\Private\200159c0\install\empty_2001f47f\hsps\00\manifest.dat 	"private\200159c0\install\empty_2001f47f\hsps\00\manifest.dat"
-file=\epoc32\release\ARMV5\urel\evtutils.dll 	"sys\bin\evtutils.dll"
-file=\epoc32\release\ARMV5\urel\evtengine.dll 	"sys\bin\evtengine.dll"
-file=\epoc32\release\ARMV5\urel\evthandlerserver.exe 	"sys\bin\evthandlerserver.exe"
-file=\epoc32\release\ARMV5\urel\evthandler.exe 	"sys\bin\evthandler.exe"
-data=\epoc32\data\Z\resource\apps\evthandlerserver.mif 	"resource\apps\evthandlerserver.mif"
-data=\epoc32\data\Z\resource\apps\evtinfonote.mif 	"resource\apps\evtinfonote.mif"
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, evtnotifierplugin.dll , evtnotifierplugin.dll ) 
-file=\epoc32\release\ARMV5\urel\evtinfonote.dll 	"sys\bin\evtinfonote.dll"
 data=\epoc32\data\Z\private\2001E663\backup_registration.xml 	"private\2001E663\backup_registration.xml"
 data=\epoc32\data\Z\System\install\eventsuistub.sis 	"system\install\eventsuistub.sis"
-file=\epoc32\release\ARMV5\urel\MPFileDetailsDialog.dll 	"sys\bin\MPFileDetailsDialog.dll"
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  filedetailsplugin.dll ,  filedetailsplugin.dll ) 
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, filemanagerbkupplugin.dll , filemanagerbkupplugin.dll ) 
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, filemanageraiwprovider.dll , filemanageraiwprovider.dll ) 
 file=\epoc32\release\ARMV5\urel\GFLM.dll 	"sys\bin\GFLM.dll"
@@ -2383,7 +2295,6 @@ data=\epoc32\data\Z\System\install\fmradio_stub.sis 	"system\install\fmradio_stu
 file=\epoc32\release\ARMV5\urel\fmradioactiveidleengine200.dll 	"sys\bin\fmradioactiveidleengine200.dll"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, fmradiomcpplugin100.dll , fmradiomcpplugin100.dll ) 
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, fmradioactionhandler.dll , fmradioactionhandler.dll ) 
-file=\epoc32\release\ARMV5\urel\fmradioengine.dll 	"sys\bin\fmradioengine.dll"
 data=\epoc32\data\Z\Private\2001B25E\backup_registration.xml 	"PRIVATE\2001B25E\backup_registration.xml"
 REM MISSING data=\epoc32\data\Z\Private\10202BE9\2001B25E.txt                 PRIVATE\10202BE9\2001B25E.txt
 data=\epoc32\data\Z\system\install\commonemailstub.sis 	"system\install\commonemailstub.sis"
@@ -2431,7 +2342,6 @@ REM MISSING file=\epoc32\release\ARMV5\urel\bga_reference_plugin.dll sys\bin\bga
 data=\epoc32\data\Z\private\200286D3\refvertexshader.vsh 	"private\200286D3\refvertexshader.vsh"
 data=\epoc32\data\Z\private\200286D3\reffragmentshader.fsh 	"private\200286D3\reffragmentshader.fsh"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  fsccontactactionmenu.dll ,  fsccontactactionmenu.dll ) 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, fsccontactactionservice.dll , fsccontactactionservice.dll ) 
 data=\epoc32\data\Z\resource\fscactionutils.rsc 	"resource\fscactionutils.rsc"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, fsccallplugin.dll , fsccallplugin.dll ) 
 data=\epoc32\data\Z\resource\apps\fsccallplugin.mif 	"resource\apps\fsccallplugin.mif"
@@ -2450,11 +2360,8 @@ data=\epoc32\data\Z\RESOURCE\APPS\google_brand_graphics.mif 	"resource\apps\goog
 data=\epoc32\data\Z\RESOURCE\APPS\aol_brand_graphics.mif 	"resource\apps\aol_brand_graphics.mif"
 data=\epoc32\data\Z\RESOURCE\APPS\microsoft_brand_graphics.mif 	"resource\apps\microsoft_brand_graphics.mif"
 data=\epoc32\data\Z\RESOURCE\APPS\mail_for_exchange_brand_graphics.mif 	"resource\apps\mail_for_exchange_brand_graphics.mif"
-file=\epoc32\release\ARMV5\urel\fssendashelper.dll 	"sys\bin\fssendashelper.dll"
 data=\epoc32\data\Z\resource\messaging\mtm\fsmtms.rsc 	"resource\messaging\mtm\fsmtms.rsc"
-file=\epoc32\release\ARMV5\urel\fsclientmtm.dll 	"sys\bin\fsclientmtm.dll"
 file=\epoc32\release\ARMV5\urel\fsservermtm.dll 	"sys\bin\fsservermtm.dll"
-file=\epoc32\release\ARMV5\urel\fsuimtm.dll 	"sys\bin\fsuimtm.dll"
 data=\epoc32\data\Z\resource\messaging\fsuimtm.rsc 	"resource\messaging\fsuimtm.rsc"
 file=\epoc32\release\ARMV5\urel\fsuidatamtm.dll 	"sys\bin\fsuidatamtm.dll"
 data=\epoc32\data\Z\resource\messaging\fsuidatamtm.rsc 	"resource\messaging\fsuidatamtm.rsc"
@@ -2506,11 +2413,8 @@ file=\epoc32\release\ARMV5\urel\GMSModel.dll 	"sys\bin\GMSModel.dll"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  gsdevdiagplugin.dll ,  gsdevdiagplugin.dll ) 
 data=\epoc32\data\Z\resource\apps\GSDevDiagPlugin.mif 	"resource\apps\GSDevDiagPlugin.mif"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  GSEmailSettingsPluginDll.dll ,  GSEmailSettingsPluginDll.dll ) 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  gsvideoplugin.dll ,  gsvideoplugin.dll ) 
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  gsvmbxplugin.dll ,  gsvmbxplugin.dll ) 
 data=\epoc32\data\Z\resource\apps\gsvmbxplugin.mif 	"resource\apps\gsvmbxplugin.mif"
-file=\epoc32\release\ARMV5\urel\vcxhgmyvideos.dll 	"sys\bin\vcxhgmyvideos.dll"
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  vcxhgmyvideosplugin.dll ,  vcxhgmyvideosplugin.dll ) 
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  vcxhgvodplugin.dll ,  vcxhgvodplugin.dll ) 
 file=\epoc32\release\ARMV5\urel\vcxhgvodui.dll 	"sys\bin\vcxhgvodui.dll"
 file=\epoc32\release\ARMV5\urel\hnengine.dll 	"sys\bin\hnengine.dll"
@@ -2583,20 +2487,16 @@ file=\epoc32\release\ARMV5\urel\Text.pgn 	"sys\bin\Text.pgn"
 data=\epoc32\data\Z\resource\apps\Text.mif 	"resource\apps\Text.mif"
 file=\epoc32\release\ARMV5\urel\ImageEditorUi.dll 	"sys\bin\ImageEditorUi.dll"
 data=\epoc32\data\Z\resource\apps\ImageEditorUi.mif 	"resource\apps\ImageEditorUi.mif"
-file=\epoc32\release\ARMV5\urel\imageprintserver.exe 	"sys\bin\imageprintserver.exe"
 file=\epoc32\release\ARMV5\urel\imageprintclient.dll 	"sys\bin\imageprintclient.dll"
 file=\epoc32\release\ARMV5\urel\imcvengine.dll 	"sys\bin\imcvengine.dll"
 file=\epoc32\release\ARMV5\urel\imcvlauncher.dll 	"sys\bin\imcvlauncher.dll"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, imcmslauncherplugin.dll , imcmslauncherplugin.dll ) 
 data=\epoc32\data\Z\system\install\imcvuiappstub.sis 	"system\install\imcvuiappstub.sis"
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, imstatuspaneindicatorplugin.dll , imstatuspaneindicatorplugin.dll ) 
 data=\epoc32\data\Z\system\install\imstatuspaneindicatorpluginstub.sis 	"system\install\imstatuspaneindicatorpluginstub.sis"
 file=\epoc32\release\ARMV5\urel\vimpstutils.dll 	"sys\bin\vimpstutils.dll"
 file=\epoc32\release\ARMV5\urel\vimpststorage.dll 	"sys\bin\vimpststorage.dll"
 file=\epoc32\release\ARMV5\urel\vimpstengine.dll 	"sys\bin\vimpstengine.dll"
 file=\epoc32\release\ARMV5\urel\vimpstcmdprocess.dll 	"sys\bin\vimpstcmdprocess.dll"
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, vimpstui.dll , vimpstui.dll ) 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, vimpstdetailsviewplugin.dll , vimpstdetailsviewplugin.dll ) 
 data=\epoc32\data\Z\system\install\uiservicetabstub.sis 	"system\install\uiservicetabstub.sis"
 data=\epoc32\data\Z\private\20012423\backup_registration.xml 	"private\20012423\backup_registration.xml"
 file=\epoc32\release\ARMV5\urel\ImumDa.dll 	"sys\bin\ImumDa.dll"
@@ -2604,9 +2504,7 @@ file=\epoc32\release\ARMV5\urel\ImumUtils.dll 	"sys\bin\ImumUtils.dll"
 file=\epoc32\release\ARMV5\urel\Imum.dll 	"sys\bin\Imum.dll"
 data=\epoc32\data\Z\private\100058EB\backup_registration.xml 	"private\100058EB\backup_registration.xml"
 data=\epoc32\data\Z\system\install\imum_stub.sis 	"system\install\imum_stub.sis"
-file=\epoc32\release\ARMV5\urel\instantmessagesalert.dll 	"sys\bin\instantmessagesalert.dll"
 data=\epoc32\data\Z\system\install\instantmessagesalertstub.sis 	"system\install\instantmessagesalertstub.sis"
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, instantmsgindicatorplugin.dll , instantmsgindicatorplugin.dll ) 
 data=\epoc32\data\Z\system\install\instantmsgindicatorpluginstub.sis 	"system\install\instantmsgindicatorpluginstub.sis"
 file=\epoc32\release\ARMV5\urel\IntegrityCheck.exe 	"sys\bin\IntegrityCheck.exe"
 file=\epoc32\release\ARMV5\urel\IntegrityCheckServer.exe 	"sys\bin\IntegrityCheckServer.exe"
@@ -2685,7 +2583,6 @@ data=\epoc32\release\ARMV5\urel\z\resource\java\jvm\lib\jrt\javasoftnotification
 data=\epoc32\release\ARMV5\urel\z\resource\java\jvm\lib\jrt\javam2g.odc 	"resource\java\jvm\lib\jrt\javam2g.odc"
 file=\epoc32\release\ARMV5\urel\javam3g.dll 	"sys\bin\javam3g.dll"
 data=\epoc32\release\ARMV5\urel\z\resource\java\jvm\lib\jrt\javam3g.odc 	"resource\java\jvm\lib\jrt\javam3g.odc"
-file=\epoc32\release\ARMV5\urel\javanokiasound.dll 	"sys\bin\javanokiasound.dll"
 data=\epoc32\release\ARMV5\urel\z\resource\java\jvm\lib\jrt\javanokiasound.odc 	"resource\java\jvm\lib\jrt\javanokiasound.odc"
 file=\epoc32\release\ARMV5\urel\javaremconobserver.dll 	"sys\bin\javaremconobserver.dll"
 file=\epoc32\release\ARMV5\urel\javalegacyutils.dll 	"sys\bin\javalegacyutils.dll"
@@ -2699,12 +2596,6 @@ file=\epoc32\release\ARMV5\urel\javamidpstarter.dll 	"sys\bin\javamidpstarter.dl
 file=\epoc32\release\ARMV5\urel\javamidpruntime.dll 	"sys\bin\javamidpruntime.dll"
 data=\epoc32\release\ARMV5\urel\z\resource\java\jvm\lib\jrt\javamidpruntime.odc 	"resource\java\jvm\lib\jrt\javamidpruntime.odc"
 file=\epoc32\release\ARMV5\urel\javajvmargsmodifier.dll 	"sys\bin\javajvmargsmodifier.dll"
-file=\epoc32\release\ARMV5\urel\j9.dll 	"sys\bin\j9.dll"
-file=\epoc32\release\ARMV5\urel\j9vmall23.dll 	"sys\bin\j9vmall23.dll"
-file=\epoc32\release\ARMV5\urel\j9mjit23.dll 	"sys\bin\j9mjit23.dll"
-file=\epoc32\release\ARMV5\urel\jclcldc11_23.dll 	"sys\bin\jclcldc11_23.dll"
-file=\epoc32\release\ARMV5\urel\jclcdc11_23.dll 	"sys\bin\jclcdc11_23.dll"
-file=\epoc32\release\ARMV5\urel\j9fdm23.dll 	"sys\bin\j9fdm23.dll"
 file=\epoc32\release\ARMV5\urel\JvmNativePort.dll 	"sys\bin\JvmNativePort.dll"
 REM MISSING data=\epoc32\release\ARMV5\urel\z\resource\java\jvm\bin\java.properties                                   resource\java\jvm\bin\java.properties
 REM MISSING data=\epoc32\release\ARMV5\urel\z\resource\java\jvm\lib\security\java.policy                              resource\java\jvm\lib\security\java.policy
@@ -2908,28 +2799,18 @@ data=\epoc32\data\z\resource\list\lct\akn_logical_template_7.xml 	"resource\list
 data=\epoc32\data\z\resource\list\lct\akn_logical_template_8.xml 	"resource\list\lct\akn_logical_template_8.xml"
 data=\epoc32\data\z\resource\list\lct\akn_logical_template_12.xml 	"resource\list\lct\akn_logical_template_12.xml"
 data=\epoc32\data\z\resource\grid\lct\akn_logical_template_3.xml 	"resource\grid\lct\akn_logical_template_3.xml"
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  mpsettropmodel.dll ,  mpsettropmodel.dll ) 
 data=\epoc32\data\Z\resource\mpsettingsropmodel.rsc 	"resource\mpsettingsropmodel.rsc"
-file=\epoc32\release\ARMV5\urel\mpxaudioeffectengine.dll 	"sys\bin\mpxaudioeffectengine.dll"
 file=\epoc32\release\ARMV5\urel\mpxaudioeffectsview.dll 	"sys\bin\mpxaudioeffectsview.dll"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  mpxaudioeffectsviewplugin.dll ,  mpxaudioeffectsviewplugin.dll ) 
-file=\epoc32\release\ARMV5\urel\mpxequalizerview.dll 	"sys\bin\mpxequalizerview.dll"
 data=\epoc32\data\Z\System\data\nullsound.mp3 	"system\data\nullsound.mp3"
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  mpxequalizerviewplugin.dll ,  mpxequalizerviewplugin.dll ) 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,   mpxinmemoryplugin.dll ,   mpxinmemoryplugin.dll ) 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, mpxlocalaudioplayback.dll , mpxlocalaudioplayback.dll ) 
 file=\epoc32\release\ARMV5\urel\mpxm3uplaylistparsers.dll 	"sys\bin\mpxm3uplaylistparsers.dll"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  mpxm3uplaylistplugin.dll ,  mpxm3uplaylistplugin.dll ) 
 data=\epoc32\data\z\system\install\mpxplugins_stub.sis 	"system\install\mpxplugins_stub.sis"
-file=\epoc32\release\ARMV5\urel\mpxmediakeyhandler.dll 	"sys\bin\mpxmediakeyhandler.dll"
-data=\epoc32\data\Z\resource\apps\mpxmediakeyhandler.mif 	"resource\apps\mpxmediakeyhandler.mif"
 file=\epoc32\release\ARMV5\urel\mpxmetadatahandler.dll 	"sys\bin\mpxmetadatahandler.dll"
 data=\epoc32\data\Z\resource\mplayeravrcpsettings.rsc 	"resource\mplayeravrcpsettings.rsc" 
 data=\epoc32\data\z\system\install\mpxmusicplayerstub.sis 	"system\install\mpxmusicplayerstub.sis"
 data=\epoc32\data\Z\Private\102072c3\backup_registration.xml 	"private\102072c3\backup_registration.xml"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, vcxmyvideoscollectionplugin.DLL , vcxmyvideoscollectionplugin.DLL ) 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, mpxprogressdownload.dll , mpxprogressdownload.dll ) 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, mpxprogressdownloadsb.dll , mpxprogressdownloadsb.dll ) 
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, mpxscreensaverplugin.dll , mpxscreensaverplugin.dll ) 
 data=\epoc32\data\Z\resource\apps\mpxscreensaverplugin.mif 	"resource\apps\mpxscreensaverplugin.mif"
 file=\epoc32\release\ARMV5\urel\mpxsqlitedbcommon.dll 	"sys\bin\mpxsqlitedbcommon.dll"
@@ -2941,14 +2822,6 @@ __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins
 data=\epoc32\data\Z\resource\apps\mpxpodcastdbplugin.mif 	"resource\apps\mpxpodcastdbplugin.mif"
 file=\epoc32\release\ARMV5\urel\mpxupnpbrowsedialog.dll 	"sys\bin\mpxupnpbrowsedialog.dll"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  mpxupnpbrowsedialogplugin.dll ,  mpxupnpbrowsedialogplugin.dll ) 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, mpxvideohelixplayback.dll , mpxvideohelixplayback.dll ) 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  mpxvideopdlplaybackviewplugin.dll ,  mpxvideopdlplaybackviewplugin.dll ) 
-file=\epoc32\release\ARMV5\urel\mpxvideoplaybackcontrols.dll 	"sys\bin\mpxvideoplaybackcontrols.dll"
-data=\epoc32\data\Z\resource\apps\mpxvideoplaybackcontrols.mif 	"resource\apps\mpxvideoplaybackcontrols.mif"
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  mpxvideoplaybackviewplugin.dll ,  mpxvideoplaybackviewplugin.dll ) 
-file=\epoc32\release\ARMV5\urel\mpxvideoplaybackviews.dll 	"sys\bin\mpxvideoplaybackviews.dll"
-file=\epoc32\release\ARMV5\urel\MpxVideoPlayer.exe 	"sys\bin\MpxVideoPlayer.exe" 
-data=\epoc32\data\Z\PRIVATE\10003A3F\APPS\mpxvideoplayer_reg.rsc 	"Private\10003a3f\import\apps\mpxvideoplayer_reg.rsc" 
 data=\epoc32\data\Z\System\install\videoplayer_stub.sis 	"system\install\videoplayer_stub.sis"
 file=\epoc32\release\ARMV5\urel\mpxwaitnotedialog.dll 	"sys\bin\mpxwaitnotedialog.dll"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  mpxwaitnotedialogplugin.dll ,  mpxwaitnotedialogplugin.dll ) 
@@ -2959,12 +2832,10 @@ file=\epoc32\release\ARMV5\urel\MemScanClient.dll 	"sys\bin\MemScanClient.dll"
 file=\epoc32\release\ARMV5\urel\MsgEditorAppUi.dll 	"sys\bin\MsgEditorAppUi.dll"
 file=\epoc32\release\ARMV5\urel\MsgEditorModel.dll 	"sys\bin\MsgEditorModel.dll"
 file=\epoc32\release\ARMV5\urel\MsgEditorView.dll 	"sys\bin\MsgEditorView.dll"
-file=\epoc32\release\ARMV5\urel\MsgEditorMediaControl.dll 	"sys\bin\MsgEditorMediaControl.dll"
 data=\epoc32\data\Z\resource\apps\MsgEditor.mif 	"resource\apps\MsgEditor.mif"
 data=\epoc32\data\Z\resource\apps\msgeditor_ah.mif 	"resource\apps\msgeditor_ah.mif"
 file=\epoc32\release\ARMV5\urel\MsgEditorUtils.dll 	"sys\bin\MsgEditorUtils.dll"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, MsgErrorWatcher.dll , MsgErrorWatcher.dll ) 
-file=\epoc32\release\ARMV5\urel\MsgMedia.dll 	"sys\bin\MsgMedia.dll"
 data=\epoc32\data\Z\resource\MsgMimeToMediaMapping.rsc 	"resource\MsgMimeToMediaMapping.rsc"
 file=\epoc32\release\ARMV5\urel\MsgNotifiers.dll 	"sys\bin\MsgNotifiers.dll"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, MsgNotifiersWrapper.dll , MsgNotifiersWrapper.dll ) 
@@ -2979,10 +2850,8 @@ data=\epoc32\data\Z\resource\apps\multimediasearchplugin.mif 	"resource\apps\mul
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  multimediasearchplugin.dll ,  multimediasearchplugin.dll ) 
 data=\epoc32\data\Z\resource\apps\musuiicons.mif 	"resource\apps\musuiicons.mif"
 data=\epoc32\data\Z\resource\apps\musuitoolbaricons.mif 	"resource\apps\musuitoolbaricons.mif"
-file=\epoc32\release\ARMV5\urel\musmanagerserver.exe 	"sys\bin\musmanagerserver.exe"
 file=\epoc32\release\ARMV5\urel\musmanagerclient.dll 	"sys\bin\musmanagerclient.dll"
 file=\epoc32\release\ARMV5\urel\musengine.dll 	"sys\bin\musengine.dll"
-file=\epoc32\release\ARMV5\urel\musindicator.dll 	"sys\bin\musindicator.dll"
 data=\epoc32\data\Z\private\1028238D\tone.amr 	"private\1028238D\tone.amr"
 data=\epoc32\data\Z\resource\apps\musindicatoricons.mif 	"resource\apps\musindicatoricons.mif"
 data=\epoc32\data\Z\resource\apps\musindicatoricons.mbm 	"resource\apps\musindicatoricons.mbm"
@@ -2997,10 +2866,8 @@ data=\epoc32\data\Z\private\1028238D\backup_registration.xml 	"private\1028238D\
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, musiccontentpublisher.dll , musiccontentpublisher.dll ) 
 data=\epoc32\data\Z\Resource\apps\musichomescreenicons.mif 	"resource\apps\musichomescreenicons.mif"
 data=\epoc32\include\musichomescreen.rsg 	"resource\apps\musichomescreen.rsg"
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, musicplayeractionhandlerplugin.dll , musicplayeractionhandlerplugin.dll ) 
 data=\epoc32\data\Z\Private\200159c0\install\musicwidget_10207c18\hsps\00\manifest.dat 	"private\200159c0\install\musicwidget_10207c18\hsps\00\manifest.dat"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  myvideosindicatorplugin.dll ,  myvideosindicatorplugin.dll ) 
-file=\epoc32\release\ARMV5\urel\Ncnlist.exe 	"sys\bin\Ncnlist.exe"
 data=\epoc32\data\Z\system\install\ncnlist_stub.SIS 	"system\install\ncnlist_stub.SIS"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, NCNNOTIFICATION.DLL , NCNNOTIFICATION.DLL ) 
 data=\epoc32\data\Z\private\10005907\backup_registration.xml 	"private\10005907\backup_registration.xml"
@@ -3038,7 +2905,6 @@ data=\epoc32\data\Z\PRIVATE\10003A3F\APPS\Operatormenu_reg.rsc 	"Private\10003a3
 file=\epoc32\release\ARMV5\urel\OpLogoBC.dll 	"sys\bin\OpLogoBC.dll"
 data=\epoc32\data\Z\Private\200159c0\install\organizer_2001f481\hsps\00\manifest.dat 	"private\200159c0\install\organizer_2001f481\hsps\00\manifest.dat"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  pbk2rclcontactactionmenu.dll ,  pbk2rclcontactactionmenu.dll ) 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, pbk2rclcontactactionservice.dll , pbk2rclcontactactionservice.dll ) 
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, pbk2rclcallplugin.dll , pbk2rclcallplugin.dll ) 
 data=\epoc32\data\Z\resource\apps\pbk2rclcallplugin.mif 	"resource\apps\pbk2rclcallplugin.mif"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, pbk2rclsaveascontactplugin.dll , pbk2rclsaveascontactplugin.dll ) 
@@ -3067,39 +2933,19 @@ data=\epoc32\data\Z\resource\apps\Phonebook_aif.MIF 	"resource\apps\Phonebook_ai
 file=\epoc32\release\ARMV5\urel\PbkExt.dll 	"sys\bin\PbkExt.dll"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, PbkEngine_FM.dll , PbkEngine_FM.dll ) 
 data=\epoc32\data\Z\private\101f87b1\backup_registration.xml 	"private\101f87b1\backup_registration.xml"
-file=\epoc32\release\ARMV5\urel\Phonebook2.exe 	"sys\bin\Phonebook2.exe" 
-auto-bitmap=\epoc32\data\Z\resource\apps\Phonebook2.mbm 	resource\apps\Phonebook2.mbm
-data=\epoc32\data\Z\resource\apps\Phonebook2.mif 	"resource\apps\Phonebook2.mif"
-data=\epoc32\data\Z\resource\apps\Phonebook2_AIF.MIF 	"resource\apps\Phonebook2_aif.mif" 
 data=\epoc32\data\Z\PRIVATE\10003A3F\APPS\Phonebook2_reg.rsc 	"Private\10003a3f\apps\Phonebook2_reg.rsc" 
 file=\epoc32\release\ARMV5\urel\Pbk2Presentation.dll 	"sys\bin\Pbk2Presentation.dll"
-file=\epoc32\release\ARMV5\urel\Pbk2UIControls.dll 	"sys\bin\Pbk2UIControls.dll"
-file=\epoc32\release\ARMV5\urel\Pbk2CommonUI.dll 	"sys\bin\Pbk2CommonUI.dll"
-file=\epoc32\release\ARMV5\urel\Pbk2Commands.dll 	"sys\bin\Pbk2Commands.dll"
-file=\epoc32\release\ARMV5\urel\Pbk2UIExt.dll 	"sys\bin\Pbk2UIExt.dll"
 file=\epoc32\release\ARMV5\urel\Pbk2CommonUtility.dll 	"sys\bin\Pbk2CommonUtility.dll"
-file=\epoc32\release\ARMV5\urel\pbk2spbcontentprovider.dll 	"sys\bin\pbk2spbcontentprovider.dll"
-file=\epoc32\release\ARMV5\urel\Pbk2ServerApp.exe 	"sys\bin\Pbk2ServerApp.exe" 
-data=\epoc32\data\Z\PRIVATE\10003A3F\APPS\Pbk2ServerApp_reg.rsc 	"Private\10003a3f\apps\Pbk2ServerApp_reg.rsc" 
 data=\epoc32\data\Z\resource\apps\phonebook2ece.mif 	"resource\apps\phonebook2ece.mif"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, Pbk2UIServices.dll , Pbk2UIServices.dll ) 
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, Pbk2UIPolicy.dll , Pbk2UIPolicy.dll ) 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, Pbk2GroupUI.dll , Pbk2GroupUI.dll ) 
 data=\epoc32\data\Z\resource\Pbk2UIPolicyRes.rsc 	"resource\Pbk2UIPolicyRes.rsc"
 data=\epoc32\data\Z\resource\apps\psu2.mif 	"resource\apps\psu2.mif"
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, Pbk2USIMUI.dll , Pbk2USIMUI.dll ) 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, Pbk2USIMThinUI.dll , Pbk2USIMThinUI.dll ) 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, Pbk2MMCUI.dll , Pbk2MMCUI.dll ) 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, Pbk2MapUI.dll , Pbk2MapUI.dll ) 
 data=\epoc32\data\Z\private\101f4cce\backup_registration.xml 	"private\101f4cce\backup_registration.xml"
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, ExtensionManager.dll , ExtensionManager.dll ) 
 data=\epoc32\data\Z\Resource\ExtensionManager.mbm 	"resource\ExtensionManager.mbm"
-file=\epoc32\release\ARMV5\urel\xSPViewServices.dll 	"sys\bin\xSPViewServices.dll"
-data=\epoc32\data\Z\private\10003a3f\apps\Phonebook2_reg.rsc 	"private\10003a3f\Import\Apps\Phonebook2_reg.rsc"
 data=\epoc32\data\Z\System\install\pbk2_stub.sis 	"System\Install\pbk2_stub.sis"
 data=\epoc32\data\Z\System\install\phonecntfinder_stub.SIS 	"System\Install\phonecntfinder_stub.SIS"
 file=\epoc32\release\ARMV5\urel\ENGINEINFO.DLL 	"sys\bin\ENGINEINFO.DLL"
-file=\epoc32\release\ARMV5\urel\AUDIOHANDLING.DLL 	"sys\bin\AUDIOHANDLING.DLL"
 data=\epoc32\data\Z\resource\defaultbeep.RSC 	"resource\defaultbeep.RSC"
 file=\epoc32\release\ARMV5\urel\LOGHANDLING.DLL 	"sys\bin\LOGHANDLING.DLL"
 file=\epoc32\release\ARMV5\urel\peservicehandling.dll 	"sys\bin\peservicehandling.dll"
@@ -3112,9 +2958,7 @@ data=\epoc32\data\Z\System\install\phonemodel_stub.sis 	"System\Install\phonemod
 data=\epoc32\data\Z\System\install\servicehandling_stub.sis 	"System\Install\servicehandling_stub.sis"
 data=\epoc32\data\Z\System\install\phonesettings_stub.SIS 	"System\Install\phonesettings_stub.SIS"
 REM PhoneUI
-file=\epoc32\release\ARMV5\urel\phoneuicontrol.dll 	"sys\bin\phoneuicontrol.dll"
 file=\epoc32\release\ARMV5\urel\phoneuiutils.dll 	"sys\bin\phoneuiutils.dll"
-file=\epoc32\release\ARMV5\urel\phonemediatorcenter.dll 	"sys\bin\phonemediatorcenter.dll"
 data=\epoc32\data\Z\System\install\phoneui_stub.sis 	"System\Install\phoneui_stub.sis"
 data=\epoc32\data\Z\System\install\phoneuicontrol_stub.sis 	"System\Install\phoneuicontrol_stub.sis"
 data=\epoc32\data\Z\System\install\phoneuistates_stub.sis 	"System\Install\phoneuistates_stub.sis"
@@ -3127,8 +2971,6 @@ data=\EPOC32\DATA\Z\private\10003a3f\apps\pnpprovisioning_reg.RSC 	"private\1000
 file=\epoc32\release\ARMV5\urel\NHwrParser.dll 	"sys\bin\NHwrParser.dll"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  recnhwr.dll ,  recnhwr.dll ) 
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  PnpPaosFilter.dll ,  PnpPaosFilter.dll ) 
-file=\epoc32\release\ARMV5\urel\podcast.exe 	"sys\bin\podcast.ext"
-file=\epoc32\release\ARMV5\urel\podcastengine.dll 	"sys\bin\podcastengine.dll"
 REM MISSING data=\epoc32\data\Z\Resource\apps\podcast.rsc					resource\apps\podcast.rsc
 data=\epoc32\data\Z\Resource\apps\Podcast.mif 	"resource\apps\Podcast.mif"
 data=\epoc32\data\Z\Resource\help\podcatcher.hlp 	"resource\apps\podcatcher.hlp"
@@ -3166,8 +3008,6 @@ file=\epoc32\release\ARMV5\urel\RCSE.dll 	"sys\bin\RCSE.dll"
 data=\epoc32\data\Z\Private\100012a5\policy\10202869.SPD 	"PRIVATE\100012a5\policy\10202869.SPD"
 data=\epoc32\data\Z\Private\10202869\backup_registration.xml 	"private\10202869\backup_registration.xml"
 file=\epoc32\release\ARMV5\urel\richBio.dll 	"sys\bin\richBio.dll"
-file=\epoc32\release\ARMV5\urel\RingBC.dll 	"sys\bin\RingBC.dll"
-data=\epoc32\data\Z\resource\apps\RingBC.mif 	"resource\apps\RingBC.mif"
 data=\epoc32\data\Z\Private\200159c0\install\root_2001f482\xuikon\00\root.o0000 	"private\200159c0\install\root_2001f482\xuikon\00\root.o0000"
 data=\epoc32\data\Z\Private\200159c0\install\root_2001f482\hsps\00\manifest.dat 	"private\200159c0\install\root_2001f482\hsps\00\manifest.dat"
 REM This iby file puts Symbian components to ROM. It replaces sislwappush.iby.
@@ -3195,11 +3035,8 @@ data=\epoc32\data\Z\resource\apps\srchuiresviewpluginicons.mif 	"resource\apps\s
 file=\epoc32\release\ARMV5\urel\searchutilities.dll 	"sys\bin\searchutilities.dll"
 file=\epoc32\release\ARMV5\urel\searchclient.dll 	"sys\bin\searchclient.dll"
 file=\epoc32\release\ARMV5\urel\searchserver.exe 	"sys\bin\searchserver.exe" 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, GenericMtmPlugin.dll , GenericMtmPlugin.dll ) 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, DrmLinkSender.dll , DrmLinkSender.dll ) 
 file=\epoc32\release\ARMV5\urel\SERVICEREQUEST.DLL 	"sys\bin\SERVICEREQUEST.DLL"
 data=\epoc32\data\Z\System\install\Servicerequest_stub.sis 	"System\Install\Servicerequest_stub.sis"
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, servicewidgetdatapublisher.dll , servicewidgetdatapublisher.dll ) 
 data=\epoc32\data\Z\system\install\servicewidget_stub.sis 	"system\install\servicewidget_stub.sis"
 data=\epoc32\data\Z\Private\200159c0\install\servicewidget_20021383\xuikon\00\servicewidget.o0000 	"private\200159c0\install\servicewidget_20021383\xuikon\00\servicewidget.o0000"
 data=\epoc32\data\Z\Private\200159c0\install\servicewidget_20021383\hsps\00\manifest.dat 	"private\200159c0\install\servicewidget_20021383\hsps\00\manifest.dat"
@@ -3217,9 +3054,6 @@ __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins
 file=\epoc32\release\ARMV5\urel\SmilEng.dll 	"sys\bin\SmilEng.dll"
 REM SMIL transition component dll
 file=\epoc32\release\ARMV5\urel\smiltran.dll 	"sys\bin\smiltran.dll"
-file=\epoc32\release\ARMV5\urel\smilmediarenderer.dll 	"sys\bin\smilmediarenderer.dll"
-file=\epoc32\release\ARMV5\urel\smilplayer.dll 	"sys\bin\smilplayer.dll"
-data=\epoc32\data\Z\resource\apps\smilplayer.mif 	"resource\apps\smilplayer.mif"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, smsdataprovider.dll , smsdataprovider.dll ) 
 data=\epoc32\data\Z\resource\smsdatastore.RSC 	"resource\smsdatastore.RSC"
 data=\epoc32\data\Z\private\101F99F6\capability\10206B5C.XML 	"private\101F99F6\capability\10206B5C.XML"
@@ -3231,10 +3065,8 @@ __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, defaultsimdialogplugin.dll , defaultsimdialogplugin.dll ) 
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  speeddialgsplugin.dll ,  speeddialgsplugin.dll ) 
 data=\epoc32\data\Z\resource\apps\speeddialgsplugin.mif 	"resource\apps\speeddialgsplugin.mif"
-file=\epoc32\release\ARMV5\urel\nssvcommandexecutor.exe 	"sys\bin\nssvcommandexecutor.exe"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, nssvcexecutorbearer.dll , nssvcexecutorbearer.dll ) 
 file=\epoc32\release\ARMV5\urel\nssvoiceuipluginhandler.dll 	"sys\bin\nssvoiceuipluginhandler.dll"
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, vuipprofileobserverplugin.dll , vuipprofileobserverplugin.dll ) 
 data=\epoc32\data\Z\Private\102818E7\defaultvoicecommands.xml 	"private\102818E7\defaultvoicecommands.xml"
 data=\epoc32\data\Z\Private\102818E7\btvoicecommands.xml 	"private\102818E7\btvoicecommands.xml"
 data=\epoc32\data\Z\Private\102818E7\emailvoicecommands.xml 	"private\102818E7\emailvoicecommands.xml"
@@ -3248,18 +3080,9 @@ data=\epoc32\data\Z\Private\10201AFF\backup_registration.xml 	"private\10201AFF\
 file=\epoc32\release\ARMV5\urel\nssvasapi.dll 	"sys\bin\nssvasapi.dll"
 file=\epoc32\release\ARMV5\urel\nssvascontacthdlr.dll 	"sys\bin\nssvascontacthdlr.dll"
 file=\epoc32\release\ARMV5\urel\vcommandhandler.dll 	"sys\bin\vcommandhandler.dll"
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  nsssicontrollerplugin.dll ,  nsssicontrollerplugin.dll ) 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  nssttscontrollerplugin.dll ,  nssttscontrollerplugin.dll ) 
-file=\epoc32\release\ARMV5\urel\nssdevasr.dll 	"sys\bin\nssdevasr.dll"
 file=\epoc32\release\ARMV5\urel\nsssispeechrecognitiondata.dll 	"sys\bin\nsssispeechrecognitiondata.dll"
-file=\epoc32\release\ARMV5\urel\nsssispeechrecognitioncustomcommands.dll 	"sys\bin\nsssispeechrecognitioncustomcommands.dll"
-file=\epoc32\release\ARMV5\urel\nsssispeechrecognitionutility.dll 	"sys\bin\nsssispeechrecognitionutility.dll"
-file=\epoc32\release\ARMV5\urel\nssdevtts.dll 	"sys\bin\nssdevtts.dll"   
-file=\epoc32\release\ARMV5\urel\nssttscustomcommands.dll 	"sys\bin\nssttscustomcommands.dll"    
 file=\epoc32\release\ARMV5\urel\nssttscommon.dll 	"sys\bin\nssttscommon.dll"
-file=\epoc32\release\ARMV5\urel\nssttsutility.dll 	"sys\bin\nssttsutility.dll"
 file=\epoc32\release\ARMV5\urel\speechsynthesis.dll 	"sys\bin\speechsynthesis.dll"
-file=\epoc32\release\ARMV5\urel\speechsynthesisserver.exe 	"sys\bin\speechsynthesisserver.exe"
 data=\epoc32\data\Z\resource\nssvasresource.rsc 	"resource\nssvasresource.rsc"
 data=\epoc32\data\Z\resource\nssdevasr.rsc 	"resource\nssdevasr.rsc"
 data=\epoc32\data\Z\resource\nssdevtts.rsc 	"resource\nssdevtts.rsc"
@@ -3299,14 +3122,10 @@ data=\epoc32\data\Z\PRIVATE\10003A3F\APPS\UISettingsSrv_reg.rsc 	"Private\10003a
 file=\epoc32\release\ARMV5\urel\UISettingsClient.dll 	"sys\bin\UISettingsClient.dll"
 data=\epoc32\data\z\system\install\stub_unieditor.sis 	"system\install\stub_unieditor.sis"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  UniMmsPlugin.dll ,  UniMmsPlugin.dll )      
-file=\epoc32\release\ARMV5\urel\UniDataModel.dll 	"sys\bin\UniDataModel.dll"
 file=\epoc32\release\ARMV5\urel\UniMtms.dll 	"sys\bin\UniMtms.dll"
 file=\epoc32\release\ARMV5\urel\UniPluginApi.dll 	"sys\bin\UniPluginApi.dll"
 file=\epoc32\release\ARMV5\urel\VideoConversionApi.dll 	"sys\bin\VideoConversionApi.dll"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  UniSmsPlugin.dll ,  UniSmsPlugin.dll )              
-file=\epoc32\release\ARMV5\urel\UniUtils.dll 	"sys\bin\UniUtils.dll"
-auto-bitmap=\epoc32\data\Z\resource\apps\uniutils.mbm 	resource\apps\uniutils.mbm
-data=\epoc32\data\Z\resource\apps\uniutils.mif 	"resource\apps\uniutils.mif"
 file=\epoc32\release\ARMV5\urel\USSD.EXE 	"sys\bin\Ussd.exe"
 data=\epoc32\data\Z\System\install\Ussd_stub.sis 	"System\Install\Ussd_stub.sis"
 data=\epoc32\data\Z\resource\apps\Ussd_AIF.MIF 	"resource\apps\Ussd_aif.mif" 
@@ -3340,11 +3159,9 @@ file=\epoc32\release\ARMV5\urel\vcxnssettingsengine.dll 	"sys\bin\vcxnssettingse
 file=\epoc32\release\ARMV5\urel\IptvProvisioningProcessor.dll 	"sys\bin\IptvProvisioningProcessor.dll"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, IptvProvRec.DLL , IptvProvRec.DLL ) 
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, IptvRssPlugin.DLL , IptvRssPlugin.DLL ) 
-file=\epoc32\release\ARMV5\urel\VideoSource.dll 	"sys\bin\VideoSource.dll"
 data=\epoc32\data\Z\System\install\videosource_stub.sis 	"system\install\videosource_stub.sis"
 REM Video telephony engine libraries
 file=\epoc32\release\ARMV5\urel\videotelproto.dll 	"sys\bin\videotelproto.dll"
-file=\epoc32\release\ARMV5\urel\Videoteleng.dll 	"sys\bin\Videoteleng.dll"
 file=\epoc32\release\ARMV5\urel\cscallctrl.dll 	"sys\bin\cscallctrl.dll"
 file=\epoc32\release\ARMV5\urel\vtlogger.dll 	"sys\bin\vtlogger.dll"
 data=\epoc32\data\Z\System\install\videoteleng_stub.sis 	"system\install\videoteleng_stub.sis"
@@ -3373,26 +3190,18 @@ data=\epoc32\data\Z\PRIVATE\10003A3F\APPS\Vm_reg.rsc 	"Private\10003a3f\apps\Vm_
 data=\epoc32\data\Z\System\install\vm_stub.sis 	"System\Install\vm_stub.sis"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, GSVoiceRecorderPlugin.dll , GSVoiceRecorderPlugin.dll ) 
 file=\epoc32\release\ARMV5\urel\VoicerecorderUtils.DLL 	"sys\bin\VoicerecorderUtils.DLL"
-file=\epoc32\release\ARMV5\urel\VoicerecorderRecview.DLL 	"sys\bin\VoicerecorderRecview.DLL"
 file=\epoc32\release\ARMV5\urel\NewService.DLL 	"sys\bin\NewService.DLL"
 data=\epoc32\data\Z\resource\apps\GSVoiceRecorderPlugin.mif 	"resource\apps\GSVoiceRecorderPlugin.mif"
 data=\epoc32\data\Z\Private\100058CA\backup_registration.xml 	"private\100058CA\backup_registration.xml"
 data=\epoc32\data\Z\System\Install\VoiceRecorder_stub.SIS 	"System\install\VoiceRecorder_stub.SIS"
 data=\epoc32\data\Z\resource\apps\voiceui.mif 	"resource\apps\voiceui.mif"
 file=\epoc32\release\ARMV5\urel\voiceUiRecognition.dll 	"sys\bin\voiceUiRecognition.dll"
-file=\epoc32\release\ARMV5\urel\vuivoicerecognition.exe 	"sys\bin\vuivoicerecognition.exe" 
-data=\epoc32\data\Z\resource\apps\vuivoicerecognition_AIF.MIF 	"resource\apps\vuivoicerecognition_aif.mif" 
-data=\epoc32\data\Z\PRIVATE\10003A3F\APPS\vuivoicerecognition_reg.rsc 	"Private\10003a3f\apps\vuivoicerecognition_reg.rsc" 
 data=\epoc32\release\ARMV5\urel\z\system\sounds\digital\NameDiallerStartTone.wav 	"System\sounds\digital\NameDiallerStartTone.wav"
 data=\epoc32\release\ARMV5\urel\z\system\sounds\digital\namediallerconfirmtone.wav 	"System\sounds\digital\namediallerconfirmtone.wav"
 data=\epoc32\release\ARMV5\urel\z\system\sounds\digital\btnamediallerstarttone.wav 	"System\sounds\digital\btnamediallerstarttone.wav"
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, aiwpbkinfoviewprovider.dll , aiwpbkinfoviewprovider.dll ) 
-file=\epoc32\release\ARMV5\urel\pbkinfoview.dll 	"sys\bin\pbkinfoview.dll"
 file=\epoc32\release\ARMV5\urel\voipeventlog.dll 	"sys\bin\voipeventlog.dll"
 file=\epoc32\release\ARMV5\urel\voipxmlprocessor.dll 	"sys\bin\voipxmlprocessor.dll"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  voipprovrec.dll ,  voipprovrec.dll ) 
-file=\epoc32\release\ARMV5\urel\voipprovisioningapp.exe 	"sys\bin\voipprovisioningapp.exe" 
-data=\epoc32\data\Z\PRIVATE\10003A3F\APPS\voipprovisioningapp_reg.rsc 	"Private\10003a3f\import\apps\voipprovisioningapp_reg.rsc" 
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, vrec.dll , vrec.dll ) 
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  vtmediatorplugin.dll ,  vtmediatorplugin.dll ) 
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, WallpaperAdapter.dll , WallpaperAdapter.dll ) 
@@ -3431,8 +3240,6 @@ __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins
 data=\epoc32\data\Z\private\10282BC4\rules\keyevent.rul 	"private\10282BC4\rules\keyevent.rul"
 data=\epoc32\data\Z\private\10282BC4\rules\keyincall.rul 	"private\10282BC4\rules\keyincall.rul"
 data=\epoc32\data\Z\private\10282BC4\rules\keyinfmtx.rul 	"private\10282BC4\rules\keyinfmtx.rul"
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  aidevstaplg.dll ,  aidevstaplg.dll ) 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, aiprofileplugin.dll , aiprofileplugin.dll ) 
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, aisatplugin.dll , aisatplugin.dll ) 
 data=\epoc32\data\Z\System\install\SatPlugin_stub.sis 	"System\Install\SatPlugin_stub.sis"
 file=\epoc32\release\ARMV5\urel\aiwdialdata.dll 	"sys\bin\aiwdialdata.dll"
@@ -3605,7 +3412,7 @@ file=\epoc32\release\ARMV5\urel\AsxParser.dll 	"sys\bin\AsxParser.dll"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  audiofetcher.dll ,  audiofetcher.dll ) 
 data=\epoc32\data\Z\resource\apps\audiofetcher.mif 	"resource\apps\audiofetcher.mif"
 REM AVKON
-file=\epoc32\release\ARMV5\urel\avkon.dll 	"sys\bin\avkon.dll"
+file=\epoc32\release\ARMV5\urel\stem_avkon.dll 	"sys\bin\avkon.dll"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, akninit.dll , akninit.dll ) 
 file=\epoc32\release\ARMV5\urel\aknnotify.dll 	"sys\bin\aknnotify.dll"
 file=\epoc32\release\ARMV5\urel\aknnotifyplugin.dll 	"sys\bin\aknnotifyplugin.dll"
@@ -3657,7 +3464,6 @@ __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins
 data=\epoc32\data\Z\resource\apps\BTMouseBitMaps.mbm 	"resource\apps\BTMouseBitMaps.mbm"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, btmonobearer.dll , btmonobearer.dll ) 
 file=\epoc32\release\ARMV5\urel\atcodec.dll 	"sys\bin\atcodec.dll"
-file=\epoc32\release\ARMV5\urel\BTMonoCmdHandler.dll 	"sys\bin\BTMonoCmdHandler.dll"
 REM Bluetooth notifiers library
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, btnotifwrapper.dll , btnotifwrapper.dll ) 
 REM Bluetooth SAP ECom Plugin
@@ -3672,12 +3478,8 @@ __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins
 REM CallUI Engine
 REM Enabler for exlipsing ROM binaries
 data=\epoc32\data\Z\System\install\callui_stub.sis 	"system\install\callui_stub.sis"
-file=\epoc32\release\ARMV5\urel\CAEENGINE.DLL 	"sys\bin\CAEENGINE.DLL"
 file=\epoc32\release\ARMV5\urel\ASYNCHFSQ.DLL 	"sys\bin\ASYNCHFSQ.DLL"
 file=\epoc32\release\ARMV5\urel\CAESTILLCONVERTER.DLL 	"sys\bin\CAESTILLCONVERTER.DLL"
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, CAMCCONTROLLER.DLL , CAMCCONTROLLER.DLL ) 
-file=\epoc32\release\ARMV5\urel\CAMC3GPSINK.DLL 	"sys\bin\CAMC3GPSINK.DLL"
-file=\epoc32\release\ARMV5\urel\CAMCMEDIARECORDER.DLL 	"sys\bin\CAMCMEDIARECORDER.DLL"
 file=\epoc32\release\ARMV5\urel\CBSSERVER.EXE 	"sys\bin\CBSSERVER.EXE"
 file=\epoc32\release\ARMV5\urel\CBSCLIENT.DLL 	"sys\bin\CBSCLIENT.DLL"
 file=\epoc32\release\ARMV5\urel\CBSMCNCLIENT.DLL 	"sys\bin\CBSMCNCLIENT.DLL"
@@ -3734,7 +3536,6 @@ file=\epoc32\release\ARMV5\urel\commondialogs.dll 	"sys\bin\commondialogs.dll"
 data=\epoc32\data\Z\resource\apps\commondialogs.mif 	"resource\apps\commondialogs.mif"
 file=\epoc32\release\ARMV5\urel\commonui.dll 	"sys\bin\commonui.dll"
 file=\epoc32\release\ARMV5\urel\commonuinpdapiloader.dll 	"sys\bin\commonuinpdapiloader.dll"
-file=\epoc32\release\ARMV5\urel\commonuimpengineapiloader.dll 	"sys\bin\commonuimpengineapiloader.dll"
 REM binaries
 file=\epoc32\release\ARMV5\urel\commsdatstartup.exe 	"Sys\Bin\commsdatstartup.exe"  
 file=\epoc32\release\ARMV5\urel\commsdatcreator.dll 	"sys\bin\commsdatcreator.dll"
@@ -3779,7 +3580,6 @@ __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins
 file=\epoc32\release\ARMV5\urel\CookieManager.dll 	"sys\bin\CookieManager.dll"
 file=\epoc32\release\ARMV5\urel\CookieServer.exe 	"sys\bin\CookieServer.exe"
 data=\epoc32\data\z\private\101F8530\CookieGroup.xml 	"private\101F8530\CookieGroup.xml"
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  csplugin.dll ,  csplugin.dll ) 
 data=\epoc32\data\Z\System\install\csplugin_stub.sis 	"System\Install\csplugin_stub.sis"
 file=\epoc32\release\ARMV5\urel\CTSecDlgs.dll 	"sys\bin\CTSecDlgs.dll"
 file=\epoc32\release\ARMV5\urel\CTSecDialogImpl.dll 	"sys\bin\CTSecDialogImpl.dll"
@@ -3790,7 +3590,6 @@ data=\epoc32\data\Z\private\101F6CFE\backup_registration.xml 	"private\101F6CFE\
 file=\epoc32\release\ARMV5\urel\DBRECOVERY.EXE 	"sys\bin\DBRECOVERY.EXE"
 file=\epoc32\release\ARMV5\urel\dcmoclient.dll 	"sys\bin\dcmoclient.dll"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, DeflateFilter.dll , DeflateFilter.dll ) 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  devdiagaudioplugin.dll ,  devdiagaudioplugin.dll ) 
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  devdiagbatterychargercabletestplugin.dll ,  devdiagbatterychargercabletestplugin.dll ) 
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  devdiagbrowserplugin.dll ,  devdiagbrowserplugin.dll ) 
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  devdiagconnectivitysuiteplugin.dll ,  devdiagconnectivitysuiteplugin.dll ) 
@@ -3809,11 +3608,8 @@ __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  devdiagservicessuiteplugin.dll ,  devdiagservicessuiteplugin.dll ) 
 data=\epoc32\data\Z\resource\devdiagservicessuitepluginrsc.rsc 	"resource\devdiagservicessuitepluginrsc.rsc"
 data=\epoc32\data\Z\resource\apps\devdiagservicessuiteplugin.mif 	"resource\apps\devdiagservicessuiteplugin.mif"
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  devdiagspeakerplugin.dll ,  devdiagspeakerplugin.dll ) 
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  devdiagtoplevelsuiteplugin.dll ,  devdiagtoplevelsuiteplugin.dll ) 
 data=\epoc32\data\Z\resource\devdiagtoplevelsuitepluginrsc.rsc 	"resource\devdiagtoplevelsuitepluginrsc.rsc"
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  DevDiagUSBCableTestPlugin.dll ,  DevDiagUSBCableTestPlugin.dll ) 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  devdiagvibrateplugin.dll ,  devdiagvibrateplugin.dll ) 
 file=\epoc32\release\ARMV5\urel\devenccommonutils.dll 	"sys\bin\devenccommonutils.dll"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, DevEncRfsPlugin.dll , DevEncRfsPlugin.dll ) 
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, Pk5Recognizer.dll , Pk5Recognizer.dll ) 
@@ -3873,12 +3669,6 @@ file=\epoc32\release\ARMV5\urel\RoapHandler.DLL 	"sys\bin\RoapHandler.DLL"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, HTTPFilterDRM.dll , HTTPFilterDRM.dll ) 
 data=\epoc32\data\Z\Private\101F51F2\backup_registration.xml 	"PRIVATE\101F51F2\backup_registration.xml"
 data=\epoc32\data\Z\System\Install\OmaDrm_Stub.SIS 	"system\install\OmaDrm_Stub.SIS"
-file=\epoc32\release\ARMV5\urel\DRMENCRYPTOR.exe 	"sys\bin\DRMENCRYPTOR.exe" 
-auto-bitmap=\epoc32\data\Z\resource\apps\DRMEncryptor.mbm 	resource\apps\DRMEncryptor.mbm
-data=\epoc32\data\Z\resource\apps\DRMEncryptor.mif 	"resource\apps\DRMEncryptor.mif"
-data=\epoc32\data\Z\resource\apps\DRMENCRYPTOR_AIF.MIF 	"resource\apps\DRMENCRYPTOR_aif.mif" 
-data=\epoc32\data\Z\PRIVATE\10003A3F\APPS\DRMENCRYPTOR_reg.rsc 	"Private\10003a3f\apps\DRMENCRYPTOR_reg.rsc" 
-data=\epoc32\data\Z\resource\apps\drmencryptor.rsc 	"resource\apps\drmencryptor.rsc"
 file=\epoc32\release\ARMV5\urel\DRMHelper.dll 	"sys\bin\DRMHelper.dll"
 file=\epoc32\release\ARMV5\urel\DRMLicenseManager.DLL 	"sys\bin\DRMLicenseManager.DLL"
 file=\epoc32\release\ARMV5\urel\DRMLicenseChecker.DLL 	"sys\bin\DRMLicenseChecker.DLL"
@@ -3906,7 +3696,6 @@ file=\epoc32\release\ARMV5\urel\dunatext.dll 	"sys\bin\dunatext.dll"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, dunclient.dll , dunclient.dll ) 
 file=\epoc32\release\ARMV5\urel\dunir.dll 	"sys\bin\dunir.dll"
 file=\epoc32\release\ARMV5\urel\dunserver.exe 	"sys\bin\dunserver.exe"
-file=\epoc32\release\ARMV5\urel\dunusb.dll 	"sys\bin\dunusb.dll"
 file=\epoc32\release\ARMV5\urel\dunutils.dll 	"sys\bin\dunutils.dll"
 file=\epoc32\release\ARMV5\urel\eapol.dll 	"sys\bin\Eapol.dll"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  eapsim.dll ,  eapsim.dll ) 
@@ -3926,25 +3715,15 @@ file=\epoc32\release\ARMV5\urel\eikcoctl.dll 	"sys\bin\eikcoctl.dll"
 file=\epoc32\release\ARMV5\urel\eikdlg.dll 	"sys\bin\eikdlg.dll"
 file=\epoc32\release\ARMV5\urel\eikcdlg.dll 	"sys\bin\eikcdlg.dll"
 data=\epoc32\data\Z\Resource\eikcdlg.rsc 	"resource\eikcdlg.rsc"
-file=\epoc32\release\ARMV5\urel\eiksrvui.dll 	"sys\bin\eiksrvui.dll"
+file=\epoc32\release\ARMV5\urel\stem_eiksrvui.dll 	"sys\bin\eiksrvui.dll"
 file=\epoc32\release\ARMV5\urel\eikalert.dll 	"sys\bin\eikalert.dll"
 file=\epoc32\release\ARMV5\urel\econseik.dll 	"sys\bin\econs.dll" uid3=0x100039e7
-file=\epoc32\release\ARMV5\urel\MMDataSourceFactory.dll 	"sys\bin\MMDataSourceFactory.dll"
-file=\epoc32\release\ARMV5\urel\StreamControlCustomCommands.dll 	"sys\bin\StreamControlCustomCommands.dll"
-file=\epoc32\release\ARMV5\urel\CacheSource.dll 	"sys\bin\CacheSource.dll"
 file=\epoc32\release\ARMV5\urel\DataSourceConfigIntfc.dll 	"sys\bin\DataSourceConfigIntfc.dll"
-file=\epoc32\release\ARMV5\urel\EnhancedMediaClient.dll 	"sys\bin\EnhancedMediaClient.dll"
 file=\epoc32\release\ARMV5\urel\TransferRateMonitor.dll 	"sys\bin\TransferRateMonitor.dll"
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, ProgDLSource.dll , ProgDLSource.dll ) 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, DataBufferSource.DLL , DataBufferSource.DLL ) 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, FileSource.DLL , FileSource.DLL ) 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, DescriptorDataSource.DLL , DescriptorDataSource.DLL ) 
 data=\epoc32\data\Z\System\install\WMA_AudCon_stub.sis 	"System\Install\WMA_AudCon_stub.sis"
 data=\epoc32\data\Z\System\install\EnhancedMediaClient_Stub.SIS 	"System\Install\EnhancedMediaClient_Stub.SIS"
 file=\epoc32\release\ARMV5\urel\DOSENPOLICY.DLL 	"sys\bin\DOSENPOLICY.DLL"
 data=\epoc32\data\Z\System\install\DosEnPolicy_stub.sis 	"system\install\DosEnPolicy_stub.sis"
-data=\epoc32\data\Z\resource\apps\Equalizer.mif 	"resource\apps\Equalizer.mif"
-file=\epoc32\release\ARMV5\urel\Equalizer.dll 	"sys\bin\Equalizer.dll"
 file=\epoc32\release\ARMV5\urel\extendedconnpref.dll 	"sys\bin\extendedconnpref.dll"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, extendedconnprefecom.dll , extendedconnprefecom.dll ) 
 REM Favourites Engine
@@ -4025,7 +3804,6 @@ __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins
 data=\epoc32\data\Z\resource\apps\GSOpticalJoystickPlugin.mif 	"resource\apps\GSOpticalJoystickPlugin.mif"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  GSPDataAccessPointPlugin.dll ,  GSPDataAccessPointPlugin.dll ) 
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  GSPDataConnectionPlugin.dll ,  GSPDataConnectionPlugin.dll ) 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  GSPDataHSDPAPlugin.dll ,  GSPDataHSDPAPlugin.dll ) 
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  GSPDataPlugin.dll ,  GSPDataPlugin.dll ) 
 data=\epoc32\data\Z\resource\apps\GSPDataPlugin.mif 	"resource\apps\GSPDataPlugin.mif"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  GSPowerSavingQueryPlugin.dll ,  GSPowerSavingQueryPlugin.dll ) 
@@ -4318,21 +4096,15 @@ REM MISSING data=\epoc32\data\Z\System\install\tagcreator_stub.sis       system\
 REM MISSING data=\epoc32\data\Z\System\install\geotagger_stub.sis       system\install\geotagger_stub.sis
 REM MISSING data=\epoc32\data\Z\System\install\geoconverter_stub.sis       system\install\geoconverter_stub.sis
 file=\epoc32\release\ARMV5\urel\MGFetch.dll 	"sys\bin\MGFetch.dll"
-file=\epoc32\release\ARMV5\urel\MediaFileList.dll 	"sys\bin\MediaFileList.dll"
-data=\epoc32\data\Z\resource\apps\mediafilelist.mif 	"resource\apps\mediafilelist.mif"
 file=\epoc32\release\ARMV5\urel\MetaDataUtility.dll 	"sys\bin\MetaDataUtility.dll"
 file=\epoc32\release\ARMV5\urel\3GPExtParser.dll 	"sys\bin\3GPExtParser.dll"
 data=\epoc32\data\Z\Resource\TopCharacterSet.rsc 	"resource\TopCharacterSet.rsc"
 data=\epoc32\data\Z\System\install\metadata_stub.sis 	"System\Install\metadata_stub.sis"
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, mmfaudiotonecontroller.dll , mmfaudiotonecontroller.dll ) 
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, recrt.dll , recrt.dll ) 
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, MMKeyBearer.dll , MMKeyBearer.dll ) 
 data=\epoc32\data\Z\System\install\mmmtpdpstub.sis 	"System\install\mmmtpdpstub.sis"
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, mediamtpdataprovider.dll , mediamtpdataprovider.dll ) 
 data=\epoc32\data\Z\resource\mtp\10207C4B.rsc 	"resource\mtp\10207C4B.rsc" 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, abstractmediamtpdataprovider.dll , abstractmediamtpdataprovider.dll ) 
 data=\epoc32\data\Z\resource\mtp\10207C53.rsc 	"resource\mtp\10207C53.rsc" 
-file=\epoc32\release\ARMV5\urel\mmmtpdprequestprocessor.dll 	"sys\bin\mmmtpdprequestprocessor.dll"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  modematplugin.dll ,  modematplugin.dll ) 
 file=\epoc32\release\ARMV5\urel\mpm.dll 	"sys\bin\mpm.dll"
 file=\epoc32\release\ARMV5\urel\mpmdefaultconnection.dll 	"sys\bin\mpmdefaultconnection.dll"
@@ -4345,14 +4117,10 @@ file=\epoc32\release\ARMV5\urel\mpxalbumartutility.dll 	"sys\bin\mpxalbumartutil
 file=\epoc32\release\ARMV5\urel\mpxcollectionutility.dll 	"sys\bin\mpxcollectionutility.dll"
 file=\epoc32\release\ARMV5\urel\mpxcollectionserver.exe 	"sys\bin\mpxcollectionserver.exe"
 file=\epoc32\release\ARMV5\urel\mpxcollectionengine.dll 	"sys\bin\mpxcollectionengine.dll"
-file=\epoc32\release\ARMV5\urel\mpxcollectionhelper.dll 	"sys\bin\mpxcollectionhelper.dll"
 file=\epoc32\release\ARMV5\urel\mpxcommon.dll 	"sys\bin\mpxcommon.dll"
 data=\epoc32\data\Z\Private\101ffc02\backup_registration.xml 	"private\101ffc02\backup_registration.xml"
-file=\epoc32\release\ARMV5\urel\mpxharvesterserver.exe 	"sys\bin\mpxharvesterserver.exe"
-file=\epoc32\release\ARMV5\urel\mpxfilehandler.dll 	"sys\bin\mpxfilehandler.dll"
 file=\epoc32\release\ARMV5\urel\mpxharvesterutility.dll 	"sys\bin\mpxharvesterutility.dll"
 file=\epoc32\release\ARMV5\urel\mpxcollectionmediator.dll 	"sys\bin\mpxcollectionmediator.dll"
-file=\epoc32\release\ARMV5\urel\mpxmetadataextractor.dll 	"sys\bin\mpxmetadataextractor.dll" 
 file=\epoc32\release\ARMV5\urel\mpxplaybackengine.dll 	"sys\bin\mpxplaybackengine.dll"
 file=\epoc32\release\ARMV5\urel\mpxplaybackserver.exe 	"sys\bin\mpxplaybackserver.exe"
 file=\epoc32\release\ARMV5\urel\mpxplaybackutility.dll 	"sys\bin\mpxplaybackutility.dll"
@@ -4387,27 +4155,8 @@ file=\epoc32\release\armv5\urel\mulmodelutility.dll 	"sys\bin\mulmodelutility.dl
 file=\epoc32\release\armv5\urel\muldatamodel.dll 	"sys\bin\muldatamodel.dll"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  mulsliderwidget.dll ,  mulsliderwidget.dll ) 
 data=\epoc32\data\Z\resource\apps\mulsliderwidget.mif 	"resource\apps\mulsliderwidget.mif"
-file=\epoc32\release\ARMV5\urel\mmccinterface.dll 	"sys\bin\mmccinterface.dll"
-file=\epoc32\release\ARMV5\urel\mmccjitterbuffer.dll 	"sys\bin\mmccjitterbuffer.dll"
 file=\epoc32\release\ARMV5\urel\mmccqoscontroller.dll 	"sys\bin\mmccqoscontroller.dll"
-file=\epoc32\release\ARMV5\urel\mmccmultiplexer.dll 	"sys\bin\mmccmultiplexer.dll"
-file=\epoc32\release\ARMV5\urel\mmccsubcontroller.dll 	"sys\bin\mmccsubcontroller.dll"
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, mmcccontroller.dll , mmcccontroller.dll ) 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, mmccrtpsourcesink.dll , mmccrtpsourcesink.dll ) 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, mmccamrplformat.dll , mmccamrplformat.dll ) 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, mmccg711plformat.dll , mmccg711plformat.dll ) 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, mmccredplformat.dll , mmccredplformat.dll ) 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, mmccg729plformat.dll , mmccg729plformat.dll ) 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, mmccilbcplformat.dll , mmccilbcplformat.dll ) 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, mmccdtmfplformat.dll , mmccdtmfplformat.dll ) 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, mmccanyplformat.dll , mmccanyplformat.dll ) 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, mmcch263plformat.dll , mmcch263plformat.dll ) 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, mmccavcplformat.dll , mmccavcplformat.dll ) 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, mmccfilesourcesink.dll , mmccfilesourcesink.dll ) 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, mmccvideosourcesink.dll , mmccvideosourcesink.dll ) 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, mmccanysourcesink.dll , mmccanysourcesink.dll ) 
 data=\epoc32\data\Z\System\install\multimediacommscontroller_stub.sis 	"System\Install\multimediacommscontroller_stub.sis"
-file=\epoc32\release\ARMV5\urel\mceserver.exe 	"sys\bin\mceserver.exe"
 file=\epoc32\release\ARMV5\urel\mceclient.dll 	"sys\bin\mceclient.dll"
 file=\epoc32\release\ARMV5\urel\fcpluginengine.dll 	"sys\bin\fcpluginengine.dll"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, fctbcp.dll , fctbcp.dll ) 
@@ -4429,10 +4178,7 @@ __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, NATTraversalController.dll , NATTraversalController.dll ) 
 data=\epoc32\data\Z\System\Install\altair-engine-stub.sis 	"System\Install\altair-engine-stub.sis"
 file=\epoc32\release\ARMV5\urel\ncdengine_20019119.dll 	"sys\bin\ncdengine_20019119.dll"
-file=\epoc32\release\ARMV5\urel\ncdserver_20019119.exe 	"sys\bin\ncdserver_20019119.exe"
 file=\epoc32\release\ARMV5\urel\ncdutils_20019119.dll 	"sys\bin\ncdutils_20019119.dll"
-file=\epoc32\release\ARMV5\urel\ncddevicemgmt_20019119.dll 	"sys\bin\ncddevicemgmt_20019119.dll"
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, ncdproxy_20019119.dll , ncdproxy_20019119.dll ) 
 data=\epoc32\data\Z\Private\20019119\backup_registration.xml 	"PRIVATE\20019119\backup_registration.xml"
 file=\epoc32\release\ARMV5\urel\NETWORKHANDLING.DLL 	"sys\bin\NETWORKHANDLING.DLL"
 REM Enabler for exlipsing ROM binaries
@@ -4618,11 +4364,8 @@ file=\epoc32\release\ARMV5\urel\PhoneServer.exe 	"sys\bin\PhoneServer.exe"
 data=\epoc32\data\Z\System\install\PhoneServer_stub.sis 	"system\install\PhoneServer_stub.sis"
 REM redefined DATAZ_ as \epoc32\data\Z
 data=\epoc32\data\Z\Private\10000850\backup_registration.xml 	"PRIVATE\10000850\backup_registration.xml"
-file=\epoc32\release\ARMV5\urel\pictbridge.dll 	"sys\bin\pictbridge.dll"
 data=\epoc32\data\Z\resource\dps.RSC 	"resource\dps.RSC"
 data=\epoc32\data\Z\System\install\playbackhelper_stub.sis 	"system\install\playbackhelper_stub.sis"
-file=\epoc32\release\ARMV5\urel\playbackhelper.dll 	"sys\bin\playbackhelper.dll"
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  playlistrecognizer.dll  ,  playlistrecognizer.dll  ) 
 data=\epoc32\data\Z\System\install\playlistrecognizer_stub.sis 	"system\install\playlistrecognizer_stub.sis"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, pmadapter.dll , pmadapter.dll ) 
 file=\epoc32\release\ARMV5\urel\PolicyEngine.dll 	"sys\bin\PolicyEngine.dll"
@@ -4640,16 +4383,11 @@ __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins
 data=\epoc32\data\Z\system\install\presencefwsimpleadptstub.sis 	"system\install\presencefwsimpleadptstub.sis"
 data=\epoc32\data\z\private\10202BE9\1028224B_s60.cre 	"private\10202BE9\1028224B.cre"
 data=\epoc32\data\z\private\10202BE9\10282266_s60.cre 	"private\10202BE9\10282266.cre"
-file=\epoc32\release\ARMV5\urel\profileengine.dll 	"sys\bin\profileengine.dll"
 file=\epoc32\release\ARMV5\urel\profileeng.dll 	"sys\bin\profileeng.dll"
 file=\epoc32\release\ARMV5\urel\profilescheduleevent.exe 	"sys\bin\profilescheduleevent.exe"
 data=\epoc32\release\ARMV5\urel\z\system\sounds\digital\No_Sound.wav 	"resource\No_Sound.wav"
 data=\epoc32\data\Z\Private\100058F8\backup_registration.xml 	"private\100058F8\backup_registration.xml"
-file=\epoc32\release\ARMV5\urel\ProfileSettingsMonitor.exe 	"sys\bin\ProfileSettingsMonitor.exe"
 data=\epoc32\data\Z\System\install\ProfileSettingsMonitor_Stub.SIS 	"System\Install\ProfileSettingsMonitor_Stub.SIS"
-file=\epoc32\release\ARMV5\urel\ProgressiveDownloadUtility.dll 	"sys\bin\ProgressiveDownloadUtility.dll"
-file=\epoc32\release\ARMV5\urel\PDProperties.dll 	"sys\bin\PDProperties.dll"
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, ProgressiveDownloadSource.dll , ProgressiveDownloadSource.dll ) 
 data=\epoc32\data\Z\System\install\ProgressiveDownload_Stub.SIS 	"System\Install\ProgressiveDownload_Stub.SIS"
 file=\epoc32\release\ARMV5\urel\ProvisioningEngine.dll 	"sys\bin\ProvisioningEngine.dll"
 file=\epoc32\release\ARMV5\urel\ProvisioningParser.dll 	"sys\bin\ProvisioningParser.dll"
@@ -4686,29 +4424,16 @@ data=\epoc32\data\Z\resource\apps\psuigsplugin.mif 	"resource\apps\psuigsplugin.
 file=\epoc32\release\ARMV5\urel\ptiengine.dll 	"sys\bin\ptiengine.dll"
 data=\epoc32\data\Z\resource\ptiengine.rsc 	"resource\ptiengine.rsc"
 file=\epoc32\release\ARMV5\urel\QtCore.dll 	"sys\bin\QtCore.dll" UNPAGED
-file=\epoc32\release\ARMV5\urel\QtGui.dll 	"sys\bin\QtGui.dll"
-file=\epoc32\release\ARMV5\urel\QtOpenVG.dll 	"sys\bin\QtOpenVG.dll"
-file=\epoc32\release\ARMV5\urel\QtSvg.dll 	"sys\bin\QtSvg.dll"
 file=\epoc32\release\ARMV5\urel\QtSql.dll 	"sys\bin\QtSql.dll"
 file=\epoc32\release\ARMV5\urel\QtXml.dll 	"sys\bin\QtXml.dll"
 file=\epoc32\release\ARMV5\urel\QtNetwork.dll 	"sys\bin\QtNetwork.dll"
 file=\epoc32\release\ARMV5\urel\QtScript.dll 	"sys\bin\QtScript.dll"
 file=\epoc32\release\ARMV5\urel\QtTest.dll 	"sys\bin\QtTest.dll"
-file=\epoc32\release\ARMV5\urel\QtWebKit.dll 	"sys\bin\QtWebKit.dll"
-file=\epoc32\release\ARMV5\urel\phonon.dll 	"sys\bin\phonon.dll"
-file=\epoc32\release\ARMV5\urel\QtMultimedia.dll 	"sys\bin\QtMultimedia.dll"
 file=\epoc32\release\ARMV5\urel\QtXmlPatterns.dll 	"sys\bin\QtXmlPatterns.dll"
-file=\epoc32\release\ARMV5\urel\qgif.dll 	"sys\bin\qgif.dll"
-file=\epoc32\release\ARMV5\urel\qico.dll 	"sys\bin\qico.dll"
-file=\epoc32\release\ARMV5\urel\qjpeg.dll 	"sys\bin\qjpeg.dll"
-file=\epoc32\release\ARMV5\urel\qmng.dll 	"sys\bin\qmng.dll"
-file=\epoc32\release\ARMV5\urel\qsvg.dll 	"sys\bin\qsvg.dll"
-file=\epoc32\release\ARMV5\urel\qtiff.dll 	"sys\bin\qtiff.dll"
 file=\epoc32\release\ARMV5\urel\qcncodecs.dll 	"sys\bin\qcncodecs.dll"
 file=\epoc32\release\ARMV5\urel\qjpcodecs.dll 	"sys\bin\qjpcodecs.dll"
 file=\epoc32\release\ARMV5\urel\qkrcodecs.dll 	"sys\bin\qkrcodecs.dll"
 file=\epoc32\release\ARMV5\urel\qtwcodecs.dll 	"sys\bin\qtwcodecs.dll"
-file=\epoc32\release\ARMV5\urel\qsvgicon.dll 	"sys\bin\qsvgicon.dll"
 REM MISSING file=\epoc32\release\ARMV5\urel\qaudio.dll            sys\bin\qaudio.dll
 REM MISSING file=\epoc32\release\ARMV5\urel\qvggraphicssystem.dll sys\bin\qvggraphicssystem.dll
 file=\epoc32\release\ARMV5\urel\qts60plugin_5_0.dll 	"sys\bin\qts60plugin_5_0.dll"
@@ -4728,10 +4453,7 @@ REM MISSING data=\epoc32\data\qt\qtlibspluginstubs\qaudio.qtplugin resource\qt\p
 data=\epoc32\data\z\resource\qt\plugins\graphicssystems\qvggraphicssystem.qtplugin 	"resource\qt\plugins\graphicssystems\qvggraphicssystem.qtplugin"
 data=\epoc32\data\Z\System\install\qt_stub.sis 	"System\Install\qt_stub.sis"
 data=\epoc32\data\Z\System\install\qtwebkit_stub.sis 	"System\Install\qtwebkit_stub.sis"
-file=\epoc32\release\ARMV5\urel\Radio_Utility.dll 	"sys\bin\Radio_Utility.dll"
 data=\epoc32\data\Z\System\install\radioutility_stub.sis 	"system\install\radioutility_stub.sis"
-file=\epoc32\release\ARMV5\urel\RadioSession.dll 	"sys\bin\RadioSession.dll"
-file=\epoc32\release\ARMV5\urel\RadioServer.exe 	"sys\bin\RadioServer.exe"
 file=\epoc32\release\ARMV5\urel\RECENTURLSTORE.DLL 	"sys\bin\RECENTURLSTORE.DLL"
 file=\epoc32\release\ARMV5\urel\RLockSettings.dll 	"sys\bin\RLockSettings.dll"
 file=\epoc32\release\ARMV5\urel\RLock.exe 	"sys\bin\RLock.exe"
@@ -4779,7 +4501,6 @@ file=\epoc32\release\ARMV5\urel\rsfwmountconfbc.dll 	"sys\bin\rsfwmountconfbc.dl
 file=\epoc32\release\ARMV5\urel\rtpservice.dll 	"sys\bin\rtpservice.dll"
 file=\epoc32\release\ARMV5\urel\rtpstppacket.dll 	"sys\bin\rtpstppacket.dll"
 data=\epoc32\data\Z\System\install\rtpstack_stub.sis 	"system\install\rtpstack_stub.sis"
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, S60StreamingSource.dll , S60StreamingSource.dll ) 
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, s60mcpr.dll , s60mcpr.dll ) 
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, bsservice.dll , bsservice.dll ) 
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, cpclient.dll , cpclient.dll ) 
@@ -4816,12 +4537,7 @@ __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  SendDataCmd.dll ,  SendDataCmd.dll ) 
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  ReceiveDataCmd.dll ,  ReceiveDataCmd.dll ) 
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  GetChannelStatusCmd.dll ,  GetChannelStatusCmd.dll ) 
-file=\epoc32\release\ARMV5\urel\SATUI.exe 	"sys\bin\SATUI.exe" 
-data=\epoc32\data\Z\resource\apps\Satui_AIF.MIF 	"resource\apps\Satui_aif.mif" 
-auto-bitmap=\epoc32\data\Z\resource\apps\Satui.mbm 	resource\apps\Satui.mbm
-data=\epoc32\data\Z\resource\apps\Satui.mif 	"resource\apps\Satui.mif"
 file=\epoc32\release\ARMV5\urel\SATSHELLCNTRL.DLL 	"sys\bin\SATSHELLCNTRL.DLL"
-data=\epoc32\data\Z\Private\10003a3f\apps\Satui_reg.rsc 	"private\10003a3f\import\apps\Satui_reg.rsc"
 data=\epoc32\data\Z\System\install\SatApp_stub.sis 	"System\Install\SatApp_stub.sis"
 file=\epoc32\release\ARMV5\urel\SchemeApp.exe 	"sys\bin\SchemeApp.exe" 
 data=\epoc32\data\Z\resource\apps\SchemeApp_AIF.MIF 	"resource\apps\SchemeApp_aif.mif" 
@@ -4836,7 +4552,6 @@ data=\epoc32\data\Z\System\install\secon_stub.sis 	"system\install\secon_stub.si
 data=\epoc32\data\Z\System\install\sconpcconnplugin_stub.sis 	"system\install\sconpcconnplugin_stub.sis"
 data=\epoc32\data\Z\System\install\sconftpplugin_stub.sis 	"system\install\sconftpplugin_stub.sis"
 file=\epoc32\release\ARMV5\urel\catalogspcconnectivityplugin.dll 	"sys\bin\catalogspcconnectivityplugin.dll"
-file=\epoc32\release\ARMV5\urel\sconpcd.dll 	"sys\bin\sconpcd.dll"
 data=\epoc32\data\Z\Private\10202D56\sbeconfig.xml 	"PRIVATE\10202D56\sbeconfig.xml"
 file=\epoc32\release\ARMV5\urel\SCPClient.dll 	"sys\bin\SCPClient.dll"
 file=\epoc32\release\ARMV5\urel\SCPDatabase.dll 	"sys\bin\SCPDatabase.dll"
@@ -4866,7 +4581,6 @@ file=\epoc32\release\ARMV5\urel\SecUi.dll 	"sys\bin\SecUi.dll"
 file=\epoc32\release\ARMV5\urel\SecurityNotifier.dll 	"sys\bin\SecurityNotifier.dll"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, Securitynotifierwrapper.dll , Securitynotifierwrapper.dll ) 
 file=\epoc32\release\ARMV5\urel\SENDUI.DLL 	"sys\bin\Sendui.dll"
-file=\epoc32\release\ARMV5\urel\SenduiDataUtils.dll 	"sys\bin\SenduiDataUtils.dll"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, SendUiWatcher.dll , SendUiWatcher.dll ) 
 file=\epoc32\release\ARMV5\urel\SendUiServiceResolver.exe 	"sys\bin\SendUiServiceResolver.exe"            
 data=\epoc32\data\Z\PRIVATE\10003A3F\APPS\SendUiServiceResolver_reg.rsc 	"Private\10003a3f\import\apps\SendUiServiceResolver_reg.rsc"        
@@ -4892,8 +4606,6 @@ file=\epoc32\release\ARMV5\urel\landmarkservice.dll 	"sys\bin\landmarkservice.dl
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, landmarkprovider.dll , landmarkprovider.dll ) 
 file=\epoc32\release\ARMV5\urel\messagingservice.dll 	"sys\bin\messagingservice.dll"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, messagingprovider.dll , messagingprovider.dll ) 
-file=\epoc32\release\ARMV5\urel\mediamanagementservice.dll 	"sys\bin\mediamanagementservice.dll"
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, mediamanagementprovider.dll , mediamanagementprovider.dll ) 
 file=\epoc32\release\ARMV5\urel\contactservice.dll 	"sys\bin\contactservice.dll"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, contactprovider.dll , contactprovider.dll ) 
 file=\epoc32\release\ARMV5\urel\appmanagerservice.dll 	"sys\bin\appmanagerservice.dll"
@@ -4943,11 +4655,10 @@ data=\epoc32\data\Z\private\100058F4\backup_registration.xml 	"private\100058F4\
 file=\epoc32\release\ARMV5\urel\sanimengine.dll 	"sys\bin\sanimengine.dll"
 file=\epoc32\release\ARMV5\urel\sanimctrl.dll 	"sys\bin\sanimctrl.dll"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  sanimihlplugin.dll ,  sanimihlplugin.dll ) 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  sanimmmfplugin.dll ,  sanimmmfplugin.dll ) 
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  sanimsvgplugin.dll ,  sanimsvgplugin.dll ) 
 file=\epoc32\release\ARMV5\urel\stmgesturefw.dll 	"sys\bin\stmgesturefw.dll"
 data=\epoc32\data\Z\System\install\CenRepStub.sis 	"System\Install\CenRepStub.sis"
-file=\epoc32\release\ARMV5\urel\SVGEngine.dll 	"sys\bin\SVGEngine.dll"
+file=\epoc32\release\ARMV5\urel\stem_SVGEngine.dll 	"sys\bin\SVGEngine.dll"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, Svgrecog.dll , Svgrecog.dll ) 
 file=\epoc32\release\ARMV5\urel\SVGEngineJI.dll 	"sys\bin\SVGEngineJI.dll"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, npsvgtplugin.dll , npsvgtplugin.dll ) 
@@ -5027,18 +4738,12 @@ file=\epoc32\release\ARMV5\urel\usbclasschangeui.exe 	"sys\bin\usbclasschangeui.
 data=\epoc32\data\Z\resource\apps\usbui.mif 	"resource\apps\usbui.mif"
 data=\epoc32\data\Z\resource\apps\usbclasschangeui_AIF.MIF 	"resource\apps\usbclasschangeui_aif.mif" 
 data=\epoc32\data\Z\PRIVATE\10003A3F\APPS\usbclasschangeui_reg.rsc 	"Private\10003a3f\apps\usbclasschangeui_reg.rsc" 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, USBClassChangeUIPlugin.dll , USBClassChangeUIPlugin.dll ) 
-file=\epoc32\release\ARMV5\urel\usbdevcon.exe 	"sys\bin\usbdevcon.exe"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, usblocodplugin.dll , usblocodplugin.dll ) 
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, usbmscpersonality.dll , usbmscpersonality.dll ) 
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, usbobexclasscontroller.dll , usbobexclasscontroller.dll ) 
-file=\epoc32\release\ARMV5\urel\usbotgwatcher.dll 	"sys\bin\usbotgwatcher.dll"
 REM MISSING 	file=\epoc32\release\ARMV5\urel\errrd    						c:\resource\errrd
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, usbremotepersonality.dll , usbremotepersonality.dll ) 
 REM USB UI notifiers ecom plug-in
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, usbuinotif.dll , usbuinotif.dll )   
-file=\epoc32\release\ARMV5\urel\usbavkonnotif.dll 	"sys\bin\usbavkonnotif.dll"
-file=\epoc32\release\ARMV5\urel\usbwatcher.exe 	"sys\bin\usbwatcher.exe"
 file=\epoc32\release\ARMV5\urel\usbwatcher.dll 	"sys\bin\usbwatcher.dll"
 file=\epoc32\release\ARMV5\urel\usbpersonality.dll 	"sys\bin\usbpersonality.dll"
 data=\epoc32\data\Z\private\101F9696\backup_registration.xml 	"private\101F9696\backup_registration.xml"
@@ -5049,12 +4754,9 @@ file=\epoc32\release\ARMV5\urel\SWVG.dll 	"sys\bin\SWVG.dll"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  VibraActionPlugIn.dll ,  VibraActionPlugIn.dll ) 
 file=\epoc32\release\ARMV5\urel\vcxconnectionutility.dll 	"sys\bin\vcxconnectionutility.dll"
 file=\epoc32\release\ARMV5\urel\vcxconnutilpsworker.exe 	"sys\bin\vcxconnutilpsworker.exe"
-file=\epoc32\release\ARMV5\urel\videoplaylistutility.dll 	"sys\bin\videoplaylistutility.dll"
 file=\epoc32\release\ARMV5\urel\CseSchedulerClient.dll 	"sys\bin\CseSchedulerClient.dll"
 file=\epoc32\release\ARMV5\urel\CseSchedulerServer.exe 	"sys\bin\CseSchedulerServer.exe"
 data=\epoc32\data\Z\System\install\vmbx_stub.sis 	"System\Install\vmbx_stub.sis"
-file=\epoc32\release\ARMV5\urel\VoIPJitterBuffer.dll 	"sys\bin\VoIPJitterBuffer.dll"
-file=\epoc32\release\ARMV5\urel\VoIPAudioServer.exe 	"sys\bin\VoIPAudioServer.exe"
 file=\epoc32\release\ARMV5\urel\VoIPAudioSession.dll 	"sys\bin\VoIPAudioSession.dll"
 file=\epoc32\release\ARMV5\urel\VoIPAudioIntfc.dll 	"sys\bin\VoIPAudioIntfc.dll"
 data=\epoc32\data\Z\System\install\VoIPAudioSrvc_Stub.sis 	"System\Install\VoIPAudioSrvc_Stub.sis"
@@ -5246,7 +4948,6 @@ file=\epoc32\release\ARMV5\urel\AsyProxy.dll 	"sys\bin\AsyProxy.dll"
 file=\epoc32\release\ARMV5\urel\accsrvutil.dll 	"sys\bin\accsrvutil.dll"
 file=\epoc32\release\ARMV5\urel\accpolaudiodevicetopology.dll 	"sys\bin\accpolaudiodevicetopology.dll"
 data=\epoc32\data\Z\Private\100012A5\policy\10205030.spd 	"private\100012A5\policy\10205030.spd"
-file=\epoc32\release\ARMV5\urel\AddedDevSoundControlMsgHdlr.dll 	"sys\bin\AddedDevSoundControlMsgHdlr.dll"
 file=\epoc32\release\ARMV5\urel\AddedDevSoundControlProxy.dll 	"sys\bin\AddedDevSoundControlProxy.dll"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, ASYReferencePlugin.dll , ASYReferencePlugin.dll ) 
 file=\epoc32\release\ARMV5\urel\atextclient.dll 	"sys\bin\atextclient.dll"
@@ -5256,22 +4957,14 @@ file=\epoc32\release\ARMV5\urel\atextpluginbase.dll 	"sys\bin\atextpluginbase.dl
 file=\epoc32\release\ARMV5\urel\atext.exe 	"sys\bin\atext.exe"
 file=\epoc32\release\ARMV5\urel\atextcommon.exe 	"sys\bin\atextcommon.exe"
 file=\epoc32\release\ARMV5\urel\AudioOutputControlUtility.dll 	"sys\bin\AudioOutputControlUtility.dll"
-file=\epoc32\release\ARMV5\urel\AudioOutputControlUtilityProxy.dll 	"sys\bin\AudioOutputControlUtilityProxy.dll"
 data=\epoc32\data\Z\System\install\AudioOutputControlUtility_Stub.SIS 	"System\Install\AudioOutputControlUtility_Stub.SIS"
-file=\epoc32\release\ARMV5\urel\AudioInputRouting.dll 	"sys\bin\AudioInputRouting.dll"
-file=\epoc32\release\ARMV5\urel\AudioInputMessageHandler.dll 	"sys\bin\AudioInputMessageHandler.dll"
 file=\epoc32\release\ARMV5\urel\AudioInputProxy.dll 	"sys\bin\AudioInputProxy.dll"
-file=\epoc32\release\ARMV5\urel\AudioOutputRouting.dll 	"sys\bin\AudioOutputRouting.dll"
-file=\epoc32\release\ARMV5\urel\AudioOutputMessageHandler.dll 	"sys\bin\AudioOutputMessageHandler.dll"
 file=\epoc32\release\ARMV5\urel\AudioOutputProxy.dll 	"sys\bin\AudioOutputProxy.dll"
 data=\epoc32\data\Z\System\install\AudioRouting_Stub.SIS 	"System\Install\AudioRouting_Stub.SIS"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, ciextnclientplugin.DLL , ciextnclientplugin.DLL ) 
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, ciextnserverplugin.DLL , ciextnserverplugin.DLL ) 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, ciplatformfactoryplugin.DLL , ciplatformfactoryplugin.DLL ) 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, ciplatformmsghndlrplugin.DLL , ciplatformmsghndlrplugin.DLL ) 
 file=\epoc32\release\ARMV5\urel\CommonDSY.DLL 	"sys\bin\CommonDSY.DLL"
 data=\epoc32\release\ARMV5\urel\Z\private\101f6efa\dosserver.ini 	"private\101f6efa\dosserver.ini"
-file=\epoc32\release\ARMV5\urel\ConfigurationComponentsFactory.dll 	"sys\bin\ConfigurationComponentsFactory.dll"
 data=\epoc32\data\Z\System\install\ConfigurationComponentsFactory_Stub.SIS 	"System\Install\ConfigurationComponentsFactory_Stub.SIS"
 file=\epoc32\release\ARMV5\UREL\libdbus.dll 	"sys\bin\libdbus.dll"
 file=\epoc32\release\ARMV5\UREL\libdbus-utils.dll 	"sys\bin\libdbus-utils.dll"
@@ -5283,57 +4976,13 @@ __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins
 file=\epoc32\release\ARMV5\urel\DosSrv.dll 	"sys\bin\DosSrv.dll"
 file=\epoc32\release\ARMV5\urel\DosServer.exe 	"sys\bin\DosServer.exe"
 file=\epoc32\release\ARMV5\urel\DSClient.dll 	"sys\bin\DSClient.dll"
-file=\epoc32\release\ARMV5\urel\DRMAudioPlayUtility.dll 	"sys\bin\DRMAudioPlayUtility.dll"
-file=\epoc32\release\ARMV5\urel\DRMPlayServer.exe 	"sys\bin\DRMPlayServer.exe"
 data=\epoc32\data\Z\System\install\DRMAudioPlayer_Stub.SIS 	"System\Install\DRMAudioPlayer_Stub.SIS"
 file=\epoc32\release\ARMV5\urel\edidparser.dll 	"sys\bin\edidparser.dll"
-file=\epoc32\release\ARMV5\urel\AudioEqualizerEffect.dll 	"sys\bin\AudioEqualizerEffect.dll"
-file=\epoc32\release\ARMV5\urel\AudioEqualizerMessageHandler.dll 	"sys\bin\AudioEqualizerMessageHandler.dll"
-file=\epoc32\release\ARMV5\urel\AudioEqualizerProxy.dll 	"sys\bin\AudioEqualizerProxy.dll"
-file=\epoc32\release\ARMV5\urel\BassBoostEffect.dll 	"sys\bin\BassBoostEffect.dll"
-file=\epoc32\release\ARMV5\urel\BassBoostMessageHandler.dll 	"sys\bin\BassBoostMessageHandler.dll"
-file=\epoc32\release\ARMV5\urel\BassBoostProxy.dll 	"sys\bin\BassBoostProxy.dll"
-file=\epoc32\release\ARMV5\urel\DistanceAttenuationEffect.dll 	"sys\bin\DistanceAttenuationEffect.dll"
-file=\epoc32\release\ARMV5\urel\DistanceAttenuationMessageHandler.dll 	"sys\bin\DistanceAttenuationMessageHandler.dll"
-file=\epoc32\release\ARMV5\urel\DistanceAttenuationProxy.dll 	"sys\bin\DistanceAttenuationProxy.dll"
 file=\epoc32\release\ARMV5\urel\DopplerBase.dll 	"sys\bin\DopplerBase.dll"
 file=\epoc32\release\ARMV5\urel\EffectBase.dll 	"sys\bin\EffectBase.dll"
-file=\epoc32\release\ARMV5\urel\EnvironmentalReverbEffect.dll 	"sys\bin\EnvironmentalReverbEffect.dll"
-file=\epoc32\release\ARMV5\urel\EnvironmentalReverbMessageHandler.dll 	"sys\bin\EnvironmentalReverbMessageHandler.dll"
-file=\epoc32\release\ARMV5\urel\EnvironmentalReverbProxy.dll 	"sys\bin\EnvironmentalReverbProxy.dll"
-file=\epoc32\release\ARMV5\urel\ListenerDopplerEffect.dll 	"sys\bin\ListenerDopplerEffect.dll"
-file=\epoc32\release\ARMV5\urel\ListenerDopplerMessageHandler.dll 	"sys\bin\ListenerDopplerMessageHandler.dll"
-file=\epoc32\release\ARMV5\urel\ListenerDopplerProxy.dll 	"sys\bin\ListenerDopplerProxy.dll"
-file=\epoc32\release\ARMV5\urel\ListenerLocationEffect.dll 	"sys\bin\ListenerLocationEffect.dll"
-file=\epoc32\release\ARMV5\urel\ListenerLocationMessageHandler.dll 	"sys\bin\ListenerLocationMessageHandler.dll"
-file=\epoc32\release\ARMV5\urel\ListenerLocationProxy.dll 	"sys\bin\ListenerLocationProxy.dll"
-file=\epoc32\release\ARMV5\urel\ListenerOrientationEffect.dll 	"sys\bin\ListenerOrientationEffect.dll"
-file=\epoc32\release\ARMV5\urel\ListenerOrientationMessageHandler.dll 	"sys\bin\ListenerOrientationMessageHandler.dll"
-file=\epoc32\release\ARMV5\urel\ListenerOrientationProxy.dll 	"sys\bin\ListenerOrientationProxy.dll"
 file=\epoc32\release\ARMV5\urel\LocationBase.dll 	"sys\bin\LocationBase.dll"
-file=\epoc32\release\ARMV5\urel\LoudnessEffect.dll 	"sys\bin\LoudnessEffect.dll"
-file=\epoc32\release\ARMV5\urel\LoudnessMessageHandler.dll 	"sys\bin\LoudnessMessageHandler.dll"
-file=\epoc32\release\ARMV5\urel\LoudnessProxy.dll 	"sys\bin\LoudnessProxy.dll"
 file=\epoc32\release\ARMV5\urel\OrientationBase.dll 	"sys\bin\OrientationBase.dll"
-file=\epoc32\release\ARMV5\urel\RoomLevelEffect.dll 	"sys\bin\RoomLevelEffect.dll"
-file=\epoc32\release\ARMV5\urel\RoomLevelMessageHandler.dll 	"sys\bin\RoomLevelMessageHandler.dll"
-file=\epoc32\release\ARMV5\urel\RoomLevelProxy.dll 	"sys\bin\RoomLevelProxy.dll"
-file=\epoc32\release\ARMV5\urel\SourceDopplerEffect.dll 	"sys\bin\SourceDopplerEffect.dll"
-file=\epoc32\release\ARMV5\urel\SourceDopplerMessageHandler.dll 	"sys\bin\SourceDopplerMessageHandler.dll"
-file=\epoc32\release\ARMV5\urel\SourceDopplerProxy.dll 	"sys\bin\SourceDopplerProxy.dll"
-file=\epoc32\release\ARMV5\urel\SourceLocationEffect.dll 	"sys\bin\SourceLocationEffect.dll"
-file=\epoc32\release\ARMV5\urel\SourceLocationMessageHandler.dll 	"sys\bin\SourceLocationMessageHandler.dll"
-file=\epoc32\release\ARMV5\urel\SourceLocationProxy.dll 	"sys\bin\SourceLocationProxy.dll"
-file=\epoc32\release\ARMV5\urel\SourceOrientationEffect.dll 	"sys\bin\SourceOrientationEffect.dll"
-file=\epoc32\release\ARMV5\urel\SourceOrientationMessageHandler.dll 	"sys\bin\SourceOrientationMessageHandler.dll"
-file=\epoc32\release\ARMV5\urel\SourceOrientationProxy.dll 	"sys\bin\SourceOrientationProxy.dll"
-file=\epoc32\release\ARMV5\urel\StereoWideningEffect.dll 	"sys\bin\StereoWideningEffect.dll"
-file=\epoc32\release\ARMV5\urel\StereoWideningMessageHandler.dll 	"sys\bin\StereoWideningMessageHandler.dll"
-file=\epoc32\release\ARMV5\urel\StereoWideningProxy.dll 	"sys\bin\StereoWideningProxy.dll"
 data=\epoc32\data\Z\System\install\Effect_Stub.SIS 	"System\Install\Effect_Stub.SIS"
-file=\epoc32\release\ARMV5\urel\AudioEqualizerUtility.dll 	"sys\bin\AudioEqualizerUtility.dll"
-file=\epoc32\release\ARMV5\urel\EnvironmentalReverbUtility.dll 	"sys\bin\EnvironmentalReverbUtility.dll"
-file=\epoc32\release\ARMV5\urel\StereoWideningUtility.dll 	"sys\bin\StereoWideningUtility.dll"
 data=\epoc32\data\Z\System\install\EffectsPresets_Stub.SIS 	"System\Install\EffectsPresets_Stub.SIS"
 file=\epoc32\release\ARMV5\urel\ExifLib.dll 	"sys\bin\ExifLib.dll" 
 file=\epoc32\release\ARMV5\urel\FrameTable.dll 	"sys\bin\FrameTable.dll"
@@ -5349,7 +4998,6 @@ data=\epoc32\data\Z\System\install\GlobalAudioSettings_Stub.SIS 	"System\Install
 REM HeadsetStatus
 file=\epoc32\release\ARMV5\urel\HeadsetStatus.dll 	"sys\bin\HeadsetStatus.dll"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  hwrmdefaultlighttargetmodifierplugin.dll  ,  hwrmdefaultlighttargetmodifierplugin.dll  ) 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins,  hwrmfmtxwatcherplugin.dll ,  hwrmfmtxwatcherplugin.dll ) 
 file=\epoc32\release\ARMV5\urel\hwrmhapticspluginservice.dll 	"sys\bin\hwrmhapticspluginservice.dll"
 file=\epoc32\release\ARMV5\urel\hwrmhapticsserver.exe 	"sys\bin\hwrmhapticsserver.exe"
 file=\epoc32\release\ARMV5\urel\hwrmhapticspluginmanager.dll 	"sys\bin\hwrmhapticspluginmanager.dll"
@@ -5373,50 +5021,18 @@ file=\epoc32\release\ARMV5\urel\MediatorClient.dll 	"sys\bin\MediatorClient.dll"
 file=\epoc32\release\ARMV5\urel\MediatorPluginBase.dll 	"sys\bin\MediatorPluginBase.dll"
 data=\epoc32\data\Z\private\10207449\allowedsids.rsc 	"private\10207449\allowedsids.rsc"
 data=\epoc32\data\Z\resource\MediatorDebug.rsc 	"resource\MediatorDebug.rsc"
-file=\epoc32\release\ARMV5\urel\CustomCommandUtility.dll 	"sys\bin\CustomCommandUtility.dll"
-file=\epoc32\release\ARMV5\urel\CustomInterfaceBuilder.dll 	"sys\bin\CustomInterfaceBuilder.dll"
-file=\epoc32\release\ARMV5\urel\CustomInterfaceUtility.dll 	"sys\bin\CustomInterfaceUtility.dll"
-file=\epoc32\release\ARMV5\urel\MessageHandlerFactory.dll 	"sys\bin\MessageHandlerFactory.dll"
-file=\epoc32\release\ARMV5\urel\CustomInterfaceProxyFactory.dll 	"sys\bin\CustomInterfaceProxyFactory.dll"
 data=\epoc32\data\Z\System\install\MMExtFw_Stub.SIS 	"System\Install\MMExtFw_Stub.SIS"
-file=\epoc32\release\ARMV5\urel\AacDecoderConfig.dll 	"sys\bin\AacDecoderConfig.dll"
-file=\epoc32\release\ARMV5\urel\AacDecoderConfigMsgHdlr.dll 	"sys\bin\AacDecoderConfigMsgHdlr.dll"
 file=\epoc32\release\ARMV5\urel\AacDecoderConfigProxy.dll 	"sys\bin\AacDecoderConfigProxy.dll"
-file=\epoc32\release\ARMV5\urel\ErrorConcealmentIntfc.dll 	"sys\bin\ErrorConcealmentIntfc.dll"
-file=\epoc32\release\ARMV5\urel\ErrorConcealmentIntfcMsgHdlr.dll 	"sys\bin\ErrorConcealmentIntfcMsgHdlr.dll"
 file=\epoc32\release\ARMV5\urel\ErrorConcealmentIntfcProxy.dll 	"sys\bin\ErrorConcealmentIntfcProxy.dll"
-file=\epoc32\release\ARMV5\urel\G711DecoderIntfc.dll 	"sys\bin\G711DecoderIntfc.dll"
-file=\epoc32\release\ARMV5\urel\G711DecoderIntfcMsgHdlr.dll 	"sys\bin\G711DecoderIntfcMsgHdlr.dll"
 file=\epoc32\release\ARMV5\urel\G711DecoderIntfcProxy.dll 	"sys\bin\G711DecoderIntfcProxy.dll"
-file=\epoc32\release\ARMV5\urel\G711EncoderIntfc.dll 	"sys\bin\G711EncoderIntfc.dll"
-file=\epoc32\release\ARMV5\urel\G711EncoderIntfcMsgHdlr.dll 	"sys\bin\G711EncoderIntfcMsgHdlr.dll"
 file=\epoc32\release\ARMV5\urel\G711EncoderIntfcProxy.dll 	"sys\bin\G711EncoderIntfcProxy.dll"
-file=\epoc32\release\ARMV5\urel\G729DecoderIntfc.dll 	"sys\bin\G729DecoderIntfc.dll"
-file=\epoc32\release\ARMV5\urel\G729DecoderIntfcMsgHdlr.dll 	"sys\bin\G729DecoderIntfcMsgHdlr.dll"
 file=\epoc32\release\ARMV5\urel\G729DecoderIntfcProxy.dll 	"sys\bin\G729DecoderIntfcProxy.dll"
-file=\epoc32\release\ARMV5\urel\G729EncoderIntfc.dll 	"sys\bin\G729EncoderIntfc.dll"
-file=\epoc32\release\ARMV5\urel\G729EncoderIntfcMsgHdlr.dll 	"sys\bin\G729EncoderIntfcMsgHdlr.dll"
 file=\epoc32\release\ARMV5\urel\G729EncoderIntfcProxy.dll 	"sys\bin\G729EncoderIntfcProxy.dll"
-file=\epoc32\release\ARMV5\urel\IlbcDecoderIntfc.dll 	"sys\bin\IlbcDecoderIntfc.dll"
-file=\epoc32\release\ARMV5\urel\IlbcDecoderIntfcMsgHdlr.dll 	"sys\bin\IlbcDecoderIntfcMsgHdlr.dll"
 file=\epoc32\release\ARMV5\urel\IlbcDecoderIntfcProxy.dll 	"sys\bin\IlbcDecoderIntfcProxy.dll"
-file=\epoc32\release\ARMV5\urel\IlbcEncoderIntfc.dll 	"sys\bin\IlbcEncoderIntfc.dll"
-file=\epoc32\release\ARMV5\urel\IlbcEncoderIntfcMsgHdlr.dll 	"sys\bin\IlbcEncoderIntfcMsgHdlr.dll"
 file=\epoc32\release\ARMV5\urel\IlbcEncoderIntfcProxy.dll 	"sys\bin\IlbcEncoderIntfcProxy.dll"
-file=\epoc32\release\ARMV5\urel\SpeechEncoderConfig.dll 	"sys\bin\SpeechEncoderConfig.dll"
-file=\epoc32\release\ARMV5\urel\SpeechEncoderConfigMsgHdlr.dll 	"sys\bin\SpeechEncoderConfigMsgHdlr.dll"
 file=\epoc32\release\ARMV5\urel\SpeechEncoderConfigProxy.dll 	"sys\bin\SpeechEncoderConfigProxy.dll"
-file=\epoc32\release\ARMV5\urel\EAacPlusDecoderIntfc.dll 	"sys\bin\EAacPlusDecoderIntfc.dll"
-file=\epoc32\release\ARMV5\urel\EAacPlusDecoderIntfcMsgHdlr.dll 	"sys\bin\EAacPlusDecoderIntfcMsgHdlr.dll"
 file=\epoc32\release\ARMV5\urel\EAacPlusDecoderIntfcProxy.dll 	"sys\bin\EAacPlusDecoderIntfcProxy.dll"
-file=\epoc32\release\ARMV5\urel\SbcEncoderIntfc.dll 	"sys\bin\SbcEncoderIntfc.dll"
-file=\epoc32\release\ARMV5\urel\SbcEncoderIntfcMsgHdlr.dll 	"sys\bin\SbcEncoderIntfcMsgHdlr.dll"
 file=\epoc32\release\ARMV5\urel\SbcEncoderIntfcProxy.dll 	"sys\bin\SbcEncoderIntfcProxy.dll"
-file=\epoc32\release\ARMV5\urel\Ra8DecoderIntfc.dll 	"sys\bin\Ra8DecoderIntfc.dll"
-file=\epoc32\release\ARMV5\urel\Ra8CustomInterfaceMsgHdlr.dll 	"sys\bin\Ra8CustomInterfaceMsgHdlr.dll"
-file=\epoc32\release\ARMV5\urel\Ra8CustomInterfaceProxy.dll 	"sys\bin\Ra8CustomInterfaceProxy.dll"
-file=\epoc32\release\ARMV5\urel\WmaDecoderIntfc.dll 	"sys\bin\WmaDecoderIntfc.dll"
-file=\epoc32\release\ARMV5\urel\WmaDecoderIntfcMsgHdlr.dll 	"sys\bin\WmaDecoderIntfcMsgHdlr.dll"
 file=\epoc32\release\ARMV5\urel\WmaDecoderIntfcProxy.dll 	"sys\bin\WmaDecoderIntfcProxy.dll"
 data=\epoc32\data\Z\System\install\WmaDecoderIntfc_Stub.sis 	"System\Install\WmaDecoderIntfc_Stub.sis"
 data=\epoc32\data\Z\System\install\nga_mdf_postprocessor_stub.sis 	"System\install\nga_mdf_postprocessor_stub.sis"
@@ -5435,8 +5051,6 @@ data=\epoc32\data\Z\Resource\apps\TvoutStandbyFigure.mbm 	"resource\apps\tvoutst
 file=\epoc32\release\ARMV5\urel\psmserver.exe 	"sys\bin\psmserver.exe"
 file=\epoc32\release\ARMV5\urel\psmclient.dll 	"sys\bin\psmclient.dll"
 file=\epoc32\release\ARMV5\urel\RestrictedAudioOutput.dll 	"sys\bin\RestrictedAudioOutput.dll"
-file=\epoc32\release\ARMV5\urel\RestrictedAudioOutputMessageHandler.dll 	"sys\bin\RestrictedAudioOutputMessageHandler.dll"
-file=\epoc32\release\ARMV5\urel\RestrictedAudioOutputProxy.dll 	"sys\bin\RestrictedAudioOutputProxy.dll"
 data=\epoc32\data\Z\System\install\RestrictedAudioOutput_Stub.SIS 	"System\Install\RestrictedAudioOutput_Stub.SIS"
 file=\epoc32\release\ARMV5\urel\sensordatacompensator.dll 	"sys\bin\sensordatacompensator.dll"
 file=\epoc32\release\ARMV5\urel\sensorserver.exe 	"sys\bin\sensorserver.exe"
@@ -5451,7 +5065,6 @@ data=\epoc32\data\Z\private\2000D75B\startup\0\stem_uiservicescmdlist.rsc 	"priv
 data=\epoc32\data\Z\private\2000D75B\startup\0\stem_criticalappscmdlist.rsc 	"private\2000D75B\startup\0\criticalappscmdlist.rsc"
 data=\epoc32\data\Z\private\2000D75B\startup\0\stem_noncriticalcmdlist.rsc 	"private\2000D75B\startup\0\noncriticalcmdlist.rsc"
 data=\epoc32\data\Z\private\2000D75B\hw\stem_wserv_hw.rsc 	"private\2000D75B\startup\0\wserv.rsc"
-//data=\epoc32\data\Z\private\2000D75B\hw\stem_noncriticalcmdlist_hw.rsc 	"private\2000D75B\startup\0\noncriticalcmdlist_hw.rsc"
 data=\epoc32\data\Z\private\2000D75B\shutdown\stem_shutdowncmdlists.rsc 	"private\2000D75B\shutdown\shutdowncmdlists.rsc"
 file=\epoc32\release\ARMV5\urel\saaemergencycallrfadaptation.dll 	"sys\bin\emergencycallrfadaptation.dll"
 file=\epoc32\release\ARMV5\urel\saastateadaptation.dll 	"sys\bin\stateadaptation.dll"
@@ -5618,10 +5231,6 @@ data=\epoc32\data\Z\resource\apps\PerfMon.RSC 	"resource\apps\PerfMon.rsc"
 data=\epoc32\data\Z\PRIVATE\10003A3F\APPS\PerfMon_reg.rsc 	"Private\10003a3f\import\apps\PerfMon_reg.rsc" 
 data=\epoc32\data\Z\Private\20011385\backup_registration.xml 	"private\20011385\backup_registration.xml"
 data=\epoc32\data\Z\System\Install\PerfMon_stub.sis 	"system\install\PerfMon_stub.sis"
-file=\epoc32\release\ARMV5\urel\ScreenGrabber.exe 	"sys\bin\ScreenGrabber.exe" 
-data=\epoc32\data\Z\resource\apps\ScreenGrabber_AIF.MIF 	"resource\apps\ScreenGrabber_aif.mif" 
-data=\epoc32\data\Z\resource\apps\ScreenGrabber.RSC 	"resource\apps\ScreenGrabber.rsc" 
-data=\epoc32\data\Z\PRIVATE\10003A3F\APPS\ScreenGrabber_reg.rsc 	"Private\10003a3f\import\apps\ScreenGrabber_reg.rsc" 
 data=\epoc32\data\Z\Private\101FB751\backup_registration.xml 	"private\101FB751\backup_registration.xml"
 data=\epoc32\data\Z\System\Install\ScreenGrabber_stub.sis 	"system\install\ScreenGrabber_stub.sis"
 file=\epoc32\release\ARMV5\urel\stiftestengine.dll 	"sys\bin\stiftestengine.dll"
@@ -5652,7 +5261,6 @@ data=\epoc32\data\Z\resource\AiwSyncProvider.RSC 	"resource\AiwSyncProvider.rsc"
 data=\epoc32\data\Z\resource\AspSyncUtil.RSC 	"resource\AspSyncUtil.rsc"
 data=\epoc32\data\Z\resource\messaging\audiomessagemtm.rsc 	"resource\messaging\audiomessagemtm.rsc"
 data=\epoc32\data\Z\resource\messaging\mtm\audiomessageregistry.rsc 	"resource\messaging\mtm\audiomessagereg.rsc"
-data=\epoc32\data\Z\resource\apps\audiomessage.rsc 	"resource\apps\audiomessage.rsc"
 data=\epoc32\data\Z\resource\messaging\mtm\BioMtm.rsc 	"resource\messaging\mtm\BioMtm.rsc"
 data=\epoc32\data\Z\resource\messaging\Bium.rsc 	"resource\messaging\Bium.rsc"
 data=\epoc32\data\Z\resource\satinfo.rsC 	"resource\satinfo.rsc"
@@ -5662,7 +5270,6 @@ data=\epoc32\data\Z\resource\apps\Bva.RSC 	"resource\apps\Bva.rsc"
 data=\epoc32\data\Z\resource\apps\Calcsoft.RSC 	"resource\apps\Calcsoft.rsc" 
 data=\epoc32\data\Z\resource\apps\calenaiwprovidermenu.rsc 	"resource\apps\calenaiwprovidermenu.rsc"
 data=\epoc32\data\Z\resource\CalenCommonUI.rsc 	"resource\CalenCommonUI.rsc"
-data=\epoc32\data\Z\resource\apps\CALENDAR.RSC 	"resource\apps\Calendar.rsc"
 data=\epoc32\data\Z\resource\plugins\calendarpluginresource.Rsc 	"resource\plugins\calendarpluginresource.Rsc"
 data=\epoc32\data\Z\resource\CalenDefaultEditorsData.rsc 	"resource\CalenDefaultEditorsData.rsc"
 file=\epoc32\release\ARMV5\urel\calenregionalutil.dll 	"sys\bin\calenregionalutil.dll"
@@ -5673,15 +5280,12 @@ data=\epoc32\data\Z\resource\apps\nhdcamsettings.RSC 	"resource\apps\nhdcamsetti
 data=\epoc32\data\Z\resource\apps\vgacamsettings.RSC 	"resource\apps\vgacamsettings.rsc" 
 data=\epoc32\data\Z\resource\gscamerapluginrsc.rsc 	"resource\gscamerapluginrsc.rsc"
 data=\epoc32\data\Z\resource\gscamerapluginrscv2.rsc 	"resource\gscamerapluginrscv2.rsc"
-data=\epoc32\data\Z\resource\apps\ccaapp.RSC 	"resource\apps\ccaapp.rsc" 
 data=\epoc32\data\Z\resource\ccappcommlauncherpluginrsc.rsc 	"resource\ccappcommlauncherpluginrsc.rsc"
 data=\epoc32\data\Z\resource\ccacontactorservicersc.rsc 	"resource\ccacontactorservicersc.rsc"
 data=\epoc32\data\Z\resource\ccappmycardpluginrsc.rsc 	"resource\ccappmycardpluginrsc.rsc"
 data=\epoc32\data\Z\resource\ccappdetailsviewpluginrsc.rsc 	"resource\ccappdetailsviewpluginrsc.rsc"
 data=\epoc32\data\Z\Resource\apps\cch.RSC 	"resource\apps\cch.RSC"
 data=\epoc32\data\Z\Resource\apps\cchuinotif.rsc 	"resource\apps\cchuinotif.rsc"
-data=\epoc32\data\Z\resource\apps\clock.RSC 	"resource\apps\clock.rsc" 
-data=\epoc32\data\Z\resource\apps\clock_loc.RSC 	"resource\apps\clock_loc.rsc" 
 data=\epoc32\data\Z\resource\timezonelocalization\timezones.rsc 	"resource\timezonelocalization\timezones.rsc"
 data=\epoc32\data\Z\resource\timezonelocalization\timezonegroups.rsc 	"resource\timezonelocalization\timezonegroups.rsc"
 data=\epoc32\data\Z\resource\apps\clockindicatorpaneplugin.rsc 	"resource\apps\clockindicatorpaneplugin.rsc"
@@ -5740,8 +5344,6 @@ data=\epoc32\data\Z\resource\gsdevdiagpluginrsc.rsc 	"resource\gsdevdiagpluginrs
 data=\epoc32\data\Z\resource\apps\GSEmailSettingsPlugin.rsc 	"resource\apps\GSEmailSettingsPlugin.rsc"
 data=\epoc32\data\Z\resource\mediasettings.rsc 	"resource\mediasettings.rsc"
 data=\epoc32\data\Z\resource\gsvmbxpluginrsc.rsc 	"resource\gsvmbxpluginrsc.rsc"
-data=\epoc32\data\Z\resource\apps\vcxhgmyvideos.rsc 	"resource\apps\vcxhgmyvideos.rsc"
-data=\epoc32\data\Z\resource\apps\vcxhgmyvideos.mif 	"resource\apps\vcxhgmyvideos.mif"
 data=\epoc32\data\Z\resource\apps\vcxhgmyvideosicons.mif 	"resource\apps\vcxhgmyvideosicons.mif"
 data=\epoc32\data\Z\resource\apps\vcxhgvodui.rsc 	"resource\apps\vcxhgvodui.rsc"
 data=\epoc32\data\Z\resource\apps\vcxhgvoddefaulticons.mif 	"resource\apps\vcxhgvoddefaulticons.mif"
@@ -5771,7 +5373,6 @@ data=\epoc32\data\Z\resource\imageprintdata\protocols\dpof.rsc 	"resource\imagep
 data=\epoc32\data\Z\resource\imstatuspaneindicatorpluginrss.rsc 	"resource\imstatuspaneindicatorpluginrss.rsc"
 data=\epoc32\data\Z\resource\vimpstuires.rsc 	"resource\vimpstuires.rsc"
 data=\epoc32\data\Z\resource\vimpstdetailsviewpluginrsc.rsc 	"resource\vimpstdetailsviewpluginrsc.rsc"
-data=\epoc32\data\Z\resource\apps\vimpstui.mif 	"resource\apps\vimpstui.mif"
 data=\epoc32\data\Z\resource\apps\vimpst_servicetab_default.mif 	"resource\apps\vimpst_servicetab_default.mif"
 data=\epoc32\winscw\c\private\102828DD\data\xsp\xsp\files\r47.conversations.mif 	"private\102828DD\data\xsp\xsp\files\r47.conversations.mif"
 data=\epoc32\winscw\c\private\102828DD\data\xsp\xsp\brandfile.bin.r47 	"private\102828DD\data\xsp\xsp\brandfile.bin.r47"
@@ -5814,16 +5415,11 @@ data=\epoc32\data\Z\resource\messaging\notui.rsc 	"resource\messaging\NotUi.rsc"
 data=\epoc32\data\Z\resource\messaging\mtm\not.rsc 	"resource\messaging\mtm\Not.rsc"
 data=\epoc32\data\Z\resource\apps\mpxaudioeffectsview.rsc 	"resource\apps\mpxaudioeffectsview.rsc"
 data=\epoc32\data\Z\resource\apps\mpxfmtx.rsc 	"resource\apps\mpxfmtx.rsc"
-data=\epoc32\data\Z\resource\apps\mpxmediakeyhandler.rsc 	"resource\apps\mpxmediakeyhandler.rsc"
 data=\epoc32\data\Z\resource\apps\mpxscreensaverplugin.rsc 	"resource\apps\mpxscreensaverplugin.rsc"
 data=\epoc32\data\Z\resource\apps\mpxcollectiondbhgres.rsc 	"resource\apps\mpxcollectiondbhgres.rsc"
 data=\epoc32\data\Z\resource\apps\mpxcollectiondbres.rsc 	"resource\apps\mpxcollectiondbres.rsc"
 data=\epoc32\data\Z\resource\apps\pcres.rsc 	"resource\apps\pcres.rsc"
 data=\epoc32\data\Z\resource\apps\mpxupnpbrowsedialog.rsc 	"resource\apps\mpxupnpbrowsedialog.rsc"
-data=\epoc32\data\Z\resource\apps\mpxvideoplaybackcontrols.rsc 	"resource\apps\mpxvideoplaybackcontrols.rsc"
-data=\epoc32\data\Z\resource\apps\mpxvideoplaybackviews.rsc 	"resource\apps\mpxvideoplaybackviews.rsc"
-data=\epoc32\data\Z\resource\apps\mpxvideoplayer.RSC 	"resource\apps\mpxvideoplayer.rsc" 
-data=\epoc32\data\Z\resource\apps\mpxvideoplayer_aif.mif 	"resource\apps\mpxvideoplayer_aif.mif"
 data=\epoc32\data\Z\resource\apps\mpxwaitnotedialog.rsc 	"resource\apps\mpxwaitnotedialog.rsc"
 data=\epoc32\data\Z\resource\mseng.rsc 	"resource\mseng.rsc"
 data=\epoc32\data\Z\resource\MsgEditorAppUi.rsc 	"resource\MsgEditorAppUi.rsc"
@@ -5862,7 +5458,6 @@ data=\epoc32\data\Z\resource\apps\pbk2rclsendplugin.RSC 	"resource\apps\pbk2rcls
 data=\epoc32\data\Z\resource\apps\pbk2rclsendbusinesscardpluginimpl.RSC 	"resource\apps\pbk2rclsendbusinesscardpluginimpl.rsc" 
 data=\epoc32\data\Z\resource\apps\pbk2rclactionutils.RSC 	"resource\apps\pbk2rclactionutils.rsc" 
 data=\epoc32\data\Z\resource\pbk2rclengine.rsc 	"resource\pbk2rclengine.rsc"
-data=\epoc32\data\Z\resource\apps\Phonebook2.RSC 	"resource\apps\Phonebook2.rsc" 
 data=\epoc32\data\Z\resource\Pbk2Presentation.rsc 	"resource\Pbk2Presentation.rsc"
 data=\epoc32\data\Z\resource\Pbk2PresentationChinese.rsc 	"resource\Pbk2PresentationChinese.rsc"
 data=\epoc32\data\Z\resource\Pbk2PresentationJapanese.rsc 	"resource\Pbk2PresentationJapanese.rsc"
@@ -5870,7 +5465,6 @@ data=\epoc32\data\Z\resource\Pbk2UIControls.rsc 	"resource\Pbk2UIControls.rsc"
 data=\epoc32\data\Z\resource\Pbk2Commands.rsc 	"resource\Pbk2Commands.rsc"
 data=\epoc32\data\Z\resource\Pbk2UiExtCommon.rsc 	"resource\Pbk2UiExtCommon.rsc"
 data=\epoc32\data\Z\resource\Pbk2CommonUi.rsc 	"resource\Pbk2CommonUi.rsc"
-data=\epoc32\data\Z\resource\apps\Pbk2ServerApp.rsc 	"resource\apps\Pbk2ServerApp.rsc"
 data=\epoc32\data\Z\resource\Pbk2UIServicesRes.rsc 	"resource\Pbk2UIServicesRes.rsc"
 data=\epoc32\data\Z\resource\Pbk2ExNamesListRes.rsc 	"resource\Pbk2ExNamesListRes.rsc"
 data=\epoc32\data\Z\resource\Pbk2GroupUIRes.rsc 	"resource\Pbk2GroupUIRes.rsc"
@@ -5968,10 +5562,8 @@ data=\epoc32\data\Z\Private\200159c0\install\view_20022fe0\xuikon\00\view.o0000 
 data=\epoc32\data\Z\Private\200159c0\install\view_200286e4\xuikon\00\view.o0000 	"private\200159c0\install\view_200286e4\xuikon\00\view.o0000"
 data=\epoc32\data\Z\Private\200159c0\install\view_200286e5\xuikon\00\view.o0000 	"private\200159c0\install\view_200286e5\xuikon\00\view.o0000"
 data=\epoc32\data\Z\resource\VPbkCntModelRes.rsc 	"resource\VPbkCntModelRes.rsc"
-data=\epoc32\data\Z\resource\apps\vuivoicerecognition.RSC 	"resource\apps\vuivoicerecognition.rsc" 
 data=\epoc32\data\Z\resource\aiwpbkinfoviewprovider.rsc 	"resource\aiwpbkinfoviewprovider.rsc"
 data=\epoc32\data\Z\resource\pbkinfoview.rsc 	"resource\pbkinfoview.rsc"
-data=\epoc32\data\Z\resource\apps\VoIPProvisioningApp.RSC 	"resource\apps\VoIPProvisioningApp.rsc" 
 data=\epoc32\data\Z\resource\apps\widgetmanagerview.rsc 	"resource\apps\widgetmanagerview.rsc"
 data=\epoc32\data\Z\resource\wpgeneralvoipsettingsadapter.rsc 	"resource\wpgeneralvoipsettingsadapter.rsc"
 data=\epoc32\data\Z\resource\wpvoipadapter.rsc 	"resource\wpvoipadapter.rsc"
@@ -6051,7 +5643,6 @@ data=\epoc32\data\Z\Resource\EIKSRVUI.rsc 	"resource\Eiksrvui.rsc"
 data=\epoc32\data\Z\Resource\EIKCOCTL.rsc 	"resource\EikCoctl.rsc"
 file=\epoc32\release\ARMV5\urel\Elocl.dll 	"sys\bin\Elocl.loc"
 REM Equalizer
-data=\epoc32\data\Z\resource\apps\Equalizer.rsc 	"resource\apps\Equalizer.rsc"
 data=\epoc32\data\Z\resource\gsaccessoryplugin.rsc 	"resource\gsaccessoryplugin.rsc"
 data=\epoc32\data\Z\resource\GSAdminPluginRsc.rsc 	"resource\GSAdminPluginRsc.rsc"
 data=\epoc32\data\Z\resource\apps\GSApp.RSC 	"resource\apps\GSApp.rsc"
@@ -6157,7 +5748,6 @@ data=\epoc32\data\Z\resource\rsfwmountconfbc.rsc 	"resource\rsfwmountconfbc.rsc"
 data=\epoc32\data\Z\resource\messaging\bif\rsfwmountconfbcbif.rsc 	"resource\messaging\bif\rsfwmountconfbcbif.rsc"
 data=\epoc32\data\Z\resource\rsfwnotplugindlg.rsc 	"resource\rsfwnotplugindlg.rsc"
 data=\epoc32\data\Z\resource\satserver.rsc 	"resource\satserver.rsc"
-data=\epoc32\data\Z\resource\apps\SatUI.RSC 	"resource\apps\SatUI.rsc" 
 data=\epoc32\data\Z\resource\apps\SchemeApp.rsc 	"resource\apps\SchemeApp.rsc"
 data=\epoc32\data\Z\resource\sconftp.rsc 	"resource\sconftp.rsc"
 data=\epoc32\data\Z\resource\SCPNotifier.rsc 	"resource\SCPNotifier.rsc"
@@ -6318,88 +5908,25 @@ data=\epoc32\release\ARMV5\urel\z\private\100059C9\ScriptInit.txt 	"private\1000
 data=\epoc32\release\ARMV5\urel\z\private\100059C9\script0.txt 	"private\100059C9\script0.txt"
 data=\epoc32\release\ARMV5\urel\z\private\100059C9\script1.txt 	"private\100059C9\script1.txt"
 data=\epoc32\data\Z\Private\200159c0\install\wsfwidget_20026F45\hsps\00\wsfwidgetconfiguration.xml 	"private\200159c0\install\wsfwidget_20026F45\hsps\00\wsfwidgetconfiguration.xml"
-file=\epoc32\release\ARMV5\urel\star.exe 	"sys\bin\star.exe" 
-data=\epoc32\data\Z\resource\apps\star.RSC 	"resource\apps\star.rsc" 
-data=\epoc32\data\Z\private\10003a3f\import\Apps\star_reg.rsc 	"private\10003a3f\import\apps\star_reg.rsc"
-file=\epoc32\release\ARMV5\urel\wiggly.exe 	"sys\bin\wiggly.exe" 
-data=\epoc32\data\Z\resource\apps\wiggly.RSC 	"resource\apps\wiggly.rsc" 
-data=\epoc32\data\Z\private\10003a3f\import\Apps\wiggly_reg.rsc 	"private\10003a3f\import\apps\wiggly_reg.rsc"
-file=\epoc32\release\ARMV5\urel\animatedtiles.exe 	"sys\bin\animatedtiles.exe" 
-data=\epoc32\data\Z\resource\apps\animatedtiles.RSC 	"resource\apps\animatedtiles.rsc" 
-data=\epoc32\data\Z\private\10003a3f\import\Apps\animatedtiles_reg.rsc 	"private\10003a3f\import\apps\animatedtiles_reg.rsc"
-file=\epoc32\release\ARMV5\urel\collidingmice.exe 	"sys\bin\collidingmice.exe" 
-data=\epoc32\data\Z\resource\apps\collidingmice.RSC 	"resource\apps\collidingmice.rsc" 
-data=\epoc32\data\Z\private\10003a3f\import\Apps\collidingmice_reg.rsc 	"private\10003a3f\import\apps\collidingmice_reg.rsc"
-file=\epoc32\release\ARMV5\urel\addressbook.exe 	"sys\bin\addressbook.exe" 
-data=\epoc32\data\Z\resource\apps\addressbook.RSC 	"resource\apps\addressbook.rsc" 
-data=\epoc32\data\Z\private\10003a3f\import\Apps\addressbook_reg.rsc 	"private\10003a3f\import\apps\addressbook_reg.rsc"
-file=\epoc32\release\ARMV5\urel\svgviewer.exe 	"sys\bin\svgviewer.exe" 
-data=\epoc32\data\Z\resource\apps\svgviewer.RSC 	"resource\apps\svgviewer.rsc" 
-data=\epoc32\data\Z\private\10003a3f\import\Apps\svgviewer_reg.rsc 	"private\10003a3f\import\apps\svgviewer_reg.rsc"
-file=\epoc32\release\ARMV5\urel\analogclock.exe 	"sys\bin\analogclock.exe" 
-data=\epoc32\data\Z\resource\apps\analogclock.RSC 	"resource\apps\analogclock.rsc" 
-data=\epoc32\data\Z\private\10003a3f\import\Apps\analogclock_reg.rsc 	"private\10003a3f\import\apps\analogclock_reg.rsc"
-file=\epoc32\release\ARMV5\urel\imagegestures.exe 	"sys\bin\imagegestures.exe" 
-data=\epoc32\data\Z\resource\apps\imagegestures.RSC 	"resource\apps\imagegestures.rsc" 
-data=\epoc32\data\Z\private\10003a3f\import\Apps\imagegestures_reg.rsc 	"private\10003a3f\import\apps\imagegestures_reg.rsc"
-file=\epoc32\release\ARMV5\urel\qftp.exe 	"sys\bin\qftp.exe" 
-data=\epoc32\data\Z\resource\apps\qftp.RSC 	"resource\apps\qftp.rsc" 
-data=\epoc32\data\Z\private\10003a3f\import\Apps\qftp_reg.rsc 	"private\10003a3f\import\apps\qftp_reg.rsc"
-file=\epoc32\release\ARMV5\urel\masterdetail.exe 	"sys\bin\masterdetail.exe" 
-data=\epoc32\data\Z\resource\apps\masterdetail.RSC 	"resource\apps\masterdetail.rsc" 
-data=\epoc32\data\Z\private\10003a3f\import\Apps\masterdetail_reg.rsc 	"private\10003a3f\import\apps\masterdetail_reg.rsc"
-file=\epoc32\release\ARMV5\urel\previewer.exe 	"sys\bin\previewer.exe" 
-data=\epoc32\data\Z\resource\apps\previewer.RSC 	"resource\apps\previewer.rsc" 
-data=\epoc32\data\Z\private\10003a3f\import\Apps\previewer_reg.rsc 	"private\10003a3f\import\apps\previewer_reg.rsc"
-file=\epoc32\release\ARMV5\urel\fluidlauncher.exe 	"sys\bin\fluidlauncher.exe" 
-data=\epoc32\data\Z\resource\apps\fluidlauncher.RSC 	"resource\apps\fluidlauncher.rsc" 
-data=\epoc32\data\Z\private\10003a3f\import\Apps\fluidlauncher_reg.rsc 	"private\10003a3f\import\apps\fluidlauncher_reg.rsc"
-file=\epoc32\release\ARMV5\urel\deform.exe 	"sys\bin\deform.exe" 
-data=\epoc32\data\Z\resource\apps\deform.RSC 	"resource\apps\deform.rsc" 
-data=\epoc32\data\Z\private\10003a3f\import\Apps\deform_reg.rsc 	"private\10003a3f\import\apps\deform_reg.rsc"
 REM MISSING file=\epoc32\release\ARMV5\urel\standarddialogs.exe                   sys\bin\standarddialogs.exe 
 REM MISSING data=\epoc32\data\Z\resource\apps\standarddialogs.RSC   resource\apps\standarddialogs.rsc 
 REM MISSING data=\epoc32\data\Z\private\10003a3f\import\Apps\standarddialogs_reg.rsc   \private\10003a3f\import\apps\standarddialogs_reg.rsc
-file=\epoc32\release\ARMV5\urel\pathstroke.exe 	"sys\bin\pathstroke.exe" 
-data=\epoc32\data\Z\resource\apps\pathstroke.RSC 	"resource\apps\pathstroke.rsc" 
-data=\epoc32\data\Z\private\10003a3f\import\Apps\pathstroke_reg.rsc 	"private\10003a3f\import\apps\pathstroke_reg.rsc"
 REM MISSING file=\epoc32\release\ARMV5\urel\gradients.exe                   sys\bin\gradients.exe 
 REM MISSING data=\epoc32\data\Z\resource\apps\gradients.RSC   resource\apps\gradients.rsc 
 REM MISSING data=\epoc32\data\Z\private\10003a3f\import\Apps\gradients_reg.rsc   \private\10003a3f\import\apps\gradients_reg.rsc
-file=\epoc32\release\ARMV5\urel\moveblocks.exe 	"sys\bin\moveblocks.exe" 
-data=\epoc32\data\Z\resource\apps\moveblocks.RSC 	"resource\apps\moveblocks.rsc" 
-data=\epoc32\data\Z\private\10003a3f\import\Apps\moveblocks_reg.rsc 	"private\10003a3f\import\apps\moveblocks_reg.rsc"
-file=\epoc32\release\ARMV5\urel\stickman.exe 	"sys\bin\stickman.exe" 
-data=\epoc32\data\Z\resource\apps\stickman.RSC 	"resource\apps\stickman.rsc" 
-data=\epoc32\data\Z\private\10003a3f\import\Apps\stickman_reg.rsc 	"private\10003a3f\import\apps\stickman_reg.rsc"
-file=\epoc32\release\ARMV5\urel\fridgemagnets.exe 	"sys\bin\fridgemagnets.exe" 
-data=\epoc32\data\Z\resource\apps\fridgemagnets.RSC 	"resource\apps\fridgemagnets.rsc" 
-data=\epoc32\data\Z\private\10003a3f\import\Apps\fridgemagnets_reg.rsc 	"private\10003a3f\import\apps\fridgemagnets_reg.rsc"
 REM MISSING file=\epoc32\release\ARMV5\urel\blurpicker.exe                   sys\bin\blurpicker.exe 
 REM MISSING data=\epoc32\data\Z\resource\apps\blurpicker.RSC   resource\apps\blurpicker.rsc 
 REM MISSING data=\epoc32\data\Z\private\10003a3f\import\Apps\blurpicker_reg.rsc   \private\10003a3f\import\apps\blurpicker_reg.rsc
 REM MISSING file=\epoc32\release\ARMV5\urel\knobs.exe                   sys\bin\knobs.exe 
 REM MISSING data=\epoc32\data\Z\resource\apps\knobs.RSC   resource\apps\knobs.rsc 
 REM MISSING data=\epoc32\data\Z\private\10003a3f\import\Apps\knobs_reg.rsc   \private\10003a3f\import\apps\knobs_reg.rsc
-file=\epoc32\release\ARMV5\urel\states.exe 	"sys\bin\states.exe" 
-data=\epoc32\data\Z\resource\apps\states.RSC 	"resource\apps\states.rsc" 
-data=\epoc32\data\Z\private\10003a3f\import\Apps\states_reg.rsc 	"private\10003a3f\import\apps\states_reg.rsc"
-file=\epoc32\release\ARMV5\urel\saxbookmarks.exe 	"sys\bin\saxbookmarks.exe" 
-data=\epoc32\data\Z\resource\apps\saxbookmarks.RSC 	"resource\apps\saxbookmarks.rsc" 
-data=\epoc32\data\Z\private\10003a3f\import\Apps\saxbookmarks_reg.rsc 	"private\10003a3f\import\apps\saxbookmarks_reg.rsc"
 REM MISSING file=\epoc32\release\ARMV5\urel\defaultprototypes.exe                   sys\bin\defaultprototypes.exe 
 REM MISSING data=\epoc32\data\Z\resource\apps\defaultprototypes.RSC   resource\apps\defaultprototypes.rsc 
 REM MISSING data=\epoc32\data\Z\private\10003a3f\import\Apps\defaultprototypes_reg.rsc   \private\10003a3f\import\apps\defaultprototypes_reg.rsc
 REM MISSING file=\epoc32\release\ARMV5\urel\queuedcustomtype.exe                   sys\bin\queuedcustomtype.exe 
 REM MISSING data=\epoc32\data\Z\resource\apps\queuedcustomtype.RSC   resource\apps\queuedcustomtype.rsc 
 REM MISSING data=\epoc32\data\Z\private\10003a3f\import\Apps\queuedcustomtype_reg.rsc   \private\10003a3f\import\apps\queuedcustomtype_reg.rsc
-file=\epoc32\release\ARMV5\urel\anomaly.exe 	"sys\bin\anomaly.exe" 
-data=\epoc32\data\Z\resource\apps\anomaly.RSC 	"resource\apps\anomaly.rsc" 
-data=\epoc32\data\Z\private\10003a3f\import\Apps\anomaly_reg.rsc 	"private\10003a3f\import\apps\anomaly_reg.rsc"
 
-file=\epoc32\release\ARMV5\urel\weatherinfo.exe 	"sys\bin\weatherinfo.exe" 
-data=\epoc32\data\Z\resource\apps\weatherinfo.RSC 	"resource\apps\weatherinfo.rsc" 
-data=\epoc32\data\Z\private\10003a3f\import\Apps\weatherinfo_reg.rsc 	"private\10003a3f\import\apps\weatherinfo_reg.rsc"
 
 romchecksum=0x12345678
 

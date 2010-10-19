@@ -73,11 +73,7 @@ RESOURCE SSM_COMMAND_LIST r_cmds
         r_cmd_loadpowersup,
         // prio 0xFFA7
         r_cmd_splash,
-        // prio 0xFF96 - 
         r_cmd_multiwaitforever1,
-        // prio 0xFF86
-        r_cmd_multiwaitforever2,
-        // prio 0xFF85
         // prio 0xFF79
         r_cmd_aknstart,         // UI Framework
         // prio 0xFF77
@@ -113,7 +109,6 @@ RESOURCE SSM_WAIT_FOR_APPARC_INIT r_cmd_apparc_init
     severity = ECmdCriticalSeverity;
     }
 
-
 // ---------------------------------------------------------------------------
 // r_cmd_loadpowersup
 // ---------------------------------------------------------------------------
@@ -135,14 +130,6 @@ RESOURCE SSM_MULTIPLE_WAIT r_cmd_multiwaitforever1
     priority = 0xFF96;
     }
 
-// ---------------------------------------------------------------------------
-// r_cmd_multiwaitforever2
-// ---------------------------------------------------------------------------
-//
-RESOURCE SSM_MULTIPLE_WAIT r_cmd_multiwaitforever2
-    {
-    priority = 0xFF86;
-    }
 
 // ---------------------------------------------------------------------------
 // r_cmd_psstate
@@ -168,67 +155,6 @@ RESOURCE SSM_PUBLISH_SYSTEM_STATE r_cmd_publishstate
     retries = 2;
     }
 
-// ---------------------------------------------------------------------------
-// r_cmd_rfsdeep
-// ---------------------------------------------------------------------------
-//
-RESOURCE SSM_START_CUSTOM_COMMAND r_cmd_rfsdeep
-    {
-    priority = 0xFFD7;
-    dllname = "rfscustcmd.dll";
-    ordinal = 2; // RfsCustCmdDeepNewL
-    retries = 2;
-    conditional_information = r_cond_cenrep_rfs_deep;
-    }
-
-RESOURCE SSM_START_CUSTOM_COMMAND r_cmd_rfsfirstboot
-    {
-    priority = 0xFFD7;
-    dllname = "rfscustcmd.dll";
-    ordinal = 1; // RfsCustCmdFirstBootNewL
-    retries = 2;
-    conditional_information = r_cond_ps_firstboot;
-    }
-
-// ---------------------------------------------------------------------------
-// r_cmd_rfsnormal
-// ---------------------------------------------------------------------------
-//
-RESOURCE SSM_START_CUSTOM_COMMAND r_cmd_rfsnormal
-    {
-    priority = 0xFFD7;
-    dllname = "rfscustcmd.dll";
-    ordinal = 3; // RfsCustCmdPreUiNewL
-    retries = 2;
-    conditional_information = r_cond_cenrep_rfs_normal;
-    }
-
-// ---------------------------------------------------------------------------
-// r_cmd_rfspostui
-// ---------------------------------------------------------------------------
-//
-RESOURCE SSM_START_CUSTOM_COMMAND r_cmd_rfspostui
-    {
-    priority = 0xFF77;
-    dllname = "rfscustcmd.dll";
-    ordinal = 4; // RfsCustCmdPostUiNewL
-    retries = 2;
-    conditional_information = r_cond_cenrep_rfs_normal;
-    }
-
-// ---------------------------------------------------------------------------
-// r_cmd_rtc
-// ---------------------------------------------------------------------------
-//
-RESOURCE SSM_START_CUSTOM_COMMAND r_cmd_rtc
-    {
-    priority = 0xFF97;
-    severity = ECmdCriticalSeverity;
-    dllname = "customcmds.dll";
-    ordinal = 12;
-    execution_behaviour = ESsmDeferredWaitForSignal;
-    retries = 2;
-    }
 
 // ---------------------------------------------------------------------------
 // r_cmd_sastate
@@ -243,15 +169,6 @@ RESOURCE SSM_START_CUSTOM_COMMAND r_cmd_sastate
     unload_on_finish = ENeverUnload;
     retries = 2;
     dll_data = r_dlldata_sastate;
-    }
-
-RESOURCE SSM_START_CUSTOM_COMMAND r_cmd_selectlanguage
-    {
-    priority = 0xFF87;
-    severity = ECmdCriticalSeverity;
-    dllname = "ssmlangselcmd.dll";
-    ordinal = 1; // SelectLanguage
-    retries = 2;
     }
 
 // ---------------------------------------------------------------------------

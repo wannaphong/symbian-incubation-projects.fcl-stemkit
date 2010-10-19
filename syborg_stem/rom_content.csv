@@ -5090,7 +5090,7 @@ sys\bin\qmng.dll,/epoc32/release/armv5/urel/qmng.dll,core/mw/qt.iby,mw/qt,,,
 sys\bin\qsvg.dll,/epoc32/release/armv5/urel/qsvg.dll,core/mw/qt.iby,mw/qt,,,
 sys\bin\qsvgicon.dll,/epoc32/release/armv5/urel/qsvgicon.dll,core/mw/qt.iby,mw/qt,,,
 sys\bin\QtCore.dll,/epoc32/release/armv5/urel/qtcore.dll,core/mw/qt.iby,mw/qt,In,WR,Stem use case requires Qt
-sys\bin\QtGui.dll,/epoc32/release/armv5/urel/qtgui.dll,core/mw/qt.iby,mw/qt,,,
+sys\bin\QtGui.dll,/epoc32/release/armv5/urel/qtgui.dll,core/mw/qt.iby,mw/qt,in,TomP,Stem use case requires Qt GUI
 sys\bin\qtiff.dll,/epoc32/release/armv5/urel/qtiff.dll,core/mw/qt.iby,mw/qt,,,
 sys\bin\QtMultimedia.dll,/epoc32/release/armv5/urel/qtmultimedia.dll,core/mw/qt.iby,mw/qt,,,
 sys\bin\QtNetwork.dll,/epoc32/release/armv5/urel/qtnetwork.dll,core/mw/qt.iby,mw/qt,,,
