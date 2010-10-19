@@ -1,0 +1,3 @@
+file=\epoc32\release\ARMV5\urel\weatherinfo.exe 	"sys\bin\weatherinfo.exe" 
+data=\epoc32\data\Z\resource\apps\weatherinfo.RSC 	"resource\apps\weatherinfo.rsc" 
+data=\epoc32\data\Z\private\10003a3f\import\Apps\weatherinfo_reg.rsc 	"private\10003a3f\import\apps\weatherinfo_reg.rsc"
