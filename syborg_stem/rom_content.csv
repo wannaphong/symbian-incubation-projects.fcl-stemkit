@@ -3250,7 +3250,7 @@ Sys\Bin\CTSECDLGNOTIFIER.dll,/epoc32/release/armv5/urel/ctsecdlgnotifier.dll,cor
 sys\bin\CTSecDlgs.dll,/epoc32/release/armv5/urel/ctsecdlgs.dll,core/mw/CTSecurityDialogs.iby,mw/securitysrv,,,
 Sys\Bin\ctsysystemstateplugin.dll,/epoc32/release/armv5/urel/ctsysystemstateplugin.dll,ctsysystemstateplugin.iby,os/cellularsrv,,,
 Sys\Bin\CUSTOMAPI.DLL,/epoc32/release/armv5/urel/customapi.dll,ctsy.iby,os/cellularsrv,,,
-sys\bin\customcmds.dll,/epoc32/release/armv5/urel/customcmds.dll,core/os/ssmcompatibility.iby,os/devicesrv,,,
+sys\bin\customcmds.dll,/epoc32/release/armv5/urel/customcmds.dll,core/os/ssmcompatibility.iby,os/devicesrv,stem,TomP,To break dependencies on things no longer needed by startup (eg etel.dll)
 sys\bin\CustomCommandUtility.dll,/epoc32/release/armv5/urel/customcommandutility.dll,core/os/MMExtFw.iby,os/mm,,,
 sys\bin\CustomInterfaceBuilder.dll,/epoc32/release/armv5/urel/custominterfacebuilder.dll,core/os/MMExtFw.iby,os/mm,,,
 sys\bin\CustomInterfaceProxyFactory.dll,/epoc32/release/armv5/urel/custominterfaceproxyfactory.dll,core/os/MMExtFw.iby,adaptation/stubs,,,
@@ -3547,7 +3547,7 @@ sys\bin\eswt.dll,/epoc32/release/armv5/urel/eswt.dll,core/app/java.iby,app/jrt,,
 sys\bin\eswtapifacade.dll,/epoc32/release/armv5/urel/eswtapifacade.dll,core/app/java.iby,app/jrt,,,
 sys\bin\eswtdirectcontent.dll,/epoc32/release/armv5/urel/eswtdirectcontent.dll,core/app/java.iby,app/jrt,,,
 sys\bin\eswtphysics.dll,/epoc32/release/armv5/urel/eswtphysics.dll,core/app/java.iby,app/jrt,,,
-sys\bin\ETel.dll,/epoc32/release/armv5/urel/etel.dll,etel.iby,os/cellularsrv,,WR,Stem does not support telephony
+sys\bin\ETel.dll,/epoc32/release/armv5/urel/etel.dll,etel.iby,os/cellularsrv,out,WR,Stem does not support telephony
 sys\bin\Etel3rdParty.dll,/epoc32/release/armv5/urel/etel3rdparty.dll,etelisv.iby,os/cellularsrv,,,
 sys\bin\etelmm.dll,/epoc32/release/armv5/urel/etelmm.dll,etelmm.iby,os/cellularsrv,,,
 sys\bin\etelpckt.dll,/epoc32/release/armv5/urel/etelpckt.dll,etelpckt.iby,os/cellularsrv,,,
@@ -5090,7 +5090,7 @@ sys\bin\qmng.dll,/epoc32/release/armv5/urel/qmng.dll,core/mw/qt.iby,mw/qt,,,
 sys\bin\qsvg.dll,/epoc32/release/armv5/urel/qsvg.dll,core/mw/qt.iby,mw/qt,,,
 sys\bin\qsvgicon.dll,/epoc32/release/armv5/urel/qsvgicon.dll,core/mw/qt.iby,mw/qt,,,
 sys\bin\QtCore.dll,/epoc32/release/armv5/urel/qtcore.dll,core/mw/qt.iby,mw/qt,In,WR,Stem use case requires Qt
-sys\bin\QtGui.dll,/epoc32/release/armv5/urel/qtgui.dll,core/mw/qt.iby,mw/qt,in,TomP,Stem use case requires Qt GUI
+sys\bin\QtGui.dll,/epoc32/release/armv5/urel/qtgui.dll,core/mw/qt.iby,mw/qt,,,
 sys\bin\qtiff.dll,/epoc32/release/armv5/urel/qtiff.dll,core/mw/qt.iby,mw/qt,,,
 sys\bin\QtMultimedia.dll,/epoc32/release/armv5/urel/qtmultimedia.dll,core/mw/qt.iby,mw/qt,,,
 sys\bin\QtNetwork.dll,/epoc32/release/armv5/urel/qtnetwork.dll,core/mw/qt.iby,mw/qt,,,
