@@ -68,9 +68,7 @@ RESOURCE SSM_COMMAND_LIST r_cmds
         // prio 0xFE01
         r_cmd_sysagt,
         r_cmd_initpskeys,
-     //TomP    r_cmd_checkuserdrive,
         r_cmd_deltempfiles,
-     //TomP   r_cmd_reservedisk,
         r_cmd_sysmon,
         r_cmd_ssmutilsrv,
         r_cmd_multiwaitforever // prio 0xFE00
@@ -82,22 +80,7 @@ RESOURCE SSM_COMMAND_LIST r_cmds
 // ===========================================================================
 //
 
-// ---------------------------------------------------------------------------
-// r_cmd_checkuserdrive
-// ---------------------------------------------------------------------------
-//
-/*
-RESOURCE SSM_START_CUSTOM_COMMAND r_cmd_checkuserdrive
-    {
-    priority = 0xFE01;
-    execution_behaviour = ESsmDeferredWaitForSignal;
-    severity = ECmdCriticalSeverity;
-    dllname = "customcmds.dll";
-    ordinal = 13; // CheckUserDrive
-    unload_on_finish = ENeverUnload;
-    retries = 2;
-    }
-*/
+
 // ---------------------------------------------------------------------------
 // r_cmd_deltempfiles
 // ---------------------------------------------------------------------------
@@ -147,11 +130,6 @@ RESOURCE SSM_PUBLISH_SYSTEM_STATE r_cmd_publishstate
     retries = 2;
     }
 
-// ---------------------------------------------------------------------------
-// r_cmd_reservedisk
-// ---------------------------------------------------------------------------
-//
-/*
 RESOURCE SSM_START_PROCESS_INFO r_cmd_reservedisk
     {
     priority = 0xFE01;
@@ -160,7 +138,7 @@ RESOURCE SSM_START_PROCESS_INFO r_cmd_reservedisk
     severity = ECmdCriticalSeverity;
     retries = 2;
     }
-*/
+
 // ---------------------------------------------------------------------------
 // r_cmd_ssmutilsrv
 // ---------------------------------------------------------------------------

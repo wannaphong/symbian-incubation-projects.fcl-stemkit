@@ -68,13 +68,7 @@ RESOURCE SSM_COMMAND_LIST r_cmds
         r_cmd_sastate,          // This needs to be the first command in state, prio 0xFFF2
         r_cmd_publishstate,     // prio 0xFFF1
         r_cmd_psstate,          // prio 0xFFF0
-        // prio 0xFFE7
-    //TomP    r_cmd_selftest,
-    //TomP   r_cmd_cfserver,
-    //TomP    r_cmd_sysap,
-    //TomP    r_cmd_calsrv,
-    //TomP    r_cmd_profmon,
-		r_cmd_menu,	// TomP - moved from the Security command list
+		r_cmd_menu,				// TomP - moved from the Security command list as this is now the only thing that we really do in this state.
         // prio 0xFFE6
         r_cmd_multiwaitforever
         };
@@ -98,32 +92,6 @@ RESOURCE SSM_START_APP_INFO r_cmd_menu
     }
 	
 // ---------------------------------------------------------------------------
-// r_cmd_calsrv
-// ---------------------------------------------------------------------------
-//
-/*
-RESOURCE SSM_START_PROCESS_INFO r_cmd_calsrv
-    {
-    priority = 0xFFE7;
-    name = "calensvr.exe";
-    execution_behaviour = ESsmFireAndForget;
-    monitor_info = r_mon_100_restarts_reset;
-    }
-
-// ---------------------------------------------------------------------------
-// r_cmd_cfserver
-// ---------------------------------------------------------------------------
-//
-RESOURCE SSM_START_PROCESS_INFO r_cmd_cfserver
-    {
-    priority = 0xFFE7;
-    name = "Z:\\sys\\bin\\cfserver.exe";
-    execution_behaviour = ESsmDeferredWaitForSignal;
-    monitor_info = r_mon_100_restarts_reset;
-    }
-*/
-
-// ---------------------------------------------------------------------------
 // r_cmd_multiwaitforever
 // ---------------------------------------------------------------------------
 //
@@ -132,18 +100,6 @@ RESOURCE SSM_MULTIPLE_WAIT r_cmd_multiwaitforever
     priority = 0xFFE6;
     }
 
-// ---------------------------------------------------------------------------
-// r_cmd_profmon
-// ---------------------------------------------------------------------------
-//
-/*
-RESOURCE SSM_START_PROCESS_INFO r_cmd_profmon
-    {
-    priority = 0xFFE7;
-    name = "Z:\\sys\\bin\\profilesettingsmonitor.exe";
-    execution_behaviour = ESsmDeferredWaitForSignal;
-    }
-*/
 
 // ---------------------------------------------------------------------------
 // r_cmd_psstate
@@ -184,11 +140,6 @@ RESOURCE SSM_START_CUSTOM_COMMAND r_cmd_sastate
     dll_data = r_dlldata_sastate;
     }
 
-// ---------------------------------------------------------------------------
-// r_cmd_selftest
-// ---------------------------------------------------------------------------
-//
-/*
 RESOURCE SSM_START_CUSTOM_COMMAND r_cmd_selftest
     {
     priority = 0xFFE7;
@@ -212,9 +163,9 @@ RESOURCE SSM_START_APP_INFO r_cmd_sysap
     severity = ECmdCriticalSeverity;
     retries = 2;
     background = 1; // To background
-    monitor_info = r_mon_reset;
+//TomP - monitor_info = r_mon_reset;
     }
-*/
+
 // ===========================================================================
 // DLL data items in alphabetical order
 // ===========================================================================
@@ -232,4 +183,4 @@ RESOURCE CMD_PARAM_STATE_CHANGE r_dlldata_sastate
 
 // monitoring.rss contains resource definitions, so it may not be included
 // before entry point.
-#include "stem_monitoring.rss"
+//#include "stem_monitoring.rss"
