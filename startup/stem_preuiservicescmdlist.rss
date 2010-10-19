@@ -80,7 +80,6 @@ RESOURCE SSM_COMMAND_LIST r_cmds
 // ===========================================================================
 //
 
-
 // ---------------------------------------------------------------------------
 // r_cmd_deltempfiles
 // ---------------------------------------------------------------------------
@@ -130,15 +129,7 @@ RESOURCE SSM_PUBLISH_SYSTEM_STATE r_cmd_publishstate
     retries = 2;
     }
 
-RESOURCE SSM_START_PROCESS_INFO r_cmd_reservedisk
-    {
-    priority = 0xFE01;
-    execution_behaviour = ESsmFireAndForget;
-    name = "Z:\\sys\\bin\\ssmdiskreserver.exe";
-    severity = ECmdCriticalSeverity;
-    retries = 2;
-    }
-
+	
 // ---------------------------------------------------------------------------
 // r_cmd_ssmutilsrv
 // ---------------------------------------------------------------------------
