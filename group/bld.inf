@@ -36,3 +36,6 @@ PRJ_MMPFILES
 // based on sf/mw/svgt
 ../breakdeps/SVGEngine.mmp
 
+// Rebuild the "original" TimeZone localisation resources as they're eclipsed by something else in the PDK
+/sf/mw/appsupport/tzservices/tzlocrscfactory/group/TzLocalizationRscFactory.mmp
+
