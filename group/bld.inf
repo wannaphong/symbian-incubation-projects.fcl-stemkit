@@ -24,6 +24,7 @@ PRJ_MMPFILES
 // based on sf/os/devicesrv
 ../startup/ssmcmdlists.mmp
 ../startup/ssmstartuppolicy.mmp
+../startup/customcmds.mmp
 
 // based on sf/os/ossrv
 ../breakdeps/backend.mmp
