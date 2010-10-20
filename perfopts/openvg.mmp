@@ -27,6 +27,8 @@ vendorid        0x70000001
 
 //noexportlibrary
 
+armfpu vfpv2
+
 MACRO       __OPENVGHEADERS_USE_VG_1_1
 
 userinclude     /sf/os/graphics/openvg/openvgrefimplementation/sfopenvg/sfopenvg/include //for internal openvg functions e.g. do_vgXXX
