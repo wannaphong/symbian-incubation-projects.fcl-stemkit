@@ -23,7 +23,7 @@ targettype      dll				// Binary build type
 uid             KUidSharedDllUidValue KUidVGUDllUidValue		// File uids
 CAPABILITY      CAP_GENERAL_DLL
 vendorid        0x70000001
-//noexportlibrary
+noexportlibrary
 
 armfpu vfpv2
 
@@ -39,7 +39,7 @@ sourcepath      .		// Relative path to source files
 source          vgu.cpp
 
 library         euser.lib     		// Mandatory
-library			stem_sflibopenvgrefimpl.lib
+library			sflibopenvgrefimpl.lib
 
 #ifdef WINS
 DEFFILE         \epoc32\include\def\win32\libopenvgu11.def	// WINS/WINSCW def file

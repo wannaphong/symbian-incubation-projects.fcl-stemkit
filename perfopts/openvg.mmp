@@ -25,7 +25,7 @@ uid             KUidSharedDllUidValue KUidOpenVGDllUidValue		// File uids
 CAPABILITY      ALL -tcb
 vendorid        0x70000001
 
-//noexportlibrary
+noexportlibrary
 
 armfpu vfpv2
 
@@ -43,7 +43,7 @@ sourcepath      .		// Relative path to source files
 source openvg.cpp
 
 library         euser.lib     		// Mandatory
-library			stem_sflibopenvgrefimpl.lib
+library			sflibopenvgrefimpl.lib
 
 #ifdef WINS
 DEFFILE         \epoc32\include\def\win32\libopenvg11.def	// WINS/WINSCW def file
