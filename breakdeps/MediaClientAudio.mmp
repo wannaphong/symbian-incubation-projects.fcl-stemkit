@@ -12,7 +12,6 @@
 //
 // Description:
 // mediaclientaudio.dll Media Server audio compatibility library
-// MACRO __AUDIO_PROFILING // Audio Profiling TSU_MMF_PFM_01
 // 
 //
 
@@ -20,40 +19,27 @@
  @file
 */
 
-#include		"../../inc/Mda/Common/Base.hrh"    // get the UID
+#define KSharedLibraryUidDefine                    268435597
+#define KUidMediaServerClientAudioDllUnicodeDefine 268450194
 
-target			mediaclientaudio.dll
+target			stem_mediaclientaudio.dll
+NOEXPORTLIBRARY
 CAPABILITY      ALL -TCB
 targettype		DLL
 UID				KSharedLibraryUidDefine KUidMediaServerClientAudioDllUnicodeDefine
 VENDORID        0x70000001
 UNPAGED
 
+USERINCLUDE .
 OS_LAYER_SYSTEMINCLUDE_SYMBIAN
 
-USERINCLUDE		../../src/Client/Utility
 
-SOURCEPATH		../../src/Client/Audio
-source			mmfclientaudiocliputility.cpp
-source			mmfclientaudioplayer.cpp 
-source			mmfclientaudiorecorder.cpp
-source			mmfclientaudioconverter.cpp
+// Real source			/sf/os/mm/mmlibs/mmfw/src/Client/Audio/mmfclienttoneplayer.cpp 
+SOURCEPATH		.
 source			mmfclienttoneplayer.cpp 
+//source			mmfclientaudioplayer.cpp 
  	
-library			mediaclientutility.lib
-library			mmfcontrollerframework.lib
-library			mmfstandardcustomcommands.lib
 library			euser.lib 
-LIBRARY			mmfdevsound.lib
-LIBRARY			efsrv.lib
-LIBRARY			mediaclient.lib
-
-#ifdef EABI
-LIBRARY			ecom.lib
-#endif
-
-LIBRARY			mmcommon.lib
-LIBRARY			caf.lib
 
 #ifdef EABI
 DEFFILE MediaClientAudio.def
@@ -70,7 +56,5 @@ start			wins
 end
 
 
-
-                    
 
 SMPSAFE
