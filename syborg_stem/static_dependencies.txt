@@ -4109,6 +4109,6 @@ sys\bin\eiksrvui.dll	/epoc32/release/armv5/urel/stem_eiksrvui.dll	sid=100053d0:A
 private\10003a3f\import\apps\weatherinfo_reg.rsc	/epoc32/data/z/private/10003a3f/import/apps/weatherinfo_reg.rsc	sys\bin\weatherinfo.exe
 resource\apps\weatherinfo.rsc	/epoc32/data/z/resource/apps/weatherinfo.rsc	sys\bin\weatherinfo.exe
 sys\bin\weatherinfo.exe	/epoc32/release/armv5/urel/weatherinfo.exe	sid=a000cf77:QtCore[2001b2dc].dll:QtGui[2001b2dd].dll:QtNetwork[2001b2de].dll:QtSvg[2001b2e2].dll:commdb[10004e1c].dll:dfpaeabi.dll:drtaeabi.dll:esock[10003d3f].dll:euser[100039e5].dll:libc[10207369].dll:stdnew[20022178].dll
-Sys\Bin\libopenvg_sw.dll	/epoc32/release/armv5/urel/stem_libopenvg_sw.dll	sid=10281ab9:stem_sflibopenvgrefimpl[10281ca6].dll
-Sys\Bin\libopenvgu_sw.dll	/epoc32/release/armv5/urel/stem_libopenvgu_sw.dll	sid=10281c47:stem_sflibopenvgrefimpl[10281ca6].dll
-sys\bin\sflibopenvgrefimpl.dll	/epoc32/release/armv5/urel/stem_sflibopenvgrefimpl.dll	sid=10281ca6:drtaeabi.dll:euser[100039e5].dll:fbscli[10003a15].dll:libm[102750d2].dll:libstdcpp[10282872].dll:stem_libopenvg_sw[10281ab9].dll
+Sys\Bin\libopenvg_sw.dll	/epoc32/release/armv5/urel/stem_libopenvg_sw.dll	sid=10281ab9:sflibopenvgrefimpl[10281ca6].dll
+Sys\Bin\libopenvgu_sw.dll	/epoc32/release/armv5/urel/stem_libopenvgu_sw.dll	sid=10281c47:sflibopenvgrefimpl[10281ca6].dll
+sys\bin\sflibopenvgrefimpl.dll	/epoc32/release/armv5/urel/stem_sflibopenvgrefimpl.dll	sid=10281ca6:drtaeabi.dll:euser[100039e5].dll:fbscli[10003a15].dll:libm[102750d2].dll:libopenvg_sw[10281ab9].dll:libstdcpp[10282872].dll
