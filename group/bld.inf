@@ -21,6 +21,9 @@ DEFAULT
 
 PRJ_MMPFILES
 
+// Pure stemkit code
+../breakdeps/MediaClientAudio.mmp
+
 // based on sf/os/devicesrv
 ../startup/ssmcmdlists.mmp
 ../startup/ssmstartuppolicy.mmp
