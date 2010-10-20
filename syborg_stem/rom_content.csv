@@ -4274,8 +4274,8 @@ sys\bin\Libgobject.dll,/epoc32/release/armv5/urel/libgobject.dll,core/os/glib.ib
 sys\bin\libgthread.dll,/epoc32/release/armv5/urel/libgthread.dll,core/os/glib.iby,os/ossrv,,,
 sys\bin\LibLogger.dll,/epoc32/release/armv5/urel/liblogger.dll,openenv.iby,os/ossrv,,,
 sys\bin\libm.dll,/epoc32/release/armv5/urel/libm.dll,openenv.iby,os/ossrv,,,
-Sys\Bin\libopenvg_sw.dll,/epoc32/release/armv5/urel/libopenvg_sw.dll,../../../rom/config/sf_refhw/bigrom.oby,os/graphics,,,
-Sys\Bin\libopenvgu_sw.dll,/epoc32/release/armv5/urel/libopenvgu_sw.dll,../../../rom/config/sf_refhw/bigrom.oby,os/graphics,,,
+Sys\Bin\libopenvg_sw.dll,/epoc32/release/armv5/urel/libopenvg_sw.dll,../../../rom/config/sf_refhw/bigrom.oby,os/graphics,Stem,MW,Performance optimisation
+Sys\Bin\libopenvgu_sw.dll,/epoc32/release/armv5/urel/libopenvgu_sw.dll,../../../rom/config/sf_refhw/bigrom.oby,os/graphics,Stem,MW,Performance optimisation
 sys\bin\libpthread.dll,/epoc32/release/armv5/urel/libpthread.dll,openenv.iby,os/ossrv,,,
 sys\bin\librt.dll,/epoc32/release/armv5/urel/librt.dll,oelibrt.iby,os/ossrv,,,
 sys\bin\libssl.dll,/epoc32/release/armv5/urel/libssl.dll,core/os/ssl.iby,os/ossrv,,,
@@ -5373,7 +5373,7 @@ Sys\Bin\SetUpCallCmd.dll,/epoc32/release/armv5/urel/setupcallcmd.dll,core/mw/sat
 Sys\Bin\SetUpEventListCmd.dll,/epoc32/release/armv5/urel/setupeventlistcmd.dll,core/mw/satserver.iby,mw/phonesrv,,,
 Sys\Bin\SetUpIdleModeTextCmd.dll,/epoc32/release/armv5/urel/setupidlemodetextcmd.dll,core/mw/satserver.iby,mw/phonesrv,,,
 Sys\Bin\SetUpMenuCmd.dll,/epoc32/release/armv5/urel/setupmenucmd.dll,core/mw/satserver.iby,mw/phonesrv,,,
-sys\bin\sflibopenvgrefimpl.dll,/epoc32/release/armv5/urel/sflibopenvgrefimpl.dll,../../../rom/config/sf_refhw/bigrom.oby,os/graphics,,,
+sys\bin\sflibopenvgrefimpl.dll,/epoc32/release/armv5/urel/sflibopenvgrefimpl.dll,../../../rom/config/sf_refhw/bigrom.oby,os/graphics,Stem,MW,Performance optimisation
 sys\bin\Sharpness.pgn,/epoc32/release/armv5/urel/sharpness.pgn,core/app/ImageEditorSharpnessPlugin.iby,app/imgeditor,,,
 sys\bin\shiftjis_docomo_shared.dll,/epoc32/release/armv5/urel/shiftjis_docomo_shared.dll,charconv_japanese_docomo.iby,os/textandloc,,,
 Sys\Bin\shiftjis_ntt_docomo.dll,/epoc32/release/armv5/urel/shiftjis_ntt_docomo.dll,charconv_japanese_docomo.iby,os/textandloc,,,
