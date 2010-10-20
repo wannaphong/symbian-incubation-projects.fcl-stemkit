@@ -411,14 +411,22 @@ foreach my $exe (sort keys %exe_dependencies)
 	{
 	next if (defined $must_have_exes{$exe});
 	my %dependents;
-	my $deletion_root = 1;
+	my $deletion_root = "";
 	foreach my $prerequisite (@{$exe_prerequisites{$exe}})
 		{
 		next if (defined $must_have_exes{$prerequisite});
-		$deletion_root = 0;	# at least one prerequisite is not a must_have, so will delete this exe if removed
+		$deletion_root = $prerequisite;	# at least one prerequisite is not a must_have, so will delete this exe if removed
 		last;
 		}
-	next if (!$deletion_root);
+	if (defined $deletions{$exe_to_romfile{$exe}})
+		{
+		if ($deletion_root ne "")
+			{
+			#print STDERR "Explicit deletion of $exe is not efficient - $deletion_root would remove it\n";
+			}
+			next;	# no need to report this one
+		}
+	next if ($deletion_root ne "");
 	
 	count_dependents($exe, \%dependents);
 	my $count = scalar keys %dependents;
