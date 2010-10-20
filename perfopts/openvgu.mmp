@@ -25,6 +25,8 @@ CAPABILITY      CAP_GENERAL_DLL
 vendorid        0x70000001
 //noexportlibrary
 
+armfpu vfpv2
+
 userinclude     /sf/os/graphics/openvg/openvgrefimplementation/sfopenvg/sfopenvg/include //for internal egl functions e.g. do_eglXXX
 
 OS_LAYER_SYSTEMINCLUDE

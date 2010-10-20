@@ -25,6 +25,7 @@ uid             KUidSharedDllUidValue 0x10281CA6		// File uids
 CAPABILITY      ALL -tcb
 vendorid        0x70000001
 
+armfpu vfpv2
 
 MACRO       __OPENVGHEADERS_USE_VG_1_1
 
