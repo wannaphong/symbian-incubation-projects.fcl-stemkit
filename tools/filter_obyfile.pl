@@ -70,14 +70,15 @@ foreach my $line (@rom_content)
 		}
 	}
 
-printf STDERR "%d in (including % stem), %d out\n", 
+printf STDERR "%d in (including %d stem), %d out\n", 
 	scalar keys %must_have,
 	scalar keys %stem_substitutions, 
 	scalar keys %deletions; 
 
 # read static dependencies file
-my %exe_to_romfile;
-my %exe_dependencies;
+my %exe_to_romfile;     # exe -> original romfile
+my %exe_dependencies;   # exe -> list of romfile
+my %exe_prerequisites;  # exe -> list of exe
 my %lc_romfiles;
 
 my $line;
@@ -100,29 +101,38 @@ while ($line = <STATIC_DEPENDENCIES>)
 
 	$lc_romfiles{lc $romfile} = $romfile;
 	
+	my $romexe = "";
 	if ($romfile =~ /^sys.bin.(.*)$/i)
 		{
-		my $exe = lc $1;
-		$exe_to_romfile{$exe} = $romfile;
+		$romexe = lc $1;
+		$exe_to_romfile{$romexe} = $romfile;
 		}
 
-	foreach my $dependent (split /:/,$stuff)
+	my @prerequisite_exes = ();
+	foreach my $prerequisite (split /:/,$stuff)
 		{
-		next if ($dependent =~ /^sid=/);
-		$dependent = lc $dependent;
-		
-		$dependent =~ s/^sys\\bin\\//;	# no directory => sys\bin anyway
-		$dependent =~ s/\[\S+\]//;	# ignore the UIDs for now
-		
-		if (!defined $exe_dependencies{$dependent})
+		next if ($prerequisite =~ /^sid=/);	# not a real file
+		$prerequisite =~ s/^sys.bin.//;	# remove leading sys/bin, if present
+		if ($prerequisite !~ /\\/)
 			{
-			my @dependents = ($romfile);
-			$exe_dependencies{$dependent} = \@dependents;
+			my $exe = lc $prerequisite;
+			$exe =~ s/\[\S+\]//;	# ignore the UIDs for now
+		
+			push @prerequisite_exes, $exe;
+			if (!defined $exe_dependencies{$exe})
+				{
+				my @dependents = ($romfile);
+				$exe_dependencies{$exe} = \@dependents;
+				}
+			else
+				{
+				push @{$exe_dependencies{$exe}}, $romfile;
+				}
 			}
-		else
-			{
-			push @{$exe_dependencies{$dependent}}, $romfile;
-			}
+		}
+	if ($romexe ne "")
+		{
+		$exe_prerequisites{$romexe} = \@prerequisite_exes;
 		}
 	}
 close STATIC_DEPENDENCIES;
@@ -149,15 +159,26 @@ foreach my $line (@obylines)
 			{
 			my $realexe = lc $1;
 			push @{$exe_dependencies{$realexe}}, $newname;		# the alias is a dependent of the real file
+			
+			if ($newname =~ /^sys.bin.(\S+)$/i)
+				{
+				my $newexe = lc $1;
+				my @prerequisite_exes = ($realexe);
+				$exe_prerequisites{$newexe} = \@prerequisite_exes;
+				}
+
 			# print STDERR "added $newname as a dependent of $realexe\n"
 			}
 		}
 	}
 
-# foreach my $exe ("libopenvg.dll", "libopenvg_sw.dll")
-# 	{
-# 	printf STDERR "Dependents of %s = %s\n", $exe, join(", ", @{$exe_dependencies{$exe}});
-# 	}
+if (0)
+	{
+	foreach my $exe ("libopenvg.dll", "libopenvg_sw.dll", "backend.dll")
+		{
+		printf STDERR "Dependents of %s = %s\n", $exe, join(", ", @{$exe_dependencies{$exe}});
+		}
+	}
 
 # process the "out" commands to recursively expand the deletions
 
@@ -336,6 +357,74 @@ foreach my $line (@obylines)
 
 print_detail("Applied $stem_count stem substitutions and deleted $deletion_count rom files");
 
+# Caculate what else could be removed
+
+my %must_have_exes;
+sub mark_prerequisites($);	# prototype for recursion
+sub mark_prerequisites($)
+	{
+	my ($exe) = @_;
+	return if (defined $must_have_exes{$exe});	# already marked
+
+	$must_have_exes{$exe} = 1;
+	if (!defined $exe_prerequisites{$exe})
+		{
+		# printf STDERR "$exe has no prerequisites to be marked!\n";
+		return;
+		}
+	foreach my $prerequisite (@{$exe_prerequisites{$exe}})
+		{
+		mark_prerequisites($prerequisite);
+		}
+	}
+
+foreach my $romfile (keys %must_have)
+	{
+	if ($romfile =~ /^sys.bin.(.*)$/i)
+		{
+		my $exe = lc $1;
+		mark_prerequisites($exe);
+		}
+	}
+printf STDERR "Minimum ROM now has %d exes\n", scalar keys %must_have_exes;
+
+sub count_dependents($$);	# prototype for recursion
+sub count_dependents($$)
+	{
+	my ($exe, $hashref) = @_;
+	return if (defined $$hashref{$exe});
+
+	$$hashref{$exe} = 1;
+	foreach my $dependent (@{$exe_dependencies{$exe}})
+		{
+		next if ($dependent =~ /^sid=/);
+		if ($dependent =~ /^sys.bin.(.*)$/i)
+			{
+			my $depexe = lc $1;
+			count_dependents($depexe, $hashref);
+			}
+		}
+	}
+
+my @deletion_roots;
+foreach my $exe (sort keys %exe_dependencies)
+	{
+	next if (defined $must_have_exes{$exe});
+	my %dependents;
+	my $deletion_root = 1;
+	foreach my $prerequisite (@{$exe_prerequisites{$exe}})
+		{
+		next if (defined $must_have_exes{$prerequisite});
+		$deletion_root = 0;	# at least one prerequisite is not a must_have, so will delete this exe if removed
+		last;
+		}
+	next if (!$deletion_root);
+	
+	count_dependents($exe, \%dependents);
+	my $count = scalar keys %dependents;
+	push @deletion_roots, sprintf "%-4d\t%s", scalar keys %dependents, $exe;
+	}
+
 my $deleted_lines_oby = "filtered.oby";
 my $deletion_details_file = "filter.log";
 
@@ -350,7 +439,7 @@ if ($deleted_lines_oby && scalar @deleted_lines)
 	close FILE;
 	}
 
-if ($deletion_details_file && scalar @details)
+if ($deletion_details_file && scalar (@details, @problems, @deletion_roots))
 	{
 	print STDERR "Writing deletion details to $deletion_details_file\n";
 	open FILE, ">$deletion_details_file" or die("Unable to write to file $deletion_details_file: $!\n");
@@ -358,6 +447,14 @@ if ($deletion_details_file && scalar @details)
 		{
 		print FILE $line, "\n";
 		}
+		
+	print FILE "\n====\n";
+	foreach my $deletion_root (sort {$b <=> $a} @deletion_roots)
+		{
+		my ($count,$exe) = split /\s+/, $deletion_root;
+		printf FILE "Deleting %s would remove %d files\n", $exe, $count;
+		}	
+
 	print FILE "\n====\n";
 	foreach my $problem (sort @problems)
 		{
@@ -366,3 +463,4 @@ if ($deletion_details_file && scalar @details)
 		}
 	close FILE;
 	}
+
