@@ -13,9 +13,12 @@
 * Description:
 * sfopenvg mmp file
 */
+// Modified to build from /sf/incubator/stemkit to enable VFP optimisation
+// builds against /sf/os/graphics/openvg/openvgrefimplementation/sfopenvg
+
 #include <vg\openvguids.hrh> // For uids
 
-target          sflibopenvgrefimpl.dll		// Destination filename
+target          stem_sflibopenvgrefimpl.dll		// Destination filename
 
 targettype      dll				// Binary build type
 uid             KUidSharedDllUidValue 0x10281CA6		// File uids
@@ -39,8 +42,8 @@ MACRO 		BUILD_WITH_PRIVATE_VGU //same meaning as macro BUILD_WITH_PRIVATE_EGL ex
 MACRO 		BUILD_WITH_PRIVATE_OPENVG //same meaning as macro BUILD_WITH_PRIVATE_EGL except applies to the OpenVG API.
 								   //see riAPI.cpp
 								   
-userinclude     ..\sfopenvg			// Local include files
-userinclude     ..\sfopenvg\include			// Local include files
+userinclude     /sf/os/graphics/openvg/openvgrefimplementation/sfopenvg/sfopenvg			// Local include files
+userinclude     /sf/os/graphics/openvg/openvgrefimplementation/sfopenvg/sfopenvg/include	// Local include files
 
 OS_LAYER_SYSTEMINCLUDE
 OS_LAYER_LIBC_SYSTEMINCLUDE
@@ -51,7 +54,7 @@ SYSTEMINCLUDE  OS_LAYER_PUBLIC_EXPORT_PATH(egl) // EGL include files
 
 
 
-sourcepath      ..\sfopenvg		// Relative path to source files
+sourcepath      /sf/os/graphics/openvg/openvgrefimplementation/sfopenvg/sfopenvg		// Relative path to source files
 
 source riApi.cpp
 source riContext.cpp
@@ -68,10 +71,12 @@ source riUtils.cpp
 // use Nokia Platsim interfaces to provide EGL services
 
 //for EGL
-SOURCEPATH ..\sfopenvg\symbian
+SOURCEPATH /sf/os/graphics/openvg/openvgrefimplementation/sfopenvg/sfopenvg/symbian
 SOURCE riEGLOS.cpp
 
-library			    libopenvg_sw.lib
+DEFFILE		/sf/os/graphics/openvg/openvgrefimplementation/sfopenvg/~/sflibopenvgrefimpl.def
+
+library			    stem_libopenvg_sw.lib
 library         euser.lib     		// Mandatory
 library         fbscli.lib    		// For CFbsBitmap, etc
 library         bitgdi.lib    		// For CFbsBitmapDevice, CFbsBitGc, etc

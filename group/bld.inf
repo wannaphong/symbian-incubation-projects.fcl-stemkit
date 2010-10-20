@@ -39,3 +39,8 @@ PRJ_MMPFILES
 // Rebuild the "original" TimeZone localisation resources as they're eclipsed by something else in the PDK
 /sf/mw/appsupport/tzservices/tzlocrscfactory/group/TzLocalizationRscFactory.mmp
 
+// VFP performance improvement for OpenVG SW reference implementation
+../perfopts/sfopenvg.mmp
+../perfopts/openvg.mmp
+../perfopts/openvgu.mmp
+
