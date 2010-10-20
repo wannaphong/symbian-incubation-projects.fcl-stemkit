@@ -24,8 +24,50 @@ enum TMmfMdaAudioToneUtility
 	EPlayStartedCalledWithError
 	};
 
-// declared in the recorder module
-void Panic(TInt aPanicCode);
+void Panic(TInt aPanicCode)
+	{
+	_LIT(KMMFMediaClientAudioPanicCategory, "Stem_MMFAudioClient");
+	User::Panic(KMMFMediaClientAudioPanicCategory, aPanicCode);
+	}
+
+// Dummy DevSound class
+
+CDummyDevSound::CDummyDevSound()
+	: CTimer(EPriorityStandard)
+	{}
+
+CDummyDevSound* CDummyDevSound::NewL()
+	{
+	CDummyDevSound* self = new(ELeave) CDummyDevSound();
+	return self;
+	}
+
+void CDummyDevSound::InitializeL(MDevSoundObserver& aDevSoundObserver)
+	{
+	iObserver = &aDevSoundObserver;
+	iObserver->InitializeComplete(KErrNone);
+	}
+
+void CDummyDevSound::Play(const TTimeIntervalMicroSeconds& aDuration)
+	{
+	if (IsActive())
+		{
+		// currently playing - ignore the request?
+		return;
+		}
+	TTimeIntervalMicroSeconds32 d = I64LOW(aDuration.Int64());
+	if (d <= TTimeIntervalMicroSeconds32(0))
+		{
+		d = 10;
+		}
+	After(d);
+	}
+
+void CDummyDevSound::RunL()
+	{
+	RDebug::Printf("!Beep!\n");
+	iObserver->ToneFinished(KErrNone);
+	}
 
 /**
 Creates a new instance of the tone player utility.
@@ -556,7 +598,7 @@ Retrieves a custom interface to the underlying device.
 EXPORT_C TAny* CMdaAudioToneUtility::CustomInterface(TUid aInterfaceId)
 	{
 	ASSERT(iProperties);
-	return iProperties->CustomInterface(aInterfaceId);
+	return 0;
 	}
 
 EXPORT_C void CMdaAudioToneUtility::RegisterPlayStartCallback(MMdaAudioTonePlayStartObserver& aObserver)
@@ -599,22 +641,18 @@ void CMMFMdaAudioToneUtility::ConstructL()
 	{
 	iAsyncCallback = CMMFMdaAudioToneObserverCallback::NewL(*this, *this);
 
-	iDevSound = CMMFDevSound::NewL();
-	iDevSound->InitializeL(*this,EMMFStateTonePlaying);
+	// iDevSound = CMMFDevSound::NewL();
+	// iDevSound->InitializeL(*this,EMMFStateTonePlaying);
 	
-	// In some implementations InitializeComplete() returns in the InitializeL() context,
-	// check the error
-	User::LeaveIfError(iInitializeState);
+	iTimer = CDummyDevSound::NewL();
+	iTimer->InitializeL(*this);
 
-	iDevSound->SetPrioritySettings(iPrioritySettings);
 	SetVolume(MaxVolume()/2 ); // set the volume to an intermediate value 
 	}
 
 CMMFMdaAudioToneUtility::~CMMFMdaAudioToneUtility()
 	{
-	delete iDevSound;
 	delete iAsyncCallback;
-	delete iToneConfig;
 	}
 
 
@@ -666,184 +704,105 @@ TMdaAudioToneUtilityState CMMFMdaAudioToneUtility::State()
 
 TInt CMMFMdaAudioToneUtility::MaxVolume()
 	{
-	return iDevSound->MaxVolume();
+	return 100;
 	}
 
 TInt CMMFMdaAudioToneUtility::Volume()
 	{
-	return iDevSound->Volume();
+	return iDevSoundVolume;
 	}
 
 void CMMFMdaAudioToneUtility::SetVolume(TInt aVolume) 
 	{
-	iDevSound->SetVolume(aVolume);
+	iDevSoundVolume = aVolume;
 	}
 
 void CMMFMdaAudioToneUtility::SetPriority(TInt aPriority, TInt aPref)
 	{
 	iPrioritySettings.iPref = aPref;
 	iPrioritySettings.iPriority = aPriority;
-	iDevSound->SetPrioritySettings(iPrioritySettings);
 	}
 
 void CMMFMdaAudioToneUtility::SetDTMFLengths(TTimeIntervalMicroSeconds32 aToneLength, 
 										 TTimeIntervalMicroSeconds32 aToneOffLength,
 										 TTimeIntervalMicroSeconds32 aPauseLength)
 	{
-	iDevSound->SetDTMFLengths(aToneLength, aToneOffLength, aPauseLength);
 	}
 
 void CMMFMdaAudioToneUtility::SetRepeats(TInt aRepeatNumberOfTimes, const TTimeIntervalMicroSeconds& aTrailingSilence)
 	{
-	iDevSound->SetToneRepeats(aRepeatNumberOfTimes, aTrailingSilence);
+	// iDevSound->SetToneRepeats(aRepeatNumberOfTimes, aTrailingSilence);
 	}
 
 void CMMFMdaAudioToneUtility::SetVolumeRamp(const TTimeIntervalMicroSeconds& aRampDuration)
 	{
-	iDevSound->SetVolumeRamp(aRampDuration);
 	}
 
 TInt CMMFMdaAudioToneUtility::FixedSequenceCount()
 	{
-	return iDevSound->FixedSequenceCount();
+	return 1; // iDevSound->FixedSequenceCount();
 	}
 
+_LIT(KFixedSequenceName, "FixedSequenceName");
 const TDesC& CMMFMdaAudioToneUtility::FixedSequenceName(TInt aSequenceNumber)
 	{
-	return iDevSound->FixedSequenceName(aSequenceNumber);
+	return KFixedSequenceName;
 	}
 
-/**
-* CalculateBalance
-* @param aBalance
-* @param aLeft
-* @param aRight
-*
-* follows a simple straight line transformation
-* y = m x + c
-* m = (KMMFBalanceMaxLeft-KMMFBalanceMaxRight)/ 100 
-* c = KMMFBalanceMaxRight
-* by substitution
-* when aLeft = 0
-*   KMMFBalanceMaxRight = m * 0 + c
-*   c = KMMFBalanceMaxRight
-* when aLeft = 100
-* KMMFBalanceMaxLeft = m * 100 + KMMFBalanceMaxRight
-* m = ( KMMFBalanceMaxLeft - KMMFBalanceMaxRight ) /100
-*/
 void CMMFMdaAudioToneUtility::CalculateBalance( TInt& aBalance, TInt aLeft, TInt aRight ) const
 	{
-	//[ assert pre conditions ]
-	__ASSERT_ALWAYS( (( aLeft + aRight ) == 100 ), Panic( EBadArgument ));
-	__ASSERT_ALWAYS( (( 0 <= aLeft) && ( 100 >= aLeft)), Panic( EBadArgument) );
-	__ASSERT_ALWAYS( (( 0 <= aRight) && ( 100 >= aRight)), Panic( EBadArgument) );
-
-	aBalance = (aLeft * (KMMFBalanceMaxLeft-KMMFBalanceMaxRight))/100 + KMMFBalanceMaxRight;
-
-    //[ assert post condition that aBalance is within limits ]
-	__ASSERT_ALWAYS( !(aBalance < KMMFBalanceMaxLeft || aBalance > KMMFBalanceMaxRight), Panic(EBadArgument));
-	
 	}
 
 
-/**
-* CalculateLeftRightBalance
-* @param aLeft
-* @param aRight
-* @param aBalance
-* Preconditions:
-* !(aBalance < KMMFBalanceMaxLeft || aBalance > KMMFBalanceMaxRight)
-* y = m x + c
-* aLeft = m ( aBalance ) + c
-* when aBalance = KMMFBalanceMaxLeft   aLeft = 100
-* when aBalance = KMMFBalanceMaxRight  aLeft = 0
-* 100 = m( KMMFBalanceMaxLeft ) + c
-* 0   = m( KMMFBalanceMaxRight ) + c 
-* c = -(KMMFBalanceMaxRight) m
-* 100 = m(KMMFBalanceMaxLeft ) - m(KMMFBalanceMaxRight)
-* m = 100/(KMMFBalanceMaxLeft - KMMFBalanceMaxRight )
-* c = -(KMMFBalanceMaxRight) * 100 /(KMMFBalanceMaxLeft - KMMFBalanceMaxRight )
-* aLeft = ( aBalance - KMMFBalanceMaxRight ) * 100 /( KMMFBalanceMaxLeft - KMMFBalanceMaxRight )
-*/
 void CMMFMdaAudioToneUtility::CalculateLeftRightBalance( TInt& aLeft, TInt& aRight, TInt aBalance ) const
 	{
-	// [ assert precondition that aBalance is within limits ]
-    __ASSERT_ALWAYS( !(aBalance < KMMFBalanceMaxLeft || aBalance > KMMFBalanceMaxRight), Panic(EBadArgument));
-	
-	//[ Now separate percentage balances out from aBalance ]
-	 aLeft = (100 * (aBalance-KMMFBalanceMaxRight)) / (KMMFBalanceMaxLeft-KMMFBalanceMaxRight);
-     aRight = 100 - aLeft;
-
-	 //[ assert post condition that left and right are within range ]
-	 __ASSERT_ALWAYS( ( (aLeft <= 100) && (aLeft >= 0) ), Panic(EPostConditionViolation));
-	 __ASSERT_ALWAYS( ( (aRight <= 100) && (aRight >= 0) ), Panic(EPostConditionViolation));
 	}
 
 
 void CMMFMdaAudioToneUtility::SetBalanceL(TInt aBalance) 
 	{
-	TInt left;
-	TInt right;
-	CalculateLeftRightBalance(left,right,aBalance);
-	iDevSound->SetPlayBalanceL(left,right);
+	iDevSoundBalance = aBalance;
 	}
 
 TInt CMMFMdaAudioToneUtility::GetBalanceL() 
 	{
-	TInt left;
-	TInt right;
-	TInt balance;
-	iDevSound->GetPlayBalanceL(left, right);
-	CalculateBalance(balance,left,right);
-	return balance; 
+	return iDevSoundBalance; 
 	}
 
 void CMMFMdaAudioToneUtility::PrepareToPlayTone(TInt aFrequency, const TTimeIntervalMicroSeconds& aDuration)
 	{
-	delete iToneConfig;
-	iToneConfig = NULL;
-	TRAPD(error, iToneConfig = CMMFSimpleToneConfig::NewL(aFrequency, aDuration));
-	iAsyncCallback->MatoPrepareComplete(error);
+	iDuration = aDuration;
+	iAsyncCallback->MatoPrepareComplete(KErrNone);
 	}
 
 void CMMFMdaAudioToneUtility::PrepareToPlayDualTone(TInt aFrequencyOne, TInt aFrequencyTwo, const TTimeIntervalMicroSeconds& aDuration)
 	{
-	delete iToneConfig; 
-	iToneConfig = NULL;
-	TRAPD(error, iToneConfig = CMMFDualToneConfig::NewL(aFrequencyOne, aFrequencyTwo, aDuration));
-	iAsyncCallback->MatoPrepareComplete(error);
+	iDuration = aDuration;
+	iAsyncCallback->MatoPrepareComplete(KErrNone);
 	}
 
 void CMMFMdaAudioToneUtility::PrepareToPlayDTMFString(const TDesC& aDTMF)
 	{
-	delete iToneConfig;
-	iToneConfig = NULL;
-	TRAPD(error, iToneConfig = CMMFDTMFStringToneConfig::NewL(aDTMF));
-	iAsyncCallback->MatoPrepareComplete(error);
+	iDuration = TTimeIntervalMicroSeconds(100);
+	iAsyncCallback->MatoPrepareComplete(KErrNone);
 	}
 
 void CMMFMdaAudioToneUtility::PrepareToPlayDesSequence(const TDesC8& aSequence)
 	{
-	delete iToneConfig;
-	iToneConfig = NULL;
-	TRAPD(error, iToneConfig = CMMFDesSeqToneConfig::NewL(aSequence));
-	iAsyncCallback->MatoPrepareComplete(error);
+	iDuration = TTimeIntervalMicroSeconds(100);
+	iAsyncCallback->MatoPrepareComplete(KErrNone);
 	}
 
 void CMMFMdaAudioToneUtility::PrepareToPlayFileSequence(const TDesC& aFileName)
 	{
-	delete iToneConfig;
-	iToneConfig = NULL;
-	TRAPD(error, iToneConfig = CMMFFileSeqToneConfig::NewL(aFileName));
-	iAsyncCallback->MatoPrepareComplete(error);
+	iDuration = TTimeIntervalMicroSeconds(100);
+	iAsyncCallback->MatoPrepareComplete(KErrNone);
 	}
 	
 void CMMFMdaAudioToneUtility::PrepareToPlayFileSequence(RFile& aFileName)
 	{
-	delete iToneConfig;
-	iToneConfig = NULL;
-	TRAPD(error, iToneConfig = CMMFFileSeqToneConfig::NewL(aFileName));
-	iAsyncCallback->MatoPrepareComplete(error);
+	iDuration = TTimeIntervalMicroSeconds(100);
+	iAsyncCallback->MatoPrepareComplete(KErrNone);
 	}
 
 
@@ -851,19 +810,13 @@ void CMMFMdaAudioToneUtility::PrepareToPlayFileSequence(RFile& aFileName)
 
 void CMMFMdaAudioToneUtility::PrepareToPlayFixedSequence(TInt aSequenceNumber)
 	{
-	delete iToneConfig;
-	iToneConfig = NULL;
-	TRAPD(error, iToneConfig = CMMFFixedSeqToneConfig::NewL(aSequenceNumber));
+	iDuration = TTimeIntervalMicroSeconds(100);
 	iSequenceNumber = aSequenceNumber;
-	iAsyncCallback->MatoPrepareComplete(error);
+	iAsyncCallback->MatoPrepareComplete(KErrNone);
 	}
 
 void CMMFMdaAudioToneUtility::CancelPrepare()
 	{
-	// FIXME - do we need to cancel the callback?  What if the callback is actually calling back another error?  Probably best not to cancel...
-	delete iToneConfig;
-	iToneConfig = NULL;
-
 	if (iState == EMdaAudioToneUtilityPrepared)
 		{
 		iState = EMdaAudioToneUtilityNotReady;
@@ -880,38 +833,19 @@ TInt CMMFMdaAudioToneUtility::Pause()
 		return KErrNotReady;
 		}
 
-	else if(! iDevSound->IsResumeSupported() || iToneConfig->Type() != CMMFToneConfig::EMmfToneTypeFileSeq)
-		{
-		return KErrNotSupported;
-		}
-		
-	iDevSound->Pause();
 	iState = EMdaAudioToneUtilityPaused;
 	return KErrNone;
 	}
 
 TInt CMMFMdaAudioToneUtility::Resume()
 	{
-	TInt err = KErrNone;
 	if (iState != EMdaAudioToneUtilityPaused)
 		{
-		err = KErrNotReady;
+		return KErrNotReady;
 		}
 
-	else if( iDevSound->IsResumeSupported() == EFalse || iToneConfig->Type() != CMMFToneConfig::EMmfToneTypeFileSeq)
-		{
-		err = KErrNotSupported;
-		}
-		
-	if(err == KErrNone)
-		{
-		err =  iDevSound->Resume();
-		if(err == KErrNone)
-			{
-			iState = EMdaAudioToneUtilityPlaying;
-			}
-		}
-	return err;
+	iState = EMdaAudioToneUtilityPlaying;
+	return KErrNone;
 	}
 
 void CMMFMdaAudioToneUtility::Play()
@@ -920,47 +854,31 @@ void CMMFMdaAudioToneUtility::Play()
 
 	if ((iState == EMdaAudioToneUtilityPlaying) || (iState == EMdaAudioToneUtilityPaused) || iPlayCalled)
 		{
-		error = KErrInUse;
-		}
-			
-	if (!error)
-		{
-		if (!iToneConfig)
-			{
-			TRAP(error, iToneConfig = CMMFFixedSeqToneConfig::NewL(iSequenceNumber));
-			}
-		}
-	// If there was an error, notify the client now.  Otherwise, client will be notified when
-	// play has finished.
-	if (error)
-		{
 		iState = EMdaAudioToneUtilityNotReady;
 		iAsyncCallback->MatoPlayComplete(error);
+		return;
 		}
 			
-	if (!error)
-		{
-		iState = EMdaAudioToneUtilityPlaying;
+	iState = EMdaAudioToneUtilityPlaying;
 
-		if (iInitialized)
+	if (iInitialized)
+		{
+		// Play() is called after InitializeComplete()
+		if (iInitializeState)
 			{
-			// Play() is called after InitializeComplete()
-			if (iInitializeState)
-				{
-				// InitializeComplete() with error other than KErrNone
-				iState = EMdaAudioToneUtilityNotReady;
-				iAsyncCallback->MatoPlayComplete(iInitializeState);
-				}
-			else
-				{
-				PlayAfterInitialized();
-				}
+			// InitializeComplete() with error other than KErrNone
+			iState = EMdaAudioToneUtilityNotReady;
+			iAsyncCallback->MatoPlayComplete(iInitializeState);
 			}
 		else
 			{
-			// Play() is called before InitializeComplete()
-			iPlayCalled = ETrue;
+			PlayAfterInitialized();
 			}
+		}
+	else
+		{
+		// Play() is called before InitializeComplete()
+		iPlayCalled = ETrue;
 		}
 	}
 
@@ -973,81 +891,25 @@ void CMMFMdaAudioToneUtility::PlayAfterInitialized()
 		}
 #endif
 	
-	TInt error = KErrNone;
-	switch (iToneConfig->Type())
+	// Really play something!
+	// TRAP(error, iDevSound->PlayToneL(c->Frequency(), c->Duration()));
+	iTimer->Play(iDuration);
+	
+#if 0 // the error case 
+	iState = EMdaAudioToneUtilityNotReady;
+	iAsyncCallback->MatoPlayComplete(error);
+	return;
+#endif
+
+	if(iPlayStartObserver)
 		{
-		case CMMFToneConfig::EMmfToneTypeSimple:
-			{
-			CMMFSimpleToneConfig* c = STATIC_CAST(CMMFSimpleToneConfig*, iToneConfig);
-			TRAP(error, iDevSound->PlayToneL(c->Frequency(), c->Duration()));
-			break;
-			}
-		case CMMFToneConfig::EMmfToneTypeDual:
-			{
-			CMMFDualToneConfig* c = STATIC_CAST(CMMFDualToneConfig*, iToneConfig);
-			TRAP(error, iDevSound->PlayDualToneL(c->FrequencyOne(), c->FrequencyTwo(), c->Duration()));
-			break;
-			}
-		case CMMFToneConfig::EMmfToneTypeDTMF:
-			{
-			CMMFDTMFStringToneConfig* c = STATIC_CAST(CMMFDTMFStringToneConfig*, iToneConfig);
-			TRAP(error, iDevSound->PlayDTMFStringL(c->DTMF()));
-			break;
-			}
-		case CMMFToneConfig::EMmfToneTypeDesSeq:
-			{
-			CMMFDesSeqToneConfig* c = STATIC_CAST(CMMFDesSeqToneConfig*, iToneConfig);
-			TRAP(error, iDevSound->PlayToneSequenceL(c->DesSeq()));
-			break;
-			}
-		case CMMFToneConfig::EMmfToneTypeFileSeq:
-			{
-			CMMFFileSeqToneConfig* c = STATIC_CAST(CMMFFileSeqToneConfig*, iToneConfig);
-
-			// check we have rights to play
-			TRAP(error, c->ExecuteIntentL());
-
-			// if we have rights then go ahead and play
-			if (error == KErrNone)
-				{
-				TRAP(error, iDevSound->PlayToneSequenceL(c->FileSeq()));
-				}
-
-			break;
-			}
-		case CMMFToneConfig::EMmfToneTypeFixedSeq:
-			{
-			CMMFFixedSeqToneConfig* c = STATIC_CAST(CMMFFixedSeqToneConfig*, iToneConfig);
-			TRAP(error, iDevSound->PlayFixedSequenceL(c->SequenceNumber()));
-			break;
-			}
-		default:
-			{	
-			User::Panic(KMMFMdaAudioToneUtilityPanicCategory, EMMFMdaAudioToneUtilityBadToneConfig);
-			break;
-			}
-		}
-
-	// If there was an error, notify the client now.  Otherwise, client will be notified when
-	// play has finished.
-	if (error)
-		{
-		iState = EMdaAudioToneUtilityNotReady;
-		iAsyncCallback->MatoPlayComplete(error);
-		}
-	else
-		{
-        if(iPlayStartObserver)
-            {
-            iAsyncCallback->MatoPlayStarted(KErrNone);
-            }
+		iAsyncCallback->MatoPlayStarted(KErrNone);
 		}
 	}
 	
 void CMMFMdaAudioToneUtility::CancelPlay()
 	{
-	iDevSound->Stop();
-
+	iTimer->Cancel();
 	if(iState == EMdaAudioToneUtilityPlaying || iState == EMdaAudioToneUtilityPaused)
 		{
 		iState = EMdaAudioToneUtilityPrepared;
@@ -1108,7 +970,7 @@ void CMMFMdaAudioToneUtility::MatoPlayStarted(TInt aError)
 // CustomInferface - just pass on to DevSound. 
 TAny* CMMFMdaAudioToneUtility::CustomInterface(TUid aInterfaceId)
 	{
-	return iDevSound->CustomInterface(aInterfaceId);
+	return 0;
 	}
 
 
@@ -1188,255 +1050,10 @@ void CMMFMdaAudioToneObserverCallback::DoCancel()
 	//nothing to cancel
 	}
 
+void MMMFClientUtility::ReservedVirtual1() {}
+void MMMFClientUtility::ReservedVirtual2() {}
+void MMMFClientUtility::ReservedVirtual3() {}
+void MMMFClientUtility::ReservedVirtual4() {}
+void MMMFClientUtility::ReservedVirtual5() {}
+void MMMFClientUtility::ReservedVirtual6() {}
 
-
-
-
-
-// Tone config classes
-
-// Simple Tone
-CMMFToneConfig* CMMFSimpleToneConfig::NewL(TInt aFrequency, const TTimeIntervalMicroSeconds& aDuration)
-	{
-	return STATIC_CAST(CMMFToneConfig*, new(ELeave) CMMFSimpleToneConfig(aFrequency, aDuration));
-	}
-
-CMMFSimpleToneConfig::CMMFSimpleToneConfig(TInt aFrequency, const TTimeIntervalMicroSeconds& aDuration) :
-	CMMFToneConfig(CMMFToneConfig::EMmfToneTypeSimple),
-	iFrequency(aFrequency),
-	iDuration(aDuration)
-	{
-	}
-
-CMMFSimpleToneConfig::~CMMFSimpleToneConfig()
-	{
-	}
-
-TInt CMMFSimpleToneConfig::Frequency()
-	{
-	return iFrequency;
-	}
-
-const TTimeIntervalMicroSeconds& CMMFSimpleToneConfig::Duration()
-	{
-	return iDuration;
-	}
-
-
-// Dual Tone 
-CMMFToneConfig* CMMFDualToneConfig::NewL(TInt aFrequencyOne, TInt aFrequencyTwo, const TTimeIntervalMicroSeconds& aDuration)
-	{
-	return STATIC_CAST(CMMFToneConfig*, new(ELeave) CMMFDualToneConfig(aFrequencyOne, aFrequencyTwo, aDuration));
-	}
-
-CMMFDualToneConfig::CMMFDualToneConfig(TInt aFrequencyOne, TInt aFrequencyTwo, const TTimeIntervalMicroSeconds& aDuration) :
-	CMMFToneConfig(CMMFToneConfig::EMmfToneTypeDual),
-	iFrequencyOne(aFrequencyOne),
-	iFrequencyTwo(aFrequencyTwo),
-	iDuration(aDuration)
-	{
-	}
-
-CMMFDualToneConfig::~CMMFDualToneConfig()
-	{
-	}
-
-TInt CMMFDualToneConfig::FrequencyOne()
-	{
-	return iFrequencyOne;
-	}
-
-TInt CMMFDualToneConfig::FrequencyTwo()
-	{
-	return iFrequencyTwo;
-	}
-
-const TTimeIntervalMicroSeconds& CMMFDualToneConfig::Duration()
-	{
-	return iDuration;
-	}
-
-
-CMMFToneConfig* CMMFDTMFStringToneConfig::NewL(const TDesC& aDTMF)
-	{
-	CMMFDTMFStringToneConfig* s = new(ELeave) CMMFDTMFStringToneConfig;
-	CleanupStack::PushL(s);
-	s->ConstructL(aDTMF);
-	CleanupStack::Pop();
-	return STATIC_CAST(CMMFToneConfig*, s);
-	}
-
-CMMFDTMFStringToneConfig::CMMFDTMFStringToneConfig() :
-	CMMFToneConfig(CMMFToneConfig::EMmfToneTypeDTMF)
-	{
-	}
-
-LOCAL_C void validateDTMFL(const TDesC& aDTMF)
-//
-// Validate that the supplied DTMf string contains only playable characters
-// 
-	{
-	TInt stringLength = aDTMF.Length();
-	TChar ch;
-	for (TInt index = 0; index < stringLength ; index++)
-		{
-		ch = aDTMF[index];
-		if (!ch.IsDigit() && !ch.IsHexDigit() && !ch.IsSpace() &&
-			(ch != '*') && (ch != '#') && (ch != ','))
-			{
-			User::Leave(KErrArgument); // Bad DTMF string
-			}
-		}
-	}
-
-void CMMFDTMFStringToneConfig::ConstructL(const TDesC& aDTMF)
-	{
-	validateDTMFL(aDTMF);
-	iDTMF = aDTMF.AllocL();
-	}
-
-CMMFDTMFStringToneConfig::~CMMFDTMFStringToneConfig()
-	{
-	delete iDTMF;
-	}
-
-const TDesC& CMMFDTMFStringToneConfig::DTMF()
-	{
-	return *iDTMF;
-	}
-
-
-CMMFToneConfig* CMMFDesSeqToneConfig::NewL(const TDesC8& aDesSeq)
-	{
-	CMMFDesSeqToneConfig* s = new(ELeave) CMMFDesSeqToneConfig;
-	CleanupStack::PushL(s);
-	s->ConstructL(aDesSeq);
-	CleanupStack::Pop();
-	return STATIC_CAST(CMMFToneConfig*, s);
-	}
-
-CMMFDesSeqToneConfig::CMMFDesSeqToneConfig() :
-	CMMFToneConfig(CMMFToneConfig::EMmfToneTypeDesSeq)
-	{
-	}
-
-void CMMFDesSeqToneConfig::ConstructL(const TDesC8& aDesSeq)
-	{
-	iDesSeq = aDesSeq.AllocL();
-	}
-
-CMMFDesSeqToneConfig::~CMMFDesSeqToneConfig()
-	{
-	delete iDesSeq;
-	}
-
-const TDesC8& CMMFDesSeqToneConfig::DesSeq()
-	{
-	return *iDesSeq;
-	}
-
-
-CMMFToneConfig* CMMFFileSeqToneConfig::NewL(const TDesC& aFileSeq)
-	{
-	CMMFFileSeqToneConfig* s = new(ELeave) CMMFFileSeqToneConfig;
-	CleanupStack::PushL(s);
-	s->ConstructL(aFileSeq);
-	CleanupStack::Pop();
-	return STATIC_CAST(CMMFToneConfig*, s);
-	}
-
-CMMFFileSeqToneConfig::CMMFFileSeqToneConfig() :
-	CMMFToneConfig(CMMFToneConfig::EMmfToneTypeFileSeq)
-	{
-	}
-
-void CMMFFileSeqToneConfig::ConstructL(const TDesC& aFileSeq)
-	{
-	// get access to DRM content through filename
-	iCAFContent = CContent::NewL(aFileSeq);
-	
-	// open the CAF source with play intent
-	iCAFData = iCAFContent->OpenContentL(ContentAccess::EPlay, KDefaultContentObject);
-
-	// read into a descriptor
-	TInt dataSize = 0;
-	iCAFData->DataSizeL(dataSize);
-
-	iDesSeq = HBufC8::NewL(dataSize);
-	TPtr8 desSeqPtr = iDesSeq->Des();
-	iCAFData->Read(desSeqPtr);	
-	}
-	
-	
-
-CMMFToneConfig* CMMFFileSeqToneConfig::NewL(RFile& aFile)
-	{
-	CMMFFileSeqToneConfig* s = new(ELeave) CMMFFileSeqToneConfig;
-	CleanupStack::PushL(s);
-	s->ConstructL(aFile);
-	CleanupStack::Pop();
-	return STATIC_CAST(CMMFToneConfig*, s);
-	}
-
-
-void CMMFFileSeqToneConfig::ConstructL(RFile& aFile)
-	{
-	// get DRM access to file handle
-	iCAFContent = CContent::NewL(aFile);
-	
-	// open the CAF source with play intent
-	iCAFData = iCAFContent->OpenContentL(ContentAccess::EPlay, KDefaultContentObject);
-
-	// read into a descriptor
-	TInt dataSize = 0;
-	iCAFData->DataSizeL(dataSize);
-
-	iDesSeq = HBufC8::NewL(dataSize);
-	TPtr8 desSeqPtr = iDesSeq->Des();
-	iCAFData->Read(desSeqPtr);	
-	}
-
-
-CMMFFileSeqToneConfig::~CMMFFileSeqToneConfig()
-	{
-	delete iCAFData;
-	iCAFData = NULL;
-
-	delete iCAFContent;
-	iCAFContent = NULL;
-
-	delete iDesSeq;
-	}
-
-const TDesC8& CMMFFileSeqToneConfig::FileSeq()
-	{
-	return *iDesSeq;
-	}
-
-void CMMFFileSeqToneConfig::ExecuteIntentL()
-	{
-	if (iCAFData)
-		{
-		User::LeaveIfError(iCAFData->ExecuteIntent(ContentAccess::EPlay));
-		}
-	}
-
-CMMFToneConfig* CMMFFixedSeqToneConfig::NewL(TInt aSeqNo)
-	{
-	return STATIC_CAST(CMMFToneConfig*, new(ELeave) CMMFFixedSeqToneConfig(aSeqNo));
-	}
-
-CMMFFixedSeqToneConfig::CMMFFixedSeqToneConfig(TInt aSeqNo) :
-	CMMFToneConfig(CMMFToneConfig::EMmfToneTypeFixedSeq),
-	iSequenceNumber(aSeqNo)
-	{
-	}
-
-CMMFFixedSeqToneConfig::~CMMFFixedSeqToneConfig()
-	{
-	}
-
-TInt CMMFFixedSeqToneConfig::SequenceNumber()
-	{
-	return iSequenceNumber;
-	}

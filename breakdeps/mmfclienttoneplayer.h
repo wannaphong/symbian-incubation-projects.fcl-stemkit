@@ -22,8 +22,6 @@
 #include <e32base.h>
 #include <mdaaudiotoneplayer.h>
 #include <mmf/server/sounddevice.h>
-#include <caf/data.h>
-#include <caf/content.h>
 //Panic category and codes
 _LIT(KMMFMdaAudioToneUtilityPanicCategory, "MMFMdaAudioToneUtility");
 enum TMMFMdaAudioToneUtilityPanicCodes
@@ -60,6 +58,25 @@ private:
 	};
 
 class CMMFToneConfig;
+
+/**
+Timer class used instead of actual CMMFDevSound - the interface isn't the same either!
+*/
+NONSHARABLE_CLASS( CDummyDevSound ) : public CTimer
+	{
+	public:
+	static CDummyDevSound* NewL();
+	
+	void InitializeL(MDevSoundObserver& aDevSoundObserver);
+	void RunL();
+	void Play(const TTimeIntervalMicroSeconds& aDuration);
+	
+	private:
+	CDummyDevSound();
+
+	private:
+	MDevSoundObserver* iObserver;
+	};
 
 /**
 Concrete implementation of the CMdaAudioToneUtility API.
@@ -142,14 +159,9 @@ private:
 	void CalculateLeftRightBalance( TInt& aLeft, TInt& aRight, TInt aBalance ) const;
 	
 private:
-	CMMFDevSound* iDevSound;
+	CDummyDevSound* iTimer;
 	MMdaAudioToneObserver& iCallback;
 	CMMFMdaAudioToneObserverCallback* iAsyncCallback;
-
-	CMMFToneConfig* iToneConfig;
-	// Devsound doesn't take copies of descriptors we pass to it, so we 
-	// need to cache the config info until it has finished playing.
-	CMMFToneConfig* iPlayingToneConfig; //unused remove when BC break allowed
 
 	TMdaAudioToneUtilityState iState;
 
@@ -167,118 +179,11 @@ private:
 #ifdef _DEBUG
 	TBool iPlayCalledBeforeInitialized;
 #endif
-	};
 
-
-// Tone configurations
-class CMMFToneConfig : public CBase
-	{
-public:
-	enum TMMFToneType 
-		{	
-		EMmfToneTypeSimple,
-		EMmfToneTypeDTMF,
-		EMmfToneTypeDesSeq,
-		EMmfToneTypeFileSeq,
-		EMmfToneTypeFixedSeq,
-		EMmfToneTypeDual,
-		};
-	virtual ~CMMFToneConfig() {}
-	TMMFToneType Type() {return iType;}
-protected:
-	CMMFToneConfig(TMMFToneType aType) : iType(aType) {}
-private:
-	TMMFToneType iType;
-	};
-
-class CMMFSimpleToneConfig : public CMMFToneConfig
-	{
-public:
-	static CMMFToneConfig* NewL(TInt aFrequency, const TTimeIntervalMicroSeconds& aDuration);
-	virtual ~CMMFSimpleToneConfig();
-	TInt Frequency();
-	const TTimeIntervalMicroSeconds& Duration();
-protected:
-	CMMFSimpleToneConfig(TInt aFrequency, const TTimeIntervalMicroSeconds& aDuration);
-private:
-	TInt iFrequency;
+  TInt iDevSoundVolume;
+  TInt iDevSoundBalance;
 	TTimeIntervalMicroSeconds iDuration;
 	};
 
-class CMMFDualToneConfig : public CMMFToneConfig
-	{
-public:
-	static CMMFToneConfig* NewL(TInt aFrequencyOne, TInt aFrequencyTwo, const TTimeIntervalMicroSeconds& aDuration);
-	virtual ~CMMFDualToneConfig();
-	TInt FrequencyOne();
-	TInt FrequencyTwo();
-	const TTimeIntervalMicroSeconds& Duration();
-protected:
-	CMMFDualToneConfig(TInt aFrequencyOne, TInt aFrequencyTwo, const TTimeIntervalMicroSeconds& aDuration);
-private:
-	TInt iFrequencyOne;
-	TInt iFrequencyTwo;
-	TTimeIntervalMicroSeconds iDuration;
-	};
-
-class CMMFDTMFStringToneConfig : public CMMFToneConfig
-	{
-public:
-	static CMMFToneConfig* NewL(const TDesC& aDTMF);
-	static CMMFToneConfig* NewL(RFile& aFile);
-	virtual ~CMMFDTMFStringToneConfig();
-	const TDesC& DTMF();
-protected:
-	CMMFDTMFStringToneConfig();
-	void ConstructL(const TDesC& aDTMF);
-private:
-	HBufC* iDTMF;
-	};
-
-class CMMFDesSeqToneConfig : public CMMFToneConfig
-	{
-public:
-	static CMMFToneConfig* NewL(const TDesC8& aDesSeq);
-	virtual ~CMMFDesSeqToneConfig();
-	const TDesC8& DesSeq();
-protected:
-	CMMFDesSeqToneConfig();
-	void ConstructL(const TDesC8& aDesSeq);
-private:
-	HBufC8* iDesSeq;
-	};
-
-
-class CMMFFileSeqToneConfig : public CMMFToneConfig
-	{
-public:
-	static CMMFToneConfig* NewL(const TDesC& aFileSeq);
-	static CMMFToneConfig* NewL(RFile& aFile);
-	virtual ~CMMFFileSeqToneConfig();
-	const TDesC8& FileSeq();
-	
-	// CAF support for Tone Utility
-	void ExecuteIntentL();
-protected:
-	CMMFFileSeqToneConfig();
-	void ConstructL(const TDesC& aFileSeq);
-	void ConstructL(RFile& aFile);
-private:
-	ContentAccess::CContent* iCAFContent;
-	ContentAccess::CData* iCAFData;
-	HBufC8* iDesSeq;
-	};
-
-class CMMFFixedSeqToneConfig : public CMMFToneConfig
-	{
-public:
-	static CMMFToneConfig* NewL(TInt aSeqNo);
-	virtual ~CMMFFixedSeqToneConfig();
-	TInt SequenceNumber();
-protected:
-	CMMFFixedSeqToneConfig(TInt aSeqNo);
-private:
-	TInt iSequenceNumber;
-	};
 
 #endif

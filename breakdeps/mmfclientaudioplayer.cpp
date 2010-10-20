@@ -28,6 +28,12 @@ using namespace ContentAccess;
 // declared in the recorder module
 void Panic(TInt aPanicCode);
 
+void TMMFMessage::Complete(TInt aReason)
+	{
+	iMessage.Complete(aReason);
+	iAmCompleted = ETrue;
+	}
+
 /**
 Constructs and initialises a new instance of the audio player utility.
 
