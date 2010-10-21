@@ -392,6 +392,7 @@ sub count_dependents($$);	# prototype for recursion
 sub count_dependents($$)
 	{
 	my ($exe, $hashref) = @_;
+	return if (defined $deletions{$exe_to_romfile{$exe}});
 	return if (defined $$hashref{$exe});
 
 	$$hashref{$exe} = 1;

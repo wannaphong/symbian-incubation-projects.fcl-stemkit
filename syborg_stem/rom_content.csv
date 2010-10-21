@@ -3062,7 +3062,7 @@ sys\bin\cdlengine.dll,/epoc32/release/armv5/urel/cdlengine.dll,core/mw/Cdl.iby,m
 sys\bin\cdlserver.exe,/epoc32/release/armv5/urel/cdlserver.exe,core/mw/Cdl.iby,mw/uiresources,,,
 sys\bin\ced.exe,/epoc32/release/armv5/urel/ced.exe,ced.iby,os/commsfw,,,
 sys\bin\ceddump.exe,/epoc32/release/armv5/urel/ceddump.exe,ceddump.iby,os/commsfw,,,
-sys\bin\cenrepdatabase.dll,/epoc32/release/armv5/urel/cenrepdatabase.dll,core/mw/cenrepdatabase.iby,mw/phonesrv,,,
+sys\bin\cenrepdatabase.dll,/epoc32/release/armv5/urel/cenrepdatabase.dll,core/mw/cenrepdatabase.iby,mw/phonesrv,Out,WR,Utility for phone server?
 sys\bin\CENREPNOTIFHANDLER.DLL,/epoc32/release/armv5/urel/cenrepnotifhandler.dll,cenrepnotifierhandler.iby,os/persistentdata,,,
 Sys\Bin\cenrepsourceplugin.dll,/epoc32/release/armv5/urel/cenrepsourceplugin.dll,core/mw/CenRepSourcePlugIn.iby,mw/appsupport,,,
 sys\bin\centralrepository.dll,/epoc32/release/armv5/urel/centralrepository.dll,centralrepository.iby,os/persistentdata,,,
