@@ -2610,7 +2610,7 @@ sys\bin\ScDv.dll,/epoc32/release/armv5/urel/_generic_scdv.dll,base.iby,os/graphi
 sys\bin\btracex.ldd,/epoc32/release/armv5/urel/_syborg_btracex.ldd,base_syborg_ui.iby,adaptation/qemu,,,
 sys\bin\EStart.exe,/epoc32/release/armv5/urel/_syborg_e32strt.exe,base.iby,adaptation/qemu,,,
 sys\bin\EKData.dll,/epoc32/release/armv5/urel/_syborg_ekdata.dll,base.iby,adaptation/qemu,,,
-sys\bin\ekern.exe,/epoc32/release/armv5/urel/_syborg_ekern.exe,base_syborg_ui.iby,adaptation/qemu,,,
+sys\bin\ekern.exe,/epoc32/release/armv5/urel/_syborg_ekern.exe,base_syborg_ui.iby,adaptation/qemu,In,WR,Just in case
 sys\bin\ekeyb.dll,/epoc32/release/armv5/urel/_syborg_ekeyb.dll,base_syborg_ui.iby,adaptation/qemu,,,
 sys\bin\epointer.dll,/epoc32/release/armv5/urel/_syborg_epointer_landscape.dll,base_syborg_ui.iby,adaptation/qemu,,,
 sys\bin\euart1.pdd,/epoc32/release/armv5/urel/_syborg_eserial.pdd,base_syborg_ui.iby,adaptation/qemu,,,
@@ -2635,7 +2635,7 @@ sys\bin\AacDecoderConfig.dll,/epoc32/release/armv5/urel/aacdecoderconfig.dll,cor
 sys\bin\AacDecoderConfigMsgHdlr.dll,/epoc32/release/armv5/urel/aacdecoderconfigmsghdlr.dll,core/os/MmfCustomInterfaces.iby,os/mm,,,
 sys\bin\AacDecoderConfigProxy.dll,/epoc32/release/armv5/urel/aacdecoderconfigproxy.dll,core/os/MmfCustomInterfaces.iby,os/mm,,,
 sys\bin\abclient.dll,/epoc32/release/armv5/urel/abclient.dll,connectivity_securebackupengine.iby,os/ossrv,,,
-sys\bin\ABOUT.exe,/epoc32/release/armv5/urel/about.exe,core/app/about.iby,app/utils,Out,WR,application
+sys\bin\ABOUT.exe,/epoc32/release/armv5/urel/about.exe,core/app/about.iby,app/utils,,WR,application
 Sys\Bin\aboutgsplugin.dll,/epoc32/release/armv5/urel/aboutgsplugin.dll,core/app/about.iby,app/utils,,,
 Sys\Bin\abstractmediamtpdataprovider.dll,/epoc32/release/armv5/urel/abstractmediamtpdataprovider.dll,core/mw/mmmtpdataprovider.iby,mw/mmappfw,,,
 sys\bin\abtestclient.EXE,/epoc32/release/armv5/urel/abtestclient.exe,ABTester.iby,mw/remoteconn,,,
@@ -2664,7 +2664,7 @@ sys\bin\AddedDevSoundControlMsgHdlr.dll,/epoc32/release/armv5/urel/addeddevsound
 sys\bin\AddedDevSoundControlProxy.dll,/epoc32/release/armv5/urel/addeddevsoundcontrolproxy.dll,core/os/AddedDevSoundControl.iby,os/mm,,,
 sys\bin\addressbook.exe,/epoc32/release/armv5/urel/addressbook.exe,customervariant/app/qtdemoapps.iby,mw/qt,,WR,application
 sys\bin\addressinfo.prt,/epoc32/release/armv5/urel/addressinfo.prt,addressinfohook.iby,os/networkingsrv,,,
-sys\bin\adtupdater.exe,/epoc32/release/armv5/urel/adtupdater.exe,core/app/adtupdater.iby,app/organizer,Out,WR,application
+sys\bin\adtupdater.exe,/epoc32/release/armv5/urel/adtupdater.exe,core/app/adtupdater.iby,app/organizer,,WR,application
 Sys\Bin\AdvancedTspController.dll,/epoc32/release/armv5/urel/advancedtspcontroller.dll,core/mw/advancedtspcontroller.iby,mw/appsupport,,,
 sys\bin\agentdialog.dll,/epoc32/release/armv5/urel/agentdialog.dll,core/mw/agentdialog.iby,os/commsfw,,,
 Sys\Bin\agentpr.dll,/epoc32/release/armv5/urel/agentpr.dll,agentpr.iby,os/networkingsrv,,,
@@ -2741,7 +2741,7 @@ sys\bin\aknswallpaperutils.dll,/epoc32/release/armv5/urel/aknswallpaperutils.dll
 sys\bin\akntouchgesturefw.dll,/epoc32/release/armv5/urel/akntouchgesturefw.dll,core/mw/akntouchgesturefw.iby,mw/classicui,,,
 sys\bin\akntransitionutils.dll,/epoc32/release/armv5/urel/akntransitionutils.dll,core/mw/akntransitionutils.iby,mw/classicui,,,
 sys\bin\alarmclient.dll,/epoc32/release/armv5/urel/alarmclient.dll,alarmserver.iby,mw/appsupport,,,
-sys\bin\alarmeditorapp.exe,/epoc32/release/armv5/urel/alarmeditorapp.exe,core/app/alarmeditorapp.iby,app/organizer,Out,WR,application
+sys\bin\alarmeditorapp.exe,/epoc32/release/armv5/urel/alarmeditorapp.exe,core/app/alarmeditorapp.iby,app/organizer,,WR,application
 sys\bin\alarmserver.exe,/epoc32/release/armv5/urel/alarmserver.exe,alarmserver.iby,mw/appsupport,,,
 sys\bin\alarmshared.dll,/epoc32/release/armv5/urel/alarmshared.dll,alarmserver.iby,mw/appsupport,,,
 Sys\Bin\alfappfwproxy.dll,/epoc32/release/armv5/urel/alfappfwproxy.dll,core/mw/alfred.iby,mw/uiaccelerator,,,
@@ -2855,7 +2855,7 @@ sys\bin\AudioOutputProxy.dll,/epoc32/release/armv5/urel/audiooutputproxy.dll,cor
 sys\bin\AudioOutputRouting.dll,/epoc32/release/armv5/urel/audiooutputrouting.dll,core/os/AudioRouting.iby,os/mm,,,
 Sys\Bin\audiostream.dll,/epoc32/release/armv5/urel/audiostream.dll,refacladaptation.iby,os/mm,,,
 sys\bin\audioutils.dll,/epoc32/release/armv5/urel/audioutils.dll,mmf.iby,os/mm,,,
-sys\bin\Autolock.exe,/epoc32/release/armv5/urel/autolock.exe,core/mw/autolock.iby,mw/securitysrv,Out,WR,application
+sys\bin\Autolock.exe,/epoc32/release/armv5/urel/autolock.exe,core/mw/autolock.iby,mw/securitysrv,,WR,application
 sys\bin\autosend.exe,/epoc32/release/armv5/urel/autosend.exe,gtemailmtm.iby,app/messaging,,,
 sys\bin\autotest.dll,/epoc32/release/armv5/urel/autotest.dll,autotest.iby,os/buildtools,,,
 sys\bin\avc.dll,/epoc32/release/armv5/urel/avc.dll,bluetooth.iby,mw/btservices,,,
@@ -2920,7 +2920,7 @@ sys\bin\BrowserCache.dll,/epoc32/release/armv5/urel/browsercache.dll,core/mw/web
 sys\bin\BrowserDialogsProvider.dll,/epoc32/release/armv5/urel/browserdialogsprovider.dll,core/mw/BrowserDialogsProvider.iby,mw/web,,,
 sys\bin\BrowserEngine.dll,/epoc32/release/armv5/urel/browserengine.dll,core/mw/webkit.iby,mw/web,,,
 sys\bin\browserlauncher.dll,/epoc32/release/armv5/urel/browserlauncher.dll,core/app/BrowserLauncher.iby,app/webuis,,,
-sys\bin\BrowserNG.exe,/epoc32/release/armv5/urel/browserng.exe,core/app/BrowserUi.iby,app/webuis,Out,WR,application
+sys\bin\BrowserNG.exe,/epoc32/release/armv5/urel/browserng.exe,core/app/BrowserUi.iby,app/webuis,,WR,application
 Sys\Bin\BrowserRec.dll,/epoc32/release/armv5/urel/browserrec.dll,core/mw/BrowserRecognizers.iby,mw/web,,,
 sys\bin\BrowserTelService.dll,/epoc32/release/armv5/urel/browsertelservice.dll,core/mw/browsertelservice.iby,mw/web,,,
 sys\bin\bsclient.dll,/epoc32/release/armv5/urel/bsclient.dll,core/mw/brandingserver.iby,mw/imsrv,,,
@@ -2973,8 +2973,8 @@ Sys\Bin\btrfsplugin.dll,/epoc32/release/armv5/urel/btrfsplugin.dll,core/mw/bteng
 Sys\Bin\btsac.dll,/epoc32/release/armv5/urel/btsac.dll,core/mw/btsac.iby,mw/btservices,,,
 Sys\Bin\BTSap.dll,/epoc32/release/armv5/urel/btsap.dll,core/mw/btsap.iby,mw/btservices,,,
 sys\bin\btsmtm.dll,/epoc32/release/armv5/urel/btsmtm.dll,core/mw/obex.iby,app/messaging,,,
-sys\bin\bttoggle.exe,/epoc32/release/armv5/urel/bttoggle.exe,core/mw/bteng.iby,mw/btservices,Out,WR,application
-sys\bin\BtUi.exe,/epoc32/release/armv5/urel/btui.exe,core/mw/btui.iby,mw/btservices,Out,WR,application
+sys\bin\bttoggle.exe,/epoc32/release/armv5/urel/bttoggle.exe,core/mw/bteng.iby,mw/btservices,,WR,application
+sys\bin\BtUi.exe,/epoc32/release/armv5/urel/btui.exe,core/mw/btui.iby,mw/btservices,,WR,application
 Sys\Bin\BtuiPlugin.dll,/epoc32/release/armv5/urel/btuiplugin.dll,core/mw/btui.iby,mw/btservices,,,
 sys\bin\Bubble.pgn,/epoc32/release/armv5/urel/bubble.pgn,core/app/ImageEditorBubblePlugin.iby,app/imgeditor,,,
 sys\bin\BubbleManager.dll,/epoc32/release/armv5/urel/bubblemanager.dll,core/app/bubblemanager.iby,app/phone,,,
@@ -3027,7 +3027,7 @@ Sys\Bin\CallStateSourcePlugIn.dll,/epoc32/release/armv5/urel/callstatesourceplug
 sys\bin\CAMC3GPSINK.DLL,/epoc32/release/armv5/urel/camc3gpsink.dll,core/mw/CamcorderMMFPlugin.iby,mw/camerasrv,,,
 Sys\Bin\CAMCCONTROLLER.DLL,/epoc32/release/armv5/urel/camccontroller.dll,core/mw/CamcorderMMFPlugin.iby,mw/camerasrv,,,
 sys\bin\CAMCMEDIARECORDER.DLL,/epoc32/release/armv5/urel/camcmediarecorder.dll,core/mw/CamcorderMMFPlugin.iby,mw/camerasrv,,,
-sys\bin\cameraapp.exe,/epoc32/release/armv5/urel/cameraapp.exe,core/app/cameraapp.iby,app/camera,Out,WR,application
+sys\bin\cameraapp.exe,/epoc32/release/armv5/urel/cameraapp.exe,core/app/cameraapp.iby,app/camera,,WR,application
 sys\bin\CameraUiConfigManager.dll,/epoc32/release/armv5/urel/camerauiconfigmanager.dll,core/app/cameraapp.iby,app/camera,,,
 sys\bin\cameseutility.dll,/epoc32/release/armv5/urel/cameseutility.dll,core/mw/wmdrmpd_dist.iby,adaptation/stubs,,,
 sys\bin\Cartoonize.pgn,/epoc32/release/armv5/urel/cartoonize.pgn,core/app/ImageEditorCartoonizePlugin.iby,app/imgeditor,,,
@@ -3071,7 +3071,7 @@ sys\bin\CentRepTool.dll,/epoc32/release/armv5/urel/centreptool.dll,core/mw/polic
 sys\bin\CentRepToolServer.exe,/epoc32/release/armv5/urel/centreptoolserver.exe,core/mw/policyengine.iby,mw/remotemgmt,,,
 Sys\Bin\CertManUi.dll,/epoc32/release/armv5/urel/certmanui.dll,core/mw/certmanui.iby,mw/securitysrv,,,
 Sys\Bin\CertRFSPlugin.dll,/epoc32/release/armv5/urel/certrfsplugin.dll,core/mw/RFSPlugins.iby,mw/appsupport,,,
-sys\bin\CERTSAVER.exe,/epoc32/release/armv5/urel/certsaver.exe,core/mw/CertSaver.iby,mw/securitysrv,Out,WR,application
+sys\bin\CERTSAVER.exe,/epoc32/release/armv5/urel/certsaver.exe,core/mw/CertSaver.iby,mw/securitysrv,,WR,application
 sys\bin\CertStore.dll,/epoc32/release/armv5/urel/certstore.dll,certman.iby,os/security,,,
 sys\bin\CFActivatorEngine.dll,/epoc32/release/armv5/urel/cfactivatorengine.dll,core/mw/ContextFramework.iby,mw/appsupport,,,
 sys\bin\CFClient.dll,/epoc32/release/armv5/urel/cfclient.dll,core/mw/ContextFramework.iby,mw/appsupport,,,
@@ -3172,7 +3172,7 @@ sys\bin\ConfigurationComponentsFactory.dll,/epoc32/release/armv5/urel/configurat
 Sys\Bin\connectiondialogswrapper.DLL,/epoc32/release/armv5/urel/connectiondialogswrapper.dll,core/mw/ConnectionDialogs.iby,mw/ipconnmgmt,,,
 sys\bin\ConnectionManager.dll,/epoc32/release/armv5/urel/connectionmanager.dll,core/mw/ConnectionManager.iby,mw/web,,,
 Sys\Bin\connectionmonitorplugin.dll,/epoc32/release/armv5/urel/connectionmonitorplugin.dll,core/mw/connectionmonitorplugin.iby,mw/ipconnmgmt,,,
-sys\bin\ConnectionMonitorUi.exe,/epoc32/release/armv5/urel/connectionmonitorui.exe,core/mw/ConnectionMonitorUi.iby,mw/ipconnmgmt,Out,WR,application
+sys\bin\ConnectionMonitorUi.exe,/epoc32/release/armv5/urel/connectionmonitorui.exe,core/mw/ConnectionMonitorUi.iby,mw/ipconnmgmt,,WR,application
 sys\bin\connectionmux.dll,/epoc32/release/armv5/urel/connectionmux.dll,core/mw/natfw.iby,mw/ipappsrv,,,
 sys\bin\ConnectionUiUtilities.dll,/epoc32/release/armv5/urel/connectionuiutilities.dll,core/mw/ConnectionUiUtilities.iby,mw/ipconnmgmt,,,
 Sys\Bin\ConnectUtil.dll,/epoc32/release/armv5/urel/connectutil.dll,core/app/connectutil.iby,app/phone,,,
@@ -3226,13 +3226,13 @@ sys\bin\cpstorage.dll,/epoc32/release/armv5/urel/cpstorage.dll,core/mw/contentpu
 sys\bin\cpswrapper.dll,/epoc32/release/armv5/urel/cpswrapper.dll,core/app/ai3xmluirendering.iby,app/homescreen,,,
 sys\bin\cputils.dll,/epoc32/release/armv5/urel/cputils.dll,core/mw/contentpublishingservice.iby,mw/homescreensrv,,,
 sys\bin\crber.dll,/epoc32/release/armv5/urel/crber.dll,core/mw/pkcs12.iby,mw/securitysrv,,,
-sys\bin\Creator.exe,/epoc32/release/armv5/urel/creator.exe,core/tools/creator.iby,app/rndtools,Out,WR,application
+sys\bin\Creator.exe,/epoc32/release/armv5/urel/creator.exe,core/tools/creator.iby,app/rndtools,,WR,application
 sys\bin\Crop.pgn,/epoc32/release/armv5/urel/crop.pgn,core/app/ImageEditorCropPlugin.iby,app/imgeditor,,,
 sys\bin\crpkcs12.dll,/epoc32/release/armv5/urel/crpkcs12.dll,core/mw/pkcs12.iby,mw/securitysrv,,,
 sys\bin\crypto.dll,/epoc32/release/armv5/urel/crypto.dll,certman.iby,os/security,,,
 sys\bin\cryptospi.dll,/epoc32/release/armv5/urel/cryptospi.dll,crypto.iby,os/security,,,
 sys\bin\cryptospisetup.exe,/epoc32/release/armv5/urel/cryptospisetup.exe,crypto.iby,os/security,,,
-sys\bin\CSC.exe,/epoc32/release/armv5/urel/csc.exe,core/app/csc.iby,app/iptelephony,Out,WR,application
+sys\bin\CSC.exe,/epoc32/release/armv5/urel/csc.exe,core/app/csc.iby,app/iptelephony,,WR,application
 sys\bin\cscallctrl.dll,/epoc32/release/armv5/urel/cscallctrl.dll,core/app/videoteleng.iby,app/videotelephony,,,
 sys\bin\cscengine.dll,/epoc32/release/armv5/urel/cscengine.dll,core/app/csc.iby,app/iptelephony,,,
 Sys\Bin\cscgsplugin.dll,/epoc32/release/armv5/urel/cscgsplugin.dll,core/app/csc.iby,app/iptelephony,,,
@@ -3241,7 +3241,7 @@ Sys\Bin\cscsipvoipcleanupplugin.dll,/epoc32/release/armv5/urel/cscsipvoipcleanup
 sys\bin\Csd.agt,/epoc32/release/armv5/urel/csd.agt,CSD.IBY,os/cellularsrv,,,
 sys\bin\CseSchedulerClient.dll,/epoc32/release/armv5/urel/cseschedulerclient.dll,core/mw/videoschedulerclient.iby,mw/videoutils,,,
 sys\bin\CseSchedulerServer.exe,/epoc32/release/armv5/urel/cseschedulerserver.exe,core/mw/videoschedulerserver.iby,mw/videoutils,,,
-sys\bin\cshelp.exe,/epoc32/release/armv5/urel/cshelp.exe,core/app/Cshelp.iby,app/helps,Out,WR,application
+sys\bin\cshelp.exe,/epoc32/release/armv5/urel/cshelp.exe,core/app/Cshelp.iby,app/helps,,WR,application
 Sys\Bin\csplugin.dll,/epoc32/release/armv5/urel/csplugin.dll,core/mw/csplugin.iby,mw/phonesrv,,,
 sys\bin\ctfinder.dll,/epoc32/release/armv5/urel/ctfinder.dll,certman.iby,os/security,,,
 sys\bin\ctframework.dll,/epoc32/release/armv5/urel/ctframework.dll,certman.iby,os/security,,,
@@ -3269,7 +3269,7 @@ sys\bin\DcfRepSrv.EXE,/epoc32/release/armv5/urel/dcfrepsrv.exe,core/mw/drm5.iby,
 sys\bin\dcmoclient.dll,/epoc32/release/armv5/urel/dcmoclient.dll,core/mw/dcmofw.iby,mw/remotemgmt,,,
 Sys\Bin\ddc_access.dll,/epoc32/release/armv5/urel/ddc_access.dll,../../../rom/config/sf_refhw/bigrom.oby,adaptation/stubs,,,
 Sys\Bin\DdRecog.dll,/epoc32/release/armv5/urel/ddrecog.dll,core/mw/CodHandler.iby,mw/web,,,
-sys\bin\DdViewer.exe,/epoc32/release/armv5/urel/ddviewer.exe,core/mw/CodHandler.iby,mw/web,Out,WR,application
+sys\bin\DdViewer.exe,/epoc32/release/armv5/urel/ddviewer.exe,core/mw/CodHandler.iby,mw/web,,WR,application
 sys\bin\DebugLog.dll,/epoc32/release/armv5/urel/debuglog.dll,core/app/emailstore.iby,app/commonemail,,,
 sys\bin\defaultappclient.dll,/epoc32/release/armv5/urel/defaultappclient.dll,core/app/defaultapplicationsettings.iby,app/settingsuis,,,
 sys\bin\DefaultAppServer.exe,/epoc32/release/armv5/urel/defaultappserver.exe,core/app/defaultapplicationsettings.iby,app/settingsuis,,WR,application
@@ -3477,7 +3477,7 @@ sys\bin\Elocl.loc,/epoc32/release/armv5/urel/elocl.dll,language/mw/elocl.iby,mw/
 Sys\Bin\emailclientapi.dll,/epoc32/release/armv5/urel/emailclientapi.dll,core/app/emailclientapi.iby,app/commonemail,,,
 Sys\Bin\EmailNotificationHandler.dll,/epoc32/release/armv5/urel/emailnotificationhandler.dll,core/app/EmailNotificationHandler.iby,app/messaging,,,
 sys\bin\emailservermonitor.exe,/epoc32/release/armv5/urel/emailservermonitor.exe,core/app/emailservermonitor.iby,app/commonemail,,,
-sys\bin\emailwidgetsettings.exe,/epoc32/release/armv5/urel/emailwidgetsettings.exe,core/app/emailwidgetsettings.iby,app/commonemail,Out,WR,application
+sys\bin\emailwidgetsettings.exe,/epoc32/release/armv5/urel/emailwidgetsettings.exe,core/app/emailwidgetsettings.iby,app/commonemail,,WR,application
 Sys\Bin\EmbeddedLinkAdapter.dll,/epoc32/release/armv5/urel/embeddedlinkadapter.dll,core/app/embeddedlinkadapter.iby,app/devicecontrol,,,
 Sys\Bin\emn1_0stringdict00.dll,/epoc32/release/armv5/urel/emn1_0stringdict00.dll,wbxmlparser.iby,os/xmlsrv,,,
 sys\bin\ENGINEINFO.DLL,/epoc32/release/armv5/urel/engineinfo.dll,core/app/phonengengine.iby,app/phone,,,
@@ -3586,7 +3586,7 @@ sys\bin\factories.dll,/epoc32/release/armv5/urel/factories.dll,factories.iby,os/
 sys\bin\FavouritesEngine.dll,/epoc32/release/armv5/urel/favouritesengine.dll,core/mw/FavouritesEngine.iby,mw/web,,,
 Sys\Bin\FavouritesRFSPlugin.dll,/epoc32/release/armv5/urel/favouritesrfsplugin.dll,core/mw/RFSPlugins.iby,mw/appsupport,,,
 sys\bin\FavouritesSrv.exe,/epoc32/release/armv5/urel/favouritessrv.exe,core/mw/FavouritesEngine.iby,mw/web,,,
-sys\bin\fbscli.dll,/epoc32/release/armv5/urel/fbscli.dll,fbserv.iby,os/graphics,,,
+sys\bin\fbscli.dll,/epoc32/release/armv5/urel/fbscli.dll,fbserv.iby,os/graphics,In,WR,Font bitmap server
 sys\bin\fbserv.exe,/epoc32/release/armv5/urel/fbserv.exe,fbserv.iby,os/graphics,,,
 sys\bin\fbsrasterizer.dll,/epoc32/release/armv5/urel/fbsrasterizer_stub.dll,fbsrasterizer_stub.iby,os/graphics,,,
 sys\bin\fcpluginengine.dll,/epoc32/release/armv5/urel/fcpluginengine.dll,core/mw/multimediacommsengine.iby,mw/ipappsrv,,,
@@ -3645,7 +3645,7 @@ sys\bin\FLogger.dll,/epoc32/release/armv5/urel/flogger.dll,flogger.iby,os/persis
 sys\bin\FLogSvr.exe,/epoc32/release/armv5/urel/flogsvr.exe,flogger.iby,os/persistentdata,,,
 sys\bin\fluidlauncher.exe,/epoc32/release/armv5/urel/fluidlauncher.exe,customervariant/app/qtdemoapps.iby,mw/qt,,WR,application
 sys\bin\fmPresetUtility.dll,/epoc32/release/armv5/urel/fmpresetutility.dll,core/mw/FmPresetUtility.iby,mw/mmmw,,,
-sys\bin\fmradio.exe,/epoc32/release/armv5/urel/fmradio.exe,core/app/fmradio.iby,app/radio,Out,WR,application
+sys\bin\fmradio.exe,/epoc32/release/armv5/urel/fmradio.exe,core/app/fmradio.iby,app/radio,,WR,application
 Sys\Bin\fmradioactionhandler.dll,/epoc32/release/armv5/urel/fmradioactionhandler.dll,core/app/fmradio.iby,app/radio,,,
 sys\bin\fmradioactiveidleengine200.dll,/epoc32/release/armv5/urel/fmradioactiveidleengine200.dll,core/app/fmradio.iby,app/radio,,,
 sys\bin\fmradioengine.dll,/epoc32/release/armv5/urel/fmradioengine.dll,core/app/fmradioengine.iby,app/radio,,,
@@ -3663,10 +3663,10 @@ sys\bin\fotacustcmds.dll,/epoc32/release/armv5/urel/fotacustcmds.dll,core/mw/fot
 Sys\Bin\fotadiskstorage.dll,/epoc32/release/armv5/urel/fotadiskstorage.dll,core/mw/fotaserver.iby,mw/remotemgmt,,,
 sys\bin\fotaengine.dll,/epoc32/release/armv5/urel/fotaengine.dll,core/mw/fotaserver.iby,mw/remotemgmt,,,
 sys\bin\fotaschedulehandler.exe,/epoc32/release/armv5/urel/fotaschedulehandler.exe,core/mw/fotaserver.iby,mw/remotemgmt,,,
-sys\bin\fotaserver.exe,/epoc32/release/armv5/urel/fotaserver.exe,core/mw/fotaserver.iby,mw/remotemgmt,Out,WR,application
+sys\bin\fotaserver.exe,/epoc32/release/armv5/urel/fotaserver.exe,core/mw/fotaserver.iby,mw/remotemgmt,,WR,application
 sys\bin\Frame.pgn,/epoc32/release/armv5/urel/frame.pgn,core/app/ImageEditorFramePlugin.iby,app/imgeditor,,,
 sys\bin\FrameTable.dll,/epoc32/release/armv5/urel/frametable.dll,core/os/FrameTable.iby,os/mm,,,
-sys\bin\FreestyleEmailUi.exe,/epoc32/release/armv5/urel/freestyleemailui.exe,core/app/freestyleemailui.iby,app/commonemail,Out,WR,application
+sys\bin\FreestyleEmailUi.exe,/epoc32/release/armv5/urel/freestyleemailui.exe,core/app/freestyleemailui.iby,app/commonemail,,WR,application
 Sys\Bin\freetype.dll,/epoc32/release/armv5/urel/freetype.dll,freetype.iby,os/textandloc,,,
 sys\bin\fridgemagnets.exe,/epoc32/release/armv5/urel/fridgemagnets.exe,customervariant/app/qtdemoapps.iby,mw/qt,,WR,application
 sys\bin\fs_generic.dll,/epoc32/release/armv5/urel/fs_generic.dll,core/app/fs_generic.iby,app/commonemail,,,
@@ -3679,7 +3679,7 @@ Sys\Bin\fscsaveascontactplugin.dll,/epoc32/release/armv5/urel/fscsaveascontactpl
 Sys\Bin\fscsendplugin.dll,/epoc32/release/armv5/urel/fscsendplugin.dll,core/app/fsccontactactionservice.iby,app/commonemail,,,
 sys\bin\FSFWCommonLib.dll,/epoc32/release/armv5/urel/fsfwcommonlib.dll,core/app/FSEmailFramework.iby,app/commonemail,,,
 sys\bin\FSMailFramework.dll,/epoc32/release/armv5/urel/fsmailframework.dll,core/app/FSEmailFramework.iby,app/commonemail,,,
-sys\bin\fsmailserver.exe,/epoc32/release/armv5/urel/fsmailserver.exe,core/app/fsmailserver.iby,app/commonemail,Out,WR,application
+sys\bin\fsmailserver.exe,/epoc32/release/armv5/urel/fsmailserver.exe,core/app/fsmailserver.iby,app/commonemail,,WR,application
 Sys\Bin\fsscrollbarplugin.dll,/epoc32/release/armv5/urel/fsscrollbarplugin.dll,core/app/fs_generic.iby,app/commonemail,,,
 sys\bin\fssendashelper.dll,/epoc32/release/armv5/urel/fssendashelper.dll,core/app/fssendasmtm.iby,app/commonemail,,,
 sys\bin\fsservermtm.dll,/epoc32/release/armv5/urel/fsservermtm.dll,core/app/fssendasmtm.iby,app/commonemail,,,
@@ -3737,7 +3737,7 @@ sys\bin\GifScaler.dll,/epoc32/release/armv5/urel/gifscaler.dll,gifscaler.iby,os/
 sys\bin\glibbackend.dll,/epoc32/release/armv5/urel/glibbackend.dll,core/os/glib.iby,os/ossrv,,,
 sys\bin\GlobalAudioSettings.dll,/epoc32/release/armv5/urel/globalaudiosettings.dll,core/os/GlobalAudioSettings.iby,os/mm,,,
 Sys\Bin\globalwlanadapter.dll,/epoc32/release/armv5/urel/globalwlanadapter.dll,core/mw/NSmlDMSync.iby,app/devicecontrol,,,
-sys\bin\glx.exe,/epoc32/release/armv5/urel/glx.exe,core/app/glxgallery.iby,app/photos,Out,WR,application
+sys\bin\glx.exe,/epoc32/release/armv5/urel/glx.exe,core/app/glxgallery.iby,app/photos,,WR,application
 sys\bin\glxcloudview.dll,/epoc32/release/armv5/urel/glxcloudview.dll,core/app/glxcloudview.iby,app/photos,,,
 sys\bin\glxcollectionmanager.dll,/epoc32/release/armv5/urel/glxcollectionmanager.dll,core/app/glxgallery.iby,app/photos,,,
 Sys\Bin\glxcollectionpluginalbums.dll,/epoc32/release/armv5/urel/glxcollectionpluginalbums.dll,core/app/glxgallery.iby,app/photos,,,
@@ -3763,7 +3763,7 @@ sys\bin\glxgridview.dll,/epoc32/release/armv5/urel/glxgridview.dll,core/app/glxg
 Sys\Bin\glxgridviewplugin.dll,/epoc32/release/armv5/urel/glxgridviewplugin.dll,core/app/glxgallery.iby,app/photos,,,
 sys\bin\glxgridviewpluginbase.dll,/epoc32/release/armv5/urel/glxgridviewpluginbase.dll,core/app/glxgallery.iby,app/photos,,,
 sys\bin\glximageviewermanager.dll,/epoc32/release/armv5/urel/glximageviewermanager.dll,core/app/glxgallery.iby,app/photos,,,
-sys\bin\glxivwr.exe,/epoc32/release/armv5/urel/glxivwr.exe,core/app/glxgallery.iby,app/photos,Out,WR,application
+sys\bin\glxivwr.exe,/epoc32/release/armv5/urel/glxivwr.exe,core/app/glxgallery.iby,app/photos,,WR,application
 sys\bin\glxlayouts.dll,/epoc32/release/armv5/urel/glxlayouts.dll,core/app/glxgallery.iby,app/photos,,,
 sys\bin\glxlistview.dll,/epoc32/release/armv5/urel/glxlistview.dll,core/app/glxgallery.iby,app/photos,,,
 Sys\Bin\glxlistviewplugin.dll,/epoc32/release/armv5/urel/glxlistviewplugin.dll,core/app/glxgallery.iby,app/photos,,,
@@ -3879,7 +3879,7 @@ sys\bin\hnutilities.dll,/epoc32/release/armv5/urel/hnutilities.dll,core/app/hier
 sys\bin\homescreen.exe,/epoc32/release/armv5/urel/homescreen.exe,core/mw/idlefw.iby,mw/homescreensrv,,WR,application
 sys\bin\hotspotclient.dll,/epoc32/release/armv5/urel/hotspotclient.dll,core/mw/hotspot.iby,mw/wirelessacc,,,
 sys\bin\HotSpotServer.exe,/epoc32/release/armv5/urel/hotspotserver.exe,core/mw/hotspot.iby,mw/wirelessacc,,,
-sys\bin\HsBrowser.exe,/epoc32/release/armv5/urel/hsbrowser.exe,core/mw/hotspot.iby,mw/wirelessacc,Out,WR,application
+sys\bin\HsBrowser.exe,/epoc32/release/armv5/urel/hsbrowser.exe,core/mw/hotspot.iby,mw/wirelessacc,,WR,application
 sys\bin\hsccapiclient.dll,/epoc32/release/armv5/urel/hsccapiclient.dll,core/mw/ccsrv.iby,mw/homescreensrv,,,
 sys\bin\hsccproviderclient.dll,/epoc32/release/armv5/urel/hsccproviderclient.dll,core/mw/ccsrv.iby,mw/homescreensrv,,,
 sys\bin\hscontentcontrol.dll,/epoc32/release/armv5/urel/hscontentcontrol.dll,core/app/ai3xmluirendering.iby,app/homescreen,,,
@@ -3944,13 +3944,13 @@ Sys\Bin\hwrmuiplugin.dll,/epoc32/release/armv5/urel/hwrmuiplugin.dll,core/mw/hwr
 sys\bin\HWRMVibraClient.dll,/epoc32/release/armv5/urel/hwrmvibraclient.dll,hwresourcemanager.iby,os/devicesrv,,,
 Sys\Bin\hz.dll,/epoc32/release/armv5/urel/hz.dll,charconv_chinese_simplfied.iby,os/textandloc,,,
 sys\bin\iacp.dll,/epoc32/release/armv5/urel/iacp.dll,bioparsers.iby,mw/messagingmw,,,
-sys\bin\iaupdate.exe,/epoc32/release/armv5/urel/iaupdate.exe,core/mw/iaupdate.iby,mw/appinstall,Out,WR,application
+sys\bin\iaupdate.exe,/epoc32/release/armv5/urel/iaupdate.exe,core/mw/iaupdate.iby,mw/appinstall,,WR,application
 sys\bin\iaupdateapi.dll,/epoc32/release/armv5/urel/iaupdateapi.dll,core/mw/iaupdate.iby,mw/appinstall,,,
 sys\bin\iaupdatebg.exe,/epoc32/release/armv5/urel/iaupdatebg.exe,core/mw/iaupdate.iby,mw/appinstall,,,
 sys\bin\iaupdateengine.dll,/epoc32/release/armv5/urel/iaupdateengine.dll,core/mw/iaupdate.iby,mw/appinstall,,,
 sys\bin\iaupdatefwupdate.dll,/epoc32/release/armv5/urel/iaupdatefwupdate.dll,core/mw/iaupdate.iby,mw/appinstall,,,
-sys\bin\iaupdatelauncher.exe,/epoc32/release/armv5/urel/iaupdatelauncher.exe,core/mw/iaupdate.iby,mw/appinstall,Out,WR,application
-sys\bin\iaupdater.exe,/epoc32/release/armv5/urel/iaupdater.exe,core/mw/iaupdate.iby,mw/appinstall,Out,WR,application
+sys\bin\iaupdatelauncher.exe,/epoc32/release/armv5/urel/iaupdatelauncher.exe,core/mw/iaupdate.iby,mw/appinstall,,WR,application
+sys\bin\iaupdater.exe,/epoc32/release/armv5/urel/iaupdater.exe,core/mw/iaupdate.iby,mw/appinstall,,WR,application
 sys\bin\iaupdaterfiles.dll,/epoc32/release/armv5/urel/iaupdaterfiles.dll,core/mw/iaupdate.iby,mw/appinstall,,,
 sys\bin\iaupdatetools.dll,/epoc32/release/armv5/urel/iaupdatetools.dll,core/mw/iaupdate.iby,mw/appinstall,,,
 Sys\Bin\icecandidatehandler.dll,/epoc32/release/armv5/urel/icecandidatehandler.dll,core/mw/natfw.iby,mw/ipappsrv,,,
@@ -3977,7 +3977,7 @@ Sys\Bin\ImageEditorProvider.dll,/epoc32/release/armv5/urel/imageeditorprovider.d
 sys\bin\ImageEditorUi.dll,/epoc32/release/armv5/urel/imageeditorui.dll,core/app/ImageEditorUI.iby,app/imgeditor,,,
 sys\bin\ImageEditorUtils.dll,/epoc32/release/armv5/urel/imageeditorutils.dll,core/mw/ImageEditorUtils.iby,app/imgeditor,,,
 sys\bin\imagegestures.exe,/epoc32/release/armv5/urel/imagegestures.exe,customervariant/app/qtdemoapps.iby,mw/qt,,WR,application
-sys\bin\imageprintapp.exe,/epoc32/release/armv5/urel/imageprintapp.exe,core/app/desw_imageprintui.iby,app/printing,Out,WR,application
+sys\bin\imageprintapp.exe,/epoc32/release/armv5/urel/imageprintapp.exe,core/app/desw_imageprintui.iby,app/printing,,WR,application
 sys\bin\imageprintclient.dll,/epoc32/release/armv5/urel/imageprintclient.dll,core/app/imageprintserver.iby,app/printing,,,
 sys\bin\imageprintengine.dll,/epoc32/release/armv5/urel/imageprintengine.dll,core/app/desw_imageprintui.iby,app/printing,,,
 sys\bin\imageprintserver.exe,/epoc32/release/armv5/urel/imageprintserver.exe,core/app/imageprintserver.iby,app/printing,,,
@@ -3997,7 +3997,7 @@ sys\bin\imcm.dll,/epoc32/release/armv5/urel/imcm.dll,gtemailmtm.iby,app/messagin
 Sys\Bin\imcmslauncherplugin.dll,/epoc32/release/armv5/urel/imcmslauncherplugin.dll,core/app/imconversationview.iby,app/conversations,,,
 sys\bin\imcvengine.dll,/epoc32/release/armv5/urel/imcvengine.dll,core/app/imconversationview.iby,app/conversations,,,
 sys\bin\imcvlauncher.dll,/epoc32/release/armv5/urel/imcvlauncher.dll,core/app/imconversationview.iby,app/conversations,,,
-sys\bin\imcvuiapp.exe,/epoc32/release/armv5/urel/imcvuiapp.exe,core/app/imconversationview.iby,app/conversations,Out,WR,application
+sys\bin\imcvuiapp.exe,/epoc32/release/armv5/urel/imcvuiapp.exe,core/app/imconversationview.iby,app/conversations,,WR,application
 sys\bin\imdatamodel.dll,/epoc32/release/armv5/urel/imdatamodel.dll,core/mw/imfeatureplugin.iby,mw/imsrv,,,
 Sys\Bin\imdatamodelhook.dll,/epoc32/release/armv5/urel/imdatamodelhook.dll,core/mw/imfeatureplugin.iby,mw/imsrv,,,
 Sys\Bin\imecomhook.dll,/epoc32/release/armv5/urel/imecomhook.dll,core/mw/imfeatureplugin.iby,mw/imsrv,,,
@@ -4046,7 +4046,7 @@ sys\bin\iptransportimpl.dll,/epoc32/release/armv5/urel/iptransportimpl.dll,iptra
 Sys\Bin\iptransportmanagement.dll,/epoc32/release/armv5/urel/iptransportmanagement.dll,iptransport.iby,os/networkingsrv,,,
 sys\bin\IptvClientApi.dll,/epoc32/release/armv5/urel/iptvclientapi.dll,core/app/videoiptvclientapi.iby,app/videoplayer,,,
 Sys\Bin\IptvOmaProvisioningAdapter.dll,/epoc32/release/armv5/urel/iptvomaprovisioningadapter.dll,core/app/videoomaprovisioning.iby,app/videoplayer,,,
-sys\bin\IptvProvisioningApp.exe,/epoc32/release/armv5/urel/iptvprovisioningapp.exe,core/app/videoprovisioningapppui.iby,app/videoplayer,Out,WR,application
+sys\bin\IptvProvisioningApp.exe,/epoc32/release/armv5/urel/iptvprovisioningapp.exe,core/app/videoprovisioningapppui.iby,app/videoplayer,,WR,application
 sys\bin\IptvProvisioningProcessor.dll,/epoc32/release/armv5/urel/iptvprovisioningprocessor.dll,core/app/videoprovisioningprocessor.iby,app/videoplayer,,,
 Sys\Bin\IptvProvRec.DLL,/epoc32/release/armv5/urel/iptvprovrec.dll,core/app/videoprovisioningrecognizer.iby,app/videoplayer,,,
 Sys\Bin\IptvRssPlugin.DLL,/epoc32/release/armv5/urel/iptvrssplugin.dll,core/app/videorssplugin.iby,app/videoplayer,,,
@@ -4302,7 +4302,7 @@ Sys\Bin\liwResolver.dll,/epoc32/release/armv5/urel/liwresolver.dll,core/mw/servi
 sys\bin\Liwservicehandler.dll,/epoc32/release/armv5/urel/liwservicehandler.dll,core/mw/serviceapi.iby,mw/serviceapifw,,,
 sys\bin\LmkCommonUi.dll,/epoc32/release/armv5/urel/lmkcommonui.dll,core/app/LocationLandmarksUi.iby,app/location,,,
 sys\bin\LmkEng.dll,/epoc32/release/armv5/urel/lmkeng.dll,core/app/LocationLandmarksUi.iby,app/location,,,
-sys\bin\LmkMsgViewer.exe,/epoc32/release/armv5/urel/lmkmsgviewer.exe,core/app/LocationLandmarksUi.iby,app/location,Out,WR,application
+sys\bin\LmkMsgViewer.exe,/epoc32/release/armv5/urel/lmkmsgviewer.exe,core/app/LocationLandmarksUi.iby,app/location,,WR,application
 sys\bin\LmkUi.dll,/epoc32/release/armv5/urel/lmkui.dll,core/app/LocationLandmarksUi.iby,app/location,,,
 sys\bin\loadamastart.dll,/epoc32/release/armv5/urel/loadamastart.dll,amastart.iby,mw/appsupport,,,
 sys\bin\LoadGen.exe,/epoc32/release/armv5/urel/loadgen.exe,core/tools/loadgen.iby,app/rndtools,,WR,application
@@ -4320,7 +4320,7 @@ sys\bin\locationservice.dll,/epoc32/release/armv5/urel/locationservice.dll,core/
 sys\bin\locationtrail.dll,/epoc32/release/armv5/urel/locationtrail.dll,core/mw/mds.iby,mw/mds,,,
 Sys\Bin\locbtnotifier.dll,/epoc32/release/armv5/urel/locbtnotifier.dll,core/mw/locbtnotifier.iby,mw/locationsrv,,,
 Sys\Bin\locgpsindicatorplugin.dll,/epoc32/release/armv5/urel/locgpsindicatorplugin.dll,core/mw/locgpsindicatorplugin.iby,mw/locationsrv,,,
-sys\bin\lockapp.exe,/epoc32/release/armv5/urel/lockapp.exe,core/mw/lockapp.iby,mw/securitysrv,Out,WR,application
+sys\bin\lockapp.exe,/epoc32/release/armv5/urel/lockapp.exe,core/mw/lockapp.iby,mw/securitysrv,,WR,application
 Sys\Bin\locnotifierwrapper.dll,/epoc32/release/armv5/urel/locnotifierwrapper.dll,core/mw/locverifierdlg.iby,mw/locationsrv,,,
 Sys\Bin\locnotprefplugin.dll,/epoc32/release/armv5/urel/locnotprefplugin.dll,core/mw/locnotprefplugin.iby,mw/locationsrv,,,
 sys\bin\locod.exe,/epoc32/release/armv5/urel/locod.exe,core/mw/locod.iby,mw/shortlinkconn,,,
@@ -4359,7 +4359,7 @@ sys\bin\LoudnessMessageHandler.dll,/epoc32/release/armv5/urel/loudnessmessagehan
 sys\bin\LoudnessProxy.dll,/epoc32/release/armv5/urel/loudnessproxy.dll,core/os/Effects.iby,os/mm,,,
 Sys\Bin\ltcellidmovdet.dll,/epoc32/release/armv5/urel/ltcellidmovdet.dll,core/mw/locationtriggering.iby,mw/locationsrv,,,
 sys\bin\ltmvmtdetapi.dll,/epoc32/release/armv5/urel/ltmvmtdetapi.dll,core/mw/locationtriggering.iby,mw/locationsrv,,,
-sys\bin\lwplayer.exe,/epoc32/release/armv5/urel/lwplayer.exe,core/app/lwplayer.iby,app/videoplayer,Out,WR,application
+sys\bin\lwplayer.exe,/epoc32/release/armv5/urel/lwplayer.exe,core/app/lwplayer.iby,app/videoplayer,,WR,application
 sys\bin\m3gcore.dll,/epoc32/release/armv5/urel/m3gcore.dll,core/os/m3gcore.iby,os/graphics,,,
 sys\bin\Mailinit.exe,/epoc32/release/armv5/urel/mailinit.exe,core/app/Mailinit.iby,app/messaging,,,
 Sys\Bin\MailPlainView.dll,/epoc32/release/armv5/urel/mailplainview.dll,core/app/MailEditorViewer.iby,app/messaging,,,
@@ -4515,7 +4515,7 @@ sys\bin\MmsSettings.dll,/epoc32/release/armv5/urel/mmssettings.dll,core/app/MmsU
 sys\bin\mmssrv.dll,/epoc32/release/armv5/urel/mmssrv.dll,core/app/MmsEngine.iby,app/messaging,,,
 sys\bin\mmstransport.dll,/epoc32/release/armv5/urel/mmstransport.dll,core/app/MmsEngine.iby,app/messaging,,,
 sys\bin\MmsUi.dll,/epoc32/release/armv5/urel/mmsui.dll,core/app/MmsUi.iby,app/messaging,,,
-sys\bin\mmsviewer.exe,/epoc32/release/armv5/urel/mmsviewer.exe,core/app/MmsUi.iby,app/messaging,Out,WR,application
+sys\bin\mmsviewer.exe,/epoc32/release/armv5/urel/mmsviewer.exe,core/app/MmsUi.iby,app/messaging,,WR,application
 Sys\Bin\mmswatcher.dll,/epoc32/release/armv5/urel/mmswatcher.dll,core/app/MmsEngine.iby,app/messaging,,,
 sys\bin\mmwidgets.dll,/epoc32/release/armv5/urel/mmwidgets.dll,core/app/mmwidgets.iby,app/homescreen,,,
 Sys\Bin\mnaiwprovider.dll,/epoc32/release/armv5/urel/mnaiwprovider.dll,core/mw/locationmnfw.iby,mw/locationsrv,,,
@@ -4536,7 +4536,7 @@ sys\bin\mpmserver.exe,/epoc32/release/armv5/urel/mpmserver.exe,core/mw/mpmserver
 sys\bin\mpsettbase.dll,/epoc32/release/armv5/urel/mpsettbase.dll,core/app/mediasettingsbase.iby,app/videoplayer,,,
 sys\bin\MPSettEngine.dll,/epoc32/release/armv5/urel/mpsettengine.dll,core/mw/mpsetteng.iby,mw/mmappfw,,,
 Sys\Bin\mpsettropmodel.dll,/epoc32/release/armv5/urel/mpsettropmodel.dll,core/app/mpsettropmodel.iby,app/videoplayer,,,
-sys\bin\mpx.exe,/epoc32/release/armv5/urel/mpx.exe,core/app/mpxmusicplayerapp.iby,app/musicplayer,Out,WR,application
+sys\bin\mpx.exe,/epoc32/release/armv5/urel/mpx.exe,core/app/mpxmusicplayerapp.iby,app/musicplayer,,WR,application
 sys\bin\mpxaddtracksdialog.dll,/epoc32/release/armv5/urel/mpxaddtracksdialog.dll,core/app/mpxaddtracksdialog.iby,app/musicplayer,,,
 Sys\Bin\mpxaddtracksdialogplugin.dll,/epoc32/release/armv5/urel/mpxaddtracksdialogplugin.dll,core/app/mpxaddtracksdialogplugin.iby,app/musicplayer,,,
 sys\bin\mpxalbumarteditordialog.dll,/epoc32/release/armv5/urel/mpxalbumarteditordialog.dll,core/app/mpxalbumarteditordialog.iby,app/musicplayer,,,
@@ -4628,9 +4628,9 @@ sys\bin\MsgEditorUtils.dll,/epoc32/release/armv5/urel/msgeditorutils.dll,core/ap
 sys\bin\MsgEditorView.dll,/epoc32/release/armv5/urel/msgeditorview.dll,core/app/MsgEditor.iby,app/messaging,,,
 Sys\Bin\MsgErrorWatcher.dll,/epoc32/release/armv5/urel/msgerrorwatcher.dll,core/app/msgerrorwatcher.iby,app/messaging,,,
 Sys\Bin\MsgIndicatorPlugin.dll,/epoc32/release/armv5/urel/msgindicatorplugin.dll,core/app/msgindicatorplugin.iby,app/messaging,,,
-sys\bin\MsgMailEditor.exe,/epoc32/release/armv5/urel/msgmaileditor.exe,core/app/MailEditorViewer.iby,app/messaging,Out,WR,application
+sys\bin\MsgMailEditor.exe,/epoc32/release/armv5/urel/msgmaileditor.exe,core/app/MailEditorViewer.iby,app/messaging,,WR,application
 sys\bin\MsgMailUtils.dll,/epoc32/release/armv5/urel/msgmailutils.dll,core/app/MailEditorViewer.iby,app/messaging,,,
-sys\bin\MsgMailViewer.exe,/epoc32/release/armv5/urel/msgmailviewer.exe,core/app/MailEditorViewer.iby,app/messaging,Out,WR,application
+sys\bin\MsgMailViewer.exe,/epoc32/release/armv5/urel/msgmailviewer.exe,core/app/MailEditorViewer.iby,app/messaging,,WR,application
 sys\bin\MsgMedia.dll,/epoc32/release/armv5/urel/msgmedia.dll,core/app/MsgMedia.iby,app/messaging,,,
 sys\bin\MsgNotifiers.dll,/epoc32/release/armv5/urel/msgnotifiers.dll,core/app/MsgNotifiers.iby,app/messaging,,,
 Sys\Bin\MsgNotifiersWrapper.dll,/epoc32/release/armv5/urel/msgnotifierswrapper.dll,core/app/MsgNotifiers.iby,app/messaging,,,
@@ -4674,7 +4674,7 @@ sys\bin\musindicator.dll,/epoc32/release/armv5/urel/musindicator.dll,core/app/mu
 sys\bin\musmanagerclient.dll,/epoc32/release/armv5/urel/musmanagerclient.dll,core/app/multimediasharing.iby,app/mmsharinguis,,,
 sys\bin\musmanagerserver.exe,/epoc32/release/armv5/urel/musmanagerserver.exe,core/app/multimediasharing.iby,app/mmsharinguis,,,
 Sys\Bin\mussettingsui.dll,/epoc32/release/armv5/urel/mussettingsui.dll,core/app/multimediasharing.iby,app/mmsharinguis,,,
-sys\bin\musui.exe,/epoc32/release/armv5/urel/musui.exe,core/app/multimediasharing.iby,app/mmsharinguis,Out,WR,application
+sys\bin\musui.exe,/epoc32/release/armv5/urel/musui.exe,core/app/multimediasharing.iby,app/mmsharinguis,,WR,application
 Sys\Bin\muswpadapter.dll,/epoc32/release/armv5/urel/muswpadapter.dll,core/app/multimediasharing.iby,app/mmsharinguis,,,
 Sys\Bin\myvideosindicatorplugin.dll,/epoc32/release/armv5/urel/myvideosindicatorplugin.dll,core/app/myvideosindicatorplugin.iby,app/videoplayer,,,
 sys\bin\napt.prt,/epoc32/release/armv5/urel/napt.prt,napt.iby,os/networkingsrv,,,
@@ -4706,7 +4706,7 @@ sys\bin\NETStSrv.dll,/epoc32/release/armv5/urel/netstsrv.dll,NETStSrv.iby,os/com
 sys\bin\NetSubscribe.dll,/epoc32/release/armv5/urel/netsubscribe.dll,NETSubscribe.iby,os/commsfw,,,
 sys\bin\netups.dll,/epoc32/release/armv5/urel/netups.dll,netups.iby,os/networkingsrv,,,
 sys\bin\NETWORKHANDLING.DLL,/epoc32/release/armv5/urel/networkhandling.dll,core/mw/networkhandling.iby,mw/phonesrv,,,
-sys\bin\NewContactLauncher.exe,/epoc32/release/armv5/urel/newcontactlauncher.exe,core/app/Phonebook2.iby,app/contacts,Out,WR,application
+sys\bin\NewContactLauncher.exe,/epoc32/release/armv5/urel/newcontactlauncher.exe,core/app/Phonebook2.iby,app/contacts,,WR,application
 sys\bin\NewService.DLL,/epoc32/release/armv5/urel/newservice.dll,core/app/Voicerecorder.iby,app/voicerec,,,
 Sys\Bin\NGAPostProcHwDevice.dll,/epoc32/release/armv5/urel/ngapostprochwdevice.dll,core/os/NGA_MDF_Postprocessor.iby,os/mm,,,
 sys\bin\NHwrParser.dll,/epoc32/release/armv5/urel/nhwrparser.dll,core/app/pnp.iby,app/devicecontrol,,,
@@ -4715,13 +4715,13 @@ Sys\Bin\NitzRFSPlugin.dll,/epoc32/release/armv5/urel/nitzrfsplugin.dll,core/mw/R
 Sys\Bin\nlanpppsy.dll,/epoc32/release/armv5/urel/nlanpppsy.dll,core/mw/nla_npppsy.iby,mw/locationsrv,,,
 Sys\Bin\nlasuplpsy.dll,/epoc32/release/armv5/urel/nlasuplpsy.dll,core/mw/nla_suplpsy.iby,mw/locationsrv,,,
 sys\bin\nodemessages.dll,/epoc32/release/armv5/urel/nodemessages.dll,nodemessages.iby,os/commsfw,,,
-sys\bin\Notepad.exe,/epoc32/release/armv5/urel/notepad.exe,core/app/notepad.iby,app/organizer,Out,WR,application
+sys\bin\Notepad.exe,/epoc32/release/armv5/urel/notepad.exe,core/app/notepad.iby,app/organizer,,WR,application
 Sys\Bin\notessearchplugin.dll,/epoc32/release/armv5/urel/notessearchplugin.dll,core/app/notessearchplugin.iby,app/organizer,,,
 sys\bin\NotUi.dll,/epoc32/release/armv5/urel/notui.dll,core/app/MmsUi.iby,app/messaging,,,
-sys\bin\notviewer.exe,/epoc32/release/armv5/urel/notviewer.exe,core/app/MmsUi.iby,app/messaging,Out,WR,application
+sys\bin\notviewer.exe,/epoc32/release/armv5/urel/notviewer.exe,core/app/MmsUi.iby,app/messaging,,WR,application
 Sys\Bin\npbrowseraudiovideoplugin.dll,/epoc32/release/armv5/urel/npbrowseraudiovideoplugin.dll,core/app/BrowserAudioVideoPlugin.iby,app/webuis,,,
 sys\bin\NpdLib.dll,/epoc32/release/armv5/urel/npdlib.dll,core/app/npdlib.iby,app/organizer,,,
-sys\bin\NpdViewer.exe,/epoc32/release/armv5/urel/npdviewer.exe,core/app/npdviewer.iby,app/organizer,Out,WR,application
+sys\bin\NpdViewer.exe,/epoc32/release/armv5/urel/npdviewer.exe,core/app/npdviewer.iby,app/organizer,,WR,application
 sys\bin\npscript.dll,/epoc32/release/armv5/urel/npscript.dll,core/mw/webkit.iby,mw/web,,,
 Sys\Bin\npsvgtplugin.dll,/epoc32/release/armv5/urel/npsvgtplugin.dll,core/mw/SvgtPluginEcom.iby,mw/svgt,,,
 Sys\Bin\npSystemInfoPlugin.dll,/epoc32/release/armv5/urel/npsysteminfoplugin.dll,core/app/BrowserSystemInfoPlugin.iby,app/webuis,,,
@@ -4852,7 +4852,7 @@ sys\bin\omxilcoreserver.dll,/epoc32/release/armv5/urel/omxilcoreserver.dll,omxil
 sys\bin\omxilgenericilif.dll,/epoc32/release/armv5/urel/omxilgenericilif.dll,milif.iby,os/mm,,,
 Sys\Bin\omxilpcmrenderer.dll,/epoc32/release/armv5/urel/omxilpcmrenderer.dll,omxilcompref.iby,os/mm,,,
 Sys\Bin\omxilsymbianloader.dll,/epoc32/release/armv5/urel/omxilsymbianloader.dll,omxilcore.iby,os/mm,,,
-sys\bin\OnlineSupport.exe,/epoc32/release/armv5/urel/onlinesupport.exe,core/app/onlinesupport.iby,app/devicecontrol,Out,WR,application
+sys\bin\OnlineSupport.exe,/epoc32/release/armv5/urel/onlinesupport.exe,core/app/onlinesupport.iby,app/devicecontrol,,WR,application
 sys\bin\oodmonitor.dll,/epoc32/release/armv5/urel/oodmonitor.dll,core/mw/oodmonitor.iby,mw/appsupport,,,
 sys\bin\oommonitor.dll,/epoc32/release/armv5/urel/oommonitor.dll,core/mw/oommonitor.iby,mw/appsupport,,,
 Sys\Bin\OpenChannelCmd.dll,/epoc32/release/armv5/urel/openchannelcmd.dll,core/mw/satserver.iby,mw/phonesrv,,,
@@ -4951,7 +4951,7 @@ sys\bin\PhoneParser.dll,/epoc32/release/armv5/urel/phoneparser.dll,core/mw/Phone
 sys\bin\PhoneServer.exe,/epoc32/release/armv5/urel/phoneserver.exe,core/mw/PhoneServer.iby,mw/phonesrv,,,
 sys\bin\phonesettings.dll,/epoc32/release/armv5/urel/phonesettings.dll,core/app/PhoneSettings.iby,mw/phonesrv,,,
 Sys\Bin\PHONETSY.TSY,/epoc32/release/armv5/urel/phonetsy.tsy,ctsy.iby,os/cellularsrv,,,
-sys\bin\phoneui.exe,/epoc32/release/armv5/urel/phoneui.exe,core/app/phoneui.iby,app/phone,Out,WR,application
+sys\bin\phoneui.exe,/epoc32/release/armv5/urel/phoneui.exe,core/app/phoneui.iby,app/phone,,WR,application
 sys\bin\phoneuicontrol.dll,/epoc32/release/armv5/urel/phoneuicontrol.dll,core/app/phoneui.iby,app/phone,,,
 sys\bin\phoneuistates.dll,/epoc32/release/armv5/urel/phoneuistates.dll,core/app/phoneui.iby,app/phone,,,
 sys\bin\phoneuiutils.dll,/epoc32/release/armv5/urel/phoneuiutils.dll,core/app/phoneui.iby,app/phone,,,
@@ -5075,7 +5075,7 @@ sys\bin\PushMtmUi.dll,/epoc32/release/armv5/urel/pushmtmui.dll,core/app/PushMtm.
 sys\bin\PushMtmUtil.dll,/epoc32/release/armv5/urel/pushmtmutil.dll,core/app/PushMtm.iby,app/webuis,,,
 Sys\Bin\PushMtmWhiteListAdapter.dll,/epoc32/release/armv5/urel/pushmtmwhitelistadapter.dll,core/app/PushMtm.iby,app/webuis,,,
 Sys\Bin\pushsecurity.dll,/epoc32/release/armv5/urel/pushsecurity.dll,core/app/wappush.iby,mw/messagingmw,,,
-sys\bin\PushViewer.exe,/epoc32/release/armv5/urel/pushviewer.exe,core/app/PushMtm.iby,app/webuis,Out,WR,application
+sys\bin\PushViewer.exe,/epoc32/release/armv5/urel/pushviewer.exe,core/app/PushMtm.iby,app/webuis,,WR,application
 Sys\Bin\pushwatcher.dll,/epoc32/release/armv5/urel/pushwatcher.dll,core/app/wappush.iby,mw/messagingmw,,,
 sys\bin\qcncodecs.dll,/epoc32/release/armv5/urel/qcncodecs.dll,core/mw/qt.iby,mw/qt,,,
 sys\bin\qdp_base.dll,/epoc32/release/armv5/urel/qdp_base.dll,hci_framework.iby,os/bt,,,
@@ -5452,7 +5452,7 @@ sys\bin\SmsProt.prt,/epoc32/release/armv5/urel/smsprot.prt,smsstack.iby,os/cellu
 sys\bin\smss.dll,/epoc32/release/armv5/urel/smss.dll,gtsmsmtm.iby,app/messaging,,,
 Sys\Bin\SmsStrict.DLL,/epoc32/release/armv5/urel/smsstrict.dll,core/app/SmsStrict.iby,app/messaging,,,
 sys\bin\SmsU.dll,/epoc32/release/armv5/urel/smsu.dll,smsstack.iby,os/cellularsrv,,,
-sys\bin\SmsViewer.exe,/epoc32/release/armv5/urel/smsviewer.exe,core/app/SmsViewer.iby,app/messaging,Out,WR,application
+sys\bin\SmsViewer.exe,/epoc32/release/armv5/urel/smsviewer.exe,core/app/SmsViewer.iby,app/messaging,,WR,application
 sys\bin\smts.dll,/epoc32/release/armv5/urel/smts.dll,gtemailmtm.iby,app/messaging,,,
 sys\bin\smum.dll,/epoc32/release/armv5/urel/smum.dll,core/app/Smum.iby,app/messaging,,,
 sys\bin\snapapp.exe,/epoc32/release/armv5/urel/snapapp.exe,base_syborg_ui.iby,adaptation/qemu,,,
@@ -5479,7 +5479,7 @@ sys\bin\SpeechRecognitionData.dll,/epoc32/release/armv5/urel/speechrecognitionda
 sys\bin\SpeechRecognitionUtility.dll,/epoc32/release/armv5/urel/speechrecognitionutility.dll,ASR.iby,os/mm,,,
 sys\bin\speechsynthesis.dll,/epoc32/release/armv5/urel/speechsynthesis.dll,core/app/srsf.iby,app/speechsrv,,,
 sys\bin\speechsynthesisserver.exe,/epoc32/release/armv5/urel/speechsynthesisserver.exe,core/app/srsf.iby,app/speechsrv,,,
-sys\bin\Speeddial.exe,/epoc32/release/armv5/urel/speeddial.exe,core/app/Speeddial.iby,app/contacts,Out,WR,application
+sys\bin\Speeddial.exe,/epoc32/release/armv5/urel/speeddial.exe,core/app/Speeddial.iby,app/contacts,,WR,application
 Sys\Bin\speeddialgsplugin.dll,/epoc32/release/armv5/urel/speeddialgsplugin.dll,core/app/Speeddial.iby,app/contacts,,,
 sys\bin\SplashScreen.exe,/epoc32/release/armv5/urel/splashscreen.exe,core/mw/splashscreen.iby,mw/appsupport,,,
 sys\bin\spsbackuphelper.exe,/epoc32/release/armv5/urel/spsbackuphelper.exe,core/mw/spsettings.iby,mw/phonesrv,,,
@@ -5487,7 +5487,7 @@ sys\bin\sqldb.dll,/epoc32/release/armv5/urel/sqldb.dll,sql.iby,os/persistentdata
 sys\bin\sqlite3.dll,/epoc32/release/armv5/urel/sqlite3.dll,core/mw/sqlite3.iby,os/persistentdata,,,
 sys\bin\sqlsrv.exe,/epoc32/release/armv5/urel/sqlsrv.exe,sql.iby,os/persistentdata,,,
 Sys\Bin\srchaiwprovider.dll,/epoc32/release/armv5/urel/srchaiwprovider.dll,core/app/searchapp.iby,app/organizer,,,
-sys\bin\srchuiapp.exe,/epoc32/release/armv5/urel/srchuiapp.exe,core/app/searchapp.iby,app/organizer,Out,WR,application
+sys\bin\srchuiapp.exe,/epoc32/release/armv5/urel/srchuiapp.exe,core/app/searchapp.iby,app/organizer,,WR,application
 sys\bin\srchuicommon.dll,/epoc32/release/armv5/urel/srchuicommon.dll,core/app/searchapp.iby,app/organizer,,,
 sys\bin\srchuigenui.dll,/epoc32/release/armv5/urel/srchuigenui.dll,core/app/searchapp.iby,app/organizer,,,
 Sys\Bin\srchuiindeviceserviceplugin.dll,/epoc32/release/armv5/urel/srchuiindeviceserviceplugin.dll,core/app/searchapp.iby,app/organizer,,,
@@ -5566,7 +5566,7 @@ sys\bin\SVGTAppObserverUtil.dll,/epoc32/release/armv5/urel/svgtappobserverutil.d
 sys\bin\SVGTFileViewDetails.dll,/epoc32/release/armv5/urel/svgtfileviewdetails.dll,core/app/svgtfileviewdetails.iby,app/graphicsuis,,,
 Sys\Bin\SVGTScreenSaverPlugin.dll,/epoc32/release/armv5/urel/svgtscreensaverplugin.dll,core/app/svgscreensaverplugin.iby,app/graphicsuis,,,
 sys\bin\SVGTUIControl.dll,/epoc32/release/armv5/urel/svgtuicontrol.dll,core/app/svgtuicontrol.iby,app/graphicsuis,,,
-sys\bin\SVGTViewerApp.exe,/epoc32/release/armv5/urel/svgtviewerapp.exe,core/app/svgtviewerapp.iby,app/graphicsuis,Out,WR,application
+sys\bin\SVGTViewerApp.exe,/epoc32/release/armv5/urel/svgtviewerapp.exe,core/app/svgtviewerapp.iby,app/graphicsuis,,WR,application
 sys\bin\svgviewer.exe,/epoc32/release/armv5/urel/svgviewer.exe,customervariant/app/qtdemoapps.iby,mw/qt,,WR,application
 Sys\Bin\svp.dll,/epoc32/release/armv5/urel/svp.dll,core/app/svp.iby,app/iptelephony,,,
 sys\bin\svphostfs.exe,/epoc32/release/armv5/urel/svphostfs.exe,base_syborg_ui.iby,adaptation/qemu,,,
@@ -5635,7 +5635,7 @@ sys\bin\Tagma.dll,/epoc32/release/armv5/urel/tagma.dll,Form.iby,os/textandloc,,,
 sys\bin\taskswitcher.exe,/epoc32/release/armv5/urel/taskswitcher.exe,core/mw/taskswitcher.iby,app/homescreen,,WR,application
 Sys\Bin\tcadapter.dll,/epoc32/release/armv5/urel/tcadapter.dll,core/mw/tcadapter.iby,mw/remotemgmt,,,
 sys\bin\tckrunner.dll,/epoc32/release/armv5/urel/tckrunner.dll,core/tools/javatest.iby,app/jrt,,,
-sys\bin\tckrunner.exe,/epoc32/release/armv5/urel/tckrunner.exe,core/tools/javatest.iby,app/jrt,Out,WR,application
+sys\bin\tckrunner.exe,/epoc32/release/armv5/urel/tckrunner.exe,core/tools/javatest.iby,app/jrt,,WR,application
 sys\bin\tcpip6.prt,/epoc32/release/armv5/urel/tcpip6.prt,tcpip6.iby,os/networkingsrv,,,
 sys\bin\TEFCleanup.exe,/epoc32/release/armv5/urel/tefcleanup.exe,tefcleanup.iby,(unknown),,,
 Sys\bin\TEFUtilityServer.exe,/epoc32/release/armv5/urel/tefutilityserver.exe,tefutilityserver.iby,(unknown),,,
@@ -5684,7 +5684,7 @@ sys\bin\TNEENGINE.DLL,/epoc32/release/armv5/urel/tneengine.dll,core/mw/TNEEngine
 sys\bin\tonedata.dll,/epoc32/release/armv5/urel/tonedata.dll,acf.iby,os/mm,,,
 Sys\Bin\tonehwdevice.dll,/epoc32/release/armv5/urel/tonehwdevice.dll,refacladaptation.iby,os/mm,,,
 sys\bin\touchfeedback.dll,/epoc32/release/armv5/urel/touchfeedback.dll,core/mw/tactilefeedback.iby,mw/hapticsservices,,,
-sys\bin\TouchScreenCalib.exe,/epoc32/release/armv5/urel/touchscreencalib.exe,core/app/touchscreencalib.iby,app/settingsuis,Out,WR,application
+sys\bin\TouchScreenCalib.exe,/epoc32/release/armv5/urel/touchscreencalib.exe,core/app/touchscreencalib.iby,app/settingsuis,,WR,application
 sys\bin\TransferRateMonitor.dll,/epoc32/release/armv5/urel/transferratemonitor.dll,core/mw/EnhancedMediaClient.iby,mw/mmmw,,,
 sys\bin\transporthandler.dll,/epoc32/release/armv5/urel/transporthandler.dll,gtemailmtm.iby,app/messaging,,,
 sys\bin\trkdummyapp.exe,/epoc32/release/armv5/urel/trkdummyapp.exe,base.iby,os/kernelhwsrv,,,
@@ -5727,7 +5727,7 @@ Sys\Bin\uloggersysstart.exe,/epoc32/release/armv5/urel/uloggersysstart.exe,ulogg
 sys\bin\umtsif.dll,/epoc32/release/armv5/urel/umtsif.dll,umtsif.iby,os/cellularsrv,,,
 sys\bin\Undo.dll,/epoc32/release/armv5/urel/undo.dll,Form.iby,os/textandloc,,,
 sys\bin\UniDataModel.dll,/epoc32/release/armv5/urel/unidatamodel.dll,core/app/UniEditor.iby,app/messaging,,,
-sys\bin\UniEditor.exe,/epoc32/release/armv5/urel/unieditor.exe,core/app/UniEditor.iby,app/messaging,Out,WR,application
+sys\bin\UniEditor.exe,/epoc32/release/armv5/urel/unieditor.exe,core/app/UniEditor.iby,app/messaging,,WR,application
 Sys\Bin\UniMmsPlugin.dll,/epoc32/release/armv5/urel/unimmsplugin.dll,core/app/UniEditor.iby,app/messaging,,,
 sys\bin\UniMtms.dll,/epoc32/release/armv5/urel/unimtms.dll,core/app/UniEditor.iby,app/messaging,,,
 sys\bin\UniPluginApi.dll,/epoc32/release/armv5/urel/unipluginapi.dll,core/app/UniEditor.iby,app/messaging,,,
@@ -5787,10 +5787,10 @@ Sys\Bin\vccontrolpanelplugin.dll,/epoc32/release/armv5/urel/vccontrolpanelplugin
 Sys\Bin\vccperformer.dll,/epoc32/release/armv5/urel/vccperformer.dll,core/app/vcc.iby,app/iptelephony,,,
 sys\bin\vccuipropertyhandler.dll,/epoc32/release/armv5/urel/vccuipropertyhandler.dll,core/app/vcc.iby,app/iptelephony,,,
 sys\bin\vccutils.dll,/epoc32/release/armv5/urel/vccutils.dll,core/app/vcc.iby,app/iptelephony,,,
-sys\bin\vcexecutorapp.exe,/epoc32/release/armv5/urel/vcexecutorapp.exe,core/app/srsf.iby,app/speechsrv,Out,WR,application
-sys\bin\vcommand.exe,/epoc32/release/armv5/urel/vcommand.exe,core/app/vcommand.iby,app/speechsrv,Out,WR,application
+sys\bin\vcexecutorapp.exe,/epoc32/release/armv5/urel/vcexecutorapp.exe,core/app/srsf.iby,app/speechsrv,,WR,application
+sys\bin\vcommand.exe,/epoc32/release/armv5/urel/vcommand.exe,core/app/vcommand.iby,app/speechsrv,,WR,application
 sys\bin\vcommandhandler.dll,/epoc32/release/armv5/urel/vcommandhandler.dll,core/app/srsf.iby,app/speechsrv,,,
-sys\bin\vcommandmanager.exe,/epoc32/release/armv5/urel/vcommandmanager.exe,core/app/srsf.iby,app/speechsrv,Out,WR,application
+sys\bin\vcommandmanager.exe,/epoc32/release/armv5/urel/vcommandmanager.exe,core/app/srsf.iby,app/speechsrv,,WR,application
 sys\bin\vcxconnectionutility.dll,/epoc32/release/armv5/urel/vcxconnectionutility.dll,core/mw/videoconnutility.iby,mw/videoutils,,,
 sys\bin\vcxconnutilpsworker.exe,/epoc32/release/armv5/urel/vcxconnutilpsworker.exe,core/mw/videoconnutilpsworker.iby,mw/videoutils,,,
 sys\bin\vcxhgmyvideos.dll,/epoc32/release/armv5/urel/vcxhgmyvideos.dll,core/app/hgmyvideos.iby,app/videoplayer,,,
@@ -5812,11 +5812,11 @@ sys\bin\vibractrl.dll,/epoc32/release/armv5/urel/vibractrl.dll,core/os/vibractrl
 sys\bin\VideoConversionApi.dll,/epoc32/release/armv5/urel/videoconversionapi.dll,core/app/UniEditor.iby,app/messaging,,,
 sys\bin\videoplaylistutility.dll,/epoc32/release/armv5/urel/videoplaylistutility.dll,core/mw/videolaylistutility.iby,mw/mmappfw,,,
 sys\bin\videorenderer.dll,/epoc32/release/armv5/urel/videorenderer.dll,videorenderer.iby,os/mm,,,
-sys\bin\VideoServices.exe,/epoc32/release/armv5/urel/videoservices.exe,core/app/VideoServices.iby,app/webuis,Out,WR,application
+sys\bin\VideoServices.exe,/epoc32/release/armv5/urel/videoservices.exe,core/app/VideoServices.iby,app/webuis,,WR,application
 sys\bin\VideoSource.dll,/epoc32/release/armv5/urel/videosource.dll,core/app/videosource.iby,app/videotelephony,,,
 sys\bin\Videoteleng.dll,/epoc32/release/armv5/urel/videoteleng.dll,core/app/videoteleng.iby,app/videotelephony,,,
 sys\bin\videotelproto.dll,/epoc32/release/armv5/urel/videotelproto.dll,core/app/videoteleng.iby,app/videotelephony,,,
-sys\bin\videotelui.exe,/epoc32/release/armv5/urel/videotelui.exe,core/app/videotelui.iby,app/videotelephony,Out,WR,application
+sys\bin\videotelui.exe,/epoc32/release/armv5/urel/videotelui.exe,core/app/videotelui.iby,app/videotelephony,,WR,application
 sys\bin\viewcli.dll,/epoc32/release/armv5/urel/viewcli.dll,uikon.iby,mw/appsupport,,,
 sys\bin\viewsrv.dll,/epoc32/release/armv5/urel/viewsrv.dll,uikon.iby,mw/appsupport,,,
 sys\bin\vimpstcmdprocess.dll,/epoc32/release/armv5/urel/vimpstcmdprocess.dll,core/app/imuiservicetab.iby,app/conversations,,,
@@ -5830,7 +5830,7 @@ sys\bin\virtualconstructors.dll,/epoc32/release/armv5/urel/virtualconstructors.d
 sys\bin\vjcomp.dll,/epoc32/release/armv5/urel/vjcomp.dll,ppp.iby,os/networkingsrv,,,
 sys\bin\Vm.exe,/epoc32/release/armv5/urel/vm.exe,core/app/vmbx.iby,app/phone,,,
 sys\bin\vmbx.dll,/epoc32/release/armv5/urel/vmbx.dll,core/mw/vmbxengine.iby,mw/phonesrv,,,
-sys\bin\Voicerecorder.exe,/epoc32/release/armv5/urel/voicerecorder.exe,core/app/Voicerecorder.iby,app/voicerec,Out,WR,application
+sys\bin\Voicerecorder.exe,/epoc32/release/armv5/urel/voicerecorder.exe,core/app/Voicerecorder.iby,app/voicerec,,WR,application
 sys\bin\VoicerecorderRecview.DLL,/epoc32/release/armv5/urel/voicerecorderrecview.dll,core/app/Voicerecorder.iby,app/voicerec,,,
 sys\bin\VoicerecorderUtils.DLL,/epoc32/release/armv5/urel/voicerecorderutils.dll,core/app/Voicerecorder.iby,app/voicerec,,,
 sys\bin\voiceUiRecognition.dll,/epoc32/release/armv5/urel/voiceuirecognition.dll,core/app/voiceui.iby,app/speechsrv,,,
@@ -6167,4 +6167,4 @@ system\data\config.ini,/epoc32/winscw/c/system/data/config.ini,zsh.iby,os/ossrv,
 Private\2000cd0f\dummy.txt,/epoc32/winscw/c/zsh/dummy.txt,zsh.iby,mw/appsupport,,,
 private\10003a3f\import\apps\weatherinfo_reg.rsc,/epoc32/data/z/private/10003a3f/import/apps/weatherinfo_reg.rsc,weatherinfo.iby,mw/qt,,,
 resource\apps\weatherinfo.rsc,/epoc32/data/z/resource/apps/weatherinfo.rsc,weatherinfo.iby,mw/qt,,,
-sys\bin\weatherinfo.exe,/epoc32/release/armv5/urel/weatherinfo.exe,weatherinfo.iby,mw/qt,,WR,Stem kit use case
+sys\bin\weatherinfo.exe,/epoc32/release/armv5/urel/weatherinfo.exe,weatherinfo.iby,mw/qt,In,WR,Stem kit use case

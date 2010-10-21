@@ -40,12 +40,14 @@ die("Not a valid rom_content.csv file") if ($rom_content_header !~ /^ROM file,/)
 
 # read through the rom_content_csv looking for direct instructions
 my %stem_substitutions;
+my %rom_origins;
 my %deletions;
 my %must_have;
 foreach my $line (@rom_content)
 	{
 	my ($romfile,$hostfile,$ibyfile,$package,$cmd,@rest) = split /,/, $line;
 	
+	$rom_origins{$romfile} = "$ibyfile,$package";
 	next if ($cmd eq "");
 
 	$cmd = lc $cmd;
@@ -155,6 +157,7 @@ foreach my $line (@obylines)
 		$newname =~ s/^\\sys/sys/;	# remove leading \, to match $romfile convention
 		$lc_romfiles{lc $newname} = $newname;
 		
+		$rom_origins{$newname} = "alias to $romfile";
 		if ($romfile =~ /^sys.bin.(\S+)$/i)
 			{
 			my $realexe = lc $1;
@@ -163,6 +166,8 @@ foreach my $line (@obylines)
 			if ($newname =~ /^sys.bin.(\S+)$/i)
 				{
 				my $newexe = lc $1;
+				$exe_to_romfile{$newexe} = $newname;
+				$rom_origins{$newname} = "alias " . $rom_origins{$romfile};
 				my @prerequisite_exes = ($realexe);
 				$exe_prerequisites{$newexe} = \@prerequisite_exes;
 				}
@@ -461,7 +466,7 @@ if ($deletion_details_file && scalar (@details, @problems, @deletion_roots))
 	foreach my $deletion_root (sort {$b <=> $a} @deletion_roots)
 		{
 		my ($count,$exe) = split /\s+/, $deletion_root;
-		printf FILE "Deleting %s would remove %d files\n", $exe, $count;
+		printf FILE "Remove %d files by deleting %s (%s)\n", $count, $exe, $rom_origins{$exe_to_romfile{$exe}};
 		}	
 
 	print FILE "\n====\n";
