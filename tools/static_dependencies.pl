@@ -34,17 +34,32 @@ if ($existing_file)
 
 my %romfiles;
 my @contents;
+my %need_details;
 
 my $line;
 while ($line = <>)
 	{
   my ($romfile,$hostfile,$ibyfile,$package,$cmd,@columns) = split /,/, $line;		# first 5 fields are guaranteed to be simple
-	next if (!defined $hostfile);
 	next if ($romfile eq "ROM file");		# skip header line
-	
-	if (lc $cmd eq "stem")
+	if (!defined $hostfile)
 		{
-		$hostfile =~ s/(\/|\\)([^\\\/]+)$/$1stem_$2/;			# use stem version instead
+		# is it perhaps a static_dependencies.txt line?
+		my $dependencies;
+		my $nothing;
+		($romfile,$hostfile,$dependencies,$nothing) = split /\t/, $line;
+		next if (defined $nothing || !defined $hostfile);
+		$cmd = "";
+		}
+	
+	if (lc $cmd eq "slim")
+		{
+		$need_details{lc $romfile} = 1;
+		$cmd = "stem";		# slim implies stem
+		}
+	if (lc $cmd eq "stem" && $hostfile !~ /stem_/)
+		{
+		push @contents, "$romfile\t$hostfile";	# calculate dependencies for the original file
+		$hostfile =~ s/(\/|\\)([^\\\/]+)$/$1stem_$2/;			# then use stem version as well
 		}
 	push @contents, "$romfile\t$hostfile";
 	$romfiles{lc $romfile} = $romfile;
@@ -69,7 +84,7 @@ foreach my $existingline (@existinglines)
 	if (defined $deps)
 		{
 		$romfile = canonical_romfile($romfile);
-		$outputlines{$romfile} = "$romfile\t$hostfile\t$deps";
+		$outputlines{"$romfile\t$hostfile"} = "$romfile\t$hostfile\t$deps";
 		}
 	}
 
@@ -78,7 +93,7 @@ my %dependents;
 sub print_dependency($$@)
 	{
 	my ($romfile,$hostfile,@dependencies) = @_;
-	$outputlines{$romfile} = "$romfile\t$hostfile\t". join(":",@dependencies);
+	$outputlines{"$romfile\t$hostfile"} = "$romfile\t$hostfile\t". join(":",@dependencies);
 	
 	next unless $inverted_table;
 	
@@ -102,6 +117,48 @@ sub print_dependency($$@)
 		}
 	}
 
+sub summarise_list($)
+	{
+	my ($hashref) = @_;
+	my @summary;
+	my @list = sort {$a <=> $b} keys %$hashref;
+	my $first = shift @list;
+	my $latest = $first;
+	foreach my $number (@list)
+		{
+		if ($number == $latest + 1)
+			{
+			# extends existing range by one
+			$latest = $latest + 1;
+			next;
+			}
+		# new range
+		if ($first > -1)
+			{
+			if ($latest == $first)
+				{
+				# Range with one element
+				push @summary, $first;
+				}
+			else
+				{
+				push @summary, "$first-$latest";
+				}
+			}
+		$first = $number;
+		$latest = $number;
+		}
+	if ($latest == $first)
+		{
+		push @summary, "$first";
+		}
+	else
+		{
+		push @summary, "$first-$latest";
+		}
+	return join(".", @summary);
+	}
+
 sub generate_elftran_dependencies($$)
 	{
 	my ($romfile,$hostfile) = @_;
@@ -113,13 +170,50 @@ sub generate_elftran_dependencies($$)
 	
 	my $sid;
 	my @imports;
+	my $dll;
+	my $importing = 0;
+	my %ordinals;
+	my %exports;
 	foreach my $line (@elftran)
 		{
+		#        Ordinal   318:  00010f9f
+		if ($line =~ /Ordinal\s+(\d+):\s+(ABSENT)?/)
+			{
+			$exports{$1} = 1 unless ($2 eq "ABSENT");
+			next;
+			}
+
 		# 2 imports from backend{00010001}[102828d5].dll
 		# 17 imports from dfpaeabi{000a0000}.dll
-		if ($line =~ /imports from (\S+)\{.{8}\}(\S+)$/)
+		if ($line =~ /(\d+) imports from (\S+)\{.{8}\}(\S+)$/)
 			{
-			push @imports, $1.$2;
+			$dll = $2.$3;
+			my $import_count = $1;
+			my $exename = "sys\\bin\\". lc $dll;
+			$exename =~ s/\[\S+\]//;	# ignore the UID
+			if (defined $need_details{$exename})
+				{
+				# enable the tracking of the imported ordinals
+				$importing = $import_count;
+				%ordinals = ();
+				}
+			else
+				{
+				# Just report the simple reference to the imported dll
+				$importing = 0;
+				push @imports, $dll;
+				}
+			next;
+			}
+		if ($importing && $line =~ /^\s+(\d+)( offset by \d+)?$/)
+			{
+			$ordinals{$1} = 1;
+			$importing -= 1;
+			if ($importing == 0)
+				{
+				$dll = $dll. "@". summarise_list(\%ordinals);
+				push @imports, $dll;
+				}
 			next;
 			}
 		if ($line =~ /^Secure ID: (\S+)$/)
@@ -128,7 +222,13 @@ sub generate_elftran_dependencies($$)
 			next;
 			}
 		}
-	print_dependency($romfile,$hostfile,"sid=$sid",@imports);
+
+	my @export_info = ();
+	if (scalar keys %exports && $need_details{lc $romfile})
+		{
+		push @export_info, "exports=".summarise_list(\%exports);
+		}
+	print_dependency($romfile,$hostfile, @export_info, "sid=$sid",@imports);
 	}
 
 sub find_exe_names_dependencies($$)

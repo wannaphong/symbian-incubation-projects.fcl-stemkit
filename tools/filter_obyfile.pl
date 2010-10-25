@@ -43,6 +43,7 @@ my %stem_substitutions;
 my %rom_origins;
 my %deletions;
 my %must_have;
+my %check_import_details;
 foreach my $line (@rom_content)
 	{
 	my ($romfile,$hostfile,$ibyfile,$package,$cmd,@rest) = split /,/, $line;
@@ -51,6 +52,14 @@ foreach my $line (@rom_content)
 	next if ($cmd eq "");
 
 	$cmd = lc $cmd;
+	if ($cmd eq "slim")
+		{
+		$check_import_details{$romfile} = "";
+		$stem_substitutions{$romfile} = $hostfile;
+		$must_have{$romfile} = 1;
+		next;
+		}
+
 	if ($cmd eq "stem")
 		{
 		$stem_substitutions{$romfile} = $hostfile;
@@ -72,15 +81,17 @@ foreach my $line (@rom_content)
 		}
 	}
 
-printf STDERR "%d in (including %d stem), %d out\n", 
+printf STDERR "%d in (including %d slim and %d stem), %d out\n", 
 	scalar keys %must_have,
-	scalar keys %stem_substitutions, 
+	scalar keys %check_import_details,
+	(scalar keys %stem_substitutions) - (scalar keys %check_import_details), 
 	scalar keys %deletions; 
 
 # read static dependencies file
 my %exe_to_romfile;     # exe -> original romfile
 my %exe_dependencies;   # exe -> list of romfile
 my %exe_prerequisites;  # exe -> list of exe
+my %exe_ordinals;       # exe -> list of valid ordinals
 my %lc_romfiles;
 
 my $line;
@@ -96,7 +107,7 @@ while ($line = <STATIC_DEPENDENCIES>)
 		{
 		if ($hostfile !~ /\/stem_/)
 			{
-			print STDERR "Ignoring dependencies of $hostfile because of stem substitution of $romfile\n";
+			# print STDERR "Ignoring dependencies of $hostfile because of stem substitution of $romfile\n";
 			next;
 			}
 		}
@@ -114,6 +125,15 @@ while ($line = <STATIC_DEPENDENCIES>)
 	foreach my $prerequisite (split /:/,$stuff)
 		{
 		next if ($prerequisite =~ /^sid=/);	# not a real file
+		if ($prerequisite =~ /^exports=(.*)$/)
+			{
+			my $ordinals = $1;
+			if (defined $check_import_details{$romfile})
+				{
+				$exe_ordinals{$romexe} = $ordinals;
+				}
+			next;
+			}
 		$prerequisite =~ s/^sys.bin.//;	# remove leading sys/bin, if present
 		if ($prerequisite !~ /\\/)
 			{
@@ -121,6 +141,8 @@ while ($line = <STATIC_DEPENDENCIES>)
 			$exe =~ s/\[\S+\]//;	# ignore the UIDs for now
 		
 			push @prerequisite_exes, $exe;
+			$exe =~ s/@.*$//; 	# remove the ordinals, though they remain in the prerequisite exes
+
 			if (!defined $exe_dependencies{$exe})
 				{
 				my @dependents = ($romfile);
@@ -179,13 +201,12 @@ foreach my $line (@obylines)
 
 if (0)
 	{
-	foreach my $exe ("libopenvg.dll", "libopenvg_sw.dll", "backend.dll")
+	foreach my $exe ("libopenvg.dll", "libopenvg_sw.dll", "backend.dll", "qtgui.dll")
 		{
 		printf STDERR "Dependents of %s = %s\n", $exe, join(", ", @{$exe_dependencies{$exe}});
 		}
 	}
 
-# process the "out" commands to recursively expand the deletions
 
 my @details;
 sub print_detail($)
@@ -194,6 +215,90 @@ sub print_detail($)
 	push @details, $message;
 	print STDERR $message, "\n";
 	}
+
+# check the dependents of "slim" DLLs to see if they get eliminated by missing ordinals
+
+sub expand_list($$)
+	{
+	my ($hashref, $list) = @_;
+	foreach my $range (split /\./, $list)
+		{
+		if ($range =~ /^(\d+)-(\d+)$/)
+			{
+			foreach my $ordinal ($1 .. $2)
+				{
+				$$hashref{$ordinal} = 1;
+				}
+			}
+		else
+			{
+			$$hashref{$range} = 1;
+			}
+		}
+	}
+sub check_list($$)
+	{
+	my ($hashref, $list) = @_;
+	foreach my $range (split /\./, $list)
+		{
+		if ($range =~ /^(\d+)-(\d+)$/)
+			{
+			foreach my $ordinal ($1 .. $2)
+				{
+				if (!defined $$hashref{$ordinal})
+					{
+					return "Missing ordinal $ordinal";
+					}
+				}
+			}
+		else
+			{
+			return "Missing ordinal $range" if (!defined $$hashref{$range});
+			}
+		}
+	return "OK";
+	}
+
+
+foreach my $romexe (keys %exe_ordinals)
+	{
+	my $exported_ordinals = $exe_ordinals{$romexe};
+	my %exports;
+	expand_list(\%exports, $exported_ordinals);
+	my $namelength = length($romexe);
+	foreach my $dependent (@{$exe_dependencies{$romexe}})
+		{
+		next if (defined $deletions{$dependent});   # already 
+		
+		if ($dependent =~ /^sys.bin.(.*)$/i)
+			{
+			my $depexe = lc $1;
+			my $imports;
+			foreach my $prerequisite (@{$exe_prerequisites{$depexe}})
+				{
+				if (substr($prerequisite, 0, $namelength) eq $romexe)
+					{
+					$imports = substr($prerequisite, $namelength+1);	# skip name and "@"
+					last;
+					}
+				}
+			if (!defined $imports)
+				{
+				printf STDERR "Failed to find ordinals imported from %s by %s (in %s)\n", 
+					$romexe, $dependent, join(":",@{$exe_prerequisites{$depexe}});
+				next;
+				}
+			my $compatible = check_list(\%exports,$imports);
+			if ($compatible ne "OK")
+				{
+				$deletions{$dependent} = "$romexe $compatible";
+				# print_detail("Deleting $dependent because of slimmed $romexe ($compatible)");
+				}
+			}
+		}
+	}
+
+# process the "out" commands to recursively expand the deletions
 
 my @problems;	# list of romtrails which will be a problem
 sub delete_dependents($$$)
@@ -246,8 +351,9 @@ foreach my $romfile (@delete_cmds)
 	{
 	push @details, "", "===Deleting $romfile", "";
 
+	my $reason = $deletions{$romfile};
 	delete $deletions{$romfile}; 	# so that delete_dependents will iterate properly
-	my @delete_list = ("$romfile\tout");
+	my @delete_list = ("$romfile\t$reason");
 	while (scalar @delete_list > 0)
 		{
 		my $next_victim = shift @delete_list;
@@ -379,6 +485,7 @@ sub mark_prerequisites($)
 		}
 	foreach my $prerequisite (@{$exe_prerequisites{$exe}})
 		{
+		$prerequisite =~ s/@.*$//;	# remove any ordinal information
 		mark_prerequisites($prerequisite);
 		}
 	}
@@ -463,6 +570,7 @@ if ($deletion_details_file && scalar (@details, @problems, @deletion_roots))
 		}
 		
 	print FILE "\n====\n";
+	printf FILE "Minimum ROM now has %d exes\n", scalar keys %must_have_exes;
 	foreach my $deletion_root (sort {$b <=> $a} @deletion_roots)
 		{
 		my ($count,$exe) = split /\s+/, $deletion_root;
