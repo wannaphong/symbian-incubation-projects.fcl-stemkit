@@ -29,9 +29,10 @@ TARGETTYPE dll
 VENDORID      VID_DEFAULT
 
 UID 0x1000008D 0x101F856E
+NOEXPORTLIBRARY
 
 
-	#if defined( ARMCC )
+	#if defined( EABI )
 	deffile /sf/mw/svgt/svgtopt/SVG/SVGEngine/eabi/SVGENGINE-OpenVG.def
 	#elif defined( WINSCW )
 	deffile /sf/mw/svgt/svgtopt/SVG/SVGEngine/BWINSCW/SVGENGINE-OpenVG.def

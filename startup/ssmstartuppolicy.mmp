@@ -22,6 +22,7 @@
 TARGET          stem_ssm.state.policy.0000.dll
 TARGETTYPE      dll
 UID             0x2000D75D 0x20021346
+NOEXPORTLIBRARY
 
 CAPABILITY      PowerMgmt ReadDeviceData WriteDeviceData ProtServ DiskAdmin SwEvent
 VENDORID        VID_DEFAULT

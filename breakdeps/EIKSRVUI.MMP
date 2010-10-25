@@ -24,17 +24,12 @@
 TARGET          stem_eiksrvui.dll
 TARGETTYPE      dll
 UID             0x1000008D 0x100053D0
+NOEXPORTLIBRARY
 
 CAPABILITY      CAP_GENERAL_DLL
 VENDORID        VID_DEFAULT
 
 SOURCEPATH      /sf/mw/classicui/uifw/eikstd/srvuisrc
-
-START RESOURCE  EIKSRVUI.RSS
-HEADER
-TARGETPATH      RESOURCE_FILES_DIR
-LANGUAGE_IDS
-END
 
 USERINCLUDE     /sf/mw/classicui/uifw/eikstd/srvuisrc
 USERINCLUDE     /sf/mw/classicui/uifw/eikstd/inc
