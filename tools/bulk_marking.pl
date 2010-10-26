@@ -31,6 +31,7 @@ die("must specify a value for the Why column with the -m option") if (!defined $
 die("must specify a value for the Who column with the -u option") if (!defined $who);
 
 my %romfiles;
+my $mark_count = 0;
 my $line;
 while ($line=<>)
 	{
@@ -50,7 +51,7 @@ while ($line=<>)
 			# guess that this is a preserved filename
 			my $exe = "sys\\bin\\". lc $1;
 			$romfiles{$exe} = 1;
-			print STDERR "Preserving $exe\n";
+			# print STDERR "Preserving $exe\n";
 			}
 		next;
 		}
@@ -69,7 +70,7 @@ while ($line=<>)
 			# this is an exe - are we tagging it?
 			if (!defined $romfiles{lc $romfile})
 				{
-				print STDERR "Marking $romfile\n";
+				# print STDERR "Marking $romfile\n";
 				$mark_me = 1;
 				}
 			}
@@ -81,6 +82,7 @@ while ($line=<>)
 
 	if ($mark_me)
 		{
+		$mark_count += 1;
 		print join(",", $romfile,$hostfile,$ibyfile,$package,$newcmd,$who,$marking), "\n";
 		}
 	else
@@ -88,3 +90,5 @@ while ($line=<>)
 		print $line;
 		}
 	}
+
+print STDERR "Marked $mark_count lines\n";
