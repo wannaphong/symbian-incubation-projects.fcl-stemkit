@@ -16,11 +16,15 @@
 use strict;
 use Getopt::Long;
 
-my $marking;
+my $newcmd = "";
 my $who;
+my $marking;
+my $other_exes = 0;
 GetOptions(
+  "c|command=s" => \$newcmd,    # value for the What colum (can be blank)
   "m|message=s" => \$marking,   # comment to add to the CSV lines
   "u|user=s" => \$who,          # value for the Who column
+  "x" => \$other_exes,          # marking is applied to exes NOT listed
   );
 
 die("must specify a value for the Why column with the -m option") if (!defined $marking);
@@ -34,25 +38,53 @@ while ($line=<>)
 	if ($line =~ /^\S+\t\S+\t(\S+)/)
 		{
 		my $romfile = $1;
-		$romfiles{$romfile} = 1;
+		$romfiles{lc $romfile} = 1;
 		next;
 		}
 
 	my ($romfile,$hostfile,$ibyfile,$package,$cmd,@rest) = split /,/, $line;
-	next if (!defined $cmd);
-	
-	if (defined $romfiles{$romfile})
+	if (!defined $cmd)
 		{
-		if ($cmd eq "")
+		if ($other_exes && $line =~ /^(\S+)$/)
 			{
-			# mark this one
-			print join(",", $romfile,$hostfile,$ibyfile,$package,"",$who,$marking), "\n";
-			next;
+			# guess that this is a preserved filename
+			my $exe = "sys\\bin\\". lc $1;
+			$romfiles{$exe} = 1;
+			print STDERR "Preserving $exe\n";
 			}
-		else
+		next;
+		}
+	
+	if ($cmd ne "")
+		{
+		print $line;	# already marked, so leave it alone
+		next;
+		}
+
+	my $mark_me = 0;
+	if ($other_exes)
+		{
+		if ($romfile =~ /^sys.bin.(.*)$/i)
 			{
-			print STDERR "Skipping $romfile line - already marked as $cmd,",join(",", @rest);
+			# this is an exe - are we tagging it?
+			if (!defined $romfiles{lc $romfile})
+				{
+				print STDERR "Marking $romfile\n";
+				$mark_me = 1;
+				}
 			}
 		}
-	print $line;
+	elsif (defined $romfiles{lc $romfile})
+		{
+		$mark_me = 1;
+		}
+
+	if ($mark_me)
+		{
+		print join(",", $romfile,$hostfile,$ibyfile,$package,$newcmd,$who,$marking), "\n";
+		}
+	else
+		{
+		print $line;
+		}
 	}
