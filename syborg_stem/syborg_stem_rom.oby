@@ -392,7 +392,6 @@ REM faxio.dll
 REM faxstrm.dll
 REM faxsvr.DLL
 REM faxcli.DLL
-data=\epoc32\data\z\private\101F7988\etel.cmi 	"private\101F7988\etel.cmi"
 REM Multimode Etel
 data=\epoc32\data\Z\Private\101F7989\sms\smsu.rsc 	"private\101F7989\sms\smsu.rsc"
 data=\epoc32\data\Z\Private\101F7989\esock\smswap.Sms.esk 	"private\101F7989\esock\smswap.Sms.esk"
@@ -3373,17 +3372,20 @@ file=\epoc32\release\ARMV5\urel\DcfRep.dll 	"sys\bin\DcfRep.dll"
 file=\epoc32\release\ARMV5\urel\DcfRepSrv.EXE 	"sys\bin\DcfRepSrv.EXE"
 file=\epoc32\release\ARMV5\urel\DRMHELPERSERVER.EXE 	"sys\bin\DRMHELPERSERVER.EXE"
 file=\epoc32\release\ARMV5\urel\DrmKeyStorage.dll 	"sys\bin\DrmKeyStorage.dll"
+file=\epoc32\release\ARMV5\urel\stem_DrmStdKeyStorage.dll 	"sys\bin\DrmStdKeyStorage.dll"
 file=\epoc32\release\ARMV5\urel\DrmCrypto.DLL 	"sys\bin\DrmCrypto.DLL"
 file=\epoc32\release\ARMV5\urel\DrmDcf.DLL 	"sys\bin\DrmDcf.DLL"
 file=\epoc32\release\ARMV5\urel\DrmRights.DLL 	"sys\bin\DrmRights.DLL"
 file=\epoc32\release\ARMV5\urel\DrmServerInterfaces.DLL 	"sys\bin\DrmServerInterfaces.DLL"
 file=\epoc32\release\ARMV5\urel\DrmParsers.DLL 	"sys\bin\DrmParsers.DLL"
+file=\epoc32\release\ARMV5\urel\stem_RightsServer.EXE 	"sys\bin\RightsServer.EXE"
 file=\epoc32\release\ARMV5\urel\DrmServiceAPI.dll 	"sys\bin\DrmServiceAPI.dll"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, RECDRM.DLL , RECDRM.DLL ) 
 data=\epoc32\data\Z\private\102073ea\excludes\101F51F2.exc 	"private\102073ea\excludes\101F51F2.exc"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, OmaDrmAgent.dll , OmaDrmAgent.dll ) 
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, DrmRel1_0StringDict00.dll , DrmRel1_0StringDict00.dll ) 
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, DrmRel2_1StringDict00.dll , DrmRel2_1StringDict00.dll ) 
+file=\epoc32\release\ARMV5\urel\stem_RoapHandler.DLL 	"sys\bin\RoapHandler.DLL"
 __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, HTTPFilterDRM.dll , HTTPFilterDRM.dll ) 
 data=\epoc32\data\Z\Private\101F51F2\backup_registration.xml 	"PRIVATE\101F51F2\backup_registration.xml"
 data=\epoc32\data\Z\System\Install\OmaDrm_Stub.SIS 	"system\install\OmaDrm_Stub.SIS"
@@ -4104,6 +4106,7 @@ __ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins
 file=\epoc32\release\ARMV5\urel\ROMTMCLI.DLL 	"sys\bin\ROMTMCLI.DLL"
 file=\epoc32\release\ARMV5\urel\ROMTMDAT.DLL 	"sys\bin\ROMTMDAT.DLL"
 file=\epoc32\release\ARMV5\urel\ROMTMSER.DLL 	"sys\bin\ROMTMSER.DLL"
+file=\epoc32\release\ARMV5\urel\ROMTMUI.DLL 	"sys\bin\ROMTMUI.DLL"
 data=\epoc32\data\Z\resource\messaging\mtm\ROMTMREG.rsc 	"resource\messaging\mtm\ROMTMREG.rsc"
 file=\epoc32\release\ARMV5\urel\rsfwcontrol.dll 	"sys\bin\rsfwcontrol.dll"
 file=\epoc32\release\ARMV5\urel\rsfwmountman.dll 	"sys\bin\rsfwmountman.dll" 

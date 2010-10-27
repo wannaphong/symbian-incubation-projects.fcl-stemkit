@@ -249,7 +249,7 @@ private\101F7988\esock_mip.cmi,/epoc32/data/z/private/101f7988/esock_mip.cmi,eso
 private\101F7988\esock_sip.cmi,/epoc32/data/z/private/101f7988/esock_sip.cmi,sipproviders.iby,mw/ipappprotocols,,,
 private\101F7988\esock_smswap.cmi,/epoc32/data/z/private/101f7988/esock_smswap.cmi,esock.iby,os/commsfw,,,
 private\101F7988\esock_tr.cmi,/epoc32/data/z/private/101f7988/esock_tr.cmi,esock.iby,os/commsfw,,,
-private\101F7988\etel.cmi,/epoc32/data/z/private/101f7988/etel.cmi,etel.iby,os/cellularsrv,,,
+private\101F7988\etel.cmi,/epoc32/data/z/private/101f7988/etel.cmi,etel.iby,os/cellularsrv,out,TomP,Must remove this when you remove etel.dll
 private\101F7989\backup_registration.xml,/epoc32/data/z/private/101f7989/backup_registration.xml,esock_core.iby,os/commsfw,,,
 Private\101F7989\Bluetooth\bluetooth_stack.ini,/epoc32/data/z/private/101f7989/bluetooth/bluetooth_stack.ini,bluetooth.iby,os/bt,,,
 Private\101F7989\Bluetooth\cmdq.ini,/epoc32/data/z/private/101f7989/bluetooth/cmdq.ini,hci_framework.iby,os/bt,,,
@@ -3396,7 +3396,7 @@ sys\bin\DrmServerInterfaces.DLL,/epoc32/release/armv5/urel/drmserverinterfaces.d
 sys\bin\DrmServiceAPI.dll,/epoc32/release/armv5/urel/drmserviceapi.dll,core/mw/drm5.iby,mw/drm,,,
 sys\bin\drmserviceapiwrapper.dll,/epoc32/release/armv5/urel/drmserviceapiwrapper.dll,core/mw/drmserviceapiwrapper.iby,mw/drm,,,
 Sys\Bin\drmsettingsplugin.dll,/epoc32/release/armv5/urel/drmsettingsplugin.dll,core/mw/drmsettingsplugin.iby,mw/drm,,,
-sys\bin\DrmStdKeyStorage.dll,/epoc32/release/armv5/urel/drmstdkeystorage.dll,core/mw/drm5.iby,mw/drm,,,
+sys\bin\DrmStdKeyStorage.dll,/epoc32/release/armv5/urel/drmstdkeystorage.dll,core/mw/drm5.iby,mw/drm,stem,TomP,Break dependence on etel.dll
 Sys\Bin\DRMstringdict00.dll,/epoc32/release/armv5/urel/drmstringdict00.dll,rohandler.iby,mw/messagingmw,,,
 sys\bin\DRMUiHandling.dll,/epoc32/release/armv5/urel/drmuihandling.dll,core/mw/drmutility.iby,mw/drm,,,
 sys\bin\DRMUiHandlingImpl.dll,/epoc32/release/armv5/urel/drmuihandlingimpl.dll,core/mw/drmutility.iby,mw/drm,,,
@@ -5173,7 +5173,7 @@ Sys\Bin\RfsMsgStorePlugin.dll,/epoc32/release/armv5/urel/rfsmsgstoreplugin.dll,c
 sys\bin\RfsServer.exe,/epoc32/release/armv5/urel/rfsserver.exe,core/mw/rfs.iby,mw/appsupport,,,
 sys\bin\rfstatusswppolicy.dll,/epoc32/release/armv5/urel/rfstatusswppolicy.dll,core/os/ssmcompatibility.iby,os/devicesrv,,,
 sys\bin\richBio.dll,/epoc32/release/armv5/urel/richbio.dll,core/app/Richbio.iby,app/messaging,,,
-sys\bin\RightsServer.EXE,/epoc32/release/armv5/urel/rightsserver.exe,core/mw/drm5.iby,mw/drm,,,
+sys\bin\RightsServer.EXE,/epoc32/release/armv5/urel/rightsserver.exe,core/mw/drm5.iby,mw/drm,stem,TomP,Break dependence on etel.dll
 sys\bin\RingBC.dll,/epoc32/release/armv5/urel/ringbc.dll,core/app/RingBC.iby,app/messaging,,,
 sys\bin\RLock.exe,/epoc32/release/armv5/urel/rlock.exe,core/mw/RemoteLock.iby,mw/securitysrv,,,
 sys\bin\RLockSettings.dll,/epoc32/release/armv5/urel/rlocksettings.dll,core/mw/RemoteLock.iby,mw/securitysrv,,,
@@ -5181,7 +5181,7 @@ sys\bin\rlspresxdm.dll,/epoc32/release/armv5/urel/rlspresxdm.dll,core/mw/simplee
 sys\bin\rm_debug.ldd,/epoc32/release/armv5/urel/rm_debug.ldd,rm_debug_svr.iby,os/kernelhwsrv,,,
 sys\bin\rm_debug_svr.exe,/epoc32/release/armv5/urel/rm_debug_svr.exe,rm_debug_svr.iby,os/kernelhwsrv,,,
 sys\bin\RoapApp.exe,/epoc32/release/armv5/urel/roapapp.exe,core/mw/CodHandler.iby,mw/web,,WR,application
-sys\bin\RoapHandler.DLL,/epoc32/release/armv5/urel/roaphandler.dll,core/mw/drm5.iby,mw/drm,,,
+sys\bin\RoapHandler.DLL,/epoc32/release/armv5/urel/roaphandler.dll,core/mw/drm5.iby,mw/drm,stem,TomP,Break dependence on etel.dll
 Sys\Bin\roapphandler.dll,/epoc32/release/armv5/urel/roapphandler.dll,rohandler.iby,mw/messagingmw,,,
 Sys\Bin\roaptcontenthandler.dll,/epoc32/release/armv5/urel/roaptcontenthandler.dll,rohandler.iby,mw/messagingmw,,,
 Sys\Bin\rocontenthandler.dll,/epoc32/release/armv5/urel/rocontenthandler.dll,rohandler.iby,mw/messagingmw,,,

@@ -91,7 +91,7 @@ void CDRMClock::ConstructL()
     // Create a notifier instance
     iNotifier = CDRMNotifier::NewL();
         
-#ifndef __WINS__
+#if 0 //ndef __WINS__
     ConnectToPhoneL();            
             
     iObserver = CDRMNitzObserver::NewL( iPhone, const_cast<CDRMClock*>(this));
@@ -155,7 +155,7 @@ CDRMClock::~CDRMClock()
         iNotifier = 0;
         }
         
-#ifndef __WINS__
+#if 0 //ndef __WINS__
     if(iObserver)            
         {
         iObserver->Cancel();
@@ -353,7 +353,7 @@ void CDRMClock::Notify( TInt aNotify )
 void CDRMClock::ConnectToPhoneL()
     {
     DRMLOG( _L( "CDRMClock::ConnectToPhoneL" ) );
-    
+#if 0    
     const TInt KTriesToConnectServer(10);
     const TInt KTimeBeforeRetryingServerConnection(100000);
     TInt thisTry(0);
@@ -390,8 +390,9 @@ void CDRMClock::ConnectToPhoneL()
     
     iPhone.GetSubscriberId( status, imsi );
     User::WaitForRequest( status );
-    
+	
     DRMLOG( imsi );    
+ #endif   
     DRMLOG( _L( "CDRMClock::ConnectToPhoneL ok" ) );
     };
 

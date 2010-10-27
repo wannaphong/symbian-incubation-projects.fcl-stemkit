@@ -18,7 +18,7 @@
 
 #include <platform_paths.hrh>
 
-TARGET          RightsServer.exe
+TARGET          stem_RightsServer.exe
 TARGETTYPE      EXE
 
 UID             0x1000008d 0x101F51F2
@@ -30,23 +30,27 @@ MW_LAYER_SYSTEMINCLUDE
 SYSTEMINCLUDE   /epoc32/include/libc
 SYSTEMINCLUDE   /epoc32/include/connect
 
-USERINCLUDE     ../server/inc
-USERINCLUDE     ../agentv2/inc
-USERINCLUDE     ../ro/inc
-USERINCLUDE     ../dcf/inc
-USERINCLUDE     ../notifier/inc
-USERINCLUDE     ../utils/inc
-USERINCLUDE     ../roap/inc
-USERINCLUDE     ../roapstorage/inc
-USERINCLUDE     ../drmclock/Inc
-USERINCLUDE     ../keystorage/inc
-USERINCLUDE     ../drmbackup/inc
-USERINCLUDE     ../../../inc   // ADo level inc dir
+USERINCLUDE		./
+USERINCLUDE     /sf/mw/drm/omadrm/drmengine/server/inc
+USERINCLUDE     /sf/mw/drm/omadrm/drmengine/agentv2/inc
+USERINCLUDE     /sf/mw/drm/omadrm/drmengine/ro/inc
+USERINCLUDE     /sf/mw/drm/omadrm/drmengine/dcf/inc
+USERINCLUDE     /sf/mw/drm/omadrm/drmengine/notifier/inc
+USERINCLUDE     /sf/mw/drm/omadrm/drmengine/utils/inc
+USERINCLUDE     /sf/mw/drm/omadrm/drmengine/roap/inc
+USERINCLUDE     /sf/mw/drm/omadrm/drmengine/roapstorage/inc
+USERINCLUDE     /sf/mw/drm/omadrm/drmengine/drmclock/Inc
+USERINCLUDE     /sf/mw/drm/omadrm/drmengine/keystorage/inc
+USERINCLUDE     /sf/mw/drm/omadrm/drmengine/drmbackup/inc
+USERINCLUDE     /sf/mw/drm/omadrm/drmengine/../../inc   // ADo level inc dir
 
-SOURCEPATH      ../server/src
+SOURCEPATH		./
+SOURCE          DRMRightsServer.cpp
+SOURCE          DRMClock.cpp
+
+SOURCEPATH      /sf/mw/drm/omadrm/drmengine/server/src
 
 // DRM Engine (server side)
-SOURCE          DRMRightsServer.cpp
 SOURCE          DRMDbSession.cpp
 // SOURCE       drmpermissionlist.cpp
 SOURCE          drmparentstorage.cpp
@@ -70,19 +74,19 @@ SOURCE          drmmeteringdbdata.cpp
 SOURCE          drmmeteringdb.cpp
 
 // DRM Backup implementation
-SOURCEPATH      ../drmbackup/src
+SOURCEPATH      /sf/mw/drm/omadrm/drmengine/drmbackup/src
 SOURCE          DRMBackup.cpp
 SOURCE          DRMBackupObserver.cpp
 
 // DRM Notifier
-SOURCEPATH      ../notifier/src
+SOURCEPATH      /sf/mw/drm/omadrm/drmengine/notifier/src
 
 SOURCE          DRMMessageStorage.cpp
 SOURCE          DRMNotifierServer.cpp
 SOURCE          DRMNotifierSession.cpp
 
 // RoapStorage
-SOURCEPATH      ../roapstorage/src
+SOURCEPATH      /sf/mw/drm/omadrm/drmengine/roapstorage/src
 
 SOURCE          RoapStorageClient.cpp
 SOURCE          RoapStorageServer.cpp
@@ -97,24 +101,23 @@ SOURCE          certid.cpp
 
 // DRM Clock
 #ifdef __DRM_CLOCK
-SOURCEPATH      ../drmclock/Src
-SOURCE          DRMClock.cpp
+SOURCEPATH      /sf/mw/drm/omadrm/drmengine/drmclock/Src
 SOURCE          DRMClockServer.cpp
 SOURCE          DRMClockSession.cpp
 
-SOURCE          DRMNitzObserver.cpp
+//SOURCE          DRMNitzObserver.cpp
 SOURCE          GPSWatcher.cpp
 SOURCE          GPSTimeUpdater.cpp
 
 #else
 #ifdef __DRM_OMA2
-SOURCEPATH      ../DRMClock/src
+SOURCEPATH      /sf/mw/drm/omadrm/drmengine/DRMClock/src
 SOURCE          OMA2NotSupportedWithoutDRMClock:define__DRM_CLOCKvariation.cpp
 #endif // __DRM_OMA2
 #endif // __DRM_CLOCK
 
 // RDB and Process Watcher
-SOURCEPATH      ../utils/src
+SOURCEPATH      /sf/mw/drm/omadrm/drmengine/utils/src
 SOURCE          dbwatcher.cpp
 SOURCE          dirwatcher.cpp
 SOURCE          procwatcher.cpp
@@ -136,8 +139,8 @@ LIBRARY         drmcrypto.lib
 LIBRARY         drmkeystorage.lib
 LIBRARY         edbms.lib
 LIBRARY         bafl.lib
-LIBRARY         etel.lib
-LIBRARY         etelmm.lib
+//LIBRARY         etel.lib
+//LIBRARY         etelmm.lib
 LIBRARY         abclient.lib
 LIBRARY         charconv.lib
 LIBRARY         dcfrep.lib
@@ -171,17 +174,17 @@ LIBRARY         etel.lib
 // Uncomment the following lines to enable internal logging.
 /*
 macro _DRM_TESTING
-USERINCLUDE     ../internal/tsrc_internal
-SOURCEPATH      ../internal/tsrc_internal
+USERINCLUDE     /sf/mw/drm/omadrm/drmengine/internal/tsrc_internal
+SOURCEPATH      /sf/mw/drm/omadrm/drmengine/internal/tsrc_internal
 LIBRARY         drmdebugtools.lib
 LIBRARY         HAL.lib
 LIBRARY         charconv.lib
 */
 
 #if defined( WINSCW )
-deffile ../bwinscw/
+deffile /sf/mw/drm/omadrm/drmengine/bwinscw/RightsServer.def
 #elif defined( WINS )
-deffile ../bwins/
+deffile /sf/mw/drm/omadrm/drmengine/bwins/RightsServer.def
 #endif
 
 //SMPSAFE

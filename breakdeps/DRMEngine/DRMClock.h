@@ -25,7 +25,7 @@
 #include <e32std.h>
 #include <e32def.h>		// Type definitions
 #include <bacntf.h>
-#include <etelmm.h>
+//#include <etelmm.h>
 #include <DRMTypes.h>
 #include <e32property.h>
 
@@ -157,11 +157,13 @@ NONSHARABLE_CLASS( CDRMClock )
         // Variables
         CDRMNotifier* iNotifier;   
         
-        // Nitz information handles      
+        // Nitz information handles   
+#if 0		
         RTelServer iEtelServer;
         RMobilePhone iPhone;
         CDRMNitzObserver* iObserver;
-        
+#endif        
+
         // GPS watcher component, updates DRM time from GPS if available
         CGPSWatcher* iGpsWatcher;
     };
