@@ -1,0 +1,187 @@
+/*
+* Copyright (c) 2003-2008 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  Makefile of DRM Engine & DRM Rights Database
+*
+*/
+
+
+#include <platform_paths.hrh>
+
+TARGET          RightsServer.exe
+TARGETTYPE      EXE
+
+UID             0x1000008d 0x101F51F2
+CAPABILITY      CAP_SERVER DRM CommDD ProtServ PowerMgmt Location
+VENDORID        VID_DEFAULT
+
+// Default system include paths for middleware layer modules.
+MW_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE   /epoc32/include/libc
+SYSTEMINCLUDE   /epoc32/include/connect
+
+USERINCLUDE     ../server/inc
+USERINCLUDE     ../agentv2/inc
+USERINCLUDE     ../ro/inc
+USERINCLUDE     ../dcf/inc
+USERINCLUDE     ../notifier/inc
+USERINCLUDE     ../utils/inc
+USERINCLUDE     ../roap/inc
+USERINCLUDE     ../roapstorage/inc
+USERINCLUDE     ../drmclock/Inc
+USERINCLUDE     ../keystorage/inc
+USERINCLUDE     ../drmbackup/inc
+USERINCLUDE     ../../../inc   // ADo level inc dir
+
+SOURCEPATH      ../server/src
+
+// DRM Engine (server side)
+SOURCE          DRMRightsServer.cpp
+SOURCE          DRMDbSession.cpp
+// SOURCE       drmpermissionlist.cpp
+SOURCE          drmparentstorage.cpp
+// SOURCE       drmpermissionitem.cpp
+SOURCE          DRMReplayCache.cpp
+SOURCE          DRMXOma.cpp
+SOURCE          DRMActiveOperation.cpp
+SOURCE          DRMObsoleteFinder.cpp
+SOURCE          drmconsume.cpp
+
+// DRM Rights Database
+SOURCE          drmrightsdb.cpp
+SOURCE          DRMRightsData.cpp
+SOURCE          DRMCommonData.cpp
+SOURCE          DRMRightsCleaner.cpp
+
+// DRM Metering
+#ifdef RD_DRM_METERING
+SOURCE          drmmeteringdbdata.cpp
+#endif
+SOURCE          drmmeteringdb.cpp
+
+// DRM Backup implementation
+SOURCEPATH      ../drmbackup/src
+SOURCE          DRMBackup.cpp
+SOURCE          DRMBackupObserver.cpp
+
+// DRM Notifier
+SOURCEPATH      ../notifier/src
+
+SOURCE          DRMMessageStorage.cpp
+SOURCE          DRMNotifierServer.cpp
+SOURCE          DRMNotifierSession.cpp
+
+// RoapStorage
+SOURCEPATH      ../roapstorage/src
+
+SOURCE          RoapStorageClient.cpp
+SOURCE          RoapStorageServer.cpp
+SOURCE          RoapStorageSession.cpp
+SOURCE          DRMContextDB.cpp
+// OCSP cert classes
+SOURCE          responsedecoder.cpp
+SOURCE          response.cpp
+SOURCE          responsecertinfo.cpp
+SOURCE          certid.cpp
+
+
+// DRM Clock
+#ifdef __DRM_CLOCK
+SOURCEPATH      ../drmclock/Src
+SOURCE          DRMClock.cpp
+SOURCE          DRMClockServer.cpp
+SOURCE          DRMClockSession.cpp
+
+SOURCE          DRMNitzObserver.cpp
+SOURCE          GPSWatcher.cpp
+SOURCE          GPSTimeUpdater.cpp
+
+#else
+#ifdef __DRM_OMA2
+SOURCEPATH      ../DRMClock/src
+SOURCE          OMA2NotSupportedWithoutDRMClock:define__DRM_CLOCKvariation.cpp
+#endif // __DRM_OMA2
+#endif // __DRM_CLOCK
+
+// RDB and Process Watcher
+SOURCEPATH      ../utils/src
+SOURCE          dbwatcher.cpp
+SOURCE          dirwatcher.cpp
+SOURCE          procwatcher.cpp
+
+LIBRARY         drmdcf.lib
+LIBRARY         drmrights.lib
+LIBRARY         drmserverinterfaces.lib
+LIBRARY         euser.lib
+LIBRARY         estor.lib
+LIBRARY         efsrv.lib
+LIBRARY         hash.lib
+LIBRARY         cryptography.lib
+LIBRARY         crypto.lib
+LIBRARY         asn1.lib
+LIBRARY         x509.lib
+LIBRARY         x500.lib
+LIBRARY         pkixcert.lib
+LIBRARY         drmcrypto.lib
+LIBRARY         drmkeystorage.lib
+LIBRARY         edbms.lib
+LIBRARY         bafl.lib
+LIBRARY         etel.lib
+LIBRARY         etelmm.lib
+LIBRARY         abclient.lib
+LIBRARY         charconv.lib
+LIBRARY         dcfrep.lib
+LIBRARY         drmparsers.lib              // DRM message parser for RO import
+LIBRARY         centralrepository.lib       // Browser default AP
+LIBRARY         InetProtUtil.lib            // URI parser
+LIBRARY         flogger.lib
+LIBRARY         featmgr.lib                 // Feature Manager
+LIBRARY         wmdrmfileserverclient.lib
+LIBRARY         lbs.lib                     // GPS libraries
+LIBRARY         eposindicator.lib           // GPS positioner indicator lib
+#ifdef RD_DRM_METERING
+LIBRARY         random.lib
+#endif
+
+LIBRARY StarterClient.lib // reset
+
+#ifdef RD_MULTIPLE_DRIVE
+LIBRARY         platformenv.lib
+#endif
+
+LIBRARY         SysUtil.lib
+// LIBRARY      commonengine.lib // Backup
+
+/*
+#if !defined(WINS)
+MACRO           DRM_USE_SERIALNUMBER
+LIBRARY         etel.lib
+#endif
+*/
+// Uncomment the following lines to enable internal logging.
+/*
+macro _DRM_TESTING
+USERINCLUDE     ../internal/tsrc_internal
+SOURCEPATH      ../internal/tsrc_internal
+LIBRARY         drmdebugtools.lib
+LIBRARY         HAL.lib
+LIBRARY         charconv.lib
+*/
+
+#if defined( WINSCW )
+deffile ../bwinscw/
+#elif defined( WINS )
+deffile ../bwins/
+#endif
+
+//SMPSAFE
