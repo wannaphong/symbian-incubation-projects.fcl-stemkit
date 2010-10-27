@@ -17,7 +17,9 @@
 */
 
 PRJ_PLATFORMS
-DEFAULT
+ARMV5			
+// no tools
+// Don't build WINSCW because the system startup uses all of the resource files it can find!
 
 PRJ_MMPFILES
 
