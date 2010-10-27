@@ -1,0 +1,141 @@
+/*
+* Copyright (c) 2004-2008 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  ROAP Handler build configuration
+*
+*/
+
+
+#include <platform_paths.hrh>
+#include <data_caging_paths.hrh>
+
+TARGET          ROAPHandler.dll
+TARGETTYPE      DLL
+UID             0x1000008D 0x101F6DB5
+CAPABILITY      CAP_GENERAL_DLL DRM
+VENDORID        VID_DEFAULT
+
+USERINCLUDE     ../dcf/inc
+USERINCLUDE     ../dm/inc
+USERINCLUDE     ../agentv2/inc
+USERINCLUDE     ../ro/inc
+USERINCLUDE     ../roap/inc
+USERINCLUDE     ../utils/inc
+USERINCLUDE     ../server/inc
+USERINCLUDE     ../roapstorage/inc
+USERINCLUDE     ../drmclock/Inc
+USERINCLUDE     ../dcfrepository/client/inc
+USERINCLUDE     ../../../inc   // ADo level inc dir
+
+// Default system include paths for middleware layer modules.
+APP_LAYER_SYSTEMINCLUDE
+SYSTEMINCLUDE   /epoc32/include/libc
+SYSTEMINCLUDE   /epoc32/include/ecom
+
+SOURCEPATH  ../roap/src
+
+SOURCE      RoapEngBase.cpp
+SOURCE      RoapEng.cpp
+SOURCE      RoapTrigger.cpp
+SOURCE      RoapHttpHandler.cpp
+SOURCE      RoapConnection.cpp
+SOURCE      RoapResponse.cpp
+SOURCE      RoapSyncWrapper.cpp
+
+SOURCE      RoapSigner.cpp
+
+SOURCE      RoapParser.cpp
+SOURCE      JoinDomainRespParser.cpp
+SOURCE      LeaveDomainRespParser.cpp
+SOURCE      RegistrationRespParser.cpp
+SOURCE      RightsRespParser.cpp
+SOURCE      RIHelloParser.cpp
+SOURCE      RoapTriggerParser.cpp
+
+SOURCE      RoapMessage.cpp
+SOURCE      DeviceHello.cpp
+SOURCE      RIHello.cpp
+SOURCE      RegistrationReq.cpp
+SOURCE      RegistrationResp.cpp
+SOURCE      RightsReq.cpp
+SOURCE      RightsResp.cpp
+SOURCE      JoinDomainReq.cpp
+SOURCE      JoinDomainResp.cpp
+SOURCE      LeaveDomainReq.cpp
+SOURCE      LeaveDomainResp.cpp
+
+#ifdef RD_DRM_METERING
+SOURCE      MeteringReportReq.cpp
+SOURCE      MeteringReportResp.cpp
+SOURCE      MeteringReportRespParser.cpp
+#endif
+
+SOURCEPATH  ../utils/src
+SOURCE      MultipartHandler.cpp
+
+LIBRARY     euser.lib
+LIBRARY     estor.lib
+LIBRARY     efsrv.lib
+LIBRARY     commdb.lib
+LIBRARY     bafl.lib
+LIBRARY     esock.lib
+LIBRARY     http.lib
+LIBRARY     inetprotutil.lib
+LIBRARY     XmlFramework.lib
+LIBRARY     apmime.lib
+LIBRARY     asn1.lib
+LIBRARY     cryptography.lib
+LIBRARY     crypto.lib
+LIBRARY     ecom.lib
+LIBRARY     x509.lib
+LIBRARY     x500.lib
+LIBRARY     pkixcert.lib
+LIBRARY     random.lib
+LIBRARY     hash.lib
+LIBRARY     etel.lib
+LIBRARY     etelmm.lib
+LIBRARY     CharConv.lib
+LIBRARY     drmcrypto.lib
+LIBRARY     DrmParsers.lib
+LIBRARY     DrmDcf.lib
+LIBRARY     DrmRights.lib
+LIBRARY     DrmServerInterfaces.lib
+LIBRARY     DcfRep.lib
+LIBRARY     caf.lib                     // Embedding domain ROs
+LIBRARY     cafutils.lib                // Embedding domain ROs
+LIBRARY     centralrepository.lib       // Browser default AP
+LIBRARY     cmmanager.lib
+LIBRARY	    featmgr.lib
+
+LIBRARY     SysUtil.lib
+LIBRARY     HttpFilterCommon.lib
+LIBRARY     CommonUI.lib
+LIBRARY     PlatformEnv.lib
+LIBRARY     drmroapwbxmlparser.lib
+
+
+// Uncomment the following lines to enable internal logging.
+macro      _ROAP_TESTING
+LIBRARY    flogger.lib
+
+#if defined(ARMCC)
+deffile ../eabi/
+#elif defined( WINSCW )
+deffile ../bwinscw/
+#elif defined( WINS )
+deffile ../bwins/
+#else
+deffile ../bmarm/
+#endif
+
+SMPSAFE

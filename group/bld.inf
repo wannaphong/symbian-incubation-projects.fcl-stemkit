@@ -40,3 +40,8 @@ PRJ_MMPFILES
 // Rebuild the "original" TimeZone localisation resources as they're eclipsed by something else in the PDK
 /sf/mw/appsupport/tzservices/tzlocrscfactory/group/TzLocalizationRscFactory.mmp
 
+// based on /sf/mw/drm
+../breakdeps/DRMEngine/ROAPHandler.mmp
+../breakdeps/DRMEngine/RightsServer.mmp
+../breakdeps/DRMEngine/DrmStdKeyStorage.mmp
+
