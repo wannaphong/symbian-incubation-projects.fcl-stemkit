@@ -2159,7 +2159,7 @@ void CRoapEng::GetDeviceDetailsL(
     {
     LOGLIT( "-> CRoapEng::GetDeviceDetailsL" )
 
-#ifndef __WINS__
+#if 0
     TInt numPhone = 0;
     TUint32 caps = 0;
     TName tsyName;

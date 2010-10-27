@@ -18,22 +18,22 @@
 
 #include <platform_paths.hrh>
 
-TARGET          DrmStdKeyStorage.dll
+TARGET          stem_DrmStdKeyStorage.dll
 TARGETTYPE      DLL
 UID             0x1000008D 0x10205CAF
 CAPABILITY      CAP_GENERAL_DLL DRM CommDD
 VENDORID        VID_DEFAULT
 
-USERINCLUDE     ../keystorage/inc
-USERINCLUDE     ../utils/inc
-USERINCLUDE	    ../../../inc   // ADo level inc dir
+USERINCLUDE     /sf/mw/drm/omadrm/drmengine/keystorage/inc
+USERINCLUDE     /sf/mw/drm/omadrm/drmengine/utils/inc
+USERINCLUDE	    /sf/mw/drm/omadrm/drmengine/../../inc   // ADo level inc dir
 
 // Default system include paths for middleware layer modules.
 MW_LAYER_SYSTEMINCLUDE
 SYSTEMINCLUDE   /epoc32/include/libc
 SYSTEMINCLUDE   /epoc32/include/ecom
 
-SOURCEPATH      ../keystorage/src
+SOURCEPATH      ./
 SOURCE          DrmStdKeyStorage.cpp
 
 LIBRARY         euser.lib
@@ -46,8 +46,8 @@ LIBRARY         x509.lib
 LIBRARY         pkixcert.lib
 LIBRARY         random.lib
 LIBRARY         hash.lib
-LIBRARY         etel.lib
-LIBRARY	        etelmm.lib
+//LIBRARY         etel.lib
+//LIBRARY	        etelmm.lib
 LIBRARY         flogger.lib
 LIBRARY		featmgr.lib
 
@@ -56,13 +56,13 @@ LIBRARY       platformenv.lib
 #endif
 
 #if defined(ARMCC)
-deffile ../eabi/ 
+deffile /sf/mw/drm/omadrm/drmengine/eabi/DrmStdKeyStorage.def
 #elif defined( WINSCW )
-deffile ../bwinscw/ 
+deffile /sf/mw/drm/omadrm/drmengine/bwinscw/DrmStdKeyStorage.def
 #elif defined( WINS )
-deffile ../bwins/ 
+deffile /sf/mw/drm/omadrm/drmengine/bwins/DrmStdKeyStorage.def
 #else
-deffile ../bmarm/ 
+deffile /sf/mw/drm/omadrm/drmengine/bmarm/DrmStdKeyStorage.def
 #endif
 
 SMPSAFE

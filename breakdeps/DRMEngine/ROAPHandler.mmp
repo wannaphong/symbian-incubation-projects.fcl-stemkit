@@ -19,33 +19,35 @@
 #include <platform_paths.hrh>
 #include <data_caging_paths.hrh>
 
-TARGET          ROAPHandler.dll
+TARGET          stem_ROAPHandler.dll
 TARGETTYPE      DLL
 UID             0x1000008D 0x101F6DB5
 CAPABILITY      CAP_GENERAL_DLL DRM
 VENDORID        VID_DEFAULT
 
-USERINCLUDE     ../dcf/inc
-USERINCLUDE     ../dm/inc
-USERINCLUDE     ../agentv2/inc
-USERINCLUDE     ../ro/inc
-USERINCLUDE     ../roap/inc
-USERINCLUDE     ../utils/inc
-USERINCLUDE     ../server/inc
-USERINCLUDE     ../roapstorage/inc
-USERINCLUDE     ../drmclock/Inc
-USERINCLUDE     ../dcfrepository/client/inc
-USERINCLUDE     ../../../inc   // ADo level inc dir
+USERINCLUDE     /sf/mw/drm/omadrm/drmengine/dcf/inc
+USERINCLUDE     /sf/mw/drm/omadrm/drmengine/dm/inc
+USERINCLUDE     /sf/mw/drm/omadrm/drmengine/agentv2/inc
+USERINCLUDE     /sf/mw/drm/omadrm/drmengine/ro/inc
+USERINCLUDE     /sf/mw/drm/omadrm/drmengine/roap/inc
+USERINCLUDE     /sf/mw/drm/omadrm/drmengine/utils/inc
+USERINCLUDE     /sf/mw/drm/omadrm/drmengine/server/inc
+USERINCLUDE     /sf/mw/drm/omadrm/drmengine/roapstorage/inc
+USERINCLUDE     /sf/mw/drm/omadrm/drmengine/drmclock/Inc
+USERINCLUDE     /sf/mw/drm/omadrm/drmengine/dcfrepository/client/inc
+USERINCLUDE     /sf/mw/drm/omadrm/drmengine/../../inc   // ADo level inc dir
 
 // Default system include paths for middleware layer modules.
 APP_LAYER_SYSTEMINCLUDE
 SYSTEMINCLUDE   /epoc32/include/libc
 SYSTEMINCLUDE   /epoc32/include/ecom
 
-SOURCEPATH  ../roap/src
+SOURCEPATH  ./
+SOURCE      RoapEng.cpp
+
+SOURCEPATH  /sf/mw/drm/omadrm/drmengine/roap/src
 
 SOURCE      RoapEngBase.cpp
-SOURCE      RoapEng.cpp
 SOURCE      RoapTrigger.cpp
 SOURCE      RoapHttpHandler.cpp
 SOURCE      RoapConnection.cpp
@@ -80,7 +82,7 @@ SOURCE      MeteringReportResp.cpp
 SOURCE      MeteringReportRespParser.cpp
 #endif
 
-SOURCEPATH  ../utils/src
+SOURCEPATH  /sf/mw/drm/omadrm/drmengine/utils/src
 SOURCE      MultipartHandler.cpp
 
 LIBRARY     euser.lib
@@ -102,8 +104,8 @@ LIBRARY     x500.lib
 LIBRARY     pkixcert.lib
 LIBRARY     random.lib
 LIBRARY     hash.lib
-LIBRARY     etel.lib
-LIBRARY     etelmm.lib
+//LIBRARY     etel.lib
+//LIBRARY     etelmm.lib
 LIBRARY     CharConv.lib
 LIBRARY     drmcrypto.lib
 LIBRARY     DrmParsers.lib
@@ -129,13 +131,13 @@ macro      _ROAP_TESTING
 LIBRARY    flogger.lib
 
 #if defined(ARMCC)
-deffile ../eabi/
+deffile /sf/mw/drm/omadrm/drmengine/eabi/ROAPHandler.def
 #elif defined( WINSCW )
-deffile ../bwinscw/
+deffile /sf/mw/drm/omadrm/drmengine/bwinscw/ROAPHandler.def
 #elif defined( WINS )
-deffile ../bwins/
+deffile /sf/mw/drm/omadrm/drmengine/bwins/ROAPHandler.def
 #else
-deffile ../bmarm/
+deffile /sf/mw/drm/omadrm/drmengine/bmarm/ROAPHandler.def
 #endif
 
 SMPSAFE

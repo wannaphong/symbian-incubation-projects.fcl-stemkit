@@ -164,8 +164,10 @@ RInteger OS2IPL(
 void DoUnloadPhoneModule( TAny* aAny )
     {
     __ASSERT_DEBUG( aAny, User::Invariant() );
+#if 0
     TUnloadModule* module = ( TUnloadModule* ) aAny;
     module->iServer->UnloadPhoneModule( *( module->iName ) );
+#endif
     }
 
 
@@ -1063,7 +1065,7 @@ const TDesC& CDrmStdKeyStorage::GetImeiL()
         return *iImei;
         }
 
-#if (defined __WINS__ || defined WINSCW)
+#if 1// (defined __WINS__ || defined WINSCW)
     // Default IMEI used for emulator
     _LIT( KDefaultSerialNumber, "123456789123456789" );
     iImei = KDefaultSerialNumber().AllocL();

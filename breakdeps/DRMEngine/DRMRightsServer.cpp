@@ -136,7 +136,7 @@ LOCAL_C TInt Startup( void );
 LOCAL_C void SignalClient();
 LOCAL_C TInt StartDBServer( void );
 
-#if defined( __WINS__ )
+#if 1 //defined( __WINS__ )
 #else
 #define DRM_USE_SERIALNUMBER_URI
 #include <mmtsy_names.h>
@@ -818,6 +818,7 @@ void CDRMRightsServer::GetDbKeyL( TDRMKey& aKey  )
     MDrmKeyStorage* storage = DrmKeyStorageNewL();
     TRAP( r, storage->GetDeviceSpecificKeyL( aKey ) );
     delete storage;
+    DRMLOG2( _L( "CDRMRightsServer::GetDbKey err=%d" ),r );
     User::LeaveIfError( r );
     }
 
@@ -972,7 +973,7 @@ const CDRMPointerArray<HBufC8>& CDRMRightsServer::GetIMSIL()
         return *iIMSI;
         }
 
-#ifndef __WINS__
+#if 0 // defined(__WINS__)
     TInt error( KErrNone );
     TInt count( 0 );
     TInt count2( 0 );
