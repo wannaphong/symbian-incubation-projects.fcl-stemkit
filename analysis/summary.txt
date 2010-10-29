@@ -1,0 +1,2035 @@
+5: Thread Local-c800f080::Null DoCreate: Function ffffffff Ptr ffffffff
+21: AddThread ekern.exe::Null to ekern.exe
+39: Thread ekern.exe::Supervisor DoCreate: Function 8008e874 Ptr 00000000
+46: Thread ekern.exe::Supervisor SetDefaultPriority 25
+47: Thread ekern.exe::Supervisor SetRequiredPriority def 25 cleanup -1 nest 0
+48: Thread ekern.exe::Supervisor MState 0 SetActualPriority 25
+49: AddThread ekern.exe::Supervisor to ekern.exe
+61: Thread ekern.exe::DefragDFC DoCreate: Function 8004d03c Ptr c80238d8
+68: Thread ekern.exe::DefragDFC SetDefaultPriority 27
+69: Thread ekern.exe::DefragDFC SetRequiredPriority def 27 cleanup -1 nest 0
+70: Thread ekern.exe::DefragDFC MState 0 SetActualPriority 27
+71: AddThread ekern.exe::DefragDFC to ekern.exe
+79: Thread ekern.exe::DfcThread0 DoCreate: Function 8004d03c Ptr c8024538
+86: Thread ekern.exe::DfcThread0 SetDefaultPriority 27
+87: Thread ekern.exe::DfcThread0 SetRequiredPriority def 27 cleanup -1 nest 0
+88: Thread ekern.exe::DfcThread0 MState 0 SetActualPriority 27
+89: AddThread ekern.exe::DfcThread0 to ekern.exe
+97: Thread ekern.exe::DfcThread1 DoCreate: Function 8004d03c Ptr c8024bb8
+104: Thread ekern.exe::DfcThread1 SetDefaultPriority 48
+105: Thread ekern.exe::DfcThread1 SetRequiredPriority def 48 cleanup -1 nest 0
+106: Thread ekern.exe::DfcThread1 MState 0 SetActualPriority 48
+107: AddThread ekern.exe::DfcThread1 to ekern.exe
+115: Thread ekern.exe::DShBufThread DoCreate: Function 8004d03c Ptr c8002000
+122: Thread ekern.exe::DShBufThread SetDefaultPriority 7
+123: Thread ekern.exe::DShBufThread SetRequiredPriority def 7 cleanup -1 nest 0
+124: Thread ekern.exe::DShBufThread MState 0 SetActualPriority 7
+125: AddThread ekern.exe::DShBufThread to ekern.exe
+133: Thread ekern.exe::TimerThread DoCreate: Function 8004d03c Ptr c8025cb8
+140: Thread ekern.exe::TimerThread SetDefaultPriority 27
+141: Thread ekern.exe::TimerThread SetRequiredPriority def 27 cleanup -1 nest 0
+142: Thread ekern.exe::TimerThread MState 0 SetActualPriority 27
+143: AddThread ekern.exe::TimerThread to ekern.exe
+153: Thread ekern.exe::SYBORG_FB DoCreate: Function 8004d03c Ptr c8028290
+160: Thread ekern.exe::SYBORG_FB SetDefaultPriority 29
+161: Thread ekern.exe::SYBORG_FB SetRequiredPriority def 29 cleanup -1 nest 0
+162: Thread ekern.exe::SYBORG_FB MState 0 SetActualPriority 29
+163: AddThread ekern.exe::SYBORG_FB to ekern.exe
+177: Thread ekern.exe::PointDFC DoCreate: Function 8004d03c Ptr c8028af8
+184: Thread ekern.exe::PointDFC SetDefaultPriority 27
+185: Thread ekern.exe::PointDFC SetRequiredPriority def 27 cleanup -1 nest 0
+186: Thread ekern.exe::PointDFC MState 0 SetActualPriority 27
+187: AddThread ekern.exe::PointDFC to ekern.exe
+202: Thread ekern.exe::NVMem-ecc10dce DoCreate: Function 8004d03c Ptr c8029a40
+209: Thread ekern.exe::NVMem-ecc10dce SetDefaultPriority 24
+210: Thread ekern.exe::NVMem-ecc10dce SetRequiredPriority def 24 cleanup -1 nest 0
+211: Thread ekern.exe::NVMem-ecc10dce MState 0 SetActualPriority 24
+212: AddThread ekern.exe::NVMem-ecc10dce to ekern.exe
+216: Thread ekern.exe::Supervisor SetDefaultPriority 16
+217: Thread ekern.exe::Supervisor SetRequiredPriority def 16 cleanup -1 nest 0
+218: Thread ekern.exe::Supervisor MState 2 SetActualPriority 16
+245: Thread efile.exe::Main DoCreate: Function 8015d0b8 Ptr 00000000
+252: Thread efile.exe::Main SetDefaultPriority 12
+253: Thread efile.exe::Main SetRequiredPriority def 12 cleanup -1 nest 0
+254: Thread efile.exe::Main MState 0 SetActualPriority 12
+255: AddThread efile.exe::Main to efile.exe
+293: Thread efile.exe::Main SetDefaultPriority 21
+294: Thread efile.exe::Main SetRequiredPriority def 21 cleanup 0 nest 0
+295: Thread efile.exe::Main MState 2 SetActualPriority 21
+299: Thread efile.exe::Main SetDefaultPriority 23
+300: Thread efile.exe::Main SetRequiredPriority def 23 cleanup -1 nest 0
+301: Thread efile.exe::Main MState 2 SetActualPriority 23
+309: Thread efile.exe::Local-c802d398 DoCreate: Function 80172655 Ptr 00700098
+316: Thread efile.exe::Local-c802d398 SetDefaultPriority 21
+317: Thread efile.exe::Local-c802d398 SetRequiredPriority def 21 cleanup -1 nest 0
+318: Thread efile.exe::Local-c802d398 MState 0 SetActualPriority 21
+319: AddThread efile.exe::Local-c802d398 to efile.exe
+320: Thread efile.exe::Main Logon to thread efile.exe::Local-c802d398, status at 0040ae10 rdv=1
+324: Thread efile.exe::Local-c802d398 SetDefaultPriority 16
+325: Thread efile.exe::Local-c802d398 SetRequiredPriority def 16 cleanup -1 nest 0
+326: Thread efile.exe::Local-c802d398 MState 2 SetActualPriority 16
+338: Thread efile.exe::LoaderThread DoCreate: Function 80167103 Ptr 00000000
+345: Thread efile.exe::LoaderThread SetDefaultPriority 21
+346: Thread efile.exe::LoaderThread SetRequiredPriority def 21 cleanup -1 nest 0
+347: Thread efile.exe::LoaderThread MState 0 SetActualPriority 21
+348: AddThread efile.exe::LoaderThread to efile.exe
+349: Thread efile.exe::Main Logon to thread efile.exe::LoaderThread, status at 0040ae54 rdv=1
+439: Thread efile.exe::StartupThread DoCreate: Function 80168e1d Ptr 00000000
+446: Thread efile.exe::StartupThread SetDefaultPriority 21
+447: Thread efile.exe::StartupThread SetRequiredPriority def 21 cleanup -1 nest 0
+448: Thread efile.exe::StartupThread MState 0 SetActualPriority 21
+449: AddThread efile.exe::StartupThread to efile.exe
+452: Thread efile.exe::StartupThread SetDefaultPriority 16
+453: Thread efile.exe::StartupThread SetRequiredPriority def 16 cleanup -1 nest 0
+454: Thread efile.exe::StartupThread MState 2 SetActualPriority 16
+455: Thread efile.exe::Main Logon to thread efile.exe::StartupThread, status at 0070080c rdv=0
+1250: Thread EStart.exe::Main DoCreate: Function 801b1a18 Ptr 00000000
+1257: Thread EStart.exe::Main SetDefaultPriority 12
+1258: Thread EStart.exe::Main SetRequiredPriority def 12 cleanup -1 nest 0
+1259: Thread EStart.exe::Main MState 0 SetActualPriority 12
+1260: AddThread EStart.exe::Main to EStart.exe
+1391: Thread efile.exe::StartupThread Die: 0,0,
+1392: Thread efile.exe::StartupThread SetDefaultPriority 16
+1393: Thread efile.exe::StartupThread SetRequiredPriority def 16 cleanup -1 nest 0
+1395: Thread efile.exe::StartupThread ReleaseWait() retcode=-13
+1412: Thread efile.exe::StartupThread SvKill()
+1415: Thread efile.exe::StartupThread Release()
+1816: DLibrary efile.exe::ELocal.fsy Close m=1
+1826: Thread efile.exe::Local-c80323c0 DoCreate: Function 80172655 Ptr 00703970
+1833: Thread efile.exe::Local-c80323c0 SetDefaultPriority 21
+1834: Thread efile.exe::Local-c80323c0 SetRequiredPriority def 21 cleanup -1 nest 0
+1835: Thread efile.exe::Local-c80323c0 MState 0 SetActualPriority 21
+1836: AddThread efile.exe::Local-c80323c0 to efile.exe
+1837: Thread efile.exe::Main Logon to thread efile.exe::Local-c80323c0, status at 004088d0 rdv=1
+1841: Thread efile.exe::Local-c80323c0 SetDefaultPriority 16
+1842: Thread efile.exe::Local-c80323c0 SetRequiredPriority def 16 cleanup -1 nest 0
+1843: Thread efile.exe::Local-c80323c0 MState 2 SetActualPriority 16
+1882: Thread efile.exe::InitCompleteThread DoCreate: Function 8016f4ed Ptr 0040ad90
+1889: Thread efile.exe::InitCompleteThread SetDefaultPriority 21
+1890: Thread efile.exe::InitCompleteThread SetRequiredPriority def 21 cleanup -1 nest 0
+1891: Thread efile.exe::InitCompleteThread MState 0 SetActualPriority 21
+1892: AddThread efile.exe::InitCompleteThread to efile.exe
+1893: Thread efile.exe::Main Logon to thread efile.exe::InitCompleteThread, status at 0040ad84 rdv=1
+1897: Thread efile.exe::InitCompleteThread Die: 0,0,
+1898: Thread efile.exe::InitCompleteThread SetDefaultPriority 16
+1899: Thread efile.exe::InitCompleteThread SetRequiredPriority def 16 cleanup -1 nest 0
+1900: Thread efile.exe::InitCompleteThread MState 2 SetActualPriority 16
+1901: Thread efile.exe::InitCompleteThread ReleaseWait() retcode=-13
+1911: Thread efile.exe::InitCompleteThread SvKill()
+1914: Thread efile.exe::InitCompleteThread Release()
+2000: Thread halsettings.exe::Main DoCreate: Function 80497428 Ptr 00000000
+2007: Thread halsettings.exe::Main SetDefaultPriority 19
+2008: Thread halsettings.exe::Main SetRequiredPriority def 19 cleanup -1 nest 0
+2009: Thread halsettings.exe::Main MState 0 SetActualPriority 19
+2010: AddThread halsettings.exe::Main to halsettings.exe
+2140: Thread EStart.exe::Main Logon to process halsettings.exe, status at 00404ba4 rdv=0
+2178: Thread halsettings.exe::Main Die: 0,-12,
+2179: Thread halsettings.exe::Main SetDefaultPriority 16
+2180: Thread halsettings.exe::Main SetRequiredPriority def 16 cleanup -1 nest 0
+2181: Thread halsettings.exe::Main MState 2 SetActualPriority 16
+2182: Thread halsettings.exe::Main Killed -12
+2183: Thread halsettings.exe::Main ReleaseWait() retcode=-13
+2185: Process halsettings.exe Die: 0 -12 Kill
+	halsettings.exe: #1, 1 threads, lifetime 2010-2185
+2197: Thread halsettings.exe::Main SvKill()
+2202: Thread halsettings.exe::Main Release()
+2309: Thread domainSrv.exe::Main DoCreate: Function 801b4658 Ptr 00000000
+2316: Thread domainSrv.exe::Main SetDefaultPriority 12
+2317: Thread domainSrv.exe::Main SetRequiredPriority def 12 cleanup -1 nest 0
+2318: Thread domainSrv.exe::Main MState 0 SetActualPriority 12
+2319: AddThread domainSrv.exe::Main to domainSrv.exe
+2674: DLibrary domainSrv.exe::domainPolicy.dll Close m=-1
+2744: Thread svphostfs.exe::Main DoCreate: Function 800f4f28 Ptr 00000000
+2751: Thread svphostfs.exe::Main SetDefaultPriority 12
+2752: Thread svphostfs.exe::Main SetRequiredPriority def 12 cleanup -1 nest 0
+2753: Thread svphostfs.exe::Main MState 0 SetActualPriority 12
+2754: AddThread svphostfs.exe::Main to svphostfs.exe
+2884: Thread EStart.exe::Main Logon to process svphostfs.exe, status at 00404bf0 rdv=1
+2910: Thread svphostfs.exe::Main RequestComplete 00403e10 0
+3149: Thread svphostfs.exe::Main Die: 0,0,
+3150: Thread svphostfs.exe::Main SetDefaultPriority 16
+3151: Thread svphostfs.exe::Main SetRequiredPriority def 16 cleanup -1 nest 0
+3152: Thread svphostfs.exe::Main MState 2 SetActualPriority 16
+3153: Thread svphostfs.exe::Main ReleaseWait() retcode=-13
+3155: Process svphostfs.exe Die: 0 0 Kill
+	svphostfs.exe: #1, 1 threads, lifetime 2754-3155
+3167: Thread svphostfs.exe::Main SvKill()
+3172: Thread svphostfs.exe::Main Release()
+3278: Thread sysstatemgr.exe::Main DoCreate: Function 813ce528 Ptr 00000000
+3285: Thread sysstatemgr.exe::Main SetDefaultPriority 12
+3286: Thread sysstatemgr.exe::Main SetRequiredPriority def 12 cleanup -1 nest 0
+3287: Thread sysstatemgr.exe::Main MState 0 SetActualPriority 12
+3288: AddThread sysstatemgr.exe::Main to sysstatemgr.exe
+3418: Thread EStart.exe::Main Logon to process sysstatemgr.exe, status at 00404be8 rdv=1
+3652: DLibrary domainSrv.exe::domainpolicy2.dll Close m=-1
+3858: Thread sysstatemgr.exe::!CleSrv_22f5d001 DoCreate: Function 813d3fc5 Ptr 813d8a34
+3865: Thread sysstatemgr.exe::!CleSrv_22f5d001 SetDefaultPriority 12
+3866: Thread sysstatemgr.exe::!CleSrv_22f5d001 SetRequiredPriority def 12 cleanup -1 nest 0
+3867: Thread sysstatemgr.exe::!CleSrv_22f5d001 MState 0 SetActualPriority 12
+3868: AddThread sysstatemgr.exe::!CleSrv_22f5d001 to sysstatemgr.exe
+3869: Thread sysstatemgr.exe::!SysStateMgr Logon to thread sysstatemgr.exe::!CleSrv_22f5d001, status at 00404c80 rdv=1
+SSM: ***** Registered in slot 0
+SSM: Initiating transition to state 0000.ffff.
+SSM: ***** Execute cmd no. 0 without a delay
+SSM: ***** Execute cmd no. 1 without a delay
+SSM: Starting : Z:\sys\bin\sysagt2svr.exe with arguments :  and Execution behaviour : 3
+SSM: ***** Execute cmd no. 2 without a delay
+SSM: ***** Execute cmd no. 3 without a delay
+SSM: ***** ExDSession::CloseFromDisconnect AC:0 TAC:1
+SSM: Starting : Z:\sys\bin\sysmon.exe with arguments :  and Execution behaviour : 3
+SSM: ***** Execute cmd no. 5 without a delay
+SSM: Starting : Z:\sys\bin\ssmutilsrv.exe with arguments :  and Execution behaviour : 3
+SSM: ***** Execute cmd no. 6 without a delay
+4731: Thread centralrepositorysrv.exe::Main DoCreate: Function 81109a58 Ptr 00000000
+4738: Thread centralrepositorysrv.exe::Main SetDefaultPriority 12
+4739: Thread centralrepositorysrv.exe::Main SetRequiredPriority def 12 cleanup -1 nest 0
+4740: Thread centralrepositorysrv.exe::Main MState 0 SetActualPriority 12
+4741: AddThread centralrepositorysrv.exe::Main to centralrepositorysrv.exe
+4871: Thread sysstatemgr.exe::!CleSrv_22f5d001 Logon to process centralrepositorysrv.exe, status at 00408cc0 rdv=1
+5192: Thread sysagt2svr.exe::Main DoCreate: Function 80496e48 Ptr 00000000
+5199: Thread sysagt2svr.exe::Main SetDefaultPriority 12
+5200: Thread sysagt2svr.exe::Main SetRequiredPriority def 12 cleanup -1 nest 0
+5201: Thread sysagt2svr.exe::Main MState 0 SetActualPriority 12
+5202: AddThread sysagt2svr.exe::Main to sysagt2svr.exe
+5332: Thread sysstatemgr.exe::!CleSrv_22f5d001 Logon to process sysagt2svr.exe, status at 00800e74 rdv=1
+5404: Thread sysmon.exe::Main DoCreate: Function 812d8858 Ptr 00000000
+5411: Thread sysmon.exe::Main SetDefaultPriority 12
+5412: Thread sysmon.exe::Main SetRequiredPriority def 12 cleanup -1 nest 0
+5413: Thread sysmon.exe::Main MState 0 SetActualPriority 12
+5414: AddThread sysmon.exe::Main to sysmon.exe
+5568: Thread sysstatemgr.exe::!CleSrv_22f5d001 Logon to process sysmon.exe, status at 00800f7c rdv=1
+5640: Thread ssmutilsrv.exe::Main DoCreate: Function 802ef588 Ptr 00000000
+5647: Thread ssmutilsrv.exe::Main SetDefaultPriority 12
+5648: Thread ssmutilsrv.exe::Main SetRequiredPriority def 12 cleanup -1 nest 0
+5649: Thread ssmutilsrv.exe::Main MState 0 SetActualPriority 12
+5650: AddThread ssmutilsrv.exe::Main to ssmutilsrv.exe
+5780: Thread sysstatemgr.exe::!CleSrv_22f5d001 Logon to process ssmutilsrv.exe, status at 0080108c rdv=1
+5792: Thread sysagt2svr.exe::!SystemAgent2 Die: 0,0,
+5793: Thread sysagt2svr.exe::!SystemAgent2 SetDefaultPriority 16
+5794: Thread sysagt2svr.exe::!SystemAgent2 SetRequiredPriority def 16 cleanup -1 nest 0
+5795: Thread sysagt2svr.exe::!SystemAgent2 MState 2 SetActualPriority 16
+5796: Thread sysagt2svr.exe::!SystemAgent2 ReleaseWait() retcode=-13
+5798: Process sysagt2svr.exe Die: 0 0 Kill
+	sysagt2svr.exe: #1, 1 threads, lifetime 5202-5798
+5810: Thread sysagt2svr.exe::!SystemAgent2 SvKill()
+5814: Thread sysagt2svr.exe::!SystemAgent2 Release()
+5888: Thread sysmon.exe::Main SetRequiredPriority def 12 cleanup 12 nest 1
+5897: Thread sysmon.exe::Main RevertPriority def 12 cleanup -1
+5919: Thread ssmutilsrv.exe::!SusAdaptionSrv DoCreate: Function 802ef905 Ptr 00000000
+5926: Thread ssmutilsrv.exe::!SusAdaptionSrv SetDefaultPriority 12
+5927: Thread ssmutilsrv.exe::!SusAdaptionSrv SetRequiredPriority def 12 cleanup -1 nest 0
+5928: Thread ssmutilsrv.exe::!SusAdaptionSrv MState 0 SetActualPriority 12
+5929: AddThread ssmutilsrv.exe::!SusAdaptionSrv to ssmutilsrv.exe
+5930: Thread ssmutilsrv.exe::Main Logon to thread ssmutilsrv.exe::!SusAdaptionSrv, status at 00403e8c rdv=1
+SSM: Initiating transition to state 0000.0030.
+SSM: ***** Execute cmd no. 0 without a delay
+6357: Thread EComServer.exe::Main DoCreate: Function 803be9e8 Ptr 00000000
+6364: Thread EComServer.exe::Main SetDefaultPriority 12
+6365: Thread EComServer.exe::Main SetRequiredPriority def 12 cleanup -1 nest 0
+6366: Thread EComServer.exe::Main MState 0 SetActualPriority 12
+6367: AddThread EComServer.exe::Main to EComServer.exe
+6497: Thread ssmutilsrv.exe::!SusAdaptionSrv Logon to process EComServer.exe, status at 00407c20 rdv=1
+6881: Thread ssmutilsrv.exe::!SusAdaptionSrv RevertPriority def 12 cleanup -1
+SSM: ***** Execute cmd no. 1 without a delay
+SSM: ***** Execute cmd no. 2 without a delay
+SSM: ***** Execute cmd no. 3 without a delay
+SSM: ***** Execute cmd no. 4 without a delay
+SSM: ***** Execute cmd no. 5 without a delay
+SSM: Starting : Z:\sys\bin\ewsrv.exe with arguments : -NoShell and Execution behaviour : 2
+7465: Thread EwSrv.exe::Main DoCreate: Function 814a1ab8 Ptr 00000000
+7472: Thread EwSrv.exe::Main SetDefaultPriority 12
+7473: Thread EwSrv.exe::Main SetRequiredPriority def 12 cleanup -1 nest 0
+7474: Thread EwSrv.exe::Main MState 0 SetActualPriority 12
+7475: AddThread EwSrv.exe::Main to EwSrv.exe
+7742: Thread sysstatemgr.exe::!CleSrv_22f5d001 Logon to process EwSrv.exe, status at 008014c4 rdv=1
+7775: Thread EwSrv.exe::Main SetDefaultPriority 21
+7776: Thread EwSrv.exe::Main SetRequiredPriority def 21 cleanup 0 nest 0
+7777: Thread EwSrv.exe::Main MState 2 SetActualPriority 21
+7780: Thread EwSrv.exe::Main SetDefaultPriority 23
+7781: Thread EwSrv.exe::Main SetRequiredPriority def 23 cleanup -1 nest 0
+7782: Thread EwSrv.exe::Main MState 2 SetActualPriority 23
+8835: Thread tzserver.exe::Main DoCreate: Function 802cb158 Ptr 00000000
+8842: Thread tzserver.exe::Main SetDefaultPriority 12
+8843: Thread tzserver.exe::Main SetRequiredPriority def 12 cleanup -1 nest 0
+8844: Thread tzserver.exe::Main MState 0 SetActualPriority 12
+8845: AddThread tzserver.exe::Main to tzserver.exe
+8977: Thread tzserver.exe::Main SetDefaultPriority 19
+8978: Thread tzserver.exe::Main SetRequiredPriority def 19 cleanup -1 nest 0
+8979: Thread tzserver.exe::Main MState 2 SetActualPriority 19
+8980: Thread EwSrv.exe::Wserv Logon to process tzserver.exe, status at 0040e444 rdv=1
+9077: Thread sqlsrv.exe::Main DoCreate: Function 80291c28 Ptr 00000000
+9084: Thread sqlsrv.exe::Main SetDefaultPriority 12
+9085: Thread sqlsrv.exe::Main SetRequiredPriority def 12 cleanup -1 nest 0
+9086: Thread sqlsrv.exe::Main MState 0 SetActualPriority 12
+9087: AddThread sqlsrv.exe::Main to sqlsrv.exe
+9217: Thread tzserver.exe::Main Logon to process sqlsrv.exe, status at 00403d40 rdv=1
+9354: Thread EDbsrv.exe::Main DoCreate: Function 80479d28 Ptr 00000000
+9361: Thread EDbsrv.exe::Main SetDefaultPriority 12
+9362: Thread EDbsrv.exe::Main SetRequiredPriority def 12 cleanup -1 nest 0
+9363: Thread EDbsrv.exe::Main MState 0 SetActualPriority 12
+9364: AddThread EDbsrv.exe::Main to EDbsrv.exe
+9494: Thread tzserver.exe::Main Logon to process EDbsrv.exe, status at 00403e4c rdv=1
+10935: Thread fbserv.exe::Main DoCreate: Function 809c59b8 Ptr 00000000
+10942: Thread fbserv.exe::Main SetDefaultPriority 12
+10943: Thread fbserv.exe::Main SetRequiredPriority def 12 cleanup -1 nest 0
+10944: Thread fbserv.exe::Main MState 0 SetActualPriority 12
+10945: AddThread fbserv.exe::Main to fbserv.exe
+11074: Thread EwSrv.exe::Wserv Logon to process fbserv.exe, status at 0040ee48 rdv=1
+11104: Thread fbserv.exe::Main SetDefaultPriority 19
+11105: Thread fbserv.exe::Main SetRequiredPriority def 19 cleanup 0 nest 0
+11106: Thread fbserv.exe::Main MState 2 SetActualPriority 19
+11644: Thread fbserv.exe::FbsBgCompressThread DoCreate: Function 809c844d Ptr 00606738
+11651: Thread fbserv.exe::FbsBgCompressThread SetDefaultPriority 19
+11652: Thread fbserv.exe::FbsBgCompressThread SetRequiredPriority def 19 cleanup -1 nest 0
+11653: Thread fbserv.exe::FbsBgCompressThread MState 0 SetActualPriority 19
+11654: AddThread fbserv.exe::FbsBgCompressThread to fbserv.exe
+11657: Thread fbserv.exe::FbsBgCompressThread SetDefaultPriority 1
+11658: Thread fbserv.exe::FbsBgCompressThread SetRequiredPriority def 1 cleanup -1 nest 0
+11659: Thread fbserv.exe::FbsBgCompressThread MState 2 SetActualPriority 1
+12286: DLibrary EwSrv.exe::libwfchwsyborg.dll Close m=1
+12690: Thread EwSrv.exe::SURFACE_UPDATE_SERVER_120011771250 DoCreate: Function 813dde25 Ptr 00702a68
+12697: Thread EwSrv.exe::SURFACE_UPDATE_SERVER_120011771250 SetDefaultPriority 21
+12698: Thread EwSrv.exe::SURFACE_UPDATE_SERVER_120011771250 SetRequiredPriority def 21 cleanup -1 nest 0
+12699: Thread EwSrv.exe::SURFACE_UPDATE_SERVER_120011771250 MState 0 SetActualPriority 21
+12700: AddThread EwSrv.exe::SURFACE_UPDATE_SERVER_120011771250 to EwSrv.exe
+12703: Thread EwSrv.exe::SURFACE_UPDATE_SERVER_120011771250 SetDefaultPriority 23
+12704: Thread EwSrv.exe::SURFACE_UPDATE_SERVER_120011771250 SetRequiredPriority def 23 cleanup -1 nest 0
+12705: Thread EwSrv.exe::SURFACE_UPDATE_SERVER_120011771250 MState 2 SetActualPriority 23
+12706: Thread EwSrv.exe::Wserv Logon to thread EwSrv.exe::SURFACE_UPDATE_SERVER_120011771250, status at 0040e2fc rdv=1
+13042: Thread EwSrv.exe::00d003608fc71fee DoCreate: Function 808f1d2d Ptr 00d00398
+13049: Thread EwSrv.exe::00d003608fc71fee SetDefaultPriority 21
+13050: Thread EwSrv.exe::00d003608fc71fee SetRequiredPriority def 21 cleanup -1 nest 0
+13051: Thread EwSrv.exe::00d003608fc71fee MState 0 SetActualPriority 21
+13052: AddThread EwSrv.exe::00d003608fc71fee to EwSrv.exe
+13062: Thread EwSrv.exe::WFCMonitorThread_0_616281842 DoCreate: Function 814fcd1f Ptr 00737d38
+13069: Thread EwSrv.exe::WFCMonitorThread_0_616281842 SetDefaultPriority 21
+13070: Thread EwSrv.exe::WFCMonitorThread_0_616281842 SetRequiredPriority def 21 cleanup -1 nest 0
+13071: Thread EwSrv.exe::WFCMonitorThread_0_616281842 MState 0 SetActualPriority 21
+13072: AddThread EwSrv.exe::WFCMonitorThread_0_616281842 to EwSrv.exe
+13075: Thread EwSrv.exe::WFCMonitorThread_0_616281842 SetDefaultPriority 21
+13076: Thread EwSrv.exe::WFCMonitorThread_0_616281842 SetRequiredPriority def 21 cleanup -1 nest 0
+13077: Thread EwSrv.exe::Wserv Logon to thread EwSrv.exe::WFCMonitorThread_0_616281842, status at 00737d44 rdv=1
+SSM: ***** Execute cmd no. 6 without a delay
+SSM: Starting : Z:\sys\bin\splashscreen.exe with arguments :  and Execution behaviour : 1
+SSM: ***** Execute cmd no. 7 without a delay
+SSM: ***** Execute cmd no. 8 without a delay
+SSM: ***** Execute cmd no. 9 without a delay
+14722: Thread apsexe.exe::Main DoCreate: Function 80325158 Ptr 00000000
+14729: Thread apsexe.exe::Main SetDefaultPriority 12
+14730: Thread apsexe.exe::Main SetRequiredPriority def 12 cleanup -1 nest 0
+14731: Thread apsexe.exe::Main MState 0 SetActualPriority 12
+14732: AddThread apsexe.exe::Main to apsexe.exe
+14862: Thread sysstatemgr.exe::!CleSrv_22f5d001 Logon to process apsexe.exe, status at 00408d70 rdv=1
+15909: Thread baksrvs.exe::Main DoCreate: Function 811009d8 Ptr 00000000
+15916: Thread baksrvs.exe::Main SetDefaultPriority 12
+15917: Thread baksrvs.exe::Main SetRequiredPriority def 12 cleanup -1 nest 0
+15918: Thread baksrvs.exe::Main MState 0 SetActualPriority 12
+15919: AddThread baksrvs.exe::Main to baksrvs.exe
+16049: Thread apsexe.exe::AppArcServerThread Logon to process baksrvs.exe, status at 00404d98 rdv=1
+16078: Thread baksrvs.exe::!BackupServer SetDefaultPriority 22
+16079: Thread baksrvs.exe::!BackupServer SetRequiredPriority def 22 cleanup -1 nest 0
+16080: Thread baksrvs.exe::!BackupServer MState 2 SetActualPriority 22
+19246: Thread featmgrserver.exe::Main DoCreate: Function 809e4118 Ptr 00000000
+19253: Thread featmgrserver.exe::Main SetDefaultPriority 12
+19254: Thread featmgrserver.exe::Main SetRequiredPriority def 12 cleanup -1 nest 0
+19255: Thread featmgrserver.exe::Main MState 0 SetActualPriority 12
+19256: AddThread featmgrserver.exe::Main to featmgrserver.exe
+19386: Thread apsexe.exe::AppArcServerThread Logon to process featmgrserver.exe, status at 00404954 rdv=1
+Renaming featmgrserver.exe (19256,1) to !FeatMgrServer
+19414: DProcess::Rename featmgrserver.exe to !FeatMgrServer
+27193: Thread akncapserver.exe::Main DoCreate: Function 82d08978 Ptr 00000000
+27200: Thread akncapserver.exe::Main SetDefaultPriority 12
+27201: Thread akncapserver.exe::Main SetRequiredPriority def 12 cleanup -1 nest 0
+27202: Thread akncapserver.exe::Main MState 0 SetActualPriority 12
+27203: AddThread akncapserver.exe::Main to akncapserver.exe
+27925: Thread sysstatemgr.exe::!CleSrv_22f5d001 Logon to process akncapserver.exe, status at 00408d90 rdv=1
+28173: Thread AknIconSrv.exe::Main DoCreate: Function 82d23418 Ptr 00000000
+28180: Thread AknIconSrv.exe::Main SetDefaultPriority 19
+28181: Thread AknIconSrv.exe::Main SetRequiredPriority def 19 cleanup -1 nest 0
+28182: Thread AknIconSrv.exe::Main MState 0 SetActualPriority 19
+28183: AddThread AknIconSrv.exe::Main to AknIconSrv.exe
+29082: Thread AknIconSrv.exe::AknIconPrecache2 DoCreate: Function 82d1f98d Ptr 00600130
+29089: Thread AknIconSrv.exe::AknIconPrecache2 SetDefaultPriority 19
+29090: Thread AknIconSrv.exe::AknIconPrecache2 SetRequiredPriority def 19 cleanup -1 nest 0
+29091: Thread AknIconSrv.exe::AknIconPrecache2 MState 0 SetActualPriority 19
+29092: AddThread AknIconSrv.exe::AknIconPrecache2 to AknIconSrv.exe
+29095: Thread AknIconSrv.exe::AknIconPrecache2 SetDefaultPriority 1
+29096: Thread AknIconSrv.exe::AknIconPrecache2 SetRequiredPriority def 1 cleanup -1 nest 0
+29097: Thread AknIconSrv.exe::AknIconPrecache2 MState 2 SetActualPriority 1
+29174: Thread cdlserver.exe::Main DoCreate: Function 83f33d48 Ptr 00000000
+29181: Thread cdlserver.exe::Main SetDefaultPriority 12
+29182: Thread cdlserver.exe::Main SetRequiredPriority def 12 cleanup -1 nest 0
+29183: Thread cdlserver.exe::Main MState 0 SetActualPriority 12
+29184: AddThread cdlserver.exe::Main to cdlserver.exe
+29314: Thread akncapserver.exe::akncapserver Logon to process cdlserver.exe, status at 0040aa20 rdv=1
+32040: DLibrary EComServer.exe::imageconversionresolver.dll Close m=-1
+32047: Thread akncapserver.exe::akncapserver SetDefaultPriority 7
+32048: Thread akncapserver.exe::akncapserver SetRequiredPriority def 7 cleanup 0 nest 0
+32049: Thread akncapserver.exe::akncapserver MState 2 SetActualPriority 7
+Renaming akncapserver.exe (27203,1) to akncapserver
+32055: DProcess::Rename akncapserver.exe to akncapserver
+32059: Thread akncapserver::akncapserver SetDefaultPriority 12
+32060: Thread akncapserver::akncapserver SetRequiredPriority def 12 cleanup -1 nest 0
+32061: Thread akncapserver::akncapserver MState 2 SetActualPriority 12
+32139: Thread EikSrvs.exe::Main DoCreate: Function 81482d18 Ptr 00000000
+32146: Thread EikSrvs.exe::Main SetDefaultPriority 12
+32147: Thread EikSrvs.exe::Main SetRequiredPriority def 12 cleanup -1 nest 0
+32148: Thread EikSrvs.exe::Main MState 0 SetActualPriority 12
+32149: AddThread EikSrvs.exe::Main to EikSrvs.exe
+32869: Thread akncapserver::akncapserver Logon to process EikSrvs.exe, status at 0040a900 rdv=1
+33034: Thread akncapserver::akncapserver SetDefaultPriority 7
+33035: Thread akncapserver::akncapserver SetRequiredPriority def 7 cleanup -1 nest 0
+33036: Thread akncapserver::akncapserver MState 2 SetActualPriority 7
+35766: Thread aknskinsrv.exe::Main DoCreate: Function 831422b8 Ptr 00000000
+35773: Thread aknskinsrv.exe::Main SetDefaultPriority 19
+35774: Thread aknskinsrv.exe::Main SetRequiredPriority def 19 cleanup -1 nest 0
+35775: Thread aknskinsrv.exe::Main MState 0 SetActualPriority 19
+35776: AddThread aknskinsrv.exe::Main to aknskinsrv.exe
+36496: Thread EikSrvs.exe::EikAppUiServerThread Logon to process aknskinsrv.exe, status at 00406728 rdv=1
+37612: DLibrary aknskinsrv.exe::OmaDrmAgent.dll Close m=-1
+37710: DLibrary aknskinsrv.exe::wmdrmagent.dll Close m=-1
+37808: DLibrary aknskinsrv.exe::f32agent.dll Close m=-1
+38483: DLibrary aknskinsrv.exe::OmaDrmAgent.dll Close m=-1
+38581: DLibrary aknskinsrv.exe::wmdrmagent.dll Close m=-1
+38691: DLibrary aknskinsrv.exe::f32agent.dll Close m=-1
+38768: Thread RightsServer.EXE::Main DoCreate: Function 840f9ac8 Ptr 00000000
+38775: Thread RightsServer.EXE::Main SetDefaultPriority 12
+38776: Thread RightsServer.EXE::Main SetRequiredPriority def 12 cleanup -1 nest 0
+38777: Thread RightsServer.EXE::Main MState 0 SetActualPriority 12
+38778: AddThread RightsServer.EXE::Main to RightsServer.EXE
+39247: Thread c32start.exe::Main DoCreate: Function 805d5f58 Ptr 00000000
+39254: Thread c32start.exe::Main SetDefaultPriority 12
+39255: Thread c32start.exe::Main SetRequiredPriority def 12 cleanup -1 nest 0
+39256: Thread c32start.exe::Main MState 0 SetActualPriority 12
+39257: AddThread c32start.exe::Main to c32start.exe
+39387: Thread RightsServer.EXE::RightsServer Logon to process c32start.exe, status at 004043f0 rdv=1
+Renaming c32start.exe (39257,1) to C32Start
+39417: DProcess::Rename c32start.exe to C32Start
+39489: Thread c32exe.exe::Main DoCreate: Function 807a6228 Ptr 00000000
+39496: Thread c32exe.exe::Main SetDefaultPriority 12
+39497: Thread c32exe.exe::Main SetRequiredPriority def 12 cleanup -1 nest 0
+39498: Thread c32exe.exe::Main MState 0 SetActualPriority 12
+39499: AddThread c32exe.exe::Main to c32exe.exe
+39632: Thread c32exe.exe::Main SetDefaultPriority 19
+39633: Thread c32exe.exe::Main SetRequiredPriority def 19 cleanup -1 nest 0
+39634: Thread c32exe.exe::Main MState 2 SetActualPriority 19
+39635: Thread C32Start::C32Start Logon to process c32exe.exe, status at 00405e48 rdv=1
+39664: Thread c32exe.exe::!RootServer SetDefaultPriority 23
+39665: Thread c32exe.exe::!RootServer SetRequiredPriority def 23 cleanup -1 nest 0
+39666: Thread c32exe.exe::!RootServer MState 2 SetActualPriority 23
+40133: Thread c32exe.exe::C32_Main DoCreate: Function 807a328d Ptr 00600a4c
+40140: Thread c32exe.exe::C32_Main SetDefaultPriority 19
+40141: Thread c32exe.exe::C32_Main SetRequiredPriority def 19 cleanup -1 nest 0
+40142: Thread c32exe.exe::C32_Main MState 0 SetActualPriority 19
+40143: AddThread c32exe.exe::C32_Main to c32exe.exe
+40144: Thread c32exe.exe::!RootServer Logon to thread c32exe.exe::C32_Main, status at 00600764 rdv=1
+40150: Thread c32exe.exe::C32_Main SetDefaultPriority 22
+40151: Thread c32exe.exe::C32_Main SetRequiredPriority def 22 cleanup -1 nest 0
+40152: Thread c32exe.exe::C32_Main MState 2 SetActualPriority 22
+40836: Thread c32exe.exe::ESock_Main DoCreate: Function 807a328d Ptr 00600e64
+40843: Thread c32exe.exe::ESock_Main SetDefaultPriority 19
+40844: Thread c32exe.exe::ESock_Main SetRequiredPriority def 19 cleanup -1 nest 0
+40845: Thread c32exe.exe::ESock_Main MState 0 SetActualPriority 19
+40846: AddThread c32exe.exe::ESock_Main to c32exe.exe
+40847: Thread c32exe.exe::!RootServer Logon to thread c32exe.exe::ESock_Main, status at 00600b7c rdv=1
+40853: Thread c32exe.exe::ESock_Main SetDefaultPriority 20
+40854: Thread c32exe.exe::ESock_Main SetRequiredPriority def 20 cleanup -1 nest 0
+40855: Thread c32exe.exe::ESock_Main MState 2 SetActualPriority 20
+40972: Thread c32exe.exe::!RootServer Logon to thread c32exe.exe::ESock_Main, status at 00600e7c rdv=0
+41195: Thread c32exe.exe::CTelServer DoCreate: Function 807a328d Ptr 00601634
+41202: Thread c32exe.exe::CTelServer SetDefaultPriority 19
+41203: Thread c32exe.exe::CTelServer SetRequiredPriority def 19 cleanup -1 nest 0
+41204: Thread c32exe.exe::CTelServer MState 0 SetActualPriority 19
+41205: AddThread c32exe.exe::CTelServer to c32exe.exe
+41206: Thread c32exe.exe::!RootServer Logon to thread c32exe.exe::CTelServer, status at 0060134c rdv=1
+41212: Thread c32exe.exe::CTelServer SetDefaultPriority 19
+41213: Thread c32exe.exe::CTelServer SetRequiredPriority def 19 cleanup -1 nest 0
+41224: Thread c32exe.exe::!RootServer Logon to thread c32exe.exe::CTelServer, status at 00600b54 rdv=0
+41246: Thread c32exe.exe::!RootServer Logon to thread c32exe.exe::C32_Main, status at 00600a64 rdv=0
+41358: Thread c32exe.exe::ESock_TR DoCreate: Function 807a328d Ptr 00601f1c
+41365: Thread c32exe.exe::ESock_TR SetDefaultPriority 19
+41366: Thread c32exe.exe::ESock_TR SetRequiredPriority def 19 cleanup -1 nest 0
+41367: Thread c32exe.exe::ESock_TR MState 0 SetActualPriority 19
+41368: AddThread c32exe.exe::ESock_TR to c32exe.exe
+41369: Thread c32exe.exe::!RootServer Logon to thread c32exe.exe::ESock_TR, status at 00601c34 rdv=1
+41375: Thread c32exe.exe::ESock_TR SetDefaultPriority 18
+41376: Thread c32exe.exe::ESock_TR SetRequiredPriority def 18 cleanup -1 nest 0
+41377: Thread c32exe.exe::ESock_TR MState 2 SetActualPriority 18
+41476: Thread c32exe.exe::!RootServer Logon to thread c32exe.exe::ESock_TR, status at 0060025c rdv=0
+41506: Thread c32exe.exe::ESock_Main Logon to thread c32exe.exe::ESock_TR, status at 009014a4 rdv=0
+41612: Thread c32exe.exe::ESock_SmsWap DoCreate: Function 807a328d Ptr 00602d9c
+41619: Thread c32exe.exe::ESock_SmsWap SetDefaultPriority 19
+41620: Thread c32exe.exe::ESock_SmsWap SetRequiredPriority def 19 cleanup -1 nest 0
+41621: Thread c32exe.exe::ESock_SmsWap MState 0 SetActualPriority 19
+41622: AddThread c32exe.exe::ESock_SmsWap to c32exe.exe
+41623: Thread c32exe.exe::!RootServer Logon to thread c32exe.exe::ESock_SmsWap, status at 00602ab4 rdv=1
+41629: Thread c32exe.exe::ESock_SmsWap SetDefaultPriority 20
+41630: Thread c32exe.exe::ESock_SmsWap SetRequiredPriority def 20 cleanup -1 nest 0
+41631: Thread c32exe.exe::ESock_SmsWap MState 2 SetActualPriority 20
+41730: Thread c32exe.exe::!RootServer Logon to thread c32exe.exe::ESock_SmsWap, status at 00600ac4 rdv=0
+42156: Thread c32exe.exe::ESock_Main Logon to thread c32exe.exe::ESock_SmsWap, status at 0090153c rdv=0
+42179: DLibrary c32exe.exe::SmsProt.prt Close m=-1
+42199: DLibrary c32exe.exe::WapProt.prt Close m=-1
+42304: Thread c32exe.exe::ESock_DIP DoCreate: Function 807a328d Ptr 00603974
+42311: Thread c32exe.exe::ESock_DIP SetDefaultPriority 19
+42312: Thread c32exe.exe::ESock_DIP SetRequiredPriority def 19 cleanup -1 nest 0
+42313: Thread c32exe.exe::ESock_DIP MState 0 SetActualPriority 19
+42314: AddThread c32exe.exe::ESock_DIP to c32exe.exe
+42315: Thread c32exe.exe::!RootServer Logon to thread c32exe.exe::ESock_DIP, status at 0060368c rdv=1
+42321: Thread c32exe.exe::ESock_DIP SetDefaultPriority 22
+42322: Thread c32exe.exe::ESock_DIP SetRequiredPriority def 22 cleanup -1 nest 0
+42323: Thread c32exe.exe::ESock_DIP MState 2 SetActualPriority 22
+42421: Thread c32exe.exe::!RootServer Logon to thread c32exe.exe::ESock_DIP, status at 00600a8c rdv=0
+42534: Thread c32exe.exe::ESock_IP DoCreate: Function 807a328d Ptr 00603dbc
+42541: Thread c32exe.exe::ESock_IP SetDefaultPriority 19
+42542: Thread c32exe.exe::ESock_IP SetRequiredPriority def 19 cleanup -1 nest 0
+42543: Thread c32exe.exe::ESock_IP MState 0 SetActualPriority 19
+42544: AddThread c32exe.exe::ESock_IP to c32exe.exe
+42545: Thread c32exe.exe::!RootServer Logon to thread c32exe.exe::ESock_IP, status at 00603ad4 rdv=1
+42551: Thread c32exe.exe::ESock_IP SetDefaultPriority 20
+42552: Thread c32exe.exe::ESock_IP SetRequiredPriority def 20 cleanup -1 nest 0
+42553: Thread c32exe.exe::ESock_IP MState 2 SetActualPriority 20
+42652: Thread c32exe.exe::!RootServer Logon to thread c32exe.exe::ESock_IP, status at 00600b24 rdv=0
+42766: Thread c32exe.exe::ESock_SIP DoCreate: Function 807a328d Ptr 006042c4
+42773: Thread c32exe.exe::ESock_SIP SetDefaultPriority 19
+42774: Thread c32exe.exe::ESock_SIP SetRequiredPriority def 19 cleanup -1 nest 0
+42775: Thread c32exe.exe::ESock_SIP MState 0 SetActualPriority 19
+42776: AddThread c32exe.exe::ESock_SIP to c32exe.exe
+42777: Thread c32exe.exe::!RootServer Logon to thread c32exe.exe::ESock_SIP, status at 00603fdc rdv=1
+42783: Thread c32exe.exe::ESock_SIP SetDefaultPriority 20
+42784: Thread c32exe.exe::ESock_SIP SetRequiredPriority def 20 cleanup -1 nest 0
+42785: Thread c32exe.exe::ESock_SIP MState 2 SetActualPriority 20
+42884: Thread c32exe.exe::!RootServer Logon to thread c32exe.exe::ESock_SIP, status at 006011dc rdv=0
+43531: Thread c32exe.exe::ESock_Main Logon to thread c32exe.exe::ESock_IP, status at 0090156c rdv=0
+43805: DLibrary c32exe.exe::SIPDummyPRT.PRT Close m=-1
+43806: Thread c32exe.exe::ESock_Main Logon to thread c32exe.exe::ESock_SIP, status at 00902454 rdv=0
+44540: Thread sysutilsetup.exe::Main DoCreate: Function 8111a4d8 Ptr 00000000
+44547: Thread sysutilsetup.exe::Main SetDefaultPriority 12
+44548: Thread sysutilsetup.exe::Main SetRequiredPriority def 12 cleanup -1 nest 0
+44549: Thread sysutilsetup.exe::Main MState 0 SetActualPriority 12
+44550: AddThread sysutilsetup.exe::Main to sysutilsetup.exe
+44680: Thread c32exe.exe::CTelServer Logon to process sysutilsetup.exe, status at 0041bbec rdv=1
+44758: Thread sysutilsetup.exe::Main Die: 0,0,
+44759: Thread sysutilsetup.exe::Main SetDefaultPriority 16
+44760: Thread sysutilsetup.exe::Main SetRequiredPriority def 16 cleanup -1 nest 0
+44761: Thread sysutilsetup.exe::Main MState 2 SetActualPriority 16
+44762: Thread sysutilsetup.exe::Main ReleaseWait() retcode=-13
+44764: Process sysutilsetup.exe Die: 0 0 Kill
+	sysutilsetup.exe: #1, 1 threads, lifetime 44550-44764
+44776: Thread sysutilsetup.exe::Main SvKill()
+44781: Thread sysutilsetup.exe::Main Release()
+44847: DLibrary c32exe.exe::ctsysystemstateplugin.dll Close m=-1
+44877: DLibrary c32exe.exe::PHONETSY.TSY Close m=-1
+44949: Thread cryptospisetup.exe::Main DoCreate: Function 8035f4b8 Ptr 00000000
+44956: Thread cryptospisetup.exe::Main SetDefaultPriority 19
+44957: Thread cryptospisetup.exe::Main SetRequiredPriority def 19 cleanup -1 nest 0
+44958: Thread cryptospisetup.exe::Main MState 0 SetActualPriority 19
+44959: AddThread cryptospisetup.exe::Main to cryptospisetup.exe
+45089: Thread RightsServer.EXE::RightsServer Logon to process cryptospisetup.exe, status at 00404338 rdv=1
+45315: DLibrary cryptospisetup.exe::softwarecrypto.dll Close m=-1
+45324: Thread cryptospisetup.exe::Main Die: 0,0,
+45325: Thread cryptospisetup.exe::Main SetDefaultPriority 16
+45326: Thread cryptospisetup.exe::Main SetRequiredPriority def 16 cleanup -1 nest 0
+45327: Thread cryptospisetup.exe::Main MState 2 SetActualPriority 16
+45328: Thread cryptospisetup.exe::Main ReleaseWait() retcode=-13
+45330: Process cryptospisetup.exe Die: 0 0 Kill
+	cryptospisetup.exe: #1, 1 threads, lifetime 44959-45330
+45342: Thread cryptospisetup.exe::Main SvKill()
+45347: Thread cryptospisetup.exe::Main Release()
+45487: DLibrary RightsServer.EXE::softwarecrypto.dll Close m=1
+45506: DLibrary RightsServer.EXE::softwarecrypto.dll Close m=-1
+45776: DLibrary c32exe.exe::ctsysystemstateplugin.dll Close m=-1
+45806: DLibrary c32exe.exe::PHONETSY.TSY Close m=-1
+46117: DLibrary c32exe.exe::ctsysystemstateplugin.dll Close m=-1
+46147: DLibrary c32exe.exe::PHONETSY.TSY Close m=-1
+46250: DLibrary RightsServer.EXE::softwarecrypto.dll Close m=1
+46261: Thread RightsServer.EXE::!DRMNotifier DoCreate: Function 841061c1 Ptr 00000000
+46268: Thread RightsServer.EXE::!DRMNotifier SetDefaultPriority 12
+46269: Thread RightsServer.EXE::!DRMNotifier SetRequiredPriority def 12 cleanup -1 nest 0
+46270: Thread RightsServer.EXE::!DRMNotifier MState 0 SetActualPriority 12
+46271: AddThread RightsServer.EXE::!DRMNotifier to RightsServer.EXE
+46301: Thread RightsServer.EXE::!RoapStorageServer DoCreate: Function 84107a31 Ptr 00000000
+46308: Thread RightsServer.EXE::!RoapStorageServer SetDefaultPriority 12
+46309: Thread RightsServer.EXE::!RoapStorageServer SetRequiredPriority def 12 cleanup -1 nest 0
+46310: Thread RightsServer.EXE::!RoapStorageServer MState 0 SetActualPriority 12
+46311: AddThread RightsServer.EXE::!RoapStorageServer to RightsServer.EXE
+46343: Thread RightsServer.EXE::!DRMClockServer DoCreate: Function 8410b551 Ptr 00000000
+46350: Thread RightsServer.EXE::!DRMClockServer SetDefaultPriority 12
+46351: Thread RightsServer.EXE::!DRMClockServer SetRequiredPriority def 12 cleanup -1 nest 0
+46352: Thread RightsServer.EXE::!DRMClockServer MState 0 SetActualPriority 12
+46353: AddThread RightsServer.EXE::!DRMClockServer to RightsServer.EXE
+47029: DLibrary RightsServer.EXE::xmlparserplugin.dll Close m=-1
+47165: DLibrary RightsServer.EXE::xmlparserplugin.dll Close m=-1
+47255: Thread DcfRepSrv.EXE::Main DoCreate: Function 840dd528 Ptr 00000000
+47262: Thread DcfRepSrv.EXE::Main SetDefaultPriority 12
+47263: Thread DcfRepSrv.EXE::Main SetRequiredPriority def 12 cleanup -1 nest 0
+47264: Thread DcfRepSrv.EXE::Main MState 0 SetActualPriority 12
+47265: AddThread DcfRepSrv.EXE::Main to DcfRepSrv.EXE
+47421: Thread RightsServer.EXE::RightsServer Logon to process DcfRepSrv.EXE, status at 007104a4 rdv=0
+47685: Thread wmdrmserver.exe::Main DoCreate: Function 8633e5a8 Ptr 00000000
+47692: Thread wmdrmserver.exe::Main SetDefaultPriority 12
+47693: Thread wmdrmserver.exe::Main SetRequiredPriority def 12 cleanup -1 nest 0
+47694: Thread wmdrmserver.exe::Main MState 0 SetActualPriority 12
+47695: AddThread wmdrmserver.exe::Main to wmdrmserver.exe
+47825: Thread RightsServer.EXE::RightsServer Logon to process wmdrmserver.exe, status at 004047b8 rdv=1
+47863: Thread wmdrmserver.exe::!wmdrmserver.exe Die: 0,-5,
+47864: Thread wmdrmserver.exe::!wmdrmserver.exe SetDefaultPriority 16
+47865: Thread wmdrmserver.exe::!wmdrmserver.exe SetRequiredPriority def 16 cleanup -1 nest 0
+47866: Thread wmdrmserver.exe::!wmdrmserver.exe MState 2 SetActualPriority 16
+47867: Thread wmdrmserver.exe::!wmdrmserver.exe Killed -5
+47868: Thread wmdrmserver.exe::!wmdrmserver.exe ReleaseWait() retcode=-13
+47870: Process wmdrmserver.exe Die: 0 -5 Kill
+	wmdrmserver.exe: #1, 1 threads, lifetime 47695-47870
+47882: Thread wmdrmserver.exe::!wmdrmserver.exe SvKill()
+47887: Thread wmdrmserver.exe::!wmdrmserver.exe Release()
+47939: DLibrary RightsServer.EXE::wmdrmclientwrapper.dll Close m=-1
+47954: Thread DcfRepSrv.EXE::CDcfRepSrv Logon to process RightsServer.EXE, status at 0060050c rdv=0
+48026: Thread DRMHELPERSERVER.EXE::Main DoCreate: Function 840e02b8 Ptr 00000000
+48033: Thread DRMHELPERSERVER.EXE::Main SetDefaultPriority 12
+48034: Thread DRMHELPERSERVER.EXE::Main SetRequiredPriority def 12 cleanup -1 nest 0
+48035: Thread DRMHELPERSERVER.EXE::Main MState 0 SetActualPriority 12
+48036: AddThread DRMHELPERSERVER.EXE::Main to DRMHELPERSERVER.EXE
+Renaming DRMHELPERSERVER.EXE (48036,1) to DRMHelperServer
+48197: DProcess::Rename DRMHELPERSERVER.EXE to DRMHelperServer
+48877: DLibrary aknskinsrv.exe::OmaDrmAgent.dll Close m=-1
+48975: DLibrary aknskinsrv.exe::wmdrmagent.dll Close m=-1
+49073: DLibrary aknskinsrv.exe::f32agent.dll Close m=-1
+49749: DLibrary aknskinsrv.exe::OmaDrmAgent.dll Close m=-1
+49847: DLibrary aknskinsrv.exe::wmdrmagent.dll Close m=-1
+49957: DLibrary aknskinsrv.exe::f32agent.dll Close m=-1
+49978: Thread akncapserver::akncapserver SetDefaultPriority 12
+49979: Thread akncapserver::akncapserver SetRequiredPriority def 12 cleanup -1 nest 0
+49980: Thread akncapserver::akncapserver MState 2 SetActualPriority 12
+49990: Thread EwSrv.exe::00d003608fc71fee SetRequiredPriority def 21 cleanup 21 nest 1
+49991: Thread EwSrv.exe::00d003608fc71fee RevertPriority def 21 cleanup 0
+49993: Thread EwSrv.exe::00d003608fc71fee SetRequiredPriority def 21 cleanup 21 nest 1
+49994: Thread EwSrv.exe::00d003608fc71fee RevertPriority def 21 cleanup -1
+50013: Thread EikSrvs.exe::EikAppUiServerThread SetDefaultPriority 19
+50014: Thread EikSrvs.exe::EikAppUiServerThread SetRequiredPriority def 19 cleanup 0 nest 0
+50015: Thread EikSrvs.exe::EikAppUiServerThread MState 2 SetActualPriority 19
+50398: Thread EikSrvs.exe::EikAppUiServerThread SetRequiredPriority def 19 cleanup 21 nest 1
+50399: Thread EikSrvs.exe::EikAppUiServerThread MState 2 SetActualPriority 21
+50400: Thread EikSrvs.exe::EikAppUiServerThread RevertPriority def 19 cleanup -1
+50426: Thread EikSrvs.exe::UikonWatchers DoCreate: Function 842b7ac1 Ptr 00000000
+50433: Thread EikSrvs.exe::UikonWatchers SetDefaultPriority 19
+50434: Thread EikSrvs.exe::UikonWatchers SetRequiredPriority def 19 cleanup -1 nest 0
+50435: Thread EikSrvs.exe::UikonWatchers MState 0 SetActualPriority 19
+50436: AddThread EikSrvs.exe::UikonWatchers to EikSrvs.exe
+50446: Thread EikSrvs.exe::ViewServerThread DoCreate: Function 814904dd Ptr 00406328
+50453: Thread EikSrvs.exe::ViewServerThread SetDefaultPriority 19
+50454: Thread EikSrvs.exe::ViewServerThread SetRequiredPriority def 19 cleanup -1 nest 0
+50455: Thread EikSrvs.exe::ViewServerThread MState 0 SetActualPriority 19
+50459: Thread EikSrvs.exe::UikonWatchers SetDefaultPriority 18
+50460: Thread EikSrvs.exe::UikonWatchers SetRequiredPriority def 18 cleanup -1 nest 0
+50461: Thread EikSrvs.exe::UikonWatchers MState 2 SetActualPriority 18
+50462: AddThread EikSrvs.exe::ViewServerThread to EikSrvs.exe
+50463: Thread EikSrvs.exe::EikAppUiServerThread Logon to thread EikSrvs.exe::ViewServerThread, status at 00406320 rdv=1
+51000: DLibrary EikSrvs.exe::c32root.dll Close m=-1
+53551: Thread FLogSvr.exe::Main DoCreate: Function 80377228 Ptr 00000000
+53558: Thread FLogSvr.exe::Main SetDefaultPriority 12
+53559: Thread FLogSvr.exe::Main SetRequiredPriority def 12 cleanup -1 nest 0
+53560: Thread FLogSvr.exe::Main MState 0 SetActualPriority 12
+53561: AddThread FLogSvr.exe::Main to FLogSvr.exe
+53693: Thread EikSrvs.exe::EikAppUiServerThread Logon to process FLogSvr.exe, status at 004057b0 rdv=1
+53734: DLibrary EComServer.exe::xmlcustomresolver.dll Close m=-1
+53763: Thread FLogSvr.exe::!FLogger server SetRequiredPriority def 12 cleanup 21 nest 1
+53764: Thread FLogSvr.exe::!FLogger server MState 2 SetActualPriority 21
+53765: Thread FLogSvr.exe::!FLogger server RevertPriority def 12 cleanup -1
+64849: Thread efile.exe::LoaderThread SetRequiredPriority def 21 cleanup 21 nest 1
+64850: Thread efile.exe::LoaderThread RevertPriority def 21 cleanup -1
+68048: Thread efile.exe::LoaderThread SetRequiredPriority def 21 cleanup 21 nest 1
+68049: Thread efile.exe::LoaderThread RevertPriority def 21 cleanup -1
+75543: Thread efile.exe::LoaderThread SetRequiredPriority def 21 cleanup 21 nest 1
+75544: Thread efile.exe::LoaderThread RevertPriority def 21 cleanup -1
+78671: Thread FLogSvr.exe::!FLogger server SetRequiredPriority def 12 cleanup 21 nest 1
+78672: Thread FLogSvr.exe::!FLogger server MState 2 SetActualPriority 21
+78674: Thread FLogSvr.exe::!FLogger server RevertPriority def 12 cleanup -1
+84620: Thread EikSrvs.exe::KeySoundServerThread DoCreate: Function 842b9f37 Ptr 00000000
+84627: Thread EikSrvs.exe::KeySoundServerThread SetDefaultPriority 19
+84628: Thread EikSrvs.exe::KeySoundServerThread SetRequiredPriority def 19 cleanup -1 nest 0
+84629: Thread EikSrvs.exe::KeySoundServerThread MState 0 SetActualPriority 19
+84631: AddThread EikSrvs.exe::KeySoundServerThread to EikSrvs.exe
+84635: Thread EikSrvs.exe::KeySoundServerThread SetDefaultPriority 15
+84636: Thread EikSrvs.exe::KeySoundServerThread SetRequiredPriority def 15 cleanup -1 nest 0
+84637: Thread EikSrvs.exe::KeySoundServerThread MState 2 SetActualPriority 15
+84645: Thread FLogSvr.exe::!FLogger server Die: 0,0,
+84646: Thread FLogSvr.exe::!FLogger server SetDefaultPriority 16
+84647: Thread FLogSvr.exe::!FLogger server SetRequiredPriority def 16 cleanup -1 nest 0
+84648: Thread FLogSvr.exe::!FLogger server MState 2 SetActualPriority 16
+84649: Thread FLogSvr.exe::!FLogger server ReleaseWait() retcode=-13
+84651: Process FLogSvr.exe Die: 0 0 Kill
+	FLogSvr.exe: #1, 1 threads, lifetime 53561-84651
+84663: Thread FLogSvr.exe::!FLogger server SvKill()
+84668: Thread FLogSvr.exe::!FLogger server Release()
+85367: Thread HWRMServer.exe::Main DoCreate: Function 80f364a8 Ptr 00000000
+85374: Thread HWRMServer.exe::Main SetDefaultPriority 12
+85375: Thread HWRMServer.exe::Main SetRequiredPriority def 12 cleanup -1 nest 0
+85376: Thread HWRMServer.exe::Main MState 0 SetActualPriority 12
+85377: AddThread HWRMServer.exe::Main to HWRMServer.exe
+85508: Thread EwSrv.exe::Wserv Logon to process HWRMServer.exe, status at 0040e798 rdv=1
+Renaming HWRMServer.exe (85377,1) to !HWRMServer
+85539: DProcess::Rename HWRMServer.exe to !HWRMServer
+85547: Thread !HWRMServer::!HWRMServer SetDefaultPriority 12
+85548: Thread !HWRMServer::!HWRMServer SetRequiredPriority def 12 cleanup 0 nest 0
+85749: Thread !HWRMServer::!HWRMServer SetRequiredPriority def 12 cleanup 21 nest 1
+85750: Thread !HWRMServer::!HWRMServer MState 2 SetActualPriority 21
+85751: Thread !HWRMServer::!HWRMServer RevertPriority def 12 cleanup 0
+85753: Thread !HWRMServer::!HWRMServer SetRequiredPriority def 12 cleanup 21 nest 1
+85754: Thread !HWRMServer::!HWRMServer MState 2 SetActualPriority 21
+85755: Thread !HWRMServer::!HWRMServer RevertPriority def 12 cleanup -1
+85978: Thread !HWRMServer::!HWRMServer SetRequiredPriority def 12 cleanup 21 nest 1
+85979: Thread !HWRMServer::!HWRMServer MState 2 SetActualPriority 21
+85980: Thread !HWRMServer::!HWRMServer RevertPriority def 12 cleanup 0
+86339: Thread mmfaudioserverstart.exe::Main DoCreate: Function 802419a8 Ptr 00000000
+86346: Thread mmfaudioserverstart.exe::Main SetDefaultPriority 12
+86347: Thread mmfaudioserverstart.exe::Main SetRequiredPriority def 12 cleanup -1 nest 0
+86348: Thread mmfaudioserverstart.exe::Main MState 0 SetActualPriority 12
+86349: AddThread mmfaudioserverstart.exe::Main to mmfaudioserverstart.exe
+86480: Thread EikSrvs.exe::KeySoundServerThread Logon to process mmfaudioserverstart.exe, status at 00412a54 rdv=1
+86516: Thread mmfaudioserverstart.exe::Main SetRequiredPriority def 12 cleanup 21 nest 1
+86517: Thread mmfaudioserverstart.exe::Main MState 2 SetActualPriority 21
+86518: Thread mmfaudioserverstart.exe::Main RevertPriority def 12 cleanup -1
+86530: Thread mmfaudioserverstart.exe::Local-c808a960 DoCreate: Function 80238f5f Ptr 00403d18
+86537: Thread mmfaudioserverstart.exe::Local-c808a960 SetDefaultPriority 12
+86538: Thread mmfaudioserverstart.exe::Local-c808a960 SetRequiredPriority def 12 cleanup -1 nest 0
+86539: Thread mmfaudioserverstart.exe::Local-c808a960 MState 0 SetActualPriority 12
+86540: AddThread mmfaudioserverstart.exe::Local-c808a960 to mmfaudioserverstart.exe
+86543: Thread mmfaudioserverstart.exe::Local-c808a960 SetDefaultPriority 24
+86544: Thread mmfaudioserverstart.exe::Local-c808a960 SetRequiredPriority def 24 cleanup -1 nest 0
+86545: Thread mmfaudioserverstart.exe::Local-c808a960 MState 2 SetActualPriority 24
+86546: Thread mmfaudioserverstart.exe::Main Logon to thread mmfaudioserverstart.exe::Local-c808a960, status at 00403d10 rdv=1
+86555: Thread mmfaudioserverstart.exe::MMFDevSoundServer-6b SetDefaultPriority 23
+86556: Thread mmfaudioserverstart.exe::MMFDevSoundServer-6b SetRequiredPriority def 23 cleanup -1 nest 0
+86557: Thread mmfaudioserverstart.exe::MMFDevSoundServer-6b MState 2 SetActualPriority 23
+86570: Thread mmfaudioserverstart.exe::MMRCServer DoCreate: Function 8125785d Ptr 00000000
+86577: Thread mmfaudioserverstart.exe::MMRCServer SetDefaultPriority 12
+86578: Thread mmfaudioserverstart.exe::MMRCServer SetRequiredPriority def 12 cleanup -1 nest 0
+86579: Thread mmfaudioserverstart.exe::MMRCServer MState 0 SetActualPriority 12
+86580: AddThread mmfaudioserverstart.exe::MMRCServer to mmfaudioserverstart.exe
+86583: Thread mmfaudioserverstart.exe::MMRCServer SetDefaultPriority 12
+86584: Thread mmfaudioserverstart.exe::MMRCServer SetRequiredPriority def 12 cleanup -1 nest 0
+86585: Thread mmfaudioserverstart.exe::MMFDevSoundServer-6b Logon to thread mmfaudioserverstart.exe::MMRCServer, status at 00409830 rdv=1
+86616: Thread EComServer.exe::!ecomserver SetRequiredPriority def 12 cleanup 21 nest 1
+86617: Thread EComServer.exe::!ecomserver MState 2 SetActualPriority 21
+86618: Thread EComServer.exe::!ecomserver RevertPriority def 12 cleanup 0
+87603: Thread mmfaudioserverstart.exe::Main Logon to thread mmfaudioserverstart.exe::MMFDevSoundServer-6b, status at 006002ac rdv=0
+93422: Thread efile.exe::LoaderThread SetRequiredPriority def 21 cleanup 21 nest 1
+93423: Thread efile.exe::LoaderThread RevertPriority def 21 cleanup -1
+95286: Thread akncapserver::akncapserver SetDefaultPriority 7
+95287: Thread akncapserver::akncapserver SetRequiredPriority def 7 cleanup -1 nest 0
+95288: Thread akncapserver::akncapserver MState 2 SetActualPriority 7
+95291: Thread EikSrvs.exe::EikAppUiServerThread SetRequiredPriority def 19 cleanup 21 nest 1
+95292: Thread EikSrvs.exe::EikAppUiServerThread MState 2 SetActualPriority 21
+95293: Thread EikSrvs.exe::EikAppUiServerThread RevertPriority def 19 cleanup -1
+95298: Thread akncapserver::akncapserver SetRequiredPriority def 7 cleanup 21 nest 1
+95299: Thread akncapserver::akncapserver MState 2 SetActualPriority 21
+95300: Thread akncapserver::akncapserver RevertPriority def 7 cleanup -1
+96693: Thread psmserver.exe::Main DoCreate: Function 8661fe18 Ptr 00000000
+96700: Thread psmserver.exe::Main SetDefaultPriority 12
+96701: Thread psmserver.exe::Main SetRequiredPriority def 12 cleanup -1 nest 0
+96702: Thread psmserver.exe::Main MState 0 SetActualPriority 12
+96703: AddThread psmserver.exe::Main to psmserver.exe
+97056: Thread akncapserver::akncapserver Logon to process psmserver.exe, status at 0040a028 rdv=1
+Renaming psmserver.exe (96703,1) to !PsmServer
+97137: DProcess::Rename psmserver.exe to !PsmServer
+97230: Thread efile.exe::LoaderThread SetRequiredPriority def 21 cleanup 21 nest 1
+97231: Thread efile.exe::LoaderThread RevertPriority def 21 cleanup -1
+98371: Thread akncapserver::akncapserver SetDefaultPriority 19
+98372: Thread akncapserver::akncapserver SetRequiredPriority def 19 cleanup 0 nest 0
+98373: Thread akncapserver::akncapserver MState 2 SetActualPriority 19
+SSM: ***** Execute cmd no. 10 without a delay
+99541: Thread SplashScreen.exe::Main DoCreate: Function 85daea28 Ptr 00000000
+99548: Thread SplashScreen.exe::Main SetDefaultPriority 12
+99549: Thread SplashScreen.exe::Main SetRequiredPriority def 12 cleanup -1 nest 0
+99550: Thread SplashScreen.exe::Main MState 0 SetActualPriority 12
+99551: AddThread SplashScreen.exe::Main to SplashScreen.exe
+100184: Thread efile.exe::LoaderThread SetRequiredPriority def 21 cleanup 21 nest 1
+100185: Thread efile.exe::LoaderThread RevertPriority def 21 cleanup 0
+100285: Thread sysstatemgr.exe::!CleSrv_22f5d001 Logon to process SplashScreen.exe, status at 008013ac rdv=1
+SSM: Initiating transition to state 0000.0031.
+101228: DLibrary akncapserver::AknFepUiAvkonPlugin.dll Close m=0
+101810: Thread ekern.exe::Supervisor SetRequiredPriority def 16 cleanup 21 nest 1
+101811: Thread ekern.exe::Supervisor MState 2 SetActualPriority 21
+101812: Thread ekern.exe::Supervisor RevertPriority def 16 cleanup -1
+101827: DLibrary sysstatemgr.exe::akncustcmds.dll Close m=0
+101862: Thread sysstatemgr.exe::!CleSrv_22f5d001 SetRequiredPriority def 12 cleanup 21 nest 1
+101863: Thread sysstatemgr.exe::!CleSrv_22f5d001 MState 2 SetActualPriority 21
+101953: Thread sysstatemgr.exe::!CleSrv_22f5d001 RevertPriority def 12 cleanup 0
+103073: Thread sysstatemgr.exe::!CleSrv_22f5d001 SetRequiredPriority def 12 cleanup 21 nest 1
+103074: Thread sysstatemgr.exe::!CleSrv_22f5d001 MState 2 SetActualPriority 21
+103208: Thread sysstatemgr.exe::!CleSrv_22f5d001 RevertPriority def 12 cleanup 0
+103490: Thread AknIconSrv.exe::ICLThread.00063456526852754375.00603158 DoCreate: Function 80fa2d39 Ptr 00404458
+103497: Thread AknIconSrv.exe::ICLThread.00063456526852754375.00603158 SetDefaultPriority 19
+103498: Thread AknIconSrv.exe::ICLThread.00063456526852754375.00603158 SetRequiredPriority def 19 cleanup -1 nest 0
+103499: Thread AknIconSrv.exe::ICLThread.00063456526852754375.00603158 MState 0 SetActualPriority 19
+103500: AddThread AknIconSrv.exe::ICLThread.00063456526852754375.00603158 to AknIconSrv.exe
+103504: Thread AknIconSrv.exe::ICLThread.00063456526852754375.00603158 SetDefaultPriority 18
+103505: Thread AknIconSrv.exe::ICLThread.00063456526852754375.00603158 SetRequiredPriority def 18 cleanup -1 nest 0
+103506: Thread AknIconSrv.exe::ICLThread.00063456526852754375.00603158 MState 2 SetActualPriority 18
+103507: Thread AknIconSrv.exe::!AknIconServer Logon to thread AknIconSrv.exe::ICLThread.00063456526852754375.00603158, status at 00404328 rdv=0
+103526: Thread AknIconSDTimer::Create thread EwSrv.exe::00d003608fc71fee
+103529: Thread AknIconSrv.exe::!AknIconServer Logon to thread AknIconSrv.exe::ICLThread.00063456526852754375.00603158, status at 00404478 rdv=0
+103531: Thread AknIconSrv.exe::!AknIconServer Logon to thread AknIconSrv.exe::ICLThread.00063456526852754375.00603158, status at 00404488 rdv=0
+103536: Thread AknIconSrv.exe::ICLThread.00063456526852754375.00603158 SetDefaultPriority 19
+103537: Thread AknIconSrv.exe::ICLThread.00063456526852754375.00603158 SetRequiredPriority def 19 cleanup -1 nest 0
+103538: Thread AknIconSrv.exe::ICLThread.00063456526852754375.00603158 MState 2 SetActualPriority 19
+103541: Thread AknIconSrv.exe::!AknIconServer Logon to thread AknIconSrv.exe::ICLThread.00063456526852754375.00603158, status at 00404510 rdv=0
+103570: Thread AknIconSrv.exe::ICLThread.00063456526852754375.00603158 SetDefaultPriority 19
+103571: Thread AknIconSrv.exe::ICLThread.00063456526852754375.00603158 SetRequiredPriority def 19 cleanup -1 nest 0
+103572: Thread AknIconSrv.exe::!AknIconServer Logon to thread AknIconSrv.exe::ICLThread.00063456526852754375.00603158, status at 00404988 rdv=0
+103576: Thread AknIconSrv.exe::ICLThread.00063456526852754375.00603158 SetDefaultPriority 18
+103577: Thread AknIconSrv.exe::ICLThread.00063456526852754375.00603158 SetRequiredPriority def 18 cleanup -1 nest 0
+103578: Thread AknIconSrv.exe::ICLThread.00063456526852754375.00603158 MState 2 SetActualPriority 18
+103579: Thread AknIconSrv.exe::!AknIconServer Logon to thread AknIconSrv.exe::ICLThread.00063456526852754375.00603158, status at 0040498c rdv=0
+103590: Thread AknIconSrv.exe::ICLThread.00063456526852754375.00603158 Die: 0,0,
+103591: Thread AknIconSrv.exe::ICLThread.00063456526852754375.00603158 SetDefaultPriority 16
+103592: Thread AknIconSrv.exe::ICLThread.00063456526852754375.00603158 SetRequiredPriority def 16 cleanup -1 nest 0
+103593: Thread AknIconSrv.exe::ICLThread.00063456526852754375.00603158 MState 2 SetActualPriority 16
+103595: Thread AknIconSrv.exe::ICLThread.00063456526852754375.00603158 ReleaseWait() retcode=-13
+103614: Thread AknIconSrv.exe::ICLThread.00063456526852754375.00603158 SvKill()
+103617: Thread AknIconSrv.exe::ICLThread.00063456526852754375.00603158 Release()
+SSM: ***** Execute cmd no. 0 without a delay
+103799: DLibrary akncapserver::avkonfep.dll Close m=1
+103803: Thread EComServer.exe::!ecomserver SetRequiredPriority def 12 cleanup 19 nest 1
+103804: Thread EComServer.exe::!ecomserver MState 2 SetActualPriority 19
+103817: DLibrary EComServer.exe::imageconversionresolver.dll Close m=-1
+103818: Thread EComServer.exe::!ecomserver RevertPriority def 12 cleanup -1
+103819: DLibrary akncapserver::AknFepUiAvkonPlugin.dll Close m=0
+104410: DLibrary akncapserver::avkonfep.dll Close m=0
+104953: Thread akncapserver::OOM FW DoCreate: Function 84914c75 Ptr 00000000
+104961: Thread akncapserver::OOM FW SetDefaultPriority 19
+104962: Thread akncapserver::OOM FW SetRequiredPriority def 19 cleanup -1 nest 0
+104963: Thread akncapserver::OOM FW MState 0 SetActualPriority 19
+104964: AddThread akncapserver::OOM FW to akncapserver
+104968: Thread akncapserver::OOM FW SetDefaultPriority 23
+104969: Thread akncapserver::OOM FW SetRequiredPriority def 23 cleanup -1 nest 0
+104970: Thread akncapserver::OOM FW MState 2 SetActualPriority 23
+104999: Thread akncapserver::GOOM FW DoCreate: Function 8434e97d Ptr 00000000
+105006: Thread akncapserver::GOOM FW SetDefaultPriority 19
+105007: Thread akncapserver::GOOM FW SetRequiredPriority def 19 cleanup -1 nest 0
+105008: Thread akncapserver::GOOM FW MState 0 SetActualPriority 19
+105009: AddThread akncapserver::GOOM FW to akncapserver
+105017: Thread akncapserver::GOOM FW SetDefaultPriority 23
+105018: Thread akncapserver::GOOM FW SetRequiredPriority def 23 cleanup -1 nest 0
+105019: Thread akncapserver::GOOM FW MState 2 SetActualPriority 23
+105073: Thread akncapserver::GOOM FW Die: 0,0,
+105074: Thread akncapserver::GOOM FW SetDefaultPriority 16
+105075: Thread akncapserver::GOOM FW SetRequiredPriority def 16 cleanup -1 nest 0
+105076: Thread akncapserver::GOOM FW MState 2 SetActualPriority 16
+105079: Thread akncapserver::GOOM FW ReleaseWait() retcode=-13
+105089: Thread akncapserver::GOOM FW SvKill()
+105092: Thread akncapserver::GOOM FW Release()
+105112: Thread akncapserver::akncapserver SetRequiredPriority def 19 cleanup 21 nest 1
+105113: Thread akncapserver::akncapserver MState 2 SetActualPriority 21
+105114: Thread akncapserver::akncapserver RevertPriority def 19 cleanup -1
+105186: Thread alarmserver.exe::Main DoCreate: Function 802f5818 Ptr 00000000
+105193: Thread alarmserver.exe::Main SetDefaultPriority 12
+105194: Thread alarmserver.exe::Main SetRequiredPriority def 12 cleanup -1 nest 0
+105195: Thread alarmserver.exe::Main MState 0 SetActualPriority 12
+105196: AddThread alarmserver.exe::Main to alarmserver.exe
+105327: Thread EikSrvs.exe::EikAppUiServerThread Logon to process alarmserver.exe, status at 00406770 rdv=1
+105914: DLibrary akncapserver::xmlparserplugin.dll Close m=-1
+SSM: ***** Execute cmd no. 1 without a delay
+110062: Thread aknnfysrv.exe::Main DoCreate: Function 82d15318 Ptr 00000000
+110069: Thread aknnfysrv.exe::Main SetDefaultPriority 12
+110070: Thread aknnfysrv.exe::Main SetRequiredPriority def 12 cleanup -1 nest 0
+110071: Thread aknnfysrv.exe::Main MState 0 SetActualPriority 12
+110073: AddThread aknnfysrv.exe::Main to aknnfysrv.exe
+113003: Thread aknnfysrv.exe::Main SetRequiredPriority def 12 cleanup 21 nest 1
+113004: Thread aknnfysrv.exe::Main MState 2 SetActualPriority 21
+113112: Thread aknnfysrv.exe::Main RevertPriority def 12 cleanup -1
+114421: Thread aknnfysrv.exe::aknnfysrv SetRequiredPriority def 12 cleanup 19 nest 1
+114422: Thread aknnfysrv.exe::aknnfysrv MState 2 SetActualPriority 19
+114423: Thread aknnfysrv.exe::aknnfysrv RevertPriority def 12 cleanup -1
+SSM: ***** Execute cmd no. 2 without a delay
+SSM: ***** Execute cmd no. 3 without a delay
+SSM: Starting : z:\sys\bin\matrixmenu.exe with arguments :  and Execution behaviour : 3
+SSM: ***** Execute cmd no. 4 without a delay
+115767: Thread aknnfysrv.exe::aknnfysrv SetRequiredPriority def 12 cleanup 21 nest 1
+115768: Thread aknnfysrv.exe::aknnfysrv MState 2 SetActualPriority 21
+115769: Thread aknnfysrv.exe::aknnfysrv RevertPriority def 12 cleanup -1
+115863: Thread matrixmenu.exe::Main DoCreate: Function 825dac38 Ptr 00000000
+115870: Thread matrixmenu.exe::Main SetDefaultPriority 12
+115871: Thread matrixmenu.exe::Main SetRequiredPriority def 12 cleanup -1 nest 0
+115872: Thread matrixmenu.exe::Main MState 0 SetActualPriority 12
+115873: AddThread matrixmenu.exe::Main to matrixmenu.exe
+116605: Thread sysstatemgr.exe::!CleSrv_22f5d001 Logon to process matrixmenu.exe, status at 00800a74 rdv=1
+116896: DLibrary EComServer.exe::xmlcustomresolver.dll Close m=-1
+116904: Thread matrixmenu.exe::Main SetRequiredPriority def 12 cleanup 19 nest 1
+116905: Thread matrixmenu.exe::Main MState 2 SetActualPriority 19
+116906: Thread matrixmenu.exe::Main RevertPriority def 12 cleanup -1
+117006: Thread akncapserver::akncapserver SetRequiredPriority def 19 cleanup 21 nest 1
+117007: Thread akncapserver::akncapserver MState 2 SetActualPriority 21
+117008: Thread akncapserver::akncapserver RevertPriority def 19 cleanup -1
+117099: Thread matrixmenu.exe::Main SetRequiredPriority def 12 cleanup 21 nest 1
+117100: Thread matrixmenu.exe::Main MState 2 SetActualPriority 21
+117150: Thread matrixmenu.exe::Main RevertPriority def 12 cleanup -1
+117246: Thread akncapserver::akncapserver SetRequiredPriority def 19 cleanup 21 nest 1
+117247: Thread akncapserver::akncapserver MState 2 SetActualPriority 21
+117248: Thread akncapserver::akncapserver RevertPriority def 19 cleanup 0
+117250: Thread akncapserver::akncapserver SetRequiredPriority def 19 cleanup 21 nest 1
+117251: Thread akncapserver::akncapserver MState 2 SetActualPriority 21
+117252: Thread akncapserver::akncapserver RevertPriority def 19 cleanup -1
+117386: Thread aknnfysrv.exe::aknnfysrv SetRequiredPriority def 12 cleanup 19 nest 1
+117387: Thread aknnfysrv.exe::aknnfysrv MState 2 SetActualPriority 19
+117388: Thread aknnfysrv.exe::aknnfysrv RevertPriority def 12 cleanup -1
+117556: Thread PhoneServer.exe::Main DoCreate: Function 8497d6d8 Ptr 00000000
+117563: Thread PhoneServer.exe::Main SetDefaultPriority 12
+117564: Thread PhoneServer.exe::Main SetRequiredPriority def 12 cleanup -1 nest 0
+117565: Thread PhoneServer.exe::Main MState 0 SetActualPriority 12
+117566: AddThread PhoneServer.exe::Main to PhoneServer.exe
+118298: Thread PhoneServer.exe::Main SetDefaultPriority 19
+118299: Thread PhoneServer.exe::Main SetRequiredPriority def 19 cleanup -1 nest 0
+118300: Thread PhoneServer.exe::Main MState 2 SetActualPriority 19
+118301: Thread akncapserver::akncapserver Logon to process PhoneServer.exe, status at 0040a0e0 rdv=1
+118492: Thread akncapserver::akncapserver SetRequiredPriority def 19 cleanup 21 nest 1
+118493: Thread akncapserver::akncapserver MState 2 SetActualPriority 21
+118494: Thread akncapserver::akncapserver RevertPriority def 19 cleanup 0
+118903: Thread ekern.exe::Supervisor SetRequiredPriority def 16 cleanup 21 nest 1
+118904: Thread ekern.exe::Supervisor MState 2 SetActualPriority 21
+118905: Thread ekern.exe::Supervisor RevertPriority def 16 cleanup -1
+121098: Thread aknnfysrv.exe::aknnfysrv SetDefaultPriority 7
+121099: Thread aknnfysrv.exe::aknnfysrv SetRequiredPriority def 7 cleanup 0 nest 0
+121100: Thread aknnfysrv.exe::aknnfysrv MState 2 SetActualPriority 7
+Renaming matrixmenu.exe (115873,1) to Menu
+121776: DProcess::Rename matrixmenu.exe to Menu
+122029: Thread akncapserver::akncapserver SetRequiredPriority def 19 cleanup 21 nest 1
+122030: Thread akncapserver::akncapserver MState 2 SetActualPriority 21
+122031: Thread akncapserver::akncapserver RevertPriority def 19 cleanup -1
+122041: Thread Menu::Menu SetRequiredPriority def 12 cleanup 21 nest 1
+122042: Thread Menu::Menu MState 2 SetActualPriority 21
+122043: Thread Menu::Menu RevertPriority def 12 cleanup -1
+122272: Thread ekern.exe::Supervisor SetRequiredPriority def 16 cleanup 21 nest 1
+122273: Thread ekern.exe::Supervisor MState 2 SetActualPriority 21
+122274: Thread ekern.exe::Supervisor RevertPriority def 16 cleanup -1
+122284: Thread Menu::Menu SetRequiredPriority def 12 cleanup 21 nest 1
+122285: Thread Menu::Menu MState 2 SetActualPriority 21
+122286: Thread Menu::Menu RevertPriority def 12 cleanup -1
+122295: Thread akncapserver::akncapserver SetRequiredPriority def 19 cleanup 21 nest 1
+122296: Thread akncapserver::akncapserver MState 2 SetActualPriority 21
+122297: Thread akncapserver::akncapserver RevertPriority def 19 cleanup -1
+122303: Thread EikSrvs.exe::EikAppUiServerThread SetDefaultPriority 19
+122304: Thread EikSrvs.exe::EikAppUiServerThread SetRequiredPriority def 19 cleanup 0 nest 0
+122307: Thread EikSrvs.exe::UikonWatchers SetDefaultPriority 18
+122308: Thread EikSrvs.exe::UikonWatchers SetRequiredPriority def 18 cleanup -1 nest 0
+122311: Thread EikSrvs.exe::ViewServerThread SetDefaultPriority 19
+122312: Thread EikSrvs.exe::ViewServerThread SetRequiredPriority def 19 cleanup -1 nest 0
+122315: Thread EikSrvs.exe::KeySoundServerThread SetDefaultPriority 15
+122316: Thread EikSrvs.exe::KeySoundServerThread SetRequiredPriority def 15 cleanup -1 nest 0
+122325: Thread Menu::Menu SetRequiredPriority def 12 cleanup 21 nest 1
+122326: Thread Menu::Menu MState 2 SetActualPriority 21
+122327: Thread Menu::Menu RevertPriority def 12 cleanup -1
+122350: Thread fbserv.exe::!Fontbitmapserver Logon to thread fbserv.exe::FbsBgCompressThread, status at 0060673c rdv=1
+122401: Thread Menu::Menu SetRequiredPriority def 12 cleanup 21 nest 1
+122402: Thread Menu::Menu MState 2 SetActualPriority 21
+122403: Thread Menu::Menu RevertPriority def 12 cleanup -1
+122417: Thread ekern.exe::Supervisor SetRequiredPriority def 16 cleanup 21 nest 1
+122418: Thread ekern.exe::Supervisor MState 2 SetActualPriority 21
+122419: Thread ekern.exe::Supervisor RevertPriority def 16 cleanup -1
+123158: DLibrary Menu::xmlparserplugin.dll Close m=-1
+126764: Thread mcsmenuserver.exe::Main DoCreate: Function 844f74a8 Ptr 00000000
+126771: Thread mcsmenuserver.exe::Main SetDefaultPriority 12
+126772: Thread mcsmenuserver.exe::Main SetRequiredPriority def 12 cleanup -1 nest 0
+126773: Thread mcsmenuserver.exe::Main MState 0 SetActualPriority 12
+126774: AddThread mcsmenuserver.exe::Main to mcsmenuserver.exe
+128659: Thread Menu::Menu Logon to process mcsmenuserver.exe, status at 004037d0 rdv=1
+128935: Thread mcsmenuserver.exe::Main SetRequiredPriority def 12 cleanup 21 nest 1
+128936: Thread mcsmenuserver.exe::Main MState 2 SetActualPriority 21
+129145: Thread mcsmenuserver.exe::Main RevertPriority def 12 cleanup -1
+129246: Thread c32exe.exe::ESock_Bt DoCreate: Function 807a328d Ptr 006066c4
+129253: Thread c32exe.exe::ESock_Bt SetDefaultPriority 19
+129254: Thread c32exe.exe::ESock_Bt SetRequiredPriority def 19 cleanup -1 nest 0
+129255: Thread c32exe.exe::ESock_Bt MState 0 SetActualPriority 19
+129256: AddThread c32exe.exe::ESock_Bt to c32exe.exe
+129257: Thread c32exe.exe::!RootServer Logon to thread c32exe.exe::ESock_Bt, status at 006063dc rdv=1
+129264: Thread c32exe.exe::ESock_Bt SetDefaultPriority 20
+129265: Thread c32exe.exe::ESock_Bt SetRequiredPriority def 20 cleanup -1 nest 0
+129266: Thread c32exe.exe::ESock_Bt MState 2 SetActualPriority 20
+129367: Thread c32exe.exe::!RootServer Logon to thread c32exe.exe::ESock_Bt, status at 00601694 rdv=0
+129700: Thread mcsmenuserver.exe::Main SetRequiredPriority def 12 cleanup 21 nest 1
+129701: Thread mcsmenuserver.exe::Main MState 2 SetActualPriority 21
+129702: Thread mcsmenuserver.exe::Main RevertPriority def 12 cleanup 0
+129890: Thread WidgetRegistry.exe::Main DoCreate: Function 862e1528 Ptr 00000000
+129897: Thread WidgetRegistry.exe::Main SetDefaultPriority 12
+129898: Thread WidgetRegistry.exe::Main SetRequiredPriority def 12 cleanup -1 nest 0
+129899: Thread WidgetRegistry.exe::Main MState 0 SetActualPriority 12
+129900: AddThread WidgetRegistry.exe::Main to WidgetRegistry.exe
+130630: Thread mcsmenuserver.exe::!MCSSRV Logon to process WidgetRegistry.exe, status at 00406c64 rdv=1
+130778: Thread WidgetRegistry.exe::Main SetRequiredPriority def 12 cleanup 21 nest 1
+130779: Thread WidgetRegistry.exe::Main MState 2 SetActualPriority 21
+130780: Thread WidgetRegistry.exe::Main RevertPriority def 12 cleanup -1
+130794: Thread mcsmenuserver.exe::!MCSSRV SetRequiredPriority def 12 cleanup 21 nest 1
+130795: Thread mcsmenuserver.exe::!MCSSRV MState 2 SetActualPriority 21
+130796: Thread mcsmenuserver.exe::!MCSSRV RevertPriority def 12 cleanup 0
+130905: Thread RTSecMgrServer.exe::Main DoCreate: Function 85cf7698 Ptr 00000000
+130912: Thread RTSecMgrServer.exe::Main SetDefaultPriority 12
+130913: Thread RTSecMgrServer.exe::Main SetRequiredPriority def 12 cleanup -1 nest 0
+130914: Thread RTSecMgrServer.exe::Main MState 0 SetActualPriority 12
+130915: AddThread RTSecMgrServer.exe::Main to RTSecMgrServer.exe
+131047: Thread WidgetRegistry.exe::!WidgetRegistry Logon to process RTSecMgrServer.exe, status at 004075e0 rdv=1
+Renaming RTSecMgrServer.exe (130915,1) to SecurityManagerServer
+131077: DProcess::Rename RTSecMgrServer.exe to SecurityManagerServer
+131082: Thread SecurityManagerServer::SecSrvMain SetDefaultPriority 19
+131083: Thread SecurityManagerServer::SecSrvMain SetRequiredPriority def 19 cleanup 0 nest 0
+131084: Thread SecurityManagerServer::SecSrvMain MState 2 SetActualPriority 19
+131223: Thread SATSERVER.EXE::Main DoCreate: Function 85c75768 Ptr 00000000
+131230: Thread SATSERVER.EXE::Main SetDefaultPriority 12
+131231: Thread SATSERVER.EXE::Main SetRequiredPriority def 12 cleanup -1 nest 0
+131232: Thread SATSERVER.EXE::Main MState 0 SetActualPriority 12
+131233: AddThread SATSERVER.EXE::Main to SATSERVER.EXE
+131963: Thread mcsmenuserver.exe::!MCSSRV Logon to process SATSERVER.EXE, status at 00406c58 rdv=1
+132540: DLibrary EComServer.exe::liwResolver.dll Close m=-1
+132552: DLibrary EComServer.exe::xmlcustomresolver.dll Close m=-1
+133598: Thread EikSrvs.exe::EikAppUiServerThread SetRequiredPriority def 19 cleanup 21 nest 1
+133599: Thread EikSrvs.exe::EikAppUiServerThread MState 2 SetActualPriority 21
+133600: Thread EikSrvs.exe::EikAppUiServerThread RevertPriority def 19 cleanup -1
+133609: Thread ekern.exe::Supervisor SetRequiredPriority def 16 cleanup 21 nest 1
+133610: Thread ekern.exe::Supervisor MState 2 SetActualPriority 21
+133611: Thread ekern.exe::Supervisor RevertPriority def 16 cleanup -1
+133655: Thread Menu::Menu SetRequiredPriority def 12 cleanup 21 nest 1
+133656: Thread Menu::Menu MState 2 SetActualPriority 21
+133657: Thread Menu::Menu RevertPriority def 12 cleanup -1
+133790: Thread SecurityManagerServer::SecSrvMain Die: 0,0,
+133791: Thread SecurityManagerServer::SecSrvMain SetDefaultPriority 16
+133792: Thread SecurityManagerServer::SecSrvMain SetRequiredPriority def 16 cleanup -1 nest 0
+133793: Thread SecurityManagerServer::SecSrvMain MState 2 SetActualPriority 16
+133795: Thread SecurityManagerServer::SecSrvMain ReleaseWait() retcode=-13
+133797: Process SecurityManagerServer Die: 0 0 Kill
+	SecurityManagerServer: #1, 1 threads, lifetime 130915-133797
+133810: Thread SecurityManagerServer::SecSrvMain SvKill()
+133814: Thread SecurityManagerServer::SecSrvMain Release()
+135032: DLibrary Menu::xmlparserplugin.dll Close m=-1
+141165: DLibrary Menu::AknFepUiAvkonPlugin.dll Close m=0
+144105: Thread Menu::Menu SetRequiredPriority def 12 cleanup 21 nest 1
+144106: Thread Menu::Menu MState 2 SetActualPriority 21
+144107: Thread Menu::Menu RevertPriority def 12 cleanup -1
+144111: DLibrary Menu::avkonfep.dll Close m=1
+144115: DLibrary Menu::AknFepUiAvkonPlugin.dll Close m=0
+144383: Thread Menu::Menu SetRequiredPriority def 12 cleanup 12 nest 1
+144754: Thread Menu::Menu RevertPriority def 12 cleanup 0
+144769: DLibrary EComServer.exe::liwResolver.dll Close m=-1
+145170: Thread Menu::Menu SetRequiredPriority def 12 cleanup 12 nest 1
+145412: Thread Menu::Menu RevertPriority def 12 cleanup -1
+145425: DLibrary EComServer.exe::xmlcustomresolver.dll Close m=-1
+145547: Thread AknIconSrv.exe::!AknIconServer SetRequiredPriority def 19 cleanup 21 nest 1
+145548: Thread AknIconSrv.exe::!AknIconServer MState 2 SetActualPriority 21
+145549: Thread AknIconSrv.exe::!AknIconServer RevertPriority def 19 cleanup -1
+145802: Thread ekern.exe::Supervisor SetRequiredPriority def 16 cleanup 21 nest 1
+145803: Thread ekern.exe::Supervisor MState 2 SetActualPriority 21
+145804: Thread ekern.exe::Supervisor RevertPriority def 16 cleanup -1
+146586: Thread akncapserver::akncapserver SetRequiredPriority def 19 cleanup 21 nest 1
+146587: Thread akncapserver::akncapserver MState 2 SetActualPriority 21
+146588: Thread akncapserver::akncapserver RevertPriority def 19 cleanup -1
+148877: DLibrary EikSrvs.exe::OmaDrmAgent.dll Close m=-1
+149578: DLibrary EikSrvs.exe::wmdrmagent.dll Close m=-1
+150280: DLibrary EikSrvs.exe::f32agent.dll Close m=-1
+153346: DLibrary EikSrvs.exe::OmaDrmAgent.dll Close m=-1
+154047: DLibrary EikSrvs.exe::wmdrmagent.dll Close m=-1
+154110: DLibrary EikSrvs.exe::f32agent.dll Close m=-1
+154872: DLibrary Menu::avkonfep.dll Close m=0
+156106: Thread Menu::Menu SetRequiredPriority def 12 cleanup 21 nest 1
+156107: Thread Menu::Menu MState 2 SetActualPriority 21
+156108: Thread Menu::Menu RevertPriority def 12 cleanup -1
+156121: Thread ekern.exe::Supervisor SetRequiredPriority def 16 cleanup 21 nest 1
+156122: Thread ekern.exe::Supervisor MState 2 SetActualPriority 21
+156123: Thread ekern.exe::Supervisor RevertPriority def 16 cleanup -1
+156143: Thread ekern.exe::Supervisor SetRequiredPriority def 16 cleanup 21 nest 1
+156144: Thread ekern.exe::Supervisor MState 2 SetActualPriority 21
+156145: Thread ekern.exe::Supervisor RevertPriority def 16 cleanup -1
+156163: Thread ekern.exe::Supervisor SetRequiredPriority def 16 cleanup 21 nest 1
+156164: Thread ekern.exe::Supervisor MState 2 SetActualPriority 21
+156165: Thread ekern.exe::Supervisor RevertPriority def 16 cleanup -1
+156377: Thread Menu::Menu SetRequiredPriority def 12 cleanup 21 nest 1
+156378: Thread Menu::Menu MState 2 SetActualPriority 21
+156379: Thread Menu::Menu RevertPriority def 12 cleanup -1
+Renaming aknnfysrv.exe (110073,1) to aknnfysrv
+156396: DProcess::Rename aknnfysrv.exe to aknnfysrv
+156414: Thread EikSrvs.exe::EikAppUiServerThread SetRequiredPriority def 19 cleanup 21 nest 1
+156415: Thread EikSrvs.exe::EikAppUiServerThread MState 2 SetActualPriority 21
+156416: Thread EikSrvs.exe::EikAppUiServerThread RevertPriority def 19 cleanup -1
+156429: Thread ekern.exe::Supervisor SetRequiredPriority def 16 cleanup 21 nest 1
+156430: Thread ekern.exe::Supervisor MState 2 SetActualPriority 21
+156431: Thread ekern.exe::Supervisor RevertPriority def 16 cleanup -1
+156440: Thread akncapserver::akncapserver SetRequiredPriority def 19 cleanup 19 nest 1
+156441: Thread akncapserver::akncapserver RevertPriority def 19 cleanup -1
+156448: Thread EikSrvs.exe::EikAppUiServerThread SetRequiredPriority def 19 cleanup 21 nest 1
+156449: Thread EikSrvs.exe::EikAppUiServerThread MState 2 SetActualPriority 21
+156450: Thread EikSrvs.exe::EikAppUiServerThread RevertPriority def 19 cleanup -1
+156458: Thread aknnfysrv::aknnfysrv SetDefaultPriority 19
+156459: Thread aknnfysrv::aknnfysrv SetRequiredPriority def 19 cleanup 0 nest 0
+156460: Thread aknnfysrv::aknnfysrv MState 2 SetActualPriority 19
+157778: DLibrary aknnfysrv::AknFepUiAvkonPlugin.dll Close m=0
+158261: Thread ekern.exe::Supervisor SetRequiredPriority def 16 cleanup 21 nest 1
+158262: Thread ekern.exe::Supervisor MState 2 SetActualPriority 21
+158263: Thread ekern.exe::Supervisor RevertPriority def 16 cleanup -1
+159137: DLibrary aknnfysrv::avkonfep.dll Close m=1
+159140: DLibrary aknnfysrv::AknFepUiAvkonPlugin.dll Close m=0
+160763: DLibrary aknnfysrv::avkonfep.dll Close m=0
+161259: Thread AknIconSrv.exe::AknIconPrecache2 Die: 0,0,
+161260: Thread AknIconSrv.exe::AknIconPrecache2 SetDefaultPriority 16
+161261: Thread AknIconSrv.exe::AknIconPrecache2 SetRequiredPriority def 16 cleanup -1 nest 0
+161262: Thread AknIconSrv.exe::AknIconPrecache2 MState 2 SetActualPriority 16
+161263: Thread AknIconSrv.exe::AknIconPrecache2 ReleaseWait() retcode=-13
+161273: Thread AknIconSrv.exe::AknIconPrecache2 SvKill()
+161276: Thread AknIconSrv.exe::AknIconPrecache2 Release()
+161297: Thread fbserv.exe::FbsBgCompressThread SetRequiredPriority def 1 cleanup 19 nest 1
+161298: Thread fbserv.exe::FbsBgCompressThread MState 2 SetActualPriority 19
+161299: Thread fbserv.exe::FbsBgCompressThread RevertPriority def 1 cleanup -1
+161302: Thread fbserv.exe::!Fontbitmapserver Logon to thread fbserv.exe::FbsBgCompressThread, status at 0060673c rdv=1
+161311: Thread fbserv.exe::FbsBgCompressThread SetRequiredPriority def 1 cleanup 19 nest 1
+161312: Thread fbserv.exe::FbsBgCompressThread MState 2 SetActualPriority 19
+161313: Thread fbserv.exe::FbsBgCompressThread RevertPriority def 1 cleanup -1
+166246: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+166258: Thread ekern.exe::Supervisor SetRequiredPriority def 16 cleanup 21 nest 1
+166259: Thread ekern.exe::Supervisor MState 2 SetActualPriority 21
+166260: Thread ekern.exe::Supervisor RevertPriority def 16 cleanup -1
+166268: Thread SplashScreen.exe::Main SetRequiredPriority def 12 cleanup 21 nest 1
+166269: Thread SplashScreen.exe::Main MState 2 SetActualPriority 21
+166270: Thread SplashScreen.exe::Main RevertPriority def 12 cleanup 0
+166272: Thread SplashScreen.exe::Main SetRequiredPriority def 12 cleanup 21 nest 1
+166273: Thread SplashScreen.exe::Main MState 2 SetActualPriority 21
+166274: Thread SplashScreen.exe::Main RevertPriority def 12 cleanup -1
+166287: Thread akncapserver::akncapserver SetRequiredPriority def 19 cleanup 21 nest 1
+166288: Thread akncapserver::akncapserver MState 2 SetActualPriority 21
+166289: Thread akncapserver::akncapserver RevertPriority def 19 cleanup -1
+166429: Thread SplashScreen.exe::Main Die: 0,0,
+166430: Thread SplashScreen.exe::Main SetDefaultPriority 16
+166431: Thread SplashScreen.exe::Main SetRequiredPriority def 16 cleanup -1 nest 0
+166432: Thread SplashScreen.exe::Main MState 2 SetActualPriority 16
+166433: Thread SplashScreen.exe::Main ReleaseWait() retcode=-13
+166435: Process SplashScreen.exe Die: 0 0 Kill
+	SplashScreen.exe: #1, 1 threads, lifetime 99551-166435
+166447: Thread SplashScreen.exe::Main SvKill()
+166453: Thread ekern.exe::Supervisor SetRequiredPriority def 16 cleanup 21 nest 1
+166454: Thread ekern.exe::Supervisor MState 2 SetActualPriority 21
+166455: Thread ekern.exe::Supervisor RevertPriority def 16 cleanup -1
+166457: Thread SplashScreen.exe::Main Release()
+166621: DLibrary sysstatemgr.exe::apstart.dll Close m=1
+169999: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+177647: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+185290: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+192933: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+194710: Thread ekern.exe::Supervisor SetRequiredPriority def 16 cleanup 21 nest 1
+194711: Thread ekern.exe::Supervisor MState 2 SetActualPriority 21
+194712: Thread ekern.exe::Supervisor RevertPriority def 16 cleanup -1
+215816: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+219776: Thread ekern.exe::Supervisor SetRequiredPriority def 16 cleanup 21 nest 1
+219777: Thread ekern.exe::Supervisor MState 2 SetActualPriority 21
+219778: Thread ekern.exe::Supervisor RevertPriority def 16 cleanup -1
+223450: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+227260: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+229932: Thread ekern.exe::Supervisor SetRequiredPriority def 16 cleanup 21 nest 1
+229933: Thread ekern.exe::Supervisor MState 2 SetActualPriority 21
+229934: Thread ekern.exe::Supervisor RevertPriority def 16 cleanup -1
+233381: Thread ekern.exe::Supervisor SetRequiredPriority def 16 cleanup 21 nest 1
+233382: Thread ekern.exe::Supervisor MState 2 SetActualPriority 21
+233383: Thread ekern.exe::Supervisor RevertPriority def 16 cleanup -1
+233961: Thread ekern.exe::Supervisor SetRequiredPriority def 16 cleanup 21 nest 1
+233962: Thread ekern.exe::Supervisor MState 2 SetActualPriority 21
+233963: Thread ekern.exe::Supervisor RevertPriority def 16 cleanup -1
+234814: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+235304: Thread EwSrv.exe::00d003608fc71fee RevertPriority def 21 cleanup -1
+235810: Thread EwSrv.exe::00d003608fc71fee RevertPriority def 21 cleanup -1
+235945: Thread EwSrv.exe::00d003608fc71fee RevertPriority def 21 cleanup -1
+241427: Thread AknIconSrv.exe::!AknIconServer SetRequiredPriority def 19 cleanup 21 nest 1
+241428: Thread AknIconSrv.exe::!AknIconServer MState 2 SetActualPriority 21
+241429: Thread AknIconSrv.exe::!AknIconServer RevertPriority def 19 cleanup -1
+241486: Thread Menu::Menu SetDefaultPriority 12
+241487: Thread Menu::Menu SetRequiredPriority def 12 cleanup -1 nest 0
+241540: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+241577: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+241594: Thread Menu::Menu SetRequiredPriority def 12 cleanup 21 nest 1
+241595: Thread Menu::Menu MState 2 SetActualPriority 21
+241596: Thread Menu::Menu RevertPriority def 12 cleanup -1
+241617: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+241619: Thread EwSrv.exe::00d003608fc71fee SetRequiredPriority def 21 cleanup 23 nest 1
+241620: Thread EwSrv.exe::00d003608fc71fee MState 2 SetActualPriority 23
+241621: Thread EwSrv.exe::00d003608fc71fee RevertPriority def 21 cleanup -1
+241629: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+241631: Thread EwSrv.exe::00d003608fc71fee SetRequiredPriority def 21 cleanup 23 nest 1
+241632: Thread EwSrv.exe::00d003608fc71fee MState 2 SetActualPriority 23
+241633: Thread EwSrv.exe::00d003608fc71fee RevertPriority def 21 cleanup -1
+241642: Thread EwSrv.exe::00d003608fc71fee RevertPriority def 21 cleanup -1
+241873: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+241921: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+241930: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+242197: Thread ekern.exe::AUDIO DFC-721983f7 DoCreate: Function 8004d03c Ptr c8034e10
+242204: Thread ekern.exe::AUDIO DFC-721983f7 SetDefaultPriority 28
+242205: Thread ekern.exe::AUDIO DFC-721983f7 SetRequiredPriority def 28 cleanup -1 nest 0
+242206: Thread ekern.exe::AUDIO DFC-721983f7 MState 0 SetActualPriority 28
+242207: AddThread ekern.exe::AUDIO DFC-721983f7 to ekern.exe
+243639: DLibrary Menu::2001cb93.dll Close m=-1
+243641: Thread Menu::Menu SetRequiredPriority def 12 cleanup 21 nest 1
+243642: Thread Menu::Menu MState 2 SetActualPriority 21
+243643: Thread Menu::Menu RevertPriority def 12 cleanup 0
+245109: DLibrary Menu::xmlparserplugin.dll Close m=-1
+246502: DLibrary Menu::xmlparserplugin.dll Close m=-1
+246585: Thread ekern.exe::Supervisor SetRequiredPriority def 16 cleanup 21 nest 1
+246586: Thread ekern.exe::Supervisor MState 2 SetActualPriority 21
+246587: Thread ekern.exe::Supervisor RevertPriority def 16 cleanup -1
+246620: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+246626: Thread Menu::Menu SetRequiredPriority def 12 cleanup 21 nest 1
+246627: Thread Menu::Menu MState 2 SetActualPriority 21
+246628: Thread Menu::Menu RevertPriority def 12 cleanup -1
+246715: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+246737: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+246739: Thread EwSrv.exe::00d003608fc71fee SetRequiredPriority def 21 cleanup 23 nest 1
+246740: Thread EwSrv.exe::00d003608fc71fee MState 2 SetActualPriority 23
+246741: Thread EwSrv.exe::00d003608fc71fee RevertPriority def 21 cleanup -1
+246744: Thread Menu::Menu SetRequiredPriority def 12 cleanup 21 nest 1
+246745: Thread Menu::Menu MState 2 SetActualPriority 21
+246746: Thread Menu::Menu RevertPriority def 12 cleanup -1
+246786: DLibrary EComServer.exe::liwResolver.dll Close m=-1
+246802: DLibrary EComServer.exe::xmlcustomresolver.dll Close m=-1
+247000: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+247003: Thread ekern.exe::Supervisor SetRequiredPriority def 16 cleanup 21 nest 1
+247004: Thread ekern.exe::Supervisor MState 2 SetActualPriority 21
+247005: Thread ekern.exe::Supervisor RevertPriority def 16 cleanup -1
+248678: Thread Menu::Menu SetRequiredPriority def 12 cleanup 21 nest 1
+248679: Thread Menu::Menu MState 2 SetActualPriority 21
+248680: Thread Menu::Menu RevertPriority def 12 cleanup -1
+249221: DLibrary Menu::xmlparserplugin.dll Close m=-1
+252782: Thread weatherinfo.exe::Main DoCreate: Function 86d26ae8 Ptr 00000000
+252789: Thread weatherinfo.exe::Main SetDefaultPriority 12
+252790: Thread weatherinfo.exe::Main SetRequiredPriority def 12 cleanup -1 nest 0
+252791: Thread weatherinfo.exe::Main MState 0 SetActualPriority 12
+252792: AddThread weatherinfo.exe::Main to weatherinfo.exe
+254632: Thread weatherinfo.exe::Main SetRequiredPriority def 12 cleanup 21 nest 1
+254633: Thread weatherinfo.exe::Main MState 2 SetActualPriority 21
+254634: Thread weatherinfo.exe::Main RevertPriority def 12 cleanup -1
+254657: Thread weatherinfo.exe::Main SetRequiredPriority def 12 cleanup 21 nest 1
+254658: Thread weatherinfo.exe::Main MState 2 SetActualPriority 21
+254659: Thread weatherinfo.exe::Main RevertPriority def 12 cleanup -1
+254663: Thread weatherinfo.exe::Main SetRequiredPriority def 12 cleanup 21 nest 1
+254664: Thread weatherinfo.exe::Main MState 2 SetActualPriority 21
+254665: Thread weatherinfo.exe::Main RevertPriority def 12 cleanup -1
+254726: Thread weatherinfo.exe::Local-c80b4cb8 DoCreate: Function 84aa1d35 Ptr 007024f0
+254733: Thread weatherinfo.exe::Local-c80b4cb8 SetDefaultPriority 12
+254734: Thread weatherinfo.exe::Local-c80b4cb8 SetRequiredPriority def 12 cleanup -1 nest 0
+254735: Thread weatherinfo.exe::Local-c80b4cb8 MState 0 SetActualPriority 12
+254737: AddThread weatherinfo.exe::Local-c80b4cb8 to weatherinfo.exe
+254740: Thread weatherinfo.exe::Local-c80b4cb8 SetDefaultPriority 7
+254741: Thread weatherinfo.exe::Local-c80b4cb8 SetRequiredPriority def 7 cleanup -1 nest 0
+254742: Thread weatherinfo.exe::Local-c80b4cb8 MState 2 SetActualPriority 7
+255814: Thread weatherinfo.exe::Main SetRequiredPriority def 12 cleanup 21 nest 1
+255815: Thread weatherinfo.exe::Main MState 2 SetActualPriority 21
+255816: Thread weatherinfo.exe::Main RevertPriority def 12 cleanup 0
+255854: Thread EComServer.exe::!ecomserver SetRequiredPriority def 12 cleanup 21 nest 1
+255855: Thread EComServer.exe::!ecomserver MState 2 SetActualPriority 21
+255856: Thread EComServer.exe::!ecomserver RevertPriority def 12 cleanup -1
+256047: DLibrary EComServer.exe::liwResolver.dll Close m=-1
+256068: DLibrary EComServer.exe::xmlcustomresolver.dll Close m=-1
+256121: Thread Menu::Menu SetDefaultPriority 7
+256122: Thread Menu::Menu SetRequiredPriority def 7 cleanup -1 nest 0
+256123: Thread Menu::Menu MState 2 SetActualPriority 7
+256176: Thread EikSrvs.exe::EikAppUiServerThread SetRequiredPriority def 19 cleanup 23 nest 1
+256177: Thread EikSrvs.exe::EikAppUiServerThread MState 2 SetActualPriority 23
+256178: Thread EikSrvs.exe::EikAppUiServerThread RevertPriority def 19 cleanup -1
+256182: Thread ekern.exe::Supervisor SetRequiredPriority def 16 cleanup 21 nest 1
+256183: Thread ekern.exe::Supervisor MState 2 SetActualPriority 21
+256184: Thread ekern.exe::Supervisor RevertPriority def 16 cleanup -1
+Renaming weatherinfo.exe (252792,2) to weatherinfo
+258732: DProcess::Rename weatherinfo.exe to weatherinfo
+258747: Thread ekern.exe::Supervisor SetRequiredPriority def 16 cleanup 21 nest 1
+258748: Thread ekern.exe::Supervisor MState 2 SetActualPriority 21
+258749: Thread ekern.exe::Supervisor RevertPriority def 16 cleanup -1
+258769: Thread EikSrvs.exe::EikAppUiServerThread SetRequiredPriority def 19 cleanup 21 nest 1
+258770: Thread EikSrvs.exe::EikAppUiServerThread MState 2 SetActualPriority 21
+258771: Thread EikSrvs.exe::EikAppUiServerThread RevertPriority def 19 cleanup -1
+258864: Thread FLogSvr.exe::Main DoCreate: Function 80377228 Ptr 00000000
+258872: Thread FLogSvr.exe::Main SetDefaultPriority 12
+258873: Thread FLogSvr.exe::Main SetRequiredPriority def 12 cleanup -1 nest 0
+258874: Thread FLogSvr.exe::Main MState 0 SetActualPriority 12
+258875: AddThread FLogSvr.exe::Main to FLogSvr.exe
+259006: Thread weatherinfo::weatherinfo Logon to process FLogSvr.exe, status at 004163c8 rdv=1
+259072: Thread weatherinfo::weatherinfo SetRequiredPriority def 12 cleanup 21 nest 1
+259073: Thread weatherinfo::weatherinfo MState 2 SetActualPriority 21
+259074: Thread weatherinfo::weatherinfo RevertPriority def 12 cleanup -1
+259689: Thread ekern.exe::Supervisor SetRequiredPriority def 16 cleanup 21 nest 1
+259690: Thread ekern.exe::Supervisor MState 2 SetActualPriority 21
+259691: Thread ekern.exe::Supervisor RevertPriority def 16 cleanup -1
+259870: Thread FLogSvr.exe::!FLogger server Die: 0,0,
+259871: Thread FLogSvr.exe::!FLogger server SetDefaultPriority 16
+259872: Thread FLogSvr.exe::!FLogger server SetRequiredPriority def 16 cleanup -1 nest 0
+259873: Thread FLogSvr.exe::!FLogger server MState 2 SetActualPriority 16
+259874: Thread FLogSvr.exe::!FLogger server ReleaseWait() retcode=-13
+259876: Process FLogSvr.exe Die: 0 0 Kill
+	FLogSvr.exe: #2, 1 threads, lifetime 258875-259876
+259888: Thread FLogSvr.exe::!FLogger server SvKill()
+259892: Thread FLogSvr.exe::!FLogger server ReleasDTimer::Create thread EwSrv.exe::00d003608fc71fee
+260177: Thread weatherinfo::weatherinfo SetRequiredPriority def 12 cleanup 21 nest 1
+260178: Thread weatherinfo::weatherinfo MState 2 SetActualPriority 21
+260179: Thread weatherinfo::weatherinfo RevertPriority def 12 cleanup -1
+260606: Thread weatherinfo::weatherinfo SetRequiredPriority def 12 cleanup 21 nest 1
+260607: Thread weatherinfo::weatherinfo MState 2 SetActualPriority 21
+260608: Thread weatherinfo::weatherinfo RevertPriority def 12 cleanup -1
+260611: Thread weatherinfo::weatherinfo SetRequiredPriority def 12 cleanup 21 nest 1
+260612: Thread weatherinfo::weatherinfo MState 2 SetActualPriority 21
+260613: Thread weatherinfo::weatherinfo RevertPriority def 12 cleanup -1
+260651: Thread ekern.exe::Supervisor SetRequiredPriority def 16 cleanup 21 nest 1
+260652: Thread ekern.exe::Supervisor MState 2 SetActualPriority 21
+260653: Thread ekern.exe::Supervisor RevertPriority def 16 cleanup -1
+260664: Thread weatherinfo::weatherinfo SetRequiredPriority def 12 cleanup 21 nest 1
+260665: Thread weatherinfo::weatherinfo MState 2 SetActualPriority 21
+260666: Thread weatherinfo::weatherinfo RevertPriority def 12 cleanup -1
+261042: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+261051: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+261054: Thread ekern.exe::Supervisor SetRequiredPriority def 16 cleanup 21 nest 1
+261055: Thread ekern.exe::Supervisor MState 2 SetActualPriority 21
+261056: Thread ekern.exe::Supervisor RevertPriority def 16 cleanup -1
+261063: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+261065: Thread EwSrv.exe::00d003608fc71fee SetRequiredPriority def 21 cleanup 23 nest 1
+261066: Thread EwSrv.exe::00d003608fc71fee MState 2 SetActualPriority 23
+261067: Thread EwSrv.exe::00d003608fc71fee RevertPriority def 21 cleanup -1
+263016: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+263035: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+263060: Thread weatherinfo::weatherinfo SetRequiredPriority def 12 cleanup 21 nest 1
+263061: Thread weatherinfo::weatherinfo MState 2 SetActualPriority 21
+263062: Thread weatherinfo::weatherinfo RevertPriority def 12 cleanup -1
+263070: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+263079: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+263087: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+263096: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+263114: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+263894: Thread upsserver.exe::Main DoCreate: Function 811b1e68 Ptr 00000000
+263901: Thread upsserver.exe::Main SetDefaultPriority 12
+263902: Thread upsserver.exe::Main SetRequiredPriority def 12 cleanup -1 nest 0
+263903: Thread upsserver.exe::Main MState 0 SetActualPriority 12
+263905: AddThread upsserver.exe::Main to upsserver.exe
+264036: Thread c32exe.exe::ESock_IP Logon to process upsserver.exe, status at 00433b04 rdv=1
+265617: DLibrary aknnfysrv::2001cb93.dll Close m=-1
+265809: Thread aknnfysrv::aknnfysrv SetRequiredPriority def 19 cleanup 21 nest 1
+265810: Thread aknnfysrv::aknnfysrv MState 2 SetActualPriority 21
+265811: Thread aknnfysrv::aknnfysrv RevertPriority def 19 cleanup -1
+266259: DLibrary aknnfysrv::hwrmuiplugin.dll Close m=-1
+266288: Thread weatherinfo::weatherinfo SetDefaultPriority 7
+266289: Thread weatherinfo::weatherinfo SetRequiredPriority def 7 cleanup -1 nest 0
+266290: Thread weatherinfo::weatherinfo MState 2 SetActualPriority 7
+266293: Thread weatherinfo::Local-c80b4cb8 SetDefaultPriority 7
+266294: Thread weatherinfo::Local-c80b4cb8 SetRequiredPriority def 7 cleanup -1 nest 0
+266342: Thread akncapserver::akncapserver SetRequiredPriority def 19 cleanup 21 nest 1
+266343: Thread akncapserver::akncapserver MState 2 SetActualPriority 21
+266344: Thread akncapserver::akncapserver RevertPriority def 19 cleanup -1
+266360: Thread aknnfysrv::aknnfysrv SetRequiredPriority def 19 cleanup 21 nest 1
+266361: Thread aknnfysrv::aknnfysrv MState 2 SetActualPriority 21
+266362: Thread aknnfysrv::aknnfysrv RevertPriority def 19 cleanup -1
+266369: Thread aknnfysrv::aknnfysrv SetRequiredPriority def 19 cleanup 21 nest 1
+266370: Thread aknnfysrv::aknnfysrv MState 2 SetActualPriority 21
+266371: Thread aknnfysrv::aknnfysrv RevertPriority def 19 cleanup -1
+266380: Thread EwSrv.exe::00d003608fc71fee RevertPriority def 21 cleanup -1
+266398: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+266406: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+266413: Thread AknIconSrv.exe::!AknIconServer SetRequiredPriority def 19 cleanup 21 nest 1
+266414: Thread AknIconSrv.exe::!AknIconServer MState 2 SetActualPriority 21
+266415: Thread AknIconSrv.exe::!AknIconServer RevertPriority def 19 cleanup -1
+266443: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+266455: Thread aknnfysrv::aknnfysrv SetRequiredPriority def 19 cleanup 21 nest 1
+266456: Thread aknnfysrv::aknnfysrv MState 2 SetActualPriority 21
+266457: Thread aknnfysrv::aknnfysrv RevertPriority def 19 cleanup -1
+266569: Thread ekern.exe::Supervisor SetRequiredPriority def 16 cleanup 21 nest 1
+266570: Thread ekern.exe::Supervisor MState 2 SetActualPriority 21
+266571: Thread ekern.exe::Supervisor RevertPriority def 16 cleanup -1
+266574: Thread ekern.exe::Supervisor SetRequiredPriority def 16 cleanup 21 nest 1
+266575: Thread ekern.exe::Supervisor MState 2 SetActualPriority 21
+266576: Thread ekern.exe::Supervisor RevertPriority def 16 cleanup -1
+266614: Thread weatherinfo::weatherinfo SetDefaultPriority 12
+266615: Thread weatherinfo::weatherinfo SetRequiredPriority def 12 cleanup -1 nest 0
+266616: Thread weatherinfo::weatherinfo MState 2 SetActualPriority 12
+266619: Thread weatherinfo::Local-c80b4cb8 SetDefaultPriority 7
+266620: Thread weatherinfo::Local-c80b4cb8 SetRequiredPriority def 7 cleanup -1 nest 0
+266646: DLibrary aknnfysrv::CCONNDLGPLUGIN.DLL Close m=0
+267140: Thread EikSrvs.exe::EikAppUiServerThread SetRequiredPriority def 19 cleanup 19 nest 1
+267141: Thread EikSrvs.exe::EikAppUiServerThread RevertPriority def 19 cleanup -1
+267142: Thread aknnfysrv::aknnfysrv RevertPriority def 19 cleanup -1
+267147: Thread akncapserver::akncapserver SetRequiredPriority def 19 cleanup 19 nest 1
+267148: Thread akncapserver::akncapserver RevertPriority def 19 cleanup -1
+267167: Thread EwSrv.exe::00d003608fc71fee RevertPriority def 21 cleanup -1
+267178: Thread weatherinfo::00f02fa0e12bf1e9 DoCreate: Function 808f1d2d Ptr 00f02fd8
+267185: Thread weatherinfo::00f02fa0e12bf1e9 SetDefaultPriority 12
+267186: Thread weatherinfo::00f02fa0e12bf1e9 SetRequiredPriority def 12 cleanup -1 nest 0
+267187: Thread weatherinfo::00f02fa0e12bf1e9 MState 0 SetActualPriority 12
+267189: AddThread weatherinfo::00f02fa0e12bf1e9 to weatherinfo
+267317: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+267329: Thread akncapserver::akncapserver SetRequiredPriority def 19 cleanup 21 nest 1
+267330: Thread akncapserver::akncapserver MState 2 SetActualPriority 21
+267331: Thread akncapserver::akncapserver RevertPriority def 19 cleanup -1
+267341: Thread weatherinfo::weatherinfo SetRequiredPriority def 12 cleanup 21 nest 1
+267342: Thread weatherinfo::weatherinfo MState 2 SetActualPriority 21
+267343: Thread weatherinfo::weatherinfo RevertPriority def 12 cleanup -1
+267352: Thread weatherinfo::weatherinfo SetRequiredPriority def 12 cleanup 21 nest 1
+267353: Thread weatherinfo::weatherinfo MState 2 SetActualPriority 21
+267354: Thread weatherinfo::weatherinfo RevertPriority def 12 cleanup -1
+267361: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+267364: Thread weatherinfo::weatherinfo SetRequiredPriority def 12 cleanup 21 nest 1
+267365: Thread weatherinfo::weatherinfo MState 2 SetActualPriority 21
+267366: Thread weatherinfo::weatherinfo RevertPriority def 12 cleanup -1
+267375: Thread weatherinfo::weatherinfo SetRequiredPriority def 12 cleanup 21 nest 1
+267376: Thread weatherinfo::weatherinfo MState 2 SetActualPriority 21
+267377: Thread weatherinfo::weatherinfo RevertPriority def 12 cleanup -1
+267384: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+267386: Thread EwSrv.exe::00d003608fc71fee SetRequiredPriority def 21 cleanup 23 nest 1
+267387: Thread EwSrv.exe::00d003608fc71fee MState 2 SetActualPriority 23
+267388: Thread EwSrv.exe::00d003608fc71fee RevertPriority def 21 cleanup -1
+267396: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+267398: Thread EwSrv.exe::00d003608fc71fee SetRequiredPriority def 21 cleanup 23 nest 1
+267399: Thread EwSrv.exe::00d003608fc71fee MState 2 SetActualPriority 23
+267400: Thread EwSrv.exe::00d003608fc71fee RevertPriority def 21 cleanup -1
+267438: Thread Menu::Menu SetRequiredPriority def 7 cleanup 12 nest 1
+267439: Thread Menu::Menu MState 2 SetActualPriority 12
+267440: Thread Menu::Menu RevertPriority def 7 cleanup -1
+267449: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+269183: DLibrary Menu::xmlparserplugin.dll Close m=-1
+270533: DLibrary Menu::xmlparserplugin.dll Close m=-1
+270546: Thread Menu::Menu SetRequiredPriority def 7 cleanup 21 nest 1
+270547: Thread Menu::Menu MState 2 SetActualPriority 21
+270548: Thread Menu::Menu RevertPriority def 7 cleanup -1
+270788: DLibrary EComServer.exe::liwResolver.dll Close m=-1
+270805: DLibrary EComServer.exe::xmlcustomresolver.dll Close m=-1
+273047: DLibrary weatherinfo::qgif.dll Close m=1
+274911: DLibrary weatherinfo::qico.dll Close m=1
+276308: Thread ekern.exe::Supervisor SetRequiredPriority def 16 cleanup 21 nest 1
+276309: Thread ekern.exe::Supervisor MState 2 SetActualPriority 21
+276310: Thread ekern.exe::Supervisor RevertPriority def 16 cleanup -1
+276840: DLibrary weatherinfo::qjpeg.dll Close m=1
+278828: DLibrary weatherinfo::qmng.dll Close m=1
+281009: DLibrary weatherinfo::qsvg.dll Close m=1
+283121: DLibrary weatherinfo::qtiff.dll Close m=1
+283211: Thread FLogSvr.exe::Main DoCreate: Function 80377228 Ptr 00000000
+283218: Thread FLogSvr.exe::Main SetDefaultPriority 12
+283219: Thread FLogSvr.exe::Main SetRequiredPriority def 12 cleanup -1 nest 0
+283220: Thread FLogSvr.exe::Main MState 0 SetActualPriority 12
+283221: AddThread FLogSvr.exe::Main to FLogSvr.exe
+283353: Thread weatherinfo::weatherinfo Logon to process FLogSvr.exe, status at 00415b68 rdv=1
+283398: Thread ekern.exe::Supervisor SetRequiredPriority def 16 cleanup 21 nest 1
+283399: Thread ekern.exe::Supervisor MState 2 SetActualPriority 21
+283400: Thread ekern.exe::Supervisor RevertPriority def 16 cleanup -1
+283431: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+283442: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+283949: DLibrary weatherinfo::2001cb93.dll Close m=-1
+283951: DLibrary weatherinfo::AknFepUiAvkonPlugin.dll Close m=0
+285082: DLibrary weatherinfo::avkonfep.dll Close m=0
+285604: Thread weatherinfo::weatherinfo SetRequiredPriority def 12 cleanup 12 nest 1
+285622: Thread weatherinfo::weatherinfo RevertPriority def 12 cleanup 0
+285630: Thread FLogSvr.exe::!FLogger server Die: 0,0,
+285631: Thread FLogSvr.exe::!FLogger server SetDefaultPriority 16
+285632: Thread FLogSvr.exe::!FLogger server SetRequiredPriority def 16 cleanup -1 nest 0
+285633: Thread FLogSvr.exe::!FLogger server MState 2 SetActualPriority 16
+285634: Thread FLogSvr.exe::!FLogger server ReleaseWait() retcode=-13
+285636: Process FLogSvr.exe Die: 0 0 Kill
+	FLogSvr.exe: #3, 1 threads, lifetime 283221-285636
+285648: Thread FLogSvr.exe::!FLogger server SvKill()
+285653: Thread FLogSvr.exe::!FLogger server Release()
+286687: DLibrary weatherinfo::hwrmuiplugin.dll Close m=-1
+286703: Thread Menu::Menu SetDefaultPriority 12
+286704: Thread Menu::Menu SetRequiredPriority def 12 cleanup -1 nest 0
+286705: Thread Menu::Menu MState 2 SetActualPriority 12
+286757: Thread Menu::Menu SetRequiredPriority def 12 cleanup 12 nest 1
+286758: Thread Menu::Menu RevertPriority def 12 cleanup -1
+286777: DLibrary weatherinfo::akninit.dll Close m=0
+286925: Thread Menu::Menu SetRequiredPriority def 12 cleanup 21 nest 1
+286926: Thread Menu::Menu MState 2 SetActualPriority 21
+286927: Thread Menu::Menu RevertPriority def 12 cleanup -1
+286934: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+287117: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+287184: Thread weatherinfo::00f02fa0e12bf1e9 ReleaseWait() retcode=-33
+287264: Thread weatherinfo::weatherinfo SetRequiredPriority def 12 cleanup 12 nest 1
+287341: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+287386: Thread weatherinfo::weatherinfo RevertPriority def 12 cleanup 0
+287401: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+287403: Thread weatherinfo::00f02fa0e12bf1e9 Die: 0,0,
+287404: Thread weatherinfo::00f02fa0e12bf1e9 SetDefaultPriority 16
+287405: Thread weatherinfo::00f02fa0e12bf1e9 SetRequiredPriority def 16 cleanup -1 nest 0
+287406: Thread weatherinfo::00f02fa0e12bf1e9 MState 2 SetActualPriority 16
+287407: Thread weatherinfo::00f02fa0e12bf1e9 ReleaseWait() retcode=-13
+287418: Thread weatherinfo::00f02fa0e12bf1e9 SvKill()
+287421: Thread weatherinfo::00f02fa0e12bf1e9 Release()
+287518: Thread Menu::Menu SetRequiredPriority def 12 cleanup 21 nest 1
+287519: Thread Menu::Menu MState 2 SetActualPriority 21
+287520: Thread Menu::Menu RevertPriority def 12 cleanup -1
+287527: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+287529: Thread EwSrv.exe::00d003608fc71fee SetRequiredPriority def 21 cleanup 23 nest 1
+287530: Thread EwSrv.exe::00d003608fc71fee MState 2 SetActualPriority 23
+287531: Thread EwSrv.exe::00d003608fc71fee RevertPriority def 21 cleanup -1
+287642: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+287714: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+287719: Thread ekern.exe::Supervisor SetRequiredPriority def 16 cleanup 21 nest 1
+287720: Thread ekern.exe::Supervisor MState 2 SetActualPriority 21
+287721: Thread ekern.exe::Supervisor RevertPriority def 16 cleanup -1
+287793: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+287954: Thread weatherinfo::weatherinfo SetRequiredPriority def 12 cleanup 12 nest 1
+288014: Thread weatherinfo::weatherinfo RevertPriority def 12 cleanup 0
+288062: Thread weatherinfo::weatherinfo SetRequiredPriority def 12 cleanup 21 nest 1
+288063: Thread weatherinfo::weatherinfo MState 2 SetActualPriority 21
+288445: DLibrary weatherinfo::10283389.dll Close m=-1
+288446: Thread weatherinfo::weatherinfo RevertPriority def 12 cleanup -1
+288693: Thread weatherinfo::weatherinfo SetRequiredPriority def 12 cleanup 21 nest 1
+288694: Thread weatherinfo::weatherinfo MState 2 SetActualPriority 21
+289058: DLibrary weatherinfo::10285D7B.dll Close m=-1
+289060: Thread weatherinfo::weatherinfo SetRequiredPriority def 12 cleanup 21 nest 1
+289061: Thread weatherinfo::weatherinfo RevertPriority def 12 cleanup 21
+289063: Thread weatherinfo::weatherinfo RevertPriority def 12 cleanup -1
+290018: Thread Menu::Menu SetRequiredPriority def 12 cleanup 12 nest 1
+290594: DLibrary Menu::xmlparserplugin.dll Close m=-1
+290595: Thread Menu::Menu RevertPriority def 12 cleanup -1
+291014: DLibrary weatherinfo::2001E2B1.dll Close m=-1
+291429: DLibrary weatherinfo::101fe2aa.dll Close m=-1
+291843: DLibrary weatherinfo::102827CF.dll Close m=-1
+291845: DLibrary EwSrv.exe::ClockA.dll Close m=4
+291864: Thread weatherinfo::Local-c80b4cb8 Die: 0,0,
+291865: Thread weatherinfo::Local-c80b4cb8 SetDefaultPriority 16
+291866: Thread weatherinfo::Local-c80b4cb8 SetRequiredPriority def 16 cleanup -1 nest 0
+291867: Thread weatherinfo::Local-c80b4cb8 MState 3 SetActualPriority 16
+291869: Thread weatherinfo::Local-c80b4cb8 ReleaseWait() retcode=-13
+291879: Thread weatherinfo::Local-c80b4cb8 SvKill()
+291881: Thread weatherinfo::weatherinfo SetRequiredPriority def 12 cleanup 16 nest 1
+291882: Thread weatherinfo::weatherinfo MState 2 SetActualPriority 16
+291883: Thread weatherinfo::weatherinfo RevertPriority def 12 cleanup -1
+291887: Thread weatherinfo::Local-c80b4cb8 Release()
+292140: DLibrary weatherinfo::qts60plugin_5_0.dll Close m=0
+293062: Thread weatherinfo::Local-c80b4cb8 SetDefaultPriority 12
+293063: Thread weatherinfo::Local-c80b4cb8 SetRequiredPriority def 12 cleanup -1 nest 0
+293064: Thread weatherinfo::Local-c80b4cb8 MState 1 SetActualPriority 12
+293065: Thread weatherinfo::weatherinfo Logon to thread weatherinfo::Local-c80b4cb8, status at 00416b40 rdv=0
+293477: DLibrary weatherinfo::ityperast.dll Close m=-1
+293480: Thread weatherinfo::weatherinfo Die: 0,0,
+293481: Thread weatherinfo::weatherinfo SetDefaultPriority 16
+293482: Thread weatherinfo::weatherinfo SetRequiredPriority def 16 cleanup -1 nest 0
+293483: Thread weatherinfo::weatherinfo MState 2 SetActualPriority 16
+293484: Thread weatherinfo::weatherinfo ReleaseWait() retcode=-13
+293487: Process weatherinfo Die: 0 0 Kill
+	weatherinfo: #3, 3 threads, lifetime 252792-293487
+293499: Thread weatherinfo::weatherinfo SvKill()
+293503: Thread weatherinfo::weatherinfo Release()
+293521: Thread ekern.exe::Supervisor SetRequiredPriority def 16 cleanup 21 nest 1
+293522: Thread ekern.exe::Supervisor MState 2 SetActualPriority 21
+293523: Thread ekern.exe::Supervisor RevertPriority def 16 cleanup 0
+293527: Thread ekern.exe::Supervisor SetRequiredPriority def 16 cleanup 21 nest 1
+293528: Thread ekern.exe::Supervisor MState 2 SetActualPriority 21
+293529: Thread ekern.exe::Supervisor RevertPriority def 16 cleanup -1
+293532: Thread ekern.exe::Supervisor SetRequiredPriority def 16 cleanup 21 nest 1
+293533: Thread ekern.exe::Supervisor MState 2 SetActualPriority 21
+293534: Thread ekern.exe::Supervisor RevertPriority def 16 cleanup -1
+294053: DLibrary weatherinfo::qgif.dll Close m=-1
+294540: DLibrary weatherinfo::qjpeg.dll Close m=-1
+294997: DLibrary weatherinfo::qico.dll Close m=-1
+295423: DLibrary weatherinfo::qmng.dll Close m=-1
+295848: DLibrary weatherinfo::qsvg.dll Close m=-1
+296212: DLibrary weatherinfo::qtiff.dll Close m=-1
+297860: DLibrary Menu::xmlparserplugin.dll Close m=-1
+297880: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+298093: DLibrary EComServer.exe::liwResolver.dll Close m=-1
+298110: DLibrary EComServer.exe::xmlcustomresolver.dll Close m=-1
+298357: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+299358: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+299737: Thread deform.exe::Main DoCreate: Function 86ce9ce8 Ptr 00000000
+299744: Thread deform.exe::Main SetDefaultPriority 12
+299745: Thread deform.exe::Main SetRequiredPriority def 12 cleanup -1 nest 0
+299746: Thread deform.exe::Main MState 0 SetActualPriority 12
+299747: AddThread deform.exe::Main to deform.exe
+300956: DLibrary Menu::mcsmenuhandler.dll Close m=0
+300995: Thread Menu::Menu SetRequiredPriority def 12 cleanup 12 nest 1
+301933: Thread Menu::Menu RevertPriority def 12 cleanup 0
+301991: Thread deform.exe::Main SetRequiredPriority def 12 cleanup 12 nest 1
+302132: Thread deform.exe::Main RevertPriority def 12 cleanup -1
+302301: Thread deform.exe::Main SetRequiredPriority def 12 cleanup 21 nest 1
+302302: Thread deform.exe::Main MState 2 SetActualPriority 21
+302303: Thread deform.exe::Main RevertPriority def 12 cleanup -1
+302419: Thread Menu::Menu SetRequiredPriority def 12 cleanup 21 nest 1
+302420: Thread Menu::Menu MState 2 SetActualPriority 21
+303115: Thread Menu::Menu RevertPriority def 12 cleanup 0
+303173: Thread deform.exe::Local-c80b19b0 DoCreate: Function 84aa1d35 Ptr 007024f0
+303180: Thread deform.exe::Local-c80b19b0 SetDefaultPriority 12
+303181: Thread deform.exe::Local-c80b19b0 SetRequiredPriority def 12 cleanup -1 nest 0
+303182: Thread deform.exe::Local-c80b19b0 MState 0 SetActualPriority 12
+303183: AddThread deform.exe::Local-c80b19b0 to deform.exe
+303186: Thread deform.exe::Local-c80b19b0 SetDefaultPriority 7
+303187: Thread deform.exe::Local-c80b19b0 SetRequiredPriority def 7 cleanup -1 nest 0
+303188: Thread deform.exe::Local-c80b19b0 MState 2 SetActualPriority 7
+304012: Thread deform.exe::Main SetRequiredPriority def 12 cleanup 12 nest 1
+304156: Thread deform.exe::Main RevertPriority def 12 cleanup 0
+304340: Thread efile.exe::LoaderThread SetRequiredPriority def 21 cleanup 21 nest 1
+304341: Thread efile.exe::LoaderThread RevertPriority def 21 cleanup -1
+304631: DCodeSeg::Create c80b36b8 file Z:\sys\bin\xmlDTimer::Create thread EwSrv.exe::00d003608fc71fee
+305295: Thread Menu::Menu SetRequiredPriority def 12 cleanup 21 nest 1
+305296: Thread Menu::Menu MState 2 SetActualPriority 21
+305809: DLibrary Menu::xmlparserplugin.dll Close m=-1
+305810: Thread Menu::Menu RevertPriority def 12 cleanup -1
+308605: Thread Menu::Menu SetDefaultPriority 7
+308606: Thread Menu::Menu SetRequiredPriority def 7 cleanup 0 nest 0
+308607: Thread Menu::Menu MState 2 SetActualPriority 7
+308660: Thread EikSrvs.exe::EikAppUiServerThread SetRequiredPriority def 19 cleanup 19 nest 1
+308661: Thread EikSrvs.exe::EikAppUiServerThread RevertPriority def 19 cleanup -1
+308666: Thread ekern.exe::Supervisor SetRequiredPriority def 16 cleanup 21 nest 1
+308667: Thread ekern.exe::Supervisor MState 2 SetActualPriority 21
+308668: Thread ekern.exe::Supervisor RevertPriority def 16 cleanup -1
+308733: Thread Menu::Menu SetRequiredPriority def 7 cleanup 21 nest 1
+308734: Thread Menu::Menu MState 2 SetActualPriority 21
+309417: Thread Menu::Menu RevertPriority def 7 cleanup 0
+Renaming deform.exe (299747,2) to deform
+311618: DProcess::Rename deform.exe to deform
+311631: Thread akncapserver::akncapserver SetRequiredPriority def 19 cleanup 21 nest 1
+311632: Thread akncapserver::akncapserver MState 2 SetActualPriority 21
+311633: Thread akncapserver::akncapserver RevertPriority def 19 cleanup -1
+311749: Thread FLogSvr.exe::Main DoCreate: Function 80377228 Ptr 00000000
+311756: Thread FLogSvr.exe::Main SetDefaultPriority 12
+311757: Thread FLogSvr.exe::Main SetRequiredPriority def 12 cleanup -1 nest 0
+311758: Thread FLogSvr.exe::Main MState 0 SetActualPriority 12
+311759: AddThread FLogSvr.exe::Main to FLogSvr.exe
+311891: Thread deform::deform Logon to process FLogSvr.exe, status at 004163c8 rdv=1
+311963: DLibrary EComServer.exe::liwResolver.dll Close m=-1
+311979: DLibrary EComServer.exe::xmlcustomresolver.dll Close m=-1
+311983: Thread AknIconSrv.exe::!AknIconServer SetRequiredPriority def 19 cleanup 21 nest 1
+311984: Thread AknIconSrv.exe::!AknIconServer MState 2 SetActualPriority 21
+311985: Thread AknIconSrv.exe::!AknIconServer RevertPriority def 19 cleanup -1
+312715: Thread FLogSvr.exe::!FLogger server Die: 0,0,
+312716: Thread FLogSvr.exe::!FLogger server SetDefaultPriority 16
+312717: Thread FLogSvr.exe::!FLogger server SetRequiredPriority def 16 cleanup -1 nest 0
+312718: Thread FLogSvr.exe::!FLogger server MState 2 SetActualPriority 16
+312719: Thread FLogSvr.exe::!FLogger server ReleaseWait() retcode=-13
+312721: Process FLogSvr.exe Die: 0 0 Kill
+	FLogSvr.exe: #4, 1 threads, lifetime 311759-312721
+312733: Thread FLogSvr.exe::!FLogger server SvKill()
+312737: Thread FLogSvr.exe::!FLogger server Release()
+313301: Thread deform::deform SetRequiredPriority def 12 cleanup 21 nest 1
+313302: Thread deform::deform MState 2 SetActualPriority 21
+313303: Thread deform::deform RevertPriority def 12 cleanup -1
+313953: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+313961: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+313997: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+314005: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+314013: Thread AknIconSrv.exe::!AknIconServer SetRequiredPriority def 19 cleanup 21 nest 1
+314014: Thread AknIconSrv.exe::!AknIconServer MState 2 SetActualPriority 21
+314015: Thread AknIconSrv.exe::!AknIconServer RevertPriority def 19 cleanup -1
+315741: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+315942: Thread efile.exe::LoaderThread SetRequiredPriority def 21 cleanup 21 nest 1
+315943: Thread efile.exe::LoaderThread RevertPriority def 21 cleanup -1
+317573: DLibrary deform::qgif.dll Close m=1
+319344: DLibrary deform::qico.dll Close m=1
+321177: DLibrary deform::qjpeg.dll Close m=1
+323070: DLibrary deform::qmng.dll Close m=1
+325238: DLibrary deform::qsvg.dll Close m=1
+327315: DLibrary deform::qtiff.dll Close m=1
+327371: Thread deform::deform SetRequiredPriority def 12 cleanup 21 nest 1
+327372: Thread deform::deform MState 2 SetActualPriority 21
+327373: Thread deform::deform RevertPriority def 12 cleanup -1
+327676: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+327737: Thread deform::deform SetRequiredPriority def 12 cleanup 21 nest 1
+327738: Thread deform::deform MState 2 SetActualPriority 21
+327739: Thread deform::deform RevertPriority def 12 cleanup -1
+327742: Thread deform::deform SetRequiredPriority def 12 cleanup 21 nest 1
+327743: Thread deform::deform MState 2 SetActualPriority 21
+327744: Thread deform::deform RevertPriority def 12 cleanup -1
+327825: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+327971: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+328072: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+328122: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+328178: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+328345: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+328510: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+328513: Thread Menu::Menu SetRequiredPriority def 7 cleanup 12 nest 1
+328514: Thread Menu::Menu MState 2 SetActualPriority 12
+328515: Thread Menu::Menu RevertPriority def 7 cleanup -1
+328523: Thread deform::deform SetRequiredPriority def 12 cleanup 21 nest 1
+328524: Thread deform::deform MState 2 SetActualPriority 21
+328525: Thread deform::deform RevertPriority def 12 cleanup -1
+328529: Thread AknIconSrv.exe::!AknIconServer SetRequiredPriority def 19 cleanup 21 nest 1
+328530: Thread AknIconSrv.exe::!AknIconServer MState 2 SetActualPriority 21
+328531: Thread AknIconSrv.exe::!AknIconServer RevertPriority def 19 cleanup -1
+328573: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+328605: Thread deform::deform SetRequiredPriority def 12 cleanup 21 nest 1
+328606: Thread deform::deform MState 2 SetActualPriority 21
+328607: Thread deform::deform RevertPriority def 12 cleanup -1
+329093: DLibrary deform::2001cb93.dll Close m=-1
+329095: DLibrary deform::AknFepUiAvkonPlugin.dll Close m=0
+330193: DLibrary deform::avkonfep.dll Close m=0
+331662: DLibrary deform::hwrmuiplugin.dll Close m=-1
+331677: Thread Menu::Menu SetDefaultPriority 12
+331678: Thread Menu::Menu SetRequiredPriority def 12 cleanup -1 nest 0
+331679: Thread Menu::Menu MState 2 SetActualPriority 12
+331705: Thread EikSrvs.exe::EikAppUiServerThread SetRequiredPriority def 19 cleanup 21 nest 1
+331706: Thread EikSrvs.exe::EikAppUiServerThread MState 2 SetActualPriority 21
+331707: Thread EikSrvs.exe::EikAppUiServerThread RevertPriority def 19 cleanup -1
+331710: Thread EikSrvs.exe::EikAppUiServerThread SetRequiredPriority def 19 cleanup 21 nest 1
+331711: Thread EikSrvs.exe::EikAppUiServerThread MState 2 SetActualPriority 21
+331712: Thread EikSrvs.exe::EikAppUiServerThread RevertPriority def 19 cleanup -1
+331720: Thread ekern.exe::Supervisor SetRequiredPriority def 16 cleanup 21 nest 1
+331721: Thread ekern.exe::Supervisor MState 2 SetActualPriority 21
+331722: Thread ekern.exe::Supervisor RevertPriority def 16 cleanup -1
+331726: Thread akncapserver::akncapserver SetRequiredPriority def 19 cleanup 21 nest 1
+331727: Thread akncapserver::akncapserver MState 2 SetActualPriority 21
+331728: Thread akncapserver::akncapserver RevertPriority def 19 cleanup -1
+331750: Thread ekern.exe::Supervisor SetRequiredPriority def 16 cleanup 21 nest 1
+331751: Thread ekern.exe::Supervisor MState 2 SetActualPriority 21
+331752: Thread ekern.exe::Supervisor RevertPriority def 16 cleanup -1
+331763: Thread AknIconSrv.exe::!AknIconServer SetRequiredPriority def 19 cleanup 21 nest 1
+331764: Thread AknIconSrv.exe::!AknIconServer MState 2 SetActualPriority 21
+331765: Thread AknIconSrv.exe::!AknIconServer RevertPriority def 19 cleanup -1
+331800: Thread EwSrv.exe::Wserv RevertPriority def 23 cleanup -1
+331803: DLibrary deform::akninit.dll Close m=0
+331893: Thread ekern.exe::Supervisor SetRequiredPriority def 16 cleanup 21 nest 1
+331894: Thread ekern.exe::Supervisor MState 2 SetActualPriority 21
+331895: Thread ekern.exe::Supervisor RevertPriority def 16 cleanup -1
+331977: Thread Menu::Menu SetRequiredPriority def 12 cleanup 21 nest 1
+331978: Thread Menu::Menu MState 2 SetActualPriority 21
+331979: Thread Menu::Menu RevertPriority def 12 cleanup -1
+332080: Thread Menu::Menu SetRequiredPriority def 12 cleanup 21 nest 1
+332081: Thread Menu::Menu MState 2 SetActualPriority 21
+332082: Thread Menu::Menu RevertPriority def 12 cleanup -1
+
+
+Active processes (39):
+!FeatMgrServer                	1 threads, created at line 19256
+!HWRMServer                   	1 threads, created at line 85377
+!PsmServer                    	1 threads, created at line 96703
+AknIconSrv.exe                	3 threads, created at line 28183
+C32Start                      	1 threads, created at line 39257
+DRMHelperServer               	1 threads, created at line 48036
+DcfRepSrv.EXE                 	1 threads, created at line 47265
+EComServer.exe                	1 threads, created at line 6367
+EDbsrv.exe                    	1 threads, created at line 9364
+EStart.exe                    	1 threads, created at line 1260
+EikSrvs.exe                   	4 threads, created at line 32149
+EwSrv.exe                     	4 threads, created at line 7475
+Menu                          	1 threads, created at line 115873
+PhoneServer.exe               	1 threads, created at line 117566
+RightsServer.EXE              	4 threads, created at line 38778
+SATSERVER.EXE                 	1 threads, created at line 131233
+WidgetRegistry.exe            	1 threads, created at line 129900
+akncapserver                  	1 threads, created at line 27203
+aknnfysrv                     	1 threads, created at line 110073
+aknskinsrv.exe                	1 threads, created at line 35776
+alarmserver.exe               	1 threads, created at line 105196
+apsexe.exe                    	1 threads, created at line 14732
+baksrvs.exe                   	1 threads, created at line 15919
+c32exe.exe                    	10 threads, created at line 39499
+cdlserver.exe                 	1 threads, created at line 29184
+centralrepositorysrv.exe      	1 threads, created at line 4741
+deform                        	2 threads, created at line 299747
+domainSrv.exe                 	1 threads, created at line 2319
+efile.exe                     	6 threads, created at line 255
+ekern.exe                     	10 threads, created at line 21
+fbserv.exe                    	2 threads, created at line 10945
+mcsmenuserver.exe             	1 threads, created at line 126774
+mmfaudioserverstart.exe       	3 threads, created at line 86349
+sqlsrv.exe                    	1 threads, created at line 9087
+ssmutilsrv.exe                	2 threads, created at line 5650
+sysmon.exe                    	1 threads, created at line 5414
+sysstatemgr.exe               	2 threads, created at line 3288
+tzserver.exe                  	1 threads, created at line 8845
+upsserver.exe                 	1 threads, created at line 263905
+
+
+Dead processes (13)
+
+   2185	halsettings.exe      #1, 1 threads, lifetime 2010-2185, died 0 -12 Kill
+   3155	svphostfs.exe        #1, 1 threads, lifetime 2754-3155, died 0 0 Kill
+   5798	sysagt2svr.exe       #1, 1 threads, lifetime 5202-5798, died 0 0 Kill
+  44764	sysutilsetup.exe     #1, 1 threads, lifetime 44550-44764, died 0 0 Kill
+  45330	cryptospisetup.exe   #1, 1 threads, lifetime 44959-45330, died 0 0 Kill
+  47870	wmdrmserver.exe      #1, 1 threads, lifetime 47695-47870, died 0 -5 Kill
+  84651	FLogSvr.exe          #1, 1 threads, lifetime 53561-84651, died 0 0 Kill
+ 133797	SecurityManagerServer #1, 1 threads, lifetime 130915-133797, died 0 0 Kill
+ 166435	SplashScreen.exe     #1, 1 threads, lifetime 99551-166435, died 0 0 Kill
+ 259876	FLogSvr.exe          #2, 1 threads, lifetime 258875-259876, died 0 0 Kill
+ 285636	FLogSvr.exe          #3, 1 threads, lifetime 283221-285636, died 0 0 Kill
+ 293487	weatherinfo          #3, 3 threads, lifetime 252792-293487, died 0 0 Kill
+ 312721	FLogSvr.exe          #4, 1 threads, lifetime 311759-312721, died 0 0 Kill
+
+Loaded executables (297)
+101fe2aa.dll                  	akncapserver.exe
+102827CF.dll                  	EikSrvs.exe
+10283389.dll                  	akncapserver.exe
+10285D7B.dll                  	akncapserver.exe
+10286378.dll                  	EwSrv.exe
+2001E2B1.dll                  	akncapserver.exe
+2001cb93.dll                  	akncapserver.exe
+AknAlarmService.dll           	akncapserver.exe
+AknExtendedFader_arm11.dll    	EwSrv.exe
+AknFepUiAvkonPlugin.dll       	EikSrvs.exe
+AknIconOomPlugin.dll          	akncapserver.exe
+AknIconSrv.exe                	AknIconSrv.exe
+AknSkinsOOMPlugin.dll         	akncapserver.exe
+AlmAlert.dll                  	EikSrvs.exe
+BmpAnSrv.dll                  	EwSrv.exe
+BrowserRec.dll                	apsexe.exe
+C32.dll                       	c32exe.exe
+CCONNDLGPLUGIN.DLL            	aknnfysrv.exe
+CTSECDLGNOTIFIER.dll          	EikSrvs.exe
+ClockA.dll                    	EwSrv.exe
+CodRecog.dll                  	apsexe.exe
+ConnServParams.dll            	c32exe.exe
+DRMHELPERSERVER.EXE           	DRMHELPERSERVER.EXE
+DcfRepSrv.EXE                 	DcfRepSrv.EXE
+DcfRepSrv.EXE                 	RightsServer.EXE
+DdRecog.dll                   	apsexe.exe
+DrmStdKeyStorage.dll          	RightsServer.EXE
+EComServer.exe                	EComServer.exe
+EComServer.exe                	ssmutilsrv.exe
+EDbsrv.exe                    	EDbsrv.exe
+EDbsrv.exe                    	tzserver.exe
+EKData.dll                    	EwSrv.exe
+ELocal.fsy                    	efile.exe
+EStart.exe                    	EStart.exe
+ETel.dll                      	c32exe.exe
+EikSrvs.exe                   	EikSrvs.exe
+EikSrvs.exe                   	akncapserver.exe
+EwSrv.exe                     	EwSrv.exe
+EwSrv.exe                     	sysstatemgr.exe
+FLogSvr.exe                   	EikSrvs.exe
+FLogSvr.exe                   	FLogSvr.exe
+FLogSvr.exe                   	deform.exe
+FLogSvr.exe                   	weatherinfo.exe
+GSIndicatorPlugin.dll         	akncapserver.exe
+HWRMServer.exe                	EwSrv.exe
+HWRMServer.exe                	HWRMServer.exe
+HWRMStubPlugins.dll           	HWRMServer.exe
+IcuLayoutEngine.dll           	fbserv.exe
+IptvProvRec.DLL               	apsexe.exe
+KeyEventFw.DLL                	EwSrv.exe
+MEDNVMEMORY.PDD               	NULL
+MSGS.dll                      	sysstatemgr.exe
+MemoryPlugin.dll              	akncapserver.exe
+MsgNotifiersWrapper.dll       	EikSrvs.exe
+OmaDrmAgent.dll               	aknskinsrv.exe
+PHONETSY.TSY                  	c32exe.exe
+PKCS12Recognizer.dll          	apsexe.exe
+PhoneServer.exe               	PhoneServer.exe
+PhoneServer.exe               	akncapserver.exe
+Pk5Recognizer.dll             	apsexe.exe
+PolicyEngineUI.dll            	EikSrvs.exe
+PseudoVG.dll                  	AknIconSrv.exe
+QtCore.dll                    	deform.exe
+QtCore.dll                    	weatherinfo.exe
+QtGui.dll                     	deform.exe
+QtGui.dll                     	weatherinfo.exe
+QtNetwork.dll                 	weatherinfo.exe
+QtSvg.dll                     	deform.exe
+QtSvg.dll                     	weatherinfo.exe
+RECDRM.DLL                    	apsexe.exe
+RTSecMgrServer.exe            	RTSecMgrServer.exe
+RTSecMgrServer.exe            	WidgetRegistry.exe
+RecBmark.dll                  	apsexe.exe
+RecWeb.dll                    	apsexe.exe
+RightsServer.EXE              	DcfRepSrv.EXE
+RightsServer.EXE              	RightsServer.EXE
+SATSERVER.EXE                 	SATSERVER.EXE
+SATSERVER.EXE                 	mcsmenuserver.exe
+SATSHELLCNTRL.DLL             	SATSERVER.EXE
+SIPDummyPRT.PRT               	c32exe.exe
+SecurityNotifier.dll          	aknnfysrv.exe
+Securitynotifierwrapper.dll   	EikSrvs.exe
+SetUpEventListCmd.dll         	SATSERVER.EXE
+SmsProt.prt                   	c32exe.exe
+SplashScreen.exe              	SplashScreen.exe
+SplashScreen.exe              	sysstatemgr.exe
+Svgrecog.dll                  	apsexe.exe
+SyncMLNotifierWrapper.dll     	EikSrvs.exe
+TXTRECOG.dll                  	apsexe.exe
+VcXNotifierPlugin.DLL         	EikSrvs.exe
+WapProt.prt                   	c32exe.exe
+WebUrlRec.dll                 	apsexe.exe
+WidgetMemoryPlugin.dll        	akncapserver.exe
+WidgetRecognizer.dll          	apsexe.exe
+WidgetRegistry.exe            	WidgetRegistry.exe
+WidgetRegistry.exe            	mcsmenuserver.exe
+accfwuinotifier.dll           	EikSrvs.exe
+addressinfo.prt               	c32exe.exe
+aknanimdll.dll                	EwSrv.exe
+akncapserver.exe              	akncapserver.exe
+akncapserver.exe              	sysstatemgr.exe
+akncustcmds.dll               	sysstatemgr.exe
+akninit.dll                   	akncapserver.exe
+aknnfysrv.exe                 	aknnfysrv.exe
+aknnotifyplugin2.dll          	EikSrvs.exe
+aknoldstylenotif.dll          	akncapserver.exe
+aknskinsrv.exe                	EikSrvs.exe
+aknskinsrv.exe                	aknskinsrv.exe
+alarmserver.exe               	EikSrvs.exe
+alarmserver.exe               	alarmserver.exe
+alfappfwproxy.dll             	EikSrvs.exe
+apsexe.exe                    	apsexe.exe
+apsexe.exe                    	sysstatemgr.exe
+apstart.dll                   	sysstatemgr.exe
+audiostream.dll               	mmfaudioserverstart.exe
+avkon.dll                     	sysstatemgr.exe
+avkonfep.dll                  	EikSrvs.exe
+backend.dll                   	EwSrv.exe
+baksrvs.exe                   	apsexe.exe
+baksrvs.exe                   	baksrvs.exe
+batindicatorpaneplugin.dll    	akncapserver.exe
+btnotifwrapper.dll            	EikSrvs.exe
+c32exe.exe                    	c32exe.exe
+c32exe.exe                    	c32start.exe
+c32root.dll                   	EikSrvs.exe
+c32start.exe                  	RightsServer.EXE
+c32start.exe                  	c32start.exe
+cchuinotifwrapper.dll         	EikSrvs.exe
+cdlserver.exe                 	akncapserver.exe
+cdlserver.exe                 	cdlserver.exe
+centralrepositorysrv.exe      	centralrepositorysrv.exe
+centralrepositorysrv.exe      	sysstatemgr.exe
+ciextnclientplugin.DLL        	EikSrvs.exe
+ciextnserverplugin.DLL        	mmfaudioserverstart.exe
+ciplatformfactoryplugin.DLL   	EikSrvs.exe
+ciplatformmsghndlrplugin.DLL  	mmfaudioserverstart.exe
+connectiondialogswrapper.DLL  	EikSrvs.exe
+cryptospisetup.exe            	RightsServer.EXE
+cryptospisetup.exe            	cryptospisetup.exe
+ctsysystemstateplugin.dll     	c32exe.exe
+customcmds.dll                	sysstatemgr.exe
+devencnotifplugin.dll         	EikSrvs.exe
+display0.ldd                  	NULL
+domainPolicy.dll              	domainSrv.exe
+domainSrv.exe                 	domainSrv.exe
+domainpolicy2.dll             	domainSrv.exe
+eapnotifwrapper.dll           	EikSrvs.exe
+ecomm.ldd                     	NULL
+efile.exe                     	efile.exe
+eikbackupsrv.dll              	baksrvs.exe
+eiksrvui.dll                  	EikSrvs.exe
+ekern.exe                     	ekern.exe
+elocd.ldd                     	NULL
+emergencycallrfadaptation.dll 	ssmutilsrv.exe
+epos_omasuplnotifierplugin.dll	EikSrvs.exe
+eposlmrecognizer.dll          	apsexe.exe
+esocksvr.dll                  	c32exe.exe
+esoundsc.ldd                  	NULL
+euart1.pdd                    	NULL
+evtnotifierplugin.dll         	EikSrvs.exe
+f32agent.dll                  	aknskinsrv.exe
+fbserv.exe                    	EwSrv.exe
+fbserv.exe                    	fbserv.exe
+featmgrserver.exe             	apsexe.exe
+featmgrserver.exe             	featmgrserver.exe
+filemanagerbkupplugin.dll     	apsexe.exe
+gamedatarec.dll               	apsexe.exe
+glxmemoryplugin.dll           	akncapserver.exe
+graphicsresource.dll          	EwSrv.exe
+halsettings.exe               	EStart.exe
+halsettings.exe               	halsettings.exe
+hitchcock.dll                 	sysstatemgr.exe
+hwrmdefaultlighttargetmodifierplugin.dll	HWRMServer.exe
+hwrmuiplugin.dll              	EwSrv.exe
+imageconversionresolver.dll   	EComServer.exe
+ipproto.dll                   	c32exe.exe
+iptransportmanagement.dll     	c32exe.exe
+ityperast.dll                 	fbserv.exe
+javacomms.dll                 	matrixmenu.exe
+javaenvinfo.dll               	matrixmenu.exe
+javafileutils.dll             	matrixmenu.exe
+javaiconsizenotifplugin.dll   	EikSrvs.exe
+javaipc.dll                   	matrixmenu.exe
+javaregistryclient.dll        	matrixmenu.exe
+javasecurity.dll              	matrixmenu.exe
+javastorage.dll               	matrixmenu.exe
+javautils.dll                 	matrixmenu.exe
+jpegcodec.dll                 	AknIconSrv.exe
+libEGL.dll                    	EwSrv.exe
+libc.dll                      	EwSrv.exe
+libcrypto.dll                 	matrixmenu.exe
+libdl.dll                     	matrixmenu.exe
+libm.dll                      	EwSrv.exe
+libpthread.dll                	EwSrv.exe
+libstdcpp.dll                 	EwSrv.exe
+libstdcppv5.dll               	matrixmenu.exe
+libwfchwsyborg.dll            	EwSrv.exe
+liwResolver.dll               	EComServer.exe
+loadsysmon.dll                	sysstatemgr.exe
+locnotifierwrapper.dll        	EikSrvs.exe
+logicalaudiocodec.dll         	mmfaudioserverstart.exe
+logicalaudiodevicesink.dll    	mmfaudioserverstart.exe
+logicalaudiogaincontrol.dll   	mmfaudioserverstart.exe
+logicalaudiostream.dll        	mmfaudioserverstart.exe
+logicalbuffersource.dll       	mmfaudioserverstart.exe
+matrixmenu.exe                	matrixmenu.exe
+matrixmenu.exe                	sysstatemgr.exe
+mbufmgrimpl.dll               	c32exe.exe
+mcsmenuhandler.dll            	matrixmenu.exe
+mcsmenuserver.exe             	matrixmenu.exe
+mcsmenuserver.exe             	mcsmenuserver.exe
+mcsprovider.dll               	matrixmenu.exe
+mdsoomplugin.dll              	akncapserver.exe
+medint.pdd                    	NULL
+miscadaptation.dll            	ssmutilsrv.exe
+mmfaudioserverstart.exe       	EikSrvs.exe
+mmfaudioserverstart.exe       	mmfaudioserverstart.exe
+mmfolderuiextensionplugin.dll 	matrixmenu.exe
+mmruf.dll                     	apsexe.exe
+napt.prt                      	c32exe.exe
+nvgrenderstage.dll            	EwSrv.exe
+ode.dll                       	sysstatemgr.exe
+pipelib.ldd                   	NULL
+pkcs12recog.dll               	apsexe.exe
+pkcs8recog.dll                	apsexe.exe
+playlistrecognizer.dll        	apsexe.exe
+probe.prt                     	c32exe.exe
+psmserver.exe                 	akncapserver.exe
+psmserver.exe                 	psmserver.exe
+qgif.dll                      	deform.exe
+qgif.dll                      	weatherinfo.exe
+qico.dll                      	deform.exe
+qico.dll                      	weatherinfo.exe
+qjpeg.dll                     	deform.exe
+qjpeg.dll                     	weatherinfo.exe
+qmng.dll                      	deform.exe
+qmng.dll                      	weatherinfo.exe
+qsvg.dll                      	deform.exe
+qsvg.dll                      	weatherinfo.exe
+qtiff.dll                     	deform.exe
+qtiff.dll                     	weatherinfo.exe
+qts60plugin_5_0.dll           	deform.exe
+qts60plugin_5_0.dll           	weatherinfo.exe
+recapp2.dll                   	apsexe.exe
+reccaf.dll                    	apsexe.exe
+reccert.dll                   	apsexe.exe
+recicl.dll                    	apsexe.exe
+recjar.dll                    	apsexe.exe
+recnhwr.dll                   	apsexe.exe
+recrt.dll                     	apsexe.exe
+recsisx.dll                   	apsexe.exe
+rectxt.dll                    	apsexe.exe
+recwap.dll                    	apsexe.exe
+rsfwnotplugin.dll             	EikSrvs.exe
+rversit.dll                   	apsexe.exe
+sennotifierplugin.dll         	EikSrvs.exe
+softwarecrypto.dll            	cryptospisetup.exe
+soundsc.pdd                   	NULL
+sqlsrv.exe                    	sqlsrv.exe
+sqlsrv.exe                    	tzserver.exe
+ssm.state.policy.0000.dll     	sysstatemgr.exe
+ssmpowersup.dll               	ssmutilsrv.exe
+ssmsystemcmds.dll             	sysstatemgr.exe
+ssmutilsrv.exe                	ssmutilsrv.exe
+ssmutilsrv.exe                	sysstatemgr.exe
+startupadaptationstub.dll     	ssmutilsrv.exe
+stateadaptation.dll           	ssmutilsrv.exe
+surfacemanagerdriver.ldd      	NULL
+svphostfs.exe                 	EStart.exe
+svphostfs.exe                 	svphostfs.exe
+svphostfsy.fsy                	efile.exe
+sysagt2svr.exe                	sysagt2svr.exe
+sysagt2svr.exe                	sysstatemgr.exe
+sysmon.exe                    	sysmon.exe
+sysmon.exe                    	sysstatemgr.exe
+sysstatemgr.exe               	EStart.exe
+sysstatemgr.exe               	sysstatemgr.exe
+sysutilsetup.exe              	c32exe.exe
+sysutilsetup.exe              	sysutilsetup.exe
+tonehwdevice.dll              	mmfaudioserverstart.exe
+tsappecom.dll                 	akncapserver.exe
+tzserver.exe                  	EwSrv.exe
+tzserver.exe                  	tzserver.exe
+upsserver.exe                 	c32exe.exe
+upsserver.exe                 	upsserver.exe
+usbuinotif.dll                	EikSrvs.exe
+voipprovrec.dll               	apsexe.exe
+vrec.dll                      	apsexe.exe
+weatherinfo.exe               	weatherinfo.exe
+wfcinterop.dll                	EwSrv.exe
+wmdrmagent.dll                	aknskinsrv.exe
+wmdrmclientwrapper.dll        	RightsServer.EXE
+wmdrmserver.exe               	RightsServer.EXE
+wmdrmserver.exe               	wmdrmserver.exe
+xmlcustomresolver.dll         	EComServer.exe
+xmlparserplugin.dll           	RightsServer.EXE
+xmlparserplugin.dll           	matrixmenu.exe
