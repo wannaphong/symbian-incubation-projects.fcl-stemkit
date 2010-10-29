@@ -20,6 +20,7 @@ my %threadcount;
 my %instancecount;
 my %originalname;
 my @deathlist;
+my %loaded_exes;
 
 my $line;
 while ($line = <>)
@@ -29,9 +30,21 @@ while ($line = <>)
 	# DLibrary domainSrv.exe::domainpolicy2.dll Close m=-1
 	# Thread MTMInit::Via Infrared Via Infrared   Panic MTMInit 5
 	# DProcess::Rename MSexe.exe to !MsvServer
-	if ( $line =~ /^(AddThread |Process \S+ Die: |DLibrary |Thread |DProcess::Rename )/o)
+	# DCodeSeg::Create c809aac8 file Z:\SYS\BIN\BmpAnSrv.dll ver 000a0000 process EwSrv.exe
+	# Thread sysstatemgr.exe::!CleSrv_22f5d001 Logon to process matrixmenu.exe, status at 00800a74 rdv=1
+	
+	if ( $line =~ /^(AddThread |Process \S+ Die: |DLibrary |Thread |DProcess::Rename |DCodeSeg::Create )/o)
 		{
 		
+		if ($line =~ /^DCodeSeg::Create \S+ file z:\\sys\\bin\\(\S+) ver \S+ process (\S+)/io)
+			{
+			my $exe = $1;
+			my $process = $2;
+			my $truename = $originalname{$process};
+			$truename = $process if (!defined $truename);
+			$loaded_exes{"$exe\t$truename"} = 1;
+			next;
+			}
 		if ($line =~ /^DProcess::Rename (\S+) to (\S+)/o)
 			{
 			my $oldname = $1;
@@ -41,7 +54,7 @@ while ($line = <>)
 			$threadcount{$process} = $threadcount{$oldname};
 			$instancecount{$process} = $instancecount{$oldname};
 
-			$originalname{$process} = $oldname;
+			$originalname{$process} = $originalname{$oldname};
 			delete $processes{$oldname};
 			delete $threadcount{$oldname};
 			}
@@ -55,6 +68,7 @@ while ($line = <>)
 				# New process created
 				$processes{$process} = $.;
 				$threadcount{$process} = 0;
+				$originalname{$process} = $process;
 				}
 			$threadcount{$process} += 1;
 			if (!defined $instancecount{$process})
@@ -65,6 +79,14 @@ while ($line = <>)
 			}
 		print "$.: $line";
 
+	# Thread sysstatemgr.exe::!CleSrv_22f5d001 Logon to process matrixmenu.exe, status at 00800a74 rdv=1
+		if ($line =~ /^Thread (.*)::.* Logon to process ([^,]+),/o)
+			{
+			my $parentprocess = $originalname{$1};
+			my $childprocess = $2;
+			$loaded_exes{"$childprocess\t$parentprocess"} = 2;
+			next;
+			}
 		if ($line =~ /^Process (\S+) Die: (.*)$/o)
 			{
 			my $process = $1;
@@ -103,8 +125,15 @@ while ($line = <>)
 printf "\n\nActive processes (%d):\n", scalar keys %processes;
 foreach my $process (sort keys %processes)
 	{
-	printf "%-25s\t%d threads, created at line %d\n", $process, $threadcount{$process}, $processes{$process};
+	printf "%-30s\t%d threads, created at line %d\n", $process, $threadcount{$process}, $processes{$process};
 	}
 
 printf "\n\nDead processes (%d)\n", scalar @deathlist;
 print join("\n", sort @deathlist, "");
+
+printf "\n\nLoaded executables (%d)\n", scalar keys %loaded_exes;
+foreach my $exepair (sort keys %loaded_exes)
+	{
+	my ($exe,$parent) = split /\t/, $exepair;
+	printf "%-30s\t%s\n", $exe, $parent;
+	}
