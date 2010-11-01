@@ -89,7 +89,7 @@ file=\epoc32\release\ARMV5\urel\dfprvct2_2.dll 	"sys\bin\dfprvct2_2.dll"
     alias \sys\bin\dfprvct2_2.dll                   \sys\bin\dfprvct2_1.dll
 extension[0x0b0a0001]=\epoc32\release\ARMV5\urel\rm_debug.ldd 	"sys\bin\rm_debug.ldd"
 file=\epoc32\release\ARMV5\urel\rm_debug_svr.exe 	"sys\bin\rm_debug_svr.exe"
-file=\epoc32\release\ARMV5\urel\_syborg_euser.dll 	"sys\bin\EUser.dll"
+file=\epoc32\release\ARMV5\DEBUG_DIR\_syborg_euser.dll 	"sys\bin\EUser.dll"
 file=\epoc32\release\ARMV5\urel\RPIPE.DLL 	"sys\bin\rpipe.dll"
 file=\epoc32\release\ARMV5\urel\trkdummyapp.exe 	"sys\bin\trkdummyapp.exe"
 file=\epoc32\release\ARMV5\urel\trkdummyapp2.exe 	"sys\bin\trkdummyapp2.exe"
@@ -1115,7 +1115,6 @@ REM *** IRDA is supported by the device or not, so that client
 REM *** applications can link against them regardless.
 file=\epoc32\release\ARMV5\urel\irda.dll 	"sys\bin\IrDA.dll"
 file=\epoc32\release\ARMV5\urel\irtranp.dll 	"sys\bin\IrTranp.dll"
-kerneltrace=0x00080000
 file=\epoc32\release\ARMV5\urel\lafshutdowneventobserveradaptor.dll 	"sys\bin\lafshutdowneventobserveradaptor.dll"
 file=\epoc32\release\ARMV5\urel\lbs.dll 	"sys\bin\lbs.dll"
 file=\epoc32\release\ARMV5\urel\lbsadatacache.dll 	"sys\bin\lbsadatacache.dll"
