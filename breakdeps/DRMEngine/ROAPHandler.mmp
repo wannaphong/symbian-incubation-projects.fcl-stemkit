@@ -24,6 +24,7 @@ TARGETTYPE      DLL
 UID             0x1000008D 0x101F6DB5
 CAPABILITY      CAP_GENERAL_DLL DRM
 VENDORID        VID_DEFAULT
+NOEXPORTLIBRARY
 
 USERINCLUDE     /sf/mw/drm/omadrm/drmengine/dcf/inc
 USERINCLUDE     /sf/mw/drm/omadrm/drmengine/dm/inc
@@ -35,7 +36,7 @@ USERINCLUDE     /sf/mw/drm/omadrm/drmengine/server/inc
 USERINCLUDE     /sf/mw/drm/omadrm/drmengine/roapstorage/inc
 USERINCLUDE     /sf/mw/drm/omadrm/drmengine/drmclock/Inc
 USERINCLUDE     /sf/mw/drm/omadrm/drmengine/dcfrepository/client/inc
-USERINCLUDE     /sf/mw/drm/omadrm/drmengine/../../inc   // ADo level inc dir
+USERINCLUDE     /sf/mw/drm/inc   // ADo level inc dir
 
 // Default system include paths for middleware layer modules.
 APP_LAYER_SYSTEMINCLUDE
@@ -130,7 +131,7 @@ LIBRARY     drmroapwbxmlparser.lib
 macro      _ROAP_TESTING
 LIBRARY    flogger.lib
 
-#if defined(ARMCC)
+#if defined(EABI)
 deffile /sf/mw/drm/omadrm/drmengine/eabi/ROAPHandler.def
 #elif defined( WINSCW )
 deffile /sf/mw/drm/omadrm/drmengine/bwinscw/ROAPHandler.def
