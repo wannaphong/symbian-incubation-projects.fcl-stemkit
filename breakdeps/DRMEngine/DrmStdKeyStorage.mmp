@@ -23,6 +23,7 @@ TARGETTYPE      DLL
 UID             0x1000008D 0x10205CAF
 CAPABILITY      CAP_GENERAL_DLL DRM CommDD
 VENDORID        VID_DEFAULT
+NOEXPORTLIBRARY
 
 USERINCLUDE     /sf/mw/drm/omadrm/drmengine/keystorage/inc
 USERINCLUDE     /sf/mw/drm/omadrm/drmengine/utils/inc
@@ -55,7 +56,7 @@ LIBRARY		featmgr.lib
 LIBRARY       platformenv.lib
 #endif
 
-#if defined(ARMCC)
+#if defined(EABI)
 deffile /sf/mw/drm/omadrm/drmengine/eabi/DrmStdKeyStorage.def
 #elif defined( WINSCW )
 deffile /sf/mw/drm/omadrm/drmengine/bwinscw/DrmStdKeyStorage.def
