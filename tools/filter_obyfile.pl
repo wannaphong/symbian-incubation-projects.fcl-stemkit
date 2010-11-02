@@ -571,6 +571,9 @@ if ($deletion_details_file && scalar (@details, @problems, @deletion_roots))
 		
 	print FILE "\n====\n";
 	printf FILE "Minimum ROM now has %d exes\n", scalar keys %must_have_exes;
+	print FILE join("\n", sort keys %must_have_exes), "\n";
+	
+	print FILE "\n====\n";
 	foreach my $deletion_root (sort {$b <=> $a} @deletion_roots)
 		{
 		my ($count,$exe) = split /\s+/, $deletion_root;

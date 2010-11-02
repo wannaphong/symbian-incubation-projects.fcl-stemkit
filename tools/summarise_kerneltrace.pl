@@ -23,8 +23,21 @@ my @deathlist;
 my %loaded_exes;
 
 my $line;
+my $partline = "";
 while ($line = <>)
 	{
+	# Clean up the effect of "DTimer::Create ..." traces in the middle of lines
+	if ($partline ne "")
+		{
+		$line = $partline . $line;
+		$partline = "";
+		}
+	elsif ($line =~ /^(.*)(DTimer::Create.*)$/o)
+		{
+		$line = $2;
+		$partline = $1;
+		}
+
 	# AddThread ekern.exe::NVMem-ecc10dce to ekern.exe
 	# Process FLogSvr.exe Die: 0 0 Kill
 	# DLibrary domainSrv.exe::domainpolicy2.dll Close m=-1

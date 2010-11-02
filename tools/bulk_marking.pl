@@ -46,9 +46,9 @@ while ($line=<>)
 	my ($romfile,$hostfile,$ibyfile,$package,$cmd,@rest) = split /,/, $line;
 	if (!defined $cmd)
 		{
-		if ($other_exes && $line =~ /^(\S+)$/)
+		if ($line =~ /^(\S+)$/)
 			{
-			# guess that this is a preserved filename
+			# guess that this is a preserved executable
 			my $exe = "sys\\bin\\". lc $1;
 			$romfiles{$exe} = 1;
 			# print STDERR "Preserving $exe\n";
