@@ -767,7 +767,7 @@ SSM: Initiating transition to state 0000.0031.
 103505: Thread AknIconSrv.exe::ICLThread.00063456526852754375.00603158 SetRequiredPriority def 18 cleanup -1 nest 0
 103506: Thread AknIconSrv.exe::ICLThread.00063456526852754375.00603158 MState 2 SetActualPriority 18
 103507: Thread AknIconSrv.exe::!AknIconServer Logon to thread AknIconSrv.exe::ICLThread.00063456526852754375.00603158, status at 00404328 rdv=0
-103526: Thread AknIconSDTimer::Create thread EwSrv.exe::00d003608fc71fee
+103527: Thread AknIconSrv.exe::!AknIconServer Logon to thread AknIconSrv.exe::ICLThread.00063456526852754375.00603158, status at 006038d4 rdv=0
 103529: Thread AknIconSrv.exe::!AknIconServer Logon to thread AknIconSrv.exe::ICLThread.00063456526852754375.00603158, status at 00404478 rdv=0
 103531: Thread AknIconSrv.exe::!AknIconServer Logon to thread AknIconSrv.exe::ICLThread.00063456526852754375.00603158, status at 00404488 rdv=0
 103536: Thread AknIconSrv.exe::ICLThread.00063456526852754375.00603158 SetDefaultPriority 19
@@ -1256,7 +1256,7 @@ Renaming weatherinfo.exe (252792,2) to weatherinfo
 259876: Process FLogSvr.exe Die: 0 0 Kill
 	FLogSvr.exe: #2, 1 threads, lifetime 258875-259876
 259888: Thread FLogSvr.exe::!FLogger server SvKill()
-259892: Thread FLogSvr.exe::!FLogger server ReleasDTimer::Create thread EwSrv.exe::00d003608fc71fee
+259893: Thread FLogSvr.exe::!FLogger server Release()
 260177: Thread weatherinfo::weatherinfo SetRequiredPriority def 12 cleanup 21 nest 1
 260178: Thread weatherinfo::weatherinfo MState 2 SetActualPriority 21
 260179: Thread weatherinfo::weatherinfo RevertPriority def 12 cleanup -1
@@ -1549,7 +1549,6 @@ Renaming weatherinfo.exe (252792,2) to weatherinfo
 304156: Thread deform.exe::Main RevertPriority def 12 cleanup 0
 304340: Thread efile.exe::LoaderThread SetRequiredPriority def 21 cleanup 21 nest 1
 304341: Thread efile.exe::LoaderThread RevertPriority def 21 cleanup -1
-304631: DCodeSeg::Create c80b36b8 file Z:\sys\bin\xmlDTimer::Create thread EwSrv.exe::00d003608fc71fee
 305295: Thread Menu::Menu SetRequiredPriority def 12 cleanup 21 nest 1
 305296: Thread Menu::Menu MState 2 SetActualPriority 21
 305809: DLibrary Menu::xmlparserplugin.dll Close m=-1
@@ -1735,7 +1734,7 @@ Dead processes (13)
  293487	weatherinfo          #3, 3 threads, lifetime 252792-293487, died 0 0 Kill
  312721	FLogSvr.exe          #4, 1 threads, lifetime 311759-312721, died 0 0 Kill
 
-Loaded executables (297)
+Loaded executables (299)
 101fe2aa.dll                  	akncapserver.exe
 102827CF.dll                  	EikSrvs.exe
 10283389.dll                  	akncapserver.exe
@@ -1877,6 +1876,7 @@ cryptospisetup.exe            	RightsServer.EXE
 cryptospisetup.exe            	cryptospisetup.exe
 ctsysystemstateplugin.dll     	c32exe.exe
 customcmds.dll                	sysstatemgr.exe
+deform.exe                    	deform.exe
 devencnotifplugin.dll         	EikSrvs.exe
 display0.ldd                  	NULL
 domainPolicy.dll              	domainSrv.exe
@@ -1921,6 +1921,7 @@ javaiconsizenotifplugin.dll   	EikSrvs.exe
 javaipc.dll                   	matrixmenu.exe
 javaregistryclient.dll        	matrixmenu.exe
 javasecurity.dll              	matrixmenu.exe
+javasizehelperclient.dll      	matrixmenu.exe
 javastorage.dll               	matrixmenu.exe
 javautils.dll                 	matrixmenu.exe
 jpegcodec.dll                 	AknIconSrv.exe
