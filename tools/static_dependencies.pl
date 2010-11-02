@@ -51,12 +51,12 @@ while ($line = <>)
 		$cmd = "";
 		}
 	
-	if (lc $cmd eq "slim")
+	if ($cmd =~ /slim$/i)
 		{
 		$need_details{lc $romfile} = 1;
 		$cmd = "stem";		# slim implies stem
 		}
-	if (lc $cmd eq "stem" && $hostfile !~ /stem_/)
+	if ($cmd =~ /stem$/i && $hostfile !~ /stem_/)
 		{
 		push @contents, "$romfile\t$hostfile";	# calculate dependencies for the original file
 		$hostfile =~ s/(\/|\\)([^\\\/]+)$/$1stem_$2/;			# then use stem version as well
