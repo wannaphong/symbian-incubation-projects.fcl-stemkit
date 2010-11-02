@@ -2616,7 +2616,7 @@ sys\bin\epointer.dll,/epoc32/release/armv5/urel/_syborg_epointer_landscape.dll,b
 sys\bin\euart1.pdd,/epoc32/release/armv5/urel/_syborg_eserial.pdd,base_syborg_ui.iby,adaptation/qemu,,,
 sys\bin\EUser.dll,/epoc32/release/armv5/urel/_syborg_euser.dll,base.iby,adaptation/qemu,,,
 sys\bin\ewebcamera.ldd,/epoc32/release/armv5/urel/_syborg_ewebcamera.ldd,base_syborg_ui.iby,adaptation/qemu,,,
-sys\bin\exmoncommon.dll,/epoc32/release/armv5/urel/_syborg_exmoncommon.dll,base_syborg_ui.iby,adaptation/qemu,,,
+sys\bin\exmoncommon.dll,/epoc32/release/armv5/urel/_syborg_exmoncommon.dll,base_syborg_ui.iby,adaptation/qemu,In,WR,Seems to be important to a booting ROM
 sys\bin\exmondebug.dll,/epoc32/release/armv5/urel/_syborg_exmondebug.dll,base_syborg_ui.iby,adaptation/qemu,,,
 sys\bin\Hal.dll,/epoc32/release/armv5/urel/_syborg_hal.dll,base.iby,adaptation/qemu,,,
 sys\bin\kasyborg.dll,/epoc32/release/armv5/urel/_syborg_kasyborg.dll,base_syborg_ui.iby,adaptation/qemu,,,
@@ -3318,7 +3318,7 @@ sys\bin\DevTokenServer.exe,/epoc32/release/armv5/urel/devtokenserver.exe,core/mw
 sys\bin\DevTokenShared.DLL,/epoc32/release/armv5/urel/devtokenshared.dll,core/mw/DevToken.iby,mw/securitysrv,,,
 sys\bin\DevVideo.dll,/epoc32/release/armv5/urel/devvideo.dll,DevVideo.iby,os/mm,,,
 sys\bin\dfpaeabi.dll,/epoc32/release/armv5/urel/dfpaeabi.dll,compsupp.iby,os/kernelhwsrv,,,
-sys\bin\dfprvct-thunk.dll,/epoc32/release/armv5/urel/dfprvct-thunk.dll,compsupp.iby,os/kernelhwsrv,,,
+sys\bin\dfprvct-thunk.dll,/epoc32/release/armv5/urel/dfprvct-thunk.dll,compsupp.iby,os/kernelhwsrv,In,WR,Runtime support
 sys\bin\dfprvct2_2.dll,/epoc32/release/armv5/urel/dfprvct2_2.dll,compsupp.iby,os/kernelhwsrv,,,
 Sys\Bin\dhcppositionprovider.dll,/epoc32/release/armv5/urel/dhcppositionprovider.dll,core/app/dhcppositionproviderpsy.iby,app/iptelephony,,,
 sys\bin\diagframework.dll,/epoc32/release/armv5/urel/diagframework.dll,core/mw/diagframework.iby,mw/remotemgmt,,,
@@ -3572,7 +3572,7 @@ Sys\Bin\evtnotifierplugin.dll,/epoc32/release/armv5/urel/evtnotifierplugin.dll,c
 sys\bin\evtutils.dll,/epoc32/release/armv5/urel/evtutils.dll,core/app/eventsui.iby,app/location,,,
 sys\bin\ExifLib.dll,/epoc32/release/armv5/urel/exiflib.dll,core/os/ExifLib.iby,os/imagingext,,,
 sys\bin\ExifUtility.dll,/epoc32/release/armv5/urel/exifutility.dll,exifutility.iby,os/mm,,,
-sys\bin\exstart.dll,/epoc32/release/armv5/urel/exstart.dll,base_syborg_ui.iby,os/kernelhwsrv,,,
+sys\bin\exstart.dll,/epoc32/release/armv5/urel/exstart.dll,base_syborg_ui.iby,os/kernelhwsrv,In,WR,Seems to be vital to booting the ROM
 Sys\Bin\extended_sms_7bit.dll,/epoc32/release/armv5/urel/extended_sms_7bit.dll,charconv_sms7bit.iby,os/textandloc,,,
 sys\bin\extendedconnpref.dll,/epoc32/release/armv5/urel/extendedconnpref.dll,core/mw/extendedconnpref.iby,mw/ipconnmgmt,,,
 Sys\Bin\extendedconnprefecom.dll,/epoc32/release/armv5/urel/extendedconnprefecom.dll,core/mw/extendedconnprefecom.iby,mw/ipconnmgmt,,,
@@ -5272,7 +5272,7 @@ sys\bin\SCPDatabase.dll,/epoc32/release/armv5/urel/scpdatabase.dll,core/mw/scpda
 sys\bin\SCPEventHandler.dll,/epoc32/release/armv5/urel/scpeventhandler.dll,core/mw/scpeventhandler.iby,mw/remotemgmt,,,
 Sys\Bin\SCPHistoryPlugin.dll,/epoc32/release/armv5/urel/scphistoryplugin.dll,core/mw/scpserver.iby,mw/remotemgmt,,,
 Sys\Bin\SCPPatternPlugin.dll,/epoc32/release/armv5/urel/scppatternplugin.dll,core/mw/scpserver.iby,mw/remotemgmt,,,
-sys\bin\scppnwdl.dll,/epoc32/release/armv5/urel/scppnwdl.dll,compsupp.iby,os/kernelhwsrv,,,
+sys\bin\scppnwdl.dll,/epoc32/release/armv5/urel/scppnwdl.dll,compsupp.iby,os/kernelhwsrv,In,WR,Runtime support
 sys\bin\SCPServer.exe,/epoc32/release/armv5/urel/scpserver.exe,core/mw/scpserver.iby,mw/remotemgmt,,,
 Sys\Bin\SCPTimestampPlugin.dll,/epoc32/release/armv5/urel/scptimestampplugin.dll,core/mw/scpserver.iby,mw/remotemgmt,,,
 sys\bin\ScreenGrabber.exe,/epoc32/release/armv5/urel/screengrabber.exe,core/tools/screengrabber.iby,app/rndtools,,WR,application
