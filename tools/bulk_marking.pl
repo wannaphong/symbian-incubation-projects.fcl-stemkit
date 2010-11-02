@@ -56,7 +56,7 @@ while ($line=<>)
 		next;
 		}
 	
-	if ($cmd ne "")
+	if ($cmd ne "" && $cmd !~ /_/)
 		{
 		print $line;	# already marked, so leave it alone
 		next;
@@ -82,6 +82,7 @@ while ($line=<>)
 
 	if ($mark_me)
 		{
+		print STDERR "Overriding $cmd for $romfile\n" if ($cmd ne "" && lc $cmd ne lc $newcmd);
 		$mark_count += 1;
 		print join(",", $romfile,$hostfile,$ibyfile,$package,$newcmd,$who,$marking), "\n";
 		}
