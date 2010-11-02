@@ -3114,7 +3114,7 @@ Sys\Bin\cmailhandlerplugin.dll,/epoc32/release/armv5/urel/cmailhandlerplugin.dll
 sys\bin\cmaillogger.dll,/epoc32/release/armv5/urel/cmaillogger.dll,core/app/emaildebug.iby,app/commonemail,,,
 sys\bin\cmmanager.dll,/epoc32/release/armv5/urel/cmmanager.dll,core/mw/CmManager.iby,mw/ipconnmgmt,,,
 sys\bin\cmmanagerdatabase.dll,/epoc32/release/armv5/urel/cmmanagerdatabase.dll,core/mw/cmmanagerdatabase.iby,mw/ipconnmgmt,,,
-sys\bin\cmncustomcmds.dll,/epoc32/release/armv5/urel/cmncustomcmds.dll,cmncustomcmds.iby,os/devicesrv,,,
+sys\bin\cmncustomcmds.dll,/epoc32/release/armv5/urel/cmncustomcmds.dll,cmncustomcmds.iby,os/devicesrv,In,WR,Required for shutdown
 Sys\Bin\cmpluginembdestination.dll,/epoc32/release/armv5/urel/cmpluginembdestination.dll,core/mw/cmpluginembdestination.iby,mw/ipconnmgmt,,,
 Sys\Bin\cmpluginpacketdata.dll,/epoc32/release/armv5/urel/cmpluginpacketdata.dll,core/mw/cmpluginpacketdata.iby,mw/ipconnmgmt,,,
 Sys\Bin\cmpluginvpn.dll,/epoc32/release/armv5/urel/cmpluginvpn.dll,core/mw/cmpluginvpn.iby,mw/ipconnmgmt,,,
