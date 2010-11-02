@@ -2607,25 +2607,25 @@ sys\bin\3GPExtParser.dll,/epoc32/release/armv5/urel/3gpextparser.dll,core/mw/Met
 sys\bin\3gplibrary.dll,/epoc32/release/armv5/urel/3gplibrary.dll,3gplibrary.iby,os/mm,,,
 sys\bin\3GPMP4LIB.DLL,/epoc32/release/armv5/urel/3gpmp4lib.dll,core/mw/3gpmp4lib.iby,os/mm,,,
 sys\bin\ScDv.dll,/epoc32/release/armv5/urel/_generic_scdv.dll,base.iby,os/graphics,,,
-sys\bin\btracex.ldd,/epoc32/release/armv5/urel/_syborg_btracex.ldd,base_syborg_ui.iby,adaptation/qemu,,,
+sys\bin\btracex.ldd,/epoc32/release/armv5/urel/_syborg_btracex.ldd,base_syborg_ui.iby,adaptation/qemu,In,WR,Needed to boot
 sys\bin\EStart.exe,/epoc32/release/armv5/urel/_syborg_e32strt.exe,base.iby,adaptation/qemu,,,
 sys\bin\EKData.dll,/epoc32/release/armv5/urel/_syborg_ekdata.dll,base.iby,adaptation/qemu,,,
 sys\bin\ekern.exe,/epoc32/release/armv5/urel/_syborg_ekern.exe,base_syborg_ui.iby,adaptation/qemu,In,WR,Just in case
-sys\bin\ekeyb.dll,/epoc32/release/armv5/urel/_syborg_ekeyb.dll,base_syborg_ui.iby,adaptation/qemu,,,
-sys\bin\epointer.dll,/epoc32/release/armv5/urel/_syborg_epointer_landscape.dll,base_syborg_ui.iby,adaptation/qemu,,,
-sys\bin\euart1.pdd,/epoc32/release/armv5/urel/_syborg_eserial.pdd,base_syborg_ui.iby,adaptation/qemu,,,
+sys\bin\ekeyb.dll,/epoc32/release/armv5/urel/_syborg_ekeyb.dll,base_syborg_ui.iby,adaptation/qemu,In,WR,Required to boot ROM
+sys\bin\epointer.dll,/epoc32/release/armv5/urel/_syborg_epointer_landscape.dll,base_syborg_ui.iby,adaptation/qemu,In,WR,Required to boot ROM
+sys\bin\euart1.pdd,/epoc32/release/armv5/urel/_syborg_eserial.pdd,base_syborg_ui.iby,adaptation/qemu,In,WR,Required to boot ROM
 sys\bin\EUser.dll,/epoc32/release/armv5/urel/_syborg_euser.dll,base.iby,adaptation/qemu,,,
 sys\bin\ewebcamera.ldd,/epoc32/release/armv5/urel/_syborg_ewebcamera.ldd,base_syborg_ui.iby,adaptation/qemu,,,
 sys\bin\exmoncommon.dll,/epoc32/release/armv5/urel/_syborg_exmoncommon.dll,base_syborg_ui.iby,adaptation/qemu,In,WR,Seems to be important to a booting ROM
-sys\bin\exmondebug.dll,/epoc32/release/armv5/urel/_syborg_exmondebug.dll,base_syborg_ui.iby,adaptation/qemu,,,
-sys\bin\Hal.dll,/epoc32/release/armv5/urel/_syborg_hal.dll,base.iby,adaptation/qemu,,,
-sys\bin\kasyborg.dll,/epoc32/release/armv5/urel/_syborg_kasyborg.dll,base_syborg_ui.iby,adaptation/qemu,,,
+sys\bin\exmondebug.dll,/epoc32/release/armv5/urel/_syborg_exmondebug.dll,base_syborg_ui.iby,adaptation/qemu,In,WR,Required to boot ROM
+sys\bin\Hal.dll,/epoc32/release/armv5/urel/_syborg_hal.dll,base.iby,adaptation/qemu,In,WR,Required to boot ROM
+sys\bin\kasyborg.dll,/epoc32/release/armv5/urel/_syborg_kasyborg.dll,base_syborg_ui.iby,adaptation/qemu,In,WR,Required to boot ROM
 sys\bin\medint.pdd,/epoc32/release/armv5/urel/_syborg_medint.pdd,base_syborg_ui.iby,adaptation/qemu,,,
 sys\bin\MEDNVMEMORY.PDD,/epoc32/release/armv5/urel/_syborg_mednvmemory.pdd,base_syborg_ui.iby,adaptation/qemu,,,
 sys\bin\soundsc.pdd,/epoc32/release/armv5/urel/_syborg_soundsc.pdd,base_syborg_ui.iby,adaptation/qemu,,,
-sys\bin\lcd.dll,/epoc32/release/armv5/urel/_syborg_svpframebuffer.dll,base_syborg_ui.iby,adaptation/qemu,,,
-sys\bin\svphostfsdriver.ldd,/epoc32/release/armv5/urel/_syborg_svphostfsdriver.ldd,base_syborg_ui.iby,adaptation/qemu,,,
-sys\bin\svpsnapdriver.ldd,/epoc32/release/armv5/urel/_syborg_svpsnapdriver.ldd,base_syborg_ui.iby,adaptation/qemu,,,
+sys\bin\lcd.dll,/epoc32/release/armv5/urel/_syborg_svpframebuffer.dll,base_syborg_ui.iby,adaptation/qemu,In,WR,Required to boot ROM
+sys\bin\svphostfsdriver.ldd,/epoc32/release/armv5/urel/_syborg_svphostfsdriver.ldd,base_syborg_ui.iby,adaptation/qemu,In,WR,Required to boot ROM
+sys\bin\svpsnapdriver.ldd,/epoc32/release/armv5/urel/_syborg_svpsnapdriver.ldd,base_syborg_ui.iby,adaptation/qemu,In,WR,Required to boot ROM
 sys\bin\webcamera.pdd,/epoc32/release/armv5/urel/_syborg_webcamera.pdd,base_syborg_ui.iby,adaptation/qemu,,,
 sys\bin\a2dpoptimisation.dll,/epoc32/release/armv5/urel/a2dpoptimisation.dll,bluetooth.iby,os/bt,,,
 sys\bin\a3f_trace_heap.dll,/epoc32/release/armv5/urel/a3f_trace_heap.dll,traces.iby,os/mm,,,
@@ -2967,7 +2967,7 @@ Sys\Bin\btpbap.dll,/epoc32/release/armv5/urel/btpbap.dll,core/mw/btpbap.iby,mw/b
 sys\bin\btpowercontrol.dll,/epoc32/release/armv5/urel/btpowercontrol.dll,bluetooth.iby,os/bt,,,
 Sys\Bin\btprotocol.dll,/epoc32/release/armv5/urel/btprotocol.dll,core/app/deviceprotocols.iby,app/printing,,,
 Sys\Bin\btpsmplugin.dll,/epoc32/release/armv5/urel/btpsmplugin.dll,core/mw/bteng.iby,mw/btservices,,,
-sys\bin\btracec.dll,/epoc32/release/armv5/urel/btracec.dll,base_syborg_ui.iby,os/kernelhwsrv,,,
+sys\bin\btracec.dll,/epoc32/release/armv5/urel/btracec.dll,base_syborg_ui.iby,os/kernelhwsrv,In,WR,Needed to boot
 Sys\Bin\btrcc.dll,/epoc32/release/armv5/urel/btrcc.dll,core/mw/btsac.iby,mw/btservices,,,
 Sys\Bin\btrfsplugin.dll,/epoc32/release/armv5/urel/btrfsplugin.dll,core/mw/bteng.iby,mw/btservices,,,
 Sys\Bin\btsac.dll,/epoc32/release/armv5/urel/btsac.dll,core/mw/btsac.iby,mw/btservices,,,
@@ -3560,7 +3560,7 @@ sys\bin\etul.dll,/epoc32/release/armv5/urel/etul.dll,egul.iby,mw/classicui,,,
 Sys\Bin\eucjp_packed.dll,/epoc32/release/armv5/urel/eucjp_packed.dll,charconv_japanese.iby,os/textandloc,,,
 Sys\Bin\EUCKR.dll,/epoc32/release/armv5/urel/euckr.dll,charconv_s60.iby,os/textandloc,,,
 sys\bin\euserhl.dll,/epoc32/release/armv5/urel/euserhl.dll,euserhl.iby,os/ossrv,,,
-sys\bin\evfp.dll,/epoc32/release/armv5/urel/evfp.dll,base_syborg_ui.iby,os/kernelhwsrv,,,
+sys\bin\evfp.dll,/epoc32/release/armv5/urel/evfp.dll,base_syborg_ui.iby,os/kernelhwsrv,In,WR,User mode VFP exception support
 sys\bin\evteditor.dll,/epoc32/release/armv5/urel/evteditor.dll,core/app/eventsui.iby,app/location,,,
 sys\bin\evtengine.dll,/epoc32/release/armv5/urel/evtengine.dll,core/app/eventsui.iby,app/location,,,
 sys\bin\evthandler.exe,/epoc32/release/armv5/urel/evthandler.exe,core/app/eventsui.iby,app/location,,,
@@ -4183,7 +4183,7 @@ sys\bin\jsdevice.dll,/epoc32/release/armv5/urel/jsdevice.dll,core/mw/Device.iby,
 sys\bin\JvmNativePort.dll,/epoc32/release/armv5/urel/jvmnativeport.dll,core/app/java.iby,app/jrt,,,
 sys\bin\kbdclient.dll,/epoc32/release/armv5/urel/kbdclient.dll,core/mw/btkeyboard.iby,mw/btservices,,,
 Sys\Bin\kbdlayout.dll,/epoc32/release/armv5/urel/kbdlayout.dll,core/mw/btkeyboard.iby,mw/btservices,,,
-sys\bin\kdebug.dll,/epoc32/release/armv5/urel/kdebug.dll,base_syborg_ui.iby,os/kernelhwsrv,,,
+sys\bin\kdebug.dll,/epoc32/release/armv5/urel/kdebug.dll,base_syborg_ui.iby,os/kernelhwsrv,In,WR,Debug support?
 sys\bin\KeyEventFw.DLL,/epoc32/release/armv5/urel/keyeventfw.dll,core/mw/KeyEventFw.iby,mw/appsupport,,,
 sys\bin\keylockpolicyapi.dll,/epoc32/release/armv5/urel/keylockpolicyapi.dll,core/mw/keylockpolicyapi.iby,mw/securitysrv,,,
 sys\bin\KeyPublisherPlugin.dll,/epoc32/release/armv5/urel/keypublisherplugin.dll,core/mw/KeyPublisherPlugin.iby,mw/appsupport,,,
@@ -5455,7 +5455,7 @@ sys\bin\SmsU.dll,/epoc32/release/armv5/urel/smsu.dll,smsstack.iby,os/cellularsrv
 sys\bin\SmsViewer.exe,/epoc32/release/armv5/urel/smsviewer.exe,core/app/SmsViewer.iby,app/messaging,,WR,application
 sys\bin\smts.dll,/epoc32/release/armv5/urel/smts.dll,gtemailmtm.iby,app/messaging,,,
 sys\bin\smum.dll,/epoc32/release/armv5/urel/smum.dll,core/app/Smum.iby,app/messaging,,,
-sys\bin\snapapp.exe,/epoc32/release/armv5/urel/snapapp.exe,base_syborg_ui.iby,adaptation/qemu,,,
+sys\bin\snapapp.exe,/epoc32/release/armv5/urel/snapapp.exe,base_syborg_ui.iby,adaptation/qemu,In,WR,Needed during boot
 sys\bin\socketmediaconnwrapper.dll,/epoc32/release/armv5/urel/socketmediaconnwrapper.dll,core/mw/natfw.iby,mw/ipappsrv,,,
 sys\bin\softwarecrypto.dll,/epoc32/release/armv5/urel/softwarecrypto.dll,cryptospi_plugins.iby,os/security,,,
 sys\bin\sortutil.dll,/epoc32/release/armv5/urel/sortutil.dll,core/mw/sortutil.iby,os/textandloc,,,
