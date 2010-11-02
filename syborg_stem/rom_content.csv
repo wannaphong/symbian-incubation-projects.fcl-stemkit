@@ -249,7 +249,7 @@ private\101F7988\esock_mip.cmi,/epoc32/data/z/private/101f7988/esock_mip.cmi,eso
 private\101F7988\esock_sip.cmi,/epoc32/data/z/private/101f7988/esock_sip.cmi,sipproviders.iby,mw/ipappprotocols,,,
 private\101F7988\esock_smswap.cmi,/epoc32/data/z/private/101f7988/esock_smswap.cmi,esock.iby,os/commsfw,,,
 private\101F7988\esock_tr.cmi,/epoc32/data/z/private/101f7988/esock_tr.cmi,esock.iby,os/commsfw,,,
-private\101F7988\etel.cmi,/epoc32/data/z/private/101f7988/etel.cmi,etel.iby,os/cellularsrv,out,TomP,Must remove this when you remove etel.dll
+private\101F7988\etel.cmi,/epoc32/data/z/private/101f7988/etel.cmi,etel.iby,os/cellularsrv,etel_out,TomP,Must remove this when you remove etel.dll
 private\101F7989\backup_registration.xml,/epoc32/data/z/private/101f7989/backup_registration.xml,esock_core.iby,os/commsfw,,,
 Private\101F7989\Bluetooth\bluetooth_stack.ini,/epoc32/data/z/private/101f7989/bluetooth/bluetooth_stack.ini,bluetooth.iby,os/bt,,,
 Private\101F7989\Bluetooth\cmdq.ini,/epoc32/data/z/private/101f7989/bluetooth/cmdq.ini,hci_framework.iby,os/bt,,,
@@ -3250,7 +3250,7 @@ Sys\Bin\CTSECDLGNOTIFIER.dll,/epoc32/release/armv5/urel/ctsecdlgnotifier.dll,cor
 sys\bin\CTSecDlgs.dll,/epoc32/release/armv5/urel/ctsecdlgs.dll,core/mw/CTSecurityDialogs.iby,mw/securitysrv,,,
 Sys\Bin\ctsysystemstateplugin.dll,/epoc32/release/armv5/urel/ctsysystemstateplugin.dll,ctsysystemstateplugin.iby,os/cellularsrv,,,
 Sys\Bin\CUSTOMAPI.DLL,/epoc32/release/armv5/urel/customapi.dll,ctsy.iby,os/cellularsrv,,,
-sys\bin\customcmds.dll,/epoc32/release/armv5/urel/customcmds.dll,core/os/ssmcompatibility.iby,os/devicesrv,stem,TomP,To break dependencies on things no longer needed by startup (eg etel.dll)
+sys\bin\customcmds.dll,/epoc32/release/armv5/urel/customcmds.dll,core/os/ssmcompatibility.iby,os/devicesrv,etel_stem,TomP,To break dependencies on things no longer needed by startup (eg etel.dll)
 sys\bin\CustomCommandUtility.dll,/epoc32/release/armv5/urel/customcommandutility.dll,core/os/MMExtFw.iby,os/mm,,,
 sys\bin\CustomInterfaceBuilder.dll,/epoc32/release/armv5/urel/custominterfacebuilder.dll,core/os/MMExtFw.iby,os/mm,,,
 sys\bin\CustomInterfaceProxyFactory.dll,/epoc32/release/armv5/urel/custominterfaceproxyfactory.dll,core/os/MMExtFw.iby,adaptation/stubs,,,
@@ -3396,7 +3396,7 @@ sys\bin\DrmServerInterfaces.DLL,/epoc32/release/armv5/urel/drmserverinterfaces.d
 sys\bin\DrmServiceAPI.dll,/epoc32/release/armv5/urel/drmserviceapi.dll,core/mw/drm5.iby,mw/drm,,,
 sys\bin\drmserviceapiwrapper.dll,/epoc32/release/armv5/urel/drmserviceapiwrapper.dll,core/mw/drmserviceapiwrapper.iby,mw/drm,,,
 Sys\Bin\drmsettingsplugin.dll,/epoc32/release/armv5/urel/drmsettingsplugin.dll,core/mw/drmsettingsplugin.iby,mw/drm,,,
-sys\bin\DrmStdKeyStorage.dll,/epoc32/release/armv5/urel/drmstdkeystorage.dll,core/mw/drm5.iby,mw/drm,stem,TomP,Break dependence on etel.dll
+sys\bin\DrmStdKeyStorage.dll,/epoc32/release/armv5/urel/drmstdkeystorage.dll,core/mw/drm5.iby,mw/drm,etel_stem,TomP,Break dependence on etel.dll
 Sys\Bin\DRMstringdict00.dll,/epoc32/release/armv5/urel/drmstringdict00.dll,rohandler.iby,mw/messagingmw,,,
 sys\bin\DRMUiHandling.dll,/epoc32/release/armv5/urel/drmuihandling.dll,core/mw/drmutility.iby,mw/drm,,,
 sys\bin\DRMUiHandlingImpl.dll,/epoc32/release/armv5/urel/drmuihandlingimpl.dll,core/mw/drmutility.iby,mw/drm,,,
@@ -3547,7 +3547,7 @@ sys\bin\eswt.dll,/epoc32/release/armv5/urel/eswt.dll,core/app/java.iby,app/jrt,,
 sys\bin\eswtapifacade.dll,/epoc32/release/armv5/urel/eswtapifacade.dll,core/app/java.iby,app/jrt,,,
 sys\bin\eswtdirectcontent.dll,/epoc32/release/armv5/urel/eswtdirectcontent.dll,core/app/java.iby,app/jrt,,,
 sys\bin\eswtphysics.dll,/epoc32/release/armv5/urel/eswtphysics.dll,core/app/java.iby,app/jrt,,,
-sys\bin\ETel.dll,/epoc32/release/armv5/urel/etel.dll,etel.iby,os/cellularsrv,out,WR,Stem does not support telephony
+sys\bin\ETel.dll,/epoc32/release/armv5/urel/etel.dll,etel.iby,os/cellularsrv,etel_out,TomP,Stem does not support telephony
 sys\bin\Etel3rdParty.dll,/epoc32/release/armv5/urel/etel3rdparty.dll,etelisv.iby,os/cellularsrv,,,
 sys\bin\etelmm.dll,/epoc32/release/armv5/urel/etelmm.dll,etelmm.iby,os/cellularsrv,,,
 sys\bin\etelpckt.dll,/epoc32/release/armv5/urel/etelpckt.dll,etelpckt.iby,os/cellularsrv,,,
@@ -4274,8 +4274,8 @@ sys\bin\Libgobject.dll,/epoc32/release/armv5/urel/libgobject.dll,core/os/glib.ib
 sys\bin\libgthread.dll,/epoc32/release/armv5/urel/libgthread.dll,core/os/glib.iby,os/ossrv,,,
 sys\bin\LibLogger.dll,/epoc32/release/armv5/urel/liblogger.dll,openenv.iby,os/ossrv,,,
 sys\bin\libm.dll,/epoc32/release/armv5/urel/libm.dll,openenv.iby,os/ossrv,,,
-Sys\Bin\libopenvg_sw.dll,/epoc32/release/armv5/urel/libopenvg_sw.dll,../../../rom/config/sf_refhw/bigrom.oby,os/graphics,Stem,MW,Performance optimisation
-Sys\Bin\libopenvgu_sw.dll,/epoc32/release/armv5/urel/libopenvgu_sw.dll,../../../rom/config/sf_refhw/bigrom.oby,os/graphics,Stem,MW,Performance optimisation
+Sys\Bin\libopenvg_sw.dll,/epoc32/release/armv5/urel/libopenvg_sw.dll,../../../rom/config/sf_refhw/bigrom.oby,os/graphics,perf_Stem,MW,Performance optimisation
+Sys\Bin\libopenvgu_sw.dll,/epoc32/release/armv5/urel/libopenvgu_sw.dll,../../../rom/config/sf_refhw/bigrom.oby,os/graphics,perf_Stem,MW,Performance optimisation
 sys\bin\libpthread.dll,/epoc32/release/armv5/urel/libpthread.dll,openenv.iby,os/ossrv,,,
 sys\bin\librt.dll,/epoc32/release/armv5/urel/librt.dll,oelibrt.iby,os/ossrv,,,
 sys\bin\libssl.dll,/epoc32/release/armv5/urel/libssl.dll,core/os/ssl.iby,os/ossrv,,,
@@ -4397,7 +4397,7 @@ sys\bin\mdsfileserverplugin.pxt,/epoc32/release/armv5/urel/mdsfileserverplugin.p
 Sys\Bin\mdsoomplugin.dll,/epoc32/release/armv5/urel/mdsoomplugin.dll,core/mw/mds.iby,mw/mds,,,
 sys\bin\mdswatchdog.exe,/epoc32/release/armv5/urel/mdswatchdog.exe,core/mw/mds.iby,mw/mds,,,
 sys\bin\MediaClient.dll,/epoc32/release/armv5/urel/mediaclient.dll,mmf.iby,os/mm,,,
-sys\bin\MediaClientAudio.dll,/epoc32/release/armv5/urel/mediaclientaudio.dll,mmf.iby,os/mm,Slim,WR,Use minimal exports to support QtGui
+sys\bin\MediaClientAudio.dll,/epoc32/release/armv5/urel/mediaclientaudio.dll,mmf.iby,os/mm,mm_Slim,WR,Use minimal exports to support QtGui
 sys\bin\MediaClientAudioInputStream.dll,/epoc32/release/armv5/urel/mediaclientaudioinputstream.dll,mmf.iby,os/mm,,,
 sys\bin\MediaClientAudioStream.dll,/epoc32/release/armv5/urel/mediaclientaudiostream.dll,mmf.iby,os/mm,,,
 sys\bin\MediaClientImage.dll,/epoc32/release/armv5/urel/mediaclientimage.dll,imageconversion.iby,os/mm,,,
@@ -4479,18 +4479,18 @@ sys\bin\mmfaudioserverstart.exe,/epoc32/release/armv5/urel/mmfaudioserverstart.e
 Sys\Bin\mmfaudiotonecontroller.dll,/epoc32/release/armv5/urel/mmfaudiotonecontroller.dll,core/mw/mmfaudiotonecontroller.iby,os/mm,,,
 Sys\Bin\mmfauformat.dll,/epoc32/release/armv5/urel/mmfauformat.dll,mmf_plugin.iby,os/mm,,,
 sys\bin\MmfCodecCommon.dll,/epoc32/release/armv5/urel/mmfcodeccommon.dll,mmf.iby,os/mm,,,
-sys\bin\mmfcontrollerframework.dll,/epoc32/release/armv5/urel/mmfcontrollerframework.dll,mmf.iby,os/mm,Out,WR,Stem should not contain multimedia
-sys\bin\mmfdevsound.dll,/epoc32/release/armv5/urel/mmfdevsound.dll,a3fdevsound.iby,os/mm,Out,WR,Stem should not contain audio support
+sys\bin\mmfcontrollerframework.dll,/epoc32/release/armv5/urel/mmfcontrollerframework.dll,mmf.iby,os/mm,mm_Out,WR,Stem should not contain multimedia
+sys\bin\mmfdevsound.dll,/epoc32/release/armv5/urel/mmfdevsound.dll,a3fdevsound.iby,os/mm,mm_Out,WR,Stem should not contain audio support
 sys\bin\mmfdevsoundadaptor.dll,/epoc32/release/armv5/urel/mmfdevsoundadaptor.dll,a3fdevsound.iby,os/mm,,,
 sys\bin\mmfdevsoundproxy.dll,/epoc32/release/armv5/urel/mmfdevsoundproxy.dll,a3fdevsound.iby,os/mm,,,
 sys\bin\mmfdevsoundserver.dll,/epoc32/release/armv5/urel/mmfdevsoundserver.dll,a3fdevsound.iby,os/mm,,,
 sys\bin\mmfdrmpluginserver.exe,/epoc32/release/armv5/urel/mmfdrmpluginserver.exe,MmfDrmPlugin.iby,os/mm,,,
 sys\bin\mmfdrmpluginserverproxy.dll,/epoc32/release/armv5/urel/mmfdrmpluginserverproxy.dll,MmfDrmPlugin.iby,os/mm,,,
-sys\bin\MmfFormatBaseclasses.dll,/epoc32/release/armv5/urel/mmfformatbaseclasses.dll,mmf.iby,os/mm,Out,WR,Stem should not contain MMF
+sys\bin\MmfFormatBaseclasses.dll,/epoc32/release/armv5/urel/mmfformatbaseclasses.dll,mmf.iby,os/mm,mm_Out,WR,Stem should not contain MMF
 sys\bin\MmfGlblAudioEffect.dll,/epoc32/release/armv5/urel/mmfglblaudioeffect.dll,mmfEffect.iby,os/mm,,,
 Sys\Bin\mmfolderuiextensionplugin.dll,/epoc32/release/armv5/urel/mmfolderuiextensionplugin.dll,core/app/mmextensions.iby,app/homescreen,,,
 Sys\Bin\mmfrawformat.dll,/epoc32/release/armv5/urel/mmfrawformat.dll,mmf_plugin.iby,os/mm,,,
-sys\bin\MmfServerBaseclasses.dll,/epoc32/release/armv5/urel/mmfserverbaseclasses.dll,mmf.iby,os/mm,Out,WR,Stem should not contain multimedia
+sys\bin\MmfServerBaseclasses.dll,/epoc32/release/armv5/urel/mmfserverbaseclasses.dll,mmf.iby,os/mm,mm_Out,WR,Stem should not contain multimedia
 sys\bin\MMFStandardCustomCommands.dll,/epoc32/release/armv5/urel/mmfstandardcustomcommands.dll,mmf.iby,os/mm,,,
 sys\bin\MmfStdGlblAudioEffect.dll,/epoc32/release/armv5/urel/mmfstdglblaudioeffect.dll,mmfEffect.iby,os/mm,,,
 Sys\Bin\mmfstdsourceandsinkplugin.dll,/epoc32/release/armv5/urel/mmfstdsourceandsinkplugin.dll,mmf.iby,os/mm,,,
@@ -5173,7 +5173,7 @@ Sys\Bin\RfsMsgStorePlugin.dll,/epoc32/release/armv5/urel/rfsmsgstoreplugin.dll,c
 sys\bin\RfsServer.exe,/epoc32/release/armv5/urel/rfsserver.exe,core/mw/rfs.iby,mw/appsupport,,,
 sys\bin\rfstatusswppolicy.dll,/epoc32/release/armv5/urel/rfstatusswppolicy.dll,core/os/ssmcompatibility.iby,os/devicesrv,,,
 sys\bin\richBio.dll,/epoc32/release/armv5/urel/richbio.dll,core/app/Richbio.iby,app/messaging,,,
-sys\bin\RightsServer.EXE,/epoc32/release/armv5/urel/rightsserver.exe,core/mw/drm5.iby,mw/drm,stem,TomP,Break dependence on etel.dll
+sys\bin\RightsServer.EXE,/epoc32/release/armv5/urel/rightsserver.exe,core/mw/drm5.iby,mw/drm,etel_stem,TomP,Break dependence on etel.dll
 sys\bin\RingBC.dll,/epoc32/release/armv5/urel/ringbc.dll,core/app/RingBC.iby,app/messaging,,,
 sys\bin\RLock.exe,/epoc32/release/armv5/urel/rlock.exe,core/mw/RemoteLock.iby,mw/securitysrv,,,
 sys\bin\RLockSettings.dll,/epoc32/release/armv5/urel/rlocksettings.dll,core/mw/RemoteLock.iby,mw/securitysrv,,,
@@ -5181,7 +5181,7 @@ sys\bin\rlspresxdm.dll,/epoc32/release/armv5/urel/rlspresxdm.dll,core/mw/simplee
 sys\bin\rm_debug.ldd,/epoc32/release/armv5/urel/rm_debug.ldd,rm_debug_svr.iby,os/kernelhwsrv,,,
 sys\bin\rm_debug_svr.exe,/epoc32/release/armv5/urel/rm_debug_svr.exe,rm_debug_svr.iby,os/kernelhwsrv,,,
 sys\bin\RoapApp.exe,/epoc32/release/armv5/urel/roapapp.exe,core/mw/CodHandler.iby,mw/web,,WR,application
-sys\bin\RoapHandler.DLL,/epoc32/release/armv5/urel/roaphandler.dll,core/mw/drm5.iby,mw/drm,stem,TomP,Break dependence on etel.dll
+sys\bin\RoapHandler.DLL,/epoc32/release/armv5/urel/roaphandler.dll,core/mw/drm5.iby,mw/drm,etel_stem,TomP,Break dependence on etel.dll
 Sys\Bin\roapphandler.dll,/epoc32/release/armv5/urel/roapphandler.dll,rohandler.iby,mw/messagingmw,,,
 Sys\Bin\roaptcontenthandler.dll,/epoc32/release/armv5/urel/roaptcontenthandler.dll,rohandler.iby,mw/messagingmw,,,
 Sys\Bin\rocontenthandler.dll,/epoc32/release/armv5/urel/rocontenthandler.dll,rohandler.iby,mw/messagingmw,,,
@@ -5373,7 +5373,7 @@ Sys\Bin\SetUpCallCmd.dll,/epoc32/release/armv5/urel/setupcallcmd.dll,core/mw/sat
 Sys\Bin\SetUpEventListCmd.dll,/epoc32/release/armv5/urel/setupeventlistcmd.dll,core/mw/satserver.iby,mw/phonesrv,,,
 Sys\Bin\SetUpIdleModeTextCmd.dll,/epoc32/release/armv5/urel/setupidlemodetextcmd.dll,core/mw/satserver.iby,mw/phonesrv,,,
 Sys\Bin\SetUpMenuCmd.dll,/epoc32/release/armv5/urel/setupmenucmd.dll,core/mw/satserver.iby,mw/phonesrv,,,
-sys\bin\sflibopenvgrefimpl.dll,/epoc32/release/armv5/urel/sflibopenvgrefimpl.dll,../../../rom/config/sf_refhw/bigrom.oby,os/graphics,Stem,MW,Performance optimisation
+sys\bin\sflibopenvgrefimpl.dll,/epoc32/release/armv5/urel/sflibopenvgrefimpl.dll,../../../rom/config/sf_refhw/bigrom.oby,os/graphics,perf_Stem,MW,Performance optimisation
 sys\bin\Sharpness.pgn,/epoc32/release/armv5/urel/sharpness.pgn,core/app/ImageEditorSharpnessPlugin.iby,app/imgeditor,,,
 sys\bin\shiftjis_docomo_shared.dll,/epoc32/release/armv5/urel/shiftjis_docomo_shared.dll,charconv_japanese_docomo.iby,os/textandloc,,,
 Sys\Bin\shiftjis_ntt_docomo.dll,/epoc32/release/armv5/urel/shiftjis_ntt_docomo.dll,charconv_japanese_docomo.iby,os/textandloc,,,
