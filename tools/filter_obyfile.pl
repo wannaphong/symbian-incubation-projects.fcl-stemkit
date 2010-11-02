@@ -18,9 +18,11 @@ use Getopt::Long;
 
 my $deleted_lines_oby = "filtered.oby";
 my $deletion_details_file = "filter.log";
+my @option_prefixes;
 GetOptions(
   "d|deleted=s" => \$deleted_lines_oby,   # file to hold the deleted lines
   "l|log=s" => \$deletion_details_file,   # log of whats deleted and why
+  "options=s" => \@option_prefixes,       # prefixes for provisional What commands
   );
 
 if (scalar @ARGV < 2)
@@ -39,11 +41,17 @@ my $rom_content_header = shift @rom_content;
 die("Not a valid rom_content.csv file") if ($rom_content_header !~ /^ROM file,/);
 
 # read through the rom_content_csv looking for direct instructions
+my %prefixes;
+foreach my $prefix (split /,/, join(",", @option_prefixes))   # handle comma-separated lists
+	{
+	$prefixes{lc "$prefix"} = 1;
+	}
 my %stem_substitutions;
 my %rom_origins;
 my %deletions;
 my %must_have;
 my %check_import_details;
+my $optional_commands_ignored = 0;
 foreach my $line (@rom_content)
 	{
 	my ($romfile,$hostfile,$ibyfile,$package,$cmd,@rest) = split /,/, $line;
@@ -52,6 +60,18 @@ foreach my $line (@rom_content)
 	next if ($cmd eq "");
 
 	$cmd = lc $cmd;
+	if ($cmd =~ /^(\S+)_([^_]+)$/)
+		{
+		my $prefix = $1;
+		$cmd = $2;    # without the prefix
+		if (!defined $prefixes{$prefix})
+			{
+			$optional_commands_ignored++;
+			next;
+			}
+		# otherwise fall through and process the selected cmd
+		print STDERR "Option $prefix matched to give $cmd for >$romfile<\n";
+		}
 	if ($cmd eq "slim")
 		{
 		$check_import_details{$romfile} = "";
@@ -81,11 +101,12 @@ foreach my $line (@rom_content)
 		}
 	}
 
-printf STDERR "%d in (including %d slim and %d stem), %d out\n", 
+printf STDERR "%d in (including %d slim and %d stem), %d out, (%d not selected)\n", 
 	scalar keys %must_have,
 	scalar keys %check_import_details,
 	(scalar keys %stem_substitutions) - (scalar keys %check_import_details), 
-	scalar keys %deletions; 
+	scalar keys %deletions,
+	$optional_commands_ignored; 
 
 # read static dependencies file
 my %exe_to_romfile;     # exe -> original romfile
