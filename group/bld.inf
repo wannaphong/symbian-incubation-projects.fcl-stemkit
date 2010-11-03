@@ -52,3 +52,6 @@ PRJ_MMPFILES
 ../breakdeps/DRMEngine/RightsServer.mmp
 ../breakdeps/DRMEngine/DrmStdKeyStorage.mmp
 
+// based on /sf/mw/homescreensrv
+../breakdeps/MCSSatHandler/mcssathandler.mmp
+

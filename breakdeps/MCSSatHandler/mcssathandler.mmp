@@ -1,0 +1,52 @@
+/*
+* Copyright (c) 2008 Nokia Corporation and/or its subsidiary(-ies).
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:  
+*
+*/
+
+// To get the MW_LAYER_SYSTEMINCLUDE-definition
+#include <platform_paths.hrh>
+
+TARGET          stem_mcssathandler.dll
+TARGETTYPE      dll
+UID             0x1000008D 0x2001CB7B
+CAPABILITY      CAP_GENERAL_DLL
+VENDORID        VID_DEFAULT
+NOEXPORTLIBRARY
+
+#ifdef WINSCW
+#error We're not going to build for WINSCW
+#else
+DEFFILE			/sf/mw/homescreensrv/menucontentsrv/eabi/mcssathandler.def
+#endif
+
+SOURCEPATH      ./
+SOURCE          mcssathandler.cpp
+
+SOURCEPATH		/sf/mw/homescreensrv/menucontentsrv/extsrc
+SOURCE          mcssatnotifier.cpp
+
+
+USERINCLUDE     /sf/mw/homescreensrv/menucontentsrv/extinc
+USERINCLUDE		./
+
+MW_LAYER_SYSTEMINCLUDE
+
+LIBRARY         euser.lib
+LIBRARY         aknicon.lib 
+LIBRARY         SatClient.lib
+LIBRARY         fbscli.lib 
+LIBRARY         bitgdi.lib 
+
+
