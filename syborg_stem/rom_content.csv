@@ -4385,7 +4385,7 @@ Sys\Bin\mcsplugin.dll,/epoc32/release/armv5/urel/mcsplugin.dll,core/mw/mcsplugin
 Sys\Bin\mcspluginhandler.dll,/epoc32/release/armv5/urel/mcspluginhandler.dll,core/mw/mcsplugin.iby,mw/homescreensrv,Out,Auto,Not referenced during boot
 Sys\Bin\mcspluginsettings.dll,/epoc32/release/armv5/urel/mcspluginsettings.dll,core/mw/mcsplugin.iby,mw/homescreensrv,Out,Auto,Not referenced during boot
 Sys\Bin\mcsprovider.dll,/epoc32/release/armv5/urel/mcsprovider.dll,core/mw/mcssapi.iby,mw/homescreensrv,,,
-sys\bin\mcssathandler.dll,/epoc32/release/armv5/urel/mcssathandler.dll,core/mw/mcs.iby,mw/homescreensrv,,,
+sys\bin\mcssathandler.dll,/epoc32/release/armv5/urel/mcssathandler.dll,core/mw/mcs.iby,mw/homescreensrv,etel_stem,TomP,Stub this to not actually talk to SAT
 sys\bin\mcsservice.dll,/epoc32/release/armv5/urel/mcsservice.dll,core/mw/mcssapi.iby,mw/homescreensrv,,,
 sys\bin\mdasoundadapter.dll,/epoc32/release/armv5/urel/mdasoundadapter.dll,mdf.iby,os/mm,,,
 sys\bin\mdccommon.dll,/epoc32/release/armv5/urel/mdccommon.dll,core/mw/mds.iby,mw/mds,Out,Auto,Not referenced during boot

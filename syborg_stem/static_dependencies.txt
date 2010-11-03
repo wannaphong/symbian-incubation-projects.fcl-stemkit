@@ -3386,6 +3386,7 @@ sys\bin\mcsmenueng.dll	/epoc32/release/armv5/urel/mcsmenueng.dll	sid=200113dc:XC
 sys\bin\mcsmenuserver.exe	/epoc32/release/armv5/urel/mcsmenuserver.exe	sid=200113dd:drtaeabi.dll:euser[100039e5].dll:mcsmenu[200113db].dll
 sys\bin\mcsmenuutils.dll	/epoc32/release/armv5/urel/mcsmenuutils.dll	sid=2001cb55:euser[100039e5].dll
 sys\bin\mcssathandler.dll	/epoc32/release/armv5/urel/mcssathandler.dll	sid=2001cb7b:AknIcon[1020735a].dll:SatClient[1000a834].dll:bitgdi[10003b18].dll:drtaeabi.dll:euser[100039e5].dll:fbscli[10003a15].dll:scppnwdl.dll
+sys\bin\mcssathandler.dll	/epoc32/release/armv5/urel/stem_mcssathandler.dll	sid=2001cb7b:drtaeabi.dll:euser[100039e5].dll:scppnwdl.dll
 sys\bin\mcsservice.dll	/epoc32/release/armv5/urel/mcsservice.dll	sid=2001242b:AKNSKINS[10005a26].dll:AknIcon[1020735a].dll:apgrfx[10003a3c].dll:bafl[10003a0f].dll:drtaeabi.dll:efsrv[100039e4].dll:estor[10003b0d].dll:euser[100039e5].dll:fbscli[10003a15].dll:liwServiceHandler[2000b5d3].dll:mcsmenuutils[2001cb55].dll:mcsmenu[200113db].dll:mcssathandler[2001cb7b].dll:scppnwdl.dll
 sys\bin\mdasoundadapter.dll	/epoc32/release/armv5/urel/mdasoundadapter.dll	sid=102833d6:audioutils[10286668].dll:dfpaeabi.dll:drtaeabi.dll:drtrvct2_2.dll:euser[100039e5].dll:hal[100039e8].dll:scppnwdl.dll
 sys\bin\mdccommon.dll	/epoc32/release/armv5/urel/mdccommon.dll	sid=200009f2:drtaeabi.dll:euser[100039e5].dll:scppnwdl.dll

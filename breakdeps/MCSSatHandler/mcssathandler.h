@@ -70,18 +70,18 @@ private:
     */
     void ConstructL();
 
+#if 0    
     /**
     * Gets best icon from aIconEF.
     */
     CFbsBitmap* GetBitmapL( const RIconEf& aIconEF );
     
 private:    // data
-    
     RSatSession iSatSession;
     
-#ifdef SIM_ATK_SERVICE_API_V1
+//#ifdef SIM_ATK_SERVICE_API_V1
     RSatService iSatIcon;
-#else
+//#else
     RSatIcon iSatIcon;
 #endif 
     };
