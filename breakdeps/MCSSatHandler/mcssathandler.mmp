@@ -45,7 +45,7 @@ MW_LAYER_SYSTEMINCLUDE
 
 LIBRARY         euser.lib
 LIBRARY         aknicon.lib 
-LIBRARY         SatClient.lib
+//LIBRARY         SatClient.lib
 LIBRARY         fbscli.lib 
 LIBRARY         bitgdi.lib 
 
