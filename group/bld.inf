@@ -21,6 +21,11 @@ ARMV5
 // no tools
 // Don't build WINSCW because the system startup uses all of the resource files it can find!
 
+// build the stub versions of java as it's not part of the stem kit
+#include "/sf/app/jrt/java_stubs/javaenvinfo/build/bld.inf"
+#include "/sf/app/jrt/java_stubs/javaregistry/clientserver/client/build/bld.inf"
+#include "/sf/app/jrt/java_stubs/javadebugapi/build/bld.inf"
+
 PRJ_MMPFILES
 
 // based on sf/os/devicesrv
