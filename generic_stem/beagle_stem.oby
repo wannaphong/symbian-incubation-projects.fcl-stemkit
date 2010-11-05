@@ -1,0 +1,63 @@
+#ifdef _DEBUG
+define DEBUG_DIR udeb
+romname=beagle_stem_debug.rom.img
+#else
+define DEBUG_DIR urel
+romname=beagle_stem.rom.img
+#endif
+
+define VARID 0x09080001
+
+memmodel multiple 0x100000
+multikernel
+nowrapper
+bootbinary=\epoc32\release\ARMV5\_beagle_bootrom.bin
+debugport 2
+romsize=0x20000000
+romlinearbase=0x80000000
+romalign=0x10
+kerneldataaddress=0xC8000000
+kernelheapmin=0x08000
+kernelheapmax=0x00FFC000
+dataaddress=0x400000
+defaultstackreserve=0x200000
+romchecksum=0x12345678
+
+ROM_IMAGE[0] {
+primary[VARID]=\epoc32\release\ARMV5\urel\_omap3530_ekern.exe 	"sys\bin\ekern.exe"
+extension[VARID]=\epoc32\release\ARMV5\urel\_omap3530_kaomap3530.dll 	"sys\bin\kaomap3530.dll"
+extension[VARID]=\epoc32\release\ARMV5\urel\_omap3XXX_mstick.dll 	"sys\bin\mstick.dll"
+extension[VARID]=\epoc32\release\ARMV5\urel\_omap3530_prcm.dll 	"sys\bin\prcm.dll"
+extension[VARID]=\epoc32\release\ARMV5\urel\_omap3530_uart.dll 	"sys\bin\uart.dll"
+variant[VARID]=\epoc32\release\ARMV5\urel\_beagle_ecust.dll 	"sys\bin\ecust.dll"
+extension[VARID]=\epoc32\release\ARMV5\urel\_omap3530_exmoncommon.dll 	"sys\bin\exmoncommon.dll"
+extension[VARID]=\epoc32\release\ARMV5\urel\_omap3530_exmondebug.dll 	"sys\bin\exmondebug.dll"
+extension[VARID]=\epoc32\release\ARMV5\urel\_omap3530_gpio.dll 	"sys\bin\gpio.dll"
+extension[VARID]=\epoc32\release\ARMV5\urel\resman.ldd 	"sys\bin\resman.ldd"
+extension[VARID]=\epoc32\release\ARMV5\urel\_beagle_medstaticrd.pdd 	"sys\bin\medstaticrd.pdd"
+extension[VARID]=\epoc32\release\ARMV5\urel\_omap3530_i2c.dll 	"sys\bin\i2c.dll"
+extension[VARID]=\epoc32\release\ARMV5\UDEB\tps65950.dll 	"sys\bin\tps65950.dll"
+extension[VARID]=\epoc32\release\ARMV5\urel\_beagle_lcd_gce.dll 	"sys\bin\lcd.dll"
+device[VARID]=\epoc32\release\ARMV5\urel\display.ldd 	"sys\bin\display0.ldd"
+extension[VARID]=\epoc32\release\ARMV5\urel\_omap3530_serialkeyboard_uisoftkeys.dll 	"sys\bin\ekeyb.dll"
+device[VARID]=\epoc32\release\ARMV5\urel\_omap3530_EUART.PDD 	"sys\bin\euart.pdd"
+device[VARID]=\epoc32\release\ARMV5\urel\ECOMM.LDD 	"sys\bin\ecomm.ldd"
+extension[VARID]=\epoc32\release\ARMV5\urel\elocd.ldd 	"sys\bin\elocd.ldd"
+extension[VARID]=\epoc32\release\ARMV5\urel\_beagle_medint.pdd 	"sys\bin\medint.pdd"
+extension[VARID]=\epoc32\release\ARMV5\urel\exstart.dll 	"sys\bin\exstart.dll"
+extension[VARID]=\epoc32\release\ARMV5\urel\_beagle_led.dll 	"sys\bin\led.dll"
+extension[VARID]=\epoc32\release\ARMV5\urel\rm_debug.ldd 	"sys\bin\rm_debug.ldd"
+file=\epoc32\release\ARMV5\urel\rm_debug_svr.exe 	"sys\bin\rm_debug_svr.exe"
+file=\epoc32\release\ARMV5\DEBUG_DIR\_omap3530_euser.dll 	"sys\bin\EUser.dll"
+file=\epoc32\release\ARMV5\urel\RPIPE.DLL 	"sys\bin\rpipe.dll"
+file=\epoc32\release\ARMV5\urel\ektran.dll 	"sys\bin\EKTran.dll"
+file=\epoc32\release\ARMV5\urel\_beagle_hal.dll 	"sys\bin\Hal.dll"
+secondary=\epoc32\release\ARMV5\urel\efile.exe 	"sys\bin\efile.exe"     
+file=\epoc32\release\ARMV5\urel\efsrv.dll 	"sys\bin\EFSrv.dll"
+file=\epoc32\release\ARMV5\urel\efat32.fsy 	"sys\bin\ELocal.fsy"
+file=\epoc32\release\ARMV5\urel\e32strt.exe 	"sys\bin\EStart.exe"  
+file=\epoc32\release\ARMV5\urel\domainSrv.exe 	"sys\bin\domainSrv.exe"
+file=\epoc32\release\ARMV5\urel\domainCli.dll 	"sys\bin\domainCli.dll"
+file=\epoc32\release\ARMV5\urel\domainPolicy.dll 	"sys\bin\domainPolicy.dll"
+file=\epoc32\release\ARMV5\urel\_generic_scdv.dll 	"sys\bin\ScDv.dll"
+}
