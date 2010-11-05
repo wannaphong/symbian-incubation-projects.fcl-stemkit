@@ -6,6 +6,8 @@ define DEBUG_DIR urel
 romname=syborg_stem.rom.img
 #endif
 
+define VARID 0x0b0a0001
+
 ROMBUILD_OPTION -no-header 
 memmodel multiple 0x100000
 multikernel
@@ -22,32 +24,32 @@ defaultstackreserve=0x200000
 romchecksum=0x12345678
 
 ROM_IMAGE[0] {
-primary[0x0b0a0001]=\epoc32\release\ARMV5\DEBUG_DIR\_syborg_ekern.exe 	"sys\bin\ekern.exe"	code-align 0x4000
-extension[0x0b0a0001]=\epoc32\release\ARMV5\urel\_syborg_btracex.ldd 	"sys\bin\btracex.ldd"
+primary[VARID]=\epoc32\release\ARMV5\DEBUG_DIR\_syborg_ekern.exe 	"sys\bin\ekern.exe"	code-align 0x4000
+extension[VARID]=\epoc32\release\ARMV5\urel\_syborg_btracex.ldd 	"sys\bin\btracex.ldd"
 file=\epoc32\release\ARMV5\urel\btracec.dll 	"sys\bin\btracec.dll"
-variant[0x0b0a0001]=\epoc32\release\ARMV5\urel\_syborg_kasyborg.dll 	"sys\bin\kasyborg.dll"
-extension[0x0b0a0001]=\epoc32\release\ARMV5\urel\_syborg_exmoncommon.dll 	"sys\bin\exmoncommon.dll"
-extension[0x0b0a0001]=\epoc32\release\ARMV5\urel\_syborg_exmondebug.dll 	"sys\bin\exmondebug.dll"
-extension[0x0b0a0001]=\epoc32\release\ARMV5\urel\kdebug.dll 	"sys\bin\kdebug.dll"
-extension[0x0b0a0001]=\epoc32\release\ARMV5\urel\evfp.dll 	"sys\bin\evfp.dll"
-extension[0x0b0a0001]=\epoc32\release\ARMV5\urel\_syborg_svpframebuffer.dll 	"sys\bin\lcd.dll"
-device[0x0b0a0001]=\epoc32\release\ARMV5\urel\display.ldd 	"sys\bin\display0.ldd"
-device[0x0b0a0001]=\epoc32\release\ARMV5\urel\_syborg_eserial.pdd 	"sys\bin\euart1.pdd"
-device[0x0b0a0001]=\epoc32\release\ARMV5\urel\ecomm.ldd 	"sys\bin\ecomm.ldd"
-extension[0x0b0a0001]=\epoc32\release\ARMV5\urel\elocd.ldd 	"sys\bin\elocd.ldd"
-extension[0x0b0a0001]=\epoc32\release\ARMV5\urel\_syborg_epointer_landscape.dll 	"sys\bin\epointer.dll"
-extension[0x0b0a0001]=\epoc32\release\ARMV5\urel\_syborg_medint.pdd 	"sys\bin\medint.pdd"
-extension[0x0b0a0001]=\epoc32\release\ARMV5\urel\exstart.dll 	"sys\bin\exstart.dll"
-extension[0x0b0a0001]=\epoc32\release\ARMV5\urel\_syborg_ekeyb.dll 	"sys\bin\ekeyb.dll"
-extension[0x0b0a0001]=\epoc32\release\ARMV5\urel\_syborg_svphostfsdriver.ldd 	"sys\bin\svphostfsdriver.ldd"
+variant[VARID]=\epoc32\release\ARMV5\urel\_syborg_kasyborg.dll 	"sys\bin\kasyborg.dll"
+extension[VARID]=\epoc32\release\ARMV5\urel\_syborg_exmoncommon.dll 	"sys\bin\exmoncommon.dll"
+extension[VARID]=\epoc32\release\ARMV5\urel\_syborg_exmondebug.dll 	"sys\bin\exmondebug.dll"
+extension[VARID]=\epoc32\release\ARMV5\urel\kdebug.dll 	"sys\bin\kdebug.dll"
+extension[VARID]=\epoc32\release\ARMV5\urel\evfp.dll 	"sys\bin\evfp.dll"
+extension[VARID]=\epoc32\release\ARMV5\urel\_syborg_svpframebuffer.dll 	"sys\bin\lcd.dll"
+device[VARID]=\epoc32\release\ARMV5\urel\display.ldd 	"sys\bin\display0.ldd"
+device[VARID]=\epoc32\release\ARMV5\urel\_syborg_eserial.pdd 	"sys\bin\euart1.pdd"
+device[VARID]=\epoc32\release\ARMV5\urel\ecomm.ldd 	"sys\bin\ecomm.ldd"
+extension[VARID]=\epoc32\release\ARMV5\urel\elocd.ldd 	"sys\bin\elocd.ldd"
+extension[VARID]=\epoc32\release\ARMV5\urel\_syborg_epointer_landscape.dll 	"sys\bin\epointer.dll"
+extension[VARID]=\epoc32\release\ARMV5\urel\_syborg_medint.pdd 	"sys\bin\medint.pdd"
+extension[VARID]=\epoc32\release\ARMV5\urel\exstart.dll 	"sys\bin\exstart.dll"
+extension[VARID]=\epoc32\release\ARMV5\urel\_syborg_ekeyb.dll 	"sys\bin\ekeyb.dll"
+extension[VARID]=\epoc32\release\ARMV5\urel\_syborg_svphostfsdriver.ldd 	"sys\bin\svphostfsdriver.ldd"
 file=\epoc32\release\ARMV5\urel\svphostfsy.fsy 	"sys\bin\svphostfsy.fsy"
 file=\epoc32\release\ARMV5\urel\svphostfs.exe 	"sys\bin\svphostfs.exe"
-extension[0x0b0a0001]=\epoc32\release\ARMV5\urel\_syborg_svpsnapdriver.ldd 	"sys\bin\svpsnapdriver.ldd"
+extension[VARID]=\epoc32\release\ARMV5\urel\_syborg_svpsnapdriver.ldd 	"sys\bin\svpsnapdriver.ldd"
 file=\epoc32\release\ARMV5\urel\snapapp.exe 	"sys\bin\snapapp.exe"
-extension[0x0b0a0001]=\epoc32\release\ARMV5\urel\_syborg_MEDNVMEMORY.PDD 	"sys\bin\MEDNVMEMORY.PDD"
+extension[VARID]=\epoc32\release\ARMV5\urel\_syborg_MEDNVMEMORY.PDD 	"sys\bin\MEDNVMEMORY.PDD"
 data=\epoc32\rom\syborg\estart.txt 	"sys\data\estart.txt"
-device[0x0b0a0001]=\epoc32\release\ARMV5\urel\_syborg_soundsc.pdd 	"sys\bin\soundsc.pdd"
-device[0x0b0a0001]=\epoc32\release\ARMV5\urel\esoundsc.ldd 	"sys\bin\esoundsc.ldd"
+device[VARID]=\epoc32\release\ARMV5\urel\_syborg_soundsc.pdd 	"sys\bin\soundsc.pdd"
+device[VARID]=\epoc32\release\ARMV5\urel\esoundsc.ldd 	"sys\bin\esoundsc.ldd"
 REM Base operating system, including all assp-specific files
 file=\epoc32\release\ARMV5\urel\_syborg_euser.dll 	"sys\bin\EUser.dll"
 file=\epoc32\release\ARMV5\urel\RPIPE.DLL 	"sys\bin\rpipe.dll"

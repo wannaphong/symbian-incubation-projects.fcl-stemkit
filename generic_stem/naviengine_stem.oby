@@ -1,0 +1,72 @@
+#ifdef _DEBUG
+define DEBUG_DIR udeb
+romname=fne1_tb_stem_debug.rom.img
+#else
+define DEBUG_DIR urel
+romname=fne1_tb_stem.rom.img
+#endif
+
+define VARID 0x09080001
+
+memmodel flexible 0x100000 0x1000 -0x4000
+dlldatatop 0x7f000000
+multikernel
+bootbinary=\epoc32\release\ARMV5\_FNE1_TB_bootrom.bin
+debugport 0
+romsize=0x4000000
+romlinearbase=0x80000000
+romalign=0x10
+kerneldataaddress=0xC8000000
+kernelheapmin=0x1000			 
+kernelheapmax=0x00FFF000
+dataaddress=0x400000
+defaultstackreserve=0x200000
+romchecksum=0x12345678
+
+ROM_IMAGE[0] {
+extension[VARID]=\epoc32\release\ARMV5\urel\_NE1_TB_kanaviengine.dll 	"sys\bin\kanaviengine.dll"
+primary[VARID]=\epoc32\release\ARMV5\DEBUG_DIR\_FNE1_TB_ekern.exe 	"sys\bin\ekern.exe"
+variant[VARID]=\epoc32\release\ARMV5\urel\_NE1_TB_ecust.dll 	"sys\bin\ecust.dll"
+extension[VARID]=\epoc32\release\ARMV5\urel\_NE1_TB_hcr.dll 	"sys\bin\hcr.dll"
+extension[VARID]=\epoc32\release\ARMV5\urel\_NE1_TB_watchdog.dll 	"sys\bin\watchdog.dll"
+extension[VARID]=\epoc32\release\ARMV5\urel\_FNE1_TB_exmoncommon.dll 	"sys\bin\exmoncommon.dll"
+extension[VARID]=\epoc32\release\ARMV5\urel\_NE1_TB_exmondebug.dll 	"sys\bin\exmondebug.dll"
+extension[VARID]=\epoc32\release\ARMV5\urel\_NE1_TB_power.dll 	"sys\bin\power.dll"
+extension[VARID]=\epoc32\release\ARMV5\urel\_NE1_TB_dma.dll 	"sys\bin\dma.dll"
+extension[VARID]=\epoc32\release\ARMV5\urel\_NE1_TB_lcdgce.PDD 	"sys\bin\DISPLAY0.PDD"
+device[VARID]=\epoc32\release\ARMV5\urel\display.ldd 	"sys\bin\DISPLAY0.LDD"
+extension[VARID]=\epoc32\release\ARMV5\urel\_NE1_TB_vserialkeyb.dll 	"sys\bin\ekeyb.dll"
+extension[VARID]=\epoc32\release\ARMV5\urel\_NE1_TB_exyin.dll 	"sys\bin\exyin.dll"
+device[VARID]=\epoc32\release\ARMV5\urel\_NE1_TB_euart.pdd 	"sys\bin\euart1.pdd"	   
+device[VARID]=\epoc32\release\ARMV5\urel\_NE1_TB_soundsc.pdd 	"sys\bin\soundsc.pdd"
+extension[VARID]=\epoc32\release\ARMV5\urel\_NE1_TB_gpio.dll 	"sys\bin\gpio.dll"
+device[VARID]=\epoc32\release\ARMV5\urel\enet.ldd 	"sys\bin\enet.ldd"
+device[VARID]=\epoc32\release\ARMV5\urel\_NE1_TB_ethernet.pdd 	"sys\bin\ethernet.pdd"
+extension[VARID]=\epoc32\release\ARMV5\urel\_NE1_TB_keypad.dll 	"sys\bin\keypad.dll"
+extension[VARID]=\epoc32\release\ARMV5\urel\_NE1_TB_i2s.dll 	"sys\bin\i2s.dll"
+extension[VARID]=\epoc32\release\ARMV5\urel\elocd.ldd 	"sys\bin\elocd.ldd"
+extension[VARID]=\epoc32\release\ARMV5\urel\_NE1_TB_medint.pdd 	"sys\bin\medint.pdd"
+device[VARID]=\epoc32\release\ARMV5\urel\ecomm.ldd 	"sys\bin\ecomm.ldd"
+device[VARID]=\epoc32\release\ARMV5\urel\esoundsc.ldd 	"sys\bin\esoundsc.ldd"
+device[VARID]=\epoc32\release\ARMV5\urel\minkda.ldd 	"sys\bin\minkda.ldd"
+extension[VARID]=\epoc32\release\ARMV5\urel\exstart.dll 	"sys\bin\exstart.dll"
+extension[VARID]=\epoc32\release\ARMV5\urel\_NE1_TB_resmanpsl.PDD 	"sys\bin\resman.pdd"
+extension[VARID]=\epoc32\release\ARMV5\urel\_NE1_TB_PCI.DLL 	"sys\bin\pci.dll"
+extension[VARID]=\epoc32\release\ARMV5\urel\IIC.DLL 	"sys\bin\IIC.dll"
+extension[VARID]=\epoc32\release\ARMV5\urel\_NE1_TB_CSI.dll 	"sys\bin\CSI.dll"
+extension[VARID]=\epoc32\release\ARMV5\urel\evfp.dll 	"sys\bin\evfp.dll"
+data=\epoc32\rom\NE1_TB\estarttechview.txt 	"sys\data\estart.txt"
+file=\epoc32\release\ARMV5\DEBUG_DIR\euser_v6k.dll 	"sys\bin\EUser.dll"
+file=\epoc32\release\ARMV5\urel\RPIPE.DLL 	"sys\bin\rpipe.dll"
+file=\epoc32\release\ARMV5\urel\ektran.dll 	"sys\bin\EKTran.dll"
+file=\epoc32\release\ARMV5\urel\_syborg_hal.dll 	"sys\bin\Hal.dll"
+file=\epoc32\release\ARMV5\urel\_syborg_ekdata.dll 	"sys\bin\EKData.dll"
+secondary=\epoc32\release\ARMV5\urel\efile.exe 	"sys\bin\efile.exe"     
+file=\epoc32\release\ARMV5\urel\efsrv.dll 	"sys\bin\EFSrv.dll"
+file=\epoc32\release\ARMV5\urel\efat32.fsy 	"sys\bin\ELocal.fsy"
+file=\epoc32\release\ARMV5\urel\_NE1_TB_e32strt.exe 	"sys\bin\EStart.exe"  
+file=\epoc32\release\ARMV5\urel\domainSrv.exe 	"sys\bin\domainSrv.exe"
+file=\epoc32\release\ARMV5\urel\domainCli.dll 	"sys\bin\domainCli.dll"
+file=\epoc32\release\ARMV5\urel\domainPolicy.dll 	"sys\bin\domainPolicy.dll"
+file=\epoc32\release\ARMV5\urel\_generic_scdv.dll 	"sys\bin\ScDv.dll"
+}

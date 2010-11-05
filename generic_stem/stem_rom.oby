@@ -7,6 +7,16 @@ PlatSecDiagnostics OFF
 PlatSecEnforcement ON
 PlatSecEnforceSysBin ON
 PlatSecProcessIsolation ON 
+
+REM stree-free paged ROM
+//                 Min       Max        Young/Old    NAND page read   NAND page read	Old/Oldest
+//                 live      live       page ratio   delay            CPU overhead 		page ratio
+//                 pages     pages                   (microseconds)   (microseconds)
+//
+demandpagingconfig 512       32767      3            660              5					3
+pagingpolicy       defaultpaged
+codepagingoverride defaultpaged
+
 kerneltrace 0x80000000
 unicode
 time=##TODAY## 12:00:00
@@ -499,7 +509,7 @@ REM Graphics Resource Adapter
 file=\epoc32\release\ARMV5\urel\graphicsresourceadapter_sw.dll 	"sys\bin\graphicsresourceadapter.dll"
 file=\epoc32\release\ARMV5\urel\surfacemanager.dll 	"sys\bin\surfacemanager.dll"
 REM Surface Manager
-extension[0x0b0a0001]=\epoc32\release\ARMV5\urel\surfacemanagerdriver.ldd 	"Sys\Bin\surfacemanagerdriver.ldd"
+extension[VARID]=\epoc32\release\ARMV5\urel\surfacemanagerdriver.ldd 	"Sys\Bin\surfacemanagerdriver.ldd"
 REM Graphics Resource
 file=\epoc32\release\ARMV5\urel\graphicsresource.dll 	"sys\bin\graphicsresource.dll"
 REM DirectGDI Adapter
@@ -870,15 +880,6 @@ REM Include the top-level OBY file in the ROM, as an audit trail...
 REM You do not want this in production ROMs!
 REM Provides build number information to the emulator\ROM. 
 data=\epoc32\data\buildinfo.txt 	"System\Data\buildinfo.txt"
-demandpagingconfig 256       512        3            0                0
-pagingoverride defaultpaged
-codepagingpolicy defaultpaged
-demandpagingconfig 64        128        3            0                0
-pagingoverride defaultpaged
-codepagingpolicy defaultpaged
-demandpagingconfig 128       128        3            0                0
-pagingoverride defaultpaged
-codepagingpolicy defaultpaged
 REM redefined BT_DIR as urel
 REM PDRSTORE
 REM Feature PRINT is not included in this ROM
@@ -2401,20 +2402,6 @@ data=\epoc32\data\Z\resource\mpxplaylisttopcharacterset.rsc 	"resource\mpxplayli
 data=\epoc32\data\Z\resource\msgcommonutils.rsc 	"resource\msgcommonutils.rsc" 
 data=\epoc32\data\Z\resource\mtp\2001FE3C.rsc 	"resource\mtp\2001FE3C.rsc"   
 data=\epoc32\data\Z\resource\mtp\2001FCAE.rsc 	"resource\mtp\2001FCAE.rsc" 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, mtpstatusservice.dll , mtpstatusservice.dll ) 
-REM MISSING data=\epoc32\data\Z\resource\mtp\2001a97f.rsc  resource\mtp\2001a97f.rsc 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, mtpmetadataservice.dll , mtpmetadataservice.dll ) 
-REM MISSING data=\epoc32\data\Z\resource\mtp\2001A9A3.rsc  resource\mtp\2001A9A3.rsc
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, mtpwmpextndp.dll , mtpwmpextndp.dll ) 
-REM MISSING data=\epoc32\data\Z\resource\mtp\1028716c.rsc  resource\mtp\1028716c.rsc 
-REM MISSING file=\epoc32\release\ARMV5\urel\mtppimproxy.dll    system\libs\mtppimproxy.dll
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, mtpcalendardp.dll , mtpcalendardp.dll ) 
-REM MISSING data=\epoc32\data\Z\resource\mtp\102871B8.rsc  resource\mtp\102871B8.rsc 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, mtptaskdp.dll , mtptaskdp.dll ) 
-REM MISSING data=\epoc32\data\Z\resource\mtp\10287013.rsc  resource\mtp\10287013.rsc 
-__ECOM_PLUGIN(\epoc32\release\ARMV5\urel,Sys\Bin,\epoc32\data\Z,Resource\Plugins, mtpcontactdp.dll , mtpcontactdp.dll ) 
-REM MISSING data=\epoc32\data\Z\resource\mtp\102872bd.rsc  resource\mtp\102872bd.rsc 
-REM MISSING data=\epoc32\data\Z\resource\apps\mtpcontactviewdefinition.rsc  resource\apps\mtpcontactviewdefinition.rsc 
 data=\epoc32\data\Z\resource\apps\mulsliderwidget.mif 	"resource\apps\mulsliderwidget.mif"
 data=\epoc32\data\Z\System\install\multimediacommscontroller_stub.sis 	"System\Install\multimediacommscontroller_stub.sis"
 data=\epoc32\data\Z\System\install\multimediacommsengine_stub.sis 	"system\install\multimediacommsengine_stub.sis"
@@ -3584,10 +3571,4 @@ romchecksum=0x12345678
 }
 ROM_IMAGE[1] {
 
-
-
-REM MISSING  data=\epoc32\rom\include\OBEYFILE.oby		System\Samples\DESIRED_ABI_OBEYFILE
-pagingoverride defaultpaged
-pagingoverride defaultpaged
-pagingoverride defaultpaged
 }
