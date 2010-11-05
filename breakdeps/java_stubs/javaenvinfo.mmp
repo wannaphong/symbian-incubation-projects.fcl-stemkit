@@ -12,23 +12,25 @@
 * Contributors:
 *
 * Description:  JavaEnvInfo build file
-*
+* Originally from /sf/app/jrt/java_stubs/javaenvinfo/build/
 */
 
 
 #include <platform_paths.hrh>
 
-TARGET        javaenvinfo.dll
+TARGET        stem_javaenvinfo.dll
 TARGETTYPE    dll
 CAPABILITY    CAP_GENERAL_DLL
 UID	          0x1000008d 0x2001B2A5
 VENDORID      VID_DEFAULT
+NOEXPORTLIBRARY
+DEFFILE /sf/app/jrt/java_stubs/javaenvinfo/~/javaenvinfo.def
 
 PAGED
 
 APP_LAYER_SYSTEMINCLUDE
 
-SOURCEPATH    ../src
+SOURCEPATH    /sf/app/jrt/java_stubs/javaenvinfo/src
 
 SOURCE        javaenvinfo.cpp
 

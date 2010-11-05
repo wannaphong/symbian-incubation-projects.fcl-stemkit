@@ -12,25 +12,27 @@
 * Contributors:
 *
 * Description:  Project definition file for project javaregistryclient.dll
-*
+* Originally from /sf/app/jrt/java_stubs/javaregistry/clientserver/client/build/
 */
 
 #include <platform_paths.hrh>
 
-TARGET          javaregistryclient.dll
+TARGET          stem_javaregistryclient.dll
 TARGETTYPE      DLL
 UID             0x1000008d 0x10282476
 
 // CAPABILITY 
 CAPABILITY      CAP_CLIENT_DLL
 VENDORID        VID_DEFAULT
+NOEXPORTLIBRARY
+DEFFILE /sf/app/jrt/java_stubs/javaregistry/clientserver/client/~/javaregistryclient.def
 
 PAGED
 
-USERINCLUDE     ../inc
-USERINCLUDE     ../../common/inc
+USERINCLUDE     /sf/app/jrt/java_stubs/javaregistry/clientserver/client/inc
+USERINCLUDE     /sf/app/jrt/java_stubs/javaregistry/clientserver/common/inc
 
-SOURCEPATH      ../src
+SOURCEPATH      /sf/app/jrt/java_stubs/javaregistry/clientserver/client/src
 SOURCE          javaregistry.cpp
 SOURCE          javaregistryentry.cpp
 SOURCE          javaregistryapplicationentry.cpp
@@ -42,7 +44,7 @@ SOURCE          writeablejavaregistry.cpp
 SOURCE          javaregistrybackupsupport.cpp
 SOURCE          javaregconverter.cpp
 
-SOURCEPATH      ../../common/src
+SOURCEPATH      /sf/app/jrt/java_stubs/javaregistry/clientserver/common/src
 SOURCE          javaregproperty.cpp
 SOURCE          javapropertyarray.cpp
 

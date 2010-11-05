@@ -4109,7 +4109,7 @@ sys\bin\javacoreui.dll,/epoc32/release/armv5/urel/javacoreui.dll,core/app/java.i
 sys\bin\javadatagram.dll,/epoc32/release/armv5/urel/javadatagram.dll,core/app/java.iby,app/jrt,Out,Auto,Not referenced during boot
 sys\bin\javadatagramscplugin.dll,/epoc32/release/armv5/urel/javadatagramscplugin.dll,core/app/java.iby,app/jrt,Out,Auto,Not referenced during boot
 sys\bin\javadebugapi.dll,/epoc32/release/armv5/urel/javadebugapi.dll,core/app/java.iby,app/jrt,Out,Auto,Not referenced during boot
-sys\bin\javaenvinfo.dll,/epoc32/release/armv5/urel/javaenvinfo.dll,core/app/java.iby,app/jrt,,,
+sys\bin\javaenvinfo.dll,/epoc32/release/armv5/urel/javaenvinfo.dll,core/app/java.iby,app/jrt,etel_stem,TomP,Break dependence on etel.dll
 sys\bin\javafile.dll,/epoc32/release/armv5/urel/javafile.dll,core/app/java.iby,app/jrt,Out,Auto,Not referenced during boot
 sys\bin\javafileutils.dll,/epoc32/release/armv5/urel/javafileutils.dll,core/app/java.iby,app/jrt,,,
 sys\bin\javagcf.dll,/epoc32/release/armv5/urel/javagcf.dll,core/app/java.iby,app/jrt,Out,Auto,Not referenced during boot
@@ -4141,7 +4141,7 @@ sys\bin\javapim.dll,/epoc32/release/armv5/urel/javapim.dll,core/app/java.iby,app
 sys\bin\javapreinstaller.dll,/epoc32/release/armv5/urel/javapreinstaller.dll,core/app/java.iby,app/jrt,Out,Auto,Not referenced during boot
 sys\bin\javapushcontroller.dll,/epoc32/release/armv5/urel/javapushcontroller.dll,core/app/java.iby,app/jrt,Out,Auto,Not referenced during boot
 sys\bin\javapushregistry.dll,/epoc32/release/armv5/urel/javapushregistry.dll,core/app/java.iby,app/jrt,Out,Auto,Not referenced during boot
-sys\bin\javaregistryclient.dll,/epoc32/release/armv5/urel/javaregistryclient.dll,core/app/java.iby,app/jrt,,,
+sys\bin\javaregistryclient.dll,/epoc32/release/armv5/urel/javaregistryclient.dll,core/app/java.iby,app/jrt,etel_stem,TomP,Break dependence on etel.dll
 sys\bin\javaremconobserver.dll,/epoc32/release/armv5/urel/javaremconobserver.dll,core/app/java.iby,app/jrt,Out,Auto,Not referenced during boot
 sys\bin\javarms.dll,/epoc32/release/armv5/urel/javarms.dll,core/app/java.iby,app/jrt,Out,Auto,Not referenced during boot
 sys\bin\javaruntimestarterutils.dll,/epoc32/release/armv5/urel/javaruntimestarterutils.dll,core/app/java.iby,app/jrt,Out,Auto,Not referenced during boot
