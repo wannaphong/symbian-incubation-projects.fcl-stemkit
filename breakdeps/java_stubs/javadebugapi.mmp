@@ -12,21 +12,23 @@
 * Contributors:
 *
 * Description:  Java Debug API build file
-*
+* Originally from /sf/app/jrt/java_stubs/javadebugapi/build/
 */
 
 
 #include <platform_paths.hrh>
 
-TARGET        javadebugapi.dll
+TARGET        stem_javadebugapi.dll
 TARGETTYPE    dll
 CAPABILITY    CAP_GENERAL_DLL
 VENDORID      VID_DEFAULT
+NOEXPORTLIBRARY
+DEFFILE /sf/app/jrt/java_stubs/javadebugapi/~/javadebugapi.def
 
 PAGED
 APP_LAYER_SYSTEMINCLUDE
 
-SOURCEPATH    ../src
+SOURCEPATH    /sf/app/jrt/java_stubs/javadebugapi/src
 SOURCE        javadebugapi.cpp
 
 LIBRARY       euser.lib
