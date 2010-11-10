@@ -1,0 +1,47 @@
+breakdeps	/sf/os/ossrv	genericopenlibs/openenvcore/backend/group	backend.mmp
+breakdeps	/sf/os/ossrv	genericopenlibs/openenvcore/backend/src/corebackend	usocket.cpp
+
+breakdeps	/sf/mw/classicui	uifw/AvKon/group	avkon.mmp
+breakdeps	/sf/mw/classicui	uifw/AvKon/src	AknEcs.cpp
+
+breakdeps	/sf/mw/classicui	lafagnosticuifoundation/cone/group	CONE.MMP
+breakdeps	/sf/mw/classicui	lafagnosticuifoundation/cone/src	coesndpy.cpp
+
+breakdeps/DRMEngine	/sf/mw/drm	omadrm/drmengine/drmclock/Src	DRMClock.cpp
+breakdeps/DRMEngine	/sf/mw/drm	omadrm/drmengine/drmclock/Inc	DRMClock.h
+breakdeps/DRMEngine	/sf/mw/drm	omadrm/drmengine/server/src	DRMRightsServer.cpp
+breakdeps/DRMEngine	/sf/mw/drm	omadrm/drmengine/keystorage/src	DrmStdKeyStorage.cpp
+breakdeps/DRMEngine	/sf/mw/drm	omadrm/drmengine/group	DrmStdKeyStorage.mmp
+breakdeps/DRMEngine	/sf/mw/drm	omadrm/drmengine/group	RightsServer.mmp
+breakdeps/DRMEngine	/sf/mw/drm	omadrm/drmengine/roap/src	RoapEng.cpp
+breakdeps/DRMEngine	/sf/mw/drm	omadrm/drmengine/group	ROAPHandler.mmp
+
+breakdeps	/sf/mw/classicui	uifw/EikStd/srvuisrc	EIKSRVUI.MMP
+breakdeps	/sf/mw/classicui	uifw/EikStd/srvuisrc	eikkeysoundserver.cpp
+
+breakdeps/java_stubs	/sf/app/jrt	java_stubs/javadebugapi/build	javadebugapi.mmp
+breakdeps/java_stubs	/sf/app/jrt	java_stubs/javaenvinfo/build	javaenvinfo.mmp
+breakdeps/java_stubs	/sf/app/jrt	java_stubs/javaregistry/clientserver/client/build	javaregclient.mmp
+
+breakdeps/MCSSatHandler	/sf/mw/homescreensrv	menucontentsrv/extsrc	mcssathandler.cpp
+breakdeps/MCSSatHandler	/sf/mw/homescreensrv	menucontentsrv/extinc	mcssathandler.h
+breakdeps/MCSSatHandler	/sf/mw/homescreensrv	menucontentsrv/group	mcssathandler.mmp
+
+breakdeps	/sf/mw/svgt	svgtopt/SVG/SVGEngine/group	SVGEngine.mmp
+breakdeps	/sf/mw/svgt	svgtopt/SVG/SVGEngine/src	Svgdecoder.cpp
+breakdeps	/sf/mw/svgt	svgtopt/SVG/SVGImpl/src	SVGDocumentImpl.cpp
+breakdeps	/sf/mw/svgt	svgtopt/SVG/SVGEngine/src	SVGEngineImpl.cpp
+
+startup	/sf/os/devicesrv	sysstatemgmt/systemstatereferenceplugins/custcmd/group	customcmds.mmp
+startup	/sf/os/devicesrv	sysstatemgmt/systemstatereferenceplugins/custcmd/eabi	customcmdsu.def
+startup	/sf/os/devicesrv	sysstatemgmt/ssmcmdlists/group	ssmcmdlists.mmp
+startup	/sf/os/devicesrv	sysstatemgmt/systemstatereferenceplugins/custcmd/src	ssmcustomcmdfactory.cpp
+startup	/sf/os/devicesrv	sysstatemgmt/ssmcmdlists/inc	ssmdlldatadefs.rh
+startup	/sf/os/devicesrv	sysstatemgmt/ssmpolicyplugins/ssmstartuppolicy/src	ssmstartuppolicy.cpp
+startup	/sf/os/devicesrv	sysstatemgmt/ssmpolicyplugins/ssmstartuppolicy/group	ssmstartuppolicy.mmp
+
+perfopts	/sf/os/graphics	openvg/openvgrefimplementation/sfopenvg/openvg	openvg.cpp
+perfopts	/sf/os/graphics	openvg/openvgrefimplementation/sfopenvg/group	openvg.mmp
+perfopts	/sf/os/graphics	openvg/openvgrefimplementation/sfopenvg/group	openvgu.mmp
+perfopts	/sf/os/graphics	openvg/openvgrefimplementation/sfopenvg/group	sfopenvg.mmp
+perfopts	/sf/os/graphics	openvg/openvgrefimplementation/sfopenvg/openvgu	vgu.cpp
