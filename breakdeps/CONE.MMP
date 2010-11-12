@@ -27,6 +27,7 @@ CAPABILITY All -Tcb
 targettype		DLL
 UID			0x1000008D 0x10003A41
 VENDORID 	0x70000001
+NOEXPORTLIBRARY
 
 userinclude		/sf/mw/classicui/lafagnosticuifoundation/cone/inc
 USERINCLUDE     /sf/mw/classicui/lafagnosticuifoundation/cone/src
