@@ -2240,6 +2240,7 @@ file=\epoc32\release\ARMV5\urel\eikcdlg.dll 	"sys\bin\eikcdlg.dll"
 data=\epoc32\data\Z\Resource\eikcdlg.rsc 	"resource\eikcdlg.rsc"
 file=\epoc32\release\ARMV5\urel\stem_eiksrvui.dll 	"sys\bin\eiksrvui.dll"
 file=\epoc32\release\ARMV5\urel\eikalert.dll 	"sys\bin\eikalert.dll"
+file=\epoc32\release\ARMV5\urel\econseik.dll 	"sys\bin\econs.dll" uid3=0x100039e7
 data=\epoc32\data\Z\System\install\WMA_AudCon_stub.sis 	"System\Install\WMA_AudCon_stub.sis"
 data=\epoc32\data\Z\System\install\EnhancedMediaClient_Stub.SIS 	"System\Install\EnhancedMediaClient_Stub.SIS"
 data=\epoc32\data\Z\System\install\DosEnPolicy_stub.sis 	"system\install\DosEnPolicy_stub.sis"

@@ -3444,7 +3444,7 @@ sys\bin\ecomm.ldd,/epoc32/release/armv5/urel/ecomm.ldd,base_syborg_ui.iby,os/ker
 sys\bin\EComPatchData.dll,/epoc32/release/armv5/urel/ecompatchdata.dll,ecom.iby,os/ossrv,,,
 sys\bin\ecompluginnotifier.dll,/epoc32/release/armv5/urel/ecompluginnotifier.dll,core/mw/aknglobalui.iby,mw/classicui,,,
 sys\bin\EComServer.exe,/epoc32/release/armv5/urel/ecomserver.exe,ecom.iby,os/ossrv,,,
-sys\bin\econs.dll,/epoc32/release/armv5/urel/econseik.dll,core/mw/eikstd.iby,mw/classicui,Out,Auto,Not referenced during boot
+sys\bin\econs.dll,/epoc32/release/armv5/urel/econseik.dll,core/mw/eikstd.iby,mw/classicui,In,WR,Needed for eshell & RTest code
 sys\bin\ecuart.csy,/epoc32/release/armv5/urel/ecuart.csy,ecuart.iby,os/commsfw,Out,Auto,Not referenced during boot
 sys\bin\EDbms.dll,/epoc32/release/armv5/urel/edbms.dll,dbms.iby,os/persistentdata,,,
 sys\bin\EDbsrv.exe,/epoc32/release/armv5/urel/edbsrv.exe,dbms.iby,os/persistentdata,,,
