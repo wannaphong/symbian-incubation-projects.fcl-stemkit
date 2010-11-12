@@ -1,0 +1,61 @@
+/*
+* Copyright (c) 2010 Symbian Foundation Ltd
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Symbian Foundation Ltd - initial contribution.
+*
+* Contributors:
+*
+* Description:
+* Build information file for the stem kit.
+*
+*/
+
+PRJ_PLATFORMS
+ARMV5			
+// no tools
+// Don't build WINSCW because the system startup uses all of the resource files it can find!
+
+PRJ_MMPFILES
+
+// based on sf/os/devicesrv
+../startup/ssmcmdlists.mmp
+../startup/ssmstartuppolicy.mmp
+../startup/customcmds.mmp
+
+// based on sf/os/ossrv
+../breakdeps/backend.mmp
+
+// based on sf/mw/classicui
+../breakdeps/cone.mmp
+../breakdeps/eiksrvui.mmp
+../breakdeps/avkon.mmp
+
+// based on sf/mw/svgt
+../breakdeps/SVGEngine.mmp
+
+// Rebuild the "original" TimeZone localisation resources as they're eclipsed by something else in the PDK
+/sf/mw/appsupport/tzservices/tzlocrscfactory/group/TzLocalizationRscFactory.mmp
+
+// VFP performance improvement for OpenVG SW reference implementation
+../perfopts/sfopenvg.mmp
+../perfopts/openvg.mmp
+../perfopts/openvgu.mmp
+
+// based on /sf/mw/drm
+../breakdeps/DRMEngine/ROAPHandler.mmp
+../breakdeps/DRMEngine/RightsServer.mmp
+../breakdeps/DRMEngine/DrmStdKeyStorage.mmp
+
+// based on /sf/mw/homescreensrv
+../breakdeps/MCSSatHandler/mcssathandler.mmp
+
+// stubs from sf/app/jrt
+../breakdeps/java_stubs/javadebugapi.mmp
+../breakdeps/java_stubs/javaenvinfo.mmp
+../breakdeps/java_stubs/javaregclient.mmp
