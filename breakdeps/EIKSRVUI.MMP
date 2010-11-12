@@ -24,17 +24,12 @@
 TARGET          stem_eiksrvui.dll
 TARGETTYPE      dll
 UID             0x1000008D 0x100053D0
+NOEXPORTLIBRARY
 
 CAPABILITY      CAP_GENERAL_DLL
 VENDORID        VID_DEFAULT
 
 SOURCEPATH      /sf/mw/classicui/uifw/eikstd/srvuisrc
-
-START RESOURCE  EIKSRVUI.RSS
-HEADER
-TARGETPATH      RESOURCE_FILES_DIR
-LANGUAGE_IDS
-END
 
 USERINCLUDE     /sf/mw/classicui/uifw/eikstd/srvuisrc
 USERINCLUDE     /sf/mw/classicui/uifw/eikstd/inc
@@ -76,17 +71,17 @@ LIBRARY         eikcoctl.lib
 LIBRARY         eikdlg.lib
 LIBRARY         eiksrv.lib
 LIBRARY         avkon.lib
-LIBRARY         Eikalert.lib
+LIBRARY         eikalert.lib
 LIBRARY         apfile.lib
-LIBRARY         CdlEngine.lib
-LIBRARY         CommonEngine.lib
+LIBRARY         cdlengine.lib
+LIBRARY         commonengine.lib
 LIBRARY         aknnotify.lib
 LIBRARY         aknskins.lib
 LIBRARY         fbscli.lib
 LIBRARY         featmgr.lib
 LIBRARY         aknicon.lib
 LIBRARY         egul.lib
-LIBRARY         AknLayout2Scalable.lib
+LIBRARY         aknlayout2scalable.lib
 LIBRARY         oodmonitor.lib
 LIBRARY         uiklaf.lib
 LIBRARY         viewcli.lib

@@ -17,7 +17,9 @@
 */
 
 PRJ_PLATFORMS
-DEFAULT
+ARMV5			
+// no tools
+// Don't build WINSCW because the system startup uses all of the resource files it can find!
 
 PRJ_MMPFILES
 
@@ -27,6 +29,7 @@ PRJ_MMPFILES
 // based on sf/os/devicesrv
 ../startup/ssmcmdlists.mmp
 ../startup/ssmstartuppolicy.mmp
+../startup/customcmds.mmp
 
 // based on sf/os/ossrv
 ../breakdeps/backend.mmp
@@ -47,3 +50,15 @@ PRJ_MMPFILES
 ../perfopts/openvg.mmp
 ../perfopts/openvgu.mmp
 
+// based on /sf/mw/drm
+../breakdeps/DRMEngine/ROAPHandler.mmp
+../breakdeps/DRMEngine/RightsServer.mmp
+../breakdeps/DRMEngine/DrmStdKeyStorage.mmp
+
+// based on /sf/mw/homescreensrv
+../breakdeps/MCSSatHandler/mcssathandler.mmp
+
+// stubs from sf/app/jrt
+../breakdeps/java_stubs/javadebugapi.mmp
+../breakdeps/java_stubs/javaenvinfo.mmp
+../breakdeps/java_stubs/javaregclient.mmp
