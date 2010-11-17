@@ -17,10 +17,10 @@
 #include <utf.h>
 #include <mmf/common/mmfpaniccodes.h>
 #include "mmfclientaudioplayer.h"
-#include "mmfclientutility.h"
+//#include "mmfclientutility.h"
 #ifdef SYMBIAN_ENABLE_SPLIT_HEADERS
-#include <mmf/common/mmfdurationinfocustomcommandsimpl.h>
-#include <mmf/common/mmfdurationinfocustomcommandsenums.h>
+//#include <mmf/common/mmfdurationinfocustomcommandsimpl.h>
+//#include <mmf/common/mmfdurationinfocustomcommandsenums.h>
 #endif
 
 using namespace ContentAccess;
@@ -440,8 +440,9 @@ EXPORT_C void CMdaAudioPlayerUtility::OpenFileL(const RFile& aFile)
 	{
 	ASSERT(iProperties);
 	RFile& file = const_cast<RFile&>(aFile);
-	TMMFileHandleSource tfs(file, KDefaultContentObject, EPlay);
-	iProperties->OpenFileL(tfs);
+	//TMMFileHandleSource tfs(file, KDefaultContentObject, EPlay);
+	TMMFileHandleSource * tfs;
+	iProperties->OpenFileL(*tfs);
 	}
 
 /**
@@ -1019,8 +1020,9 @@ CMMFMdaAudioPlayerUtility* CMMFMdaAudioPlayerUtility::NewFilePlayerL(const TDesC
 	CMMFMdaAudioPlayerUtility* self = new(ELeave) CMMFMdaAudioPlayerUtility(aCallback, aPriority, aPref);
 	CleanupStack::PushL(self);
 	self->ConstructL();
-	TMMFileSource filesource(aFileName, KDefaultContentObject, EPlay);
-	self->OpenFileL(filesource);
+	//TMMFileSource filesource(aFileName, KDefaultContentObject, EPlay);
+	TMMFileSource * filesource;
+	self->OpenFileL(*filesource);
 	CleanupStack::Pop(self);
 	return self;
 	}
@@ -1047,29 +1049,30 @@ CMMFMdaAudioPlayerUtility* CMMFMdaAudioPlayerUtility::NewDesPlayerReadOnlyL(cons
 
 void CMMFMdaAudioPlayerUtility::UseSharedHeap()
 	{
-	iFindAndOpenController->UseSharedHeap();
+	//iFindAndOpenController->UseSharedHeap();
 	}
 
 // CMMFMdaAudioPlayerUtility
 CMMFMdaAudioPlayerUtility::~CMMFMdaAudioPlayerUtility()
 	{
 	
-	delete iControllerImplementationInformation;
+	//delete iControllerImplementationInformation;
 	delete iAsyncCallBack;
-	delete iRepeatTrailingSilenceTimer;
-	delete iFindAndOpenController;
-	delete iControllerEventMonitor;
-	iMediaIds.Close();
-	iController.Close();
+	//delete iRepeatTrailingSilenceTimer;
+	//delete iFindAndOpenController;
+	//delete iControllerEventMonitor;
+	//iMediaIds.Close();
+	//iController.Close();
 	}
 
 CMMFMdaAudioPlayerUtility::CMMFMdaAudioPlayerUtility(MMdaAudioPlayerCallback& aCallback, TInt aPriority, TInt aPref) :
-	iCallback(aCallback),
-	iAudioPlayDeviceCommands(iController),
-	iAudioPlayControllerCommands(iController),
-	iNotificationRegistrationCommands(iController),
-	iDRMCustomCommands(iController),
-	iAudioPlayControllerSetRepeatsCommands(iController)
+    CTimer(EPriorityHigh),
+	iCallback(aCallback)
+//	iAudioPlayDeviceCommands(iController),
+//	iAudioPlayControllerCommands(iController),
+//	iNotificationRegistrationCommands(iController)
+//	iDRMCustomCommands(iController)
+//	iAudioPlayControllerSetRepeatsCommands(iController)
 	{
 	iState = EStopped;
 	iPrioritySettings.iPriority = aPriority;
@@ -1082,15 +1085,17 @@ CMMFMdaAudioPlayerUtility::CMMFMdaAudioPlayerUtility(MMdaAudioPlayerCallback& aC
 
 void CMMFMdaAudioPlayerUtility::ConstructL()
 	{
-	iControllerEventMonitor = CMMFControllerEventMonitor::NewL(*this, iController);
-	iRepeatTrailingSilenceTimer = CRepeatTrailingSilenceTimer::NewL(*this);
+	//iControllerEventMonitor = CMMFControllerEventMonitor::NewL(*this, iController);
+	//iRepeatTrailingSilenceTimer = CRepeatTrailingSilenceTimer::NewL(*this);
 	iAsyncCallBack = CMMFMdaAudioPlayerCallBack::NewL(iCallback);
-	User::LeaveIfError(iMediaIds.Append(KUidMediaTypeAudio));
-	iFindAndOpenController = CMMFFindAndOpenController::NewL(*this);
-	iFindAndOpenController->Configure(iMediaIds[0], iPrioritySettings);
-	iFindAndOpenController->ConfigureController(iController, *iControllerEventMonitor, CMMFFindAndOpenController::EPlayback);
+	//User::LeaveIfError(iMediaIds.Append(KUidMediaTypeAudio));
+	//iFindAndOpenController = CMMFFindAndOpenController::NewL(*this);
+	//iFindAndOpenController->Configure(iMediaIds[0], iPrioritySettings);
+	//iFindAndOpenController->ConfigureController(iController, *iControllerEventMonitor, CMMFFindAndOpenController::EPlayback);
+	iAsyncCallBack->InitComplete(KErrNone, 500000);
 	}
 
+#if 0
 void CMMFMdaAudioPlayerUtility::MfaocComplete(		
 		TInt& aError, 
 		RMMFController* /*aController*/,
@@ -1130,7 +1135,7 @@ void CMMFMdaAudioPlayerUtility::MfaocComplete(
 	
 	iAsyncCallBack->InitComplete(aError, iDuration);
 	}
-
+#endif
 /**
 	Open an audio clip from a file
 	@param "const TFileSource& aFileSource" "the file to open"
@@ -1139,8 +1144,9 @@ void CMMFMdaAudioPlayerUtility::MfaocComplete(
 */
 void CMMFMdaAudioPlayerUtility::OpenFileL(const TDesC& aFileName)
 	{
-	TMMFileSource filesource(aFileName, KDefaultContentObject, EPlay);
-	OpenFileL(filesource);
+	//TMMFileSource filesource(aFileName, KDefaultContentObject, EPlay);
+	TMMFileSource * filesource;
+	OpenFileL(*filesource);
 	}
 	
 /**
@@ -1153,8 +1159,9 @@ void CMMFMdaAudioPlayerUtility::OpenFileL(const TDesC& aFileName)
 void CMMFMdaAudioPlayerUtility::OpenFileL(const RFile& aFile)
 	{
 	RFile& file = const_cast<RFile&>(aFile);
-	TMMFileHandleSource filesource(file, KDefaultContentObject, EPlay);
-	OpenFileL(filesource);
+	//TMMFileHandleSource filesource(file, KDefaultContentObject, EPlay);
+	TMMFileHandleSource * filesource;
+	OpenFileL(*filesource);
 	}
 
 void CMMFMdaAudioPlayerUtility::OpenFileL(const TMMSource& aSource)
@@ -1163,7 +1170,7 @@ void CMMFMdaAudioPlayerUtility::OpenFileL(const TMMSource& aSource)
 	// that a previous request to Open...(...) has completed.
 	if (iAsyncCallBack->IsActive())
 		User::Leave(KErrNotReady);
-	
+#if 0	
 	if (aSource.SourceType()==KUidMMFileHandleSource)
 		{
 		RFile& fileHandle = static_cast<const TMMFileHandleSource&>(aSource).Handle();
@@ -1181,6 +1188,7 @@ void CMMFMdaAudioPlayerUtility::OpenFileL(const TMMSource& aSource)
 		}
 
 	iFindAndOpenController->OpenByFileSource(aSource);
+#endif
 	}
 
 /**
@@ -1195,12 +1203,13 @@ void CMMFMdaAudioPlayerUtility::OpenDesL(const TDesC8& aDescriptor)
 	// that a previous request to Open...(...) has completed.
 	if (iAsyncCallBack->IsActive())
 		User::Leave(KErrInUse);
-
+#if 0
 	iFindAndOpenController->ConfigureSourceSink(
 		CMMFFindAndOpenController::TSourceSink(KUidMmfDescriptorSource,
 													CMMFFindAndOpenController::GetConfigDescriptor(aDescriptor)),
 		CMMFFindAndOpenController::TSourceSink(KUidMmfAudioOutput));
 	iFindAndOpenController->OpenByDescriptor(aDescriptor);
+#endif
 	}
 
 /**
@@ -1215,7 +1224,7 @@ void CMMFMdaAudioPlayerUtility::OpenUrlL(const TDesC& aUrl, const TInt aIapId, c
 	// that a previous request to Open...(...) has completed.
 	if (iAsyncCallBack->IsActive())
 		User::Leave(KErrInUse);
-
+#if 0
 	CBufFlat* urlCfgBuffer = NULL;
 	CMMFFindAndOpenController::GetConfigUrlL(urlCfgBuffer, aUrl, aIapId);
 	
@@ -1224,6 +1233,7 @@ void CMMFMdaAudioPlayerUtility::OpenUrlL(const TDesC& aUrl, const TInt aIapId, c
 		CMMFFindAndOpenController::TSourceSink(KUidMmfAudioOutput));
 	iFindAndOpenController->OpenByUrl(aUrl, aIapId, aMimeType);
 	delete urlCfgBuffer;
+#endif
 	}
 
 /**
@@ -1252,7 +1262,7 @@ void CMMFMdaAudioPlayerUtility::Play()
 		iAsyncCallBack->PlayComplete(KErrNotReady);
 		return;
 		}
-
+#if 0
 	// cancel the repeat timer in case the client has called Play()
 	// without waiting for the previous play to complete
 	iRepeatTrailingSilenceTimer->Cancel();	
@@ -1272,12 +1282,13 @@ void CMMFMdaAudioPlayerUtility::Play()
 			//we revert back to playerutility's loop play implementation in that case
 			}
 		}
-
+#endif
 	DoPlay();
 	}
 
 void CMMFMdaAudioPlayerUtility::DoPlay()
 	{
+#if 0
 #if defined(__AUDIO_PROFILING)
 	RDebug::ProfileStart(4);
 #endif  // defined(__AUDIO_PROFILING)
@@ -1345,6 +1356,9 @@ void CMMFMdaAudioPlayerUtility::DoPlay()
 			iAsyncCallBack->PlayComplete(err);
 			}
 		}
+#endif
+	iState = EPlaying;
+	After(500000);
 	}
 
 /**
@@ -1373,9 +1387,9 @@ void CMMFMdaAudioPlayerUtility::Stop()
 		{
 		// cancel the repeat timer in case the client has called Stop()
 		// during the trailing silence period
-		iRepeatTrailingSilenceTimer->Cancel();	
+		//iRepeatTrailingSilenceTimer->Cancel();	
 
-		iController.Stop();
+		//iController.Stop();
 		iPosition = iPlayStart;	
 		iState = EStopped;	
 		}
@@ -1391,6 +1405,7 @@ void CMMFMdaAudioPlayerUtility::Stop()
 TInt CMMFMdaAudioPlayerUtility::Pause()
 	{
 	TInt err = KErrNone;
+#if 0
 	if(iRepeatTrailingSilenceTimer->IsActive())
 		{
 		iRepeatTrailingSilenceTimer->Cancel();
@@ -1405,6 +1420,8 @@ TInt CMMFMdaAudioPlayerUtility::Pause()
 			err = iController.GetPosition(iPosition);
 		iState = EPaused;
 		}
+#endif
+	iState = EPaused;
 	return err;
 	}
 
@@ -1418,6 +1435,7 @@ void CMMFMdaAudioPlayerUtility::Close()
 	{
 	// Reset the audio player state.
 	Stop();
+#if 0
 	iControllerEventMonitor->Cancel();
 	iController.Close();
 	if (iFindAndOpenController)	
@@ -1428,9 +1446,21 @@ void CMMFMdaAudioPlayerUtility::Close()
 		iControllerImplementationInformation = NULL;
 		}
 	iControllerUid = KNullUid;
+#endif
 	}
 
-
+void CMMFMdaAudioPlayerUtility::RunL()
+	{
+	switch(iState)
+		{
+		case EPlaying:
+			iAsyncCallBack->PlayComplete(KErrNone);
+			break;
+		default:
+			// do nothing
+			break;
+		}
+	}
 /**
 Changes the current playback volume to a specified value.
 
@@ -1451,6 +1481,8 @@ immediately.
 */
 TInt CMMFMdaAudioPlayerUtility::SetVolume(TInt aVolume)
 	{
+	TInt err = KErrNone;
+#if 0
 	TInt err = iAudioPlayDeviceCommands.SetVolume(aVolume);
 	if (err == KErrArgument)
 		{
@@ -1465,7 +1497,7 @@ TInt CMMFMdaAudioPlayerUtility::SetVolume(TInt aVolume)
 			}
 		err = iAudioPlayDeviceCommands.SetVolume(aVolume);			
 		}
-
+#endif
 	return err;
 	}
 
@@ -1492,6 +1524,7 @@ sample can be repeated indefinitely.
 */
 void CMMFMdaAudioPlayerUtility::SetRepeats(TInt aRepeatNumberOfTimes, const TTimeIntervalMicroSeconds& aTrailingSilence)
 	{
+#if 0
 	TInt err = iAudioPlayControllerSetRepeatsCommands.SetRepeats(aRepeatNumberOfTimes, aTrailingSilence);
 	
 	if(err!=KErrNone)
@@ -1499,6 +1532,7 @@ void CMMFMdaAudioPlayerUtility::SetRepeats(TInt aRepeatNumberOfTimes, const TTim
 		iNumberOfTimesToRepeat = aRepeatNumberOfTimes;
 		iTrailingSilence = aTrailingSilence;
 		}
+#endif
 	}
 
 /**
@@ -1517,16 +1551,19 @@ from nothing to the normal volume level.
 */
 void CMMFMdaAudioPlayerUtility::SetVolumeRamp(const TTimeIntervalMicroSeconds& aRampDuration)
 	{
-	iAudioPlayDeviceCommands.SetVolumeRamp(aRampDuration);
+	//iAudioPlayDeviceCommands.SetVolumeRamp(aRampDuration);
 	}
 
 TInt CMMFMdaAudioPlayerUtility::SetPriority(TInt aPriority, TInt aPref)
 	{
+	return KErrNone;
+#if 0
 	iPrioritySettings.iPref = aPref;
 	iPrioritySettings.iPriority = aPriority;
 	iFindAndOpenController->Configure(iMediaIds[0], iPrioritySettings);
 
 	return iController.SetPrioritySettings(iPrioritySettings);
+#endif
 	}
 
 /**
@@ -1538,11 +1575,14 @@ Returns the duration of the audio sample.
 */
 const TTimeIntervalMicroSeconds& CMMFMdaAudioPlayerUtility::Duration()
 	{
+#if 0
 	TInt err = iController.GetDuration(iDuration);
 	if (err)
 		{
 		iDuration = 0;
 		}
+#endif
+	iDuration = 500000;
 	return iDuration;
 	}
 	
@@ -1557,6 +1597,7 @@ Returns the duration of the audio sample in microseconds, and the duration state
 */	
 TMMFDurationInfo CMMFMdaAudioPlayerUtility::Duration(TTimeIntervalMicroSeconds& aDuration)
 {	
+#if 0
 	TPckgBuf<TMMFDurationInfo> pckg;
 	TMMFDurationInfo result = EMMFDurationInfoValid;
 	
@@ -1588,6 +1629,8 @@ TMMFDurationInfo CMMFMdaAudioPlayerUtility::Duration(TTimeIntervalMicroSeconds& 
 	// This is the intended behaviour regardless of what value err has
 	aDuration = Duration();
 	return result;
+#endif
+	return EMMFDurationInfoValid;
 }	
 	
 /**
@@ -1604,15 +1647,18 @@ CMdaAudioPlayerUtility::SetVolume().
 */
 TInt CMMFMdaAudioPlayerUtility::MaxVolume()
 	{
-	TInt maxVolume = 0;
+	TInt maxVolume = 100;
+#if 0
 #ifdef _DEBUG
 	TInt error = 
 #endif
 		iAudioPlayDeviceCommands.GetMaxVolume(maxVolume);
 	__ASSERT_DEBUG(error==KErrNone, Panic(EMMFMediaClientPanicServerCommunicationProblem));
+#endif
 	return maxVolume;
 	}
 
+#if 0
 void CMMFMdaAudioPlayerUtility::HandleEvent(const TMMFEvent& aEvent)
 	{
 	// handle loading started/complete messages first, as the later code does not explicitly check the event type
@@ -1703,9 +1749,11 @@ void CMMFMdaAudioPlayerUtility::HandleEvent(const TMMFEvent& aEvent)
 	// else we have an unexpected event that cannot be dealt with by the client.
 	// We will simply ignore this.
 	}
+#endif
 
 void CMMFMdaAudioPlayerUtility::PlaySilence()
 	{
+#if 0
 	// iRepeatTrailingSilenceTimer->After() takes a TTimeIntervalMicroSeconds32
 	// so for longer periods of silence call it repeatedly with KMaxTInt lengths
 	TTimeIntervalMicroSeconds32 silence;
@@ -1720,8 +1768,10 @@ void CMMFMdaAudioPlayerUtility::PlaySilence()
 		iTrailingSilenceLeftToPlay = 0;
 		}
 	iRepeatTrailingSilenceTimer->After(silence);
+#endif
 	}
 
+#if 0
 void CMMFMdaAudioPlayerUtility::RepeatTrailingSilenceTimerComplete()
 	{
 	if (iTrailingSilenceLeftToPlay.Int64() > 0)
@@ -1735,6 +1785,7 @@ void CMMFMdaAudioPlayerUtility::RepeatTrailingSilenceTimerComplete()
 		DoPlay();
 		}
 	}
+#endif
 
 /**
  *
@@ -1750,7 +1801,8 @@ TInt CMMFMdaAudioPlayerUtility::GetPosition(TTimeIntervalMicroSeconds& aPosition
 	{
 	TInt error = KErrNone;
 	if (iState==EPlaying)
-		error = iController.GetPosition(iPosition);
+		aPosition = 250000;
+//		error = iController.GetPosition(iPosition);
 	aPosition = iPosition;
 	return error;
 	}
@@ -1769,6 +1821,7 @@ TInt CMMFMdaAudioPlayerUtility::GetPosition(TTimeIntervalMicroSeconds& aPosition
  */
 void CMMFMdaAudioPlayerUtility::SetPosition(const TTimeIntervalMicroSeconds& aPosition)
 	{
+#if 0
 	// Clip the position if aPosition is greater than the duration
 	// or if aPosition is negative.
 	const TTimeIntervalMicroSeconds maxPosition(Duration());
@@ -1789,6 +1842,7 @@ void CMMFMdaAudioPlayerUtility::SetPosition(const TTimeIntervalMicroSeconds& aPo
 //		{
 //		Stop();	// We call stop so that DevSound's internal buffers are reset
 //		}
+#endif
 	}
 
 /**
@@ -1803,8 +1857,12 @@ Returns the current playback volume
 */
 TInt CMMFMdaAudioPlayerUtility::GetVolume(TInt& aVolume)
 	{
+#if 0
 	TInt error = iAudioPlayDeviceCommands.GetVolume(aVolume);
 	return error;
+#endif
+	aVolume = 50;
+	return KErrNone;
 	}
 
 /**
@@ -1819,8 +1877,12 @@ TInt CMMFMdaAudioPlayerUtility::GetVolume(TInt& aVolume)
  */
 TInt CMMFMdaAudioPlayerUtility::GetNumberOfMetaDataEntries(TInt& aNumEntries) 
 	{
+#if 0
 	TInt error = iController.GetNumberOfMetaDataEntries(aNumEntries);
 	return error;
+#endif
+	aNumEntries = 0;
+	return KErrNone;
 	}
 
 /**
@@ -1839,7 +1901,11 @@ TInt CMMFMdaAudioPlayerUtility::GetNumberOfMetaDataEntries(TInt& aNumEntries)
  */
 CMMFMetaDataEntry* CMMFMdaAudioPlayerUtility::GetMetaDataEntryL(TInt aMetaDataIndex)
 	{
+#if 0
 	return iController.GetMetaDataEntryL(aMetaDataIndex);
+#endif
+	User::Leave(KErrNotSupported);
+	return NULL;
 	}
 
 /**
@@ -1859,7 +1925,7 @@ TInt CMMFMdaAudioPlayerUtility::SetPlayWindow(const TTimeIntervalMicroSeconds& a
 											  const TTimeIntervalMicroSeconds& aPlayEnd)
 	{
 	TInt error = KErrNone;
-
+#if 0
 	if (aPlayStart >= TTimeIntervalMicroSeconds(0) &&
 		aPlayStart < iDuration &&
 			aPlayStart < aPlayEnd &&
@@ -1874,7 +1940,7 @@ TInt CMMFMdaAudioPlayerUtility::SetPlayWindow(const TTimeIntervalMicroSeconds& a
 		}
 	else
 		error = KErrArgument;
-
+#endif
 	return error;
 	}
 	
@@ -1890,12 +1956,12 @@ TInt CMMFMdaAudioPlayerUtility::ClearPlayWindow()
 	{
 	// clear play window start - very important because this is assigned 
 	// to iPosition when we stop & is used to set the position on the next Play()
-	iPosition = iPlayStart = iPlayEnd = TTimeIntervalMicroSeconds(0);
+	//iPosition = iPlayStart = iPlayEnd = TTimeIntervalMicroSeconds(0);
 
-	iPlayWindowSet = EClear;
+	//iPlayWindowSet = EClear;
 	TInt err = KErrNone;
-	if (iState==EPlaying)
-		err = iAudioPlayControllerCommands.DeletePlaybackWindow();
+	//if (iState==EPlaying)
+		//err = iAudioPlayControllerCommands.DeletePlaybackWindow();
 	return err;
 	}
 
@@ -1912,8 +1978,9 @@ Sets the current playback balance
 */
 TInt CMMFMdaAudioPlayerUtility::SetBalance(TInt aBalance)
 	{
-	TInt err = iAudioPlayDeviceCommands.SetBalance(aBalance);
-	return err;
+	//TInt err = iAudioPlayDeviceCommands.SetBalance(aBalance);
+	//return err;
+	return KErrNone;
 	}
 
 /**
@@ -1928,13 +1995,15 @@ Returns the bit rate of the audio clip.
 */
 TInt CMMFMdaAudioPlayerUtility::GetBitRate(TUint& aBitRate)
 	{
-	RMMFAudioControllerCustomCommands controller(iController);
-	TInt err = controller.GetSourceBitRate(aBitRate);
-	return err;	
+	//RMMFAudioControllerCustomCommands controller(iController);
+	//TInt err = controller.GetSourceBitRate(aBitRate);
+	//return err;
+	return KErrNone;
 	}
 
 const CMMFControllerImplementationInformation& CMMFMdaAudioPlayerUtility::ControllerImplementationInformationL()
 	{
+#if 0
 	if (!iControllerImplementationInformation)
 		{
 		if (iControllerUid==KNullUid)
@@ -1942,31 +2011,37 @@ const CMMFControllerImplementationInformation& CMMFMdaAudioPlayerUtility::Contro
 		iControllerImplementationInformation = CMMFControllerImplementationInformation::NewL(iControllerUid);
 		}
 	return *iControllerImplementationInformation;
+#endif
+	User::Leave(KErrNotSupported);
+	return *iControllerImplementationInformation;
 	}
 	
 void CMMFMdaAudioPlayerUtility::GetAudioLoadingProgressL(TInt& aPercentageProgress)
 	{
-	User::LeaveIfError(iAudioPlayControllerCommands.GetLoadingProgress(aPercentageProgress));
+	//User::LeaveIfError(iAudioPlayControllerCommands.GetLoadingProgress(aPercentageProgress));
+	User::Leave(KErrNotSupported);
 	}
 	
 TInt CMMFMdaAudioPlayerUtility::CustomCommandSync(const TMMFMessageDestinationPckg& aDestination, TInt aFunction, const TDesC8& aDataTo1, const TDesC8& aDataTo2, TDes8& aDataFrom)
 	{
-	return iController.CustomCommandSync(aDestination, aFunction, aDataTo1, aDataTo2, aDataFrom);
+	//return iController.CustomCommandSync(aDestination, aFunction, aDataTo1, aDataTo2, aDataFrom);
+	return KErrNotSupported;
 	}
 	
 TInt CMMFMdaAudioPlayerUtility::CustomCommandSync(const TMMFMessageDestinationPckg& aDestination, TInt aFunction, const TDesC8& aDataTo1, const TDesC8& aDataTo2)
 	{
-	return iController.CustomCommandSync(aDestination, aFunction, aDataTo1, aDataTo2);
+	//return iController.CustomCommandSync(aDestination, aFunction, aDataTo1, aDataTo2);
+	return KErrNotSupported;
 	}
 	
 void CMMFMdaAudioPlayerUtility::CustomCommandAsync(const TMMFMessageDestinationPckg& aDestination, TInt aFunction, const TDesC8& aDataTo1, const TDesC8& aDataTo2, TDes8& aDataFrom, TRequestStatus& aStatus)
 	{
-	iController.CustomCommandAsync(aDestination, aFunction, aDataTo1, aDataTo2, aDataFrom, aStatus);
+	//iController.CustomCommandAsync(aDestination, aFunction, aDataTo1, aDataTo2, aDataFrom, aStatus);
 	}
 	
 void CMMFMdaAudioPlayerUtility::CustomCommandAsync(const TMMFMessageDestinationPckg& aDestination, TInt aFunction, const TDesC8& aDataTo1, const TDesC8& aDataTo2, TRequestStatus& aStatus)
 	{
-	iController.CustomCommandAsync(aDestination, aFunction, aDataTo1, aDataTo2, aStatus);
+	//iController.CustomCommandAsync(aDestination, aFunction, aDataTo1, aDataTo2, aStatus);
 	}
 
 /**
@@ -1981,12 +2056,15 @@ Returns the current playback balance
 */
 TInt CMMFMdaAudioPlayerUtility::GetBalance(TInt& aBalance)
 	{
-	TInt err = iAudioPlayDeviceCommands.GetBalance(aBalance);
-	return err;
+	//TInt err = iAudioPlayDeviceCommands.GetBalance(aBalance);
+	//return err;
+	aBalance = KMMFBalanceMaxLeft;
+	return KErrNone;
 	}
 	
 MMMFDRMCustomCommand* CMMFMdaAudioPlayerUtility::GetDRMCustomCommand()
 	{
+#if 0
 	// TODO: check controller supports MMMFDRMCustomCommandImplementor
 	if (iDRMCustomCommands.IsSupported())
 		{
@@ -1996,6 +2074,8 @@ MMMFDRMCustomCommand* CMMFMdaAudioPlayerUtility::GetDRMCustomCommand()
 		{
 		return NULL;
 		}
+#endif
+	return NULL;
 	}
 	
 void CMMFMdaAudioPlayerUtility::RegisterForAudioLoadingNotification(MAudioLoadingObserver& aLoadingObserver)
@@ -2007,6 +2087,7 @@ TInt CMMFMdaAudioPlayerUtility::RegisterAudioResourceNotification(MMMFAudioResou
 																	TUid aNotificationEventUid,
 																	const TDesC8& aNotificationRegistrationData)
 	{
+#if 0
 	iAudioResourceNotificationCallBack = &aCallback;
 	TInt err = iNotificationRegistrationCommands.RegisterAsClient(aNotificationEventUid, aNotificationRegistrationData);
 	if(err == KErrNotReady)
@@ -2018,10 +2099,13 @@ TInt CMMFMdaAudioPlayerUtility::RegisterAudioResourceNotification(MMMFAudioResou
 	iNotificationDataHolder = KNullDesC8;
 	iEventHolder = KNullUid;
 	return err;
+#endif
+	return KErrNotSupported;
 	}
 
 TInt CMMFMdaAudioPlayerUtility::CancelRegisterAudioResourceNotification(TUid aNotificationEventId)
 	{
+#if 0
 	TInt err = iNotificationRegistrationCommands.CancelRegisterAsClient(aNotificationEventId);
 	if(err == KErrNotReady)
 		{
@@ -2038,16 +2122,20 @@ TInt CMMFMdaAudioPlayerUtility::CancelRegisterAudioResourceNotification(TUid aNo
 		return KErrNone;
 		}
 	return err;
+#endif
+	return KErrNotSupported;
 	}
 	
 TInt CMMFMdaAudioPlayerUtility::WillResumePlay()
 	{
-	return iNotificationRegistrationCommands.WillResumePlay();
+	//return iNotificationRegistrationCommands.WillResumePlay();
+	return KErrNone;
 	}
 	
 TInt CMMFMdaAudioPlayerUtility::SetThreadPriority(const TThreadPriority& aThreadPriority) const
 	{
-	return iController.SetThreadPriority(aThreadPriority);
+	//return iController.SetThreadPriority(aThreadPriority);
+	return KErrNone;
 	}
 	
 CRepeatTrailingSilenceTimer* CRepeatTrailingSilenceTimer::NewL(MRepeatTrailingSilenceTimerObs& aObs)

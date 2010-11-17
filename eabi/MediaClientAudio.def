@@ -12,12 +12,12 @@ EXPORTS
 	_ZN22CMdaAudioPlayerUtility10GetBalanceERi @ 11 NONAME ABSENT
 	_ZN22CMdaAudioPlayerUtility10GetBitRateERj @ 12 NONAME ABSENT
 	_ZN22CMdaAudioPlayerUtility10SetBalanceEi @ 13 NONAME ABSENT
-	_ZN22CMdaAudioPlayerUtility11GetPositionER25TTimeIntervalMicroSeconds @ 14 NONAME ABSENT ; # Stem
-	_ZN22CMdaAudioPlayerUtility11SetPositionERK25TTimeIntervalMicroSeconds @ 15 NONAME ABSENT ; # Stem
+	_ZN22CMdaAudioPlayerUtility11GetPositionER25TTimeIntervalMicroSeconds @ 14 NONAME ; # Stem
+	_ZN22CMdaAudioPlayerUtility11SetPositionERK25TTimeIntervalMicroSeconds @ 15 NONAME ; # Stem
 	_ZN22CMdaAudioPlayerUtility11SetPriorityEii @ 16 NONAME ABSENT
 	_ZN22CMdaAudioPlayerUtility13NewDesPlayerLERK6TDesC8R23MMdaAudioPlayerCallbackiiP10CMdaServer @ 17 NONAME ABSENT
 	_ZN22CMdaAudioPlayerUtility13SetPlayWindowERK25TTimeIntervalMicroSecondsS2_ @ 18 NONAME ABSENT
-	_ZN22CMdaAudioPlayerUtility14NewFilePlayerLERK7TDesC16R23MMdaAudioPlayerCallbackiiP10CMdaServer @ 19 NONAME ABSENT ; # Stem
+	_ZN22CMdaAudioPlayerUtility14NewFilePlayerLERK7TDesC16R23MMdaAudioPlayerCallbackiiP10CMdaServer @ 19 NONAME ; # Stem
 	_ZN22CMdaAudioPlayerUtility14WillResumePlayEv @ 20 NONAME ABSENT
 	_ZN22CMdaAudioPlayerUtility15ClearPlayWindowEv @ 21 NONAME ABSENT
 	_ZN22CMdaAudioPlayerUtility17CustomCommandSyncERK8TPckgBufI22TMMFMessageDestinationEiRK6TDesC8S7_ @ 22 NONAME ABSENT
@@ -33,14 +33,14 @@ EXPORTS
 	_ZN22CMdaAudioPlayerUtility35RegisterForAudioLoadingNotificationER21MAudioLoadingObserver @ 32 NONAME ABSENT
 	_ZN22CMdaAudioPlayerUtility36ControllerImplementationInformationLEv @ 33 NONAME ABSENT
 	_ZN22CMdaAudioPlayerUtility39CancelRegisterAudioResourceNotificationE4TUid @ 34 NONAME ABSENT
-	_ZN22CMdaAudioPlayerUtility4NewLER23MMdaAudioPlayerCallbackii @ 35 NONAME ABSENT ; # Stem
-	_ZN22CMdaAudioPlayerUtility5CloseEv @ 36 NONAME ABSENT ; # Stem
-	_ZN22CMdaAudioPlayerUtility5PauseEv @ 37 NONAME ABSENT ; # Stem
+	_ZN22CMdaAudioPlayerUtility4NewLER23MMdaAudioPlayerCallbackii @ 35 NONAME ; # Stem
+	_ZN22CMdaAudioPlayerUtility5CloseEv @ 36 NONAME ; # Stem
+	_ZN22CMdaAudioPlayerUtility5PauseEv @ 37 NONAME ; # Stem
 	_ZN22CMdaAudioPlayerUtility8OpenDesLERK6TDesC8 @ 38 NONAME ABSENT
 	_ZN22CMdaAudioPlayerUtility8OpenUrlLERK7TDesC16iRK6TDesC8 @ 39 NONAME ABSENT
 	_ZN22CMdaAudioPlayerUtility9GetVolumeERi @ 40 NONAME ABSENT
-	_ZN22CMdaAudioPlayerUtility9OpenFileLERK5RFile @ 41 NONAME ABSENT ; # Stem
-	_ZN22CMdaAudioPlayerUtility9OpenFileLERK7TDesC16 @ 42 NONAME ABSENT ; # Stem
+	_ZN22CMdaAudioPlayerUtility9OpenFileLERK5RFile @ 41 NONAME ; # Stem
+	_ZN22CMdaAudioPlayerUtility9OpenFileLERK7TDesC16 @ 42 NONAME ; # Stem
 	_ZN22CMdaAudioPlayerUtility9OpenFileLERK9TMMSource @ 43 NONAME ABSENT
 	_ZN23CMdaAudioConvertUtility13SourceFormatLEv @ 44 NONAME ABSENT
 	_ZN23CMdaAudioConvertUtility14SourceBitRateLEv @ 45 NONAME ABSENT

@@ -20,16 +20,16 @@
 #include <e32std.h>
 #include <e32base.h>
 #include <mdaaudiosampleplayer.h>
-#include <mmf/common/mmfcontroller.h>
+//#include <mmf/common/mmfcontroller.h>
 #include <mmf/server/mmffile.h>
 #include <mmf/server/mmfdes.h>
-#include <mmfcontrollerimplementationuids.hrh>
-#include <mmf/common/mmfstandardcustomcommands.h>
-#include <mmf/common/mmfdrmcustomcommands.h>
-#include "mmfclientutility.h"
-#include <mmf/common/mmfdurationinfocustomcommands.h>
+//#include <mmfcontrollerimplementationuids.hrh>
+//#include <mmf/common/mmfstandardcustomcommands.h>
+//#include <mmf/common/mmfdrmcustomcommands.h>
+//#include "mmfclientutility.h"
+//#include <mmf/common/mmfdurationinfocustomcommands.h>
 
-static const TUid KUidMmfAudioController = {KMmfUidControllerAudio}; 
+//static const TUid KUidMmfAudioController = {KMmfUidControllerAudio}; 
 
 /**
 Mixin class to allow notification that the timed silence has finished.
@@ -87,15 +87,17 @@ private:
 Concrete implementation of the CMdaAudioPlayerUtility API.
 @see CMdaAudioPlayerUtility
 */
-class CMMFMdaAudioPlayerUtility;
+/*class CMMFMdaAudioPlayerUtility;
 NONSHARABLE_CLASS( CMMFMdaAudioPlayerUtility ): public CBase, 
 								  				public MMMFControllerEventMonitorObserver,
 								  				public MRepeatTrailingSilenceTimerObs,
 								  				public MMMFFindAndOpenControllerObserver
+*/
+class CMMFMdaAudioPlayerUtility;
+NONSHARABLE_CLASS( CMMFMdaAudioPlayerUtility ): public CTimer 
 	{
 friend class CMdaAudioPlayerUtility;
 // friends for Unit testing only
-friend class CTestStepUnitMMFAudClient;
 
 public:
 	enum TMMFAudioPlayerState
@@ -181,20 +183,7 @@ public:
 	TInt SetThreadPriority(const TThreadPriority& aThreadPriority) const;
 	
 	TMMFDurationInfo Duration(TTimeIntervalMicroSeconds& aDuration);
-	
-	// from MMMFControllerEventMonitorObserver
-	virtual void HandleEvent(const TMMFEvent& aEvent);
-	// from MRepeatTrailingSilenceTimerObs
-	virtual void RepeatTrailingSilenceTimerComplete();
-
-	// from MMMFFindAndOpenControllerObserver 
-	virtual void MfaocComplete(
-		TInt& aError, 
-		RMMFController* aController, 
-		TUid aControllerUid, 
-		TMMFMessageDestination* aSourceHandle, 
-		TMMFMessageDestination* aSinkHandle);
-
+	void RunL();
 protected:
 	CMMFMdaAudioPlayerUtility(MMdaAudioPlayerCallback& aCallback, TInt aPriority, TInt aPref);
 	void ConstructL();
@@ -216,7 +205,7 @@ private:
 	CMMFMdaAudioPlayerCallBack* iAsyncCallBack;
 	MAudioLoadingObserver* iLoadingObserver;
 	MMMFAudioResourceNotificationCallback* iAudioResourceNotificationCallBack;
-	RMMFController iController;
+	//RMMFController iController;
 	CMMFControllerEventMonitor* iControllerEventMonitor;
 	TMMFAudioPlayerState iState;
 	TTimeIntervalMicroSeconds iDuration; // Needed because of api "Duration()" that returns a reference
@@ -229,15 +218,15 @@ private:
 	CRepeatTrailingSilenceTimer* iRepeatTrailingSilenceTimer;
 
 	// Source and sink handle info
-	TMMFMessageDestination iSourceHandle;
-	TMMFMessageDestination iSinkHandle;
+	//TMMFMessageDestination iSourceHandle;
+	//TMMFMessageDestination iSinkHandle;
 
 	// Custom command handlers
-	RMMFAudioPlayDeviceCustomCommands iAudioPlayDeviceCommands;
-	RMMFAudioPlayControllerCustomCommands iAudioPlayControllerCommands;
-	RMMFResourceNotificationCustomCommands iNotificationRegistrationCommands;
-	RMMFDRMCustomCommands iDRMCustomCommands;
-	RMMFAudioPlayControllerSetRepeatsCustomCommands iAudioPlayControllerSetRepeatsCommands;
+	//RMMFAudioPlayDeviceCustomCommands iAudioPlayDeviceCommands;
+	//RMMFAudioPlayControllerCustomCommands iAudioPlayControllerCommands;
+	//RMMFResourceNotificationCustomCommands iNotificationRegistrationCommands;
+	//RMMFDRMCustomCommands iDRMCustomCommands;
+	//RMMFAudioPlayControllerSetRepeatsCustomCommands iAudioPlayControllerSetRepeatsCommands;
 	
 	// Current playback time so we can resume from where we were stopped
 	TTimeIntervalMicroSeconds iPosition;
@@ -252,7 +241,7 @@ private:
 	TUid iControllerUid;
 
 	// utility class to find and open a suitable controller asynchronously
-	CMMFFindAndOpenController* iFindAndOpenController;
+	//CMMFFindAndOpenController* iFindAndOpenController;
 	TUid iEventHolder;
 	TBuf8<256> iNotificationDataHolder;
 	TBool iRepeatCancelled;
