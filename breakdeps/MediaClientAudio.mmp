@@ -37,9 +37,10 @@ OS_LAYER_SYSTEMINCLUDE_SYMBIAN
 // Real source			/sf/os/mm/mmlibs/mmfw/src/Client/Audio/mmfclienttoneplayer.cpp 
 SOURCEPATH		.
 source			mmfclienttoneplayer.cpp 
-//source			mmfclientaudioplayer.cpp 
+source			mmfclientaudioplayer.cpp 
  	
-library			euser.lib 
+library			euser.lib
+library			ecom.lib
 
 #ifdef EABI
 DEFFILE MediaClientAudio.def
