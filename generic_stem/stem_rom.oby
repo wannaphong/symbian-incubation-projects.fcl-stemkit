@@ -243,7 +243,7 @@ REM Epoc Telephony Layer
 REM Commdb
 REM CommsDat
 file=\epoc32\release\ARMV5\urel\commsdat.dll 	"sys\bin\commsdat.dll"
-data=\epoc32\data\z\private\10202be9\cccccc00.cre 	"private\10202be9\cccccc00.cre"
+data=\sf\incubator\stemkit\commdb\cccccc00.cre 	"private\10202be9\cccccc00.cre"
 REM Shim Notifier     
 file=\epoc32\release\ARMV5\urel\ShimNotifierCli.dll 	"sys\bin\ShimNotifierCli.dll"
 file=\epoc32\release\ARMV5\urel\commdb.dll 	"sys\bin\Commdb.dll"
