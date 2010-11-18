@@ -64,4 +64,5 @@ file=\epoc32\release\ARMV5\urel\domainSrv.exe 	"sys\bin\domainSrv.exe"
 file=\epoc32\release\ARMV5\urel\domainCli.dll 	"sys\bin\domainCli.dll"
 file=\epoc32\release\ARMV5\urel\domainPolicy.dll 	"sys\bin\domainPolicy.dll"
 file=\epoc32\release\ARMV5\urel\_generic_scdv.dll 	"sys\bin\ScDv.dll"
+device[VARID]=\epoc32\release\ARMV5\urel\_syborg_ethernet.pdd 	"sys\bin\ethernet.pdd"
 }
