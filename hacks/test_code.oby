@@ -1,0 +1,18 @@
+
+REM ConnTest
+
+file=\epoc32\release\ARMV5\udeb\ConnTest.exe 	"sys\bin\ConnTest.exe"
+//auto-bitmap=\epoc32\data\Z\resource\apps\ConnTest_AIF.mbm 	resource\apps\ConnTest_AIF.mbm
+//data=\epoc32\data\Z\resource\apps\ConnTest_AIF.mif 	"resource\apps\ConnTest_AIF.mif"
+data=\epoc32\data\Z\PRIVATE\10003A3F\APPS\ConnTest_reg.rsc 	"Private\10003a3f\import\apps\ConnTest_reg.rsc" 
+data=\epoc32\data\Z\resource\apps\ConnTest.RSC 	"resource\apps\ConnTest.rsc"
+//data=\epoc32\data\Z\system\install\conntest_stub.sis 	"system\install\conntest_stub.sis"
+
+REM Eshell
+
+file=\epoc32\release\armv5\udeb\eshell.exe       \sys\bin\EShell.exe
+data=\epoc32\data\z\private\10003a3f\APPS\eshell_reg.rsc     Private\10003a3f\Apps\eshell_reg.rsc
+
+REM VFP tests
+file=\epoc32\release\armv5\udeb\t_vfp.exe sys\bin\t_vfp.exe 
+file=\epoc32\release\armv5\udeb\t_vfpbm.exe sys\bin\t_vfpbm.exe 
