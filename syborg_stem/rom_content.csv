@@ -3167,7 +3167,7 @@ sys\bin\comsdbgsvr.exe,/epoc32/release/armv5/urel/comsdbgsvr.exe,commsdebugutili
 sys\bin\comsdbgutil.dll,/epoc32/release/armv5/urel/comsdbgutil.dll,commsdebugutility.iby,os/persistentdata,Out,Auto,Not referenced during boot
 sys\bin\ConArc.dll,/epoc32/release/armv5/urel/conarc.dll,conarc.iby,mw/appsupport,,,
 sys\bin\conditionevaluator.dll,/epoc32/release/armv5/urel/conditionevaluator.dll,conditionevaluator.iby,os/devicesrv,,,
-sys\bin\Cone.dll,/epoc32/release/armv5/urel/cone.dll,cone.iby,mw/classicui,In,MW,Break dependency on MediaClientAudio.dll
+sys\bin\Cone.dll,/epoc32/release/armv5/urel/cone.dll,cone.iby,mw/classicui,mm_Stem,MW,Break dependency on MediaClientAudio.dll
 sys\bin\ConfigurationComponentsFactory.dll,/epoc32/release/armv5/urel/configurationcomponentsfactory.dll,core/os/ConfigurationComponentsFactory.iby,mw/mmmw,Out,Auto,Not referenced during boot
 Sys\Bin\connectiondialogswrapper.DLL,/epoc32/release/armv5/urel/connectiondialogswrapper.dll,core/mw/ConnectionDialogs.iby,mw/ipconnmgmt,,,
 sys\bin\ConnectionManager.dll,/epoc32/release/armv5/urel/connectionmanager.dll,core/mw/ConnectionManager.iby,mw/web,Out,Auto,Not referenced during boot
@@ -3467,7 +3467,7 @@ sys\bin\eikshtsrv.dll,/epoc32/release/armv5/urel/eikshtsrv.dll,uikon.iby,mw/clas
 sys\bin\EikSrv.dll,/epoc32/release/armv5/urel/eiksrv.dll,uikon.iby,mw/classicui,,,
 sys\bin\EikSrvc.dll,/epoc32/release/armv5/urel/eiksrvc.dll,uikon.iby,mw/classicui,,,
 sys\bin\EikSrvs.exe,/epoc32/release/armv5/urel/eiksrvs.exe,uikon.iby,mw/classicui,,,
-sys\bin\eiksrvui.dll,/epoc32/release/armv5/urel/eiksrvui.dll,core/mw/eikstd.iby,mw/classicui,Stem,MW,Break dependency on mediaclientaudio.dll
+sys\bin\eiksrvui.dll,/epoc32/release/armv5/urel/eiksrvui.dll,core/mw/eikstd.iby,mw/classicui,mm_Stem,MW,Break dependency on mediaclientaudio.dll
 Sys\Bin\eintsock_transport.dll,/epoc32/release/armv5/urel/eintsock_transport.dll,esock_core.iby,os/commsfw,Out,Auto,Not referenced during boot
 sys\bin\eirclient.dll,/epoc32/release/armv5/urel/eirclient.dll,bluetooth.iby,os/bt,Out,Auto,Not referenced during boot
 sys\bin\EKTran.dll,/epoc32/release/armv5/urel/ektran.dll,base.iby,os/kernelhwsrv,,,

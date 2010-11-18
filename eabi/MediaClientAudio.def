@@ -2,46 +2,46 @@ EXPORTS
 	_ZN13CMdaAudioTypeD0Ev @ 1 NONAME ABSENT
 	_ZN13CMdaAudioTypeD1Ev @ 2 NONAME ABSENT
 	_ZN13CMdaAudioTypeD2Ev @ 3 NONAME ABSENT
-	_ZN20CMdaAudioToneUtility11GetBalanceLEv @ 4 NONAME ABSENT
-	_ZN20CMdaAudioToneUtility11SetBalanceLEi @ 5 NONAME ABSENT
-	_ZN20CMdaAudioToneUtility15CustomInterfaceE4TUid @ 6 NONAME ABSENT
-	_ZN20CMdaAudioToneUtility21PrepareToPlayDualToneEiiRK25TTimeIntervalMicroSeconds @ 7 NONAME ABSENT
-	_ZN20CMdaAudioToneUtility25PrepareToPlayFileSequenceER5RFile @ 8 NONAME ABSENT
-	_ZN20CMdaAudioToneUtility4NewLER21MMdaAudioToneObserverP10CMdaServer @ 9 NONAME ; # first Stem
-	_ZN20CMdaAudioToneUtility4NewLER21MMdaAudioToneObserverP10CMdaServerii @ 10 NONAME ABSENT
-	_ZN22CMdaAudioPlayerUtility10GetBalanceERi @ 11 NONAME ABSENT
-	_ZN22CMdaAudioPlayerUtility10GetBitRateERj @ 12 NONAME ABSENT
-	_ZN22CMdaAudioPlayerUtility10SetBalanceEi @ 13 NONAME ABSENT
-	_ZN22CMdaAudioPlayerUtility11GetPositionER25TTimeIntervalMicroSeconds @ 14 NONAME ; # Stem
-	_ZN22CMdaAudioPlayerUtility11SetPositionERK25TTimeIntervalMicroSeconds @ 15 NONAME ; # Stem
-	_ZN22CMdaAudioPlayerUtility11SetPriorityEii @ 16 NONAME ABSENT
-	_ZN22CMdaAudioPlayerUtility13NewDesPlayerLERK6TDesC8R23MMdaAudioPlayerCallbackiiP10CMdaServer @ 17 NONAME ABSENT
-	_ZN22CMdaAudioPlayerUtility13SetPlayWindowERK25TTimeIntervalMicroSecondsS2_ @ 18 NONAME ABSENT
-	_ZN22CMdaAudioPlayerUtility14NewFilePlayerLERK7TDesC16R23MMdaAudioPlayerCallbackiiP10CMdaServer @ 19 NONAME ; # Stem
-	_ZN22CMdaAudioPlayerUtility14WillResumePlayEv @ 20 NONAME ABSENT
-	_ZN22CMdaAudioPlayerUtility15ClearPlayWindowEv @ 21 NONAME ABSENT
-	_ZN22CMdaAudioPlayerUtility17CustomCommandSyncERK8TPckgBufI22TMMFMessageDestinationEiRK6TDesC8S7_ @ 22 NONAME ABSENT
-	_ZN22CMdaAudioPlayerUtility17CustomCommandSyncERK8TPckgBufI22TMMFMessageDestinationEiRK6TDesC8S7_R5TDes8 @ 23 NONAME ABSENT
-	_ZN22CMdaAudioPlayerUtility17GetMetaDataEntryLEi @ 24 NONAME ABSENT
-	_ZN22CMdaAudioPlayerUtility18CustomCommandAsyncERK8TPckgBufI22TMMFMessageDestinationEiRK6TDesC8S7_R14TRequestStatus @ 25 NONAME ABSENT
-	_ZN22CMdaAudioPlayerUtility18CustomCommandAsyncERK8TPckgBufI22TMMFMessageDestinationEiRK6TDesC8S7_R5TDes8R14TRequestStatus @ 26 NONAME ABSENT
-	_ZN22CMdaAudioPlayerUtility19GetDRMCustomCommandEv @ 27 NONAME ABSENT
-	_ZN22CMdaAudioPlayerUtility21NewDesPlayerReadOnlyLERK6TDesC8R23MMdaAudioPlayerCallbackiiP10CMdaServer @ 28 NONAME ABSENT
-	_ZN22CMdaAudioPlayerUtility24GetAudioLoadingProgressLERi @ 29 NONAME ABSENT
-	_ZN22CMdaAudioPlayerUtility26GetNumberOfMetaDataEntriesERi @ 30 NONAME ABSENT
-	_ZN22CMdaAudioPlayerUtility33RegisterAudioResourceNotificationER37MMMFAudioResourceNotificationCallback4TUidRK6TDesC8 @ 31 NONAME ABSENT
-	_ZN22CMdaAudioPlayerUtility35RegisterForAudioLoadingNotificationER21MAudioLoadingObserver @ 32 NONAME ABSENT
-	_ZN22CMdaAudioPlayerUtility36ControllerImplementationInformationLEv @ 33 NONAME ABSENT
-	_ZN22CMdaAudioPlayerUtility39CancelRegisterAudioResourceNotificationE4TUid @ 34 NONAME ABSENT
-	_ZN22CMdaAudioPlayerUtility4NewLER23MMdaAudioPlayerCallbackii @ 35 NONAME ; # Stem
-	_ZN22CMdaAudioPlayerUtility5CloseEv @ 36 NONAME ; # Stem
-	_ZN22CMdaAudioPlayerUtility5PauseEv @ 37 NONAME ; # Stem
-	_ZN22CMdaAudioPlayerUtility8OpenDesLERK6TDesC8 @ 38 NONAME ABSENT
-	_ZN22CMdaAudioPlayerUtility8OpenUrlLERK7TDesC16iRK6TDesC8 @ 39 NONAME ABSENT
-	_ZN22CMdaAudioPlayerUtility9GetVolumeERi @ 40 NONAME ABSENT
-	_ZN22CMdaAudioPlayerUtility9OpenFileLERK5RFile @ 41 NONAME ; # Stem
-	_ZN22CMdaAudioPlayerUtility9OpenFileLERK7TDesC16 @ 42 NONAME ; # Stem
-	_ZN22CMdaAudioPlayerUtility9OpenFileLERK9TMMSource @ 43 NONAME ABSENT
+_ZN20CMdaAudioToneUtility11GetBalanceLEv @ 4 NONAME
+	_ZN20CMdaAudioToneUtility11SetBalanceLEi @ 5 NONAME
+	_ZN20CMdaAudioToneUtility15CustomInterfaceE4TUid @ 6 NONAME
+	_ZN20CMdaAudioToneUtility21PrepareToPlayDualToneEiiRK25TTimeIntervalMicroSeconds @ 7 NONAME
+	_ZN20CMdaAudioToneUtility25PrepareToPlayFileSequenceER5RFile @ 8 NONAME
+	_ZN20CMdaAudioToneUtility4NewLER21MMdaAudioToneObserverP10CMdaServer @ 9 NONAME
+	_ZN20CMdaAudioToneUtility4NewLER21MMdaAudioToneObserverP10CMdaServerii @ 10 NONAME
+	_ZN22CMdaAudioPlayerUtility10GetBalanceERi @ 11 NONAME
+	_ZN22CMdaAudioPlayerUtility10GetBitRateERj @ 12 NONAME
+	_ZN22CMdaAudioPlayerUtility10SetBalanceEi @ 13 NONAME
+	_ZN22CMdaAudioPlayerUtility11GetPositionER25TTimeIntervalMicroSeconds @ 14 NONAME
+	_ZN22CMdaAudioPlayerUtility11SetPositionERK25TTimeIntervalMicroSeconds @ 15 NONAME
+	_ZN22CMdaAudioPlayerUtility11SetPriorityEii @ 16 NONAME
+	_ZN22CMdaAudioPlayerUtility13NewDesPlayerLERK6TDesC8R23MMdaAudioPlayerCallbackiiP10CMdaServer @ 17 NONAME
+	_ZN22CMdaAudioPlayerUtility13SetPlayWindowERK25TTimeIntervalMicroSecondsS2_ @ 18 NONAME
+	_ZN22CMdaAudioPlayerUtility14NewFilePlayerLERK7TDesC16R23MMdaAudioPlayerCallbackiiP10CMdaServer @ 19 NONAME
+	_ZN22CMdaAudioPlayerUtility14WillResumePlayEv @ 20 NONAME
+	_ZN22CMdaAudioPlayerUtility15ClearPlayWindowEv @ 21 NONAME
+	_ZN22CMdaAudioPlayerUtility17CustomCommandSyncERK8TPckgBufI22TMMFMessageDestinationEiRK6TDesC8S7_ @ 22 NONAME
+	_ZN22CMdaAudioPlayerUtility17CustomCommandSyncERK8TPckgBufI22TMMFMessageDestinationEiRK6TDesC8S7_R5TDes8 @ 23 NONAME
+	_ZN22CMdaAudioPlayerUtility17GetMetaDataEntryLEi @ 24 NONAME
+	_ZN22CMdaAudioPlayerUtility18CustomCommandAsyncERK8TPckgBufI22TMMFMessageDestinationEiRK6TDesC8S7_R14TRequestStatus @ 25 NONAME
+	_ZN22CMdaAudioPlayerUtility18CustomCommandAsyncERK8TPckgBufI22TMMFMessageDestinationEiRK6TDesC8S7_R5TDes8R14TRequestStatus @ 26 NONAME
+	_ZN22CMdaAudioPlayerUtility19GetDRMCustomCommandEv @ 27 NONAME
+	_ZN22CMdaAudioPlayerUtility21NewDesPlayerReadOnlyLERK6TDesC8R23MMdaAudioPlayerCallbackiiP10CMdaServer @ 28 NONAME
+	_ZN22CMdaAudioPlayerUtility24GetAudioLoadingProgressLERi @ 29 NONAME
+	_ZN22CMdaAudioPlayerUtility26GetNumberOfMetaDataEntriesERi @ 30 NONAME
+	_ZN22CMdaAudioPlayerUtility33RegisterAudioResourceNotificationER37MMMFAudioResourceNotificationCallback4TUidRK6TDesC8 @ 31 NONAME
+	_ZN22CMdaAudioPlayerUtility35RegisterForAudioLoadingNotificationER21MAudioLoadingObserver @ 32 NONAME
+	_ZN22CMdaAudioPlayerUtility36ControllerImplementationInformationLEv @ 33 NONAME
+	_ZN22CMdaAudioPlayerUtility39CancelRegisterAudioResourceNotificationE4TUid @ 34 NONAME
+	_ZN22CMdaAudioPlayerUtility4NewLER23MMdaAudioPlayerCallbackii @ 35 NONAME
+	_ZN22CMdaAudioPlayerUtility5CloseEv @ 36 NONAME
+	_ZN22CMdaAudioPlayerUtility5PauseEv @ 37 NONAME
+	_ZN22CMdaAudioPlayerUtility8OpenDesLERK6TDesC8 @ 38 NONAME
+	_ZN22CMdaAudioPlayerUtility8OpenUrlLERK7TDesC16iRK6TDesC8 @ 39 NONAME
+	_ZN22CMdaAudioPlayerUtility9GetVolumeERi @ 40 NONAME
+	_ZN22CMdaAudioPlayerUtility9OpenFileLERK5RFile @ 41 NONAME
+	_ZN22CMdaAudioPlayerUtility9OpenFileLERK7TDesC16 @ 42 NONAME
+	_ZN22CMdaAudioPlayerUtility9OpenFileLERK9TMMSource @ 43 NONAME
 	_ZN23CMdaAudioConvertUtility13SourceFormatLEv @ 44 NONAME ABSENT
 	_ZN23CMdaAudioConvertUtility14SourceBitRateLEv @ 45 NONAME ABSENT
 	_ZN23CMdaAudioConvertUtility15SourceDataTypeLEv @ 46 NONAME ABSENT
@@ -127,40 +127,40 @@ EXPORTS
 	_ZTI20CMMFDesSeqToneConfig @ 126 NONAME ABSENT ; #<TI>#
 	_ZTI20CMMFSimpleToneConfig @ 127 NONAME ABSENT ; #<TI>#
 	_ZTI20CMdaAudioClipUtility @ 128 NONAME ABSENT ; #<TI>#
-	_ZTI20CMdaAudioToneUtility @ 129 NONAME ABSENT ; #<TI>#
+	_ZTI20CMdaAudioToneUtility @ 129 NONAME ; #<TI>#
 	_ZTI21CMMFFileSeqToneConfig @ 130 NONAME ABSENT ; #<TI>#
 	_ZTI22CMMFFixedSeqToneConfig @ 131 NONAME ABSENT ; #<TI>#
-	_ZTI22CMdaAudioPlayerUtility @ 132 NONAME ABSENT ; #<TI>#
+	_ZTI22CMdaAudioPlayerUtility @ 132 NONAME ; #<TI>#
 	_ZTI23CMdaAudioConvertUtility @ 133 NONAME ABSENT ; #<TI>#
 	_ZTI24CMMFDTMFStringToneConfig @ 134 NONAME ABSENT ; #<TI>#
 	_ZTI24CMdaAudioRecorderUtility @ 135 NONAME ABSENT ; #<TI>#
-	_ZTI26CMMFMdaAudioPlayerCallBack @ 136 NONAME ABSENT ; #<TI>#
-	_ZTI27CRepeatTrailingSilenceTimer @ 137 NONAME ABSENT ; #<TI>#
-	_ZTI32CMMFMdaAudioToneObserverCallback @ 138 NONAME ABSENT ; #<TI>#
+	_ZTI26CMMFMdaAudioPlayerCallBack @ 136 NONAME ; #<TI>#
+	_ZTI27CRepeatTrailingSilenceTimer @ 137 NONAME ; #<TI>#
+	_ZTI32CMMFMdaAudioToneObserverCallback @ 138 NONAME ; #<TI>#
 	_ZTV13CMdaAudioType @ 139 NONAME ABSENT ; #<VT>#
 	_ZTV18CMMFDualToneConfig @ 140 NONAME ABSENT ; #<VT>#
 	_ZTV20CMMFDesSeqToneConfig @ 141 NONAME ABSENT ; #<VT>#
 	_ZTV20CMMFSimpleToneConfig @ 142 NONAME ABSENT ; #<VT>#
 	_ZTV20CMdaAudioClipUtility @ 143 NONAME ABSENT ; #<VT>#
-	_ZTV20CMdaAudioToneUtility @ 144 NONAME ABSENT ; #<VT>#
+	_ZTV20CMdaAudioToneUtility @ 144 NONAME ; #<VT>#
 	_ZTV21CMMFFileSeqToneConfig @ 145 NONAME ABSENT ; #<VT>#
 	_ZTV22CMMFFixedSeqToneConfig @ 146 NONAME ABSENT ; #<VT>#
-	_ZTV22CMdaAudioPlayerUtility @ 147 NONAME ABSENT ; #<VT>#
+	_ZTV22CMdaAudioPlayerUtility @ 147 NONAME ; #<VT>#
 	_ZTV23CMdaAudioConvertUtility @ 148 NONAME ABSENT ; #<VT>#
 	_ZTV24CMMFDTMFStringToneConfig @ 149 NONAME ABSENT ; #<VT>#
 	_ZTV24CMdaAudioRecorderUtility @ 150 NONAME ABSENT ; #<VT>#
-	_ZTV26CMMFMdaAudioPlayerCallBack @ 151 NONAME ABSENT ; #<VT>#
-	_ZTV27CRepeatTrailingSilenceTimer @ 152 NONAME ABSENT ; #<VT>#
-	_ZTV32CMMFMdaAudioToneObserverCallback @ 153 NONAME ABSENT ; #<VT>#
-	_ZNK22CMdaAudioPlayerUtility17SetThreadPriorityERK15TThreadPriority @ 154 NONAME ABSENT
+	_ZTV26CMMFMdaAudioPlayerCallBack @ 151 NONAME ; #<VT>#
+	_ZTV27CRepeatTrailingSilenceTimer @ 152 NONAME ; #<VT>#
+	_ZTV32CMMFMdaAudioToneObserverCallback @ 153 NONAME ; #<VT>#
+	_ZNK22CMdaAudioPlayerUtility17SetThreadPriorityERK15TThreadPriority @ 154 NONAME
 	_ZNK23CMdaAudioConvertUtility17SetThreadPriorityERK15TThreadPriority @ 155 NONAME ABSENT
 	_ZNK24CMdaAudioRecorderUtility23SetThreadPriorityRecordERK15TThreadPriority @ 156 NONAME ABSENT
 	_ZNK24CMdaAudioRecorderUtility25SetThreadPriorityPlaybackERK15TThreadPriority @ 157 NONAME ABSENT
-	_ZN22CMdaAudioPlayerUtility13UseSharedHeapEv @ 158 NONAME ABSENT
-	_ZN22CMdaAudioPlayerUtility8DurationER25TTimeIntervalMicroSeconds @ 159 NONAME ABSENT
+	_ZN22CMdaAudioPlayerUtility13UseSharedHeapEv @ 158 NONAME
+	_ZN22CMdaAudioPlayerUtility8DurationER25TTimeIntervalMicroSeconds @ 159 NONAME
 	_ZN24CMdaAudioRecorderUtility8DurationER25TTimeIntervalMicroSeconds @ 160 NONAME ABSENT
 	_ZN23CMdaAudioConvertUtility13UseSharedHeapEv @ 161 NONAME ABSENT
 	_ZN24CMdaAudioRecorderUtility13UseSharedHeapEv @ 162 NONAME ABSENT
-	_ZN20CMdaAudioToneUtility5PauseEv @ 163 NONAME ABSENT
-	_ZN20CMdaAudioToneUtility6ResumeEv @ 164 NONAME ABSENT
-	_ZN20CMdaAudioToneUtility25RegisterPlayStartCallbackER30MMdaAudioTonePlayStartObserver @ 165 NONAME ABSENT
+	_ZN20CMdaAudioToneUtility5PauseEv @ 163 NONAME
+	_ZN20CMdaAudioToneUtility6ResumeEv @ 164 NONAME
+	_ZN20CMdaAudioToneUtility25RegisterPlayStartCallbackER30MMdaAudioTonePlayStartObserver @ 165 NONAME
