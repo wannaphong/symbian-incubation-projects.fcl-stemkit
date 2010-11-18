@@ -132,6 +132,14 @@ while ($line = <STATIC_DEPENDENCIES>)
 			next;
 			}
 		}
+	else
+		{
+		if ($hostfile =~ /\/stem_/)
+			{
+			# print STDERR "Ignoring dependencies of $hostfile because there is no stem substitution of $romfile\n";
+			next;
+			}
+		}
 
 	$lc_romfiles{lc $romfile} = $romfile;
 	
@@ -222,7 +230,7 @@ foreach my $line (@obylines)
 
 if (0)
 	{
-	foreach my $exe ("libopenvg.dll", "libopenvg_sw.dll", "backend.dll", "qtgui.dll")
+	foreach my $exe ("libopenvg.dll", "libopenvg_sw.dll", "backend.dll", "qtgui.dll", "mediaclientaudio.dll")
 		{
 		printf STDERR "Dependents of %s = %s\n", $exe, join(", ", @{$exe_dependencies{$exe}});
 		}
@@ -289,23 +297,29 @@ foreach my $romexe (keys %exe_ordinals)
 	my $namelength = length($romexe);
 	foreach my $dependent (@{$exe_dependencies{$romexe}})
 		{
-		next if (defined $deletions{$dependent});   # already 
+		if (defined $deletions{$dependent})
+			{
+			# print STDERR "Already deleted $dependent of $romexe\n";
+			next;   # already deleted
+			}
 		
 		if ($dependent =~ /^sys.bin.(.*)$/i)
 			{
 			my $depexe = lc $1;
 			my $imports;
+			# print STDERR "Checking $depexe for detailed dependency on $romexe\n";
 			foreach my $prerequisite (@{$exe_prerequisites{$depexe}})
 				{
 				if (substr($prerequisite, 0, $namelength) eq $romexe)
 					{
 					$imports = substr($prerequisite, $namelength+1);	# skip name and "@"
+					# print STDERR "Found imports >$imports<\n";
 					last;
 					}
 				}
 			if (!defined $imports)
 				{
-				printf STDERR "Failed to find ordinals imported from %s by %s (in %s)\n", 
+				printf STDERR "Internal error: Failed to find ordinals imported from %s by %s (in %s)\n", 
 					$romexe, $dependent, join(":",@{$exe_prerequisites{$depexe}});
 				next;
 				}
@@ -313,7 +327,7 @@ foreach my $romexe (keys %exe_ordinals)
 			if ($compatible ne "OK")
 				{
 				$deletions{$dependent} = "$romexe $compatible";
-				# print_detail("Deleting $dependent because of slimmed $romexe ($compatible)");
+				print_detail("Deleting $dependent because of slimmed $romexe ($compatible)");
 				}
 			}
 		}
