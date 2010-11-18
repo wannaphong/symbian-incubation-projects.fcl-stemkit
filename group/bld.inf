@@ -35,8 +35,6 @@ PRJ_MMPFILES
 ../breakdeps/backend.mmp
 
 // based on sf/mw/classicui
-../breakdeps/cone.mmp
-../breakdeps/eiksrvui.mmp
 ../breakdeps/avkon.mmp
 
 // based on sf/mw/svgt
